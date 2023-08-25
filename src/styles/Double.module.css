@@ -1,0 +1,56 @@
+.double {
+  display: flex;
+  margin-top: 7vh;
+  height: 40vw;
+}
+.double .imageContainer:nth-of-type(1) {
+  width: 66.66%;
+  margin-right: 15px;
+  border-radius: 18px;
+}
+.double .imageContainer:nth-of-type(2) {
+  width: 33.33%;
+  margin-left: 15px;
+}
+.double .imageContainer .stretchyWrapper {
+  padding-bottom: 66%;
+  position: relative;
+}
+.double .imageContainer .stretchyWrapper img {
+  object-fit: cover;
+  border-radius: 24px;
+}
+.double:nth-child(even) .imageContainer:nth-of-type(1) {
+  width: 33.33%;
+}
+.double:nth-child(even) .imageContainer:nth-of-type(2) {
+  width: 66.66%;
+}
+.double .body {
+  font-size: 16px;
+  padding: 10px;
+}
+.double .body h3 {
+  font-size: 1.5vw;
+  margin-bottom: 5px;
+  margin-top: 0px;
+  font-weight: 500;
+  font-family: 'CLashDisplay';
+  color: var(--black1);
+}
+.double .body h5 {
+  font-size: 1.2vw;
+  margin: 0px;
+  color: var(--black2);
+}
+
+.double .body p {
+  font-size: 1.2vw;
+  margin: 0px;
+  color: var(--gray);
+}
+
+.double .body p:nth-of-type(2) {
+  color: var(--gray);
+  transform: translateY(300);
+}
