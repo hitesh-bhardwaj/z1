@@ -89,7 +89,9 @@ const Hamburger = () => {
                 className="menu header-right-button cross menu--1"
                 id="header-fixed"
               >
-                <button ref={buttonRef} id="btn-music">
+                <button ref={buttonRef} 
+                        id="btn-music"
+                        aria-label="menu">
                   <label data-cursor-exclusion data-cursor-size="60px">
                     <input
                       type="checkbox"

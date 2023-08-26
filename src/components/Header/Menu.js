@@ -335,7 +335,7 @@ const Menu = ({ state }) => {
                           data-cursor-exclusion
                           data-cursor-size="50px"
                         >
-                          <a href="">
+                          <a href="https://www.facebook.com/in.enigmadigital">
                             <span data-text="Facebook">Facebook</span>
                           </a>
                         </div>
@@ -345,7 +345,7 @@ const Menu = ({ state }) => {
                           data-cursor-exclusion
                           data-cursor-size="50px"
                         >
-                          <a href="">
+                          <a href="https://www.instagram.com/enigmadigital/">
                             <span data-text="Instagram">Instagram</span>
                           </a>
                         </div>
@@ -355,7 +355,7 @@ const Menu = ({ state }) => {
                           data-cursor-exclusion
                           data-cursor-size="50px"
                         >
-                          <a href="">
+                          <a href="https://www.youtube.com/">
                             <span data-text="Youtube">Youtube</span>
                           </a>
                         </div>
@@ -367,7 +367,7 @@ const Menu = ({ state }) => {
                           data-cursor-exclusion
                           data-cursor-size="50px"
                         >
-                          <a href="">
+                          <a href="https://twitter.com/_EnigmaDigital">
                             <span data-text="Twitter">Twitter</span>
                           </a>
                         </div>
@@ -377,7 +377,7 @@ const Menu = ({ state }) => {
                           data-cursor-exclusion
                           data-cursor-size="50px"
                         >
-                          <a href="">
+                          <a href="https://in.linkedin.com/company/in-enigmadigital">
                             <span data-text="LinkedIn">LinkedIn</span>
                           </a>
                         </div>
@@ -387,7 +387,7 @@ const Menu = ({ state }) => {
                           data-cursor-exclusion
                           data-cursor-size="50px"
                         >
-                          <a href="">
+                          <a href="https://www.behance.net/enigma-digital">
                             <span data-text="Behance">Behance</span>
                           </a>
                         </div>

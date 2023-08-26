@@ -115,6 +115,7 @@ function Footer() {
                 width={250}
                 height={50}
                 className="footer-dark-img"
+                alt="Foter contact image"
               />
             </div>
             <div
@@ -136,7 +137,7 @@ function Footer() {
           <div className="footer-content">
             <div className="left-section">
               <div className="mail f__anim">
-                <h4>mail us</h4>
+                <h6>mail us</h6>
                 <div className="cb-outro-header">
                   <a
                     href="mailto:hi@weareenigma.com"
@@ -149,7 +150,7 @@ function Footer() {
                 </div>
               </div>
               <div className="phone f__anim">
-                <h4> even better call us</h4>
+                <h6> even better call us</h6>
                 <div className="num">
                   <div
                     className="cb-menu-nav-item f__anim"
@@ -177,7 +178,7 @@ function Footer() {
               </div>
             </div>
             <div className="right-section">
-              <h4 className="f__anim">let's be friends</h4>
+              <h6 className="f__anim">let's be friends</h6>
               <div className="socials">
                 <div className="top-socials f__anim">
                   <div

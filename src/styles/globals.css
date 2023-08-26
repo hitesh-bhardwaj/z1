@@ -5992,7 +5992,7 @@ a:hover {
   width: 80%;
 }
 
-.mail h4 {
+.mail h6 {
   font-size: 1.15vw;
   font-weight: 400;
   color: #8c8c8c;
@@ -6013,7 +6013,7 @@ a:hover {
   padding-top: 50px;
 }
 
-.phone h4 {
+.phone h6 {
   font-size: 1.15vw;
   font-weight: 400;
   color: #8c8c8c;
@@ -6031,7 +6031,7 @@ a:hover {
   justify-content: space-between;
 }
 
-.right-section h4 {
+.right-section h6 {
   color: #8c8c8c;
   font-size: 1.15vw;
   font-weight: 400;
@@ -7153,11 +7153,11 @@ a:hover {
     height: 28vh;
   }
 
-  .mail h4 {
+  .mail h6 {
     font-size: 2.5vw;
   }
 
-  .phone h4 {
+  .phone h6 {
     font-size: 2.5vw;
   }
 
@@ -7189,7 +7189,7 @@ a:hover {
     font-size: 2.5vw;
   }
 
-  .right-section h4 {
+  .right-section h6 {
     font-size: 2.5vw;
   }
 
