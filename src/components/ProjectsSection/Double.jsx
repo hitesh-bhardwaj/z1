@@ -67,7 +67,7 @@ export default function Index({projects, reversed}) {
             </div>
             <div className={styles.body}>
                 <h3>{projects[0].name}</h3>
-                <p>{projects[0].description}</p>
+                <h4>{projects[0].description}</h4>
                 <p>{projects[0].year}</p>
             </div>
             </Link>
@@ -89,7 +89,7 @@ export default function Index({projects, reversed}) {
             </div>
             <div className={styles.body}>
                 <h3>{projects[1].name}</h3>
-                <p>{projects[1].description}</p>
+                <h4>{projects[1].description}</h4>
                 <p>{projects[1].year}</p>
             </div>
           </Link>

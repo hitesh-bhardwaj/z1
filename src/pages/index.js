@@ -1,8 +1,7 @@
-import { useEffect, useRef } from "react";
+'use client'
+
 import Head from "next/head";
-import Image from "next/image";
 import gsap from "gsap";
-import { motion } from "framer-motion";
 import { Cursor } from "../../cursor/index";
 import "react-creative-cursor/dist/styles.css";
 import SmoothScroll from "@/components/utils/SmoothScroll";
@@ -28,43 +27,6 @@ gsap.config({
 });
 
 export default function Home() {
-
-
-  // // Hero Section Animation
-  // useEffect(() => {
-  //   const tl = gsap.timeline();
-  //   tl.fromTo(
-  //     "#anim",
-  //     {
-  //       rotationX: -80,
-  //       opacity: 0,
-  //       translateY: 300,
-  //       transformPerspective: "1000",
-  //       transformOrigin: "top center",
-  //     },
-  //     {
-  //       delay: 6,
-  //       duration: 1.3,
-  //       rotationX: 0,
-  //       opacity: 1,
-  //       translateY: 0,
-  //       stagger: 0.2,
-  //     }).fromTo(
-  //       ".home-page-header",
-  //       {
-  //         y: -50,
-  //         opacity: 0,
-  //       },
-  //       {
-  //         delay: -1,
-  //         duration: 1.3,
-  //         opacity: 1,
-  //         y: 0,
-  //         stagger: 0.1
-  //       }
-  //     );
-  //   return () => tl.kill();
-  // }, []);
 
   return (
     <>

@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import gsap from "gsap";
 import Link from "next/link";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
-import ConceptLazyLoadVideo from "./ConceptLazyLoadVideo";
+import ConceptLazyVideo from "./ConceptLazyVideo";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -207,7 +207,10 @@ export default function ConceptScrollNew() {
                   <div className="macbook_pro" />
                   <div className="macbook_frame">
                     <div className="macbook_frame_content_upper"></div>
-                    <ConceptLazyLoadVideo />
+                    <ConceptLazyVideo
+                      src="/assets/newProject/a.webm"
+                      title="Mac Enigma Video"
+                    />
                     {/* <video
                       width="100%"
                       height="100%"

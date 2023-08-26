@@ -1,6 +1,6 @@
 .double {
   display: flex;
-  margin-top: 7vh;
+  margin-top: 5vh;
   height: 40vw;
 }
 .double .imageContainer:nth-of-type(1) {
@@ -31,26 +31,26 @@
   padding: 10px;
 }
 .double .body h3 {
-  font-size: 1.5vw;
+  font-size: 1.6vw;
   margin-bottom: 5px;
   margin-top: 0px;
   font-weight: 500;
   font-family: 'CLashDisplay';
   color: var(--black1);
 }
-/* .double .body h5 {
-  font-size: 1.2vw;
+
+.double .body h4 {
+  font-size: 1.5vw;
   margin: 0px;
   color: var(--black2);
-} */
-
-.double .body p {
-  font-size: 1.2vw;
-  margin: 0px;
-  color: var(--gray2);
 }
 
+.double .body p {
+  font-size: 1.3vw;
+  margin: 0px;
+  color: var(--gray1);
+}
 .double .body p:nth-of-type(2) {
-  color: var(--gray);
+  color: #656565;
   transform: translateY(300);
 }

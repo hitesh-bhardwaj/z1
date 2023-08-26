@@ -1,13 +1,16 @@
 import React from "react";
 import Link from "next/link";
-import HomePageLazyVideo from "./HomePageLazyVideo";
+import LazyVideo from "./LazyVideo";
 
 export default function HomeVideoSection() {
   return (
     <>
       <div className="video-section-mobile">
         <div className="video-box">
-        <HomePageLazyVideo />
+        <LazyVideo
+        src="/assets/reels/hero.webm"
+        title="official reel video"
+      />
         </div>
 
         <div className="video-content-box">
