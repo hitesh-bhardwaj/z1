@@ -11,32 +11,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function Index({projects, reversed}) {
 
-  // useEffect(() => {
-  //   const doubleContainer = document.querySelector("#doubleContainer");
-  //   const doubleImage = document.querySelectorAll("#doubleContainer > #doubleImage");
-
-  //   const tl1 = gsap.timeline({
-  //           scrollTrigger: {
-  //               trigger: doubleContainer.current,
-  //               start: "top 80%",
-  //               markers: false,
-  //           }
-  //       });
-
-  //       tl1.fromTo( doubleImage, {
-  //           y: 200,
-  //           opacity: 0,
-  //       },
-  //       {   
-  //           duration: 1,
-  //           opacity: 1,
-  //           y: 0,
-  //           stagger: 0.5,
-  //       });
-  //       return () => tl1.kill();
-  //   });
-
-
     const firstImage = useRef(null);
     const secondImage = useRef(null);
     let requestAnimationFrameId = null;
@@ -93,7 +67,7 @@ export default function Index({projects, reversed}) {
             </div>
             <div className={styles.body}>
                 <h3>{projects[0].name}</h3>
-                <h5>{projects[0].description}</h5>
+                <p>{projects[0].description}</p>
                 <p>{projects[0].year}</p>
             </div>
             </Link>
@@ -115,7 +89,7 @@ export default function Index({projects, reversed}) {
             </div>
             <div className={styles.body}>
                 <h3>{projects[1].name}</h3>
-                <h5>{projects[1].description}</h5>
+                <p>{projects[1].description}</p>
                 <p>{projects[1].year}</p>
             </div>
           </Link>

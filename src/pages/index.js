@@ -1,9 +1,6 @@
-'use client'
-
 import { useEffect, useRef } from "react";
 import Head from "next/head";
 import Image from "next/image";
-import Header from "@/components/Header/Header";
 import gsap from "gsap";
 import { motion } from "framer-motion";
 import { Cursor } from "../../cursor/index";
@@ -11,27 +8,63 @@ import "react-creative-cursor/dist/styles.css";
 import SmoothScroll from "@/components/utils/SmoothScroll";
 import { NextSeo } from "next-seo";
 
+import Header from "@/components/Header/Header";
 import HomeAero from "@/components/Home/HomeAero";
+import HeroDesktop from "@/components/Home/HeroDesktop";
 import Footer from "@/components/Footer";
 import Category from "@/components/Home/Category";
 import ConceptScrollNew from "@/components/Home/ConceptScrollNew";
 import FooterMobile from "@/components/Mobile/FooterMobile";
-import HomeHero from "@/components/Mobile/HomeHero";
+import HeroMobile from "@/components/Mobile/HeroMobile";
 import HomeVideoSection from "@/components/Mobile/HomeVideoSection";
 import ConceptScrollMobile from "@/components/Mobile/ConceptScrollMobile";
 import TopHomeAero from "@/components/Home/TopAero";
-import Link from "next/link";
 import Preloader from "@/components/PreLoader/PreLoader";
 import HomeProject from "@/components/ProjectsSection/HomeProject";
 import ProjectsHome from "@/components/Home/ProjectsHome";
-import HeroSection from "@/components/Home/HeroSection";
-import ConceptScroll from "@/components/Home/ConceptScroll";
 
 gsap.config({
   nullTargetWarn: false,
 });
 
 export default function Home() {
+
+
+  // // Hero Section Animation
+  // useEffect(() => {
+  //   const tl = gsap.timeline();
+  //   tl.fromTo(
+  //     "#anim",
+  //     {
+  //       rotationX: -80,
+  //       opacity: 0,
+  //       translateY: 300,
+  //       transformPerspective: "1000",
+  //       transformOrigin: "top center",
+  //     },
+  //     {
+  //       delay: 6,
+  //       duration: 1.3,
+  //       rotationX: 0,
+  //       opacity: 1,
+  //       translateY: 0,
+  //       stagger: 0.2,
+  //     }).fromTo(
+  //       ".home-page-header",
+  //       {
+  //         y: -50,
+  //         opacity: 0,
+  //       },
+  //       {
+  //         delay: -1,
+  //         duration: 1.3,
+  //         opacity: 1,
+  //         y: 0,
+  //         stagger: 0.1
+  //       }
+  //     );
+  //   return () => tl.kill();
+  // }, []);
 
   return (
     <>
@@ -79,20 +112,25 @@ export default function Home() {
 
       <main>
         
+
         <section>
           <Header />
         </section>
 
-        <HeroSection />
+      {/*===============================Hero Section=========================*/}
+          <section className="main-section">
+            <HeroMobile />
+            <HeroDesktop />
+          </section>
 
       {/* ======================== Concept Scroll ====================== */}
       <section>
-        <ConceptScroll />
+        <ConceptScrollNew />
       </section>
-{/* 
+
       <section>
         <ConceptScrollMobile />
-      </section> */}
+      </section>
       {/* ======================== Concept Scroll END ====================== */}
 
       {/* ======================== Home Video Mobile ====================== */}

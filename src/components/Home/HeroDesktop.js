@@ -1,15 +1,11 @@
-'use client'
-
 import React, { useEffect } from 'react';
-import { useMediaQuery } from '@react-hook/media-query';
 import { Cursor } from "../../../cursor";
 import "react-creative-cursor/dist/styles.css";
 import gsap from "gsap";
-import HomeHero from '../Mobile/HomeHero';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 
-const HeroSection = () => {
+const HeroDesktop = () => {
 
     // Hero Section Animation
   useEffect(() => {
@@ -47,17 +43,8 @@ const HeroSection = () => {
     return () => tl.kill();
   }, []);
 
-  const isMobile = useMediaQuery('(max-width: 991px)');
-
   return (
     <>
-    <div>
-      {isMobile ? (
-        <section className='main-section'>
-            <HomeHero />
-        </section>    
-      ) : (
-        <section className='main-section'>
         <div className="hero-main desktop">
               <div
                 className="hero-section"
@@ -166,13 +153,8 @@ const HeroSection = () => {
                 </div>
               </div>
             </div>
-            </section>
-
-      )}
-    </div>
     </>
-  );
-};
+  )};
 
-export default HeroSection;
+export default HeroDesktop;
 

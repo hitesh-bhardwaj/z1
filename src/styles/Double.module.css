@@ -38,16 +38,16 @@
   font-family: 'CLashDisplay';
   color: var(--black1);
 }
-.double .body h5 {
+/* .double .body h5 {
   font-size: 1.2vw;
   margin: 0px;
   color: var(--black2);
-}
+} */
 
 .double .body p {
   font-size: 1.2vw;
   margin: 0px;
-  color: var(--gray);
+  color: var(--gray2);
 }
 
 .double .body p:nth-of-type(2) {

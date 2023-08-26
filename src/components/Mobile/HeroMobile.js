@@ -1,10 +1,8 @@
-'use client';
-
 import React, { useEffect } from "react";
 import gsap from "gsap";
 import SplitType from "split-type";
 
-export default function HomeHero() {
+export default function HeroMobile() {
   // Hero Section Animation
   useEffect(() => {
     const tl = gsap.timeline();
@@ -79,9 +77,6 @@ export default function HomeHero() {
           </div>
 
           <div className="content-hero-box-mobile">
-            {/* <div className="first-text" id="anim2">
-              <h3>We are</h3>
-            </div> */}
 
             <div className="second-text line-height" id="anim2">
               <h1>Digital</h1>
@@ -98,14 +93,14 @@ export default function HomeHero() {
             </div>
 
             <div className="mobile-hero-para" id="para">
-              <h4>
+              <p>
                 Leveraging the power of{" "}
                 <strong>
                   Emotion, Consumer Psychology, and Technology,{" "}
                 </strong>
                 we create Digital Brand Experiences that propel your success in
                 the enigmatic realm of bits & bytes.
-              </h4>
+              </p>
             </div>
           </div>
         </div>

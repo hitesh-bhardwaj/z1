@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import gsap from "gsap";
 import Link from "next/link";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
+import ConceptLazyLoadVideo from "./ConceptLazyLoadVideo";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -206,7 +207,8 @@ export default function ConceptScrollNew() {
                   <div className="macbook_pro" />
                   <div className="macbook_frame">
                     <div className="macbook_frame_content_upper"></div>
-                    <video
+                    <ConceptLazyLoadVideo />
+                    {/* <video
                       width="100%"
                       height="100%"
                       autoPlay
@@ -215,7 +217,7 @@ export default function ConceptScrollNew() {
                       playsInline
                       src="/assets/newProject/a.webm"
                       loading="lazy"
-                    ></video>
+                    ></video> */}
                     <div className="macbook_frame_background" />
                   </div>
                 </div>
