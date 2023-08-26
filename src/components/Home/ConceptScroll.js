@@ -4,7 +4,8 @@ import React, { useEffect } from 'react';
 import { useMediaQuery } from '@react-hook/media-query';
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
-import ConceptScrollMobile from '../Mobile/ConceptScrollMobile';
+import ConceptScrollMobile from '../Mobile/ConceptScrollMobile'
+import Link from "next/link";
 
 gsap.registerPlugin(ScrollTrigger);
 
