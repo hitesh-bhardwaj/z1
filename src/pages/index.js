@@ -25,6 +25,7 @@ import Preloader from "@/components/PreLoader/PreLoader";
 import HomeProject from "@/components/ProjectsSection/HomeProject";
 import ProjectsHome from "@/components/Home/ProjectsHome";
 import HeroSection from "@/components/Home/HeroSection";
+import ConceptScroll from "@/components/Home/ConceptScroll";
 
 gsap.config({
   nullTargetWarn: false,
@@ -86,12 +87,12 @@ export default function Home() {
 
       {/* ======================== Concept Scroll ====================== */}
       <section>
-        <ConceptScrollNew />
+        <ConceptScroll />
       </section>
-
+{/* 
       <section>
         <ConceptScrollMobile />
-      </section>
+      </section> */}
       {/* ======================== Concept Scroll END ====================== */}
 
       {/* ======================== Home Video Mobile ====================== */}

@@ -5,7 +5,6 @@ import { useMediaQuery } from '@react-hook/media-query';
 import { Cursor } from "../../../cursor";
 import "react-creative-cursor/dist/styles.css";
 import gsap from "gsap";
-import Home from '@/pages';
 import HomeHero from '../Mobile/HomeHero';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
