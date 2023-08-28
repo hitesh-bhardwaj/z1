@@ -60,7 +60,7 @@ const Loader = ({ setLoading }) => {
         <motion.div variants={itemMain} className="transition-image">
           <motion.img
             layoutId="main-image-1"
-            src={`/assets/reels/poster.png`}
+            src={`/assets/reels/poster.webp`}
             alt="work loading image"
           />
         </motion.div>

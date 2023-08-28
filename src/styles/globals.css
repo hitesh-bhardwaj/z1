@@ -53,8 +53,8 @@
 }
 
 .c-cursor__inner {
-  font-family: "Gilroy";
-  font-weight: 500;
+  font-family: "ClashDishplay";
+  font-weight: 400;
   font-size: 0.9vw !important;
 }
 
@@ -1450,7 +1450,6 @@ label:hover circle {
   letter-spacing: -0.01vw;
   line-height: 100%;
   text-decoration: none;
-  font-family: "Gilroy";
 }
 
 .cb-menu-nav-item a:before {
@@ -2942,7 +2941,6 @@ accordion-item--default .accordion .accordion-item-content {
 
 .card {
   background: var(--white1);
-  font-family: "Gilroy";
 }
 
 .card-body {
@@ -3100,11 +3098,11 @@ input::placeholder {
 }
 
 input {
-  font-family: 'Gilroy';
+  font-family: 'ClashDisplay';
 }
 
 textarea {
-  font-family: 'Gilroy';
+  font-family: 'ClashDisplay';
 }
 
 textarea::placeholder {
@@ -3203,12 +3201,12 @@ textarea::placeholder {
 .text {
   padding: 0;
   font-size: 10vw;
-  font-weight: 600;
+  font-weight: 500;
   color: #a2a2a2;
   display: inline-block;
   text-transform: uppercase;
   margin-right: 1rem;
-  font-family: "Gilroy";
+  font-family: 'ClashDisplay';
 }
 
 /* ========================================== Contact Us Index END ========================================== */
@@ -5438,7 +5436,7 @@ body.loading {
 }
 
 .blogs-heading {
-  width: 85%;
+  width: 90%;
   height: 100%;
   display: flex;
   align-items: center;
@@ -5448,9 +5446,8 @@ body.loading {
 .blogs-heading h1 {
   font-size: 7.8vw;
   margin-top: 2vw;
-  letter-spacing: -0.2vw;
   font-weight: 500;
-  color: var(--black1);
+  color: var(--black2);
   text-transform: uppercase;
 }
 
@@ -5470,7 +5467,7 @@ body.loading {
   cursor: pointer;
   background: transparent;
   border: 1px solid var(--black1);
-  font-family: "Gilroy";
+  font-family: 'ClashDisplay';
   font-weight: 500;
 }
 
@@ -5552,13 +5549,13 @@ body.loading {
 
 
 .active {
-  color: var(--white)fff;
+  color: var(--white);
   background-color: var(--black1) !important;
 }
 
 .blogs-section .ul-blog {
   position: relative;
-  margin-top: 5vw;
+  margin-top: 7vw;
   width: 90%;
   height: 100%;
   margin-right: 3vw;
@@ -5578,7 +5575,7 @@ body.loading {
 
 .desc-tag {
   font-size: 1.5vw;
-  font-weight: 600;
+  font-weight: 500;
   color: var(--black1);
   margin-top: 1vw;
 }
@@ -5600,7 +5597,7 @@ body.loading {
   font-size: 1.3vw;
   font-weight: 500;
   background: var(--black);
-  color: var(--white)fff;
+  color: var(--white);
 }
 
 .blog-showmore-box {
@@ -5739,7 +5736,7 @@ body.loading {
 .donald {
   font-size: 1.8vw;
   color: var(--black1);
-  font-weight: 600;
+  font-weight: 500;
   margin-left: 3.2vw;
 }
 
@@ -5886,7 +5883,7 @@ body.loading {
   font-size: 1.4vw;
   margin-top: 1vw;
   color: var(--black1);
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .span-font-size-2 {
@@ -8205,7 +8202,7 @@ a:hover {
   .content-hero-box-mobile .first-text h3 {
     color: var(--black1);
     font-size: 6vw;
-    font-weight: 600;
+    font-weight: 500;
     margin-bottom: 1vw;
   }
 
@@ -8580,7 +8577,7 @@ a:hover {
     background-color: var(--black1);
     color: var(--white);
     padding: 4vw 8vw;
-    font-family: "Gilroy";
+    font-family: 'ClashDisplay';
     font-size: 4.5vw;
     font-weight: 400;
   }
@@ -8639,7 +8636,7 @@ a:hover {
     top: 1.5vh;
     padding: 0 1vw;
     font-size: 5vw;
-    font-weight: 600;
+    font-weight: 500;
   }
 
   .about-text-aero {
