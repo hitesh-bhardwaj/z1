@@ -32,7 +32,7 @@ export default function NewGifSection() {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".gifSectionAbout",
-        start: "-600 top",
+        start: "top 90%",
       },
     });
 
@@ -57,11 +57,11 @@ export default function NewGifSection() {
   useEffect(() => {
     let ctx = gsap.context(() => {
       const tl = gsap.timeline();
-      tl.to(".gifsubtetx p", {
+      tl.to(".gifsubtext p", {
         backgroundPositionX: "0%",
         stagger: 1,
         scrollTrigger: {
-          trigger: ".gifsubtetx p",
+          trigger: ".gifsubtext p",
           scrub: 1,
           start: "-100 center",
           end: "bottom center",
@@ -87,6 +87,7 @@ export default function NewGifSection() {
             <h2 className="about-gif-text">culture</h2>
             <img
               src="/assets/about/gif-section/arr.png"
+              alt="gif arrow img"
               className="about-gif-arrow"
             />
             <h2 className="about-gif-num">01</h2>
@@ -112,6 +113,7 @@ export default function NewGifSection() {
             <h2 className="about-gif-text">attitude</h2>
             <img
               src="/assets/about/gif-section/arr.png"
+              alt="gif arrow img"
               className="about-gif-arrow"
             />
             <h2 className="about-gif-num">02</h2>
@@ -138,6 +140,7 @@ export default function NewGifSection() {
             <h2 className="about-gif-text">ethos</h2>
             <img
               src="/assets/about/gif-section/arr.png"
+              alt="gif arrow img"
               className="about-gif-arrow"
             />
             <h2 className="about-gif-num">03</h2>
@@ -166,6 +169,7 @@ export default function NewGifSection() {
             <h2 className="about-gif-text">experience</h2>
             <img
               src="/assets/about/gif-section/arr.png"
+              alt="gif arrow img"
               className="about-gif-arrow"
             />
             <h2 className="about-gif-num">04</h2>
@@ -192,6 +196,7 @@ export default function NewGifSection() {
             <h2 className="about-gif-text">magic</h2>
             <img
               src="/assets/about/gif-section/arr.png"
+              alt="gif arrow img"
               className="about-gif-arrow"
             />
             <h2 className="about-gif-num">05</h2>
@@ -207,10 +212,12 @@ export default function NewGifSection() {
         </div>
 
         <div className="gifBottomText">
-          <div className="gifsubtetx">
-            <p>We are 'Inherently Distinctive' from</p>
-            <p>your traditional digital agency.</p>
-            <span>👼</span>
+          <div className="gifsubtext">
+            <p>We don't adapt to change, we anticipate it!</p>
+            <span className="span1">💡</span>
+            <p>Our digital solutions have transformed brands</p>
+            <p>and empowered businesses globally.</p>
+            <span className="span3">🌎🚀</span>
           </div>
         </div>
       </div>

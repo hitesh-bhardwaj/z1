@@ -17,6 +17,10 @@ import AboutNextBox from "@/components/NextBoxes/AboutNextBox";
 import LogoCarousel from "@/components/About/LogoCarousel";
 import NewGifSection from "@/components/About/NewGifSection";
 
+gsap.config({
+  nullTargetWarn: false,
+});
+
 export default function about() {
   // Hero Section Animation
   useEffect(() => {
@@ -181,11 +185,10 @@ export default function about() {
       gsap.from(textwords, {
         scrollTrigger: {
           trigger: elem,
-          start: "-380 top",
-          end: "bottom top",
+          start: "top 85%",
           markers: false,
         },
-        duration: 1,
+        duration: 0.8,
         opacity: 0,
         yPercent: 100,
         ease: "Power3.out",
@@ -203,11 +206,10 @@ export default function about() {
       gsap.from(textwords, {
         scrollTrigger: {
           trigger: elem,
-          start: "-380 top",
-          end: "bottom top",
+          start: "top 85%",
           markers: false,
         },
-        duration: 1,
+        duration: 0.8,
         opacity: 0,
         yPercent: 100,
         ease: "Power3.out",
@@ -250,7 +252,7 @@ export default function about() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"
+          content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
         ></meta>
         <link rel="icon" href="/fav-icon.png" />
       </Head>
@@ -259,7 +261,7 @@ export default function about() {
 
       <Cursor isGelly={true} />
 
-      <div className="loader-wrap" id="loader" style={{ zIndex: 999 }}>
+      <div className="loader-wrap" id="loader" style={{ zIndex: 9999 }}>
         <svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
           <path id="svg" d="M0,1005S175,995,500,995s500,5,500,5V0H0Z" />
         </svg>
@@ -276,11 +278,9 @@ export default function about() {
       </div>
 
       <main>
-        <div className="hero-about">
+        <section className="hero-about">
           <div
             className="hero-section-about"
-            data-cursor-size="10px"
-            data-cursor-text=""
           >
             <div className="container_hero">
               <div id="noise" />
@@ -493,14 +493,12 @@ export default function about() {
               id="cursor-stick-area"
               data-cursor-exclusion
             >
-              <a>
                 <img
                   className="inner"
                   src="/assets/about/arrow.svg"
                   alt="play icon"
                   style={{ transform: "translate(0px, 0px)" }}
                 />
-
                 <svg
                   className="scroll-icon"
                   version="1.1"
@@ -671,42 +669,34 @@ export default function about() {
                     <path d="M7.9,47.8l-1.4-0.3l0.7-3.1l1.4,0.3L7.9,47.8z" />
                   </g>
                 </svg>
-              </a>
-            </div>
+              </div>
           </div>
-        </div>
-
-        <div className="space-large desktop"></div>
-        <div className="space-large desktop"></div>
+        </section>
 
         {/* Second Section */}
 
-        <div
+        <section
           data-cursor-color="#000"
           data-cursor-size="0px"
-          className="aero-about"
+          className="aero-about p-200"
         >
           <AboutAerosol />
-        </div>
+        </section>
 
-        {/* Second Section END */}
-
-        <div className="space-large desktop"></div>
+        {/* Second Section END */}  
 
         {/* Reel Section */}
 
-        <div className="reel-section-about">
+        <section className="reel-section-about">
           <div className="reel-section-box">
             <VideoPlayer />
           </div>
-        </div>
+        </section>
 
         {/* Reel Section END */}
 
-        <div className="space-large desktop"></div>
-
         {/* First Content Section */}
-        <div className="first-about-content-section">
+        <section className="first-about-content-section m-150">
           <div className="first-sub-section">
             <div className="left-box-heading">
               <h1 className="why-us-anim">
@@ -734,30 +724,21 @@ export default function about() {
               </p>
             </div>
           </div>
-        </div>
+        </section>
         {/* First Content Section END */}
 
-        <div className="space-large mobile"></div>
-
         {/* =============== Horizontal Section ================== */}
-        <div className="pin-about">
+        <section className="pin-about">
           <NewGifSection />
-        </div>
+        </section>
         {/* =============== Horizontal Section END ================== */}
 
-        <div className="space-large desktop"></div>
-        <div className="ipad desktop"></div>
-        <div className="ipad desktop"></div>
         {/* =============== Slider Marquee ================== */}
         <SliderMarquee />
         {/* =============== Slider Marquee END ================== */}
 
-        <div className="space-large desktop"></div>
-        <div className="ipad desktop"></div>
-        <div className="ipad desktop"></div>
-
         {/* Client LOVE US  Section */}
-        <div className="client-about-content-section" id="client-loveus">
+        <section className="client-about-content-section m-150" id="client-loveus">
           <div className="first-sub-section">
             <div className="left-box-heading">
               <h1 className="client-anim-heading">
@@ -777,104 +758,18 @@ export default function about() {
               </p>
             </div>
           </div>
-        </div>
+        </section>
 
-        <div className="space-large desktop"></div>
-        <div className="space-large mobile"></div>
-        <div className="ipad desktop"></div>
-        <div className="ipad desktop"></div>
-
-        {/* <div className="client-logo-section">
-          <div className="client-logo-sub-section">
-            <div className="client-logo-first-box">
-              <div className="client-logo-box">
-                <img
-                  src="/assets/about/new-logo/patronum.png"
-                  alt="logo"
-                  className="img1"
-                />
-              </div>
-
-              <div className="client-logo-box">
-                <img
-                  src="/assets/about/new-logo/jelly.png"
-                  alt="logo"
-                  className="img2"
-                />
-              </div>
-
-              <div className="client-logo-box">
-                <img
-                  src="/assets/about/new-logo/patra.png"
-                  alt="logo"
-                  className="img3"
-                />
-              </div>
-
-              <div className="client-logo-box">
-                <img
-                  src="/assets/about/new-logo/quickx.png"
-                  alt="logo"
-                  className="img4"
-                />
-              </div>
-            </div> */}
-
-        {/* ======== Second BOX =========== */}
-
-        {/* <div className="client-logo-first-box">
-              <div className="client-logo-box">
-                <img
-                  src="/assets/about/new-logo/bespin.png"
-                  alt="logo"
-                  className="img1 b-b"
-                />
-              </div>
-
-              <div className="client-logo-box">
-                <img
-                  src="/assets/about/new-logo/kk.png"
-                  alt="logo"
-                  className="img2 b-b"
-                />
-              </div>
-
-              <div className="client-logo-box">
-                <img
-                  src="/assets/about/new-logo/riva.png"
-                  alt="logo"
-                  className="img3 b-b riva"
-                />
-              </div>
-
-              <div className="client-logo-box">
-                <img
-                  src="/assets/about/new-logo/dmtca.png"
-                  alt="logo"
-                  className="img4 b-b"
-                />
-              </div>
-            </div>
-          </div>
-        </div> */}
-
+      <section className="p-200">
         <LogoCarousel />
+      </section>
         {/* Client LOVE US  Section END */}
 
-        <div className="space-large desktop"></div>
-        <div className="space-large desktop"></div>
-
         {/* Next Page Button */}
-        <div>
+        <div className="m-150">
           <AboutNextBox />
         </div>
         {/* Next Page Button END */}
-
-        <div className="space-large desktop"></div>
-        <div className="space-large desktop"></div>
-        <div className="space-large mobile"></div>
-        <div className="space-ipad ipad"></div>
-        <div className="space-ipad ipad"></div>
 
         {/* ======================== Footer ====================== */}
         <div className="desktop-footer">

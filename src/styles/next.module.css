@@ -1,7 +1,7 @@
 .nextContainer {
   width: 80%;
   margin: 0 auto;
-  height: 20vh;
+  height: 60vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,7 +17,7 @@
 .mainHeading h1 {
   font-size: 7vw;
   font-weight: 500;
-  color: #1a1a1a;
+  color: var(--black2);
   position: relative;
   letter-spacing: 1px;
 }
@@ -29,8 +29,8 @@
   left: 0;
   right: 0;
   bottom: 0;
-  top: 7.5vw;
-  height: 0.1vw;
+  top: 9vw;
+  height: 2px;
   background: currentColor;
   -webkit-transition: -webkit-transform 0.45s
     cubic-bezier(0.4, 0.22, 0.21, 1.04);

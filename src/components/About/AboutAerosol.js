@@ -28,7 +28,7 @@ export default function Aerosol() {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".aero-hover",
-        start: "-200 top",
+        start: "top 85%",
       },
     });
     const demoHeader = document.querySelector(".aero-demo h1");
@@ -63,11 +63,11 @@ export default function Aerosol() {
         </div>
 
         <div className="aerosol-main">
-          <div class="c-cursor"></div>
-          <div class="shapes">
-            <div class="shape shape-1 about-1"></div>
-            <div class="shape shape-2 about-2"></div>
-            <div class="shape shape-3 about-3"></div>
+          <div className="c-cursor"></div>
+          <div className="shapes">
+            <div className="shape shape-1 about-1"></div>
+            <div className="shape shape-2 about-2"></div>
+            <div className="shape shape-3 about-3"></div>
           </div>
         </div>
       </div>

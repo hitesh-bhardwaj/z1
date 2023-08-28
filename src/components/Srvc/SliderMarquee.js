@@ -7,69 +7,6 @@ import Swiper from "swiper";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function SliderMarquee() {
-  useEffect(() => {
-    const marquee = document.querySelectorAll(".cb-marquee");
-
-    marquee.forEach((e) => {
-      // Create swiper carousel
-      const carousel = e.querySelectorAll(".cb-marquee-carousel");
-
-      carousel.forEach((e) => {
-        const items = e.querySelector(".cb-marquee-items");
-        const item = e.querySelectorAll(".cb-marquee-item");
-
-        e.classList.add("swiper-container");
-        items.classList.add("swiper-wrapper");
-        item.forEach((e) => e.classList.add("swiper-slide"));
-
-        const slider = new Swiper(e, {
-          slidesPerView: "auto",
-          loop: true,
-          freeMode: false,
-          freeModeMomentumBounce: false,
-          freeModeMomentumVelocityRatio: false,
-        });
-      });
-      // Scroll triggered movement
-      const tl = new gsap.timeline();
-
-      tl.set(carousel, { willChange: "transform" });
-
-      tl.fromTo(
-        carousel[0],
-        {
-          y: -1000,
-        },
-        {
-          y: 0,
-          ease: "none",
-        },
-        0
-      );
-
-      tl.fromTo(
-        carousel[1],
-        {
-          y: 500,
-        },
-        {
-          y: 0,
-          ease: "none",
-        },
-        0
-      );
-
-      tl.set(carousel, { willChange: "auto" });
-
-      ScrollTrigger.create({
-        trigger: e,
-        animation: tl,
-        start: "top bottom",
-        end: "bottom top",
-        scrub: 1,
-      });
-    });
-  });
 
   useEffect(() => {
     let ctx = gsap.context(() => {
@@ -83,10 +20,10 @@ export default function SliderMarquee() {
         scrollTrigger: {
           trigger: scrollContainer,
           scrub: true,
-          start: "-1000 top",
-          end: "+=2000",
+          start: "top bottom",
+          end: "200% top",
           pin: false,
-          toggleActions: "restart pause reverse pause",
+          // toggleActions: "restart pause reverse pause",
         },
       });
 
@@ -133,6 +70,8 @@ export default function SliderMarquee() {
         startAt: { x: "-10%" },
         scrollTrigger: {
           trigger: container,
+          start: 'top bottom',
+          end: '150% top',
           scrub: true,
           pin: false,
           markers: false,
@@ -145,97 +84,7 @@ export default function SliderMarquee() {
 
   return (
     <div>
-      {/* <div className="cb-layout">
-        <div className="cb-content">
-          <section className="cb-marquee">
-            <div className="cb-marquee-content">
-              <div className="cb-marquee-main">
-                <div
-                  className="cb-marquee-carousel caro-1"
-                  data-cursor-text="Drag"
-                  data-cursor-size="100px"
-                >
-                  <div className="cb-marquee-items">
-                    <div className="cb-marquee-item">
-                      <Image
-                        src="/assets/projects/new-project/patro.webp"
-                        width={2000}
-                        height={2000}
-                        alt="Slider"
-                      />
-                    </div>
-                    <div className="cb-marquee-item">
-                      <Image
-                        src="/assets/projects/new-project/wrag.webp"
-                        width={2000}
-                        height={2000}
-                        alt="Slider"
-                      />
-                    </div>
-                    <div className="cb-marquee-item">
-                      <Image
-                        src="/assets/projects/new-project/pdtl.webp"
-                        width={2000}
-                        height={2000}
-                        alt="Slider"
-                      />
-                    </div>
-                    <div className="cb-marquee-item">
-                      <Image
-                        src="/assets/projects/new-project/kedar.webp"
-                        width={2000}
-                        height={2000}
-                        alt="Slider"
-                      />
-                    </div>
-                  </div>
-                </div>
 
-                <div
-                  className="cb-marquee-carousel caro-1"
-                  data-cursor-text="Drag"
-                  data-cursor-size="100px"
-                >
-                  <div className="cb-marquee-items">
-                    <div className="cb-marquee-item">
-                      <Image
-                        src="/assets/projects/new-project/gcm.webp"
-                        width={2000}
-                        height={2000}
-                        alt="Slider"
-                      />
-                    </div>
-                    <div className="cb-marquee-item voro">
-                      <Image
-                        src="/assets/projects/new-project/dharan.webp"
-                        width={2000}
-                        height={2000}
-                        alt="Slider"
-                      />
-                    </div>
-                    <div className="cb-marquee-item">
-                      <Image
-                        src="/assets/projects/new-project/patro.webp"
-                        width={2000}
-                        height={2000}
-                        alt="Slider"
-                      />
-                    </div>
-                    <div className="cb-marquee-item">
-                      <Image
-                        src="/assets/projects/new-project/kedar.webp"
-                        width={2000}
-                        height={2000}
-                        alt="Slider"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-        </div>
-      </div> */}
 
       <div id="scroll-container">
         <div id="container" className="cf-10">

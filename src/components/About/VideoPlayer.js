@@ -51,11 +51,11 @@ const VideoPlayer = () => {
           position: "absolute",
           top: "0px",
           left: "0px",
-          width: "100%",
-          height: "100%",
+          width: "auto",
+          height: "auto",
         }}
       />
-      <video ref={videoRef} src="/assets/reels/showreel.mp4" />
+      <video ref={videoRef} src="/assets/reels/showreel.mp4"/>
       <div
         className="play-pause-button"
         style={playPauseButtonStyle}
@@ -63,11 +63,13 @@ const VideoPlayer = () => {
       >
         {isPlaying ? (
           <div className={styles.svgBackground}>
-            <img src="https://img.icons8.com/ios-filled/100/000000/pause--v1.png" />
+            <img src="/assets/icons/pause.png"
+            alt="showreel pause" />
           </div>
         ) : (
           <div className={styles.svgBackground}>
-            <img src="https://img.icons8.com/ios/100/000000/play-button-circled--v3.png" />
+            <img src="/assets/icons/play.png"
+            alt="showreel play" />
           </div>
         )}
       </div>

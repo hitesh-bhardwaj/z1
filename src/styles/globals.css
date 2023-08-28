@@ -40,6 +40,7 @@
   bottom: 0;
   left: 0;
   width: 100vw;
+  overflow: hidden;
 }
 
 ::-webkit-scrollbar {
@@ -344,7 +345,7 @@ body {
 
 .dark-mode .about-gif-text,
 .dark-mode .about-gif-num,
-.dark-mode .gifsubtetx span,
+.dark-mode .gifsubtext span,
 .dark-mode .emoji-dark {
   filter: invert(1);
 }
@@ -446,7 +447,7 @@ body {
 
 .loader-wrap {
   position: absolute;
-  z-index: 10;
+  z-index: 9999;
   height: 100vh;
   width: 100%;
   display: flex;
@@ -478,21 +479,13 @@ body {
   overflow: visible;
 }
 
-.loader-wrap .loader-wrap-heading h2 {
-  font-size: 2vw;
-  z-index: 20;
-  color: #e0e0e0;
-  text-transform: uppercase;
-  font-weight: 500;
-  overflow: hidden;
-}
-
 .loader-wrap .loader-wrap-heading h1 {
-  font-size: 2vw;
+  font-size: 48px;
   z-index: 20;
   color: #e0e0e0;
-  text-transform: uppercase;
-  font-weight: 500;
+  text-transform: capitalize;
+  font-weight: 400;
+  font-family: 'ClashDisplay';
 }
 
 /* =============== Preloader END =================== */
@@ -3225,7 +3218,7 @@ textarea::placeholder {
 /* About Hero */
 .hero-about {
   width: 100%;
-  height: 120vh;
+  height: 150vh;
 }
 
 .about-header {
@@ -3255,7 +3248,6 @@ textarea::placeholder {
 }
 
 .container_hero_content {
-  z-index: 11;
   position: relative;
   display: flex;
   align-items: center;
@@ -3274,7 +3266,7 @@ textarea::placeholder {
 }
 
 .container_hero_content #enigma-svg #e {
-  transform: scale(5.1) translate(-95px, -116px);
+  transform: scale(5.5) translate(-95px, -118px);
 }
 
 .container_hero_content #enigma-svg #n {
@@ -3437,14 +3429,14 @@ textarea::placeholder {
 .about-text-aero {
   max-width: 80vw;
   line-height: 1.2;
-  font-weight: 600 !important;
+  font-weight: 500 !important;
   text-align: center;
   font-size: 6.5vw !important;
   color: var(--black1);
 }
 
 .about-font-weight {
-  font-weight: 600 !important;
+  font-weight: 500 !important;
 }
 
 /* Aerosole END */
@@ -3472,7 +3464,6 @@ textarea::placeholder {
 .first-about-content-section {
   width: 100%;
   height: 100vh;
-  margin-top: 3vw;
 }
 
 .first-about-content-section .first-sub-section {
@@ -3494,8 +3485,8 @@ textarea::placeholder {
 
 .first-sub-section .left-box-heading h1 {
   font-size: 5vw;
-  font-weight: 600;
-  color: var(--black1);
+  font-weight: 500;
+  color: var(--black2);
 }
 
 .first-sub-section .right-box-content {
@@ -3720,8 +3711,8 @@ https://unsplash.com/@vinomamba24
 
 .client-about-content-section .first-sub-section .left-box-heading h1 {
   font-size: 5vw;
-  font-weight: 600;
-  color: var(--black1);
+  font-weight: 500;
+  color: var(--black2);
 }
 
 .client-about-content-section .first-sub-section .right-box-content {
@@ -3822,7 +3813,16 @@ https://unsplash.com/@vinomamba24
   overflow: visible !important;
 }
 
-.Carousel_slide__caro__PQI87 {
+.Carousel_slide__caro__ckaQX {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: static;
+}
+
+.Carousel_slide__caro__ckaQX {
   width: 12% !important;
   height: 60vh !important;
   padding-bottom: 0vw !important;
@@ -3864,7 +3864,7 @@ https://unsplash.com/@vinomamba24
 }
 
 .bottom-caro-box h1 {
-  font-size: 1vw;
+  font-size: 1.4vw;
   color: var(--black1);
   font-weight: 400;
 }
@@ -3964,7 +3964,7 @@ https://unsplash.com/@vinomamba24
   padding: 0 2.5vw;
   text-align: justify;
   color: var(--black1);
-  font-size: 1vw;
+  font-size: 1.4vw;
   font-family: 'Ageo';
 }
 
@@ -4392,8 +4392,8 @@ https://unsplash.com/@vinomamba24
 
 .module {
   width: 800px;
-  height: 100%;
-  margin: 1.2vw;
+  height: 600px;
+  margin: 20px;
   display: flex;
   position: relative;
   overflow: hidden;
@@ -4402,7 +4402,7 @@ https://unsplash.com/@vinomamba24
 .module img {
   position: absolute;
   top: 0;
-  left: -15%;
+  left: 0;
   right: 0;
   bottom: 0;
   width: 125%;
@@ -4413,8 +4413,8 @@ https://unsplash.com/@vinomamba24
 
 .module-2 {
   width: 800px;
-  height: 100%;
-  margin: 1.2vw;
+  height: 600px;
+  margin: 20px;
   display: flex;
   overflow: hidden;
   position: relative;
@@ -4423,7 +4423,7 @@ https://unsplash.com/@vinomamba24
 .module-2 img {
   position: absolute;
   top: 0;
-  left: -15%;
+  left: 0;
   right: 0;
   bottom: 0;
   width: 125%;
@@ -4467,7 +4467,7 @@ https://unsplash.com/@vinomamba24
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 20vw 0 0 0;
+  margin: 20vw 0;
 }
 
 .gifAboutSub {
@@ -4578,7 +4578,7 @@ https://unsplash.com/@vinomamba24
   align-items: center;
 }
 
-.gifsubtetx {
+.gifsubtext {
   width: 80%;
   display: flex;
   justify-content: center;
@@ -4587,16 +4587,16 @@ https://unsplash.com/@vinomamba24
   position: relative;
 }
 
-.gifsubtetx p {
-  font-size: 4.5vw;
+.gifsubtext p {
+  font-size: 3vw;
   font-weight: 500;
-  line-height: 1.5;
+  line-height: 1.7;
   letter-spacing: 1px;
   text-align: center;
 }
 
-.gifsubtetx>p {
-  background: linear-gradient(to right, rgb(6 6 6) 50%, rgb(237 232 232) 50%);
+.gifsubtext>p {
+  background: linear-gradient(90deg,#060606 50%,#ede8e8 0);
   background-size: 200% 100%;
   background-position-x: 100%;
   color: transparent;
@@ -4604,7 +4604,26 @@ https://unsplash.com/@vinomamba24
   -webkit-background-clip: text;
 }
 
-.gifsubtetx span {
+.gifsubtext .span1 {
+  font-size: 2.5vw;
+  position: absolute;
+  right: 6vw;
+  top: 0.5vw;
+}
+.gifsubtext .span2 {
+  font-size: 2.5vw;
+  position: absolute;
+  right: 1.5vw;
+  bottom: 5.5vw;
+}
+.gifsubtext .span3 {
+  font-size: 2.5vw;
+  position: absolute;
+  right: 6vw;
+  bottom: 0.2vw;
+}
+
+.gifsubtext span {
   font-size: 4vw;
   position: absolute;
   right: 1vw;
@@ -5982,7 +6001,7 @@ a:hover {
   width: 80%;
 }
 
-.mail h5 {
+.mail h4 {
   font-size: 1.15vw;
   font-weight: 400;
   color: #8c8c8c;
@@ -6003,7 +6022,7 @@ a:hover {
   padding-top: 50px;
 }
 
-.phone h5 {
+.phone h4 {
   font-size: 1.15vw;
   font-weight: 400;
   color: #8c8c8c;
@@ -6021,7 +6040,7 @@ a:hover {
   justify-content: space-between;
 }
 
-.right-section h5 {
+.right-section h4 {
   color: #8c8c8c;
   font-size: 1.15vw;
   font-weight: 400;
@@ -6551,7 +6570,7 @@ a:hover {
     margin-left: -165vw;
   }
 
-  .Carousel_slide__caro__PQI87 {
+  .Carousel_slide__caro__ckaQX {
     height: 45vh !important;
   }
 
@@ -6601,6 +6620,7 @@ a:hover {
 
   .mobile-footer {
     display: block;
+    margin-bottom: 30px;
   }
 
   .header-section{
@@ -6624,8 +6644,8 @@ a:hover {
     margin-right: 10vw;
   }
 
-  .loader-wrap .loader-wrap-heading h1 .loader-font{
-    font-size: 8vw;
+  .loader-wrap .loader-wrap-heading h1 {
+    font-size: 48px;
   }
 
   .right-section-header .showreel {
@@ -7143,11 +7163,11 @@ a:hover {
     height: 28vh;
   }
 
-  .mail h5 {
+  .mail h4 {
     font-size: 2.5vw;
   }
 
-  .phone h5 {
+  .phone h4 {
     font-size: 2.5vw;
   }
 
@@ -7179,7 +7199,7 @@ a:hover {
     font-size: 2.5vw;
   }
 
-  .right-section h5 {
+  .right-section h4 {
     font-size: 2.5vw;
   }
 
@@ -7329,8 +7349,18 @@ a:hover {
     top: 5vw;
   }
 
+  .horizontalSlider___281Ls {
+    height: 100%;
+  }
+
   /* ==================== Aero Text  ====================== */
-.text-container{
+  .p-200{
+    padding: 100px 0;
+  }
+  .aero-hover{
+    height: 50vh;
+  }
+  .text-container{
   mix-blend-mode: normal;
 }
 
@@ -7366,7 +7396,7 @@ a:hover {
   }
 
   .reel-section-about {
-    height: 50vh;
+    height: 100%;
   }
 
   .first-about-content-section .first-sub-section {
@@ -7411,7 +7441,7 @@ a:hover {
   }
 
   .gifSectionAbout {
-    margin: 10vw 0 0 0;
+    margin: 10vw 0;
   }
 
   .about-gif-text {
@@ -7460,7 +7490,7 @@ a:hover {
     width: 650% !important;
   }
 
-  .Carousel_slide__caro__PQI87 {
+  .Carousel_slide__caro__ckaQX {
     width: 10% !important;
     height: 40vh !important;
   }
@@ -7937,10 +7967,6 @@ a:hover {
     margin-bottom: 0vw;
   }
 
-  .loader-wrap .loader-wrap-heading h2 {
-    font-size: 30px;
-  }
-
   .space-mobile {
     height: 10vh;
   }
@@ -7953,16 +7979,8 @@ a:hover {
     display: block;
   }
 
-  .loading-bar-container {
-    width: 50%;
-  }
-
-  .words-preloader {
-    font-size: 8vw;
-  }
-
   .loader-wrap .loader-wrap-heading h1 {
-    font-size: 8vw;
+    font-size: 30px;
   }
 
   .loader-wrap .loader-wrap-heading {
@@ -7972,14 +7990,11 @@ a:hover {
     align-items: center;
   }
 
-  .loader-wrap .loader-wrap-heading .loader-font {
-    font-size: 10vw;
-  }
-
   .mobile-footer {
     display: block;
     width: 100%;
     height: 100%;
+    margin-bottom: 30px;
   }
 
   .hero-main.desktop {
@@ -8604,13 +8619,13 @@ a:hover {
   }
 
   .action-icon {
-    width: 22%;
-    bottom: 13vw;
-  }
+    width: 85px;
+    bottom: 15vw;
+}
 
   .action-icon .inner {
-    left: 8vw;
-    top: 10vw;
+    top: 45px;
+    left: 38px;
   }
 
   .container_hero_content .small_heading {
@@ -8648,7 +8663,7 @@ a:hover {
   }
 
   .aero-about .aero-hover {
-    height: 85vh;
+    height: 50vh;
   }
 
   .cb-particles-item.-p1:before {
@@ -8770,15 +8785,24 @@ a:hover {
     margin: 20vw 0;
   }
 
-  .gifsubtetx {
+  .gifsubtext {
     width: 100%;
   }
 
-  .gifsubtetx p {
-    font-size: 9vw;
+  .gifsubtext p {
+    font-size: 6vw;
+  }
+  .gifsubtext .span1 {
+    font-size: 6vw;
+    top: 10vw;
+    right: 45px;
+}
+  .gifsubtext .span3{
+    font-size: 6vw;
+    right: 50px;
   }
 
-  .gifsubtetx span {
+  .gifsubtext span {
     font-size: 8vw;
   }
 
@@ -8792,7 +8816,7 @@ a:hover {
     flex-direction: row !important;
   }
 
-  .Carousel_slide__caro__PQI87 {
+  .Carousel_slide__caro__ckaQX {
     width: 9% !important;
     height: 40vh !important;
     padding: 10px;

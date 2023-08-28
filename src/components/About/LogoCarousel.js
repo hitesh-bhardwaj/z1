@@ -89,7 +89,7 @@ export default function carousel() {
 
   return (
     <CarouselProvider
-      naturalSlideWidth={100}
+      naturalSlideWidth={50}
       naturalSlideHeight={125}
       totalSlides={3}
       id="caro-slider-logo"
@@ -206,7 +206,8 @@ export default function carousel() {
           {openSlideIndex !== 0 ? (
             <>
               <div className="image-box-slider">
-                <img src="/assets/about/black/jelly.png" />
+                <img src="/assets/about/black/jelly.png"
+                 alt="client logo" />
               </div>
               <div className="bottom-caro-box">
                 <h1>JellyFish</h1>
@@ -214,6 +215,7 @@ export default function carousel() {
                   <img
                     src="/assets/about/black/plus.png"
                     className="caro-plus"
+                    alt="plus icon"
                   />
                 </div>
               </div>
@@ -233,6 +235,7 @@ export default function carousel() {
                 <img
                   src="/assets/about/black/plus.png"
                   className="caro-plus gsap-caro"
+                  alt="plus icon"
                 />
               </div>
             </div>
@@ -249,7 +252,9 @@ export default function carousel() {
           {openSlideIndex !== 1 ? (
             <>
               <div className="image-box-slider">
-                <img src="/assets/about/black/kk.png" />
+                <img src="/assets/about/black/kk.png" 
+                  alt="client logo"
+                />
               </div>
               <div className="bottom-caro-box">
                 <h1>Kedarkala</h1>
@@ -257,6 +262,7 @@ export default function carousel() {
                   <img
                     src="/assets/about/black/plus.png"
                     className="caro-plus"
+                    alt="plus icon"
                   />
                 </div>
               </div>
@@ -276,6 +282,7 @@ export default function carousel() {
                 <img
                   src="/assets/about/black/plus.png"
                   className="caro-plus gsap-caro"
+                  alt="plus icon"
                 />
               </div>
             </div>
@@ -292,7 +299,9 @@ export default function carousel() {
           {openSlideIndex !== 2 ? (
             <>
               <div className="image-box-slider">
-                <img src="/assets/about/black/dmtca.png" />
+                <img src="/assets/about/black/dmtca.png" 
+                  alt="client logo"
+                />
               </div>
               <div className="bottom-caro-box">
                 <h1>DMTCA</h1>
@@ -300,6 +309,7 @@ export default function carousel() {
                   <img
                     src="/assets/about/black/plus.png"
                     className="caro-plus"
+                    alt="plus icon"
                   />
                 </div>
               </div>
@@ -320,6 +330,7 @@ export default function carousel() {
                 <img
                   src="/assets/about/black/plus.png"
                   className="caro-plus gsap-caro"
+                  alt="plus icon"
                 />
               </div>
             </div>
@@ -336,7 +347,9 @@ export default function carousel() {
           {openSlideIndex !== 3 ? (
             <>
               <div className="image-box-slider">
-                <img src="/assets/about/black/riva.png" />
+                <img src="/assets/about/black/riva.png" 
+                  alt="client logo"
+                />
               </div>
               <div className="bottom-caro-box">
                 <h1>Riva</h1>
@@ -344,6 +357,7 @@ export default function carousel() {
                   <img
                     src="/assets/about/black/plus.png"
                     className="caro-plus"
+                    alt="plus icon"
                   />
                 </div>
               </div>
@@ -364,6 +378,7 @@ export default function carousel() {
                 <img
                   src="/assets/about/black/plus.png"
                   className="caro-plus gsap-caro"
+                  alt="plus icon"
                 />
               </div>
             </div>
@@ -380,7 +395,9 @@ export default function carousel() {
           {openSlideIndex !== 4 ? (
             <>
               <div className="image-box-slider">
-                <img src="/assets/about/black/quickx.png" />
+                <img src="/assets/about/black/quickx.png" 
+                  alt="client logo"
+                />
               </div>
               <div className="bottom-caro-box">
                 <h1>Quick-X</h1>
@@ -388,6 +405,7 @@ export default function carousel() {
                   <img
                     src="/assets/about/black/plus.png"
                     className="caro-plus"
+                    alt="plus icon"
                   />
                 </div>
               </div>
@@ -409,6 +427,7 @@ export default function carousel() {
                 <img
                   src="/assets/about/black/plus.png"
                   className="caro-plus gsap-caro"
+                  alt="plus icon"
                 />
               </div>
             </div>
@@ -425,7 +444,9 @@ export default function carousel() {
           {openSlideIndex !== 5 ? (
             <>
               <div className="image-box-slider">
-                <img src="/assets/about/black/bespin.png" />
+                <img src="/assets/about/black/bespin.png" 
+                  alt="client logo"
+                />
               </div>
               <div className="bottom-caro-box">
                 <h1>Bespin Labs</h1>
@@ -433,6 +454,7 @@ export default function carousel() {
                   <img
                     src="/assets/about/black/plus.png"
                     className="caro-plus"
+                    alt="plus icon"
                   />
                 </div>
               </div>
@@ -454,6 +476,7 @@ export default function carousel() {
                 <img
                   src="/assets/about/black/plus.png"
                   className="caro-plus gsap-caro"
+                  alt="plus icon"
                 />
               </div>
             </div>
@@ -470,7 +493,9 @@ export default function carousel() {
           {openSlideIndex !== 6 ? (
             <>
               <div className="image-box-slider">
-                <img src="/assets/about/black/patronum.png" />
+                <img src="/assets/about/black/patronum.png" 
+                  alt="client logo"
+                />
               </div>
               <div className="bottom-caro-box">
                 <h1>Patronum</h1>
@@ -478,6 +503,7 @@ export default function carousel() {
                   <img
                     src="/assets/about/black/plus.png"
                     className="caro-plus"
+                    alt="plus icon"
                   />
                 </div>
               </div>
@@ -497,6 +523,7 @@ export default function carousel() {
                 <img
                   src="/assets/about/black/plus.png"
                   className="caro-plus gsap-caro"
+                  alt="plus icon"
                 />
               </div>
             </div>
@@ -513,7 +540,8 @@ export default function carousel() {
           {openSlideIndex !== 7 ? (
             <>
               <div className="image-box-slider">
-                <img src="/assets/about/black/patra.png" />
+                <img src="/assets/about/black/patra.png"
+                alt="client logo" />
               </div>
               <div className="bottom-caro-box">
                 <h1>Patra</h1>
@@ -521,6 +549,7 @@ export default function carousel() {
                   <img
                     src="/assets/about/black/plus.png"
                     className="caro-plus"
+                    alt="plus icon"
                   />
                 </div>
               </div>
@@ -540,6 +569,7 @@ export default function carousel() {
               <div className="bottom-caro-box hide-caro-box">
                 <img
                   src="/assets/about/black/plus.png"
+                  alt="plus icon"
                   className="caro-plus gsap-caro"
                 />
               </div>
