@@ -8905,12 +8905,12 @@ a:hover {
   }
 
   .first-box-contact .lets {
-    font-size: 18vw;
+    font-size: 17vw;
   }
 
   .first-box-contact .work {
     margin-left: 4vw;
-    font-size: 18vw;
+    font-size: 17vw;
     overflow: visible;
   }
 
@@ -9560,7 +9560,7 @@ a:hover {
   }
 
   .contact-content-mail-title {
-    font-size: 3.5vw;
+    font-size: 4vw;
     opacity: 0.6;
     padding-bottom: 2.5vw;
     color: var(--black);
@@ -9582,7 +9582,7 @@ a:hover {
 
   .contact-content-call-title {
     color: var(--black);
-    font-size: 3.5vw;
+    font-size: 4vw;
     opacity: 0.6;
     padding-bottom: 2.5vw;
   }

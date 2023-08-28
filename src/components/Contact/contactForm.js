@@ -92,7 +92,7 @@ export default function Home() {
           value={values.name}
           onChange={handleChange}
           onBlur={onBlur}
-          placeHolder="Name*"
+          placeholder="Name*"
           className="form-control"
         />
         <FormErrorMessage>Name is Required</FormErrorMessage>
@@ -110,7 +110,7 @@ export default function Home() {
           value={values.email}
           onChange={handleChange}
           onBlur={onBlur}
-          placeHolder="Email*"
+          placeholder="Email*"
           className="form-control"
           required
         />
@@ -129,7 +129,7 @@ export default function Home() {
           value={values.number}
           onChange={handleChange}
           onBlur={onBlur}
-          placeHolder="Phone Number*"
+          placeholder="Phone Number*"
           className="form-control"
         />
         <FormErrorMessage>Phone Number is Required</FormErrorMessage>
@@ -148,7 +148,7 @@ export default function Home() {
           value={values.message}
           onChange={handleChange}
           onBlur={onBlur}
-          placeHolder="Message*"
+          placeholder="Message*"
           className="form-control"
         />
         <FormErrorMessage>Required</FormErrorMessage>

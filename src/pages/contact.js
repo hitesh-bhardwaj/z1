@@ -145,6 +145,8 @@ export default function contact() {
   });
 }
 
+// console.clear;
+
 
   return (
     <>
@@ -276,13 +278,13 @@ export default function contact() {
 
             {/* ====================== Pinned Image =========================== */}
             {/* clip-path-img */}
-            <div class="img-container">
+            <div className="img-container">
               <motion.div
                 initial={{ opacity: 0, y: 100 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 3.5 }}
               >
-                <div class="img">
+                <div className="img">
                   <video
                       src="/assets/contact/contact-bg-video.webm"
                       autoPlay
