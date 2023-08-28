@@ -372,6 +372,8 @@ export default function ProjectsHome() {
   }, []);
 
   // Text Reveal Animation Top to Center
+  if (globalThis.innerWidth < 1024) {
+
   useEffect(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
@@ -397,6 +399,7 @@ export default function ProjectsHome() {
     );
     return () => tl.kill();
   }, []);
+}
 
   // Project Section Reveal Animation
   useEffect(() => {

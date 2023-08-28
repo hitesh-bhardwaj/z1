@@ -366,32 +366,35 @@ export default function ProjectsHome() {
   }, []);
 
   // Text Reveal Animation Top to Center
-  useEffect(() => {
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: "#c-works",
-        start: "top 80%",
-      },
-    });
+  if (globalThis.innerWidth < 1024) {
+    useEffect(() => {
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: "#c-works",
+          start: "top 80%",
+        },
+      });
+  
+      // Header
+      tl.fromTo(
+        "#line-anim #span",
+        1.2,
+        {
+          y: 600,
+          ease: "Power3.inOut",
+          skewY: -20,
+        },
+        {
+          y: 0,
+          skewY: 0,
+          stagger: 0.5,
+        },
+        "-0.6"
+      );
+      return () => tl.kill();
+    }, []);
+  }
 
-    // Header
-    tl.fromTo(
-      "#line-anim #span",
-      1.2,
-      {
-        y: 600,
-        ease: "Power3.inOut",
-        skewY: -20,
-      },
-      {
-        y: 0,
-        skewY: 0,
-        stagger: 0.5,
-      },
-      "-0.6"
-    );
-    return () => tl.kill();
-  }, []);
 
   // Project Section Reveal Animation
   useEffect(() => {
