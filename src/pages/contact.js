@@ -122,25 +122,29 @@ export default function contact() {
     return () => ctx.revert();
   });
 
+  if (globalThis.innerWidth > 1024) {
   // Ploygon
   useEffect(() => {
     let ctx = gsap.context(() => {
-      gsap.to(".img-container", {
-        clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+      gsap.to(".img", {
+        transform: "translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg)",
         duration: 4,
         ease: "none",
         scrollTrigger: {
           trigger: ".img-container",
-          start: "top 70%",
+          start: "top 75%",
           end: "center center",
           // pin: true,
-          scrub: true,
-          markers: false,
+          scrub: .5,
+
+          // markers: true,
         },
       });
     });
     return () => ctx.revert();
   });
+}
+
 
   return (
     <>
@@ -179,7 +183,7 @@ export default function contact() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"
+          content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
         ></meta>
         <link rel="icon" href="/fav-icon.png" />
       </Head>
@@ -207,10 +211,12 @@ export default function contact() {
 
       <>
         <main className="content is-loading">
+        
           <div className="section">
             <SmoothScroll />
             <Header />
-            <div className="contact-hero">
+
+            <section className="contact-hero">
               <div
                 className="contact-hero-content"
                 data-cursor-size="10px"
@@ -266,42 +272,31 @@ export default function contact() {
                   </div>
                 </div>
               </div>
-            </div>
+            </section>
 
             {/* ====================== Pinned Image =========================== */}
-            <div class="img-container clip-path-img">
+            {/* clip-path-img */}
+            <div class="img-container">
               <motion.div
-                initial={{ opacity: 0, y: 200 }}
+                initial={{ opacity: 0, y: 100 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 1, delay: 3 }}
+                transition={{ duration: 1, delay: 3.5 }}
               >
                 <div class="img">
                   <video
-                    src="/assets/contact/contact-bg-video.webm"
-                    autoPlay
-                    muted
-                    loop
-                  ></video>
+                      src="/assets/contact/contact-bg-video.webm"
+                      autoPlay
+                      muted
+                      loop
+                    ></video>
                 </div>
               </motion.div>
             </div>
             {/* ====================== Pinned Image  END =========================== */}
-
-            <div className="space-large desktop"></div>
-            <div className="space-large mobile"></div>
-            <div className="space-large mobile"></div>
-            <div className="ipad mobile"></div>
-            <div className="ipad mobile"></div>
-
+          <section className="m-150">
             <MarqueeCata />
-
-            <div className="ipad mobile"></div>
-            <div className="ipad mobile"></div>
-            <div className="ipad mobile"></div>
-
-            <div className="space-large desktop"></div>
-            <div className="space-large mobile"></div>
-
+          </section>
+          
             <div className="scnd__container" id="main-contact-container">
               <div className="add__section" id="left-section">
                 <div className="add__content">
@@ -338,24 +333,13 @@ export default function contact() {
                 <ContactForm />
               </div>
             </div>
-            <div className="space-large desktop"></div>
-            <div className="space-large desktop"></div>
-            <div className="space-large desktop"></div>
-            <div className="space-large mobile"></div>
-            <div className="space-large mobile"></div>
-            <div className="space-large mobile"></div>
-            <div className="space-large mobile"></div>
-            <div className="space-large mobile"></div>
-            <div className="space-large mobile"></div>
+
             {/* ======================== Home Aero ====================== */}
-            <div data-cursor-color="#000" data-cursor-size="0px">
+            <div className="p-150" data-cursor-color="#000" data-cursor-size="0px">
               <ContactAero />
             </div>
             {/* ======================== Home Aero END ====================== */}
-            {/* ======================== Marquee ====================== */}
-            <div>{/* <Marquee /> */}</div>
-            <div className="space-large desktop"></div>
-            {/* ======================== Marquee END ====================== */}
+
             {/* ======================== Footer ====================== */}
             <div className="footer-desktop">
               <Footer />

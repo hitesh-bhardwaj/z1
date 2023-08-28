@@ -2830,7 +2830,7 @@ accordion-item--default .accordion .accordion-item-content {
 
 .first-box-contact .lets {
   font-size: 11vw;
-  font-weight: 600;
+  font-weight: 500;
   color: var(--black2);
   text-transform: capitalize;
 }
@@ -2840,15 +2840,15 @@ accordion-item--default .accordion .accordion-item-content {
   font-weight: 500;
   max-width: 23vw;
   color: var(--black1);
-  margin-left: 12vw;
+  margin-left: 7vw;
   font-family: 'Ageo';
 }
 
 .first-box-contact .work {
   font-size: 11vw;
   color: var(--primary);
-  font-weight: 600;
-  margin-right: 2vw;
+  font-weight: 500;
+  margin-right: 0vw;
   text-transform: capitalize;
   overflow: hidden;
   margin-left: 1vw;
@@ -2864,7 +2864,7 @@ accordion-item--default .accordion .accordion-item-content {
 .second-box-contact .together {
   font-size: 11vw;
   margin-right: 4vw;
-  font-weight: 600;
+  font-weight: 500;
   color: var(--black2);
   text-transform: capitalize;
 }
@@ -2882,14 +2882,14 @@ accordion-item--default .accordion .accordion-item-content {
   margin: 0 auto;
   position: relative;
   top: 0px;
-  clip-path: polygon(35% 0%, 65% 0%, 65% 50%, 35% 50%);
 }
 
 .img {
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: 50%;
   background-size: cover;
   height: 90vh;
+  transform: translate3d(0,-115.738px,0) scale3d(.537048,.537048,1) rotateX(0deg) rotateY(0deg) rotate(20.2541deg) skew(0deg,0deg);
 }
 
 .img video {
@@ -2907,13 +2907,14 @@ accordion-item--default .accordion .accordion-item-content {
 
 .scnd__container {
   width: 90%;
-  height: 99vh;
+  height: 100vh;
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
   position: relative;
+  margin-bottom: 15vw;
 }
 
 .contact__text {
@@ -2926,13 +2927,13 @@ accordion-item--default .accordion .accordion-item-content {
 }
 
 .contact__text h1 {
-  font-size: 7vw;
+  font-size: 6vw;
   line-height: 85px;
   text-transform: lowercase;
   color: var(--black1);
   text-align: left;
   line-height: 0.8;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .add__section {
@@ -3141,15 +3142,16 @@ textarea::placeholder {
 
 .add__content h1 {
   font-size: 1.2vw;
-  font-weight: 600;
+  font-weight: 500;
   text-transform: uppercase;
+  color: var(--black1);
 }
 
 .add__content a {
   text-decoration: none;
-  color: var(--black2);
+  color: var(--black1);
   font-size: 1.4vw;
-  font-weight: 600;
+  font-weight: 500;
   padding-left: 6vw;
 }
 
@@ -7226,6 +7228,11 @@ a:hover {
 
   /* ================== contact Page Index  ====================== */
 
+  .img{
+    height: 100%;
+    transform: none;
+  }
+
   .contact-hero {
     height: 60vh;
   }
@@ -7265,7 +7272,7 @@ a:hover {
   }
 
   .img-container {
-    height: 60vh;
+    height: 45vh;
     width: 100vw;
   }
 
@@ -8882,6 +8889,9 @@ a:hover {
 
   /* ===================== Contact Page Index ==================== */
 
+  .img-container {
+    height: 35vh;
+  }
   .contact-hero {
     height: 60vh;
   }
@@ -8994,6 +9004,7 @@ a:hover {
 
   .form__section {
     width: 100%;
+    margin-top: 50px;
   }
 
   .form-box {

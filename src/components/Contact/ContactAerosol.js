@@ -65,11 +65,11 @@ export default function Aerosol() {
         </div>
 
         <div className="aerosol-main">
-          <div class="c-cursor"></div>
-          <div class="shapes">
-            <div class="shape shape-1"></div>
-            <div class="shape shape-2"></div>
-            <div class="shape shape-3"></div>
+          <div className="c-cursor"></div>
+          <div className="shapes">
+            <div className="shape shape-1"></div>
+            <div className="shape shape-2"></div>
+            <div className="shape shape-3"></div>
           </div>
         </div>
       </div>
