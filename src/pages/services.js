@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useEffect } from "react";
 import Head from "next/head";
 import { Cursor } from "../../cursor/index";
@@ -18,6 +20,7 @@ import FooterMobile from "@/components/Mobile/FooterMobile";
 import ServiceNextBox from "@/components/NextBoxes/ServiceNextBox";
 import SecondVideoLazy from "@/components/ServicePage/SecondVideoLazy";
 import FirstVideoLazy from "@/components/ServicePage/FirstVideoLazy";
+import StrategySection from "@/components/ServicePage/StartegySection";
 
 gsap.config({
   nullTargetWarn: false,
@@ -27,22 +30,22 @@ gsap.config({
 gsap.registerPlugin(ScrollTrigger);
 5;
 // Hover on the link
-const handleHover = (e) => {
-  gsap.to(e.target, {
-    duration: 0.5,
-    scale: 1.1,
-    ease: "power1.inOut",
-  });
-};
+// const handleHover = (e) => {
+//   gsap.to(e.target, {
+//     duration: 0.5,
+//     scale: 1.1,
+//     ease: "power1.inOut",
+//   });
+// };
 
 // Hover off the link
-const handleHoverExit = (e) => {
-  gsap.to(e.target, {
-    duration: 0.5,
-    scale: 1,
-    ease: "power1.inOut",
-  });
-};
+// const handleHoverExit = (e) => {
+//   gsap.to(e.target, {
+//     duration: 0.5,
+//     scale: 1,
+//     ease: "power1.inOut",
+//   });
+// };
 
 // Hover on the link
 const handleHoverSecond = (f) => {
@@ -131,26 +134,26 @@ export default function services() {
   }, []);
 
   // Parallax Image
-  useEffect(() => {
-    gsap.utils.toArray(".image-container").forEach(function (container) {
-      let image = container.querySelector("img");
+  // useEffect(() => {
+  //   gsap.utils.toArray(".image-container").forEach(function (container) {
+  //     let image = container.querySelector("img");
 
-      gsap.to(image, {
-        y: () => image.offsetHeight - container.offsetHeight,
-        ease: "none",
-        startAt: { y: "-25%" },
-        scrollTrigger: {
-          trigger: container,
-          scrub: true,
-          pin: false,
-          markers: false,
-          invalidateOnRefresh: true,
-        },
-        y: "25%",
-        ease: "none",
-      });
-    });
-  });
+  //     gsap.to(image, {
+  //       y: () => image.offsetHeight - container.offsetHeight,
+  //       ease: "none",
+  //       startAt: { y: "-25%" },
+  //       scrollTrigger: {
+  //         trigger: container,
+  //         scrub: true,
+  //         pin: false,
+  //         markers: false,
+  //         invalidateOnRefresh: true,
+  //       },
+  //       y: "25%",
+  //       ease: "none",
+  //     });
+  //   });
+  // });
 
   //   Rotate SVG on Scroll
   useEffect(() => {
@@ -279,25 +282,25 @@ export default function services() {
   }, []);
 
   // Text Reveal Animation For Each
-  useEffect(() => {
-    const totalSection = document.querySelectorAll(".strategy-box-anim");
-    totalSection.forEach(function (elem, index) {
-      const text = new SplitType(elem.querySelectorAll(".ser-text-head-anim"));
-      let textwords = text.words;
-      gsap.from(textwords, {
-        scrollTrigger: {
-          trigger: elem,
-          start: "top 85%",
-          markers: false,
-        },
-        duration: 0.5,
-        opacity: 0,
-        yPercent: 100,
-        ease: "Power3.out",
-        stagger: 0.02,
-      });
-    });
-  });
+  // useEffect(() => {
+  //   const totalSection = document.querySelectorAll(".strategy-box-anim");
+  //   totalSection.forEach(function (elem, index) {
+  //     const text = new SplitType(elem.querySelectorAll(".ser-text-head-anim"));
+  //     let textwords = text.words;
+  //     gsap.from(textwords, {
+  //       scrollTrigger: {
+  //         trigger: elem,
+  //         start: "top 85%",
+  //         markers: false,
+  //       },
+  //       duration: 0.5,
+  //       opacity: 0,
+  //       yPercent: 100,
+  //       ease: "Power3.out",
+  //       stagger: 0.02,
+  //     });
+  //   });
+  // });
 
   // Text Reveal Animation For Each
   useEffect(() => {
@@ -503,19 +506,17 @@ export default function services() {
                       src="/assets/services/service-1.webm"
                       title="Service Video"
                     />
-            {/* <video
-              className="vid"
-              autoPlay
-              muted
-              loop
-              playsInline
-              src="/assets/services/service-1.webm"
-            ></video> */}
           </div>
         </div>
 
         {/* =================== Services and Capabilities Section ========================= */}
-        <div className="service-cap-section strategy-box-anim">
+
+        <section>
+          <StrategySection />
+        </section>
+
+
+        {/* <div className="service-cap-section strategy-box-anim">
           <div className="left-box" data-jelly>
             <h2 className="sub-text ser-text-head-anim">
               <span>
@@ -537,11 +538,11 @@ export default function services() {
               </h4>
             </div>
           </div>
-        </div>
+        </div> */}
 
 
         {/* Strategy Box 1  */}
-        <div className="strategy-box strategy-box-anim">
+        {/* <div className="strategy-box strategy-box-anim">
           <div
             className="left-strategy-box"
             data-cursor-text="Know More!"
@@ -560,7 +561,6 @@ export default function services() {
                 Audit.
               </span>
             </h4>
-            {/* <h4 className="bottom-text"></h4> */}
           </div>
           <div className="right-strategy-box">
             <div className="image-container service-box-image">
@@ -575,13 +575,13 @@ export default function services() {
               />
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Strategy Box 1  END */}
 
 
         {/* Strategy Box 2  */}
-        <div className="strategy-box strategy-box-anim flex-reverse">
+        {/* <div className="strategy-box strategy-box-anim flex-reverse">
           <div
             className="left-strategy-box"
             data-cursor-text="Know More!"
@@ -598,7 +598,6 @@ export default function services() {
                 Designs, and UI Kits.
               </span>
             </h4>
-            {/* <h4 className="bottom-text"></h4> */}
           </div>
           <div className="right-strategy-box">
             <div className="image-container service-box-image">
@@ -613,12 +612,12 @@ export default function services() {
               />
             </div>
           </div>
-        </div>
+        </div> */}
         {/* Strategy Box 2  END */}
 
 
         {/* Strategy Box 3  */}
-        <div className="strategy-box strategy-box-anim">
+        {/* <div className="strategy-box strategy-box-anim">
           <div
             className="left-strategy-box"
             data-cursor-text="Know More!"
@@ -637,7 +636,7 @@ export default function services() {
                 Google Cloud.
               </span>
             </h4>
-            {/* <h4 className="bottom-text"></h4> */}
+  
           </div>
           <div className="right-strategy-box">
             <div className="image-container service-box-image">
@@ -652,11 +651,11 @@ export default function services() {
               />
             </div>
           </div>
-        </div>
+        </div> */}
         {/* Strategy Box 3  END */}
 
         {/* Strategy Box 4  */}
-        <div className="strategy-box strategy-box-anim flex-reverse">
+        {/* <div className="strategy-box strategy-box-anim flex-reverse">
           <div
             className="left-strategy-box"
             data-cursor-text="Know More!"
@@ -673,7 +672,6 @@ export default function services() {
                 Optimisation, Website & SEO Analysis.
               </span>
             </h4>
-            {/* <h4 className="bottom-text"></h4> */}
           </div>
           <div className="right-strategy-box">
             <div className="image-container service-box-image">
@@ -688,7 +686,7 @@ export default function services() {
               />
             </div>
           </div>
-        </div>
+        </div> */}
         {/* Strategy Box 4  END */}
         {/* =================== Services and Capabilities Section END ========================= */}
 

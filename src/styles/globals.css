@@ -4241,7 +4241,7 @@ https://unsplash.com/@vinomamba24
 }
 
 .line-anim {
-  height: 80px;
+  height: 180px;
   position: relative;
   overflow: hidden;
 }
@@ -7036,7 +7036,9 @@ a:hover {
     width: 89%;
     padding-bottom: 7vw;
   }
-
+  .line-anim{
+    height: 80px;
+  }
   .image-en {
     display: none;
   }
