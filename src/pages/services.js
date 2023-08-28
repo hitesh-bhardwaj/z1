@@ -13,9 +13,11 @@ import Header from "@/components/Header/Header";
 import SmoothScroll from "@/components/utils/SmoothScroll";
 import Footer from "@/components/Footer";
 import MarqueeCata from "@/components/MarqueeCata";
-import SliderMarquee from "@/components/Srvc/SliderMarquee";
+import SliderMarquee from "@/components/ServicePage/SliderMarquee";
 import FooterMobile from "@/components/Mobile/FooterMobile";
 import ServiceNextBox from "@/components/NextBoxes/ServiceNextBox";
+import SecondVideoLazy from "@/components/ServicePage/SecondVideoLazy";
+import FirstVideoLazy from "@/components/ServicePage/FirstVideoLazy";
 
 gsap.config({
   nullTargetWarn: false,
@@ -224,7 +226,7 @@ export default function services() {
     return () => ctx.revert();
   }, []);
 
-  // Image Transition on Scroll
+  // Video Transition on Scroll
   useEffect(() => {
     let ctx = gsap.context(() => {
       const growTl = gsap.timeline({
@@ -254,7 +256,7 @@ export default function services() {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".main-how",
-        start: "-450 top",
+        start: "top 85%",
       },
     });
 
@@ -263,7 +265,7 @@ export default function services() {
       ".line-anim .span",
       0.8,
       {
-        y: -350,
+        y: 350,
         ease: "none",
         skewY: -20,
       },
@@ -285,11 +287,10 @@ export default function services() {
       gsap.from(textwords, {
         scrollTrigger: {
           trigger: elem,
-          start: "-380 top",
-          end: "bottom top",
+          start: "top 85%",
           markers: false,
         },
-        duration: 1,
+        duration: 0.5,
         opacity: 0,
         yPercent: 100,
         ease: "Power3.out",
@@ -307,11 +308,11 @@ export default function services() {
       gsap.from(textwords, {
         scrollTrigger: {
           trigger: elem,
-          start: "-450 top",
-          end: "bottom top",
+          start: "top 85%",
+          // end: "bottom top",
           markers: false,
         },
-        duration: 1,
+        duration: 0.5,
         opacity: 0,
         yPercent: 100,
         ease: "Power3.out",
@@ -325,7 +326,7 @@ export default function services() {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".top-box",
-        start: "-500 top",
+        start: "top 70%",
       },
     });
     tl.fromTo(
@@ -334,18 +335,18 @@ export default function services() {
       {
         width: "90%",
         opacity: 1,
-        duration: 1,
+        duration: 0.8,
         stagger: 0.5,
       }
     );
   });
 
-  // Line Animate
+  // Strategy Image Animate
   useEffect(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".service-box-image",
-        start: "-300 top",
+        start: "top 85%",
       },
     });
     tl.fromTo(
@@ -354,7 +355,7 @@ export default function services() {
       {
         opacity: 1,
         duration: 1,
-        stagger: 1.8,
+        stagger: 0.5,
       }
     );
   });
@@ -398,8 +399,8 @@ export default function services() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"
-        ></meta>
+          content="width=device-width, initial-scale=1.0, maximum-scale=5.0">          
+        </meta>
         <link rel="icon" href="/fav-icon.png" />
       </Head>
 
@@ -424,7 +425,7 @@ export default function services() {
       </div>
 
       <main>
-        <div
+        <section
           className="service-hero"
           data-cursor-size="10px"
           data-cursor-text=""
@@ -454,12 +455,7 @@ export default function services() {
               </div>
 
               <h3 className="para-hero" id="service-anim">
-                Leveraging the power of{" "}
-                <span className="bold-600">
-                  Emotion, Consumer Psychology, and Technology,
-                </span>{" "}
-                we create Digital Brand Experiences that propel your success in
-                the enigmatic realm of bits & bytes.
+                We are a globally recognised, award-winning UI UX design studio. Our comprehensive range of services leverages our full expertise to boost your digital presence to celestial heights.
               </h3>
             </div>
 
@@ -474,25 +470,24 @@ export default function services() {
               Offer
             </h1>
             <div className="second-box-service">
-              <section class="image-en">
+              <div className="image-en">
                 <div className="absolute-img">
                   <video
                     className="vid"
                     autoPlay
                     muted
                     loop
-                    playsinline
+                    playsInline
                     preload="auto"
                     src="/assets/services/service-1.webm"
                     id="grow"
                   ></video>
                 </div>
-              </section>
+              </div>
             </div>
           </div>
-        </div>
+        </section>
 
-        <div className="space-large desktop"></div>
 
         {/* =================== Second Image Section ========================= */}
         <div
@@ -504,35 +499,20 @@ export default function services() {
 
         <div className="mobile-video-service-section">
           <div className="video-service-mobile" id="mobile-vid">
-            <video
+          <FirstVideoLazy className="vid"
+                      src="/assets/services/service-1.webm"
+                      title="Service Video"
+                    />
+            {/* <video
               className="vid"
               autoPlay
               muted
               loop
-              playsinline
-              preload="auto"
+              playsInline
               src="/assets/services/service-1.webm"
-            ></video>
+            ></video> */}
           </div>
         </div>
-
-        {/* =================== Second Image Section END ========================= */}
-
-        <div className="space-large desktop"></div>
-        <div className="ipad desktop"></div>
-        <div className="ipad desktop"></div>
-        <div className="space-large mobile"></div>
-        <div className="space-large mobile"></div>
-
-        {/* =================== First Marquee Section ========================= */}
-        <div>
-          {/* <FirstMarquee /> */}
-          {/* <SecondMarquee /> */}
-        </div>
-        {/* =================== First Marquee Section END ========================= */}
-
-        <div className="space-large desktop"></div>
-        <div className="space-medium ipad"></div>
 
         {/* =================== Services and Capabilities Section ========================= */}
         <div className="service-cap-section strategy-box-anim">
@@ -559,9 +539,6 @@ export default function services() {
           </div>
         </div>
 
-        <div className="space-large desktop"></div>
-        <div className="space-medium ipad"></div>
-        <div className="space-large mobile"></div>
 
         {/* Strategy Box 1  */}
         <div className="strategy-box strategy-box-anim">
@@ -600,10 +577,8 @@ export default function services() {
           </div>
         </div>
 
-        <div className="ipad desktop"></div>
         {/* Strategy Box 1  END */}
 
-        <div className="space-large desktop"></div>
 
         {/* Strategy Box 2  */}
         <div className="strategy-box strategy-box-anim flex-reverse">
@@ -639,10 +614,8 @@ export default function services() {
             </div>
           </div>
         </div>
-        <div className="ipad desktop"></div>
         {/* Strategy Box 2  END */}
 
-        <div className="space-large desktop"></div>
 
         {/* Strategy Box 3  */}
         <div className="strategy-box strategy-box-anim">
@@ -680,10 +653,7 @@ export default function services() {
             </div>
           </div>
         </div>
-        <div className="ipad desktop"></div>
         {/* Strategy Box 3  END */}
-
-        <div className="space-large desktop"></div>
 
         {/* Strategy Box 4  */}
         <div className="strategy-box strategy-box-anim flex-reverse">
@@ -722,27 +692,18 @@ export default function services() {
         {/* Strategy Box 4  END */}
         {/* =================== Services and Capabilities Section END ========================= */}
 
-        <div className="space-large desktop"></div>
-        <div className="ipad desktop"></div>
-
         {/* =================== Bottom Image Section ========================= */}
-        <div className="service-second-image-section">
-          <div className="image-container-en">
-            <video
-              src="/assets/services/service-2.webm"
-              autoPlay
-              muted
-              loop
-              loading="lazy"
-              width={1920}
-              height={1080}
-              alt="services"
-              data-cursor-text="Works"
-              data-cursor-size="100px"
-              data-cursor-color="#bcd15e"
-              onMouseEnter={(f) => handleHoverSecond(f)}
-              onMouseOut={(f) => handleHoverExitSecond(f)}
-            />
+        <section className="service-second-image-section">
+          <div className="image-container-en"
+               data-cursor-text="Works"
+               data-cursor-size="100px"
+               data-cursor-color="#bcd15e"
+               onMouseEnter={(f) => handleHoverSecond(f)}
+                      onMouseOut={(f) => handleHoverExitSecond(f)}>
+          <SecondVideoLazy
+                      src="/assets/services/service-2.webm"
+                      title="Mac Enigma Video"
+                    />
             <div className="rotate-idea-svg">
               <Image
                 src="/assets/about/wemakemagic.png"
@@ -753,14 +714,8 @@ export default function services() {
               />
             </div>
           </div>
-        </div>
+        </section>
         {/* =================== Bottom Image Section END ========================= */}
-
-        <div className="space-large desktop"></div>
-        <div className="space-large mobile"></div>
-        <div className="space-large mobile"></div>
-        <div className="space-medium ipad"></div>
-        <div className="ipad desktop"></div>
 
         {/* ===================== How we Work ==================== */}
         <section className="main-how">
@@ -776,9 +731,6 @@ export default function services() {
               </div>
             </div>
           </div>
-
-          <div className="space-large desktop"></div>
-          <div className="space-medium ipad"></div>
 
           {/* Boxes How we Work */}
 
@@ -939,45 +891,34 @@ export default function services() {
         </section>
         {/* ===================== How we Work END ====================  */}
 
-        <div className="space-large desktop"></div>
-        <div className="space-medium ipad"></div>
 
         {/* ==================== Slider Marquee ==================== */}
-        <div>
+        <section className="m-150">
           <SliderMarquee />
-        </div>
+        </section>
         {/* ==================== Slider Marquee END ==================== */}
 
-        <div className="space-large desktop"></div>
-        <div className="space-large mobile"></div>
-        <div className="ipad desktop"></div>
-        <div className="ipad desktop"></div>
 
         {/* ======================== Marquee ====================== */}
-        <div>
+        <section className="service-marquee">
           <MarqueeCata />
-        </div>
-        <div className="space-large desktop"></div>
-        <div className="space-large desktop"></div>
+        </section>
         {/* ======================== Marquee END ====================== */}
 
         {/* ======================= Next Page Box ====================== */}
-        <div>
+        <section className="m-150">
           <ServiceNextBox />
-        </div>
+        </section>
         {/* ======================= Next Page Box END ====================== */}
 
-        <div className="space-large desktop"></div>
-        <div className="space-large desktop"></div>
-
         {/* ======================== Footer ====================== */}
-        <div className="footer-desktop">
+        <section className="footer-desktop">
           <Footer />
-        </div>
+        </section>
 
-        <div className="mobile-footer">
+        <section className="mobile-footer">
           <FooterMobile />
-        </div>
+        </section>
         {/* ======================== Footer END ====================== */}
       </main>
     </>

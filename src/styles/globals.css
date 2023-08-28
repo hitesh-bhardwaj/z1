@@ -664,6 +664,7 @@ button:focus {
   top: 0;
   right: 17vw;
   object-fit: cover;
+  max-width: 100vw;
 }
 
 /* ============================== Image Reveal END =========================================== */
@@ -3993,7 +3994,7 @@ https://unsplash.com/@vinomamba24
 /* ======================================== Service Hero ==================================== */
 .service-hero {
   width: 80%;
-  height: 50vh;
+  height: 60vh;
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -4018,7 +4019,7 @@ https://unsplash.com/@vinomamba24
 
 .first-box-service .what-we {
   font-size: 10.5vw;
-  font-weight: 600;
+  font-weight: 500;
   color: var(--black2);
 }
 
@@ -4027,7 +4028,7 @@ https://unsplash.com/@vinomamba24
   font-weight: 400;
   text-align: justify;
   margin-left: 5vw;
-  margin-right: 4vw;
+  margin-right: 1vw;
   line-height: 125%;
   font-family: 'Ageo';
 }
@@ -4044,11 +4045,11 @@ https://unsplash.com/@vinomamba24
 .do {
   font-size: 10.5vw;
   ;
-  font-weight: 600;
+  font-weight: 500;
   color: var(--black2);
   position: absolute !important;
-  left: 22vw;
-  bottom: -4.5vw;
+  left: 20vw;
+  bottom: -2.5vw;
 }
 
 .service-footer {
@@ -4060,8 +4061,9 @@ https://unsplash.com/@vinomamba24
 
 .service-second-image-section {
   width: 90%;
-  height: 90vh;
-  margin: 0 auto;
+  height: 100vh;
+  margin: 10vh auto;
+  margin-bottom: 10vw;
 }
 
 .image-container {
@@ -4075,7 +4077,7 @@ https://unsplash.com/@vinomamba24
   position: relative;
   overflow: hidden;
   width: 90vw;
-  height: 100%;
+  height: auto;
 }
 
 /* .image-container-en video{
@@ -4116,6 +4118,7 @@ https://unsplash.com/@vinomamba24
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 15vw;
 }
 
 .service-cap-section .left-box .sub-text {
@@ -4134,6 +4137,7 @@ https://unsplash.com/@vinomamba24
   color: var(--black1);
   margin-bottom: 3vw;
   overflow: hidden;
+  font-weight: 500;
 }
 
 .service-cap-section .right-box h4 {
@@ -4153,6 +4157,7 @@ https://unsplash.com/@vinomamba24
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 100vh;
 }
 
 .flex-reverse {
@@ -4165,9 +4170,10 @@ https://unsplash.com/@vinomamba24
 
 .left-strategy-box h1 {
   font-size: 5vw;
-  color: var(--black1);
+  color: var(--black2);
   margin-bottom: 2vw;
   overflow: hidden;
+  font-weight: 500;
 }
 
 .left-strategy-box h4 {
@@ -4185,6 +4191,7 @@ https://unsplash.com/@vinomamba24
   width: 27vw;
   height: 70vh;
   transform: scaleX(-1);
+  border-radius: 36px;
 }
 
 .service-box-image img {
@@ -4206,7 +4213,7 @@ https://unsplash.com/@vinomamba24
 
 .how-we-work {
   width: 90%;
-  margin: 0 auto;
+  margin: 0 auto 7vw;
   height: auto;
 }
 
@@ -4229,12 +4236,12 @@ https://unsplash.com/@vinomamba24
 
 .how-we-work .first-heading-box .sub-first-heading {
   font-size: 10vw;
-  font-weight: 600;
-  color: var(--black1);
+  font-weight: 500;
+  color: var(--black2);
 }
 
 .line-anim {
-  height: 170px;
+  height: 80px;
   position: relative;
   overflow: hidden;
 }
@@ -4245,10 +4252,10 @@ https://unsplash.com/@vinomamba24
 
 .how-we-work .first-heading-box .sub-second-heading {
   font-size: 10vw;
-  font-weight: 600;
+  font-weight: 500;
   align-self: flex-end;
-  color: var(--black1);
-  width: 53%;
+  color: var(--black2);
+  width: 60%;
 }
 
 .main-how .top-box {
@@ -7008,7 +7015,7 @@ a:hover {
   .do {
     font-size: 11vw;
     position: static !important;
-    margin-left: 20vw;
+    margin-left: 17vw;
   }
 
   .mobile-video-service-section {
@@ -7034,12 +7041,14 @@ a:hover {
     display: none;
   }
 
-  .video-service-mobile video {
+  .video-service-mobile  {
     width: 100%;
+    height: 35vh;
   }
 
   #service-second-section {
     height: 10vh;
+    margin: 0 auto;
   }
 
   .service-second-image-section {
@@ -7067,13 +7076,13 @@ a:hover {
   }
 
   .service-cap-section .right-box h4 {
-    font-size: 2vw;
+    font-size: 2.4vw;
     max-width: 40vw;
   }
 
   .strategy-box {
     width: 87%;
-    margin-bottom: 8vw;
+    height: 50vh;
   }
 
   .left-strategy-box h1 {
@@ -7082,13 +7091,13 @@ a:hover {
 
   .left-strategy-box h4 {
     max-width: 45vw;
-    font-size: 2vw;
+    font-size: 2.2vw;
     text-align: justify;
   }
 
   .service-box-image {
     width: 34vw;
-    height: 34vw;
+    height: 30vh;
   }
 
   .cb-marquee-item {
@@ -7106,12 +7115,12 @@ a:hover {
   }
 
   .main-how .top-box {
-    width: 80%;
+    width: 100%;
   }
 
   .main-how .top-box .first-box-how {
-    width: 100%;
-    height: 20vh;
+    width: 80%;
+    height: 15vh;
   }
 
   .box-we {
@@ -9077,7 +9086,7 @@ a:hover {
   .do {
     position: static !important;
     font-size: 18vw;
-    margin-left: 48vw;
+    margin-left: 35vw;
   }
 
   .second-box-service h3 {
@@ -9112,7 +9121,7 @@ a:hover {
     display: block;
     width: 100%;
     height: 100%;
-    margin: 5vw 0;
+    margin: 5vw 0 10vw;
   }
 
   .video-service-mobile {
@@ -9145,7 +9154,7 @@ a:hover {
   }
 
   .service-cap-section .left-box .sub-text {
-    font-size: 7vw;
+    font-size: 6vw;
   }
 
   .service-cap-section .right-box {
@@ -9166,6 +9175,8 @@ a:hover {
     width: 85%;
     margin-bottom: 0;
     flex-direction: column-reverse;
+    height: 100%;
+    margin: 10vw auto;
   }
 
   .service-box-image {
@@ -9202,6 +9213,9 @@ a:hover {
   /* Third Section Sercices END */
 
   /* How we Work  */
+  .main-how{
+    padding-top: 10vw;
+  }
   .how-we-work .first-heading-box {
     width: 100%;
     margin-bottom: 12vw;
@@ -9213,18 +9227,13 @@ a:hover {
 
   .how-we-work .first-heading-box .sub-first-heading {
     font-size: 13vw;
-    height: 55px;
+    height: 100px;
   }
 
   .how-we-work .first-heading-box .sub-second-heading {
     font-size: 13vw;
-    width: 56%;
-    height: 55px;
-  }
-
-  .main-how .top-box .first-box-how {
-    height: 15vh;
-    align-items: flex-start;
+    width: 65%;
+    height: 100px;
   }
 
   .main-how .top-box {
@@ -9238,6 +9247,8 @@ a:hover {
     width: 100%;
     margin-bottom: 10vw;
     flex-direction: column;
+    height: 20vh;
+    align-items: flex-start;
   }
 
   .box-we-para {
@@ -9250,7 +9261,7 @@ a:hover {
 
   .main-how .top-box .first-box-how .box-we .disabled-work {
     display: flex;
-    font-size: 5vw;
+    font-size: 6vw;
     margin-top: 2vw;
   }
 
@@ -9277,6 +9288,9 @@ a:hover {
   }
 
   /* Marquee catalogue */
+  .service-marquee{
+    padding: 10vh 0;
+  }
 
   .services-catalog-title {
     text-align: center;
@@ -9965,6 +9979,29 @@ a:hover {
 .category-button a span{
   font-size: 4.2vw;
 }
+
+/* Service Page 480px Start */
+.how-we-work .first-heading-box .sub-first-heading,
+.how-we-work .first-heading-box .sub-second-heading{
+  height: 50px;
+}
+.how-we-work .first-heading-box{
+  margin-bottom: 10vw;
+}
+.main-how .top-box .first-box-how .box-we .disabled-work{
+  font-size: 7vw;
+}
+.box-we-para span{
+  font-size: 5vw;
+}
+.main-how .top-box .first-box-how{
+  margin-bottom: 5vw;
+}
+.service-marquee{
+  padding: 5vw 0;
+}
+
+/* Service Page 480px End */
 
 
 /* Blog Detail Start */

@@ -28,6 +28,8 @@ gsap.config({
 
 export default function Home() {
 
+  console.clear();
+
   return (
     <>
       <NextSeo
@@ -80,7 +82,9 @@ export default function Home() {
         </section>
 
       {/*===============================Hero Section=========================*/}
-          <section className="main-section">
+          <section className="main-section"
+                   data-cursor-size="10"
+                   data-cursor-text="">
             <HeroMobile />
             <HeroDesktop />
           </section>

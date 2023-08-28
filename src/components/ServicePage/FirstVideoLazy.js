@@ -1,7 +1,7 @@
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 
-const ConceptLazyVideo = ({ src, title }) => {
+const FirstVideoLazy = ({ src, title }) => {
   const [ref, inView] = useInView();
 
   return (
@@ -23,4 +23,4 @@ const ConceptLazyVideo = ({ src, title }) => {
   );
 };
 
-export default ConceptLazyVideo;
+export default FirstVideoLazy;

@@ -1,38 +1,43 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import styles from "@/styles/modal.module.css";
 import gsap from "gsap";
 
 const Modal = ({ show, onClose, children }) => {
+  const modalRef = useRef(null);
+
+  useEffect(() => {
+    if (show) {
+      const tl = gsap.timeline();
+      tl.fromTo(
+        modalRef.current,
+        {
+          opacity: 0,
+          translateY: -100,
+        },
+        {
+          duration: 1,
+          translateY: 0,
+          opacity: 1, 
+        }
+      );
+      return () => tl.kill();
+    }
+  }, [show]); // Include `show` in the dependencies array
+
   if (!show) {
     return null;
   }
 
-  useEffect(() => {
-    const tl = gsap.timeline();
-    tl.fromTo(
-      "#showreel",
-      {
-        opacity: 0,
-        translateY: -300,
-      },
-      {
-        duration: 1.3,
-        opacity: 1,
-        translateY: 0,
-      }
-    );
-    return () => tl.kill();
-  });
-
   return (
-    <>
-      <button onClick={onClose} className={`${styles.btnClose}`} id="showreel">
-        <div className={styles.modalWrapper}>
-          <div className={styles.modal}>{children}</div>
+    <button onClick={onClose} className={`${styles.btnClose}`} id="showreel">
+      <div className={styles.modalWrapper}>
+        <div className={styles.modal} ref={modalRef}>
+          {children}
         </div>
-      </button>
-    </>
+      </div>
+    </button>
   );
 };
 
 export default Modal;
+

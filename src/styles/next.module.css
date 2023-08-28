@@ -57,7 +57,6 @@
 @media screen and (max-width: 991px) {
   .nextContainer {
     height: 40vh;
-    padding-top: 25vw;
   }
 
   .subHeading h2 {
@@ -69,14 +68,13 @@
   }
 
   .mainHeading h1::before {
-    top: 11vw;
+    top: 12vw;
   }
 }
 
 @media screen and (max-width: 776px) {
   .nextContainer {
     height: 40vh;
-    padding-top: 25vw;
   }
 
   .subHeading h2 {
@@ -88,6 +86,6 @@
   }
 
   .mainHeading h1::before {
-    top: 13vw;
+    top: 14vw;
   }
 }

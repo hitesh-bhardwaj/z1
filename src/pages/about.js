@@ -11,7 +11,7 @@ import Header from "@/components/Header/Header";
 import AboutAerosol from "@/components/About/AboutAerosol";
 import Footer from "@/components/Footer";
 import FooterMobile from "@/components/Mobile/FooterMobile";
-import SliderMarquee from "@/components/Srvc/SliderMarquee";
+import SliderMarquee from "@/components/ServicePage/SliderMarquee";
 import VideoPlayer from "@/components/About/VideoPlayer";
 import AboutNextBox from "@/components/NextBoxes/AboutNextBox";
 import LogoCarousel from "@/components/About/LogoCarousel";
@@ -218,6 +218,8 @@ export default function about() {
     });
   }, []);
 
+  console.clear();
+
   return (
     <>
       <NextSeo
@@ -278,7 +280,9 @@ export default function about() {
       </div>
 
       <main>
-        <section className="hero-about">
+        <section className="hero-about"
+        data-cursor-size="10"
+        data-cursor-text="">
           <div
             className="hero-section-about"
           >
