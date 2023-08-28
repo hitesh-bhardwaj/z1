@@ -4816,8 +4816,8 @@ span.row-letter:nth-child(20) {
 .banner .banner-row .row-letter,
 .banner .banner-row .row-title {
   font-size: 11vw;
-  color: var(--black1);
-  font-weight: 600;
+  color: var(--black2);
+  font-weight: 500;
   position: relative;
   line-height: 125%;
   letter-spacing: -0.3vw;
@@ -4831,7 +4831,7 @@ span.row-letter:nth-child(20) {
   line-height: 125%;
   width: 28vw;
   font-family: 'Ageo';
-  color: var(--black1) !important;
+  color: var(--black2) !important;
 }
 
 .transition-image {
@@ -5066,10 +5066,6 @@ body.loading {
 }
 
 /* Projects Main Section  */
-.main-projects-section {
-  width: 100%;
-  height: auto;
-}
 
 .project-heading {
   width: 80%;
@@ -7890,7 +7886,7 @@ a:hover {
     padding: 0px 0;
   }
   .p-150 {
-    padding: 0px 0;
+    padding: 50px 0;
   }
   .p-100 {
     padding: 0px 0;
@@ -9371,7 +9367,7 @@ a:hover {
   }
 
   .banner .banner-row.center {
-    padding-right: 20px;
+    padding-right: 0px;
   }
 
   .studio-img-hero {

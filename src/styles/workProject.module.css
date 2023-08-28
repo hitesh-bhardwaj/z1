@@ -46,28 +46,29 @@
   height: 150px;
 }
 
+.projectHomeHeading{
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  margin-right: 20vw;
+}
+
 .projectHeading .project {
   font-size: 8vw;
-  margin-left: 16vw;
+  margin-left: 9vw;
   color: #5d5ad6;
 }
 
-.projectHomeHeading{
-  width: 120%;
-  height: 170px;
-  display: flex;
-  justify-content: center;
-  margin-right: 30vw;
-}
 
 .lineAnim{
   position: relative;
   overflow: hidden;
 }
 
-.lineAnim .span{
+/* .lineAnim .span{
  position: absolute;
-}
+} */
 
 .projectSubSection {
   width: 77%;
@@ -86,6 +87,14 @@
   position: relative;
 }
 
+.glide {
+  visibility: hidden;
+}
+
+.glide > *{
+  visibility: visible;
+}
+
 .glideContent {
   width: 100%;
   position: relative;
@@ -95,10 +104,10 @@
 }
 
 .glideContent img {
-  width: 100%;
-  height: 120%;
+  width: 115%;
+  height: auto;
   position: absolute;
-  top: -15%;
+  top: 0;
   left: 0;
   bottom: 0;
   right: 0;
@@ -127,19 +136,6 @@
   transition-delay: 1ms, 1ms;
 }
 
-/* .glideContent img:hover {
-    filter: grayscale(1);
-  }   
-  */
-
-/* .projectHover:hover img:hover {
-  filter: grayscale(0);
-} */
-
-/* .glideContent:hover img:not(:hover) {
-  filter: grayscale(1);
-} */
-
 .textContent h1 {
   background: #fff;
   padding: 0.7vw 3.3vw;
@@ -155,7 +151,7 @@
   bottom: 0.2vw;
   text-decoration: none;
   padding: 0 0 20px 20px;
-  z-index: 99;
+  z-index: 10;
 }
 
 .c_project_info > p {
@@ -183,7 +179,7 @@
   transition: 0.4s;
   width: max-content;
   font-weight: 500;
-  font-family: "Ageo";
+  font-family: 'Ageo';
 }
 
 .glide:hover .c_project_info p {
@@ -201,7 +197,6 @@
 
 .projectCta {
   display: flex;
-  /* justify-content: center; */
   align-items: center;
 }
 
@@ -223,6 +218,10 @@
     height: 85vh;
   }
 
+  .glideContent img {
+    top: -10%;
+    width: 120%;
+  }
 }
 
 @media screen and (max-width: 1440px) {
@@ -239,39 +238,42 @@
 
 @media screen and (max-width: 1024px) {
   .projectSubSection {
-    height: 65vh;
+    height: 60vh;
   }
 }
 
 @media screen and (max-width: 991px) {
-
-  .ipad{
-    height: 10vh;
-  }
-
   .projectHeading {
     width: 100%;
   }
 
   .projectHeading .select {
-    font-size: 9vw;
+    font-size: 12vw;
+    height: 100px;
+    font-weight: 500;
   }
 
   .paraProject {
+    display: none;
     font-size: 2vw;
     max-width: 40vw;
   }
 
+  .projectHomeHeading{
+    height: auto;
+  }
+
   .projectHeading .project {
-    font-size: 9vw;
-    margin-left: 2vw;
+    font-size: 12vw;
+    margin-left: 40vw;
+    font-weight: 500;
+    height: 130px;
   }
 
   .projectSubSection {
     width: 100%;
     height: 100%;
     flex-direction: column;
-    margin-bottom: 0;
   }
 
   .glide {
@@ -285,12 +287,7 @@
   }
 
   .glideContent img {
-    top: -10%;
-    height: 125%;
-  }
-
-  .displayNoneMobile{
-    display: none;
+    top: -20%;
   }
 
   .mb_0 {
@@ -305,10 +302,6 @@
     margin-top: 5vw;
   }
 
-  .forthMt{
-    margin-top: 0;
-  }
-
   .textContent h1 {
     font-size: 4vw;
     padding: 1vw 5.5vw;
@@ -319,41 +312,35 @@
   }
 
   .c_project_info > p {
-    font-size: 1.5vw;
+    font-size: 2.5vw;
   }
 }
 
 @media screen and (max-width: 767px) {
-  .mobileSpacing {
-    height: 10vh;
-  }
-
   .mt20 {
     margin-top: 0;
   }
 
-  .displayNoneMobile{
-    display: none;
-  }
-
   .projectHeading {
-    padding: 40vw 0 15vw 0;
+    padding: 0vw 0 10vw 0;
   }
 
-  .projectHeading .select{
-    height: 60px;
+  .projectHeading .select {
     font-size: 14vw;
+    height: 60px;
   }
 
-  .projectHomeHeading{
-    margin-right: 49vw;
+  .projectHomeHeading {
+    width: 100%;
     height: 70px;
-    width: 150%;
-
-  }
+    margin-left: 0;
+    margin-right: 0;
+    display: block;
+}
 
   .projectHeading .project {
     font-size: 14vw;
+    margin-left: 20vw;
   }
 
   .projectSubSection {

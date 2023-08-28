@@ -60,7 +60,8 @@ const Loader = ({ setLoading }) => {
         <motion.div variants={itemMain} className="transition-image">
           <motion.img
             layoutId="main-image-1"
-            src={`/assets/reels/enigma.png`}
+            src={`/assets/reels/poster.png`}
+            alt="work loading image"
           />
         </motion.div>
         <ImageBlock variants={item} id="image-3" />

@@ -10,6 +10,7 @@ import { NextSeo } from "next-seo";
 import Banner from "@/components/studio/Banner";
 import Loader from "@/components/studio/Loader";
 import StudioAero from "@/components/studio/StudioAero";
+import WorkProject from "@/components/ProjectsSection/WorkProject";
 import Slider from "@/components/studio/Slider";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header/Header";
@@ -100,19 +101,12 @@ export default function studio() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"
+          content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
         ></meta>
         <link rel="icon" href="/fav-icon.png" />
       </Head>
 
       <Cursor isGelly={true} />
-
-      {/* <ul className="transition" style={{ zIndex: "255" }} id="loader">
-        <li></li>
-        <li />
-        <li />
-        <li />
-      </ul> */}
 
       <SmoothScroll />
 
@@ -160,43 +154,30 @@ export default function studio() {
                 </div>
               )}
 
-              <div className="space-large desktop"></div>
-
-              <div className="space-large mobile"></div>
-              <div className="space-large mobile"></div>
-              <div className="space-large mobile"></div>
-              <div className="space-large mobile"></div>
-
-              <div data-cursor-color="#000" data-cursor-size="0px">
+              <section className="p-150" data-cursor-color="#000" data-cursor-size="0px">
                 <StudioAero />
-              </div>
+              </section>
 
-              <div className="space-large desktop"></div>
+               {/* ======================== Projects Slide ====================== */}
+            <section className="desktop-projects m-150">
+              <WorkProject />
+            </section>
 
-              <div className="main-projects-section">
-                <div>
-                  <ProjectWorks />
-                </div>
-              </div>
+            <section className="mobile-projects">
+              <ProjectWorks/>
+            </section>
 
-              <div className="space-large desktop"></div>
+      {/* ======================== Projects Slide END ====================== */}
 
-              <div className="space-large desktop"></div>
-
-              <div>
+              <div className="pt-150">
                 <Slider />
               </div>
 
-              <div className="space-large desktop"></div>
-              <div className="space-large desktop"></div>
-
               {/* Next Page Box */}
-              <div>
+              <div className="m-150">
                 <WorksNextBox />
               </div>
               {/* Next Page Box END */}
-              <div className="space-large desktop"></div>
-              <div className="space-large desktop"></div>
 
               {/* Footer */}
               <div className="desktop-footer">

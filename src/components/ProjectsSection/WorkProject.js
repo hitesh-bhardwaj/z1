@@ -10,7 +10,7 @@ import SplitType from "split-type";
 
 gsap.registerPlugin(ScrollTrigger);   
 
-export default function HomeProject() {
+export default function WorkProject() {
 
   const selected = useRef(null);
   const projecth1 = useRef(null);

@@ -334,20 +334,20 @@ export default function ProjectsHome() {
   });
 
   //  Body Color Changer
-  useEffect(() => {
-    const colorChange = document
-      .querySelectorAll("#image-container")
-      .forEach(function (colorChanger) {
-        colorChanger.addEventListener("mousemove", function (dets) {
-          let color = document.querySelector(".scroll-content");
-          color.style.backgroundColor = "#" + dets.target.dataset.color;
-        });
-        colorChanger.addEventListener("mouseleave", function (dets) {
-          let leaveColor = document.querySelector(".scroll-content");
-          leaveColor.style.backgroundColor = "#f9f9f9";
-        });
-      });
-  });
+  // useEffect(() => {
+  //   const colorChange = document
+  //     .querySelectorAll("#image-container")
+  //     .forEach(function (colorChanger) {
+  //       colorChanger.addEventListener("mousemove", function (dets) {
+  //         let color = document.querySelector(".scroll-content");
+  //         color.style.backgroundColor = "#" + dets.target.dataset.color;
+  //       });
+  //       colorChanger.addEventListener("mouseleave", function (dets) {
+  //         let leaveColor = document.querySelector(".scroll-content");
+  //         leaveColor.style.backgroundColor = "#f9f9f9";
+  //       });
+  //     });
+  // });
 
   // Text Reveal Animation For Each
   useEffect(() => {
@@ -358,7 +358,7 @@ export default function ProjectsHome() {
       gsap.from(textwords, {
         scrollTrigger: {
           trigger: elem,
-          start: "-450 top",
+          start: "top 85%",
           end: "bottom top",
           markers: false,
         },
@@ -376,7 +376,7 @@ export default function ProjectsHome() {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: "#c-works",
-        start: "-450 top",
+        start: "top 85%",
       },
     });
 
@@ -385,8 +385,8 @@ export default function ProjectsHome() {
       "#line-anim #span",
       1.5,
       {
-        y: -350,
-        ease: "none",
+        y: 600,
+        ease: "Power3.inOut",
         skewY: -20,
       },
       {
@@ -426,7 +426,6 @@ export default function ProjectsHome() {
   return (
     <>
       <div className={styles.projectSectionMain} id="c-works">
-        <div className={styles.mobileSpacing}></div>
         <div className={styles.projectHeading}>
           <div
             className={`${styles.projectFirstBox} ${styles.lineAnim}`}
