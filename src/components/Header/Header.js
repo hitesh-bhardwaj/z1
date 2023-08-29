@@ -16,14 +16,14 @@ export default function Header() {
 
   // Simplified the initial value for imgSrc
   const [imgSrc, setImgSrc] = useState(
-    invertText ? "/dark/moon.svg" : "/dark/sun.svg"
+    invertText ? "/assets/dark/moon.svg" : "/assets/dark/sun.svg"
   );
 
   useEffect(() => {
     localStorage.setItem("invertText", invertText);
 
     // Set imgSrc based on invertText
-    setImgSrc(invertText ? "/dark/moon.svg" : "/dark/sun.svg");
+    setImgSrc(invertText ? "/assets/dark/moon.svg" : "/assets/dark/sun.svg");
 
     const div = document.body;
     if (invertText) {

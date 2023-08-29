@@ -31,8 +31,6 @@
   --bezier3: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-
-
 [data-scrollbar] {
   position: fixed !important;
   top: 0;
@@ -53,7 +51,7 @@
 }
 
 .c-cursor__inner {
-  font-family: "ClashDishplay";
+  font-family: "ClashDisplay";
   font-weight: 400;
   font-size: 0.9vw !important;
 }
@@ -73,6 +71,13 @@
   visibility: visible !important;
 }
 
+.color-primary{
+  color: var(--primary) !important;
+}
+
+.dark-mode .color-primary{
+  filter: invert(1);
+}
 
 /*01. Fonts */
 /*==============FONTS===================*/
@@ -5972,6 +5977,10 @@ body.loading {
   transition: all 0.5s ease-in-out;
   margin-bottom: 2vw;
 }
+.contact-us-box img{
+  width: 100%;
+  height: 100%;
+}
 
 .contact-us-box button:hover {
   border: 1px solid var(--black2);
@@ -6007,7 +6016,7 @@ a:hover {
   width: 80%;
 }
 
-.mail h4 {
+.mail p {
   font-size: 1.15vw;
   font-weight: 400;
   color: #8c8c8c;
@@ -6028,7 +6037,7 @@ a:hover {
   padding-top: 50px;
 }
 
-.phone h4 {
+.phone p {
   font-size: 1.15vw;
   font-weight: 400;
   color: #8c8c8c;
@@ -6046,7 +6055,7 @@ a:hover {
   justify-content: space-between;
 }
 
-.right-section h4 {
+.right-section p {
   color: #8c8c8c;
   font-size: 1.15vw;
   font-weight: 400;
@@ -7175,11 +7184,11 @@ a:hover {
     height: 28vh;
   }
 
-  .mail h4 {
+  .mail p {
     font-size: 2.5vw;
   }
 
-  .phone h4 {
+  .phone p {
     font-size: 2.5vw;
   }
 
@@ -7211,7 +7220,7 @@ a:hover {
     font-size: 2.5vw;
   }
 
-  .right-section h4 {
+  .right-section p {
     font-size: 2.5vw;
   }
 

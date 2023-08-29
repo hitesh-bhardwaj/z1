@@ -137,7 +137,7 @@ function Footer() {
           <div className="footer-content">
             <div className="left-section">
               <div className="mail f__anim">
-                <h4>mail us</h4>
+                <p>mail us</p>
                 <div className="cb-outro-header">
                   <a
                     href="mailto:hi@weareenigma.com"
@@ -150,7 +150,7 @@ function Footer() {
                 </div>
               </div>
               <div className="phone f__anim">
-                <h4> even better call us</h4>
+                <p> even better call us</p>
                 <div className="num">
                   <div
                     className="cb-menu-nav-item f__anim"
@@ -178,7 +178,7 @@ function Footer() {
               </div>
             </div>
             <div className="right-section">
-              <h4 className="f__anim">let's be friends</h4>
+              <p className="f__anim">let's be friends</p>
               <div className="socials">
                 <div className="top-socials f__anim">
                   <div
