@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
-import CursorParticles from "./CursorParticles";
+import CursorParticles from "./StrategyParticles";
 
 
 gsap.registerPlugin(ScrollTrigger);

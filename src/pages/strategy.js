@@ -1,5 +1,8 @@
+'use client'
+
 import React, { useEffect, useRef } from 'react';
 import Head from 'next/head';
+import Image from 'next/image';
 import SmoothScroll from "@/components/utils/SmoothScroll";
 import { gsap } from 'gsap';
 import SplitType from 'split-type';
@@ -11,7 +14,7 @@ import styles from '@/styles/serviceDetail.module.css';
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer";
 import FooterMobile from "@/components/Mobile/FooterMobile";
-import CursorAero from '@/components/ServiceDetail/CursorAero';
+import CursorAero from '@/components/ServiceDetail/StrategyAero';
 import StrategyNext from '@/components/NextBoxes/StrategyNext';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -392,12 +395,14 @@ export default function Strategy() {
                  data-cursor-text="View More">
               <div className={styles['service-card-top']}>
                 <div>
-                    <img src='/assets/service-detail/portfolio-1.webp'
+                    <Image src='/assets/service-detail/portfolio-1.webp'
                         loading='lazy'
                         alt='portfolio image'
+                        width={600}
+                        height={600}
                         onMouseEnter={(e) => handleHover(e)}
                         onMouseOut={(e) => handleHoverExit(e)}>
-                    </img>
+                    </Image>
                 </div>
                 <a className={styles['btn-10']} href='#'>
                   View CaseStudy
@@ -419,12 +424,14 @@ export default function Strategy() {
                  data-cursor-text="View More">
               <div className={styles['service-card-top']}>
                 <div>
-                    <img src='/assets/service-detail/portfolio-2.webp'
+                    <Image src='/assets/service-detail/portfolio-2.webp'
                          loading='lazy'
+                         width={600}
+                        height={600}
                         alt='portfolio image'
                         onMouseEnter={(e) => handleHover(e)}
                         onMouseOut={(e) => handleHoverExit(e)}>
-                    </img>
+                    </Image>
                 </div>
                 <a className={styles['btn-10']} href='#'>
                   View CaseStudy
@@ -446,12 +453,14 @@ export default function Strategy() {
                  data-cursor-text="View More">
               <div className={styles['service-card-top']}>
                 <div>
-                    <img src='/assets/service-detail/portfolio-3.webp'
+                    <Image src='/assets/service-detail/portfolio-3.webp'
                         alt='portfolio image'
+                        width={600}
+                        height={600}
                         loading='lazy'
                         onMouseEnter={(e) => handleHover(e)}
                         onMouseOut={(e) => handleHoverExit(e)}>
-                    </img>
+                    </Image>
                 </div>
                 <a className={styles['btn-10']} href='#'>
                   View CaseStudy
@@ -473,12 +482,14 @@ export default function Strategy() {
                  data-cursor-text="View More">
               <div className={styles['service-card-top']}>
                 <div>
-                    <img src='/assets/service-detail/portfolio-4.webp'
+                    <Image src='/assets/service-detail/portfolio-4.webp'
                         alt='portfolio image'
+                        width={600}
+                        height={600}
                         loading='lazy'
                         onMouseEnter={(e) => handleHover(e)}
                         onMouseOut={(e) => handleHoverExit(e)}>
-                    </img>
+                    </Image>
                 </div>
                 <a className={styles['btn-10']} href='#'>
                   View CaseStudy
@@ -502,11 +513,11 @@ export default function Strategy() {
     <section className={`${styles['main-container']} ${styles['mb-10']}`} id='section-4'>
       <div className={styles['service-detail-process']}>
         <div className={styles['service-detail-process-left']}>
-          <h2 className='why-us-anim'>
+          <h3 className='why-us-anim'>
             Approach and
             <br />
             <span className='stroke'>Process</span>
-          </h2>
+          </h3>
         </div>
         <div className={styles['service-detail-process-right']}>
           <h4 className='why-us-anim' data-jelly>
@@ -528,28 +539,34 @@ export default function Strategy() {
       <div className={styles['service-approach-main']}>
         <div className={styles['service-approach-left']} id='approachImgCont'>
           <div className={`${styles['service-approach-img-container']} service-image-container`}>
-            <img src='/assets/service-detail/approach-1.webp' 
+            <Image src='/assets/service-detail/approach-1.webp' 
                  alt='approach image'
                  loading='lazy'
+                 width={1000}
+                 height={1000}
                  onMouseEnter={(e) => handleHover(e)}
                  onMouseOut={(e) => handleHoverExit(e)}>
-            </img>
+            </Image>
           </div>
           <div className={`${styles['service-approach-img-container']} service-image-container`}>
-            <img src='/assets/service-detail/approach-2.webp'
+            <Image src='/assets/service-detail/approach-2.webp'
                  alt='approach image'
                  loading='lazy'
+                 width={1000}
+                 height={1000}
                  onMouseEnter={(e) => handleHover(e)}
                  onMouseOut={(e) => handleHoverExit(e)}>
-            </img>
+            </Image>
           </div>
           <div className={`${styles['service-approach-img-container']} service-image-container`}>
-            <img src='/assets/service-detail/approach-3.webp'
+            <Image src='/assets/service-detail/approach-3.webp'
                  alt='approach image'
                  loading='lazy'
+                 width={1000}
+                 height={1000}
                  onMouseEnter={(e) => handleHover(e)}
                  onMouseOut={(e) => handleHoverExit(e)}>
-            </img>
+            </Image>
           </div>
         </div>
 
@@ -608,38 +625,42 @@ export default function Strategy() {
         </div>
         <div className={styles['service-offer-bottom']} id='serviceOfferBottom'>
           <div className={styles['our-service-text']} data-cursor-size='120px' data-cursor-exclusion>
-            <h5>Digital Advisory and Consulting</h5>
+            <p>Digital Advisory and Consulting</p>
           </div>
           <div className={styles['our-service-text']} data-cursor-size='120px' data-cursor-exclusion>
-            <h5>User Experience Development</h5>
+            <p>User Experience Development</p>
           </div>
           <div className={styles['our-service-img']}>
-            <img src='/assets/service-detail/our-service-1.webp' 
+            <Image src='/assets/service-detail/our-service-1.webp' 
                  alt='our service image'
                  loading='lazy'
+                 width={500}
+                 height={500}
                  onMouseEnter={(e) => handleHover(e)}
                  onMouseOut={(e) => handleHoverExit(e)}>
-            </img>
+            </Image>
           </div>
           <div className={styles['our-service-text']} data-cursor-size='120px' data-cursor-exclusion>
-            <h5>Brand & content strategy</h5>
+            <p>Brand & content strategy</p>
           </div>
           <div className={styles['our-service-img']}>
-            <img src='/assets/service-detail/our-service-2.webp' 
+            <Image src='/assets/service-detail/our-service-2.webp' 
                  alt='our service image'
                  loading='lazy'
+                 width={500}
+                 height={500}
                  onMouseEnter={(e) => handleHover(e)}
                  onMouseOut={(e) => handleHoverExit(e)}>
-            </img>
+            </Image>
           </div>
           <div className={styles['our-service-text']} data-cursor-size='120px' data-cursor-exclusion>
-            <h5>Personal design & customer segmentationg</h5>
+            <p>Personal design & customer segmentationg</p>
           </div>
           <div className={styles['our-service-text']} data-cursor-size='120px' data-cursor-exclusion>
-            <h5>Digital Capabilities Development</h5>
+            <p>Digital Capabilities Development</p>
           </div>
           <div className={styles['our-service-text']} data-cursor-size='120px' data-cursor-exclusion>
-            <h5>Digital Marketing & Website Performance Audit</h5>
+            <p>Digital Marketing & Website Performance Audit</p>
           </div>
         </div>
       </div>

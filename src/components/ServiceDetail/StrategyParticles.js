@@ -7,15 +7,15 @@ class Particles {
       {},
       {
         container: null,
-        itemsSelector: "[data-particle-item]",
+        itemsSelector: "[data-particle-en]",
         observable: true,
         observableTarget: null,
         observableRefresh: true,
         repeats: -1,
         timeScale: 1.5,
         initialSeek: 3000,
-        // fadeInDuration: 5,
-        // fadeInEase: "power1.out",
+        // fadeInDuration: 1,
+        // fadeInEase: "power4.out",
         fadeOutDuration: 1,
         fadeOutEase: "power4.out",
         yStart: () => this.container.offsetHeight,
@@ -242,32 +242,42 @@ class Particles {
 
 export default function partText() {
   useEffect(() => {
-    const demoParticles = document.querySelector(".cb-particles");
+    const demoParticles = document.querySelector(".cb-particle");
     const particles = new Particles({
       container: demoParticles,
-      itemsSelector: ".cb-particles-item",
+      itemsSelector: ".cb-particle-item",
     });
   }, []);
 
   return (
     <div className="cb-tabs-content">
       <section className="cb-demo">
-        <div className="cb-particles">
-          <span className="cb-particles-item -text -v1 -s4">Hello</span>
-          <span className="cb-particles-item -text -v2 -s4">Namaste</span>
-          <span className="cb-particles-item -text -v3 -s4">Hola</span>
-          <span className="cb-particles-item -text -v4 -s4">Bonjour</span>
-          <span className="cb-particles-item -text -v5 -s4">Nǐn hǎo</span>
-          <span className="cb-particles-item -text -v6 -s4">Olá</span>
-          <span className="cb-particles-item -text -v7 -s4">Shalom</span>
-          <span className="cb-particles-item -text -v8 -s4">Ciao</span>
-          <span className="cb-particles-item -text -v9 -s4">Aloha</span>
-          <span className="cb-particles-item -text -v10 -s4">Hei</span>
-          <span className="cb-particles-item -text -v11 -s4">Hallá</span>
-          <span className="cb-particles-item -text -v12 -s4">Salve</span>
-          <span className="cb-particles-item -text -v13 -s4">Xin Chào</span>
-          <span className="cb-particles-item -text -v14 -s4">Salaam</span>
-          <span className="cb-particles-item -text -v15 -s4">Zdraveĭte</span>
+        <div className="cb-particle">
+          <span className="cb-particle-item size-emo -text -v1 -s4">💵</span>
+          <span className="cb-particle-item size-emo -dot -text -v3 -s4 -c3 -p1">
+            🎯
+          </span>
+          <span className="cb-particle-item size-emo -text -v2 -s4">💸</span>
+          <span className="cb-particle-item size-emo -text -v5 -s4 -dot -c3 -p2">
+            🧲
+          </span>
+          <span className="cb-particle-item size-emo -text -v4 -s4">🫰🏻</span>
+          <span className="cb-particle-item size-emo -text -v7 -s4 -dot -c3 -p3">
+            🖥
+          </span>
+          <span className="cb-particle-item size-emo -text -v8 -s4">💰</span>
+          <span className="cb-particle-item size-emo -text -v9 -s4 -dot -c3 -p1">
+            📍
+          </span>
+          <span className="cb-particle-item size-emo -text -v6 -s4">🧑‍💻</span>
+          <span className="cb-particle-item size-emo -text -v10 -s4 -dot -c3 -p3">
+            🏦
+          </span>
+          <span className="cb-particle-item size-emo -text -v6 -s4">💲</span>
+          <span className="cb-particle-item size-emo -text -v7 -s4 -dot -c3 -p3">
+            🖍
+          </span>
+          <span className="cb-particle-item size-emo -text -v8 -s4">🤑</span>
         </div>
       </section>
     </div>

@@ -196,7 +196,7 @@
     margin-top: 30px;
   }
   
-  .service-detail-process-left h2{
+  .service-detail-process-left h3{
     font-size: 3.5vw;
     font-weight: 500;
     color: var(--black1);
@@ -336,10 +336,11 @@
     height: 100%;
     object-fit: cover;
   }
-  .our-service-text h5{
+  .our-service-text p{
     font-size: 1.4vw;
     font-weight: 500;
-  
+    font-family: 'ClashDisplay';
+    text-align: center;
   }
   .service-offer-top h2{
     font-size: 4vw;
@@ -453,7 +454,7 @@
       width: 100%;
       padding: 5% 0;
     }
-    .service-detail-process-left h2{
+    .service-detail-process-left h3{
       font-size: 8vw;
       line-height: 1.2;
     }
@@ -519,7 +520,7 @@
       width: 45%;
       height: 180px;
     }
-    .our-service-text h5 {
+    .our-service-text p {
       font-size: 2.7vw;
     }
     .our-service-img {
@@ -630,7 +631,7 @@
     font-size: 4.5vw;
     text-align: justify;
   }
-  .service-detail-process-left h2, .service-offer-top h2 {
+  .service-detail-process-left h3, .service-offer-top h2 {
     font-size: 11vw;
   }
   .service-detail-process-right h4{
@@ -660,7 +661,7 @@
   .service-offer-bottom{
     gap: 20px;
   }
-  .our-service-text h5 {
+  .our-service-text p {
     font-size: 5vw;
   }
   .footer-copyright-label, .footer-location-label{
@@ -681,14 +682,5 @@
    }
   
   /*================Dark Mode Strategy Page==================*/
-  .dark-mode .color-primary {
-    color: #a2a529 !important;
-  }
-  
-  .dark-mode .service-approach-text-box h3 {
-    color: #a2a529 !important;
-  }
-  .dark-mode .our-service-text, .dark-mode .service-approach-text-box{
-    filter: invert(0.05);
-  }
+
   /*===========================Service Detail Page======================*/
