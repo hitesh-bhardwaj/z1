@@ -2662,6 +2662,7 @@ accordion-item--default .accordion .accordion-item-content {
   font-size: 6vw;
   text-align: center;
   color: var(--black);
+  z-index: 1;
 }
 
 .shapes {

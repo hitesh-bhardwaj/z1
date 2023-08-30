@@ -33,7 +33,7 @@ export default function Index({projects, reversed}) {
         currentXPercent = currentXPercent + (xPercentDelta * speed)
         
         //Change width of images between 33.33% and 66.66% based on cursor
-        const firstImagePercent = 66.66 - (currentXPercent * 0.33);
+        const firstImagePercent = 66.33 - (currentXPercent * 0.33);
         const secondImagePercent = 33.33 + (currentXPercent * 0.33);
         firstImage.current.style.width = `${firstImagePercent}%`
         secondImage.current.style.width = `${secondImagePercent}%`
