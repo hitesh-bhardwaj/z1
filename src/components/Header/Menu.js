@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import Link from "next/link";
@@ -42,40 +44,44 @@ const Menu = ({ state }) => {
   const link14 = useRef();
   const link15 = useRef();
 
-  // Sound on Click
   useEffect(() => {
-    const buttons = document.querySelectorAll(".btn-music");
-    const handleClick = () => {
-      const audio = new Audio("/assets/music/click.mp3"); // replace with the path to your audio file
-      audio.play();
-    };
-    buttons.forEach((button) => button.addEventListener("click", handleClick));
-    return () => {
-      buttons.forEach((button) =>
-        button.removeEventListener("click", handleClick)
-      );
-    };
+    if (typeof window !== "undefined") {
+      // Check if running on the client-side
+      const buttons = document.querySelectorAll(".btn-music");
+      const handleClick = () => {
+        const audio = new Audio("/assets/music/click.mp3");
+        audio.play();
+      };
+      buttons.forEach((button) => button.addEventListener("click", handleClick));
+      return () => {
+        buttons.forEach((button) =>
+          button.removeEventListener("click", handleClick)
+        );
+      };
+    }
   }, []);
 
-  // Sound on Hover
   useEffect(() => {
-    const buttons = document.querySelectorAll(".btn-music");
-    const handleMouseOver = (event) => {
-      const audio = new Audio("/assets/music/hover.mp3"); // replace with the path to your audio file
-      audio.play();
-      event.target.addEventListener("mouseout", () => {
-        audio.pause();
-        audio.currentTime = 0;
-      });
-    };
-    buttons.forEach((button) =>
-      button.addEventListener("mouseover", handleMouseOver)
-    );
-    return () => {
+    if (typeof window !== "undefined") {
+      // Check if running on the client-side
+      const buttons = document.querySelectorAll(".btn-music");
+      const handleMouseOver = (event) => {
+        const audio = new Audio("/assets/music/hover.mp3");
+        audio.play();
+        event.target.addEventListener("mouseout", () => {
+          audio.pause();
+          audio.currentTime = 0;
+        });
+      };
       buttons.forEach((button) =>
-        button.removeEventListener("mouseover", handleMouseOver)
+        button.addEventListener("mouseover", handleMouseOver)
       );
-    };
+      return () => {
+        buttons.forEach((button) =>
+          button.removeEventListener("mouseover", handleMouseOver)
+        );
+      };
+    }
   }, []);
 
   useEffect(() => {
