@@ -1324,7 +1324,7 @@ label:hover circle {
   font-size: 1.2vw;
   font-weight: 400;
   color: var(--black2);
-  text-align: center;
+  text-align: justify;
   letter-spacing: 0.4px;
   line-height: 1.7;
   font-family: 'Ageo';
@@ -2835,7 +2835,7 @@ accordion-item--default .accordion .accordion-item-content {
   align-items: center;
   width: 100%;
   height: 15vh;
-  /* justify-content: space-around; */
+  justify-content: flex-start;
 }
 
 .first-box-contact .lets {
@@ -2846,12 +2846,13 @@ accordion-item--default .accordion .accordion-item-content {
 }
 
 .first-box-contact .contact-para {
-  font-size: 1.2vw;
-  font-weight: 500;
-  max-width: 23vw;
-  color: var(--black1);
-  margin-left: 7vw;
-  font-family: 'Ageo';
+    font-size: 1.5vw;
+    font-weight: 500;
+    max-width: 22vw;
+    color: var(--black1);
+    margin-left: 7vw;
+    font-family: 'Ageo';
+    text-align: justify;
 }
 
 .first-box-contact .work {
@@ -3315,7 +3316,7 @@ textarea::placeholder {
   color: var(--black1);
   font-weight: 500;
   letter-spacing: 0.2em;
-  opacity: 0;
+  opacity: 1;
 }
 
 /* About Hero END */
@@ -4201,7 +4202,6 @@ https://unsplash.com/@vinomamba24
   width: 27vw;
   height: 70vh;
   transform: scaleX(-1);
-  border-radius: 36px;
 }
 
 .service-box-image img {
@@ -5978,10 +5978,10 @@ body.loading {
   transition: all 0.5s ease-in-out;
   margin-bottom: 2vw;
 }
-.contact-us-box img{
+/* .contact-us-box img{
   width: 100%;
   height: 100%;
-}
+} */
 
 .contact-us-box button:hover {
   border: 1px solid var(--black2);
@@ -6344,6 +6344,10 @@ a:hover {
   accordion-item--default .accordion .accordion-item-content {
     height: 650px;
   }
+  .newsCard{
+    width: 370px;
+    height: 370px;
+  }
 }
 
 @media screen and (max-width: 1512px) {
@@ -6381,6 +6385,7 @@ a:hover {
     width: 4vw;
     height: 7vh;
   }
+
 }
 
 @media (max-width: 1440px) {
@@ -7081,7 +7086,7 @@ a:hover {
   }
 
   .service-cap-section .left-box .sub-text {
-    font-size: 2.5vw;
+    font-size: 3vw;
   }
 
   .service-cap-section .right-box h1 {
@@ -7089,13 +7094,13 @@ a:hover {
   }
 
   .service-cap-section .right-box h4 {
-    font-size: 2.4vw;
+    font-size: 3vw;
     max-width: 40vw;
   }
 
   .strategy-box {
     width: 87%;
-    height: 50vh;
+    height: 60vh;
   }
 
   .left-strategy-box h1 {
@@ -7104,7 +7109,7 @@ a:hover {
 
   .left-strategy-box h4 {
     max-width: 45vw;
-    font-size: 2.2vw;
+    font-size: 2.8vw;
     text-align: justify;
   }
 
@@ -7132,13 +7137,16 @@ a:hover {
   }
 
   .main-how .top-box .first-box-how {
-    width: 80%;
-    height: 15vh;
+    width: 85%;
+    height: 20vh;
   }
 
   .box-we {
     align-self: flex-start;
     margin-top: 1vw;
+  }
+  .flex-start-remove{
+    align-self: unset;
   }
 
   .main-how .top-box .first-box-how .box-we .disabled-work .span-small-num {
@@ -7150,13 +7158,13 @@ a:hover {
   }
 
   .box-we-para h4 {
-    font-size: 2.3vw;
+    font-size: 3vw;
     text-align: justify;
   }
 
   .main-how .top-box.last-box {
-    margin-left: 10vw;
-    width: 80%;
+    /* margin-left: 10vw; */
+    width: 100%;
   }
 
   .why-section {
@@ -7254,7 +7262,7 @@ a:hover {
   }
 
   .contact-hero-content {
-    height: 50vh;
+    height: 100%;
   }
 
   .first-box-contact .contact-para {
@@ -7262,19 +7270,21 @@ a:hover {
   }
 
   .first-box-contact .lets {
-    font-size: 13vw;
+    font-size: 15vw;
   }
 
   .first-box-contact .work {
-    font-size: 13vw;
+    font-size: 15vw;
   }
 
   .second-box-contact {
-    flex-direction: column;
+    display: block;
+    height: fit-content;
+    margin-top: 20px;
   }
 
   .second-box-contact .together {
-    font-size: 13vw;
+    font-size: 15vw;
     line-height: 50%;
     margin-right: 0;
   }
@@ -7282,9 +7292,10 @@ a:hover {
   .contact-mobile-para-hero {
     color: var(--black1);
     margin-top: 7vw;
-    font-size: 3.5vw;
+    font-size: 4vw;
     max-width: 65vw;
     text-align: justify;
+    font-family: 'Ageo';
   }
 
   .img-container {
@@ -7332,6 +7343,7 @@ a:hover {
 
   .contact__text h1 {
     font-size: 9vw;
+    line-height: 1;
   }
 
   .form-control {
@@ -7440,7 +7452,7 @@ a:hover {
   }
 
   .first-sub-section .right-box-content p {
-    font-size: 3vw;
+    font-size: 4vw;
   }
 
   .container-about {
@@ -7956,7 +7968,8 @@ a:hover {
   }
 
   .right-section-header {
-    margin-right: 13vw;
+    margin-right: 10vw;
+    margin-top: 5px;
   }
 
   .dark-mode #blob,
@@ -8659,7 +8672,7 @@ a:hover {
   .container_hero_content .small_heading {
     top: 1.5vh;
     padding: 0 1vw;
-    font-size: 5vw;
+    font-size: 4vw;
     font-weight: 500;
   }
 
@@ -8772,7 +8785,7 @@ a:hover {
 
   .newsCard {
     width: 100%;
-    height: 300px;
+    height: 400px;
     transform: none !important;
     margin: 2rem 0 1rem 0;
   }
@@ -8793,7 +8806,7 @@ a:hover {
   }
 
   .newsCaption-content {
-    font-size: 4.5vw;
+    font-size: 4vw;
     text-align: justify;
   }
 
@@ -8805,6 +8818,9 @@ a:hover {
 
   .MR-20 {
     margin-left: 0 !important;
+  }
+  .span1, .span3{
+    display: none;
   }
 
   /* GIF SECTION END */
@@ -8907,18 +8923,18 @@ a:hover {
   /* ===================== Contact Page Index ==================== */
 
   .img-container {
-    height: 35vh;
+    height: 50vh;
   }
   .contact-hero {
-    height: 60vh;
+    height: 70vh;
   }
 
   .contact-hero-content {
-    height: 50vh;
+    height: 100%;
   }
 
   .first-box-contact {
-    height: 10vh;
+    height: 15vh;
   }
 
   .first-box-contact .lets {
@@ -8937,7 +8953,6 @@ a:hover {
 
   .second-box-contact {
     flex-direction: column;
-    margin-top: 2vw;
   }
 
   .second-box-contact .together {
@@ -8946,7 +8961,7 @@ a:hover {
   }
 
   .contact-mobile-para-hero {
-    text-align: right;
+    text-align: left;
     font-size: 4.5vw;
     margin-top: 8vw;
     max-width: 90vw;
@@ -8969,7 +8984,7 @@ a:hover {
   /* Second Container */
   .scnd__container {
     width: 90%;
-    height: 100vh;
+    height: 100%;
     align-items: flex-start;
     flex-direction: column;
     margin-top: 25vw;
@@ -9931,7 +9946,7 @@ a:hover {
 /* Header & Menu */
 .header-section{
   width: 85%;
-  padding-top: 6vw;
+  padding-top: 23px;
 }
 .header-section .header-logo .main-logo{
   width: 34px;
@@ -10023,14 +10038,44 @@ a:hover {
 .service-marquee{
   padding: 5vw 0;
 }
+.service-cap-section .right-box h1{
+  font-size: 10vw;
+}
+.service-cap-section .right-box h4{
+  font-size: 5vw;
+}
+.left-strategy-box h4{
+  font-size: 4.5vw;
+}
 
 /* Service Page 480px End */
+
+/* Footer Mobile and Header Mobile*/
+.contact-content-socials-icon span{
+  font-size: 4.8vw;
+}
+.right-section-header{
+  margin-top: 0;
+}
 
 /* Contact Page Video */
 .video-section-mobile .video-box {
   width: 100%;
   margin-top: 15vw;
   height: 30vh;
+}
+.contact-hero{
+  height: 60vh;
+}
+.first-box-contact{
+  height: 10vh;
+}
+.contact-mobile-para-hero{
+  font-size: 5vw;
+}
+.img-container{
+  height: 100%;
+  margin-bottom: 10vh;
 }
 
 
@@ -10049,6 +10094,211 @@ a:hover {
   margin-bottom: 5px;
 }
 
+/* About Page */
+.container_hero_content .small_heading{
+  font-size: 5vw;
+}
+.first-sub-section .right-box-content p{
+  font-size: 5vw;
+}
+.newsCaption-content{
+  font-size: 5vw;
+}
 
 }
 /* ========================================== Media Queries END ========================================== */
+
+.font-ageo{
+  font-family: 'Ageo';
+  font-size: 10vw;
+}
+.service-offer-container{
+  margin-left: 130px;
+}
+.service-offer-card{
+  text-align: center;
+  height: 10vw;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  border-radius: 24px;
+  box-shadow: 1px 1px 10px #c7c7c735;
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+  background: #ffffff;
+}
+
+.image-card{
+  border: none;
+  padding: 0;
+}
+
+.image-card img{
+  filter: grayscale(0);
+  transition: filter 0.4s ease-in;  
+}
+
+.service-offer-card p{
+  opacity: 1;
+  transition: all 0.3s ease-in;
+  text-align: center !important;
+  font-family: 'clashDisplay' !important;
+}
+
+.service-offer-card:hover p {
+  opacity: 1;
+}
+
+.service-offer-card:hover img{
+  filter: grayscale(1);
+}
+
+.service-offer-card:hover .service-offer-card-bg{
+  opacity: 0.8
+}
+
+.service-offer-card-blur {
+  position: absolute;
+  top: -10%;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  -webkit-backdrop-filter: blur(60px);
+  backdrop-filter: blur(60px);
+  z-index: 1;
+  /* display: none; */
+}
+
+.service-offer-card-bg {
+  width: 500px;
+  height: 500px;
+  position: absolute;
+  place-items: center;
+  display: grid;
+  margin: auto;
+  backface-visibility: hidden;
+  -webkit-backface-visibility:hidden;
+  -moz-backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -moz-transform: translateZ(0);
+  opacity: 0;
+  transition: all 0.4s ease;
+  animation-name: translate-card-animation;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  /* background: linear-gradient(90deg, rgba(127,125,228,1) 0%, rgba(245,221,148,0.8911939775910365) 53%, rgba(247,150,148,1) 100%); */
+  scale: 1.5;
+}
+
+.service-offer-card-bg .card-bg-1 {
+  position: absolute;
+  /* top: 0; */
+  width: 150px;
+  height: 150px;
+  background-color: #f5dd94;
+  z-index: 3;
+  border-radius: 100%;
+  filter: blur(5px);
+}
+
+.service-offer-card-bg .card-bg-2 {
+    background-color: #f79694;
+    width: 280px;
+    height: 280px;
+    position: absolute;
+    z-index: 2;
+    border-radius: 100%;
+    filter: blur(5px);
+    
+}
+
+.service-offer-card-bg .card-bg-3 {
+  background-color: #7f7de4;
+  width: 550px;
+  height: 550px;
+  position: absolute;
+  z-index: 1;
+  border-radius: 100%;
+}
+
+@keyframes translate-card-animation {
+  0% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+
+  25% {
+    transform: translate(80px, 80px) rotate(90deg);
+  }
+
+  50% {
+    transform: translate(0px, 0px) rotate(180deg);
+  }
+
+  75% {
+    transform: translate(-80px, -80px) rotate(270deg);
+  }
+
+  100% {
+    transform: translate(0px, 0px) rotate(360deg);
+  }
+}
+
+.dark-mode .image-card img{
+  filter: grayscale(1);
+  filter: invert(0) !important;
+}
+
+.dark-mode .service-offer-card{
+  filter: invert(1);
+  background: var(--black1);
+  color: #ffffff;
+  box-shadow: none;
+  opacity: 1;
+  box-shadow: none;
+}
+
+.dark-mode .service-offer-card p{
+  opacity: 0.4;
+  transition: all 0.3s ease-in;
+}
+
+.dark-mode .service-offer-card:hover p{
+  opacity: 1;
+}
+.dark-mode .service-approach-text-box {
+  background: var(--white2);
+}
+
+@media screen and (max-width: 991px) {
+  .service-offer-container{
+    margin-left: 0;
+  }
+  .service-offer-card-wrapper{
+    width: 50%;
+  }
+  .service-offer-card{
+    height: 15vh;
+  }
+  .service-offer-card p {
+    font-weight: 400;
+  }
+  .dark-mode .service-offer-card p{
+    opacity: 1;
+  }
+  .font-ageo{
+    font-size: 15vw;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .service-offer-card-wrapper{
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .service-offer-card{
+    height: 20vh;
+  }
+}

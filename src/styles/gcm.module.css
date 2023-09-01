@@ -1,12 +1,3 @@
-.Main .linkButton {
-  background: transparent;
-  border: none;
-  font-size: 1.1vw;
-  text-transform: uppercase;
-  color: #000;
-  letter-spacing: -0.04vw;
-}
-
 .Main {
   width: 100%;
   height: auto;
@@ -23,11 +14,10 @@
 
 .mainSubSection {
   width: 100%;
-  height: 20vh;
+  height: auto;
   display: flex;
-  align-content: center;
-  justify-content: flex-end;
-
+  justify-content: space-between;
+  align-items: flex-end;
 }
 
 .HeroLeftBox {
@@ -39,165 +29,132 @@
 }
 
 .HeroLeftBox .Link {
-  font-size: 1.1vw;
+  font-size: 1.2vw;
   text-transform: uppercase;
-  color: #000;
-  margin-bottom: 2vw;
-  font-weight: 500;
-}
-
-.linkButton{
-  font-family: "Gilroy";
+  color: var(--black);
   font-weight: 500;
 }
 
 .linkSvg img {
-  margin-left: 0.2vw;
-  width: 0.8vw;
-  height: 0.7vw;
+  margin-left: 8px;
+    height: 0.8vw;
+    width: 0.8vw;
+    margin-bottom: 5px;
 }
 
 .HeroLeftBox h1 {
   font-size: 4.5vw;
   font-weight: 500;
-  color: #1a1a1a;
+  color: var(--black2);
   margin-top: 2vw;
 }
 
 .HeroRightBox {
   width: 30%;
-  height: 100%;
+  height: auto;
   display: flex;
-  justify-content: flex-end;
   flex-direction: column;
   align-items: flex-end;
+  justify-content: space-between;
 }
 
-.HeroRightBox .work {
-  font-size: 1.3vw;
+.HeroRightBox h5{
+  font-size: 1.2vw;
   font-weight: 500;
-  margin-bottom: 2vh;
-  color: #1a1a1a;
+  color: var(--black);
+  letter-spacing: 1px;
 }
 
-.HeroRightBox .year {
-  font-size: 1.3vw;
-  color: #1a1a1a;
-  font-weight: 500;
-  margin-bottom: 1.5vh;
+.year{
+  margin-bottom: 30px;
 }
 
-.thirdSectionRightBox .buttonBox {
-  width: 100%;
-  display: flex;
-  padding-top: 3vh;
-  justify-content: flex-start;
+/* Parallax Image Section */
+.imageSection {
+  width: 90%;
+  margin: 0 auto;
 }
 
-.paraTop h1 {
-  font-size: 2.2vw;
-  letter-spacing: 0.02vw;
-  color: #1a1a1a;
-  font-weight: 500;
-  text-align: justify;
-  margin-bottom: 3vh;
-}
-
-.imageSecondSection {
-  padding-left: 6%;
-  padding-right: 6%;
-}
-
-.imageSecondSection .imageBox {
+.imageSection .imageBox {
   position: relative;
   display: block;
   overflow: hidden;
   height: 100vh;
 }
 
-.img {
+.imageSection .imageBox .img {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
 }
 
-.patronumThirdSection {
+/* Third Section */
+.thirdSection {
   width: 100%;
-  height: auto;
+  height: 100%;
 }
-
 .thirdSectionContent {
   width: 75%;
-  height: 60vh;
-  margin: 0 auto;
+  height: 100%;
+  margin: 10vw auto;
   display: flex;
   justify-content: space-between;
 }
-
-.thirdSectionLeftBox {
-  width: 40%;
-  height: 60%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-
-.thirdSectionLeftBox h1 {
-  font-size: 1.4vw;
-  font-weight: 600;
-  color: #1a1a1a;
+.h3 {
+  font-size: 1.5vw;
+  font-weight: 500;
+  color: var(--black);
+  letter-spacing: 1.5px;
   text-transform: uppercase;
 }
 
 .thirdSectionRightBox {
   width: 70%;
-  height: 100%;
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
+}
+.h4 {
+  font-size: 2vw;
+  letter-spacing: 1.5px;
+  color: var(--black1);
+  font-weight: 500;
+  text-align: justify;
+  margin-bottom: 6vh;
+  font-family: 'Ageo';
 }
 
-.thirdSectionRightBox .buttonBox h1 {
-  margin-right: 2vw;
+.thirdSectionRightBox .buttonBox {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+.thirdSectionRightBox .buttonBox h6 {
+  margin-right: 3vw;
   font-size: 1.2vw;
   font-weight: 500;
-  padding: 0.7vw 2vw;
+  letter-spacing: 1.5px;
+  padding: 15px 30px;
   border-radius: 100px;
   text-transform: uppercase;
-  border: 0.01vw solid #1a1a1a;
+  border: 0.01vw solid var(--black1);
   transition: all 0.3s ease-in;
+  color: var(--black1);
 }
 
-.patronumForthSection {
+/* Forth Section */
+.forthSection {
   width: 100%;
-  height: auto;
+  height: 100%;
 }
-
 .forthSectionContent {
   width: 75%;
   height: 100%;
-  margin: 0 auto;
+  margin: 10vw auto;
   display: flex;
   justify-content: space-between;
 }
-
 .forthSectionLeftBox {
   width: 40%;
-  height: 60%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
 }
-
-.forthSectionLeftBox h1 {
-  font-size: 1.4vw;
-  font-weight: 600;
-  color: #1a1a1a;
-  text-transform: uppercase;
-  padding-top: 8vw;
-}
-
 .forthSectionRightBox {
   width: 60%;
   height: 100%;
@@ -205,39 +162,56 @@
   justify-content: center;
   align-items: flex-start;
   flex-direction: column;
-  padding-top: 8vw;
+}
+.paraTop p {
+  font-size: 1.5vw;
+  line-height: 1.3;
+  margin-bottom: 5vh;
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-family: 'Ageo';
+  text-align: justify;
+}
+
+
+.clientTestimonialSection{
+  width: 100%;
+  height: 100%;
 }
 
 .clientTestimonialSectionContent{
   width: 60%;
   height: 100%;
-  margin: 0 auto;
+  margin: 12vw auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-direction: column;
-  gap: 10vh;
 }
 
-.clientTestimonialSectionLeftBox h1{
+.clientTestimonialSectionLeftBox h3{
   font-size: 1.4vw;
   font-weight: 500;
-  color: #1a1a1a;
+  color: var(--black1);
   text-transform: uppercase;
+  margin-bottom: 10vh;
+  letter-spacing: 1.5px;
 }
-.clientTestimonialparaTop h1{
+
+.clientTestimonialparaTop h4{
   font-size: 1.9vw;
   letter-spacing: 0.5px;
-  color: #1a1a1a;
+  color: var(--black1);
   font-weight: 500;
   text-align: justify;
   margin-bottom: 3vw;
   font-family: 'Ageo';
 }
 .clientTestimonialSpan{
-  color: #6f6f6f;
+  color: var(--black1);
+  font-weight: 400;
 }
 .clientTestimonialSpan2{
-  color: #a7a7a7;
+  color: var(--gray);
   font-size: 9vw;
   line-height: 0;
   font-family: sans-serif;
@@ -248,68 +222,25 @@
   align-items: center;
   gap: 2vw;
   width: 60%;
-  padding-top: 5vh;
+  padding-top: 2vh;
 }
 
 .clientTestimonialSectionFigure img{
   width: 6vw;
   border-radius: 50%;
 }
-.clientTestimonialSectionFigureText h5{
+.clientTestimonialSectionFigureText h4{
   font-size: 1.5vw;
   line-height: 1.5;
   font-weight: 500;
   letter-spacing: 0.5px;
 }
 
-.paraTop h1 {
-  font-size: 2.2vw;
-  letter-spacing: 0.02vw;
-  color: #1a1a1a;
-  font-weight: 500;
-  text-align: justify;
-  margin-bottom: 3vw;
-  font-family: 'Ageo';
-}
-
-.paraTop h5 {
-  font-size: 1.3vw;
-  line-height: 1.5;
-  margin-bottom: 3vw;
-  font-weight: 400;
-  letter-spacing: 0.5px;
-  text-align: justify;
-  font-family: 'Ageo';
-}
-
+/* Logo Section Images */
 .logoSection {
   width: 100%;
-  height: 100vh;
+  height: 100%;
 }
-
-.logoContentSection {
-  width: 80%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
-.logoContentSection h1 {
-  font-size: 5vw;
-  font-weight: 600;
-  color: #1a1a1a;
-}
-
-.logoContentSection h3 {
-  font-size: 1.3vw;
-  text-align: left;
-  font-weight: 500;
-  color: #1a1a1a;
-  margin-top: 2vw;
-}
-
 .logoImageSection {
   width: 100%;
   height: 90vh;
@@ -317,12 +248,25 @@
   justify-content: center;
   align-items: center;
 }
+.firstLogoBox {
+  width: 37%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+}
+.secondLogoBox {
+  width: 37%;
+  height: 90%;
+  margin-top: 15vh;
+  display: flex;
+  justify-content: center;
+}
 
 .imageContainer {
   position: relative;
   overflow: hidden;
   width: 35vw;
-  height: 80%;
+  height: 100%;
 }
 
 .imageContainer img {
@@ -336,107 +280,56 @@
   padding: 0;
 }
 
-.firstLogoBox {
-  width: 37%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-}
-
-.firstLogoBox h1 {
-  max-width: 30vw;
-  font-size: 1.3vw;
-  text-align: center;
-  font-weight: 500;
-  color: #1a1a1a;
-  margin-top: 3vw;
-}
-
-.secondLogoBox {
-  width: 37%;
-  margin-top: 10vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
-}
-
-.secondLogoBox h1 {
-  max-width: 30vw;
-  font-size: 1.3vw;
-  text-align: center;
-  font-weight: 500;
-  color: #1a1a1a;
-  margin-top: 3vw;
-}
-
 .logoImageSectionSecond {
   width: 100%;
   height: 90vh;
-  margin-top: 5vw;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+/* Fonts Section */
 .fontSection {
-  width: 100%;
-  height: 100vh;
-}
-
-.fontHeading {
   width: 85%;
-  margin: 0 auto;
+  height: 100%;
+  margin: 10vw auto;
 }
-
-.fontHeading h1 {
+.h2 {
   font-size: 4vw;
-  color: #1a1a1a;
+  color: var(--black2);
   text-transform: uppercase;
+  font-weight: 500;
 }
-
-.gcmfontImagebox {
+.fontImagebox {
   width: 85%;
   margin: 0 auto;
-  padding-top: 8vw;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  padding-top: 5vh;
+}
+.fontImagebox img {
+  width: 100%;
+  height: 100%;
+  mix-blend-mode: multiply;
 }
 
-.gcmfontImagebox img {
-  width: 45%;
-}
 
+/* Colour Section */
 .colorSection {
   width: 100%;
   height: 100vh;
   position: relative;
 }
-
 .colorHeading {
   width: 85%;
   margin: 0 auto;
 }
-
-.colorHeading h1 {
-  font-size: 4vw;
-  color: #1a1a1a;
-}
-
 .colorBox {
   width: 85%;
   margin: 0 auto;
-  padding-top: 5vw;
+  padding-top: 5vh;
 }
-
-.colorBoxHeadingBackground h2 {
+.colorBoxHeadingBackground h1 {
   position: absolute;
-  font-size: 1vw;
-  font-family: "Poppins", sans-serif;
+  font-size: 17vw;
   top: 80%;
   left: 50%;
   line-height: calc(50px + 350 * ((100vw - 320px) / 1920));
@@ -448,79 +341,87 @@
 }
 
 .colorBoxesSection {
-  width: 100%;
+  width: 80%;
   height: 80%;
   margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
-.colorBoxesSection img {
+.colorBoxesSection ul {
   width: 100%;
-  mix-blend-mode: multiply;
-  z-index: 10;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  display: grid;
+  grid-template-columns: 34% 28% 21% 17%;
 }
 
+.colorBoxesSection ul li {
+  padding-bottom: 1vw;
+  padding-left: 1vw;
+  list-style: none;
+  color: var(--white);
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  font-size: 0.9vw;
+  line-height: 1.5;
+  letter-spacing: 1.5px;
+}
+.colorOne {
+  width: 100%;
+  height: 210px;
+  background: #1f56f9;
+  z-index: 1;
+  transform-origin: left center;
+}
+.colorTwo {
+  width: 90%;
+  height: 160px;
+  z-index: 1;
+  background: #ec374d;
+}
+.colorThree {
+  width: 80%;
+  height: 110px;
+  z-index: 1;
+  background: #013c9f;
+}
+.colorFour {
+  width: 70%;
+  height: 80px;
+  z-index: 1;
+  background: #f9bc40;
+}
+
+/* Video Section */
+.videoSection{
+  margin-top: 10vh;
+}
 .videoHeading {
   width: 90%;
   margin: 0 auto;
-  padding-bottom: 4vw;
+  padding: 4vh 0;
 }
-
-.videoHeading h1 {
+.videoH2{
   font-size: 4vw;
-  color: #1a1a1a;
+  color: var(--black2);
+  text-transform: capitalize;
   font-weight: 500;
-  max-width: 42vw;
 }
-
-.videoForthSection {
-  width: 100vw;
-  height: 100vh;
+.videoMainSection {
+  width: 100%;
+  height: 100%;
 }
-
 .videoContainer {
   margin: 0 auto;
   width: 90vw;
 }
-
 .videoContainer video {
   width: 100%;
   height: 100%;
   object-position: center;
-}
-
-.websiteDesignSection {
-  width: 75%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-}
-
-.websiteDesignSection .leftBox {
-  width: 40%;
-}
-
-.websiteDesignSection .leftBox h1 {
-  font-size: 1.4vw;
-  font-weight: 600;
-  text-transform: uppercase;
-  color: #1a1a1a;
-}
-
-.websiteDesignSection .rightBox {
-  width: 70%;
-}
-
-.websiteDesignSection .rightBox h1 {
-    font-size: 1.4vw;
-    line-height: 1.5;
-    letter-spacing: 0.02vw;
-    color: #1a1a1a;
-    font-weight: 500;
-    text-align: justify;
 }
 
 /* ========================= Media Queries ===================
@@ -537,33 +438,23 @@
     display: none !important;
   }
 
+  .dharanmobileImg {
+      display: none !important;
+    }
+
   .mobileFont {
     display: none;
   }
-   .nextUpContainer {
+  
+  .nextUpContainer {
     display: none;
-  }
-}
-
-@media screen and (max-width: 1920px) {
-  .mainSubSection {
-    height: 27vh;
   }
 }
 
 @media screen and (max-width: 1536px) {
-  .mainSubSection {
-    height: 17vh;
-  }
-  .HeroRightBox .year{
-    margin-bottom: -1.5vh;
-  }
-}
-
-@media screen and (max-width: 1440px) {
-  .mainSubSection {
-    height: 17vh;
-  }
+ .HeroSection{
+  height: 60vh;
+ }
 }
 
 @media screen and (max-width: 991px) {
@@ -583,129 +474,127 @@
     display: none;
   }
 
+/* Hero Section */
   .HeroSection {
     height: 40vh;
+    width: 90%;
   }
-
   .HeroLeftBox h1 {
     font-size: 5.5vw;
   }
-
-  .Main .linkButton {
-    font-size: 2.5vw;
+  .HeroLeftBox .Link {
+    font-size: 2.5vw ;
   }
-
   .linkSvg img {
     margin-bottom: 0.5vw;
     margin-left: 0.2vw;
     width: 2.8vw;
     height: 1.7vw;
   }
-
   .HeroRightBox {
-    height: 90%;
+    width: 30%;
+    height: auto;
   }
 
-  .HeroRightBox .work {
+  .HeroRightBox h5{
     font-size: 2.5vw;
+    margin-bottom: 0.8vh;
   }
 
-  .HeroRightBox .year {
-    font-size: 2.5vw;
+  /* Image Section */
+  .imageSection .imageBox {
+    height: 40vh;
   }
-
-  .imageSecondSection .imageBox {
-    height: 50vh;
-  }
-
   .img {
-    width: 100%;
-    height: 120%;
+    width: 130% !important;
     object-fit: cover;
   }
 
+  /* Third Section */
   .thirdSectionContent {
     width: 80%;
-    height: 43vh;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+    margin: 10vh auto;
   }
 
-  .thirdSectionLeftBox {
-    height: 38%;
-    align-items: flex-start;
-  }
-
-  .thirdSectionLeftBox h1 {
+  .h3{
     font-size: 2.5vw;
   }
 
   .thirdSectionRightBox {
-    height: 95%;
-    width: 80%;
-    padding-top: 0;
+    width: 65%;
   }
 
-  .paraTop h1 {
-    font-size: 2.5vw;
+  .paraTop h4 {
+    font-size: 2.7vw;
+    letter-spacing: 0;
+    margin-bottom: 4vh;
   }
 
-  .thirdSectionRightBox .buttonBox h1 {
-    font-size: 2vw;
-    padding: 0.7vw 1vw;
+  .thirdSectionRightBox .buttonBox{
+      justify-content: flex-start;
   }
 
-  .patronumForthSection {
-    height: 100%;
-    margin-top: 10vw;
-    margin-bottom: 5vw;
+  .thirdSectionRightBox .buttonBox h6 {
+      font-size: 1.8vw;
+      padding: 7px 12px;
+      letter-spacing: 0px;
+      margin-right: 30px;
   }
+
+/* Forth Section */
 
   .forthSectionContent{
     width: 80%;
   }
-
-  .forthSectionLeftBox {
-    height: 40%;
+  .forthSectionLeftBox{
+    width: 40%;
   }
-
-  .forthSectionLeftBox h1 {
-    font-size: 2.5vw;
-    padding-top: 0;
-  }
-
   .forthSectionRightBox {
     width: 80%;
-    height: 80%;
-    padding-top: 0;
   }
-
-  .paraTop h5 {
+  .paraTop p {
     font-size: 2.5vw;
+    text-align: justify;
+    letter-spacing: 0;
+    margin-bottom: 3vh;
   }
 
+/* Client Testimonial */
+  .clientTestimonialSection{
+    margin: 10vh 0;
+  }
   .clientTestimonialSectionContent{
     width: 85%;
+    gap: 5vh;
   }
-  
-  .clientTestimonialSectionLeftBox h1{
+  .clientTestimonialSectionLeftBox h3{
     font-size: 3vw;
+    margin-bottom: 0;
   }
-  .clientTestimonialparaTop h1{
+  .clientTestimonialparaTop h4{
+    font-size: 2.7vw;
+  }
+  .clientTestimonialSectionFigure img{
+    width: 14vw;
+  }
+  .clientTestimonialSectionFigureText h4{
     font-size: 2.5vw;
   }
-  .clientTestimonialparaTop h5{
-    font-size: 2vw;
-  }
 
+/* Logo Image Section */
   .logoImageSection {
     height: 50vh;
   }
-
+  .firstLogoBox {
+    height: 100%;
+    margin-right: 3vw;
+  }
+  .secondLogoBox {
+    height: 100%;
+  }
   .imageContainer {
-    width: 35vw;
-    height: 35%;
+    width: 37vw;
+    height: 85%;
   }
 
   .imageContainer img {
@@ -713,109 +602,56 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 130%;
     object-fit: cover;
     object-position: center;
     padding: 0;
   }
-
-  .firstLogoBox h1 {
-    max-width: 32vw;
-    font-size: 2vw;
-  }
-
-  .firstLogoBox {
-    height: 100vh;
-    margin-right: 3vw;
-  }
-
-  .secondLogoBox {
-    height: 100vh;
-  }
-
-  .secondLogoBox h1 {
-    max-width: 32vw;
-    font-size: 2vw;
-  }
-
   .logoImageSectionSecond {
     height: 50vh;
   }
 
+
+  /* Font & Colour Section*/
   .fontSection {
-    height: 30vh;
+    height: 100%;
   }
-
-  .kedarfontImagebox .typoImgFirst {
-    width: 35%;
-  }
-
-  .kedarfontImagebox img {
-    width: 55%;
-  }
-
   .fontImagebox {
-    padding-top: 10vw;
+    padding-top: 2vh;
   }
-
+  .h2{
+    font-size: 5vw;
+  }
   .colorSection {
-    height: 50vh;
+    height: 100%;
+    margin: 10vw 0;
   }
-
   .colorBoxesSection {
     height: 80%;
   }
-
-  .colorBoxHeadingBackground h2 {
-    top: 70%;
+  .colorBoxHeadingBackground h1 {
+    display: none;
   }
-
-  .colorBoxesSection img {
-    width: 100%;
-  }
-
-  .videoForthSection {
-    height: 100%;
-  }
-
-  .websiteDesignSection {
-    height: 40vh;
-    width: 80%;
-  }
-
-  .websiteDesignSection .leftBox h1 {
-    font-size: 2.5vw;
-  }
-
-  .websiteDesignSection .rightBox h1 {
-    font-size: 2.5vw;
-  }
-
-  .websiteDesignSection .patronum_rightBox {
-    width: 80%;
-  }
-
-  .clientTestimonialSectionBottomBox{
-    width: 80%;
-  }
-
-  .clientTestimonialSectionFigure img{
-    width: 14vw;
-  }
-
-  .clientTestimonialSectionFigureText h5{
-    font-size: 2.5vw;
-  }
-
+.colorBoxesSection ul{
+  display: block;
+}
+.colorBoxesSection ul li{
+  font-size: 2vw;
+}
+.colorOne, .colorTwo, .colorThree, .colorFour{
+  height: 120px;
+}
+.videoH2{
+  font-size: 5vw;
+}
+ 
   .nextUpContainer {
     width: 100%;
-    height: 20vh;
+    height: 25vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: left;
     flex-direction: column;
-    margin-top: 10vw;
   }
 
   .nextUpContent {
@@ -828,7 +664,6 @@
   }
 
   .nextTitle {
-    margin-right: 22vw;
     text-align: left;
   }
 
@@ -836,14 +671,13 @@
     font-size: 3vw;
     font-weight: 500;
     opacity: 0.7;
-    margin-left: 10vw;
     margin-right: 0;
     margin-bottom: 1vw;
     color: #1a1a1a;
   }
 
   .nextProjectHeading {
-    width: 32%;
+    width: fit-content;
     text-align: center;
   }
 
@@ -861,7 +695,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    top: 8vw;
+    top: 8.5vw;
     height: 0.2vw;
     background: currentColor;
     -webkit-transition: -webkit-transform 0.45s
@@ -889,147 +723,113 @@
 }
 
 @media screen and (max-width: 776px) {
-  .mobile {
-    height: 10vh;
-  }
 
-  .ipad {
-    display: none;
+  .HeroLeftBox .Link {
+    font-size: 3vw;
   }
-
-  #ipad {
-    display: none !important;
-  }
-
-  .Main .linkButton {
-    font-size: 4vw;
-  }
-
   .linkSvg img {
-    margin-bottom: 1vw;
+    margin-bottom: 0vw;
     margin-left: 1.5vw;
-    width: 2.7vw;
+    width: 2vw;
     height: auto;
   }
-
   .HeroSection {
     flex-direction: column;
-    width: 85%;
+    width: 90%;
     height: 100%;
     padding: 30vw 0;
     justify-content: center;
   }
-
   .mainSubSection {
     height: auto;
     flex-direction: column;
   }
-
   .HeroLeftBox h1 {
     font-size: 8vw;
     font-weight: 500;
     color: #1a1a1a;
-    margin-top: 10vw;
+    margin-top: 7vw;
   }
-
   .HeroRightBox {
     width: 100%;
-    margin-top: 10vw;
+    margin-top: 7vw;
     align-items: flex-start;
   }
-
-  .HeroRightBox .work {
-    font-size: 4vw;
-    margin-bottom: 4vw;
+  .HeroRightBox h5{
+    font-size: 3vw;
+    margin-bottom: 1.5vh;
   }
 
-  .HeroRightBox .year {
-    font-size: 4vw;
-  }
-
-  .imageSecondSection .imageBox {
+  /* Second Image Section */
+  .imageSection .imageBox {
     height: 50vh;
-  }
-
-  .figure {
-    height: 100%;
   }
 
   .img {
     height: calc(100% + 15rem);
+    width: auto;
     object-fit: cover;
   }
 
+/* Third Section */
   .thirdSectionContent {
     height: 100%;
     width: 85%;
+    margin: 0 auto;
     padding: 15vw 0;
     flex-direction: column;
     align-items: flex-start;
   }
-
-  .thirdSectionLeftBox h1 {
-    font-size: 6vw;
+  .h3 {
+    font-size: 5.5vw;
   }
-
+  .paraTop h4 {
+    font-size: 4vw;
+  }
   .thirdSectionRightBox {
     width: 100%;
     margin-top: 6vw;
   }
-
-  .thirdSectionRightBox .buttonBox h1 {
+  .thirdSectionRightBox .buttonBox h6 {
     font-size: 3.2vw;
     padding: 1.2vw 3vw;
+    margin-right: 20px;
   }
 
-  .patronumForthSection {
-    height: auto;
-  }
-
+  /* Forth Section */
   .forthSectionContent {
     width: 85%;
     flex-direction: column;
     height: 100%;
-    padding: 15vw 0;
+    padding: 0;
   }
-
   .forthSectionLeftBox{
     width: 100%;
   }
-
-  .forthSectionLeftBox h1 {
-    font-size: 6vw;
-  }
-
   .forthSectionRightBox {
     width: 100%;
     margin-top: 6vw;
   }
-
-  .paraTop h1 {
-    font-size: 3.8vw;
+  .paraTop p {
+    font-size: 3.6vw;
   }
 
-  .paraTop h5 {
-    font-size: 3.8vw;
+  /* Client Section */
+  .clientTestimonialSection{
+    margin: 0%;
   }
-
   .clientTestimonialSectionContent{
     width: 85%;
     display: block;
-    padding-top: 5vh;
+    margin: 15vh auto;
   }
-  
-  .clientTestimonialSectionLeftBox h1{
+  .clientTestimonialSectionLeftBox h3{
     font-size: 5vw;
-    padding-bottom: 5vh;
+    margin-bottom: 6vh;
   }
-  .clientTestimonialparaTop h1{
+  .clientTestimonialparaTop h4{
     font-size: 3.8vw;
     padding-bottom: 3vh;
-  }
-  .clientTestimonialparaTop h5{
-    font-size: 3.5vw;
   }
   .clientTestimonialSectionBottomBox {
     width: 100%;
@@ -1044,7 +844,7 @@
   .clientTestimonialSectionFigure img{
     width: 25vw;
   }
-  .clientTestimonialSectionFigureText h5{
+  .clientTestimonialSectionFigureText h4{
     font-size: 4vw;
     text-align: center;
   }
@@ -1053,112 +853,97 @@
     font-size: 18vw;
   }
 
-  .logoImageSection {
+
+
+  /* Logo Image Section */
+  .logoSection {
     height: 100%;
+  }
+  .logoImageSection{
+    height: 100vh;
     flex-direction: column;
   }
-
   .firstLogoBox {
     width: 85%;
     margin-right: 0;
   }
-
   .secondLogoBox {
     width: 85%;
     margin-top: 15vw;
   }
-
   .imageContainer {
     width: 100%;
     height: 100%;
   }
-
   .imageContainer img {
     object-fit: cover;
-    top: -10%;
   }
-
-  .firstLogoBox h1 {
-    max-width: 85vw;
-    font-size: 3.7vw;
-  }
-
-  .secondLogoBox h1 {
-    max-width: 85vw;
-    font-size: 3.7vw;
-  }
-
   .secondLogoBox .imageContainer img {
-    height: 130%;
-    top: -20%;
+    height: 160%;
   }
-
   .logoImageSectionSecond {
     flex-direction: column;
-    height: 100%;
+    height: 100vh;
     padding-top: 10vw;
   }
 
+  /* Font Section & Color Section*/
   .fontSection {
     height: auto;
-    padding: 10vw 0;
   }
-
-  .fontHeading h1 {
-    font-size: 8vw;
-  }
-
-  .gcmfontImagebox {
-    flex-direction: column;
-  }
-  .gcmfontImagebox img {
+  .fontImagebox {
     width: 100%;
-    margin-bottom: 10vw;
+    padding: 10vw 0;
+    height: 100%;
   }
-
+  .h2 {
+    font-size: 7vw;
+  }
+  .desktopFont {
+    display: none;
+  }
   .colorSection {
     height: 100%;
   }
-
   .colorBoxesSection {
     justify-content: flex-start;
-    height: 35vh;
+    height: 100%;
+    margin-top: 15vw;
   }
-
+  .colorBoxesSection ul{
+    display: block !important;
+  }
+  .colorBoxesSection ul li{
+    font-size: 3vw;
+  }
+  .colorOne{
+    height: 100px;
+  }
+  .colorTwo{
+    height: 100px;
+  }
+  .colorThree{
+    height: 100px;
+  }
+  .colorFour{
+    height: 100px;
+  }
   .colorBox {
     display: none;
   }
-
+  .colorBoxesSection img {
+    width: 100%;
+  }
   .mobileImg {
     width: 90%;
     margin: 0 auto;
     padding: 10vw 0;
   }
-
   .mobileImg img {
     width: 100%;
   }
 
-  .colorHeading h1 {
-    font-size: 8vw;
-  }
-
-  .colorOne {
-    width: 250px;
-    height: 100px;
-    font-size: 5vw;
-    border-bottom-right-radius: 50px;
-  }
-
-  .colorTwo {
-    width: 250px;
-    height: 100px;
-    margin-top: 5vw;
-    border-bottom-right-radius: 50px;
-    font-size: 5vw;
-  }
-
-  .videoHeading h1 {
+  .videoH2 {
     font-size: 7vw;
     max-width: 80vw;
   }
@@ -1173,7 +958,6 @@
     width: 85%;
     height: 100%;
     padding: 10vw 0;
-    margin-bottom: 10vw;
   }
 
   .websiteDesignSection .leftBox {
@@ -1197,27 +981,28 @@
     display: none;
   }
 
-  .nextUpContainer {
+   .nextUpContainer {
     width: 100%;
-    height: 20vh;
+    height: 30vh;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: left;
     flex-direction: column;
+    margin-bottom: 10vh;
   }
 
   .nextUpContent {
-    width: 80%;
+    width: 35%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
   }
 
   .nextTitle {
-    margin-right: 26vw;
+    margin-left: 4vw;
     text-align: left;
   }
 
@@ -1225,14 +1010,13 @@
     font-size: 5vw;
     font-weight: 500;
     opacity: 0.7;
-    margin-left: 22vw;
     margin-right: 0;
     margin-bottom: 1vw;
     color: #1a1a1a;
   }
 
   .nextProjectHeading {
-    width: 33%;
+    width: 100%;
     text-align: center;
   }
 
@@ -1247,10 +1031,11 @@
     content: "";
     display: block;
     position: absolute !important;
-    left: 0;
+    left: 3vw;
+    width: 85%;
     right: 0;
     bottom: 0;
-    top: 11vw;
+    top: 13vw;
     height: 0.2vw;
     background: currentColor;
     -webkit-transition: -webkit-transform 0.45s
@@ -1276,3 +1061,81 @@
   }
 }
 
+@media screen and (max-width: 480px) {
+  .HeroLeftBox .Link, .HeroRightBox h5 {
+    font-size: 4vw;
+    margin: 0;
+  }
+  .paraTop h4{
+    font-size: 5vw;
+  }
+  .paraTop p, .clientTestimonialparaTop h4{
+    font-size: 4.5vw;
+    letter-spacing: 1px;
+  }
+  .thirdSectionRightBox .buttonBox h6{
+    margin-right: 10px;
+  }
+}
+
+/*================GCM Fonts and Colors Section============================*/
+.gcmfontImagebox {
+  width: 85%;
+  margin: 0 auto;
+  padding-top: 8vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gcmfontImagebox img {
+  width: 45%;
+}
+
+.gcmcolorBoxesSection {
+  width: 100%;
+  height: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gcmcolorBoxesSection img {
+  width: 100%;
+  mix-blend-mode: multiply;
+  z-index: 10;
+}
+
+@media screen and (max-width: 991px) {
+  .gcmcolorBoxesSection {
+      height: 80%;
+    }
+    .gcmcolorBoxesSection img {
+      width: 100%;
+    }
+}
+
+@media screen and (max-width: 776px) {
+  .gcmfontImagebox {
+      flex-direction: column;
+      width: 100%;
+    }
+    .gcmfontImagebox img {
+      width: 100%;
+      margin-bottom: 10vw;
+    }
+    .gcmcolorBoxesSection {
+      justify-content: flex-start;
+      height: 35vh;
+    }
+    .gcmmobileImg {
+      width: 90%;
+      margin: 0 auto;
+      padding: 10vw 0;
+    }
+  
+    .gcmmobileImg img {
+      width: 100%;
+    }
+}

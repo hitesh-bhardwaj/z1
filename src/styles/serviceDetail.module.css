@@ -43,16 +43,14 @@
       line-height: 1.3;
   }
   .hero-top-para {
-      width: 32vw;
-      font-size: 1.2vw;
-      font-weight: 500;
-      color: var(--black2);
-      text-align: left;
-      letter-spacing: 0.4px;
-      line-height: 175%;
-      font-family: 'Ageo';
-      padding-top: 70px;
-      margin-left: 100px;
+    width: 30vw;
+    font-size: 1.2vw;
+    font-weight: 500;
+    color: var(--black2);
+    letter-spacing: .4px;
+    line-height: 1.7;
+    padding-top: 30px;
+    margin-left: 100px;
   }
   .hero-bottom{
     position: absolute !important;
@@ -230,11 +228,12 @@
     text-align: left;
     align-items: flex-start;
     height: 100%;
+    padding-top: 10vh;
   }
   
   .service-approach-left{
     position: relative;
-    height: 100vh;
+    height: 80vh;
     overflow: hidden;
     width: 40%;
   }
@@ -267,16 +266,17 @@
   .service-approach-right{
     width: 50%;
     height: 100%;
+    margin-top: 50px;
   }
 
   .service-approach-text-container{
-    height: 100vh;
+    height: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 50px;
+    /* gap: 50px; */
   }
 
   .service-approach-text-box{
@@ -285,6 +285,11 @@
     padding: 40px 40px;
     border-radius: 24px;
     height: auto;
+    margin-bottom: 100px;
+  }
+
+  .dark-mode .service-approach-text-box {
+    background: var(--black2);
   }
   
   .service-approach-text-box h3{
@@ -293,11 +298,11 @@
     font-weight: 500;
   }
   .service-approach-text-box p{
-    font-size: 1.2vw;
+    font-size: 1.4vw;
     color: var(--black);
-    line-height: 1.4;
+    line-height: 1.2;
     font-weight: 500;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
   }
   
 
@@ -305,41 +310,8 @@
   .service-offer{
     padding: 10% 0;
   }
-  .service-offer-bottom{
-    display: flex;
-    align-items: center;
-    /* justify-content: space-between; */
-    flex-wrap: wrap;
-    margin: 6% 0 0 17%;
-    gap: 40px;
-  }
-  .our-service-text{
-    width: 30%;
-    height: 180px;
-    padding: 0 25px;
-    text-align: center;
-    background: var(--white);
-    border-radius: 18px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .our-service-img{
-    width: 30%;
-    border-radius: 18px;
-    overflow: hidden;
-    height: 180px;
-  } 
-  .our-service-img img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  .our-service-text p{
-    font-size: 1.4vw;
-    font-weight: 500;
-    font-family: 'ClashDisplay';
-    text-align: center;
+  .service-offer-top{
+    margin-bottom: 10vh;
   }
   .service-offer-top h2{
     font-size: 4vw;
@@ -377,14 +349,16 @@
     .service-detail-hero-content h1{
       font-size: 16vw;
       line-height: 1;
+      margin-left: 10px;
     }
     .hero-top-para{
       position: absolute;
-      width: 60vw;
-      font-size: 2.5vw;
+      width: 70vw;
+      font-size: 4vw;
       top: 50vw;
       left: 0;
       margin-left: 10px;
+      padding-top: 70px;
     }
     .hero-bottom{
       left: 0;
@@ -508,6 +482,9 @@
       padding: 0;
       margin: 20% 0;
     }
+    .service-offer-top{
+        margin-bottom: 5vw;
+    }
     .service-offer-top h2{
       font-size: 7vw;
     }
@@ -572,9 +549,9 @@
   }
   .hero-top-para {
     width: 80vw;
-    font-size: 3.8vw;
-    top: 65vw;
-    margin-left: 0;
+    font-size: 5vw;
+    top: 60vw;
+    margin-left: 10px;
   }
   .service-detail-content h4 {
     font-size: 4.8vw;
@@ -613,14 +590,14 @@
     padding: 3vw 7vw;
   }
   .service-card-top{
-    gap: 15px;
+    gap: 30px;
     align-items: flex-start;
   }
-  /* .service-detail-card-bottom{
-    margin-top: 10px;
-  } */
+  .service-offer-top{
+    margin-bottom: 5vw;
+  }
   .service-card-top img{
-    width: 100%;
+    width: 100vw;
   }
   .service-card-bottom h3{
     font-size: 9vw;
@@ -649,7 +626,7 @@
     font-size: 6vw;
   }
   .service-approach-text-box p {
-    font-size: 3.5vw;
+    font-size: 4.5vw;
     text-align: justify;
   }
   .service-offer-bottom > div {

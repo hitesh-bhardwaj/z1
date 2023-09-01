@@ -17,6 +17,10 @@ import PatronumSlider from "@/components/CaseStudies/PatronumSlider";
 
 gsap.registerPlugin(ScrollTrigger);
 
+gsap.config({
+  nullTargetWarn: false,
+});
+
 // Hover on the link
 const handleHover = (e) => {
   gsap.to(e.target, {
@@ -232,7 +236,7 @@ export default function patronum() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"
+          content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
         ></meta>
         <link rel="icon" href="/fav-icon.png" />
       </Head>
@@ -261,11 +265,10 @@ export default function patronum() {
         </div>
 
         <div className={styles.Main}>
-          <div
+        <section
             className={styles.HeroSection}
             data-cursor-text=""
-            data-cursor-size="10px"
-          >
+            data-cursor-size="10px">
             <div className={styles.mainSubSection}>
               <div className={styles.HeroLeftBox} data-jelly>
                 <div
@@ -274,8 +277,8 @@ export default function patronum() {
                   data-cursor-text="Visit!"
                   data-cursor-color="#0165E1"
                 >
-                  <Link href="" target="_blank" className={styles.Link}>
-                    <button className={styles.linkButton}>Patronum.io</button>
+                  <Link href="https://www.patronum.io/" target="_blank" className={styles.Link}>
+                    Patronum.io
                     <span className={styles.linkSvg}>
                       <Image
                         width={20}
@@ -292,18 +295,18 @@ export default function patronum() {
                 </h1>
               </div>
               <div className={styles.HeroRightBox}>
-                <h1 className={styles.work} id="patroSub">
+                <h5 className={styles.work} id="patroSub">
                   SAAS
-                </h1>
-                <h1 className={styles.year} id="patroSub">
+                </h5>
+                <h5 className={styles.year} id="patroSub">
                   2019
-                </h1>
+                </h5>
               </div>
             </div>
-          </div>
+          </section>
 
           {/* ====================== Parallax Image Second =========================== */}
-          <div className={styles.imageSecondSection}>
+          <section className={styles.imageSection}>
             <div className="image-anim">
               <div className={styles.imageBox} id="image-container">
                 <img
@@ -311,23 +314,24 @@ export default function patronum() {
                   className={styles.img}
                   id="img"
                   data-cursor-size="100px"
+                  alt="portfolio image"
                   data-cursor-color="#3F86E4"
                   data-cursor-text="Patronum"
                 />
               </div>
             </div>
-          </div>
+          </section>
           {/* ====================== Parallax Image Second  END ====================== */}
 
           {/* ====================== Third Section ============================ */}
-          <div className={styles.patronumThirdSection}>
+          <section className={styles.thirdSection}>
             <div className={styles.thirdSectionContent}>
               <div className={styles.thirdSectionLeftBox}>
-                <h1 data-jelly>THE CLIENT</h1>
+                <h3 className={styles.h3} data-jelly>THE CLIENT</h3>
               </div>
               <div className={styles.thirdSectionRightBox}>
                 <div className={styles.paraTop}>
-                  <h1 data-jelly>
+                  <h4 className={styles.h4} data-jelly>
                     Patronum was developed by Bespin Labs as an exclusive Google
                     Workplace™ management tool. With an intuitive and powerful
                     interface and advanced automation, it gives IT
@@ -335,58 +339,57 @@ export default function patronum() {
                     effectively manage their user life cycle and data including
                     automating repetitive tasks such as email signature
                     management, contact sharing, and drive management.
-                  </h1>
+                  </h4>
                 </div>
 
                 <div className={styles.buttonBox}>
-                  <h1 data-cursor-size="30px" data-cursor-exclusion>
+                  <h6 data-cursor-size="30px" data-cursor-exclusion>
                     Branding
-                  </h1>
-                  <h1 data-cursor-size="30px" data-cursor-exclusion>
+                  </h6>
+                  <h6 data-cursor-size="30px" data-cursor-exclusion>
                     Web Design
-                  </h1>
-                  <h1 data-cursor-size="30px" data-cursor-exclusion>
+                  </h6>
+                  <h6 data-cursor-size="30px" data-cursor-exclusion>
                     Marketing
-                  </h1>
+                  </h6>
                 </div>
               </div>
             </div>
-          </div>
+          </section>
           {/* ====================== Third Section END ======================== */}
-          <div className="space-large desktop"></div>
 
           {/* ====================== Parallax Image =========================== */}
-          <div className={styles.imageSecondSection}>
+          <section className={styles.imageSection}>
             <div className={styles.imageBox} id="image-container">
               <img
                 src="/assets/casestudies/patronum/img2.webp"
                 className={styles.img}
                 id="img"
                 data-cursor-size="100px"
+                alt="portfolio image"
                 data-cursor-color="#3F86E4"
                 data-cursor-text="Patronum"
               />
             </div>
-          </div>
+          </section>
           {/* ====================== Parallax Image  END ====================== */}
 
-          {/* <div className="space-large desktop"></div> */}
 
           {/* ====================== Third Section ============================ */}
 
-          <div className={styles.patronumForthSection}>
+          <section className={styles.forthSection}>
             <div className={styles.forthSectionContent}>
               <div className={styles.forthSectionLeftBox}>
-                <h1 data-jelly>THE ASK</h1>
+                <h3 className={styles.h3} data-jelly>THE ASK</h3>
               </div>
               <div className={styles.forthSectionRightBox}>
                 <div className={styles.paraTop}>
-                  <h1 data-jelly>
+                  <h4 className={styles.h4} data-jelly>
                     The founding team at Patronum was on a quest to create a
                     brand and online presence that would turn heads and drop
                     jaws faster than a cheetah chasing its prey.
-                  </h1>
-                  <h5 data-jelly>
+                  </h4>
+                  <p data-jelly>
                     They sought a digital partner that could not only help them
                     navigate the treacherous waters of branding and web
                     development but also help them create a lasting impression
@@ -397,8 +400,8 @@ export default function patronum() {
                     from a challenge, donned their digital superhero capes and
                     embarked on a whirlwind adventure of ingenuity and pixel
                     wizardry that would have made even Doctor Strange envious.
-                  </h5>
-                  <h5 data-jelly>
+                  </p>
+                  <p data-jelly>
                     The road to stellar branding and web development was paved
                     with challenges as steep as the Cliffs of Moher. First, We
                     had to capture the essence of Patronum's innovative SaaS
@@ -407,8 +410,8 @@ export default function patronum() {
                     Patronum's solutions were as diverse as the colors in a
                     rainbow, and distilling their unique value proposition into
                     a cohesive brand narrative was akin to herding cats.
-                  </h5>
-                  <h5 data-jelly>
+                  </p>
+                  <p data-jelly>
                     Second, Enigma had to design a website that would guide
                     users through the labyrinth of Patronum's offerings, all
                     while making it look like a walk in the park. The website
@@ -419,28 +422,26 @@ export default function patronum() {
                     for users' attention is fiercer than a cage match between
                     gladiators, Patronum's website had to be nothing short of a
                     digital masterpiece.
-                  </h5>
-                  <h5 data-jelly>
+                  </p>
+                  <p data-jelly>
                     Lastly, the website needed to be built on a solid foundation
                     that could accommodate the constant evolution and growth of
                     Patronum's solutions. The team at Patronum was constantly
                     churning out new features and offerings, and their website
                     needed to be agile enough to keep pace with their product's
                     relentless innovation.
-                  </h5>
+                  </p>
                 </div>
               </div>
             </div>
-          </div>
+          </section>
 
           {/* ====================== Third Section END ======================== */}
 
-          {/* <div className="space-large desktop"></div> */}
-          <div className="space-large desktop"></div>
 
           {/* ========================== The LOGO Section =========================== */}
 
-          <div className={styles.logoSection}>
+          <section className={styles.logoSection}>
             <div className={styles.logoImageSection}>
               <div className={styles.firstLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
@@ -456,10 +457,6 @@ export default function patronum() {
                     onMouseOut={(e) => handleHoverExit(e)}
                   />
                 </div>
-                {/* <h1>
-                  The minimalist, modern branding had a playful and vibrant
-                  feel.
-                </h1> */}
               </div>
               <div className={styles.secondLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
@@ -475,10 +472,6 @@ export default function patronum() {
                     onMouseOut={(e) => handleHoverExit(e)}
                   />
                 </div>
-                {/* <h1>
-                  The logo, a letter "P" made of four triangles, was based on a
-                  hexagonal shape with rounded corners in shades of blue.{" "}
-                </h1> */}
               </div>
             </div>
 
@@ -514,38 +507,21 @@ export default function patronum() {
                 </div>
               </div>
             </div>
-          </div>
+          </section>
 
           {/* ========================== The LOGO Section END ======================= */}
 
-          <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
-          <div className={styles.ipad}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
 
           {/* ====================== FOURTH Section ============================ */}
 
-          <div className={styles.patronumForthSection}>
+          <section className={styles.forthSection}>
             <div className={styles.forthSectionContent}>
               <div className={styles.forthSectionLeftBox}>
-                <h1 data-jelly>Our Approach</h1>
+                <h3 className={styles.h3} data-jelly>Our Approach</h3>
               </div>
               <div className={styles.forthSectionRightBox}>
                 <div className={styles.paraTop}>
-                  <h5 data-jelly>
+                  <p data-jelly>
                     Like bees to honey, we were drawn to Patronum's unique
                     vision and decided to take the road less traveled. We began
                     by delving deep into Patronum's core values, extracting the
@@ -556,27 +532,26 @@ export default function patronum() {
                     Patronum's target audience. The resulting brand identity was
                     a symphony of visual elements that told Patronum's story
                     with grace and elegance.
-                  </h5>
-                  <h5 data-jelly>
+                  </p>
+                  <p data-jelly>
                     For the website, we employed a user-centric approach,
                     crafting an information architecture that was intuitive and
                     would feel like a guided wizard tour to the entire website.
                     We transformed complex wireframes into breathtaking page
                     designs, ensuring each element sang in harmony with
                     Patronum's newfound brand identity.
-                  </h5>
+                  </p>
                 </div>
               </div>
             </div>
-          </div>
+          </section>
 
           {/* ====================== FOURTH Section END ============================ */}
 
-          <div className="space-large desktop"></div>
 
           {/* ========================== The LOGO Section =========================== */}
 
-          <div className={styles.logoSection}>
+          <section className={styles.logoSection}>
             <div className={styles.logoImageSection}>
               <div className={styles.firstLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
@@ -592,10 +567,6 @@ export default function patronum() {
                     onMouseOut={(e) => handleHoverExit(e)}
                   />
                 </div>
-                {/* <h1>
-                  The minimalist, modern branding had a playful and vibrant
-                  feel.
-                </h1> */}
               </div>
               <div className={styles.secondLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
@@ -611,10 +582,6 @@ export default function patronum() {
                     onMouseOut={(e) => handleHoverExit(e)}
                   />
                 </div>
-                {/* <h1>
-                  The logo, a letter "P" made of four triangles, was based on a
-                  hexagonal shape with rounded corners in shades of blue.{" "}
-                </h1> */}
               </div>
             </div>
 
@@ -650,32 +617,14 @@ export default function patronum() {
                 </div>
               </div>
             </div>
-          </div>
+          </section>
 
           {/* ========================== The LOGO Section END ======================= */}
-          <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
-          <div className={styles.ipad}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-
+          
           {/* ====================== Fonts Section ======================== */}
-          <div className={styles.fontSection}>
+          <section className={styles.fontSection}>
             <div className={styles.fontHeading}>
-              <h1>Fonts</h1>
+              <h2 className={styles.h2} >Fonts</h2>
             </div>
             <div className={styles.fontImagebox}>
               <img
@@ -691,24 +640,21 @@ export default function patronum() {
                 id="fonts-dark-casestudy"
               />
             </div>
-          </div>
+          </section>
           {/* ====================== Fonts Section END ==================== */}
 
-          <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
 
           {/* ====================== COLORS Section ==================== */}
 
-          <div className={styles.colorSection} id="colorsection">
+          <section className={styles.colorSection} id="colorsection">
             <div className={styles.colorHeading}>
-              <h1>COLORS</h1>
+              <h2 className={styles.h2} >Colors</h2>
             </div>
             <div className={styles.colorBox}>
               <div className={styles.colorBoxHeadingBackground}>
-                <h2 data-speed="1.5">
+                <h1 data-speed="1.5">
                   Colour <br /> Palette
-                </h2>
+                </h1>
               </div>
             </div>
 
@@ -731,89 +677,89 @@ export default function patronum() {
                 </li>
               </ul>
             </div>
-          </div>
+          </section>
 
           {/* ====================== COLORS Section END ==================== */}
 
-          <div className="space-large desktop"></div>
 
-          <div className={styles.mobile}></div>
-
-          {/* ====================== Forth Section ======================== */}
-          <div className={styles.videoHeading}>
-            <h1>The Google Workspace Manager</h1>
-          </div>
-          <div className={styles.videoForthSection}>
-            <div className={styles.videoContainer} id="video-container">
-              <video
-                src="/assets/casestudies/patronum/patronum.webm"
-                autoPlay
-                loop
-                muted
-              />
+          {/* ====================== Video Section ======================== */}
+          <section className={styles.videoSection}>
+            <div className={styles.videoHeading}>
+              <h2 className={styles.videoH2}>The Google <br/> Workspace Manager</h2>
             </div>
-          </div>
-          {/* ====================== Forth Section END ======================== */}
-
-          <div className="space-large desktop"></div>
+            <div className={styles.videoMainSection}>
+              <div className={styles.videoContainer} id="video-container">
+                <video
+                  src="/assets/casestudies/patronum/patronum.webm"
+                  autoPlay
+                  loop
+                  muted
+                  alt='patronum video'
+                />
+              </div>
+            </div>
+          </section>
+          
+          {/* ====================== Video Section END ======================== */}
 
           {/* ====================== Forth Section  ======================== */}
 
-          <div className={styles.websiteDesignSection}>
-            <div className={styles.leftBox}>
-              <h1>Tech Stack</h1>
+          <section className={styles.forthSection}>
+            <div className={styles.forthSectionContent}>
+              <div className={styles.forthSectionLeftBox}>
+                <h3 className={styles.h3} data-jelly>Tech Stack</h3>
+              </div>
+              <div className={styles.forthSectionRightBox}>
+                <div className={styles.paraTop}>
+                  <p data-jelly>
+                  We opted for a proven technology stack that packed a punch:
+                  HTML, CSS, JS, jQuery, and WordPress. This powerful combo
+                  offered the perfect blend of flexibility, maintainability, and
+                  scalability. HTML and CSS laid the groundwork for the site's
+                  structure and visual appeal, while JavaScript and jQuery
+                  injected interactivity and panache, making the website as
+                  captivating as a Broadway show. WordPress, the pièce de
+                  résistance, provided a user-friendly content management system
+                  that empowered Patronum's team to easily update and manage their
+                  content as their product continued to evolve.
+                  </p>
+                </div>
+              </div>
             </div>
-            <div className={styles.rightBox}>
-              <h1 data-jelly>
-                We opted for a proven technology stack that packed a punch:
-                HTML, CSS, JS, jQuery, and WordPress. This powerful combo
-                offered the perfect blend of flexibility, maintainability, and
-                scalability. HTML and CSS laid the groundwork for the site's
-                structure and visual appeal, while JavaScript and jQuery
-                injected interactivity and panache, making the website as
-                captivating as a Broadway show. WordPress, the pièce de
-                résistance, provided a user-friendly content management system
-                that empowered Patronum's team to easily update and manage their
-                content as their product continued to evolve.
-              </h1>
-            </div>
-          </div>
+          </section>
 
           {/* ====================== Forth Section  ======================== */}
-
-          <div className="space-large desktop"></div>
 
           {/* ====================== Parallax Image Second =========================== */}
 
-          <div className={styles.imageSecondSection}>
+          <section className={styles.imageSection}>
             <div className="image-anim">
               <div className={styles.imageBox} id="image-container">
-                <figure className={styles.figure}>
                   <img
                     src="/assets/casestudies/patronum/img3.webp"
                     className={styles.img}
                     id="img"
                     data-cursor-size="100px"
+                    alt="portfolio image"
                     data-cursor-color="#3F86E4"
                     data-cursor-text="Patronum"
                   />
-                </figure>
               </div>
             </div>
-          </div>
+          </section>
 
           {/* ====================== Parallax Image Second  END ====================== */}
 
           {/* ====================== FOURTH Section ============================ */}
 
-          <div className={styles.patronumForthSection}>
+          <section className={styles.forthSection}>
             <div className={styles.forthSectionContent}>
               <div className={styles.forthSectionLeftBox}>
-                <h1 data-jelly>THE RESULT</h1>
+                <h3 className={styles.h3} data-jelly>THE RESULT</h3>
               </div>
               <div className={styles.forthSectionRightBox}>
                 <div className={styles.paraTop}>
-                  <h5 data-jelly>
+                  <p data-jelly>
                     Enigma's branding and web development triumph was nothing
                     short of a digital magnum opus. Patronum's new brand
                     identity radiated the company's innovative spirit, while the
@@ -823,49 +769,45 @@ export default function patronum() {
                     With skyrocketing web traffic, lead generation, and
                     conversions, Patronum's online presence is truly out of this
                     world, boldly going where no SaaS company had gone before.
-                  </h5>
+                  </p>
                 </div>
               </div>
             </div>
-          </div>
+          </section>
 
           {/* ====================== Fourth Section END ======================== */}
 
-          <div className="space-large desktop"></div>
-
           {/* ====================== Parallax Image Second =========================== */}
 
-          <div className={styles.imageSecondSection}>
+          <section className={styles.imageSection}>
             <div className="image-anim">
               <div className={styles.imageBox} id="image-container">
-                <figure className={styles.figure}>
-                  <img
-                    src="/assets/casestudies/patronum/img4.webp"
-                    className={styles.img}
-                    id="img"
-                    data-cursor-size="100px"
-                    data-cursor-color="#3F86E4"
-                    data-cursor-text="Patronum"
-                  />
-                </figure>
+                <img
+                  src="/assets/casestudies/patronum/img4.webp"
+                  className={styles.img}
+                  id="img"
+                  data-cursor-size="100px"
+                  alt="portfolio image"
+                  data-cursor-color="#3F86E4"
+                  data-cursor-text="Patronum"
+                />
               </div>
             </div>
-          </div>
+          </section>
 
           {/* ====================== Parallax Image Second  END ====================== */}
 
           {/* ====================== Client Section ============================ */}
 
-          <div className="space-large desktop"></div>
 
-          <div className={styles.patronumForthSection}>
+          <section className={styles.clientTestimonialSection}>
             <div className={styles.clientTestimonialSectionContent}>
               <div className={styles.clientTestimonialSectionLeftBox}>
-                <h1 data-jelly>WORDS FROM THE CLIENT</h1>
+                <h3 data-jelly>WORDS FROM THE CLIENT</h3>
               </div>
               <div className={styles.clientTestimonialSectionRightBox}>
                 <div className={styles.clientTestimonialparaTop}>
-                  <h1 data-jelly>
+                  <h4 data-jelly>
                     <span className={styles.clientTestimonialSpan2}>“</span>
                     Enigma Digital's mastery of web design and development is
                     truly unparalleled. Their ability to craft a website that
@@ -876,31 +818,29 @@ export default function patronum() {
                     Our collaboration has been a game-changer for Wragby
                     Business Solutions, and we wholeheartedly recommend Enigma
                     Digital to anyone seeking a top-notch digital partner!
-                  </h1>
+                  </h4>
                 </div>
                 <div
                   className={styles.clientTestimonialSectionBottomBox}
                   data-jelly
                 >
                   <div className={styles.clientTestimonialSectionFigure}>
-                    <img src="/assets/casestudies/patronum/paullees.webp"></img>
+                    <img src="/assets/casestudies/patronum/paullees.webp" alt="client image"></img>
                   </div>
                   <div className={styles.clientTestimonialSectionFigureText}>
-                    <h5>
+                    <h4>
                       Paul Lees
                       <br />
                       <span className={styles.clientTestimonialSpan}>
                         CEO, Patronum
                       </span>
-                    </h5>
+                    </h4>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+          </section>
 
-          <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
 
           {/* ====================== Client Section END ======================== */}
 
@@ -911,8 +851,6 @@ export default function patronum() {
 
           {/* ========================== Next Project END ======================= */}
 
-          <div className={styles.mobile}></div>
-          <div className={styles.ipad}></div>
 
           {/* ================ Next Project Mobile ============================== */}
 
@@ -922,7 +860,7 @@ export default function patronum() {
                 <h1>next up</h1>
               </div>
               <div className={styles.nextProjectHeading}>
-                <Link href="/wragby">
+                <Link href="/projects/wragby">
                   <h1>Wragby</h1>
                 </Link>
               </div>
@@ -931,16 +869,14 @@ export default function patronum() {
 
           {/* ================ Next Project Mobile ============================== */}
 
-          <div className={styles.mobile}></div>
-
           {/* ======================== Footer ====================== */}
-          <div className="desktop-footer" id={styles.ipad}>
+          <section className="desktop-footer">
             <Footer />
-          </div>
+          </section>
 
-          <div className="mobile-footer">
+          <section className="mobile-footer">
             <FooterMobile />
-          </div>
+          </section>
           {/* ======================== Footer END ====================== */}
         </div>
       </main>

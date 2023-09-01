@@ -63,8 +63,9 @@ export default function NewGifSection() {
         scrollTrigger: {
           trigger: ".gifsubtext p",
           scrub: 1,
-          start: "-100 center",
-          end: "bottom center",
+          start: "top 90%",
+          end: "bottom 30%",
+          duration: 10,
         },
       });
     });

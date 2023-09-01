@@ -121,11 +121,11 @@ export default function about() {
         },
         "-=1.6"
       );
-      fixed_scrol.to(
+      fixed_scrol.from(
         ".small_heading",
         {
-          opacity: 1,
-          y: 20,
+          opacity: 0,
+          y: 30,
           duration: 3,
           ease: "power1.In",
         },
@@ -133,7 +133,7 @@ export default function about() {
       );
     });
     return () => ctx.revert();
-  });
+  }, []);
 
   // Page Transitions
   useEffect(() => {

@@ -236,7 +236,7 @@ export default function services() {
         scrollTrigger: {
           trigger: "#grow",
           scrub: true,
-          start: "-350 top",
+          start: "-=50 center",
           end: "+=800",
           ease: "none",
           markers: false,
@@ -358,7 +358,7 @@ export default function services() {
       {
         opacity: 1,
         duration: 1,
-        stagger: 0.5,
+        stagger: 1,
       }
     );
   });
@@ -839,7 +839,7 @@ export default function services() {
             ></div>
             <div className="box-anim-gsap develop-box-service">
               <div className="first-box-how">
-                <div className="box-we">
+                <div className="box-we flex-start-remove">
                   <h1 className="disabled-work">Develop</h1>
                 </div>
                 <div className="box-we-para">

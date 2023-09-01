@@ -13,8 +13,13 @@ import SmoothScroll from "@/components/utils/SmoothScroll";
 import Footer from "@/components/Footer";
 import FooterMobile from "@/components/Mobile/FooterMobile";
 import WragbySlider from "@/components/CaseStudies/WragbySlider";
+import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
+
+gsap.config({
+  nullTargetWarn: false,
+});
 
 // Hover on the link
 const handleHover = (e) => {
@@ -233,7 +238,7 @@ export default function certvault() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"
+          content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
         ></meta>
         <link rel="icon" href="/fav-icon.png" />
       </Head>
@@ -262,27 +267,23 @@ export default function certvault() {
         </div>
 
         <div className={styles.Main}>
-          <div
-            className={styles.HeroSection}
-            data-cursor-text=""
-            data-cursor-size="10px"
-          >
+           {/*Section 1  */}
+           <section
+            className={styles.HeroSection}>
             <div className={styles.mainSubSection}>
               <div className={styles.HeroLeftBox} data-jelly>
                 <div
                   id="patroSub"
                   data-cursor-size="60px"
-                  data-cursor-color="#F50D37"
                   data-cursor-text="Visit!"
+                  data-cursor-color="#F50D37"
                 >
-                  <Link
-                    href="https://certvault.org/"
-                    target="_blank"
-                    className={styles.Link}
-                  >
-                    <button className={styles.linkButton}>certvault.org</button>
+                  <Link href="https://certvault.org/" target="_blank" className={styles.Link}>
+                    certvault.org
                     <span className={styles.linkSvg}>
-                      <img
+                      <Image
+                        width={20}
+                        height={20}
                         src="/assets/casestudies/Vector.svg"
                         alt="Svg"
                         id="case-study-arrow"
@@ -291,24 +292,22 @@ export default function certvault() {
                   </Link>
                 </div>
                 <h1 id="patro">
-                  CertVault a cloud-based
-                  <br /> certificate repository
+                    CertVault a cloud-based <br /> certificate repository
                 </h1>
               </div>
               <div className={styles.HeroRightBox}>
-                <h1 className={styles.work} id="patroSub">
-                  SAAS
-                </h1>
-                <h1 className={styles.year} id="patroSub">
-                  2019-20
-                </h1>
+                <h5 className={styles.work} id="patroSub">
+                    SAAS
+                </h5>
+                <h5 className={styles.year} id="patroSub">
+                    2019-20
+                </h5>
               </div>
             </div>
-          </div>
+          </section>
 
           {/* ====================== Parallax Image Second =========================== */}
-
-          <div className={styles.imageSecondSection}>
+          <section className={styles.imageSection}>
             <div className="image-anim">
               <div className={styles.imageBox} id="image-container">
                 <img
@@ -318,90 +317,76 @@ export default function certvault() {
                   data-cursor-size="100px"
                   data-cursor-color="#F50D37"
                   data-cursor-text="Certvault"
+                  alt="portfolio image"
                 />
               </div>
             </div>
-          </div>
-
+          </section>
           {/* ====================== Parallax Image Second  END ====================== */}
 
-          <div className="space-large desktop"></div>
-          <div className={styles.ipad}></div>
-
           {/* ====================== Third Section ============================ */}
-
-          <div className={styles.patronumThirdSection}>
+          <section className={styles.thirdSection}>
             <div className={styles.thirdSectionContent}>
               <div className={styles.thirdSectionLeftBox}>
-                <h1 data-jelly>Overview</h1>
+                <h3 className={styles.h3} data-jelly>THE CLIENT</h3>
               </div>
               <div className={styles.thirdSectionRightBox}>
                 <div className={styles.paraTop}>
-                  <h1 data-jelly>
+                  <h4 className={styles.h4} data-jelly>
                     Patronum streamlines Google Workplace™ management by
                     automating repetitive tasks such as email signature
                     management, contact sharing, and drive management.
-                  </h1>
+                  </h4>
                 </div>
 
                 <div className={styles.buttonBox}>
-                  <h1 data-cursor-size="30px" data-cursor-exclusion>
-                    Web Design
-                  </h1>
-                  <h1 data-cursor-size="30px" data-cursor-exclusion>
+                  <h6 data-cursor-size="30px" data-cursor-exclusion>
                     Branding
-                  </h1>
-                  <h1 data-cursor-size="30px" data-cursor-exclusion>
+                  </h6>
+                  <h6 data-cursor-size="30px" data-cursor-exclusion>
+                    Web Design
+                  </h6>
+                  <h6 data-cursor-size="30px" data-cursor-exclusion>
                     Marketing
-                  </h1>
+                  </h6>
                 </div>
               </div>
             </div>
-          </div>
-
+          </section>
           {/* ====================== Third Section END ======================== */}
 
-          <div className={styles.ipad}></div>
-          <div className="space-large desktop"></div>
-
           {/* ====================== Parallax Image =========================== */}
-
-          <div className={styles.imageSecondSection}>
+          <section className={styles.imageSection}>
             <div className={styles.imageBox} id="image-container">
-              <figure className={styles.figure}>
-                <img
+              <img
                   src="/assets/casestudies/certvault/img2.webp"
                   className={styles.img}
                   id="img"
                   data-cursor-size="100px"
                   data-cursor-color="#F50D37"
+                  alt="portfolio image"
                   data-cursor-text="Certvault"
-                />
-              </figure>
+              />
             </div>
-          </div>
-
+          </section>
           {/* ====================== Parallax Image  END ====================== */}
 
-          <div className="space-large desktop"></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.ipad}></div>
 
           {/* ====================== Third Section ============================ */}
 
-          <div className={styles.patronumForthSection}>
+          <section className={styles.forthSection}>
             <div className={styles.forthSectionContent}>
               <div className={styles.forthSectionLeftBox}>
-                <h1 data-jelly>THE ASK</h1>
+                <h3 className={styles.h3} data-jelly>THE ASK</h3>
               </div>
               <div className={styles.forthSectionRightBox}>
                 <div className={styles.paraTop}>
-                  <h1 data-jelly>
+                  <h4 className={styles.h4} data-jelly>
                     As the project commenced, both teams found themselves facing
                     obstacles that tested their creativity, technical expertise,
                     and resilience.
-                  </h1>
-                  <h5 data-jelly className={styles.marginBottom}>
+                  </h4>
+                  <p data-jelly>
                     While Wragby's vision was as clear as a cloudless sky, the
                     challenges were as daunting as climbing Mount Everest in
                     flip-flops. The first hurdle: creating a website that
@@ -411,39 +396,38 @@ export default function certvault() {
                     task of organizing and presenting the information in a
                     digestible format was like trying to solve a Rubik's cube
                     blindfolded.
-                  </h5>
-                  <h5 data-jelly className={styles.marginBottom}>
+                  </p>
+                  <p data-jelly>
                     The second challenge: designing a user experience that even
                     your tech-averse grandma could navigate with ease. In a
                     world where attention spans rival those of goldfish, the
                     website needed to be engaging, intuitive, and snappy while
                     showcasing Wragby's complex offerings without overwhelming
                     users.
-                  </h5>
-                  <h5 data-jelly>
+                  </p>
+                  <p data-jelly>
                     And lastly, developing a site that could handle the constant
                     flux of innovative content. Wragby's brilliance knows no
                     bounds, and their website needed to be a living, breathing
                     entity, capable of adapting and growing alongside the
                     company.
-                  </h5>
+                  </p>
                 </div>
               </div>
             </div>
-          </div>
+          </section>
 
           {/* ====================== Third Section END ======================== */}
 
-          {/* <div className="space-large desktop"></div> */}
-          <div className="space-large desktop"></div>
-
           {/* ========================== The LOGO Section =========================== */}
 
-          <div className={styles.logoSection}>
+          <section className={styles.logoSection}>
             <div className={styles.logoImageSection}>
               <div className={styles.firstLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
-                  <img
+                  <Image
+                    width={1000}
+                    height={1000}
                     src="/assets/casestudies/certvault/web1.webp"
                     alt="Logo"
                     data-cursor-color="#F50D37"
@@ -453,14 +437,12 @@ export default function certvault() {
                     onMouseOut={(e) => handleHoverExit(e)}
                   />
                 </div>
-                {/* <h1>
-                  The minimalist, modern branding had a playful and vibrant
-                  feel.
-                </h1> */}
               </div>
               <div className={styles.secondLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
-                  <img
+                  <Image
+                    width={1000}
+                    height={1000}
                     src="/assets/casestudies/certvault/web2.webp"
                     alt="Logo"
                     data-cursor-color="#F50D37"
@@ -470,17 +452,15 @@ export default function certvault() {
                     onMouseOut={(e) => handleHoverExit(e)}
                   />
                 </div>
-                {/* <h1>
-                  The logo, a letter "P" made of four triangles, was based on a
-                  hexagonal shape with rounded corners in shades of blue.{" "}
-                </h1> */}
               </div>
             </div>
 
             <div className={styles.logoImageSectionSecond}>
               <div className={styles.firstLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
-                  <img
+                  <Image
+                    width={1000}
+                    height={1000}
                     src="/assets/casestudies/certvault/web3.webp"
                     alt="Logo"
                     data-cursor-color="#F50D37"
@@ -493,7 +473,9 @@ export default function certvault() {
               </div>
               <div className={styles.secondLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
-                  <img
+                  <Image
+                    width={1000}
+                    height={1000}
                     src="/assets/casestudies/certvault/web4.webp"
                     alt="Logo"
                     data-cursor-color="#F50D37"
@@ -505,55 +487,37 @@ export default function certvault() {
                 </div>
               </div>
             </div>
-          </div>
+          </section>
 
           {/* ========================== The LOGO Section END ======================= */}
 
-          <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
-
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
 
           {/* ====================== FOURTH Section ============================ */}
 
-          <div className={styles.patronumForthSection}>
+          <section className={styles.forthSection}>
             <div className={styles.forthSectionContent}>
               <div className={styles.forthSectionLeftBox}>
-                <h1 data-jelly>Our Approach</h1>
+                <h3 className={styles.h3} data-jelly>Our Approach</h3>
               </div>
               <div className={styles.forthSectionRightBox}>
                 <div className={styles.paraTop}>
-                  <h5 data-jelly className={styles.marginBottom}>
+                  <p data-jelly>
                     We decided to play by our own rulebook, tossing conventional
                     wisdom out the window like an old Nokia brick phone. We
                     began with a deep dive into Wragby's psyche, absorbing their
                     every quirk and vision like a sponge in the depths of the
                     ocean. This immersion allowed our team to channel Wragby's
                     innovative spirit into every aspect of the website.
-                  </h5>
-                  <h5 data-jelly className={styles.marginBottom}>
+                  </p>
+                  <p data-jelly>
                     Next, we concocted a design so visually alluring, it could
                     make the Sirens of Greek mythology green with envy. The
                     design featured bold colors, futuristic layouts, and
                     interactive elements that turned the website into a digital
                     playground, inviting users to explore and discover Wragby's
                     groundbreaking solutions.
-                  </h5>
-                  <h5 data-jelly className={styles.marginBottom}>
+                  </p>
+                  <p data-jelly>
                     Then we addressed the challenge of presenting complex
                     information in a digestible manner. We employed storytelling
                     techniques, weaving Wragby's technical offerings into
@@ -561,8 +525,8 @@ export default function certvault() {
                     with users on an emotional level. This approach transformed
                     what could have been a maze of jargon into a thrilling
                     odyssey through the world of technology.
-                  </h5>
-                  <h5 data-jelly>
+                  </p>
+                  <p data-jelly>
                     And finally, Enigma took a page out of Wragby's book,
                     deploying agile development methodologies to ensure the
                     website could grow and evolve with the company like a
@@ -570,23 +534,24 @@ export default function certvault() {
                     flex and adapt to Wragby's ever-expanding portfolio of
                     innovative solutions, ensuring it remained a showcase of
                     their cutting-edge expertise.
-                  </h5>
+                  </p>
                 </div>
               </div>
             </div>
-          </div>
+          </section>
 
-          {/* ====================== Fourth Section END ======================== */}
+          {/* ====================== FOURTH Section END ============================ */}
 
-          <div className="space-large desktop"></div>
 
           {/* ========================== The LOGO Section =========================== */}
 
-          <div className={styles.logoSection}>
+          <section className={styles.logoSection}>
             <div className={styles.logoImageSection}>
               <div className={styles.firstLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
-                  <img
+                  <Image
+                    width={1000}
+                    height={1000}
                     src="/assets/casestudies/certvault/web5.webp"
                     alt="Logo"
                     data-cursor-color="#F50D37"
@@ -596,14 +561,12 @@ export default function certvault() {
                     onMouseOut={(e) => handleHoverExit(e)}
                   />
                 </div>
-                {/* <h1>
-                  The minimalist, modern branding had a playful and vibrant
-                  feel.
-                </h1> */}
               </div>
               <div className={styles.secondLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
-                  <img
+                  <Image
+                    width={1000}
+                    height={1000}
                     src="/assets/casestudies/certvault/web6.webp"
                     alt="Logo"
                     data-cursor-color="#F50D37"
@@ -613,17 +576,15 @@ export default function certvault() {
                     onMouseOut={(e) => handleHoverExit(e)}
                   />
                 </div>
-                {/* <h1>
-                  The logo, a letter "P" made of four triangles, was based on a
-                  hexagonal shape with rounded corners in shades of blue.{" "}
-                </h1> */}
               </div>
             </div>
 
             <div className={styles.logoImageSectionSecond}>
               <div className={styles.firstLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
-                  <img
+                  <Image
+                    width={1000}
+                    height={1000}
                     src="/assets/casestudies/certvault/web7.webp"
                     alt="Logo"
                     data-cursor-color="#F50D37"
@@ -636,7 +597,9 @@ export default function certvault() {
               </div>
               <div className={styles.secondLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
-                  <img
+                  <Image
+                    width={1000}
+                    height={1000}
                     src="/assets/casestudies/certvault/web8.webp"
                     alt="Logo"
                     data-cursor-color="#F50D37"
@@ -648,59 +611,37 @@ export default function certvault() {
                 </div>
               </div>
             </div>
-          </div>
+          </section>
 
           {/* ========================== The LOGO Section END ======================= */}
-          <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
-
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-
+          
           {/* ====================== Fonts Section ======================== */}
-
-          <div className={styles.fontSection}>
-            <div className={styles.fontHeading}>
+          
+          <section className={styles.certvaultfontSection}>
+            <div className={styles.certvaultfontHeading}>
               <h1>Fonts</h1>
             </div>
-            <div className={styles.fontImagebox}>
+            <div className={styles.certvaultfontImagebox}>
               <img
                 src="/assets/casestudies/certvault/font-typo.webp"
                 alt="Fonts"
               />
             </div>
-          </div>
-
+          </section>
           {/* ====================== Fonts Section END ==================== */}
-
-          <div className={styles.ipad}></div>
-          <div className={styles.ipad}></div>
 
           {/* ====================== COLORS Section ==================== */}
 
-          <div className={styles.colorSection} id="colorsection">
-            <div className={styles.colorHeading}>
+          <section className={styles.certvaultcolorSection} id="colorsection">
+            <div className={styles.certvaultcolorHeading}>
               <h1>COLORS</h1>
             </div>
-            <div className={styles.colorMainBox}>
-              <div className={styles.colorBox}>
-                <div className={styles.colorBoxHeadingBackground}>
+            <div className={styles.certvaultcolorMainBox}>
+              <div className={styles.certvaultcolorBox}>
+                <div className={styles.certvaultcolorBoxHeadingBackground}>
                   <h2 data-speed="1.3">
                     Colour{" "}
-                    <span className={styles.palette} id="palette">
+                    <span className={styles.certvaultpalette} id="palette">
                       Palette
                     </span>
                   </h2>
@@ -708,74 +649,72 @@ export default function certvault() {
               </div>
 
               <div
-                className={styles.colorBoxesSection}
+                className={styles.certvaultcolorBoxesSection}
                 id="dark-mode-colors-casestudy"
               >
                 <ul>
-                  <li className={styles.colorOne} id="line"></li>
-                  <li className={styles.colorTwo} id="line"></li>
-                  <li className={styles.colorThree} id="line"></li>
-                  <li className={styles.colorFour} id="line"></li>
-                  <li className={styles.colorFive} id="line"></li>
+                  <li className={styles.certvaultcolorOne} id="line"></li>
+                  <li className={styles.certvaultcolorTwo} id="line"></li>
+                  <li className={styles.certvaultcolorThree} id="line"></li>
+                  <li className={styles.certvaultcolorFour} id="line"></li>
+                  <li className={styles.certvaultcolorFive} id="line"></li>
                 </ul>
               </div>
             </div>
-          </div>
+          </section>
 
           {/* ====================== COLORS Section END ==================== */}
 
-          <div className="space-large desktop"></div>
-          <div className={styles.mobile}></div>
 
-          {/* ====================== Forth Section ======================== */}
-
-          <div className={styles.videoHeading}>
-            <h1>Certvault Website Design</h1>
-          </div>
-          <div className={styles.videoForthSection}>
-            <div className={styles.videoContainer} id="video-container">
-              <video
-                src="/assets/casestudies/certvault/certvault.webm"
-                autoPlay
-                loop
-                muted
-              />
+          {/* ====================== Video Section ======================== */}
+          <section className={styles.videoSection}>
+            <div className={styles.videoHeading}>
+              <h2 className={styles.videoH2}>Certvault <br/> Website Design</h2>
             </div>
-          </div>
-
-          {/* ====================== Forth Section END ======================== */}
-
-          <div className="space-large desktop"></div>
-          <div className={styles.ipad}></div>
+            <div className={styles.videoMainSection}>
+              <div className={styles.videoContainer} id="video-container">
+                <video
+                  src="/assets/casestudies/certvault/certvault.webm"
+                  autoPlay
+                  loop
+                  muted
+                  alt='certvault video'
+                />
+              </div>
+            </div>
+          </section>
+          
+          {/* ====================== Video Section END ======================== */}
 
           {/* ====================== Forth Section  ======================== */}
 
-          <div className={styles.websiteDesignSection}>
-            <div className={styles.leftBox}>
-              <h1>Technology Stack</h1>
+          <section className={styles.forthSection}>
+            <div className={styles.forthSectionContent}>
+              <div className={styles.forthSectionLeftBox}>
+                <h3 className={styles.h3} data-jelly>Tech Stack</h3>
+              </div>
+              <div className={styles.forthSectionRightBox}>
+                <div className={styles.paraTop}>
+                  <p data-jelly>
+                    Enigma opted for a classic combo: HTML, CSS, JS, jQuery, and
+                    WordPress. This dynamic quintet of technologies provided a
+                    flexible, battle-tested foundation for Wragby's digital fortress
+                    that could withstand the test of time. HTML and CSS laid the
+                    groundwork for visual appeal, while JavaScript and jQuery
+                    injected interactivity and flair, and WordPress offered a
+                    user-friendly content management system for Wragby's
+                    ever-evolving content needs.
+                  </p>
+                </div>
+              </div>
             </div>
-            <div className={styles.rightBox}>
-              <h1 data-jelly>
-                Enigma opted for a classic combo: HTML, CSS, JS, jQuery, and
-                WordPress. This dynamic quintet of technologies provided a
-                flexible, battle-tested foundation for Wragby's digital fortress
-                that could withstand the test of time. HTML and CSS laid the
-                groundwork for visual appeal, while JavaScript and jQuery
-                injected interactivity and flair, and WordPress offered a
-                user-friendly content management system for Wragby's
-                ever-evolving content needs.
-              </h1>
-            </div>
-          </div>
+          </section>
 
           {/* ====================== Forth Section  ======================== */}
-
-          <div className="space-large desktop"></div>
-          <div className={styles.ipad}></div>
 
           {/* ====================== Parallax Image Second =========================== */}
 
-          <div className={styles.imageSecondSection}>
+          <section className={styles.imageSection}>
             <div className="image-anim">
               <div className={styles.imageBox} id="image-container">
                 <figure className={styles.figure}>
@@ -785,29 +724,26 @@ export default function certvault() {
                     id="img"
                     data-cursor-size="100px"
                     data-cursor-color="#F50D37"
+                    alt="portfolio image"
                     data-cursor-text="Certvault"
                   />
                 </figure>
               </div>
             </div>
-          </div>
+          </section>
 
           {/* ====================== Parallax Image Second  END ====================== */}
 
-          <div className="space-large desktop"></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.ipad}></div>
-
           {/* ====================== FOURTH Section ============================ */}
 
-          <div className={styles.patronumForthSection}>
+          <section className={styles.forthSection}>
             <div className={styles.forthSectionContent}>
               <div className={styles.forthSectionLeftBox}>
-                <h1 data-jelly>THE RESULT</h1>
+                <h3 className={styles.h3} data-jelly>THE RESULT</h3>
               </div>
               <div className={styles.forthSectionRightBox}>
                 <div className={styles.paraTop}>
-                  <h5 data-jelly className={styles.marginBottom}>
+                  <p data-jelly>
                     Wragby's innovative spirit now had a digital home that not
                     only reflected its essence but also attracted talent,
                     clients, and partners from across the African continent and
@@ -815,8 +751,8 @@ export default function certvault() {
                     site with the enthusiasm of Indiana Jones on a treasure
                     hunt, while the engaging narratives forged emotional
                     connections that turned visitors into loyal clients.
-                  </h5>
-                  <h5 data-jelly>
+                  </p>
+                  <p data-jelly>
                     The website's ability to adapt and evolve alongside Wragby's
                     growth ensured that the company's digital presence would
                     remain relevant and impressive for years to come. The
@@ -824,53 +760,45 @@ export default function certvault() {
                     Solutions produced a website that defied convention and set
                     a new standard for digital excellence in the African
                     technology landscape.
-                  </h5>
+                  </p>
                 </div>
               </div>
             </div>
-          </div>
+          </section>
 
           {/* ====================== Fourth Section END ======================== */}
 
-          <div className="space-large desktop"></div>
-          <div className={styles.ipad}></div>
-
           {/* ====================== Parallax Image Second =========================== */}
 
-          <div className={styles.imageSecondSection}>
+          <section className={styles.imageSection}>
             <div className="image-anim">
               <div className={styles.imageBox} id="image-container">
-                <figure className={styles.figure}>
-                  <img
+                <img
                     src="/assets/casestudies/certvault/img4.webp"
                     className={styles.img}
                     id="img"
                     data-cursor-size="100px"
+                    alt="portfolio image"
                     data-cursor-color="#F50D37"
                     data-cursor-text="Certvault"
-                  />
-                </figure>
+                />
               </div>
             </div>
-          </div>
+          </section>
 
           {/* ====================== Parallax Image Second  END ====================== */}
 
           {/* ====================== Client Section ============================ */}
 
-          <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.ipad}></div>
 
-          <div className={styles.patronumForthSection}>
+          <section className={styles.clientTestimonialSection}>
             <div className={styles.clientTestimonialSectionContent}>
               <div className={styles.clientTestimonialSectionLeftBox}>
-                <h1 data-jelly>WORDS FROM THE CLIENT</h1>
+                <h3 data-jelly>WORDS FROM THE CLIENT</h3>
               </div>
               <div className={styles.clientTestimonialSectionRightBox}>
                 <div className={styles.clientTestimonialparaTop}>
-                  <h1 data-jelly>
+                  <h4 data-jelly>
                     <span className={styles.clientTestimonialSpan2}>“</span>
                     Enigma Digital's mastery of web design and development is
                     truly unparalleled. Their ability to craft a website that
@@ -881,43 +809,40 @@ export default function certvault() {
                     Our collaboration has been a game-changer for Wragby
                     Business Solutions, and we wholeheartedly recommend Enigma
                     Digital to anyone seeking a top-notch digital partner!
-                  </h1>
+                  </h4>
                 </div>
                 <div
                   className={styles.clientTestimonialSectionBottomBox}
                   data-jelly
                 >
                   <div className={styles.clientTestimonialSectionFigure}>
-                    <img src="/assets/casestudies/certvault/client.webp"></img>
+                    <img  alt="portfolio image" 
+                          src="/assets/casestudies/certvault/client.webp"></img>
                   </div>
                   <div className={styles.clientTestimonialSectionFigureText}>
-                    <h5>
-                      Akin Banuso,
+                    <h4>
+                        Akin Banuso,
                       <br />
                       <span className={styles.clientTestimonialSpan}>
                         CEO, Wragby Business Solutions
                       </span>
-                    </h5>
+                    </h4>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+          </section>
 
-          <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
 
           {/* ====================== Client Section END ======================== */}
 
           {/* ========================== Next Project =========================== */}
-
           <div className={styles.desktopSlider}>
             <WragbySlider />
           </div>
 
           {/* ========================== Next Project END ======================= */}
 
-          <div className={styles.mobile}></div>
 
           {/* ================ Next Project Mobile ============================== */}
 
@@ -927,7 +852,7 @@ export default function certvault() {
                 <h1>next up</h1>
               </div>
               <div className={styles.nextProjectHeading}>
-                <Link href="/quickx">
+                <Link href="/projects/quickx">
                   <h1>Quick-X</h1>
                 </Link>
               </div>
@@ -936,16 +861,14 @@ export default function certvault() {
 
           {/* ================ Next Project Mobile ============================== */}
 
-          <div className={styles.mobile}></div>
-
           {/* ======================== Footer ====================== */}
-          <div className="desktop-footer footer-desktop" id={styles.ipad}>
+          <section className="desktop-footer">
             <Footer />
-          </div>
+          </section>
 
-          <div className="mobile-footer">
+          <section className="mobile-footer">
             <FooterMobile />
-          </div>
+          </section>
           {/* ======================== Footer END ====================== */}
         </div>
       </main>

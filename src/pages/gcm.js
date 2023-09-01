@@ -13,8 +13,13 @@ import SmoothScroll from "@/components/utils/SmoothScroll";
 import Footer from "@/components/Footer";
 import FooterMobile from "@/components/Mobile/FooterMobile";
 import WragbySlider from "@/components/CaseStudies/WragbySlider";
+import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
+
+gsap.config({
+  nullTargetWarn: false,
+});
 
 // Hover on the link
 const handleHover = (e) => {
@@ -231,7 +236,7 @@ export default function gcm() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"
+          content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
         ></meta>
         <link rel="icon" href="/fav-icon.png" />
       </Head>
@@ -260,11 +265,10 @@ export default function gcm() {
         </div>
 
         <div className={styles.Main}>
-          <div
-            className={styles.HeroSection}
-            data-cursor-text=""
-            data-cursor-size="10px"
-          >
+
+{/*Section 1  */}
+<section
+            className={styles.HeroSection}>
             <div className={styles.mainSubSection}>
               <div className={styles.HeroLeftBox} data-jelly>
                 <div
@@ -273,16 +277,12 @@ export default function gcm() {
                   data-cursor-color="#E73354"
                   data-cursor-text="Visit!"
                 >
-                  <Link
-                    href="https://grandmall.netlify.app/"
-                    target="_blank"
-                    className={styles.Link}
-                  >
-                    <button className={styles.linkButton}>
-                      gardencitymall.com
-                    </button>
+                  <Link href="https://grandmall.netlify.app/" target="_blank" className={styles.Link}>
+                    gardencitymall.com
                     <span className={styles.linkSvg}>
-                      <img
+                      <Image
+                        width={20}
+                        height={20}
                         src="/assets/casestudies/Vector.svg"
                         alt="Svg"
                         id="case-study-arrow"
@@ -291,23 +291,22 @@ export default function gcm() {
                   </Link>
                 </div>
                 <h1 id="patro">
-                  Revolutionizing the <br /> Shopping Mall Experience
+                Revolutionizing the <br /> Shopping Mall Experience
                 </h1>
               </div>
               <div className={styles.HeroRightBox}>
-                <h1 className={styles.work} id="patroSub">
-                  RETAIL
-                </h1>
-                <h1 className={styles.year} id="patroSub">
-                  2022
-                </h1>
+                <h5 className={styles.work} id="patroSub">
+                    RETAIL
+                </h5>
+                <h5 className={styles.year} id="patroSub">
+                    2022
+                </h5>
               </div>
             </div>
-          </div>
+          </section>
 
           {/* ====================== Parallax Image Second =========================== */}
-
-          <div className={styles.imageSecondSection}>
+          <section className={styles.imageSection}>
             <div className="image-anim">
               <div className={styles.imageBox} id="image-container">
                 <img
@@ -315,28 +314,24 @@ export default function gcm() {
                   className={styles.img}
                   id="img"
                   data-cursor-size="100px"
+                  alt="portfolio image"
                   data-cursor-color="#EF9C34"
                   data-cursor-text="GCM"
                 />
               </div>
             </div>
-          </div>
-
+          </section>
           {/* ====================== Parallax Image Second  END ====================== */}
 
-          <div className="space-large desktop"></div>
-          <div className={styles.ipad}></div>
-
           {/* ====================== Third Section ============================ */}
-
-          <div className={styles.patronumThirdSection}>
+          <section className={styles.thirdSection}>
             <div className={styles.thirdSectionContent}>
               <div className={styles.thirdSectionLeftBox}>
-                <h1 data-jelly>The Client</h1>
+                <h3 className={styles.h3} data-jelly>THE CLIENT</h3>
               </div>
               <div className={styles.thirdSectionRightBox}>
                 <div className={styles.paraTop}>
-                  <h1 data-jelly>
+                  <h4 className={styles.h4} data-jelly>
                     In the bustling heart of Lagos, Nigeria's capital city, a
                     new, state-of-the-art shopping mall was under construction,
                     poised to become the go-to destination for retail, dining,
@@ -346,65 +341,57 @@ export default function gcm() {
                     showcase the mall's unique offerings, attract potential
                     tenants and visitors, and generate buzz within the
                     community.
-                  </h1>
+                  </h4>
                 </div>
 
                 <div className={styles.buttonBox}>
-                  <h1 data-cursor-size="30px" data-cursor-exclusion>
+                  <h6 data-cursor-size="30px" data-cursor-exclusion>
                     Web Design
-                  </h1>
-                  <h1 data-cursor-size="30px" data-cursor-exclusion>
+                  </h6>
+                  <h6 data-cursor-size="30px" data-cursor-exclusion>
                     Development
-                  </h1>
+                  </h6>
                 </div>
               </div>
             </div>
-          </div>
-
+          </section>
           {/* ====================== Third Section END ======================== */}
 
-          <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
-
           {/* ====================== Parallax Image =========================== */}
-
-          <div className={styles.imageSecondSection}>
+          <section className={styles.imageSection}>
             <div className={styles.imageBox} id="image-container">
-              <figure className={styles.figure}>
-                <img
-                  src="/assets/casestudies/gcm/img2.webp"
+              <img
+                 src="/assets/casestudies/gcm/img2.webp"
                   className={styles.img}
                   id="img"
                   data-cursor-size="100px"
+                  alt="portfolio image"
                   data-cursor-color="#EBA17D"
                   data-cursor-text="GCM"
-                />
-              </figure>
+              />
             </div>
-          </div>
-
+          </section>
           {/* ====================== Parallax Image  END ====================== */}
 
-          {/* <div className="space-large desktop"></div> */}
 
           {/* ====================== Third Section ============================ */}
 
-          <div className={styles.patronumForthSection}>
+          <section className={styles.forthSection}>
             <div className={styles.forthSectionContent}>
               <div className={styles.forthSectionLeftBox}>
-                <h1 data-jelly>THE ASK</h1>
+                <h3 className={styles.h3} data-jelly>THE ASK</h3>
               </div>
               <div className={styles.forthSectionRightBox}>
                 <div className={styles.paraTop}>
-                  <h1 data-jelly>
+                  <h4 className={styles.h4} data-jelly>
                     The developers and promoters of Garden City mall enlisted
                     Enigma's team to create a visually stunning and highly
                     interactive website that would not only promote the mall but
                     also provide a seamless and engaging user experience,
                     capturing the essence of the mall's modern architecture and
                     vibrant atmosphere.
-                  </h1>
-                  <h5 data-jelly>
+                  </h4>
+                  <p data-jelly>
                     They also wanted to implement a content management system
                     (CMS) that would enable the mall's management team to easily
                     update and manage website content as the construction
@@ -412,23 +399,24 @@ export default function gcm() {
                     was optimized for search engines, mobile devices, and fast
                     load times to provide a seamless and enjoyable user
                     experience.
-                  </h5>
+                  </p>
                 </div>
               </div>
             </div>
-          </div>
+          </section>
 
           {/* ====================== Third Section END ======================== */}
 
-          <div className="space-large desktop"></div>
 
           {/* ========================== The LOGO Section =========================== */}
 
-          <div className={styles.logoSection}>
+          <section className={styles.logoSection}>
             <div className={styles.logoImageSection}>
               <div className={styles.firstLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
-                  <img
+                  <Image
+                    width={1000}
+                    height={1000}
                     src="/assets/casestudies/gcm/web1.webp"
                     alt="Logo"
                     data-cursor-color="#A4A4CD"
@@ -441,7 +429,9 @@ export default function gcm() {
               </div>
               <div className={styles.secondLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
-                  <img
+                  <Image
+                    width={1000}
+                    height={1000}
                     src="/assets/casestudies/gcm/web2.webp"
                     alt="Logo"
                     data-cursor-color="#FFC09F"
@@ -457,7 +447,9 @@ export default function gcm() {
             <div className={styles.logoImageSectionSecond}>
               <div className={styles.firstLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
-                  <img
+                  <Image
+                    width={1000}
+                    height={1000}
                     src="/assets/casestudies/gcm/web3.webp"
                     alt="Logo"
                     data-cursor-color="#F8E890"
@@ -470,7 +462,9 @@ export default function gcm() {
               </div>
               <div className={styles.secondLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
-                  <img
+                  <Image
+                    width={1000}
+                    height={1000}
                     src="/assets/casestudies/gcm/web4.webp"
                     alt="Logo"
                     data-cursor-color="#ADF8B5"
@@ -482,83 +476,66 @@ export default function gcm() {
                 </div>
               </div>
             </div>
-          </div>
+          </section>
 
           {/* ========================== The LOGO Section END ======================= */}
 
-          {/* <div className="space-large desktop"></div> */}
-          <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
-
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-
-          <div className={styles.ipad}></div>
 
           {/* ====================== FOURTH Section ============================ */}
 
-          <div className={styles.patronumForthSection}>
+          <section className={styles.forthSection}>
             <div className={styles.forthSectionContent}>
               <div className={styles.forthSectionLeftBox}>
-                <h1 data-jelly>Our Approach</h1>
+                <h3 className={styles.h3} data-jelly>Our Approach</h3>
               </div>
               <div className={styles.forthSectionRightBox}>
                 <div className={styles.paraTop}>
-                  <h1 data-jelly>
+                  <h4 className={styles.h4} data-jelly>
                     We embraced the challenge of creating a one-of-a-kind
                     digital experience for Garden City Mall by adopting an
                     innovative and forward-thinking approach. The key pillars of
                     our approach focused on:
-                  </h1>
-                  <h5 data-jelly>
+                  </h4>
+                  <p data-jelly>
                     Conducting thorough research to understand the local market,
                     target audience, and competitive landscape, in order to
                     develop a website that would resonate with users and stand
-                    out from the competition
-                  </h5>
-                  <h5 data-jelly>
+                    out from the competition.
+                  </p>
+                  <p data-jelly>
                     Collaborating closely with the mall's management and design
                     teams to ensure the website's visual language and content
                     aligned with the mall's brand identity and objectives.
-                  </h5>
-                  <h5 data-jelly>
+                  </p>
+                  <p data-jelly>
                     Employing a user-centric design philosophy, prioritizing
                     usability and engagement to create an immersive online
                     experience that would encourage users to explore the mall's
                     offerings and visit the physical location.
-                  </h5>
-                  <h5 data-jelly>
+                  </p>
+                  <p data-jelly>
                     Utilizing cutting-edge web technologies and frameworks to
                     develop a responsive, high-performance website that would
                     deliver a seamless experience across all devices and
                     platforms.
-                  </h5>
+                  </p>
                 </div>
               </div>
             </div>
-          </div>
+          </section>
 
-          {/* <div className="space-large desktop"></div> */}
-          <div className="space-large desktop"></div>
+          {/* ====================== FOURTH Section END ============================ */}
+
 
           {/* ========================== The LOGO Section =========================== */}
 
-          <div className={styles.logoSection}>
+          <section className={styles.logoSection}>
             <div className={styles.logoImageSection}>
               <div className={styles.firstLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
-                  <img
+                  <Image
+                    width={1000}
+                    height={1000}
                     src="/assets/casestudies/gcm/web5.webp"
                     alt="Logo"
                     data-cursor-color="#323B44"
@@ -571,7 +548,9 @@ export default function gcm() {
               </div>
               <div className={styles.secondLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
-                  <img
+                  <Image
+                    width={1000}
+                    height={1000}
                     src="/assets/casestudies/gcm/web6.webp"
                     alt="Logo"
                     data-cursor-color="#FF9870"
@@ -587,7 +566,9 @@ export default function gcm() {
             <div className={styles.logoImageSectionSecond}>
               <div className={styles.firstLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
-                  <img
+                  <Image
+                    width={1000}
+                    height={1000}
                     src="/assets/casestudies/gcm/web7.png"
                     alt="Logo"
                     data-cursor-color="#EF96B6"
@@ -600,7 +581,9 @@ export default function gcm() {
               </div>
               <div className={styles.secondLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
-                  <img
+                  <Image
+                    width={1000}
+                    height={1000}
                     src="/assets/casestudies/gcm/web8.webp"
                     alt="Logo"
                     data-cursor-color="#E5BBA2"
@@ -610,42 +593,16 @@ export default function gcm() {
                     onMouseOut={(e) => handleHoverExit(e)}
                   />
                 </div>
-                {/* <h1>
-                  The logo, a letter "P" made of four triangles, was based on a
-                  hexagonal shape with rounded corners in shades of blue.{" "}
-                </h1> */}
               </div>
             </div>
-          </div>
+          </section>
 
           {/* ========================== The LOGO Section END ======================= */}
-
-          <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
-
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-
-          <div className={styles.ipad}></div>
-
+          
           {/* ====================== Fonts Section ======================== */}
-
-          <div className={styles.fontSection}>
+          <section className={styles.fontSection}>
             <div className={styles.fontHeading}>
-              <h1>Fonts</h1>
+              <h2 className={styles.h2} >Fonts</h2>
             </div>
             <div className={styles.gcmfontImagebox}>
               <img
@@ -659,59 +616,65 @@ export default function gcm() {
                 id="fonts-dark-casestudy"
               />
             </div>
-          </div>
-
+          </section>
           {/* ====================== Fonts Section END ==================== */}
+
 
           {/* ====================== COLORS Section ==================== */}
 
-          <div className={styles.colorSection} id="colorsection">
+          <section className={styles.colorSection} id="colorsection">
             <div className={styles.colorHeading}>
-              <h1>COLORS</h1>
+              <h2 className={styles.h2} >Colors</h2>
             </div>
             <div className={styles.colorBox}>
               <div className={styles.colorBoxHeadingBackground}>
-                <h2 data-speed="1.5">Colour Palette</h2>
+                <h1 data-speed="1.5">
+                  Colour <br /> Palette
+                </h1>
               </div>
             </div>
 
-            <div className={styles.colorBoxesSection}>
+            <div
+              className={styles.gcmcolorBoxesSection}
+              id="dark-mode-colors-casestudy"
+            >
               <img src="/assets/casestudies/gcm/color-2.png" alt="color" />
             </div>
-          </div>
+          </section>
 
           {/* ====================== COLORS Section END ==================== */}
 
-          <div className="space-large desktop"></div>
 
-          {/* ====================== Forth Section ======================== */}
-
-          <div className={styles.videoHeading}>
-            <h1>The Garden City Mall</h1>
-          </div>
-          <div className={styles.videoForthSection}>
-            <div className={styles.videoContainer} id="video-container">
-              <video
-                src="/assets/casestudies/gcm/gcm.webm"
-                autoPlay
-                loop
-                muted
-              />
+          {/* ====================== Video Section ======================== */}
+          <section className={styles.videoSection}>
+            <div className={styles.videoHeading}>
+              <h2 className={styles.videoH2}>The Garden City Mall</h2>
             </div>
-          </div>
-
-          {/* ====================== Forth Section END ======================== */}
+            <div className={styles.videoMainSection}>
+              <div className={styles.videoContainer} id="video-container">
+                <video
+                  src="/assets/casestudies/gcm/gcm.webm"
+                  autoPlay
+                  loop
+                  muted
+                  alt='gcm video'
+                />
+              </div>
+            </div>
+          </section>
+          
+          {/* ====================== Video Section END ======================== */}
 
           {/* ====================== Forth Section  ======================== */}
 
-          <div className={styles.patronumForthSection}>
+          <section className={styles.forthSection}>
             <div className={styles.forthSectionContent}>
               <div className={styles.forthSectionLeftBox}>
-                <h1 data-jelly>TECH STACK</h1>
+                <h3 className={styles.h3} data-jelly>Tech Stack</h3>
               </div>
               <div className={styles.forthSectionRightBox}>
                 <div className={styles.paraTop}>
-                  <h5 data-jelly>
+                  <p data-jelly>
                     To bring the Lagos mall's website to life, Enigma employed a
                     powerful technology stack, featuring Next.js, a popular
                     React-based framework, and GSAP (GreenSock Animation
@@ -720,8 +683,8 @@ export default function gcm() {
                     React application that provided an exceptional user
                     experience while ensuring fast load times and optimal search
                     engine optimization.
-                  </h5>
-                  <h5 data-jelly>
+                  </p>
+                  <p data-jelly>
                     The component-based architecture of Next.js allowed for
                     efficient development and easy maintenance, as well as the
                     ability to create reusable, modular components that could be
@@ -730,70 +693,67 @@ export default function gcm() {
                     library, facilitated the creation of smooth, visually
                     stunning animations that showcased GCM's offerings and
                     features in a captivating and immersive manner.
-                  </h5>
+                  </p>
                 </div>
               </div>
             </div>
-          </div>
+          </section>
 
           {/* ====================== Forth Section  ======================== */}
 
-          <div className="space-large desktop"></div>
-
           {/* ====================== Parallax Image Second =========================== */}
 
-          <div className={styles.imageSecondSection}>
+          <section className={styles.imageSection}>
             <div className="image-anim">
               <div className={styles.imageBox} id="image-container">
-                <figure className={styles.figure}>
                   <img
                     src="/assets/casestudies/gcm/img3.webp"
                     className={styles.img}
                     id="img"
+                    alt="portfolio image"
                     data-cursor-size="100px"
                     data-cursor-color="#00232E"
                     data-cursor-text="GCM"
                   />
-                </figure>
               </div>
             </div>
-          </div>
+          </section>
 
           {/* ====================== Parallax Image Second  END ====================== */}
 
           {/* ====================== FOURTH Section ============================ */}
 
-          <div className={styles.patronumForthSection}>
+          <section className={styles.forthSection}>
             <div className={styles.forthSectionContent}>
               <div className={styles.forthSectionLeftBox}>
-                <h1 data-jelly>THE RESULT</h1>
+                <h3 className={styles.h3} data-jelly>THE RESULT</h3>
               </div>
               <div className={styles.forthSectionRightBox}>
                 <div className={styles.paraTop}>
-                  <h1 data-jelly>
+                  <h4 className={styles.h4} data-jelly>
                     The final product was a visually stunning, highly engaging,
                     and user-friendly website that not only generated excitement
                     for the upcoming mall launch but also served as an
                     invaluable resource for visitors and prospective tenants
                     alike. Key achievements of the project included:
-                  </h1>
-                  <h5 data-jelly>
+                  </h4>
+                  <p data-jelly>
                     A substantial boost in brand recognition and anticipation
                     for the mall's opening, thanks in part to the website's
                     striking visual appeal and the successful communication of
-                    the mall's unique selling propositions
-                  </h5>
-                  <h5 data-jelly>
+                    the mall's unique selling propositions.
+                  </p>
+                  <p data-jelly>
                     Positive feedback from prospective tenants and partners, who
                     praised the website's user-centric design, wealth of
-                    information, and seamless inquiry submission process
-                  </h5>
-                  <h5 data-jelly>
+                    information, and seamless inquiry submission process.
+                  </p>
+                  <p data-jelly>
                     A marked improvement in search engine rankings and
                     visibility, owing to the optimized site architecture, fast
-                    loading times, and mobile-friendly design
-                  </h5>
-                  <h5 data-jelly>
+                    loading times, and mobile-friendly design.
+                  </p>
+                  <p data-jelly>
                     In conclusion, Enigma's innovative approach to design,
                     coupled with a deep understanding of the Lagos shopping
                     mall's brand identity and strategic objectives, resulted in
@@ -803,86 +763,81 @@ export default function gcm() {
                     collaboration but also underscores the importance of
                     embracing cutting-edge technology and design principles to
                     create truly unforgettable digital experiences.
-                  </h5>
+                  </p>
                 </div>
               </div>
             </div>
-          </div>
+          </section>
 
           {/* ====================== Fourth Section END ======================== */}
 
-          <div className="space-large desktop"></div>
-
           {/* ====================== Parallax Image Second =========================== */}
 
-          <div className={styles.imageSecondSection}>
+          <section className={styles.imageSection}>
             <div className="image-anim">
               <div className={styles.imageBox} id="image-container">
-                <figure className={styles.figure}>
-                  <img
+                <img
                     src="/assets/casestudies/gcm/img4.webp"
                     className={styles.img}
                     id="img"
                     data-cursor-size="100px"
+                    alt="portfolio image"
                     data-cursor-color="#00232E"
                     data-cursor-text="GCM"
-                  />
-                </figure>
+                />
               </div>
             </div>
-          </div>
+          </section>
 
           {/* ====================== Parallax Image Second  END ====================== */}
 
           {/* ====================== Client Section ============================ */}
 
-          <div className="space-large desktop"></div>
 
-          <div className={styles.patronumForthSection}>
+          <section className={styles.clientTestimonialSection}>
             <div className={styles.clientTestimonialSectionContent}>
               <div className={styles.clientTestimonialSectionLeftBox}>
-                <h1 data-jelly>WORDS FROM THE CLIENT</h1>
+                <h3 data-jelly>WORDS FROM THE CLIENT</h3>
               </div>
               <div className={styles.clientTestimonialSectionRightBox}>
                 <div className={styles.clientTestimonialparaTop}>
-                  <h1 data-jelly>
+                  <h4 data-jelly>
                     <span className={styles.clientTestimonialSpan2}>“</span>
-                    Enigma exceeded our expectations in every way, delivering a
-                    website that truly captures the essence of our brand and
-                    sets the stage for our grand opening. Their unparalleled
-                    creativity, technical expertise, and dedication to
-                    excellence have positioned our shopping mall as the premier
-                    retail destination in Lagos. We couldn't be more thrilled
-                    with the results and look forward to a continued partnership
-                    with Enigma as we take our digital presence to even greater
-                    heights.
-                  </h1>
+                        Enigma exceeded our expectations in every way, delivering a
+                        website that truly captures the essence of our brand and
+                        sets the stage for our grand opening. Their unparalleled
+                        creativity, technical expertise, and dedication to
+                        excellence have positioned our shopping mall as the premier
+                        retail destination in Lagos. We couldn't be more thrilled
+                        with the results and look forward to a continued partnership
+                        with Enigma as we take our digital presence to even greater
+                        heights.
+                  </h4>
                 </div>
                 <div
                   className={styles.clientTestimonialSectionBottomBox}
                   data-jelly
                 >
                   <div className={styles.clientTestimonialSectionFigure}>
-                    <img src="/assets/casestudies/gcm/gcmclient.png"></img>
+                    <img src="/assets/casestudies/gcm/gcmclient.png" alt="clinet img"></img>
                   </div>
                   <div className={styles.clientTestimonialSectionFigureText}>
-                    <h5>
-                      Chinara Musa
+                    <h4>
+                        Chinara Musa
                       <br />
                       <span className={styles.clientTestimonialSpan}>
                         Managing Director & Chief Promoter
                       </span>
-                    </h5>
+                    </h4>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+          </section>
 
-          <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
 
           {/* ====================== Client Section END ======================== */}
+
           {/* ========================== Next Project =========================== */}
           <div className={styles.desktopSlider}>
             <WragbySlider />
@@ -890,7 +845,6 @@ export default function gcm() {
 
           {/* ========================== Next Project END ======================= */}
 
-          <div className={styles.mobile}></div>
 
           {/* ================ Next Project Mobile ============================== */}
 
@@ -900,7 +854,7 @@ export default function gcm() {
                 <h1>next up</h1>
               </div>
               <div className={styles.nextProjectHeading}>
-                <Link href="/pdtl">
+                <Link href="/projects/pdtl">
                   <h1>PDTL</h1>
                 </Link>
               </div>
@@ -909,16 +863,14 @@ export default function gcm() {
 
           {/* ================ Next Project Mobile ============================== */}
 
-          <div className={styles.mobile}></div>
-
           {/* ======================== Footer ====================== */}
-          <div className="desktop-footer" id={styles.ipad}>
+          <section className="desktop-footer">
             <Footer />
-          </div>
+          </section>
 
-          <div className="mobile-footer">
+          <section className="mobile-footer">
             <FooterMobile />
-          </div>
+          </section>
           {/* ======================== Footer END ====================== */}
         </div>
       </main>

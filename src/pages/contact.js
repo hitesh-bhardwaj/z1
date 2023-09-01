@@ -192,13 +192,6 @@ export default function contact() {
 
       <Cursor isGelly={true} />
 
-      {/* <ul className="transition" style={{ zIndex: "255" }}>
-        <li></li>
-        <li />
-        <li />
-        <li />
-      </ul> */}
-
       <div className="loader-wrap" id="loader">
         <svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
           <path id="svg" d="M0,1005S175,995,500,995s500,5,500,5V0H0Z" />
@@ -246,8 +239,7 @@ export default function contact() {
                     Work
                   </div>
                   <div className="contact-para" id="contact-anim">
-                    OLD WAYS WON'T OPEN NEW DOORS. IF YOU HAVE AN INTERESTING
-                    IDEA, LET'S BUILD THE FUTURE TOGETHER!
+                    Old ways won't  new doors. If you have an interesting idea, <span className="bold-600">Let's Build the Future Together!</span>
                   </div>
                 </div>
                 <div className="second-box-contact">
@@ -269,8 +261,7 @@ export default function contact() {
                     data-cursor-size="100px"
                     data-cursor-exclusion
                   >
-                    OLD WAYS WON'T OPEN NEW DOORS. IF YOU HAVE AN INTERESTING
-                    IDEA, LET'S BUILD THE FUTURE TOGETHER!
+                    Old ways won't  new doors. If you have an interesting idea, <span className="bold-600">Let's Build the Future Together!</span>
                   </div>
                 </div>
               </div>

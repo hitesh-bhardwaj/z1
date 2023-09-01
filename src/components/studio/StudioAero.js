@@ -57,7 +57,7 @@ export default function Aerosol() {
         {/* Text Container with Blend Mode Effect */}
         <div className="text-container studio-aero aero-demo">
           <h1 className="mobile-text-aero">
-            We Make it simple, <br />
+            we make it simple, <br />
             but significant
           </h1>
           <StudioEmo />

@@ -1,15 +1,36 @@
-'use client'
-
 import styles from '@/styles/Double.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useEffect, useRef } from 'react'; 
+import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
+gsap.config({
+  nullTargetWarn: false,
+});
+
 export default function Index({projects, reversed}) {
+
+  useEffect(() => {
+    let ctx = gsap.context(() => {
+      gsap.fromTo("#double-image-anim", {
+        scrollTrigger: {
+          trigger: "#doubleContainer",
+          start: "top 80%",
+        },
+        opacity: 0,
+        y: 100,
+      }, {
+        opacity: 1,
+        y: 0,
+        duration: 1,
+        stagger: 0.3,
+      });
+    });
+    return () => ctx.revert();
+  });
 
     const firstImage = useRef(null);
     const secondImage = useRef(null);
@@ -63,6 +84,7 @@ export default function Index({projects, reversed}) {
                 sizes="(max-width: 1200px) 100vw, 50vw"
                 priority={false} 
                 alt="project image"
+                id='double-image-anim'
               />
             </div>
             <div className={styles.body}>
@@ -85,6 +107,7 @@ export default function Index({projects, reversed}) {
                 sizes="(max-width: 1200px) 100vw, 50vw"
                 priority={false} 
                 alt="project image"
+                id='double-image-anim'
               />
             </div>
             <div className={styles.body}>

@@ -16,6 +16,7 @@ import Footer from "@/components/Footer";
 import FooterMobile from "@/components/Mobile/FooterMobile";
 import CursorAero from '@/components/ServiceDetail/StrategyAero';
 import StrategyNext from '@/components/NextBoxes/StrategyNext';
+import OfferCards from '@/components/ServiceDetail/OfferCards';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -97,7 +98,7 @@ export default function Strategy() {
       },
       {
         delay: 3.2,
-        duration: 1.3,
+        duration: 1,
         rotationX: 0,
         opacity: 1,
         translateY: 0,
@@ -116,7 +117,7 @@ export default function Strategy() {
       const tl = gsap.timeline({
         scrollTrigger: {
           trigger: '#servicePortfolioAnim',
-          scrub: true,
+          scrub: 1,
           // start: "-110% top",
           end: "-25% top",
           ease: "none",
@@ -141,8 +142,8 @@ export default function Strategy() {
             trigger: "#section-3",
             start: "top top",
             end: "bottom -100%",
-            scrub: 2,
-            ease: "power1.inOut",
+            scrub: 1,
+            ease: "easeInOut",
             pin: true,
             markers: false,
           },
@@ -151,7 +152,7 @@ export default function Strategy() {
       tl.to("#service-port-main", {
         duration: 10,
         x: "-58.5%",
-        delay: 2,
+        delay: 0.5,
       });
   });
   return () => ctx.revert();
@@ -174,6 +175,8 @@ export default function Strategy() {
                   markers: false
                 }
               });
+
+            
 
               if (approachItems) {
                 approachItems.forEach((image, i) => {
@@ -205,26 +208,24 @@ export default function Strategy() {
 
 // Text Reveal Animation For Section 2
     useEffect(() => {
-      const totalSection = document.querySelectorAll(
-        "#section-2"
-      );
-      totalSection.forEach(function (elem, index) {
-        const text = new SplitType(elem.querySelectorAll("#why-us-anim"));
-        let textwords = text.words;
-        gsap.from(textwords, {
+      const elementsToAnimate = document.querySelectorAll('#fadeIn');
+      let ctx = gsap.context(() => {
+      elementsToAnimate.forEach(target => {
+        gsap.from(target, {
           scrollTrigger: {
-            trigger: elem,
-            start: "top 80%",
-            end: "bottom top",
+            trigger: target,
+            start: 'top bottom',
+            end: 'bottom top',
             markers: false,
           },
-          duration: .5,
           opacity: 0,
-          yPercent: 100,
-          ease: "Power3.out",
-          stagger: 0.01,
+          y: 50,
+          duration: 0.8,
+          ease: 'Power1.out',
         });
       });
+    });
+    return () => ctx.revert();
     }, []);
 
 // Text Reveal Animation For Approach and Process Section
@@ -242,7 +243,7 @@ export default function Strategy() {
             end: "bottom top",
             markers: false,
           },
-          duration: .5,
+          duration: .7,
           opacity: 0,
           yPercent: 100,
           ease: "Power3.out",
@@ -254,28 +255,18 @@ export default function Strategy() {
 // Our Service Section Animation
     useEffect(() => {
       let ctx = gsap.context(() => {
-        const tl = gsap.timeline({
-          scrollTrigger: {
-            trigger: "#section-6",
-            start: "top 80%",
-            end: "bottom top",           
-            markers: false,
-          },
-        });
-        tl.from(".our-service-anim", {
-            y: "100",
+        gsap.from(".our-service-anim", {
+            scrollTrigger: {
+                trigger: "#section-6",
+                start: "top 80%",
+                end: "bottom top",           
+                markers: false,
+              },
             opacity: "0",
-            duration: 0.5,
+            y: "100",
+            duration: 0.8,
             ease: 'power3.Out',
         });
-        tl.from("#serviceOfferBottom > div", {
-          y: 50,
-          opacity: "0",
-          duration: 0.7,
-          stagger: 0.2,
-          ease: 'power3.Out',
-          delay: -0.5,
-      });
       });
       return () => ctx.revert();
     });
@@ -337,7 +328,7 @@ export default function Strategy() {
             </div>
             <div>
               <h1 className={`${styles['hero-bottom']}`} id='service-anim' data-cursor-magnetic data-cursor-background-image="/assets/gif/5.gif" data-cursor-size="300px" data-cursor-color="#000">
-                & Planning
+                <span className='font-ageo'>&</span> Planning
               </h1>
             </div>
           </div>
@@ -346,19 +337,18 @@ export default function Strategy() {
 {/* Section 2 */}
         <section className={`${styles['main-container']} ${styles['mb-10']}`} id='section-2'>
           <div className={styles['service-detail-content']}>
-            <h4 className={`${styles['m-50']}`} id='why-us-anim' data-jelly>
+            <h4 className={`${styles['m-50']} fadeIn`} data-jelly id='fadeIn'>
               <span>
                 At Enigma Digital, we believe that a winning strategy isn't a rare gem—it's a well-crafted masterpiece that we create for our clients, time and again. Our strategic planning, rooted in deep insights, forms the bedrock of our operations. We blend strategic thinking, innovative ideas, broad marketing experience, and proven best practices to transform insights into actionable plans that deliver measurable results.
               </span>
             </h4>
-            <p className={`${styles['m-50']}`}
-                id='why-us-anim'
-                data-jelly>
+            <p className={`${styles['m-50']} fadeIn`}
+                data-jelly id='fadeIn'>
               <span>
                 We begin our process by consulting with you because we believe that nobody knows your brand better than you do. We dive deep into understanding your brand, your product, your market, and your competition. This understanding forms the basis of our strategic thinking, idea generation, and campaign plans. Our meticulous planning, extensive research, and detailed understanding of your product/services and business goals enable us to create the perfect strategy. This strategy builds meaningful online experiences across multiple channels, helping your customers find what they're looking for quickly and efficiently, leading to your business's success.
               </span>
             </p>
-            <span className={`${styles['btn-10']}`} 
+            <span className={`${styles['btn-10']} fadeIn`} 
                   data-cursor-size="100px"
                   data-cursor-exclusion>
               kickstart your growth
@@ -392,7 +382,7 @@ export default function Strategy() {
             <div className={styles['service-portfolio-cards-item']}
                  data-cursor-size="100px"
                  data-cursor-color="#0F1014"
-                 data-cursor-text="View More">
+                 data-cursor-text="View More" id='fadeIn'>
               <div className={styles['service-card-top']}>
                 <div>
                     <Image src='/assets/service-detail/portfolio-1.webp'
@@ -421,7 +411,7 @@ export default function Strategy() {
             <div className={styles['service-portfolio-cards-item']}
                  data-cursor-size="100px"
                  data-cursor-color="#E30B25"
-                 data-cursor-text="View More">
+                 data-cursor-text="View More" id='fadeIn'>
               <div className={styles['service-card-top']}>
                 <div>
                     <Image src='/assets/service-detail/portfolio-2.webp'
@@ -573,40 +563,40 @@ export default function Strategy() {
 
         <div className={styles['service-approach-right']}>
           <div className={`${styles['service-approach-text-container']} text-card`} 
-               data-cursor-size='120px'
+               data-cursor-size='100px'
                data-cursor-exclusion>
-            <div className={styles['service-approach-text-box']}>
+            <div className={`${styles['service-approach-text-box']} service-approach-text-box`}>
               <h3 className='color-primary'>Understanding Your Brand</h3>
               <p>
                 We believe that understanding your brand is the first step toward creating a successful strategy. We spend time getting to know your brand, your values, and your vision. This understanding allows us to create strategies that align with your brand and help you achieve your goals.
               </p>
             </div>
-            <div className={styles['service-approach-text-box']}>
+            <div className={`${styles['service-approach-text-box']} service-approach-text-box`}>
               <h3 className='color-primary'>Identifying Your Target Audience</h3>
               <p>Knowing who your customers are is crucial for creating effective strategies. We conduct thorough research to identify your target audience, understand their needs, and find out what motivates them. This knowledge allows us to create strategies that resonate with your audience and drive engagement.</p>
             </div>
           </div>
           <div className={`${styles['service-approach-text-container']} text-card`}
-               data-cursor-size='120px'
+               data-cursor-size='100px'
                data-cursor-exclusion>
-            <div className={styles['service-approach-text-box']}>
+            <div className={`${styles['service-approach-text-box']} service-approach-text-box`}>
               <h3 className='color-primary'>Analyzing the Competition</h3>
               <p> Understanding your competition is key to staying ahead. We conduct a detailed analysis of your competitors to understand their strategies, strengths, and weaknesses. This analysis helps us create strategies that give you a competitive edge.</p>
             </div>
-            <div className={styles['service-approach-text-box']}>
+            <div className={`${styles['service-approach-text-box']} service-approach-text-box`}>
               <h3 className='color-primary'>Creating a Unique Value Proposition</h3>
               <p>Your unique value proposition sets you apart from your competitors. We work with you to identify and articulate your unique value proposition. This proposition forms the core of our strategy and helps us create campaigns that highlight your unique strengths.
               </p>
             </div>
           </div>
           <div className={`${styles['service-approach-text-container']} text-card`}
-               data-cursor-size='120px'
+               data-cursor-size='100px'
                data-cursor-exclusion>
-            <div className={styles['service-approach-text-box']}>
+            <div className={`${styles['service-approach-text-box']} service-approach-text-box`}>
               <h3 className='color-primary'>Setting Measurable Goals</h3>
               <p>We believe that every strategy should have clear, measurable goals. We work with you to set realistic goals for your campaigns. These goals guide our strategy and help us measure the success of our campaigns.</p>
             </div>
-            <div className={styles['service-approach-text-box']}>
+            <div className={`${styles['service-approach-text-box']} service-approach-text-box`}>
               <h3 className='color-primary'>Iterative Improvement</h3>
               <p>Digital marketing is a dynamic field. We believe in the power of iterative improvement. We continually monitor the performance of our campaigns, gather data, and use this data to refine our strategies. This approach ensures that our strategies are always optimized for maximum performance.</p>
             </div>
@@ -623,46 +613,7 @@ export default function Strategy() {
             Our Services<span className='stroke'> Include</span>
           </h2>
         </div>
-        <div className={styles['service-offer-bottom']} id='serviceOfferBottom'>
-          <div className={styles['our-service-text']} data-cursor-size='120px' data-cursor-exclusion>
-            <p>Digital Advisory and Consulting</p>
-          </div>
-          <div className={styles['our-service-text']} data-cursor-size='120px' data-cursor-exclusion>
-            <p>User Experience Development</p>
-          </div>
-          <div className={styles['our-service-img']}>
-            <Image src='/assets/service-detail/our-service-1.webp' 
-                 alt='our service image'
-                 loading='lazy'
-                 width={500}
-                 height={500}
-                 onMouseEnter={(e) => handleHover(e)}
-                 onMouseOut={(e) => handleHoverExit(e)}>
-            </Image>
-          </div>
-          <div className={styles['our-service-text']} data-cursor-size='120px' data-cursor-exclusion>
-            <p>Brand & content strategy</p>
-          </div>
-          <div className={styles['our-service-img']}>
-            <Image src='/assets/service-detail/our-service-2.webp' 
-                 alt='our service image'
-                 loading='lazy'
-                 width={500}
-                 height={500}
-                 onMouseEnter={(e) => handleHover(e)}
-                 onMouseOut={(e) => handleHoverExit(e)}>
-            </Image>
-          </div>
-          <div className={styles['our-service-text']} data-cursor-size='120px' data-cursor-exclusion>
-            <p>Personal design & customer segmentationg</p>
-          </div>
-          <div className={styles['our-service-text']} data-cursor-size='120px' data-cursor-exclusion>
-            <p>Digital Capabilities Development</p>
-          </div>
-          <div className={styles['our-service-text']} data-cursor-size='120px' data-cursor-exclusion>
-            <p>Digital Marketing & Website Performance Audit</p>
-          </div>
-        </div>
+        <OfferCards />
       </div>
     </section>
 

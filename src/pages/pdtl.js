@@ -13,8 +13,13 @@ import SmoothScroll from "@/components/utils/SmoothScroll";
 import Footer from "@/components/Footer";
 import FooterMobile from "@/components/Mobile/FooterMobile";
 import WragbySlider from "@/components/CaseStudies/WragbySlider";
+import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
+
+gsap.config({
+  nullTargetWarn: false,
+});
 
 // Hover on the link
 const handleHover = (e) => {
@@ -231,7 +236,7 @@ export default function pdtl() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"
+          content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
         ></meta>
         <link rel="icon" href="/fav-icon.png" />
       </Head>
@@ -260,11 +265,10 @@ export default function pdtl() {
         </div>
 
         <div className={styles.Main}>
-          <div
-            className={styles.HeroSection}
-            data-cursor-text=""
-            data-cursor-size="10px"
-          >
+          
+{/*Section 1  */}
+<section
+            className={styles.HeroSection}>
             <div className={styles.mainSubSection}>
               <div className={styles.HeroLeftBox} data-jelly>
                 <div
@@ -273,10 +277,12 @@ export default function pdtl() {
                   data-cursor-color="#234BA7"
                   data-cursor-text="Visit!"
                 >
-                  <Link href="#" target="_blank" className={styles.Link}>
-                    <button className={styles.linkButton}>PDTL.com</button>
+                  <Link href="https://certvault.org/" target="_blank" className={styles.Link}>
+                    PDTL.com
                     <span className={styles.linkSvg}>
-                      <img
+                      <Image
+                        width={20}
+                        height={20}
                         src="/assets/casestudies/Vector.svg"
                         alt="Svg"
                         id="case-study-arrow"
@@ -290,19 +296,18 @@ export default function pdtl() {
                 </h1>
               </div>
               <div className={styles.HeroRightBox}>
-                <h1 className={styles.work} id="patroSub">
-                  LOGISTICS
-                </h1>
-                <h1 className={styles.year} id="patroSub">
-                  2022
-                </h1>
+                <h5 className={styles.work} id="patroSub">
+                    LOGISTICS
+                </h5>
+                <h5 className={styles.year} id="patroSub">
+                    2022
+                </h5>
               </div>
             </div>
-          </div>
+          </section>
 
           {/* ====================== Parallax Image Second =========================== */}
-
-          <div className={styles.imageSecondSection}>
+          <section className={styles.imageSection}>
             <div className="image-anim">
               <div className={styles.imageBox} id="image-container">
                 <img
@@ -310,28 +315,24 @@ export default function pdtl() {
                   className={styles.img}
                   id="img"
                   data-cursor-size="100px"
+                  alt="portfolio image"
                   data-cursor-color="#234BA7"
                   data-cursor-text="PDTL"
                 />
               </div>
             </div>
-          </div>
-
+          </section>
           {/* ====================== Parallax Image Second  END ====================== */}
 
-          <div className="space-large desktop"></div>
-          <div className={styles.ipad}></div>
-
           {/* ====================== Third Section ============================ */}
-
-          <div className={styles.patronumThirdSection}>
+          <section className={styles.thirdSection}>
             <div className={styles.thirdSectionContent}>
               <div className={styles.thirdSectionLeftBox}>
-                <h1 data-jelly>THE CLIENT</h1>
+                <h3 className={styles.h3} data-jelly>THE CLIENT</h3>
               </div>
               <div className={styles.thirdSectionRightBox}>
                 <div className={styles.paraTop}>
-                  <h1 data-jelly>
+                  <h4 className={styles.h4} data-jelly>
                     Manchester, the bustling heart of the UK, is home to a
                     thriving logistics company that prides itself on providing
                     top-notch services to its clientele. To stay ahead in an
@@ -341,104 +342,98 @@ export default function pdtl() {
                     Enigma was recommended to the client and was tasked with
                     delivering a smashing website transformation that would
                     leave a lasting impression.
-                  </h1>
+                  </h4>
                 </div>
 
                 <div className={styles.buttonBox}>
-                  <h1 data-cursor-size="30px" data-cursor-exclusion>
+                  <h6 data-cursor-size="30px" data-cursor-exclusion>
                     Web Design
-                  </h1>
-                  <h1 data-cursor-size="30px" data-cursor-exclusion>
+                  </h6>
+                  <h6 data-cursor-size="30px" data-cursor-exclusion>
                     Branding
-                  </h1>
-                  <h1 data-cursor-size="30px" data-cursor-exclusion>
+                  </h6>
+                  <h6 data-cursor-size="30px" data-cursor-exclusion>
                     Development
-                  </h1>
+                  </h6>
                 </div>
               </div>
             </div>
-          </div>
-
+          </section>
           {/* ====================== Third Section END ======================== */}
 
-          <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
-
           {/* ====================== Parallax Image =========================== */}
-
-          <div className={styles.imageSecondSection}>
+          <section className={styles.imageSection}>
             <div className={styles.imageBox} id="image-container">
               <img
-                src="/assets/casestudies/pdtl/img2.png"
-                className={styles.img}
-                id="img"
-                data-cursor-size="100px"
-                data-cursor-color="#234BA7"
-                data-cursor-text="PDTL"
+                    src="/assets/casestudies/pdtl/img2.png"
+                    className={styles.img}
+                    id="img"
+                    data-cursor-size="100px"
+                    data-cursor-color="#234BA7"
+                    data-cursor-text="PDTL"
+                    alt="portfolio image"
               />
             </div>
-          </div>
-
+          </section>
           {/* ====================== Parallax Image  END ====================== */}
 
-          {/* <div className="space-large desktop"></div> */}
 
           {/* ====================== Third Section ============================ */}
 
-          <div className={styles.patronumForthSection}>
+          <section className={styles.forthSection}>
             <div className={styles.forthSectionContent}>
               <div className={styles.forthSectionLeftBox}>
-                <h1 data-jelly>THE ASK</h1>
+                <h3 className={styles.h3} data-jelly>THE ASK</h3>
               </div>
               <div className={styles.forthSectionRightBox}>
                 <div className={styles.paraTop}>
-                  <h1 data-jelly>
+                  <h4 className={styles.h4} data-jelly>
                     Pennine clear-cut objectives: to create a visually
                     appealing, user-friendly, and engaging website that would
                     not only showcase the company's wide range of services but
                     also facilitate seamless driver training course booking and
                     online payments. The client's specific requirements
                     included:
-                  </h1>
-                  <h5 data-jelly>
-                    A modern and visually engaging design that would exude
+                  </h4>
+                  <p data-jelly>
+                  A modern and visually engaging design that would exude
                     professionalism and innovation, reflecting the company's
                     brand identity
-                  </h5>
-                  <h5 data-jelly>
-                    A user-centric navigation structure that would allow for
+                  </p>
+                  <p data-jelly>
+                  A user-centric navigation structure that would allow for
                     easy browsing and access to essential information about the
                     company's services
-                  </h5>
-                  <h5 data-jelly>
+                  </p>
+                  <p data-jelly>
                     A responsive design that would cater to users on various
                     devices, ensuring a consistent and enjoyable experience
-                  </h5>
-                  <h5 data-jelly>
+                  </p>
+                  <p data-jelly>
                     Integration of an intuitive booking system for driver
                     training courses, complete with online payment functionality
-                  </h5>
-                  <h5 data-jelly>
+                  </p>
+                  <p data-jelly>
                     An SEO-optimized website architecture to enhance search
                     engine visibility and drive organic traffic
-                  </h5>
+                  </p>
                 </div>
               </div>
             </div>
-          </div>
+          </section>
 
           {/* ====================== Third Section END ======================== */}
 
-          {/* <div className="space-large desktop"></div> */}
-          <div className="space-large desktop"></div>
 
           {/* ========================== The LOGO Section =========================== */}
 
-          <div className={styles.logoSection}>
+          <section className={styles.logoSection}>
             <div className={styles.logoImageSection}>
               <div className={styles.firstLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
-                  <img
+                  <Image
+                    width={1000}
+                    height={1000}
                     src="/assets/casestudies/pdtl/web1.webp"
                     alt="Logo"
                     data-cursor-color="#234BA7"
@@ -448,14 +443,12 @@ export default function pdtl() {
                     onMouseOut={(e) => handleHoverExit(e)}
                   />
                 </div>
-                {/* <h1>
-                  The minimalist, modern branding had a playful and vibrant
-                  feel.
-                </h1> */}
               </div>
               <div className={styles.secondLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
-                  <img
+                  <Image
+                    width={1000}
+                    height={1000}
                     src="/assets/casestudies/pdtl/web2.png"
                     alt="Logo"
                     data-cursor-color="#234BA7"
@@ -465,17 +458,15 @@ export default function pdtl() {
                     onMouseOut={(e) => handleHoverExit(e)}
                   />
                 </div>
-                {/* <h1>
-                  The logo, a letter "P" made of four triangles, was based on a
-                  hexagonal shape with rounded corners in shades of blue.{" "}
-                </h1> */}
               </div>
             </div>
 
             <div className={styles.logoImageSectionSecond}>
               <div className={styles.firstLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
-                  <img
+                  <Image
+                    width={1000}
+                    height={1000}
                     src="/assets/casestudies/pdtl/web3.png"
                     alt="Logo"
                     data-cursor-color="#234BA7"
@@ -488,7 +479,9 @@ export default function pdtl() {
               </div>
               <div className={styles.secondLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
-                  <img
+                  <Image
+                    width={1000}
+                    height={1000}
                     src="/assets/casestudies/pdtl/web4.png"
                     alt="Logo"
                     data-cursor-color="#234BA7"
@@ -500,79 +493,62 @@ export default function pdtl() {
                 </div>
               </div>
             </div>
-          </div>
+          </section>
 
           {/* ========================== The LOGO Section END ======================= */}
 
-          {/* <div className="space-large desktop"></div> */}
-          <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
-
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
 
           {/* ====================== FOURTH Section ============================ */}
 
-          <div className={styles.patronumForthSection}>
+          <section className={styles.forthSection}>
             <div className={styles.forthSectionContent}>
               <div className={styles.forthSectionLeftBox}>
-                <h1 data-jelly>Our Approach</h1>
+                <h3 className={styles.h3} data-jelly>Our Approach</h3>
               </div>
               <div className={styles.forthSectionRightBox}>
                 <div className={styles.paraTop}>
-                  <h1 data-jelly>
+                <h4 className={styles.h4}>
                     The team at Enigma tackled the project with precision,
                     adopting a three-pronged approach:
-                  </h1>
-                  <h5 data-jelly>
+                </h4>
+                  <p data-jelly>
                     <strong>A. Research & Collaboration: </strong>
                     To ensure a deep understanding of the client's business,
                     Enigma engaged in thorough market research and maintained
                     open lines of communication with the logistics company.
                     After all, what's more British than a good ol' chinwag?
-                  </h5>
-                  <h5 data-jelly>
+                  </p>
+                  <p data-jelly>
                     <strong>A. Research & Collaboration: </strong>
                     Enigma's design team crafted visually appealing wireframes,
                     incorporating the logistics company's branding and a touch
                     of British flair. The development team then brought the
                     designs to life using the latest web technologies.
-                  </h5>
-                  <h5 data-jelly>
+                  </p>
+                  <p data-jelly>
                     <strong>C. Optimization & Launch: </strong>
                     Before going live, Enigma performed rigorous testing to
                     ensure a seamless user experience across devices. Finally,
                     it was time to unleash the new website upon the unsuspecting
                     digital landscape.
-                  </h5>
+                  </p>
                 </div>
               </div>
             </div>
-          </div>
+          </section>
 
           {/* ====================== FOURTH Section END ============================ */}
 
-          {/* <div className="space-large desktop"></div> */}
-          <div className="space-large desktop"></div>
 
           {/* ========================== The LOGO Section =========================== */}
 
-          <div className={styles.logoSection}>
+          <section className={styles.logoSection}>
             <div className={styles.logoImageSection}>
               <div className={styles.firstLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
-                  <img
+                  <Image
+                    width={1000}
+                    height={1000}
                     src="/assets/casestudies/pdtl/web5.png"
                     alt="Logo"
                     data-cursor-color="#234BA7"
@@ -582,14 +558,12 @@ export default function pdtl() {
                     onMouseOut={(e) => handleHoverExit(e)}
                   />
                 </div>
-                {/* <h1>
-                  The minimalist, modern branding had a playful and vibrant
-                  feel.
-                </h1> */}
               </div>
               <div className={styles.secondLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
-                  <img
+                  <Image
+                    width={1000}
+                    height={1000}
                     src="/assets/casestudies/pdtl/web6.png"
                     alt="Logo"
                     data-cursor-color="#234BA7"
@@ -599,17 +573,15 @@ export default function pdtl() {
                     onMouseOut={(e) => handleHoverExit(e)}
                   />
                 </div>
-                {/* <h1>
-                  The logo, a letter "P" made of four triangles, was based on a
-                  hexagonal shape with rounded corners in shades of blue.{" "}
-                </h1> */}
               </div>
             </div>
 
             <div className={styles.logoImageSectionSecond}>
               <div className={styles.firstLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
-                  <img
+                  <Image
+                    width={1000}
+                    height={1000}
                     src="/assets/casestudies/pdtl/web7.png"
                     alt="Logo"
                     data-cursor-color="#234BA7"
@@ -622,7 +594,9 @@ export default function pdtl() {
               </div>
               <div className={styles.secondLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
-                  <img
+                  <Image
+                    width={1000}
+                    height={1000}
                     src="/assets/casestudies/pdtl/web8.png"
                     alt="Logo"
                     data-cursor-color="#234BA7"
@@ -634,239 +608,216 @@ export default function pdtl() {
                 </div>
               </div>
             </div>
-          </div>
+          </section>
 
           {/* ========================== The LOGO Section END ======================= */}
-
-          <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
-
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-
+          
           {/* ====================== Fonts Section ======================== */}
-
-          <div className={styles.fontSection}>
+          <section className={styles.fontSection}>
             <div className={styles.fontHeading}>
-              <h1>Fonts</h1>
+              <h2 className={styles.h2} >Fonts</h2>
             </div>
-            <div className={styles.fontImagebox}>
+            <div className={styles.pdtlfontImagebox}>
               <img src="/assets/casestudies/pdtl/font1.webp" alt="Fonts" />
               <img src="/assets/casestudies/pdtl/font2.webp" alt="Fonts" />
             </div>
-          </div>
-
+          </section>
           {/* ====================== Fonts Section END ==================== */}
 
-          <div className="space-large desktop"></div>
-          <div className={styles.ipad}></div>
 
           {/* ====================== COLORS Section ==================== */}
 
-          <div className={styles.colorSection} id="colorsection">
+          <section className={styles.pdtlcolorSection} id="colorsection">
             <div className={styles.colorHeading}>
-              <h1>COLORS</h1>
+              <h2 className={styles.h2} >Colors</h2>
             </div>
-            <div className={styles.colorBox}>
-              <div className={styles.colorBoxHeadingBackground}>
-                <h2 data-speed="1.5">Colour Palette</h2>
+            <div className={styles.pdtlcolorBox}>
+              <div className={styles.pdtlcolorBoxHeadingBackground}>
+                <h1 data-speed="1.5">
+                    Colour Palette
+                </h1>
               </div>
             </div>
 
             <div
-              className={styles.colorBoxesSection}
+              className={styles.pdtlcolorBoxesSection}
               id="dark-mode-colors-casestudy"
             >
               <ul>
-                <li className={styles.colorOne} id="line">
+                <li className={styles.pdtlcolorOne} id="line">
                   #000000
                 </li>
-                <li className={styles.colorTwo} id="line">
+                <li className={styles.pdtlcolorTwo} id="line">
                   #19073B
                 </li>
-                <li className={styles.colorThree} id="line">
+                <li className={styles.pdtlcolorThree} id="line">
                   #BE1E2D
                 </li>
-                <li className={styles.colorFour} id="line">
+                <li className={styles.pdtlcolorFour} id="line">
                   #0060AC
                 </li>
-                <li className={styles.colorFive} id="line">
+                <li className={styles.pdtlcolorFive} id="line">
                   #FFFFFF
                 </li>
               </ul>
             </div>
-          </div>
+          </section>
 
           {/* ====================== COLORS Section END ==================== */}
 
-          <div className="space-large desktop"></div>
 
-          {/* ====================== Forth Section ======================== */}
-
-          <div className={styles.videoHeading}>
-            <h1>PDTL Driver Training Institute</h1>
-          </div>
-          <div className={styles.videoForthSection}>
-            <div className={styles.videoContainer} id="video-container">
-              <video
-                src="/assets/casestudies/pdtl/pdtl.webm"
-                autoPlay
-                loop
-                muted
-              />
+          {/* ====================== Video Section ======================== */}
+          <section className={styles.videoSection}>
+            <div className={styles.videoHeading}>
+              <h2 className={styles.videoH2}>PDTL Driver Training Institute</h2>
             </div>
-          </div>
-
-          {/* ====================== Forth Section END ======================== */}
-
-          {/* ====================== Forth Section  ======================== */}
-
-          <div className={styles.patronumForthSection}>
-            <div className={styles.forthSectionContent}>
-              <div className={styles.forthSectionLeftBox}>
-                <h1 data-jelly>TECH STACK</h1>
-              </div>
-              <div className={styles.forthSectionRightBox}>
-                <div className={styles.paraTop}>
-                  <h1 data-jelly>
-                    Our toolkit for this project included HTML, CSS, JS, jQuery,
-                    WordPress, and WooCommerce. This combination of technologies
-                    was chosen for several reasons:
-                  </h1>
-                  <h5 data-jelly>
-                    HTML and CSS provided a solid foundation for a responsive
-                    and visually striking website
-                  </h5>
-                  <h5 data-jelly>
-                    JavaScript (JS) allowed for dynamic interactivity, making
-                    the website engaging and user-friendly
-                  </h5>
-                  <h5 data-jelly>
-                    jQuery, a popular JS library, simplified the implementation
-                    of complex features and ensured consistency across devices
-                  </h5>
-                  <h5 data-jelly>
-                    WooCommerce, a powerful e-commerce solution, was seamlessly
-                    integrated for driver training course booking and online
-                    payment processing. Its seamless integration with WordPress,
-                    the content management system used for PDTL's website,
-                    cost-effectiveness, customisability, and vast plugin
-                    ecosystem made it the obvious choice for this project.
-                  </h5>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* ====================== Forth Section  ======================== */}
-
-          <div className="space-large desktop"></div>
-
-          {/* ====================== Parallax Image Second =========================== */}
-
-          <div className={styles.imageSecondSection}>
-            <div className="image-anim">
-              <div className={styles.imageBox} id="image-container">
-                <img
-                  src="/assets/casestudies/pdtl/img3.png"
-                  className={styles.img}
-                  id="img"
-                  data-cursor-size="100px"
-                  data-cursor-color="#234BA7"
-                  data-cursor-text="PDTL"
+            <div className={styles.videoMainSection}>
+              <div className={styles.videoContainer} id="video-container">
+                <video
+                    src="/assets/casestudies/pdtl/pdtl.webm"
+                    autoPlay
+                    loop
+                    muted
+                    alt='pdtl video'
                 />
               </div>
             </div>
-          </div>
+          </section>
+          
+          {/* ====================== Video Section END ======================== */}
+
+          {/* ====================== Forth Section  ======================== */}
+
+          <section className={styles.forthSection}>
+            <div className={styles.forthSectionContent}>
+              <div className={styles.forthSectionLeftBox}>
+                <h3 className={styles.h3} data-jelly>Tech Stack</h3>
+              </div>
+              <div className={styles.forthSectionRightBox}>
+                <div className={styles.paraTop}>
+                    <h4 className={styles.h4}>
+                        Our toolkit for this project included HTML, CSS, JS, jQuery,
+                        WordPress, and WooCommerce. This combination of technologies
+                        was chosen for several reasons:
+                    </h4>
+                    <p data-jelly>
+                        HTML and CSS provided a solid foundation for a responsive
+                        and visually striking website
+                    </p>
+                    <p data-jelly>
+                        JavaScript (JS) allowed for dynamic interactivity, making
+                        the website engaging and user-friendly
+                    </p>
+                    <p data-jelly>
+                        jQuery, a popular JS library, simplified the implementation
+                        of complex features and ensured consistency across devices
+                    </p>
+                    <p data-jelly>
+                        WooCommerce, a powerful e-commerce solution, was seamlessly
+                        integrated for driver training course booking and online
+                        payment processing. Its seamless integration with WordPress,
+                        the content management system used for PDTL's website,
+                        cost-effectiveness, customisability, and vast plugin
+                        ecosystem made it the obvious choice for this project.
+                    </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* ====================== Forth Section  ======================== */}
+
+          {/* ====================== Parallax Image Second =========================== */}
+
+          <section className={styles.imageSection}>
+            <div className="image-anim">
+              <div className={styles.imageBox} id="image-container">
+                  <img
+                    src="/assets/casestudies/pdtl/img3.png"
+                    className={styles.img}
+                    id="img"
+                    data-cursor-size="100px"
+                    data-cursor-color="#234BA7"
+                    alt="portfolio image"
+                    data-cursor-text="PDTL"
+                  />
+              </div>
+            </div>
+          </section>
 
           {/* ====================== Parallax Image Second  END ====================== */}
 
           {/* ====================== FOURTH Section ============================ */}
 
-          <div className={styles.patronumForthSection}>
+          <section className={styles.forthSection}>
             <div className={styles.forthSectionContent}>
               <div className={styles.forthSectionLeftBox}>
-                <h1 data-jelly>THE RESULT</h1>
+                <h3 className={styles.h3} data-jelly>THE RESULT</h3>
               </div>
               <div className={styles.forthSectionRightBox}>
                 <div className={styles.paraTop}>
-                  <h1 data-jelly>
-                    The finished product was a website that not only looked the
-                    part but performed like a well-tuned lorry, delivering
-                    exceptional user experiences and tangible business results:
-                  </h1>
-                  <h5 data-jelly>
-                    A significant increase in website traffic and user
-                    engagement, thanks in part to the site's captivating design,
-                    streamlined navigation, and engaging content
-                  </h5>
-                  <h5 data-jelly>
-                    A boost in online bookings for driver training courses,
-                    facilitated by the seamless integration of WooCommerce for
-                    secure and straightforward transactions
-                  </h5>
-                  <h5 data-jelly>
-                    An uptick in search engine rankings, driving organic traffic
-                    and cementing PDTL's online presence
-                  </h5>
-                  <h5 data-jelly>
-                    Positive feedback from clients and partners, who praised the
-                    website's ease of use, informative content, and the
-                    occasional dash of British humour.
-                  </h5>
+                    <h4 className={styles.h4}>
+                        The finished product was a website that not only looked the
+                        part but performed like a well-tuned lorry, delivering
+                        exceptional user experiences and tangible business results:
+                    </h4>
+                    <p data-jelly>
+                        A significant increase in website traffic and user
+                        engagement, thanks in part to the site's captivating design,
+                        streamlined navigation, and engaging content
+                    </p>
+                    <p data-jelly>
+                        A boost in online bookings for driver training courses,
+                        facilitated by the seamless integration of WooCommerce for
+                        secure and straightforward transactions
+                    </p>
+                    <p data-jelly>
+                        An uptick in search engine rankings, driving organic traffic
+                        and cementing PDTL's online presence
+                    </p>
+                    <p data-jelly>
+                        Positive feedback from clients and partners, who praised the
+                        website's ease of use, informative content, and the
+                        occasional dash of British humour.
+                    </p>
                 </div>
               </div>
             </div>
-          </div>
+          </section>
 
           {/* ====================== Fourth Section END ======================== */}
 
-          <div className="space-large desktop"></div>
-
           {/* ====================== Parallax Image Second =========================== */}
 
-          <div className={styles.imageSecondSection}>
+          <section className={styles.imageSection}>
             <div className="image-anim">
               <div className={styles.imageBox} id="image-container">
                 <img
-                  src="/assets/casestudies/pdtl/img4.png"
-                  className={styles.img}
-                  id="img"
-                  data-cursor-size="100px"
-                  data-cursor-color="#234BA7"
-                  data-cursor-text="PDTL"
+                    src="/assets/casestudies/pdtl/img4.png"
+                    className={styles.img}
+                    id="img"
+                    data-cursor-size="100px"
+                    data-cursor-color="#234BA7"
+                    alt="portfolio image"
+                    data-cursor-text="PDTL"
                 />
               </div>
             </div>
-          </div>
+          </section>
 
           {/* ====================== Parallax Image Second  END ====================== */}
 
           {/* ====================== Client Section ============================ */}
 
-          <div className="space-large desktop"></div>
 
-          <div className={styles.patronumForthSection}>
+          <section className={styles.clientTestimonialSection}>
             <div className={styles.clientTestimonialSectionContent}>
               <div className={styles.clientTestimonialSectionLeftBox}>
-                <h1 data-jelly>WORDS FROM THE CLIENT</h1>
+                <h3 data-jelly>WORDS FROM THE CLIENT</h3>
               </div>
               <div className={styles.clientTestimonialSectionRightBox}>
                 <div className={styles.clientTestimonialparaTop}>
-                  <h1 data-jelly>
+                  <h4 data-jelly>
                     <span className={styles.clientTestimonialSpan2}>“</span>
                     Enigma has truly knocked it out of the park! Their
                     expertise, creativity, and dedication have transformed our
@@ -876,43 +827,39 @@ export default function pdtl() {
                     bookings, and a website we're proud to call our own. Enigma
                     is the bee's knees, and we couldn't be happier with their
                     stellar work!
-                  </h1>
+                  </h4>
                 </div>
                 <div
                   className={styles.clientTestimonialSectionBottomBox}
                   data-jelly
                 >
                   <div className={styles.clientTestimonialSectionFigure}>
-                    <img src="/assets/casestudies/pdtl/pdtlclient.webp"></img>
+                    <img src="/assets/casestudies/pdtl/pdtlclient.webp" alt="client image"></img>
                   </div>
                   <div className={styles.clientTestimonialSectionFigureText}>
-                    <h5>
-                      Jared Bullock
+                    <h4>
+                        Jared Bullock
                       <br />
                       <span className={styles.clientTestimonialSpan}>
                         Director, PDTL
                       </span>
-                    </h5>
+                    </h4>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+          </section>
 
-          <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
 
           {/* ====================== Client Section END ======================== */}
 
           {/* ========================== Next Project =========================== */}
-
           <div className={styles.desktopSlider}>
             <WragbySlider />
           </div>
 
           {/* ========================== Next Project END ======================= */}
 
-          <div className={styles.mobile}></div>
 
           {/* ================ Next Project Mobile ============================== */}
 
@@ -922,8 +869,8 @@ export default function pdtl() {
                 <h1>next up</h1>
               </div>
               <div className={styles.nextProjectHeading}>
-                <Link href="dharan">
-                  <h1>Dharan</h1>
+                <Link href="/quickx">
+                  <h1>Quick-X</h1>
                 </Link>
               </div>
             </div>
@@ -931,17 +878,14 @@ export default function pdtl() {
 
           {/* ================ Next Project Mobile ============================== */}
 
-          <div className={styles.mobile}></div>
-
           {/* ======================== Footer ====================== */}
-          <div className="desktop-footer" id={styles.ipad}>
+          <section className="desktop-footer">
             <Footer />
-          </div>
+          </section>
 
-          <div className="mobile-footer">
+          <section className="mobile-footer">
             <FooterMobile />
-          </div>
-
+          </section>
           {/* ======================== Footer END ====================== */}
         </div>
       </main>

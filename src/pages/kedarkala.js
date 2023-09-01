@@ -13,8 +13,13 @@ import SmoothScroll from "@/components/utils/SmoothScroll";
 import Footer from "@/components/Footer";
 import FooterMobile from "@/components/Mobile/FooterMobile";
 import WragbySlider from "@/components/CaseStudies/WragbySlider";
+import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
+
+gsap.config({
+  nullTargetWarn: false,
+});
 
 // Hover on the link
 const handleHover = (e) => {
@@ -181,7 +186,8 @@ export default function kedarkala() {
 
   return (
     <>
-      <NextSeo
+
+<NextSeo
         title="Kedarkala Case Study | Enigma Digital's UI/UX & Branding Success"
         description="Kedarkala's case study showcases the work done by Enigma in Branding, UI/UX design and front-end development, driving exceptional results for the client."
         canonical="https://www.weareenigma.com/kedarkala"
@@ -205,7 +211,7 @@ export default function kedarkala() {
         }}
       />
 
-      <Head>
+<Head>
         <title>
           Kedarkala Case Study | Enigma Digital's UI/UX & Branding Success
         </title>
@@ -216,14 +222,15 @@ export default function kedarkala() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"
+          content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
         ></meta>
         <link rel="icon" href="/fav-icon.png" />
       </Head>
 
       <SmoothScroll />
 
-      <div className="loader-wrap" id="loader">
+{/*Loader*/}
+        <div className="loader-wrap" id="loader">
         <svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
           <path id="svg" d="M0,1005S175,995,500,995s500,5,500,5V0H0Z" />
         </svg>
@@ -237,7 +244,7 @@ export default function kedarkala() {
         </div>
       </div>
 
-      <Cursor isGelly={true} />
+      <Cursor isGelly={true}/>
 
       <main>
         <div>
@@ -245,11 +252,12 @@ export default function kedarkala() {
         </div>
 
         <div className={styles.Main}>
-          <div
+          
+  {/*Section 1  */}
+          <section
             className={styles.HeroSection}
             data-cursor-text=""
-            data-cursor-size="10px"
-          >
+            data-cursor-size="10px">
             <div className={styles.mainSubSection}>
               <div className={styles.HeroLeftBox} data-jelly>
                 <div
@@ -258,14 +266,12 @@ export default function kedarkala() {
                   data-cursor-color="#000"
                   data-cursor-text="Visit!"
                 >
-                  <Link
-                    href="https://kedarkala.com/"
-                    target="_blank"
-                    className={styles.Link}
-                  >
-                    <button className={styles.linkButton}>kedarkala.com</button>
+                  <Link href="https://kedarkala.com/" target="_blank" className={styles.Link}>
+                    kedarkala.com
                     <span className={styles.linkSvg}>
-                      <img
+                      <Image
+                        width={20}
+                        height={20}
                         src="/assets/casestudies/Vector.svg"
                         alt="Svg"
                         id="case-study-arrow"
@@ -274,52 +280,47 @@ export default function kedarkala() {
                   </Link>
                 </div>
                 <h1 id="patro">
-                  Kedarkala, a luxury <br /> interior design studio
+                    Kedarkala, a luxury <br /> interior design studio
                 </h1>
               </div>
               <div className={styles.HeroRightBox}>
-                <h1 className={styles.work} id="patroSub">
-                  INTERIOR DESIGN
-                </h1>
-                <h1 className={styles.year} id="patroSub">
-                  2022
-                </h1>
+                <h5 className={styles.work} id="patroSub">
+                    INTERIOR DESIGN
+                </h5>
+                <h5 className={styles.year} id="patroSub">
+                    2022
+                </h5>
               </div>
             </div>
-          </div>
+          </section>
 
           {/* ====================== Parallax Image Second =========================== */}
-
-          <div className={styles.imageSecondSection}>
+          <section className={styles.imageSection}>
             <div className="image-anim">
               <div className={styles.imageBox} id="image-container">
                 <img
-                  src="/assets/casestudies/kedarkala/img1.webp"
+                    src="/assets/casestudies/kedarkala/img1.webp"
                   className={styles.img}
                   id="img"
                   data-cursor-size="100px"
                   data-cursor-color="#0F1014"
                   data-cursor-text="Kedarkala"
+                  alt="portfolio image"
                 />
               </div>
             </div>
-          </div>
-
+          </section>
           {/* ====================== Parallax Image Second  END ====================== */}
 
-          <div className="space-large desktop"></div>
-          <div className={styles.ipad}></div>
-
           {/* ====================== Third Section ============================ */}
-
-          <div className={styles.patronumThirdSection}>
+          <section className={styles.thirdSection}>
             <div className={styles.thirdSectionContent}>
               <div className={styles.thirdSectionLeftBox}>
-                <h1 data-jelly>The Client</h1>
+                <h3 className={styles.h3} data-jelly>THE CLIENT</h3>
               </div>
               <div className={styles.thirdSectionRightBox}>
                 <div className={styles.paraTop}>
-                  <h1 data-jelly>
+                  <h4 className={styles.h4} data-jelly>
                     Kedarkala, an award-winning and highly-regarded interior
                     design studio in India, has long been known for its
                     exceptional designs and meticulous attention to detail. As
@@ -327,29 +328,24 @@ export default function kedarkala() {
                     continues to grow, Kedarkala sought to establish a robust
                     online presence that reflects its stellar reputation and
                     showcases its stunning portfolio.
-                  </h1>
+                  </h4>
                 </div>
 
                 <div className={styles.buttonBox}>
-                  <h1 data-cursor-size="30px" data-cursor-exclusion>
+                  <h6 data-cursor-size="30px" data-cursor-exclusion>
                     Branding
-                  </h1>
-                  <h1 data-cursor-size="30px" data-cursor-exclusion>
+                  </h6>
+                  <h6 data-cursor-size="30px" data-cursor-exclusion>
                     Web Design
-                  </h1>
+                  </h6>
                 </div>
               </div>
             </div>
-          </div>
-
+          </section>
           {/* ====================== Third Section END ======================== */}
 
-          <div className="space-large desktop"></div>
-          <div className={styles.ipad}></div>
-
           {/* ====================== Parallax Image =========================== */}
-
-          <div className={styles.imageSecondSection}>
+          <section className={styles.imageSection}>
             <div className={styles.imageBox} id="image-container">
               <img
                 src="/assets/casestudies/kedarkala/img2.webp"
@@ -358,33 +354,34 @@ export default function kedarkala() {
                 data-cursor-size="100px"
                 data-cursor-color="#0F1014"
                 data-cursor-text="Kedarkala"
+                alt="portfolio image"
               />
             </div>
-          </div>
-
+          </section>
           {/* ====================== Parallax Image  END ====================== */}
-          <div className="space-large desktop"></div>
+
+
           {/* ====================== Third Section ============================ */}
 
-          <div className={styles.patronumForthSection}>
+          <section className={styles.forthSection}>
             <div className={styles.forthSectionContent}>
               <div className={styles.forthSectionLeftBox}>
-                <h1 data-jelly>THE ASK</h1>
+                <h3 className={styles.h3} data-jelly>THE ASK</h3>
               </div>
               <div className={styles.forthSectionRightBox}>
                 <div className={styles.paraTop}>
-                  <h1 data-jelly>
+                  <h4 className={styles.h4} data-jelly>
                     Kedarkala's existing branding and website did not accurately
                     represent their brand value, nor did it effectively resonate
                     their extensive design portfolio.
-                  </h1>
-                  <h5 data-jelly>
+                  </h4>
+                  <p data-jelly>
                     The key challenges - First, Kedarkala's existing brand
                     identity was disconnected from the company's values and did
                     not accurately represent the level of sophistication and
                     elegance synonymous with their designs.
-                  </h5>
-                  <h5 data-jelly>
+                  </p>
+                  <p data-jelly>
                     The existing website's visual design failed to capture the
                     essence of Kedarkala's work, which is characterized by its
                     creativity, sophistication, and innovation. A complete
@@ -393,8 +390,8 @@ export default function kedarkala() {
                     users to navigate and find the information they were
                     seeking. A more intuitive architecture was necessary to
                     enhance the user experience and promote visitor engagement.
-                  </h5>
-                  <h5 data-jelly>
+                  </p>
+                  <p data-jelly>
                     Moreover, Kedarkala's website did not perform well on mobile
                     devices, which was detrimental to their online visibility
                     and user satisfaction. The website's loading times were
@@ -402,23 +399,24 @@ export default function kedarkala() {
                     contributed to a high bounce rate. Improving site
                     performance was crucial to retain visitors and converting
                     them into potential clients.
-                  </h5>
+                  </p>
                 </div>
               </div>
             </div>
-          </div>
+          </section>
 
           {/* ====================== Third Section END ======================== */}
 
-          <div className="space-large desktop"></div>
 
           {/* ========================== The LOGO Section =========================== */}
 
-          <div className={styles.logoSection}>
+          <section className={styles.logoSection}>
             <div className={styles.logoImageSection}>
               <div className={styles.firstLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
-                  <img
+                  <Image
+                    width={1000}
+                    height={1000}
                     src="/assets/casestudies/kedarkala/web1.webp"
                     alt="Logo"
                     data-cursor-color="#0F1014"
@@ -428,14 +426,12 @@ export default function kedarkala() {
                     onMouseOut={(e) => handleHoverExit(e)}
                   />
                 </div>
-                {/* <h1>
-                  The minimalist, modern branding had a playful and vibrant
-                  feel.
-                </h1> */}
               </div>
               <div className={styles.secondLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
-                  <img
+                  <Image
+                    width={1000}
+                    height={1000}
                     src="/assets/casestudies/kedarkala/web2.webp"
                     alt="Logo"
                     data-cursor-color="#0F1014"
@@ -445,17 +441,15 @@ export default function kedarkala() {
                     onMouseOut={(e) => handleHoverExit(e)}
                   />
                 </div>
-                {/* <h1>
-                  The logo, a letter "P" made of four triangles, was based on a
-                  hexagonal shape with rounded corners in shades of blue.{" "}
-                </h1> */}
               </div>
             </div>
 
             <div className={styles.logoImageSectionSecond}>
               <div className={styles.firstLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
-                  <img
+                  <Image
+                    width={1000}
+                    height={1000}
                     src="/assets/casestudies/kedarkala/web3.webp"
                     alt="Logo"
                     data-cursor-color="#0F1014"
@@ -468,7 +462,9 @@ export default function kedarkala() {
               </div>
               <div className={styles.secondLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
-                  <img
+                  <Image
+                    width={1000}
+                    height={1000}
                     src="/assets/casestudies/kedarkala/web4.webp"
                     alt="Logo"
                     data-cursor-color="#0F1014"
@@ -480,43 +476,27 @@ export default function kedarkala() {
                 </div>
               </div>
             </div>
-          </div>
+          </section>
 
           {/* ========================== The LOGO Section END ======================= */}
 
-          <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
-
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-
-          <div className={styles.ipad}></div>
 
           {/* ====================== FOURTH Section ============================ */}
 
-          <div className={styles.patronumForthSection}>
+          <section className={styles.forthSection}>
             <div className={styles.forthSectionContent}>
               <div className={styles.forthSectionLeftBox}>
-                <h1 data-jelly>Our Approach</h1>
+                <h3 className={styles.h3} data-jelly>Our Approach</h3>
               </div>
               <div className={styles.forthSectionRightBox}>
                 <div className={styles.paraTop}>
-                  <h1 data-jelly>
+                  <h4 className={styles.h4}>
                     Understanding the importance of a cohesive brand identity
                     and a seamless user experience, Enigma adopted a holistic
                     approach to Kedarkala's digital transformation. This
                     approach included:
-                  </h1>
-                  <h5 data-jelly>
+                  </h4>
+                  <p data-jelly>
                     <strong>A. Collaborative Discovery: </strong>We initiated a
                     series of workshops and brainstorming sessions with
                     Kedarkala's team to gain a deep understanding of their brand
@@ -524,16 +504,16 @@ export default function kedarkala() {
                     process laid the foundation for a new brand identity and
                     website design that accurately represented Kedarkala's
                     essence.
-                  </h5>
-                  <h5 data-jelly>
+                  </p>
+                  <p data-jelly>
                     <strong>B. Immersive Storytelling: </strong>
                     To make the website engaging and fun, Enigma focused on
                     crafting an immersive narrative that showcases Kedarkala's
                     unique design approach and commitment to excellence. This
                     storytelling approach allowed users to feel connected to the
                     brand and encouraged them to explore the website further.
-                  </h5>
-                  <h5 data-jelly>
+                  </p>
+                  <p data-jelly>
                     <strong>C. Intuitive Information Architecture: </strong>
                     We restructured the website's information architecture,
                     ensuring that visitors could effortlessly navigate the site
@@ -541,8 +521,8 @@ export default function kedarkala() {
                     architecture also allowed Kedarkala to effectively showcase
                     their diverse portfolio, making it a focal point of the
                     website.
-                  </h5>
-                  <h5 data-jelly>
+                  </p>
+                  <p data-jelly>
                     <strong>D. Built with End User Experience in mind: </strong>
                     Recognizing the importance of mobile devices in today's
                     digital landscape, Enigma developed a fully responsive
@@ -550,21 +530,24 @@ export default function kedarkala() {
                     and screen sizes, and a no-break experience for the entire
                     website while moving from one page to another, ensuring a
                     seamless user experience for all visitors.
-                  </h5>
+                  </p>
                 </div>
               </div>
             </div>
-          </div>
+          </section>
 
-          <div className="space-large desktop"></div>
+          {/* ====================== FOURTH Section END ============================ */}
+
 
           {/* ========================== The LOGO Section =========================== */}
 
-          <div className={styles.logoSection}>
+          <section className={styles.logoSection}>
             <div className={styles.logoImageSection}>
               <div className={styles.firstLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
-                  <img
+                  <Image
+                    width={1000}
+                    height={1000}
                     src="/assets/casestudies/kedarkala/web5.webp"
                     alt="Logo"
                     data-cursor-color="#0F1014"
@@ -574,14 +557,12 @@ export default function kedarkala() {
                     onMouseOut={(e) => handleHoverExit(e)}
                   />
                 </div>
-                {/* <h1>
-                  The minimalist, modern branding had a playful and vibrant
-                  feel.
-                </h1> */}
               </div>
               <div className={styles.secondLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
-                  <img
+                  <Image
+                    width={1000}
+                    height={1000}
                     src="/assets/casestudies/kedarkala/web7.webp"
                     alt="Logo"
                     data-cursor-color="#0F1014"
@@ -591,17 +572,15 @@ export default function kedarkala() {
                     onMouseOut={(e) => handleHoverExit(e)}
                   />
                 </div>
-                {/* <h1>
-                  The logo, a letter "P" made of four triangles, was based on a
-                  hexagonal shape with rounded corners in shades of blue.{" "}
-                </h1> */}
               </div>
             </div>
 
             <div className={styles.logoImageSectionSecond}>
               <div className={styles.firstLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
-                  <img
+                  <Image
+                    width={1000}
+                    height={1000}
                     src="/assets/casestudies/kedarkala/web6.webp"
                     alt="Logo"
                     data-cursor-color="#0F1014"
@@ -614,7 +593,9 @@ export default function kedarkala() {
               </div>
               <div className={styles.secondLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
-                  <img
+                  <Image
+                    width={1000}
+                    height={1000}
                     src="/assets/casestudies/kedarkala/web8.webp"
                     alt="Logo"
                     data-cursor-color="#0F1014"
@@ -626,36 +607,20 @@ export default function kedarkala() {
                 </div>
               </div>
             </div>
-          </div>
+          </section>
 
           {/* ========================== The LOGO Section END ======================= */}
-
-          <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
-
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-
+          
           {/* ====================== Fonts Section ======================== */}
-
-          <div className={styles.fontSection} id="kedar-font-section">
-            <div className={styles.fontHeading}>
-              <h1>Typography</h1>
+          <section className={styles.kedarfontSection}>
+            <div className={styles.kedarfontHeading}>
+              <h2 className={styles.h2} >Typography</h2>
             </div>
             <div className={styles.kedarfontImagebox}>
               <img
                 src="/assets/casestudies/kedarkala/typo-img.png"
                 alt="Fonts"
-                className={styles.typoImgFirst}
+                className={styles.kedartypoImgFirst}
                 id="kedar-font-img"
               />
               <img
@@ -664,50 +629,45 @@ export default function kedarkala() {
                 id="kedar-font-img"
               />
             </div>
-          </div>
+          </section>
+          {/* ====================== Fonts Section END ====================*/}
 
-          {/* ====================== Fonts Section END ==================== */}
-
-          <div className="space-large desktop"></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.ipad}></div>
-
-          {/* ====================== Forth Section ======================== */}
-
-          <div className={styles.videoHeading}>
-            <h1>Kedarkala Interior Design Studio </h1>
-          </div>
-          <div className={styles.videoForthSection}>
-            <div className={styles.videoContainer} id="video-container">
-              <video
-                src="/assets/casestudies/kedarkala/kedarkala.webm"
-                autoPlay
-                loop
-                muted
-              />
+          {/* ====================== Video Section ======================== */}
+          <section className={styles.videoSection}>
+            <div className={styles.videoHeading}>
+              <h2 className={styles.videoH2}>Kedarkala<br/>Interior Design Studio</h2>
             </div>
-          </div>
-
-          {/* ====================== Forth Section END ======================== */}
-
-          <div className="space-large desktop"></div>
+            <div className={styles.videoMainSection}>
+              <div className={styles.videoContainer} id="video-container">
+                <video
+                    src="/assets/casestudies/kedarkala/kedarkala.webm"
+                    autoPlay
+                    loop
+                    muted
+                    alt='kedarkala video'
+                />
+              </div>
+            </div>
+          </section>
+          
+          {/* ====================== Video Section END ======================== */}
 
           {/* ====================== Forth Section  ======================== */}
 
-          <div className={styles.patronumForthSection}>
+          <section className={styles.forthSection}>
             <div className={styles.forthSectionContent}>
               <div className={styles.forthSectionLeftBox}>
-                <h1 data-jelly>TECH STACK</h1>
+                <h3 className={styles.h3} data-jelly>Tech Stack</h3>
               </div>
               <div className={styles.forthSectionRightBox}>
                 <div className={styles.paraTop}>
-                  <h5 data-jelly>
+                  <p data-jelly>
                     Enigma utilized a robust technology stack to create a
                     cutting-edge website that would not only look stunning but
                     also perform optimally. The chosen technologies included
                     HTML5, CSS3, JavaScript, jQuery & GSAP.
-                  </h5>
-                  <h5 data-jelly>
+                  </p>
+                  <p data-jelly>
                     HTML and CSS were used to create the structure and layout of
                     the site. Our team of coding wizards crafted clean and
                     semantic code that was both search engine friendly and
@@ -717,47 +677,45 @@ export default function kedarkala() {
                     engaging user experience. This choice allowed for
                     captivating motion effects that kept users engaged and
                     immersed in Kedarkala's narrative.
-                  </h5>
+                  </p>
                 </div>
               </div>
             </div>
-          </div>
+          </section>
 
           {/* ====================== Forth Section  ======================== */}
 
-          <div className="space-large desktop"></div>
-
           {/* ====================== Parallax Image Second =========================== */}
 
-          <div className={styles.imageSecondSection}>
+          <section className={styles.imageSection}>
             <div className="image-anim">
               <div className={styles.imageBox} id="image-container">
-                <img
-                  src="/assets/casestudies/kedarkala/img3.webp"
-                  className={styles.img}
-                  id="img"
-                  data-cursor-size="100px"
-                  data-cursor-color="#0F1014"
-                  data-cursor-text="Kedarkala"
-                />
+                  <img
+                    src="/assets/casestudies/kedarkala/img3.webp"
+                    className={styles.img}
+                    id="img"
+                    data-cursor-size="100px"
+                    data-cursor-color="#0F1014"
+                    data-cursor-text="Kedarkala"
+                  alt="portfolio image"
+
+                  />
               </div>
             </div>
-          </div>
+          </section>
 
           {/* ====================== Parallax Image Second  END ====================== */}
 
-          <div className="space-large desktop"></div>
-
           {/* ====================== FOURTH Section ============================ */}
 
-          <div className={styles.patronumForthSection}>
+          <section className={styles.forthSection}>
             <div className={styles.forthSectionContent}>
               <div className={styles.forthSectionLeftBox}>
-                <h1 data-jelly>THE RESULT</h1>
+                <h3 className={styles.h3} data-jelly>THE RESULT</h3>
               </div>
               <div className={styles.forthSectionRightBox}>
                 <div className={styles.paraTop}>
-                  <h5 data-jelly>
+                  <p data-jelly>
                     The collaboration between Enigma and Kedarkala yielded a
                     visually stunning and highly functional website that
                     accurately represented Kedarkala's brand identity and
@@ -768,27 +726,25 @@ export default function kedarkala() {
                     The revamped information architecture and intuitive
                     navigation resulted in a significant increase in user
                     engagement and overall satisfaction.
-                  </h5>
-                  <h5 data-jelly>
+                  </p>
+                  <p data-jelly>
                     The combination of engaging storytelling, captivating
                     design, and seamless user experience with improved mobile
                     responsiveness and search engine optimization, led to a
                     surge in organic traffic and increased visibility online
                     which further contributed to an increase in leads and
                     conversion rates for Kedarkala.
-                  </h5>
+                  </p>
                 </div>
               </div>
             </div>
-          </div>
+          </section>
 
           {/* ====================== Fourth Section END ======================== */}
 
-          <div className="space-large desktop"></div>
-
           {/* ====================== Parallax Image Second =========================== */}
 
-          <div className={styles.imageSecondSection}>
+          <section className={styles.imageSection}>
             <div className="image-anim">
               <div className={styles.imageBox} id="image-container">
                 <img
@@ -797,61 +753,61 @@ export default function kedarkala() {
                   id="img"
                   data-cursor-size="100px"
                   data-cursor-color="#0F1014"
+                  alt="portfolio image"
                   data-cursor-text="Kedarkala"
                 />
               </div>
             </div>
-          </div>
+          </section>
 
           {/* ====================== Parallax Image Second  END ====================== */}
 
           {/* ====================== Client Section ============================ */}
 
-          <div className="space-large desktop"></div>
 
-          <div className={styles.patronumForthSection}>
+          <section className={styles.clientTestimonialSection}>
             <div className={styles.clientTestimonialSectionContent}>
               <div className={styles.clientTestimonialSectionLeftBox}>
-                <h1 data-jelly>WORDS FROM THE CLIENT</h1>
+                <h3 data-jelly>WORDS FROM THE CLIENT</h3>
               </div>
               <div className={styles.clientTestimonialSectionRightBox}>
                 <div className={styles.clientTestimonialparaTop}>
-                  <h1 data-jelly>
+                  <h4 data-jelly>
                     <span className={styles.clientTestimonialSpan2}>“</span>
-                    We couldn't be more thrilled with the outcome of our
-                    collaboration with Enigma. Their unconventional approach and
-                    attention to detail allowed them to create a website that
-                    truly reflects our brand's essence and showcases our work in
-                    the best possible light. The new website has not only
-                    improved our online presence but has also significantly
-                    increased our leads and conversions. We highly recommend
-                    Enigma to any business looking for a top-notch branding and
-                    website development partner.
-                  </h1>
+                        We couldn't be more thrilled with the outcome of our
+                        collaboration with Enigma. Their unconventional approach and
+                        attention to detail allowed them to create a website that
+                        truly reflects our brand's essence and showcases our work in
+                        the best possible light. The new website has not only
+                        improved our online presence but has also significantly
+                        increased our leads and conversions. We highly recommend
+                        Enigma to any business looking for a top-notch branding and
+                        website development partner.
+                  </h4>
                 </div>
                 <div
                   className={styles.clientTestimonialSectionBottomBox}
                   data-jelly
                 >
                   <div className={styles.clientTestimonialSectionFigure}>
-                    <img src="/assets/casestudies/kedarkala/kedarclient.webp"></img>
+                    <img src="/assets/casestudies/kedarkala/kedarclient.webp"
+                            alt="client img">
+                    </img>
                   </div>
                   <div className={styles.clientTestimonialSectionFigureText}>
-                    <h5>
-                      Shraddha Kasaudhan
+                    <h4>
+                        Shraddha Kasaudhan
                       <br />
                       <span className={styles.clientTestimonialSpan}>
                         Founder & CEO, Kedarkala Design Studios
                       </span>
-                    </h5>
+                    </h4>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+          </section>
 
-          <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
 
           {/* ====================== Client Section END ======================== */}
 
@@ -862,7 +818,6 @@ export default function kedarkala() {
 
           {/* ========================== Next Project END ======================= */}
 
-          <div className={styles.mobile}></div>
 
           {/* ================ Next Project Mobile ============================== */}
 
@@ -872,7 +827,7 @@ export default function kedarkala() {
                 <h1>next up</h1>
               </div>
               <div className={styles.nextProjectHeading}>
-                <Link href="/patronum">
+                <Link href="/projects/patronum">
                   <h1>Patronum</h1>
                 </Link>
               </div>
@@ -881,17 +836,14 @@ export default function kedarkala() {
 
           {/* ================ Next Project Mobile ============================== */}
 
-          <div className={styles.mobile}></div>
-
           {/* ======================== Footer ====================== */}
-          <div className="desktop-footer" id={styles.ipad}>
+          <section className="desktop-footer">
             <Footer />
-          </div>
+          </section>
 
-          <div className="mobile-footer">
+          <section className="mobile-footer">
             <FooterMobile />
-          </div>
-
+          </section>
           {/* ======================== Footer END ====================== */}
         </div>
       </main>

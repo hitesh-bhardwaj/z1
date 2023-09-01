@@ -166,7 +166,7 @@ const SmoothScroll = () => {
   useEffect(() => {
     const view = document.body; //` Declare View Reference
     const settings = {
-      damping: 0.05,
+      damping: 0.04,
       thumbMinSize: 5,
       renderByPixels: true,
       delegateTo: document,

@@ -13,8 +13,13 @@ import SmoothScroll from "@/components/utils/SmoothScroll";
 import Footer from "@/components/Footer";
 import FooterMobile from "@/components/Mobile/FooterMobile";
 import WragbySlider from "@/components/CaseStudies/WragbySlider";
+import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
+
+gsap.config({
+  nullTargetWarn: false,
+});
 
 // Hover on the link
 const handleHover = (e) => {
@@ -233,7 +238,7 @@ export default function patra() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"
+          content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
         ></meta>
         <link rel="icon" href="/fav-icon.png" />
       </Head>
@@ -262,11 +267,9 @@ export default function patra() {
         </div>
 
         <div className={styles.Main}>
-          <div
-            className={styles.HeroSection}
-            data-cursor-text=""
-            data-cursor-size="10px"
-          >
+          {/*Section 1  */}
+          <section
+            className={styles.HeroSection}>
             <div className={styles.mainSubSection}>
               <div className={styles.HeroLeftBox} data-jelly>
                 <div
@@ -275,14 +278,12 @@ export default function patra() {
                   data-cursor-color="#436AD6"
                   data-cursor-text="Visit!"
                 >
-                  <Link
-                    href="https://certvault.org/"
-                    target="_blank"
-                    className={styles.Link}
-                  >
-                    <button className={styles.linkButton}>certvault.org</button>
+                  <Link href="https://certvault.org/" target="_blank" className={styles.Link}>
+                    certvault.org
                     <span className={styles.linkSvg}>
-                      <img
+                      <Image
+                        width={20}
+                        height={20}
                         src="/assets/casestudies/Vector.svg"
                         alt="Svg"
                         id="case-study-arrow"
@@ -291,24 +292,22 @@ export default function patra() {
                   </Link>
                 </div>
                 <h1 id="patro">
-                  CertVault a cloud-based
-                  <br /> certificate repository
+                  Swiss Army Knife <br /> for Google Workspace
                 </h1>
               </div>
               <div className={styles.HeroRightBox}>
-                <h1 className={styles.work} id="patroSub">
+                <h5 className={styles.work} id="patroSub">
                   SAAS
-                </h1>
-                <h1 className={styles.year} id="patroSub">
-                  2019-20
-                </h1>
+                </h5>
+                <h5 className={styles.year} id="patroSub">
+                  2019
+                </h5>
               </div>
             </div>
-          </div>
+          </section>
 
           {/* ====================== Parallax Image Second =========================== */}
-
-          <div className={styles.imageSecondSection}>
+          <section className={styles.imageSection}>
             <div className="image-anim">
               <div className={styles.imageBox} id="image-container">
                 <img
@@ -316,134 +315,140 @@ export default function patra() {
                   className={styles.img}
                   id="img"
                   data-cursor-size="100px"
+                  alt="portfolio image"
                   data-cursor-color="#436AD6"
                   data-cursor-text="Patra"
                 />
               </div>
             </div>
-          </div>
-
+          </section>
           {/* ====================== Parallax Image Second  END ====================== */}
 
-          <div className="space-large desktop"></div>
-          <div className={styles.ipad}></div>
-
           {/* ====================== Third Section ============================ */}
-
-          <div className={styles.patronumThirdSection}>
+          <section className={styles.thirdSection}>
             <div className={styles.thirdSectionContent}>
               <div className={styles.thirdSectionLeftBox}>
-                <h1 data-jelly>Overview</h1>
+                <h3 className={styles.h3} data-jelly>THE CLIENT</h3>
               </div>
               <div className={styles.thirdSectionRightBox}>
                 <div className={styles.paraTop}>
-                  <h1 data-jelly>
-                    Patronum streamlines Google Workplace™ management by
+                  <h4 className={styles.h4} data-jelly>
+                    Patronum was developed by Bespin Labs as an exclusive Google
+                    Workplace™ management tool. With an intuitive and powerful
+                    interface and advanced automation, it gives IT
+                    administrators all the tools they’ll ever need to
+                    effectively manage their user life cycle and data including
                     automating repetitive tasks such as email signature
                     management, contact sharing, and drive management.
-                  </h1>
+                  </h4>
                 </div>
 
                 <div className={styles.buttonBox}>
-                  <h1 data-cursor-size="30px" data-cursor-exclusion>
-                    Web Design
-                  </h1>
-                  <h1 data-cursor-size="30px" data-cursor-exclusion>
+                  <h6 data-cursor-size="30px" data-cursor-exclusion>
                     Branding
-                  </h1>
-                  <h1 data-cursor-size="30px" data-cursor-exclusion>
+                  </h6>
+                  <h6 data-cursor-size="30px" data-cursor-exclusion>
+                    Web Design
+                  </h6>
+                  <h6 data-cursor-size="30px" data-cursor-exclusion>
                     Marketing
-                  </h1>
+                  </h6>
                 </div>
               </div>
             </div>
-          </div>
-
+          </section>
           {/* ====================== Third Section END ======================== */}
 
-          <div className={styles.ipad}></div>
-          <div className="space-large desktop"></div>
-
           {/* ====================== Parallax Image =========================== */}
-
-          <div className={styles.imageSecondSection}>
+          <section className={styles.imageSection}>
             <div className={styles.imageBox} id="image-container">
-              <figure className={styles.figure}>
-                <img
+              <img
                   src="/assets/casestudies/patra/img2.png"
                   className={styles.img}
                   id="img"
                   data-cursor-size="100px"
+                  alt="portfolio image"
                   data-cursor-color="#436AD6"
                   data-cursor-text="Patra"
-                />
-              </figure>
+              />
             </div>
-          </div>
-
+          </section>
           {/* ====================== Parallax Image  END ====================== */}
 
-          <div className="space-large desktop"></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.ipad}></div>
 
           {/* ====================== Third Section ============================ */}
 
-          <div className={styles.patronumForthSection}>
+          <section className={styles.forthSection}>
             <div className={styles.forthSectionContent}>
               <div className={styles.forthSectionLeftBox}>
-                <h1 data-jelly>THE ASK</h1>
+                <h3 className={styles.h3} data-jelly>THE ASK</h3>
               </div>
               <div className={styles.forthSectionRightBox}>
                 <div className={styles.paraTop}>
-                  <h1 data-jelly>
-                    As the project commenced, both teams found themselves facing
-                    obstacles that tested their creativity, technical expertise,
-                    and resilience.
-                  </h1>
-                  <h5 data-jelly className={styles.marginBottom}>
-                    While Wragby's vision was as clear as a cloudless sky, the
-                    challenges were as daunting as climbing Mount Everest in
-                    flip-flops. The first hurdle: creating a website that
-                    encapsulated Wragby's awe-inspiring ingenuity without
-                    getting lost in the vortex of technical jargon. With
-                    Wragby's extensive portfolio of innovative solutions, the
-                    task of organizing and presenting the information in a
-                    digestible format was like trying to solve a Rubik's cube
-                    blindfolded.
-                  </h5>
-                  <h5 data-jelly className={styles.marginBottom}>
-                    The second challenge: designing a user experience that even
-                    your tech-averse grandma could navigate with ease. In a
-                    world where attention spans rival those of goldfish, the
-                    website needed to be engaging, intuitive, and snappy while
-                    showcasing Wragby's complex offerings without overwhelming
-                    users.
-                  </h5>
-                  <h5 data-jelly>
-                    And lastly, developing a site that could handle the constant
-                    flux of innovative content. Wragby's brilliance knows no
-                    bounds, and their website needed to be a living, breathing
-                    entity, capable of adapting and growing alongside the
-                    company.
-                  </h5>
+                  <h4 className={styles.h4} data-jelly>
+                    The founding team at Patronum was on a quest to create a
+                    brand and online presence that would turn heads and drop
+                    jaws faster than a cheetah chasing its prey.
+                  </h4>
+                  <p data-jelly>
+                    They sought a digital partner that could not only help them
+                    navigate the treacherous waters of branding and web
+                    development but also help them create a lasting impression
+                    in the competitive SaaS arena. Hence, Patronum teamed up
+                    with Enigma to craft a brand identity and website that would
+                    shoot Patronum straight to the moon and beyond. Enigma's
+                    team of branding & design maestros, never one to shy away
+                    from a challenge, donned their digital superhero capes and
+                    embarked on a whirlwind adventure of ingenuity and pixel
+                    wizardry that would have made even Doctor Strange envious.
+                  </p>
+                  <p data-jelly>
+                    The road to stellar branding and web development was paved
+                    with challenges as steep as the Cliffs of Moher. First, We
+                    had to capture the essence of Patronum's innovative SaaS
+                    solutions and translate it into a brand identity that would
+                    turn heads and drop jaws. This was no easy feat, as
+                    Patronum's solutions were as diverse as the colors in a
+                    rainbow, and distilling their unique value proposition into
+                    a cohesive brand narrative was akin to herding cats.
+                  </p>
+                  <p data-jelly>
+                    Second, Enigma had to design a website that would guide
+                    users through the labyrinth of Patronum's offerings, all
+                    while making it look like a walk in the park. The website
+                    needed to strike a balance between visual appeal, user
+                    experience, and performance, ensuring that users could
+                    explore Patronum's solution offerings without getting lost
+                    in a maze of complexity. In a world where the competition
+                    for users' attention is fiercer than a cage match between
+                    gladiators, Patronum's website had to be nothing short of a
+                    digital masterpiece.
+                  </p>
+                  <p data-jelly>
+                    Lastly, the website needed to be built on a solid foundation
+                    that could accommodate the constant evolution and growth of
+                    Patronum's solutions. The team at Patronum was constantly
+                    churning out new features and offerings, and their website
+                    needed to be agile enough to keep pace with their product's
+                    relentless innovation.
+                  </p>
                 </div>
               </div>
             </div>
-          </div>
+          </section>
 
           {/* ====================== Third Section END ======================== */}
 
-          {/* <div className="space-large desktop"></div> */}
-          <div className="space-large desktop"></div>
 
           {/* ========================== The LOGO Section =========================== */}
 
-          <div className={styles.logoSection}>
+          <section className={styles.logoSection}>
             <div className={styles.logoImageSection}>
               <div className={styles.firstLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
-                  <img
+                  <Image
+                    width={1000}
+                    height={1000}
                     src="/assets/casestudies/patra/img-m1.png"
                     alt="Logo"
                     data-cursor-color="#436AD6"
@@ -453,14 +458,12 @@ export default function patra() {
                     onMouseOut={(e) => handleHoverExit(e)}
                   />
                 </div>
-                {/* <h1>
-                  The minimalist, modern branding had a playful and vibrant
-                  feel.
-                </h1> */}
               </div>
               <div className={styles.secondLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
-                  <img
+                  <Image
+                    width={1000}
+                    height={1000}
                     src="/assets/casestudies/patra/img-m2.png"
                     alt="Logo"
                     data-cursor-color="#436AD6"
@@ -470,17 +473,15 @@ export default function patra() {
                     onMouseOut={(e) => handleHoverExit(e)}
                   />
                 </div>
-                {/* <h1>
-                  The logo, a letter "P" made of four triangles, was based on a
-                  hexagonal shape with rounded corners in shades of blue.{" "}
-                </h1> */}
               </div>
             </div>
 
             <div className={styles.logoImageSectionSecond}>
               <div className={styles.firstLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
-                  <img
+                  <Image
+                    width={1000}
+                    height={1000}
                     src="/assets/casestudies/patra/img-m3.png"
                     alt="Logo"
                     data-cursor-color="#436AD6"
@@ -493,7 +494,9 @@ export default function patra() {
               </div>
               <div className={styles.secondLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
-                  <img
+                  <Image
+                    width={1000}
+                    height={1000}
                     src="/assets/casestudies/patra/img-m4.png"
                     alt="Logo"
                     data-cursor-color="#436AD6"
@@ -505,88 +508,57 @@ export default function patra() {
                 </div>
               </div>
             </div>
-          </div>
+          </section>
 
           {/* ========================== The LOGO Section END ======================= */}
 
-          <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
-
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
 
           {/* ====================== FOURTH Section ============================ */}
 
-          <div className={styles.patronumForthSection}>
+          <section className={styles.forthSection}>
             <div className={styles.forthSectionContent}>
               <div className={styles.forthSectionLeftBox}>
-                <h1 data-jelly>Our Approach</h1>
+                <h3 className={styles.h3} data-jelly>Our Approach</h3>
               </div>
               <div className={styles.forthSectionRightBox}>
                 <div className={styles.paraTop}>
-                  <h5 data-jelly className={styles.marginBottom}>
-                    We decided to play by our own rulebook, tossing conventional
-                    wisdom out the window like an old Nokia brick phone. We
-                    began with a deep dive into Wragby's psyche, absorbing their
-                    every quirk and vision like a sponge in the depths of the
-                    ocean. This immersion allowed our team to channel Wragby's
-                    innovative spirit into every aspect of the website.
-                  </h5>
-                  <h5 data-jelly className={styles.marginBottom}>
-                    Next, we concocted a design so visually alluring, it could
-                    make the Sirens of Greek mythology green with envy. The
-                    design featured bold colors, futuristic layouts, and
-                    interactive elements that turned the website into a digital
-                    playground, inviting users to explore and discover Wragby's
-                    groundbreaking solutions.
-                  </h5>
-                  <h5 data-jelly className={styles.marginBottom}>
-                    Then we addressed the challenge of presenting complex
-                    information in a digestible manner. We employed storytelling
-                    techniques, weaving Wragby's technical offerings into
-                    engaging narratives that humanized the company and connected
-                    with users on an emotional level. This approach transformed
-                    what could have been a maze of jargon into a thrilling
-                    odyssey through the world of technology.
-                  </h5>
-                  <h5 data-jelly>
-                    And finally, Enigma took a page out of Wragby's book,
-                    deploying agile development methodologies to ensure the
-                    website could grow and evolve with the company like a
-                    chameleon on steroids. This strategy allowed the site to
-                    flex and adapt to Wragby's ever-expanding portfolio of
-                    innovative solutions, ensuring it remained a showcase of
-                    their cutting-edge expertise.
-                  </h5>
+                  <p data-jelly>
+                    Like bees to honey, we were drawn to Patronum's unique
+                    vision and decided to take the road less traveled. We began
+                    by delving deep into Patronum's core values, extracting the
+                    golden nectar that would become the foundation of their
+                    brand identity. Armed with this valuable insight, our team
+                    of branding wizards concocted a visual potion that would
+                    resonate with the brand and capture the hearts and minds of
+                    Patronum's target audience. The resulting brand identity was
+                    a symphony of visual elements that told Patronum's story
+                    with grace and elegance.
+                  </p>
+                  <p data-jelly>
+                    For the website, we employed a user-centric approach,
+                    crafting an information architecture that was intuitive and
+                    would feel like a guided wizard tour to the entire website.
+                    We transformed complex wireframes into breathtaking page
+                    designs, ensuring each element sang in harmony with
+                    Patronum's newfound brand identity.
+                  </p>
                 </div>
               </div>
             </div>
-          </div>
+          </section>
 
-          {/* ====================== Fourth Section END ======================== */}
+          {/* ====================== FOURTH Section END ============================ */}
 
-          <div className="space-large desktop"></div>
 
           {/* ========================== The LOGO Section =========================== */}
 
-          <div className={styles.logoSection}>
+          <section className={styles.logoSection}>
             <div className={styles.logoImageSection}>
               <div className={styles.firstLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
-                  <img
+                  <Image
+                    width={1000}
+                    height={1000}
                     src="/assets/casestudies/patra/img-m5.png"
                     alt="Logo"
                     data-cursor-color="#436AD6"
@@ -596,14 +568,12 @@ export default function patra() {
                     onMouseOut={(e) => handleHoverExit(e)}
                   />
                 </div>
-                {/* <h1>
-                  The minimalist, modern branding had a playful and vibrant
-                  feel.
-                </h1> */}
               </div>
               <div className={styles.secondLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
-                  <img
+                  <Image
+                    width={1000}
+                    height={1000}
                     src="/assets/casestudies/patra/img-m6.png"
                     alt="Logo"
                     data-cursor-color="#436AD6"
@@ -613,17 +583,15 @@ export default function patra() {
                     onMouseOut={(e) => handleHoverExit(e)}
                   />
                 </div>
-                {/* <h1>
-                  The logo, a letter "P" made of four triangles, was based on a
-                  hexagonal shape with rounded corners in shades of blue.{" "}
-                </h1> */}
               </div>
             </div>
 
             <div className={styles.logoImageSectionSecond}>
               <div className={styles.firstLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
-                  <img
+                  <Image
+                    width={1000}
+                    height={1000}
                     src="/assets/casestudies/patra/img-m7.png"
                     alt="Logo"
                     data-cursor-color="#436AD6"
@@ -636,7 +604,9 @@ export default function patra() {
               </div>
               <div className={styles.secondLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
-                  <img
+                  <Image
+                    width={1000}
+                    height={1000}
                     src="/assets/casestudies/patra/img-m8.png"
                     alt="Logo"
                     data-cursor-color="#436AD6"
@@ -648,32 +618,14 @@ export default function patra() {
                 </div>
               </div>
             </div>
-          </div>
+          </section>
 
           {/* ========================== The LOGO Section END ======================= */}
-          <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
-
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.mobile}></div>
-
+          
           {/* ====================== Fonts Section ======================== */}
-          <div className={styles.fontSection}>
+          <section className={styles.fontSection}>
             <div className={styles.fontHeading}>
-              <h1>Fonts</h1>
+              <h2 className={styles.h2} >Fonts</h2>
             </div>
             <div className={styles.fontImagebox}>
               <img
@@ -689,24 +641,21 @@ export default function patra() {
                 id="fonts-dark-casestudy"
               />
             </div>
-          </div>
+          </section>
           {/* ====================== Fonts Section END ==================== */}
 
-          <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
 
           {/* ====================== COLORS Section ==================== */}
 
-          <div className={styles.colorSection} id="colorsection">
+          <section className={styles.colorSection} id="colorsection">
             <div className={styles.colorHeading}>
-              <h1>COLORS</h1>
+              <h2 className={styles.h2} >Colors</h2>
             </div>
             <div className={styles.colorBox}>
               <div className={styles.colorBoxHeadingBackground}>
-                <h2 data-speed="1.5">
+                <h1 data-speed="1.5">
                   Colour <br /> Palette
-                </h2>
+                </h1>
               </div>
             </div>
 
@@ -729,214 +678,137 @@ export default function patra() {
                 </li>
               </ul>
             </div>
-          </div>
+          </section>
 
           {/* ====================== COLORS Section END ==================== */}
 
-          <div className="space-large desktop"></div>
-          <div className={styles.mobile}></div>
 
-          {/* ====================== Fonts Section ======================== */}
-
-          {/* <div className={styles.fontSection}>
-            <div className={styles.fontHeading}>
-              <h1>Fonts</h1>
+          {/* ====================== Video Section ======================== */}
+          <section className={styles.videoSection}>
+            <div className={styles.videoHeading}>
+              <h2 className={styles.videoH2}>The Google <br/> Workspace Manager</h2>
             </div>
-            <div className={styles.fontImagebox}>
-              <img
-                src="/assets/casestudies/certvault/font-typo.webp"
-                alt="Fonts"
-              />
+            <div className={styles.videoMainSection}>
+              <div className={styles.videoContainer} id="video-container">
+                <video
+                  src="/assets/casestudies/patra/patra.webm"
+                  autoPlay
+                  loop
+                  muted
+                  alt='patronum video'
+                />
+              </div>
             </div>
-          </div> */}
+          </section>
+          
+          {/* ====================== Video Section END ======================== */}
 
-          {/* ====================== Fonts Section END ==================== */}
+          {/* ====================== Forth Section  ======================== */}
 
-          {/* <div className={styles.ipad}></div>
-          <div className={styles.ipad}></div> */}
-
-          {/* ====================== COLORS Section ==================== */}
-
-          {/* <div className={styles.colorSection} id="colorsection">
-            <div className={styles.colorHeading}>
-              <h1>COLORS</h1>
-            </div>
-            <div className={styles.colorMainBox}>
-              <div className={styles.colorBox}>
-                <div className={styles.colorBoxHeadingBackground}>
-                  <h2 data-speed="1.3">
-                    Colour{" "}
-                    <span className={styles.palette} id="palette">
-                      Palette
-                    </span>
-                  </h2>
+          <section className={styles.forthSection}>
+            <div className={styles.forthSectionContent}>
+              <div className={styles.forthSectionLeftBox}>
+                <h3 className={styles.h3} data-jelly>Tech Stack</h3>
+              </div>
+              <div className={styles.forthSectionRightBox}>
+                <div className={styles.paraTop}>
+                  <p data-jelly>
+                  We opted for a proven technology stack that packed a punch:
+                  HTML, CSS, JS, jQuery, and WordPress. This powerful combo
+                  offered the perfect blend of flexibility, maintainability, and
+                  scalability. HTML and CSS laid the groundwork for the site's
+                  structure and visual appeal, while JavaScript and jQuery
+                  injected interactivity and panache, making the website as
+                  captivating as a Broadway show. WordPress, the pièce de
+                  résistance, provided a user-friendly content management system
+                  that empowered Patronum's team to easily update and manage their
+                  content as their product continued to evolve.
+                  </p>
                 </div>
               </div>
-
-              <div
-                className={styles.colorBoxesSection}
-                id="dark-mode-colors-casestudy"
-              >
-                <ul>
-                  <li className={styles.colorOne} id="line"></li>
-                  <li className={styles.colorTwo} id="line"></li>
-                  <li className={styles.colorThree} id="line"></li>
-                  <li className={styles.colorFour} id="line"></li>
-                  <li className={styles.colorFive} id="line"></li>
-                </ul>
-              </div>
             </div>
-          </div> */}
-
-          {/* ====================== COLORS Section END ==================== */}
-
-          {/* <div className="space-large desktop"></div>
-          <div className={styles.mobile}></div> */}
-
-          {/* ====================== Forth Section ======================== */}
-
-          <div className={styles.videoHeading}>
-            <h1>Certvault Website Design</h1>
-          </div>
-          <div className={styles.videoForthSection}>
-            <div className={styles.videoContainer} id="video-container">
-              <video
-                src="/assets/casestudies/patra/patra.webm"
-                autoPlay
-                loop
-                muted
-              />
-            </div>
-          </div>
-
-          {/* ====================== Forth Section END ======================== */}
-
-          <div className="space-large desktop"></div>
-          <div className={styles.ipad}></div>
+          </section>
 
           {/* ====================== Forth Section  ======================== */}
-
-          <div className={styles.websiteDesignSection}>
-            <div className={styles.leftBox}>
-              <h1>Technology Stack</h1>
-            </div>
-            <div className={styles.rightBox}>
-              <h1 data-jelly>
-                Enigma opted for a classic combo: HTML, CSS, JS, jQuery, and
-                WordPress. This dynamic quintet of technologies provided a
-                flexible, battle-tested foundation for Wragby's digital fortress
-                that could withstand the test of time. HTML and CSS laid the
-                groundwork for visual appeal, while JavaScript and jQuery
-                injected interactivity and flair, and WordPress offered a
-                user-friendly content management system for Wragby's
-                ever-evolving content needs.
-              </h1>
-            </div>
-          </div>
-
-          {/* ====================== Forth Section  ======================== */}
-
-          <div className="space-large desktop"></div>
-          <div className={styles.ipad}></div>
 
           {/* ====================== Parallax Image Second =========================== */}
 
-          <div className={styles.imageSecondSection}>
+          <section className={styles.imageSection}>
             <div className="image-anim">
               <div className={styles.imageBox} id="image-container">
-                <figure className={styles.figure}>
                   <img
                     src="/assets/casestudies/patra/img3.png"
                     className={styles.img}
                     id="img"
                     data-cursor-size="100px"
+                    alt="portfolio image"
                     data-cursor-color="#436AD6"
                     data-cursor-text="Patra"
                   />
-                </figure>
               </div>
             </div>
-          </div>
+          </section>
 
           {/* ====================== Parallax Image Second  END ====================== */}
 
-          <div className="space-large desktop"></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.ipad}></div>
-
           {/* ====================== FOURTH Section ============================ */}
 
-          <div className={styles.patronumForthSection}>
+          <section className={styles.forthSection}>
             <div className={styles.forthSectionContent}>
               <div className={styles.forthSectionLeftBox}>
-                <h1 data-jelly>THE RESULT</h1>
+                <h3 className={styles.h3} data-jelly>THE RESULT</h3>
               </div>
               <div className={styles.forthSectionRightBox}>
                 <div className={styles.paraTop}>
-                  <h5 data-jelly className={styles.marginBottom}>
-                    Wragby's innovative spirit now had a digital home that not
-                    only reflected its essence but also attracted talent,
-                    clients, and partners from across the African continent and
-                    beyond. The seamless user experience had users exploring the
-                    site with the enthusiasm of Indiana Jones on a treasure
-                    hunt, while the engaging narratives forged emotional
-                    connections that turned visitors into loyal clients.
-                  </h5>
-                  <h5 data-jelly>
-                    The website's ability to adapt and evolve alongside Wragby's
-                    growth ensured that the company's digital presence would
-                    remain relevant and impressive for years to come. The
-                    collaboration between Enigma Digital and Wragby Business
-                    Solutions produced a website that defied convention and set
-                    a new standard for digital excellence in the African
-                    technology landscape.
-                  </h5>
+                  <p data-jelly>
+                    Enigma's branding and web development triumph was nothing
+                    short of a digital magnum opus. Patronum's new brand
+                    identity radiated the company's innovative spirit, while the
+                    website guided users through a seamless journey of
+                    discovery. Their mesmerizing brand identity and website
+                    catapulted their online presence to stratospheric heights.
+                    With skyrocketing web traffic, lead generation, and
+                    conversions, Patronum's online presence is truly out of this
+                    world, boldly going where no SaaS company had gone before.
+                  </p>
                 </div>
               </div>
             </div>
-          </div>
+          </section>
 
           {/* ====================== Fourth Section END ======================== */}
 
-          <div className="space-large desktop"></div>
-          <div className={styles.ipad}></div>
-
           {/* ====================== Parallax Image Second =========================== */}
 
-          <div className={styles.imageSecondSection}>
+          <section className={styles.imageSection}>
             <div className="image-anim">
               <div className={styles.imageBox} id="image-container">
-                <figure className={styles.figure}>
-                  <img
+                <img
                     src="/assets/casestudies/patra/img4.png"
                     className={styles.img}
                     id="img"
                     data-cursor-size="100px"
+                    alt="portfolio image"
                     data-cursor-color="#436AD6"
                     data-cursor-text="Patra"
-                  />
-                </figure>
+                />
               </div>
             </div>
-          </div>
+          </section>
 
           {/* ====================== Parallax Image Second  END ====================== */}
 
           {/* ====================== Client Section ============================ */}
 
-          <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
-          <div className={styles.mobile}></div>
-          <div className={styles.ipad}></div>
 
-          <div className={styles.patronumForthSection}>
+          <section className={styles.clientTestimonialSection}>
             <div className={styles.clientTestimonialSectionContent}>
               <div className={styles.clientTestimonialSectionLeftBox}>
-                <h1 data-jelly>WORDS FROM THE CLIENT</h1>
+                <h3 data-jelly>WORDS FROM THE CLIENT</h3>
               </div>
               <div className={styles.clientTestimonialSectionRightBox}>
                 <div className={styles.clientTestimonialparaTop}>
-                  <h1 data-jelly>
+                  <h4 data-jelly>
                     <span className={styles.clientTestimonialSpan2}>“</span>
                     Enigma Digital's mastery of web design and development is
                     truly unparalleled. Their ability to craft a website that
@@ -947,43 +819,39 @@ export default function patra() {
                     Our collaboration has been a game-changer for Wragby
                     Business Solutions, and we wholeheartedly recommend Enigma
                     Digital to anyone seeking a top-notch digital partner!
-                  </h1>
+                  </h4>
                 </div>
                 <div
                   className={styles.clientTestimonialSectionBottomBox}
                   data-jelly
                 >
                   <div className={styles.clientTestimonialSectionFigure}>
-                    <img src="/assets/casestudies/certvault/client.webp"></img>
+                    <img src="/assets/casestudies/patronum/paullees.webp" alt="client image"></img>
                   </div>
                   <div className={styles.clientTestimonialSectionFigureText}>
-                    <h5>
-                      Akin Banuso,
+                    <h4>
+                      Paul Lees
                       <br />
                       <span className={styles.clientTestimonialSpan}>
-                        CEO, Wragby Business Solutions
+                        CEO, Patronum
                       </span>
-                    </h5>
+                    </h4>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+          </section>
 
-          <div className="space-large desktop"></div>
-          <div className="space-large desktop"></div>
 
           {/* ====================== Client Section END ======================== */}
 
           {/* ========================== Next Project =========================== */}
-
           <div className={styles.desktopSlider}>
             <WragbySlider />
           </div>
 
           {/* ========================== Next Project END ======================= */}
 
-          <div className={styles.mobile}></div>
 
           {/* ================ Next Project Mobile ============================== */}
 
@@ -1002,16 +870,14 @@ export default function patra() {
 
           {/* ================ Next Project Mobile ============================== */}
 
-          <div className={styles.mobile}></div>
-
           {/* ======================== Footer ====================== */}
-          <div className="desktop-footer footer-desktop" id={styles.ipad}>
+          <section className="desktop-footer">
             <Footer />
-          </div>
+          </section>
 
-          <div className="mobile-footer">
+          <section className="mobile-footer">
             <FooterMobile />
-          </div>
+          </section>
           {/* ======================== Footer END ====================== */}
         </div>
       </main>
