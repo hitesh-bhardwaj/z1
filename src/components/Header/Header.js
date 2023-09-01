@@ -58,6 +58,8 @@ export default function Header() {
     );
   });
 
+  console.clear();
+
   return (
     <header className="header-section">
       <motion.div

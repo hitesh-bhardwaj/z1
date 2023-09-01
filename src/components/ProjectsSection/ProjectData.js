@@ -40,12 +40,44 @@ export const projects = [
         link: "quickx"
     },
     {
-        name: "PDTL",
-        client: "PDTL",
+        name: "Certvault",
+        client: "Certvault",
         description: "An Italian animation studio.",
         src: "6.webp",
         year: 2022,
         link: "pdtl"
+    },
+    {
+        name: "DMTCA",
+        client: "DMTCA",
+        description: "An Italian animation studio.",
+        src: "7-2.webp",
+        year: 2022,
+        link: "dmtca"
+    },
+    {
+        name: "PDTL",
+        client: "PDTL",
+        description: "An Italian animation studio.",
+        src: "9.webp",
+        year: 2022,
+        link: "pdtl"
+    },
+    {
+        name: "Wragby",
+        client: "Wragby",
+        description: "An Italian animation studio.",
+        src: "10.webp",
+        year: 2022,
+        link: "wragby"
+    },
+    {
+        name: "Patra",
+        client: "Patra",
+        description: "An Italian animation studio.",
+        src: "8.webp",
+        year: 2022,
+        link: "patra"
     },
 ]
 

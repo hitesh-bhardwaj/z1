@@ -20,6 +20,10 @@ import FooterMobile from "@/components/Mobile/FooterMobile";
 
 gsap.registerPlugin(ScrollTrigger);
 
+gsap.config({
+  nullTargetWarn: false,
+});
+
 // Hover on the link
 const handleHover = (e) => {
   gsap.to(e.target, {
@@ -106,29 +110,31 @@ export default function blogKeywordResearch() {
     return () => ctx.revert();
   });
 
-  // Parallax Image
-  useEffect(() => {
-    let ctx = gsap.context(() => {
-      gsap.utils.toArray(".image-container").forEach(function (container) {
-        let image = container.querySelector("img");
-
-        gsap.to(image, {
-          y: () => image.offsetHeight - container.offsetHeight,
-          ease: "none",
-          startAt: { y: "-25%" },
-          scrollTrigger: {
-            trigger: container,
-            scrub: true,
-            pin: false,
-            markers: false,
-          },
-          y: "25%",
-          ease: "none",
+   // Parallax Image
+   if (globalThis.innerWidth > 776) {
+    useEffect(() => {
+      let ctx = gsap.context(() => {
+        gsap.utils.toArray(".image-container").forEach(function (container) {
+          let image = container.querySelector("img");
+  
+          gsap.to(image, {
+            y: () => image.offsetHeight - container.offsetHeight,
+            ease: "none",
+            startAt: { y: "-25%" },
+            scrollTrigger: {
+              trigger: container,
+              scrub: true,
+              pin: false,
+              markers: false,
+            },
+            y: "25%",
+            ease: "none",
+          });
         });
       });
+      return () => ctx.revert();
     });
-    return () => ctx.revert();
-  });
+  }
 
   // Page Transitions
   useEffect(() => {
@@ -199,7 +205,7 @@ export default function blogKeywordResearch() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"
+          content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
         ></meta>
         <link rel="icon" href="/fav-icon.png" />
       </Head>
@@ -315,15 +321,12 @@ export default function blogKeywordResearch() {
               keyword competitiveness, search volume, and user intent.
               Additionally, we will cover the significance of long-tail keywords
               and local SEO.
-              <br />
-              <br />
             </p>
             <h3 className="bold-h" id="anim">
               The Importance of Keyword Research
             </h3>
             <p id="anim">Keyword research is essential for several reasons:</p>
 
-            <br />
             <p id="anim">
               <span className="bold">Relevance: </span>By targeting keywords
               that are relevant to your niche, you can ensure that your website
@@ -332,7 +335,6 @@ export default function blogKeywordResearch() {
               and increased conversions.
             </p>
 
-            <br />
 
             <p id="anim">
               <span className="bold">Competitiveness:</span> Understanding the
@@ -342,7 +344,6 @@ export default function blogKeywordResearch() {
               investment.
             </p>
 
-            <br />
 
             <p id="anim">
               <span className="bold">User intent:</span> Analysing user intent
@@ -360,8 +361,6 @@ export default function blogKeywordResearch() {
               </div>
             </div>
 
-            <br />
-            <br />
             <h3 className="bold-h">
               Keyword Research Tools
             </h3>
@@ -371,7 +370,6 @@ export default function blogKeywordResearch() {
               Some of the most popular ones include:
             </p>
 
-            <br />
             <p>
               <span className="bold">Google Keyword Planner:</span> This free
               tool provided by Google Ads allows you to discover new keywords,
@@ -381,7 +379,6 @@ export default function blogKeywordResearch() {
               to your niche
             </p>
 
-            <br />
 
             <p>
               <span className="bold">SEMrush:</span> This is a paid tool that
@@ -392,7 +389,6 @@ export default function blogKeywordResearch() {
               opportunities for optimization.
             </p>
 
-            <br />
 
             <p>
               <span className="bold">Ahrefs:</span> Another popular paid tool,
@@ -403,7 +399,6 @@ export default function blogKeywordResearch() {
               landscape
             </p>
 
-            <br />
 
             <p>
               <span className="bold">Moz Keyword Explorer:</span> Moz offers a
@@ -413,7 +408,6 @@ export default function blogKeywordResearch() {
               phrases to expand your list of target keywords.
             </p>
 
-            <br />
 
             <p>
               <span className="bold">Ubersuggest:</span> Developed by Neil
@@ -430,8 +424,6 @@ export default function blogKeywordResearch() {
                 />
               </div>
             </div>
-            <br />
-            <br />
 
             <h3 className="bold-h">
               Analysing Keyword Competitiveness, Search Volume, and User Intent
@@ -442,7 +434,6 @@ export default function blogKeywordResearch() {
               key factors: competitiveness, search volume, and user intent.
             </p>
 
-            <br />
 
             <p>
               <span className="bold">Competitiveness:</span> Keyword
@@ -454,8 +445,6 @@ export default function blogKeywordResearch() {
               difficulty scores that can help you gauge competitiveness.
             </p>
 
-            <br />
-
             <p>
               <span className="bold">Search Volume:</span> Search volume
               indicates the number of times a keyword is searched for within a
@@ -466,8 +455,6 @@ export default function blogKeywordResearch() {
               between search volume and competitiveness to maximize your SEO
               efforts.
             </p>
-
-            <br />
 
             <p>
               <span className="bold">User Intent:</span>
@@ -481,7 +468,6 @@ export default function blogKeywordResearch() {
               addresses their needs and increases the likelihood of conversions.
             </p>
 
-            <br />
             <h3 className="bold-h">
               Creating a Targeted Keyword List
             </h3>
@@ -505,8 +491,6 @@ export default function blogKeywordResearch() {
                 />
               </div>
             </div>
-            <br />
-            <br />
 
             <h3 className="bold-h">
               The Importance of Long-tail Keywords
@@ -524,7 +508,6 @@ export default function blogKeywordResearch() {
               terms.
             </p>
 
-            <br />
             <h3 className="bold-h">
               Local SEO and Keyword Research
             </h3>
@@ -539,9 +522,6 @@ export default function blogKeywordResearch() {
               enhance your local SEO efforts.
             </p>
 
-            <br />
-            <br />
-
             <p>
               Keyword research is a fundamental aspect of any successful SEO
               strategy. By using the right tools and analysing keyword
@@ -555,12 +535,9 @@ export default function blogKeywordResearch() {
               both engaging and enjoyable to explore.
             </p>
 
-            <br />
           </div>
         </div>
       </div>
-
-      <div className="space-large desktop"></div>
 
       {/* =================== Related Articles =========================== */}
 
@@ -635,9 +612,6 @@ export default function blogKeywordResearch() {
         </div>
       </div>
       {/* =================== Related Articles END =========================== */}
-
-      <div className="space-large desktop"></div>
-      <div className="space-small mobile"></div>
 
       {/* ======================== Footer ====================== */}
       <div className="desktop-footer">

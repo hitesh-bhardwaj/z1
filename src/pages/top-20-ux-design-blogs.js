@@ -21,6 +21,10 @@ import FooterMobile from "@/components/Mobile/FooterMobile";
 
 gsap.registerPlugin(ScrollTrigger);
 
+gsap.config({
+  nullTargetWarn: false,
+});
+
 // Hover on the link
 const handleHover = (e) => {
   gsap.to(e.target, {
@@ -39,7 +43,7 @@ const handleHoverExit = (e) => {
   });
 };
 
-export default function blogTop20UxDesignTools() {
+export default function blogHowToDesign() {
   // Hero Section Animation
   useEffect(() => {
     const tl = gsap.timeline();
@@ -107,29 +111,31 @@ export default function blogTop20UxDesignTools() {
     return () => ctx.revert();
   });
 
-  // Parallax Image
-  useEffect(() => {
-    let ctx = gsap.context(() => {
-      gsap.utils.toArray(".image-container").forEach(function (container) {
-        let image = container.querySelector("img");
-
-        gsap.to(image, {
-          y: () => image.offsetHeight - container.offsetHeight,
-          ease: "none",
-          startAt: { y: "-25%" },
-          scrollTrigger: {
-            trigger: container,
-            scrub: true,
-            pin: false,
-            markers: false,
-          },
-          y: "25%",
-          ease: "none",
+   // Parallax Image
+   if (globalThis.innerWidth > 776) {
+    useEffect(() => {
+      let ctx = gsap.context(() => {
+        gsap.utils.toArray(".image-container").forEach(function (container) {
+          let image = container.querySelector("img");
+  
+          gsap.to(image, {
+            y: () => image.offsetHeight - container.offsetHeight,
+            ease: "none",
+            startAt: { y: "-25%" },
+            scrollTrigger: {
+              trigger: container,
+              scrub: true,
+              pin: false,
+              markers: false,
+            },
+            y: "25%",
+            ease: "none",
+          });
         });
       });
+      return () => ctx.revert();
     });
-    return () => ctx.revert();
-  });
+  }
 
   // Page Transitions
   useEffect(() => {
@@ -208,7 +214,7 @@ export default function blogTop20UxDesignTools() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"
+          content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
         ></meta>
         <link rel="icon" href="/fav-icon.png" />
       </Head>
@@ -337,8 +343,8 @@ export default function blogTop20UxDesignTools() {
               inspiration from industry experts.
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <p id="anim">
               To help you stay informed and inspired, we have meticulously
@@ -353,8 +359,8 @@ export default function blogTop20UxDesignTools() {
               this journey of discovery and self-improvement!
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <h3
               className="bold-h blog-mt-0"
@@ -374,8 +380,8 @@ export default function blogTop20UxDesignTools() {
               Comprehensive guides, research articles, and expert opinions.
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <h3
               className="bold-h blog-mt-0"
@@ -396,8 +402,8 @@ export default function blogTop20UxDesignTools() {
               Thought-provoking articles, case studies, and practical guides.
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <h3
               className="bold-h blog-mt-0"
@@ -417,8 +423,8 @@ export default function blogTop20UxDesignTools() {
               Expert opinions, in-depth articles, and design case studies.
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <h3
               className="bold-h blog-mt-0"
@@ -447,8 +453,8 @@ export default function blogTop20UxDesignTools() {
               </div>
             </div>
 
-            <br />
-            <br />
+            
+            
             <h3 className="bold-h blog-mt-0">
               Enigma Digital
             </h3>
@@ -466,8 +472,8 @@ export default function blogTop20UxDesignTools() {
               In-depth articles, case studies, and practical guides.
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <h3 className="bold-h blog-mt-0">
               UX Design
@@ -483,8 +489,8 @@ export default function blogTop20UxDesignTools() {
               Thought-provoking articles, practical guides, and case studies.
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <h3 className="bold-h blog-mt-0">
               UX Booth
@@ -501,8 +507,8 @@ export default function blogTop20UxDesignTools() {
               Expert opinions, practical guides, and in-depth articles.
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <h3 className="bold-h blog-mt-0">
               UX Matters
@@ -520,8 +526,8 @@ export default function blogTop20UxDesignTools() {
               Interviews, in-depth articles, and case studies.
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <h3 className="bold-h blog-mt-0">
               InVision Blog
@@ -539,8 +545,8 @@ export default function blogTop20UxDesignTools() {
               Expert opinions, practical guides, and design inspiration.
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <h3 className="bold-h blog-mt-0">
               UX Planet
@@ -565,8 +571,8 @@ export default function blogTop20UxDesignTools() {
                 />
               </div>
             </div>
-            <br />
-            <br />
+            
+            
 
             <h3 className="bold-h blog-mt-0">
               Usability Geek
@@ -583,8 +589,8 @@ export default function blogTop20UxDesignTools() {
               Practical guides, expert opinions, and case studies.
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <h3 className="bold-h blog-mt-0">
               52 Weeks of UX
@@ -601,8 +607,8 @@ export default function blogTop20UxDesignTools() {
               In-depth articles, practical guides, and expert opinions.
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <h3 className="bold-h blog-mt-0">
               UIE Brain Sparks
@@ -620,8 +626,8 @@ export default function blogTop20UxDesignTools() {
               Research articles, expert opinions, and practical guides.
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <h3 className="bold-h blog-mt-0">
               UX Movement
@@ -638,8 +644,8 @@ export default function blogTop20UxDesignTools() {
               Practical guides, design inspiration, and expert opinions.
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <h3 className="bold-h blog-mt-0">
               The UX Blog
@@ -656,8 +662,8 @@ export default function blogTop20UxDesignTools() {
               Thought-provoking articles, practical guides, and case studies.
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <h3 className="bold-h blog-mt-0">
               UX Mastery
@@ -684,8 +690,8 @@ export default function blogTop20UxDesignTools() {
               </div>
             </div>
 
-            <br />
-            <br />
+            
+            
 
             <h3 className="bold-h blog-mt-0">
               Interaction Design Foundation (IDF) Blog
@@ -702,8 +708,8 @@ export default function blogTop20UxDesignTools() {
               In-depth articles, expert opinions, and practical guides.
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <h3 className="bold-h blog-mt-0">
               Studio by UXPin
@@ -720,8 +726,8 @@ export default function blogTop20UxDesignTools() {
               practical guides, design inspiration, and expert opinions.
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <h3 className="bold-h blog-mt-0">
               Loop11 Blog
@@ -739,8 +745,8 @@ export default function blogTop20UxDesignTools() {
               Practical guides, expert opinions, and case studies.
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <h3 className="bold-h blog-mt-0">
               Usabilla Blog
@@ -757,8 +763,8 @@ export default function blogTop20UxDesignTools() {
               Expert opinions, practical guides, and design inspiration.
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <h3 className="bold-h blog-mt-0">
               That’s A Wrap..!
@@ -779,8 +785,6 @@ export default function blogTop20UxDesignTools() {
           </div>
         </div>
       </div>
-
-      <div className="space-large desktop"></div>
 
       {/* =================== Related Articles =========================== */}
 
@@ -856,8 +860,6 @@ export default function blogTop20UxDesignTools() {
       </div>
       {/* =================== Related Articles END =========================== */}
 
-      <div className="space-large desktop"></div>
-      <div className="space-small mobile"></div>
 
       {/* ======================== Footer ====================== */}
       <div className="desktop-footer">

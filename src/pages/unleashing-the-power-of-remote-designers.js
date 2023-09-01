@@ -20,6 +20,10 @@ import FooterMobile from "@/components/Mobile/FooterMobile";
 
 gsap.registerPlugin(ScrollTrigger);
 
+gsap.config({
+  nullTargetWarn: false,
+});
+
 // Hover on the link
 const handleHover = (e) => {
   gsap.to(e.target, {
@@ -38,7 +42,7 @@ const handleHoverExit = (e) => {
   });
 };
 
-export default function blogUnleashingPowerRemoteDesigner() {
+export default function blogHowToDesign() {
   // Hero Section Animation
   useEffect(() => {
     const tl = gsap.timeline();
@@ -106,29 +110,31 @@ export default function blogUnleashingPowerRemoteDesigner() {
     return () => ctx.revert();
   });
 
-  // Parallax Image
-  useEffect(() => {
-    let ctx = gsap.context(() => {
-      gsap.utils.toArray(".image-container").forEach(function (container) {
-        let image = container.querySelector("img");
-
-        gsap.to(image, {
-          y: () => image.offsetHeight - container.offsetHeight,
-          ease: "none",
-          startAt: { y: "-25%" },
-          scrollTrigger: {
-            trigger: container,
-            scrub: true,
-            pin: false,
-            markers: false,
-          },
-          y: "25%",
-          ease: "none",
+   // Parallax Image
+   if (globalThis.innerWidth > 776) {
+    useEffect(() => {
+      let ctx = gsap.context(() => {
+        gsap.utils.toArray(".image-container").forEach(function (container) {
+          let image = container.querySelector("img");
+  
+          gsap.to(image, {
+            y: () => image.offsetHeight - container.offsetHeight,
+            ease: "none",
+            startAt: { y: "-25%" },
+            scrollTrigger: {
+              trigger: container,
+              scrub: true,
+              pin: false,
+              markers: false,
+            },
+            y: "25%",
+            ease: "none",
+          });
         });
       });
+      return () => ctx.revert();
     });
-    return () => ctx.revert();
-  });
+  }
 
   // Page Transitions
   useEffect(() => {
@@ -203,7 +209,7 @@ export default function blogUnleashingPowerRemoteDesigner() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"
+          content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
         ></meta>
         <link rel="icon" href="/fav-icon.png" />
       </Head>
@@ -326,8 +332,8 @@ export default function blogUnleashingPowerRemoteDesigner() {
               and benefit from the immense talent pool that India offers.
             </h3>
 
-            <br />
-            <br />
+            
+            
             <p id="anim">
               The design world is rapidly evolving, and companies must adapt to
               this changing landscape to stay competitive. One way to do so is
@@ -336,8 +342,8 @@ export default function blogUnleashingPowerRemoteDesigner() {
               advantages, making it an attractive option for businesses
               worldwide. Let's dive into the core reasons why hiring remote
               designers from India is a game-changer for your business.
-              <br />
-              <br />
+              
+              
             </p>
             <h3 className="bold-h" id="anim">
               Unparalleled Talent Pool and Expertise
@@ -352,7 +358,7 @@ export default function blogUnleashingPowerRemoteDesigner() {
               high-quality designs that captivate customers and boost brand
               recognition (LinkedIn, 2021).
             </p>
-            <br />
+            
             <h3 className="bold-h" id="anim">
               Cost-Effectiveness – A Win-Win Situation
             </h3>
@@ -368,7 +374,7 @@ export default function blogUnleashingPowerRemoteDesigner() {
               the savings into other strategic initiatives, driving growth and
               success.
             </p>
-            <br />
+            
 
             <div className="blog-img">
               <div className="image-container blog-img-container">
@@ -376,8 +382,8 @@ export default function blogUnleashingPowerRemoteDesigner() {
               </div>
             </div>
 
-            <br />
-            <br />
+            
+            
             <h3 className="bold-h">
               Flexibility and Adaptability
             </h3>
@@ -393,8 +399,8 @@ export default function blogUnleashingPowerRemoteDesigner() {
               are delivered on time without compromising on quality.
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <h3 className="bold-h">
               Technological Prowess
@@ -413,7 +419,7 @@ export default function blogUnleashingPowerRemoteDesigner() {
               design technologies.
             </p>
 
-            <br />
+            
 
             <h3 className="bold-h">
               Debunking the Communication Barrier Myth
@@ -430,7 +436,7 @@ export default function blogUnleashingPowerRemoteDesigner() {
               and clear communication.
             </p>
 
-            <br />
+            
 
             <h3 className="bold-h">
               Scalability and Growth
@@ -448,15 +454,15 @@ export default function blogUnleashingPowerRemoteDesigner() {
               and remain agile in the face of change.
             </p>
 
-            <br />
+            
 
             <div className="blog-img">
               <div className="image-container blog-img-container">
                 <img src="/assets/blogs/blog-detail/unleash/2.jpg" alt="Img" />
               </div>
             </div>
-            <br />
-            <br />
+            
+            
 
             <h3 className="bold-h">
               Intellectual Property Protection
@@ -472,7 +478,7 @@ export default function blogUnleashingPowerRemoteDesigner() {
               their IP rights will be respected and safeguarded.
             </p>
 
-            <br />
+            
             <h3 className="bold-h">
               Cultural Diversity and Global Outlook
             </h3>
@@ -486,7 +492,7 @@ export default function blogUnleashingPowerRemoteDesigner() {
               appeal to global markets.
             </p>
 
-            <br />
+            
             <h3 className="bold-h">
               Increased Collaboration and Innovation
             </h3>
@@ -500,7 +506,7 @@ export default function blogUnleashingPowerRemoteDesigner() {
               that embraced remote work saw a 4.4% increase in patents filed,
               indicating a boost in innovation (Harvard Business Review, 2020).
             </p>
-            <br />
+            
             <h3 className="bold-h">
               Improved Work-Life Balance for In-House Team Members
             </h3>
@@ -525,12 +531,10 @@ export default function blogUnleashingPowerRemoteDesigner() {
               we hope to inspire businesses to make the leap and experience the
               incredible potential of Indian remote designers.
             </p>
-            <br />
           </div>
         </div>
       </div>
 
-      <div className="space-large desktop"></div>
 
       {/* =================== Related Articles =========================== */}
 
@@ -605,9 +609,6 @@ export default function blogUnleashingPowerRemoteDesigner() {
         </div>
       </div>
       {/* =================== Related Articles END =========================== */}
-
-      <div className="space-large desktop"></div>
-      <div className="space-small mobile"></div>
 
       {/* ======================== Footer ====================== */}
       <div className="desktop-footer">

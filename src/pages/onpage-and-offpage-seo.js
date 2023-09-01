@@ -18,7 +18,12 @@ import SmoothScroll from "@/components/utils/SmoothScroll";
 import Footer from "@/components/Footer";
 import FooterMobile from "@/components/Mobile/FooterMobile";
 
+
 gsap.registerPlugin(ScrollTrigger);
+
+gsap.config({
+  nullTargetWarn: false,
+});
 
 // Hover on the link
 const handleHover = (e) => {
@@ -38,7 +43,7 @@ const handleHoverExit = (e) => {
   });
 };
 
-export default function blogOnPageSeo() {
+export default function blogHowToDesign() {
   // Hero Section Animation
   useEffect(() => {
     const tl = gsap.timeline();
@@ -106,29 +111,31 @@ export default function blogOnPageSeo() {
     return () => ctx.revert();
   });
 
-  // Parallax Image
-  useEffect(() => {
-    let ctx = gsap.context(() => {
-      gsap.utils.toArray(".image-container").forEach(function (container) {
-        let image = container.querySelector("img");
-
-        gsap.to(image, {
-          y: () => image.offsetHeight - container.offsetHeight,
-          ease: "none",
-          startAt: { y: "-25%" },
-          scrollTrigger: {
-            trigger: container,
-            scrub: true,
-            pin: false,
-            markers: false,
-          },
-          y: "25%",
-          ease: "none",
+   // Parallax Image
+   if (globalThis.innerWidth > 776) {
+    useEffect(() => {
+      let ctx = gsap.context(() => {
+        gsap.utils.toArray(".image-container").forEach(function (container) {
+          let image = container.querySelector("img");
+  
+          gsap.to(image, {
+            y: () => image.offsetHeight - container.offsetHeight,
+            ease: "none",
+            startAt: { y: "-25%" },
+            scrollTrigger: {
+              trigger: container,
+              scrub: true,
+              pin: false,
+              markers: false,
+            },
+            y: "25%",
+            ease: "none",
+          });
         });
       });
+      return () => ctx.revert();
     });
-    return () => ctx.revert();
-  });
+  }
 
   // Page Transitions
   useEffect(() => {
@@ -205,7 +212,7 @@ export default function blogOnPageSeo() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"
+          content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
         ></meta>
         <link rel="icon" href="/fav-icon.png" />
       </Head>
@@ -322,8 +329,6 @@ export default function blogOnPageSeo() {
               websites where you can do link-building easily and get quick
               results. Let's dive into the world of SEO and learn how to
               optimize your website for maximum visibility and success.
-              <br />
-              <br />
             </p>
             <h3
               className="bold-h-u"
@@ -337,7 +342,6 @@ export default function blogOnPageSeo() {
               key elements of on-page SEO include:
             </p>
 
-            <br />
             <p id="anim">
               <span className="bold">Title tags:</span> These are HTML tags that
               define the title of your web page and appear in search engine
@@ -346,7 +350,6 @@ export default function blogOnPageSeo() {
               accurately reflects your page's content
             </p>
 
-            <br />
             <p id="anim">
               <span className="bold">Meta descriptions:</span> Meta descriptions
               are brief summaries of your web page's content that appear in
@@ -354,8 +357,6 @@ export default function blogOnPageSeo() {
               include relevant keywords, be between 150-160 characters, and
               entice users to click on your link.
             </p>
-
-            <br />
 
             <p id="anim">
               <span className="bold">URL structure:</span> A clean, descriptive
@@ -365,8 +366,6 @@ export default function blogOnPageSeo() {
               strings of characters.
             </p>
 
-            <br />
-
             <p id="anim">
               <span className="bold">Header tags:</span> Header tags (H1, H2,
               H3, etc.) are used to structure your content and indicate the
@@ -374,8 +373,6 @@ export default function blogOnPageSeo() {
               in your header tags can help search engines understand your
               content better and improve your search engine rankings.
             </p>
-
-            <br />
 
             <p id="anim">
               <span className="bold">Keyword usage: </span>
@@ -385,7 +382,7 @@ export default function blogOnPageSeo() {
               lead to search engine penalties.
             </p>
 
-            <br />
+            
             <p id="anim">
               <span className="bold">Internal linking:</span> Including internal
               links to other pages on your website can improve user experience,
@@ -393,7 +390,7 @@ export default function blogOnPageSeo() {
               understand the structure and relevance of your content.
             </p>
 
-            <br />
+            
 
             <p id="anim">
               <span className="bold">Image optimization:</span> Optimize images
@@ -403,7 +400,7 @@ export default function blogOnPageSeo() {
               context of your images.
             </p>
 
-            <br />
+            
 
             <p id="anim">
               <span className="bold">Mobile-friendliness:</span> Ensure that
@@ -411,7 +408,7 @@ export default function blogOnPageSeo() {
               as this can improve user experience and search engine rankings.
             </p>
 
-            <br />
+            
 
             <p id="anim">
               <span className="bold">Ahrefs:</span> Another popular paid tool,
@@ -431,8 +428,8 @@ export default function blogOnPageSeo() {
               </div>
             </div>
 
-            <br />
-            <br />
+            
+            
 
             <h3
               className="bold-h-u"
@@ -447,7 +444,7 @@ export default function blogOnPageSeo() {
               include:
             </p>
 
-            <br />
+            
             <p>
               <span className="bold">Backlinks: </span>
               Backlinks, also known as inbound links or incoming links, are
@@ -456,7 +453,7 @@ export default function blogOnPageSeo() {
               and search engine rankings.
             </p>
 
-            <br />
+            
 
             <p>
               <span className="bold">Social media:</span> A strong presence on
@@ -465,7 +462,7 @@ export default function blogOnPageSeo() {
               to your website, and improve your search engine rankings.
             </p>
 
-            <br />
+            
 
             <p>
               <span className="bold">Online directories:</span> Listing your
@@ -474,7 +471,7 @@ export default function blogOnPageSeo() {
               search engine rankings.
             </p>
 
-            <br />
+            
 
             <p>
               <span className="bold">Brand mentions:</span> When other websites,
@@ -485,7 +482,7 @@ export default function blogOnPageSeo() {
               niche.
             </p>
 
-            <br />
+            
 
             <p>
               <span className="bold">Guest posting:</span> Writing high-quality,
@@ -503,8 +500,8 @@ export default function blogOnPageSeo() {
                 />
               </div>
             </div>
-            <br />
-            <br />
+            
+            
 
             <h3
               className="bold-h-u"
@@ -523,8 +520,8 @@ export default function blogOnPageSeo() {
               organic traffic to your site, and enhance your online credibility.
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <h3
               className="bold-h-u"
@@ -537,7 +534,7 @@ export default function blogOnPageSeo() {
               and get quick results. Some examples include:
             </p>
 
-            <br />
+            
 
             <p>
               <span className="bold">Medium:</span> A popular blogging platform
@@ -545,7 +542,7 @@ export default function blogOnPageSeo() {
               website.
             </p>
 
-            <br />
+            
 
             <p>
               <span className="bold">Quora: </span>A question-and-answer website
@@ -553,7 +550,7 @@ export default function blogOnPageSeo() {
               your site.
             </p>
 
-            <br />
+            
 
             <p>
               <span className="bold">LinkedIn:</span> A professional networking
@@ -561,7 +558,7 @@ export default function blogOnPageSeo() {
               links to your website
             </p>
 
-            <br />
+            
             <h3 className="bold-h">
               Creating a Targeted Keyword List
             </h3>
@@ -577,8 +574,8 @@ export default function blogOnPageSeo() {
               industry trends and search engine algorithm changes.
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <p>
               On-page and off-page SEO are crucial components of any successful
@@ -596,7 +593,6 @@ export default function blogOnPageSeo() {
         </div>
       </div>
 
-      <div className="space-large desktop"></div>
 
       {/* =================== Related Articles =========================== */}
 
@@ -672,8 +668,6 @@ export default function blogOnPageSeo() {
       </div>
       {/* =================== Related Articles END =========================== */}
 
-      <div className="space-large desktop"></div>
-      <div className="space-small mobile"></div>
 
       {/* ======================== Footer ====================== */}
       <div className="desktop-footer">

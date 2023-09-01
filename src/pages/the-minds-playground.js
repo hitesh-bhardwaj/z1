@@ -21,6 +21,10 @@ import FooterMobile from "@/components/Mobile/FooterMobile";
 
 gsap.registerPlugin(ScrollTrigger);
 
+gsap.config({
+  nullTargetWarn: false,
+});
+
 // Hover on the link
 const handleHover = (e) => {
   gsap.to(e.target, {
@@ -39,7 +43,7 @@ const handleHoverExit = (e) => {
   });
 };
 
-export default function blogMindsPlayground() {
+export default function blogHowToDesign() {
   // Hero Section Animation
   useEffect(() => {
     const tl = gsap.timeline();
@@ -107,29 +111,31 @@ export default function blogMindsPlayground() {
     return () => ctx.revert();
   });
 
-  // Parallax Image
-  useEffect(() => {
-    let ctx = gsap.context(() => {
-      gsap.utils.toArray(".image-container").forEach(function (container) {
-        let image = container.querySelector("img");
-
-        gsap.to(image, {
-          y: () => image.offsetHeight - container.offsetHeight,
-          ease: "none",
-          startAt: { y: "-25%" },
-          scrollTrigger: {
-            trigger: container,
-            scrub: true,
-            pin: false,
-            markers: false,
-          },
-          y: "25%",
-          ease: "none",
+   // Parallax Image
+   if (globalThis.innerWidth > 776) {
+    useEffect(() => {
+      let ctx = gsap.context(() => {
+        gsap.utils.toArray(".image-container").forEach(function (container) {
+          let image = container.querySelector("img");
+  
+          gsap.to(image, {
+            y: () => image.offsetHeight - container.offsetHeight,
+            ease: "none",
+            startAt: { y: "-25%" },
+            scrollTrigger: {
+              trigger: container,
+              scrub: true,
+              pin: false,
+              markers: false,
+            },
+            y: "25%",
+            ease: "none",
+          });
         });
       });
+      return () => ctx.revert();
     });
-    return () => ctx.revert();
-  });
+  }
 
   // Page Transitions
   useEffect(() => {
@@ -206,7 +212,7 @@ export default function blogMindsPlayground() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"
+          content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
         ></meta>
         <link rel="icon" href="/fav-icon.png" />
       </Head>
@@ -327,8 +333,8 @@ export default function blogMindsPlayground() {
               leave your audience in awe.
             </h3>
 
-            <br />
-            <br />
+            
+            
 
             <p id="anim">
               As e-commerce continues to grow exponentially, marketers face an
@@ -341,8 +347,8 @@ export default function blogMindsPlayground() {
               e-commerce marketer should know and explore how to leverage these
               fascinating psychological phenomena to create captivating
               campaigns that leave your audience wowed.
-              <br />
-              <br />
+              
+              
             </p>
             <h3
               className="bold blog-mt-0"
@@ -366,7 +372,7 @@ export default function blogMindsPlayground() {
               amplify the availability cascade effect.
             </p>
 
-            <br />
+            
             <h3
               className="bold blog-mt-0"
               style={{ fontSize: "1.5vw !important" }}
@@ -388,7 +394,7 @@ export default function blogMindsPlayground() {
               consumer perceptions and drive purchase decisions.
             </p>
 
-            <br />
+            
             <h3
               className="bold blog-mt-0"
               style={{ fontSize: "1.5vw !important" }}
@@ -412,7 +418,7 @@ export default function blogMindsPlayground() {
               existing beliefs and foster brand loyalty.
             </p>
 
-            <br />
+            
             <h3
               className="bold blog-mt-0"
               style={{ fontSize: "1.5vw !important" }}
@@ -443,8 +449,8 @@ export default function blogMindsPlayground() {
               </div>
             </div>
 
-            <br />
-            <br />
+            
+            
             <h3 className="bold-h">
               5. Decoy Effect:
             </h3>
@@ -462,7 +468,7 @@ export default function blogMindsPlayground() {
               consumers toward a higher-priced purchase.
             </p>
 
-            <br />
+            
 
             <h3 className="bold-h">
               6. Loss Aversion:
@@ -484,7 +490,6 @@ export default function blogMindsPlayground() {
               encourage them to make a purchase.
             </p>
 
-            <br />
 
             <h3 className="bold-h">
               7. Reciprocity Principle:
@@ -504,7 +509,6 @@ export default function blogMindsPlayground() {
               purchase or brand loyalty.
             </p>
 
-            <br />
 
             <h3 className="bold-h">
               8. Halo Effect:
@@ -525,7 +529,6 @@ export default function blogMindsPlayground() {
               outcomes.
             </p>
 
-            <br />
 
             <h3 className="bold-h">
               9. The Mere Exposure Effect:
@@ -553,8 +556,6 @@ export default function blogMindsPlayground() {
                 />
               </div>
             </div>
-            <br />
-            <br />
 
             <h3 className="bold-h">
               10. Choice Paralysis:
@@ -575,8 +576,6 @@ export default function blogMindsPlayground() {
               and encourage conversions.
             </p>
 
-            <br />
-
             <h3 className="bold-h">
               11. Social Proof:
             </h3>
@@ -594,8 +593,6 @@ export default function blogMindsPlayground() {
               strategies for incorporating social proof elements into marketing
               campaigns and product pages.
             </p>
-
-            <br />
 
             <h3 className="bold-h">
               12. The Bandwagon Effect:
@@ -624,8 +621,6 @@ export default function blogMindsPlayground() {
               </div>
             </div>
 
-            <br />
-            <br />
             <p>
               Understanding and mastering cognitive biases is an invaluable
               skill for e-commerce marketers looking to create captivating
@@ -636,7 +631,6 @@ export default function blogMindsPlayground() {
               strategies.
             </p>
 
-            <br />
 
             <p>
               Incorporating these 12 cognitive biases into your e-commerce
@@ -647,7 +641,6 @@ export default function blogMindsPlayground() {
               to ensure you are maximizing their impact.
             </p>
 
-            <br />
 
             <p>
               In conclusion, the world of cognitive biases offers a treasure
@@ -659,7 +652,6 @@ export default function blogMindsPlayground() {
               heights.
             </p>
 
-            <br />
 
             <p>
               As you venture forth into the complex and intriguing realm of
@@ -670,7 +662,6 @@ export default function blogMindsPlayground() {
               that capture hearts, minds, and wallets.
             </p>
 
-            <br />
 
             <p>
               So, go forth and explore the world of cognitive biases, and may
@@ -682,7 +673,6 @@ export default function blogMindsPlayground() {
         </div>
       </div>
 
-      <div className="space-large desktop"></div>
 
       {/* =================== Related Articles =========================== */}
 
@@ -758,8 +748,6 @@ export default function blogMindsPlayground() {
       </div>
       {/* =================== Related Articles END =========================== */}
 
-      <div className="space-large desktop"></div>
-      <div className="space-small mobile"></div>
 
       {/* ======================== Footer ====================== */}
       <div className="desktop-footer">

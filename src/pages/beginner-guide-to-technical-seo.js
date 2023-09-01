@@ -94,9 +94,6 @@ export default function technicleSeo() {
         start: "top 10%",
         endTrigger: brandImageNotPin,
         end: "bottom 80%",
-        // the nect line (with the arrow function) is 'a functional value' () =>
-        // end: () => `${brandImageNotPin.offsetHeight - brandImagePin.offsetHeight}px 20%`,
-        // this line ensures the functional value gets recalculated on resize
         invalidateOnRefresh: true,
         pin: brandImagePin,
         // pinSpacing: true,
@@ -107,28 +104,30 @@ export default function technicleSeo() {
   });
 
   // Parallax Image
-  useEffect(() => {
-    let ctx = gsap.context(() => {
-      gsap.utils.toArray(".image-container").forEach(function (container) {
-        let image = container.querySelector("img");
-
-        gsap.to(image, {
-          y: () => image.offsetHeight - container.offsetHeight,
-          ease: "none",
-          startAt: { y: "-25%" },
-          scrollTrigger: {
-            trigger: container,
-            scrub: true,
-            pin: false,
-            markers: false,
-          },
-          y: "25%",
-          ease: "none",
+  if (globalThis.innerWidth > 776) {
+    useEffect(() => {
+      let ctx = gsap.context(() => {
+        gsap.utils.toArray(".image-container").forEach(function (container) {
+          let image = container.querySelector("img");
+  
+          gsap.to(image, {
+            y: () => image.offsetHeight - container.offsetHeight,
+            ease: "none",
+            startAt: { y: "-25%" },
+            scrollTrigger: {
+              trigger: container,
+              scrub: true,
+              pin: false,
+              markers: false,
+            },
+            y: "25%",
+            ease: "none",
+          });
         });
       });
+      return () => ctx.revert();
     });
-    return () => ctx.revert();
-  });
+  }
 
   // Page Transitions
   useEffect(() => {
@@ -201,7 +200,7 @@ export default function technicleSeo() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"
+          content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
         ></meta>
         <link rel="icon" href="/fav-icon.png" />
       </Head>
@@ -326,7 +325,7 @@ export default function technicleSeo() {
               addresses the website's foundational aspects.
             </p>
 
-            <br />
+            
 
             <p id="anim">
               In this guide, we'll explore the various factors that contribute
@@ -335,8 +334,8 @@ export default function technicleSeo() {
               performance.
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <h3
               className="bold-h-u"
@@ -377,8 +376,8 @@ export default function technicleSeo() {
               </p>
             </div>
 
-            <br />
-            <br />
+            
+            
             <h3
               className="bold-h blog-mt-0"
               id="anim"
@@ -391,7 +390,7 @@ export default function technicleSeo() {
               is mobile-friendly is essential. Google employs a mobile-first
               indexing approach, which means it predominantly uses the mobile
               version of a site's content for indexing and ranking.
-              <br />
+              
               To optimize for mobile-friendliness:
             </p>
 
@@ -413,8 +412,8 @@ export default function technicleSeo() {
               </p>
             </div>
 
-            <br />
-            <br />
+            
+            
             <h3
               className="bold-h blog-mt-0"
               id="anim"
@@ -456,8 +455,8 @@ export default function technicleSeo() {
               </div>
             </div>
 
-            <br />
-            <br />
+            
+            
 
             <h3
               className="bold-h blog-mt-0"
@@ -493,8 +492,8 @@ export default function technicleSeo() {
               </p>
             </div>
 
-            <br />
-            <br />
+            
+            
 
             <h3
               className="bold-h blog-mt-0"
@@ -529,8 +528,8 @@ export default function technicleSeo() {
               </p>
             </div>
 
-            <br />
-            <br />
+            
+            
 
             <h3
               className="bold-h blog-mt-0"
@@ -574,8 +573,8 @@ export default function technicleSeo() {
                 />
               </div>
             </div>
-            <br />
-            <br />
+            
+            
 
             <h3
               className="bold-h-u"
@@ -618,8 +617,8 @@ export default function technicleSeo() {
               </p>
             </div>
 
-            <br />
-            <br />
+            
+            
 
             <h3
               className="bold-h blog-mt-0"
@@ -657,8 +656,8 @@ export default function technicleSeo() {
               </p>
             </div>
 
-            <br />
-            <br />
+            
+            
 
             <p>
               Technical SEO is a critical aspect of optimizing your website for
@@ -669,7 +668,7 @@ export default function technicleSeo() {
               engine visibility.
             </p>
 
-            <br />
+            
 
             <p>
               Utilizing tools like Google Search Console and Google Analytics
@@ -686,7 +685,6 @@ export default function technicleSeo() {
         </div>
       </div>
 
-      <div className="space-large desktop"></div>
 
       {/* =================== Related Articles =========================== */}
 
@@ -761,9 +759,6 @@ export default function technicleSeo() {
         </div>
       </div>
       {/* =================== Related Articles END =========================== */}
-
-      <div className="space-large desktop"></div>
-      <div className="space-small mobile"></div>
 
       {/* ======================== Footer ====================== */}
       <div className="desktop-footer">

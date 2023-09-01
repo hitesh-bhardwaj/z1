@@ -20,6 +20,10 @@ import FooterMobile from "@/components/Mobile/FooterMobile";
 
 gsap.registerPlugin(ScrollTrigger);
 
+gsap.config({
+  nullTargetWarn: false,
+});
+
 // Hover on the link
 const handleHover = (e) => {
   gsap.to(e.target, {
@@ -38,7 +42,7 @@ const handleHoverExit = (e) => {
   });
 };
 
-export default function blogTurboChargeYourB2B() {
+export default function blogHowToDesign() {
   // Hero Section Animation
   useEffect(() => {
     const tl = gsap.timeline();
@@ -106,30 +110,31 @@ export default function blogTurboChargeYourB2B() {
     return () => ctx.revert();
   });
 
-  // Parallax Image
-  useEffect(() => {
-    let ctx = gsap.context(() => {
-      gsap.utils.toArray(".image-container").forEach(function (container) {
-        let image = container.querySelector("img");
-
-        gsap.to(image, {
-          y: () => image.offsetHeight - container.offsetHeight,
-          ease: "none",
-          startAt: { y: "-25%" },
-          scrollTrigger: {
-            trigger: container,
-            scrub: true,
-            pin: false,
-            markers: false,
-          },
-          y: "25%",
-          ease: "none",
+   // Parallax Image
+   if (globalThis.innerWidth > 776) {
+    useEffect(() => {
+      let ctx = gsap.context(() => {
+        gsap.utils.toArray(".image-container").forEach(function (container) {
+          let image = container.querySelector("img");
+  
+          gsap.to(image, {
+            y: () => image.offsetHeight - container.offsetHeight,
+            ease: "none",
+            startAt: { y: "-25%" },
+            scrollTrigger: {
+              trigger: container,
+              scrub: true,
+              pin: false,
+              markers: false,
+            },
+            y: "25%",
+            ease: "none",
+          });
         });
       });
+      return () => ctx.revert();
     });
-    return () => ctx.revert();
-  });
-
+  }
   // Page Transitions
   useEffect(() => {
     let ctx = gsap.context(() => {
@@ -205,7 +210,7 @@ export default function blogTurboChargeYourB2B() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"
+          content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
         ></meta>
         <link rel="icon" href="/fav-icon.png" />
       </Head>
@@ -321,8 +326,8 @@ export default function blogTurboChargeYourB2B() {
               this blog, we'll unveil six astonishing tips to optimise your
               LinkedIn content for B2B marketing. So, grab your monocle and
               let's dive into the world of LinkedIn mastery!
-              <br />
-              <br />
+              
+              
             </p>
             <h3 className="bold-h" id="anim">
               Tip 1: Consistent Content & Visuals: Your Brand's Stylish Ensemble
@@ -335,7 +340,7 @@ export default function blogTurboChargeYourB2B() {
               style is the virtual equivalent of dressing to impress.
             </p>
 
-            <br />
+            
             <h3 className="bold-h" id="anim">
               1.1 Develop a Content Calendar:
             </h3>
@@ -347,7 +352,7 @@ export default function blogTurboChargeYourB2B() {
               rotating seasonal outfits.
             </p>
 
-            <br />
+            
 
             <h3 className="bold-h" id="anim">
               1.2 Create a Cohesive Visual Identity:
@@ -359,7 +364,7 @@ export default function blogTurboChargeYourB2B() {
               This visual consistency makes your content instantly recognizable,
               like a fashion icon on the red carpet.
             </p>
-            <br />
+            
 
             <div className="blog-img">
               <div className="image-container blog-img-container">
@@ -370,8 +375,8 @@ export default function blogTurboChargeYourB2B() {
               </div>
             </div>
 
-            <br />
-            <br />
+            
+            
             <h3 className="bold-h">
               Tip 2: Targeting the Right Audience: LinkedIn's Secret Handshake
             </h3>
@@ -383,8 +388,8 @@ export default function blogTurboChargeYourB2B() {
               lands in the hands of those who will appreciate it the most.
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <h3 className="bold-h">
               2.1 Use LinkedIn's Native Targeting Tools:
@@ -397,7 +402,7 @@ export default function blogTurboChargeYourB2B() {
               sending an exclusive invitation to an elite soiree.
             </p>
 
-            <br />
+            
 
             <h3 className="bold-h">
               2.2 Engage in Relevant Groups and Conversations:
@@ -411,8 +416,8 @@ export default function blogTurboChargeYourB2B() {
               event.
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <h3 className="bold-h">
               Tip 3: Establish Credibility: Your LinkedIn Seal of Approval{" "}
@@ -424,7 +429,7 @@ export default function blogTurboChargeYourB2B() {
               how to establish credibility and win the trust of your audience:
             </p>
 
-            <br />
+            
             <h3 className="bold-h">
               3.1 Showcase Your Expertise:
             </h3>
@@ -436,7 +441,7 @@ export default function blogTurboChargeYourB2B() {
               like the keynote speaker at a prestigious conference.
             </p>
 
-            <br />
+            
             <h3 className="bold-h">
               3.2 Highlight Client Testimonials and Success Stories:
             </h3>
@@ -456,8 +461,8 @@ export default function blogTurboChargeYourB2B() {
                 />
               </div>
             </div>
-            <br />
-            <br />
+            
+            
 
             <h3 className="bold-h">
               Tip 4: Establish Thought Leadership: The B2B LinkedIn VIP Lounge
@@ -469,7 +474,7 @@ export default function blogTurboChargeYourB2B() {
               prospects who are eager to learn from your insights and expertise.
             </p>
 
-            <br />
+            
             <h3 className="bold-h">
               4.1 Share Original, Insightful Content:
             </h3>
@@ -481,7 +486,7 @@ export default function blogTurboChargeYourB2B() {
               content should inspire, educate, and engage your audience.
             </p>
 
-            <br />
+            
             <h3 className="bold-h">
               4.2 Engage with Industry Influencers and Experts:
             </h3>
@@ -495,8 +500,8 @@ export default function blogTurboChargeYourB2B() {
               discussion.
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <h3 className="bold-h">
               Tip 5: Experiment with and Improve Your Content: The LinkedIn
@@ -510,7 +515,7 @@ export default function blogTurboChargeYourB2B() {
               best with your audience.
             </p>
 
-            <br />
+            
 
             <h3 className="bold-h">
               5.1 Test Different Content Formats:
@@ -523,7 +528,7 @@ export default function blogTurboChargeYourB2B() {
               suit your brand's personality. It's like trying on different
               outfits to find the perfect ensemble for a night out.
             </p>
-            <br />
+            
 
             <h3 className="bold-h">
               5.2 Analyse and Optimize:{" "}
@@ -546,8 +551,8 @@ export default function blogTurboChargeYourB2B() {
               </div>
             </div>
 
-            <br />
-            <br />
+            
+            
 
             <h3 className="bold-h">
               Tip 6: A Proper B2B Marketing Strategy: The LinkedIn Master Plan
@@ -561,7 +566,7 @@ export default function blogTurboChargeYourB2B() {
               game.
             </p>
 
-            <br />
+            
 
             <h3 className="bold-h">
               6.1 Set Clear Goals and Objectives:
@@ -574,7 +579,7 @@ export default function blogTurboChargeYourB2B() {
               and help you measure your success.
             </p>
 
-            <br />
+            
 
             <h3 className="bold-h">
               6.2 Align Your LinkedIn Strategy with Your Overall Marketing Plan:
@@ -588,8 +593,8 @@ export default function blogTurboChargeYourB2B() {
               results.
             </p>
 
-            <br />
-            <br />
+            
+            
             <p>
               There you have it - six unbelievably effective tips to optimize
               your LinkedIn content for B2B marketing success. By following
@@ -600,12 +605,11 @@ export default function blogTurboChargeYourB2B() {
               top hat, raise your glass, and toast to your newfound LinkedIn
               prowess. Cheers to your success!
             </p>
-            <br />
+            
           </div>
         </div>
       </div>
 
-      <div className="space-large desktop"></div>
 
       {/* =================== Related Articles =========================== */}
 
@@ -681,8 +685,6 @@ export default function blogTurboChargeYourB2B() {
       </div>
       {/* =================== Related Articles END =========================== */}
 
-      <div className="space-large desktop"></div>
-      <div className="space-small mobile"></div>
 
       {/* ======================== Footer ====================== */}
       <div className="desktop-footer">

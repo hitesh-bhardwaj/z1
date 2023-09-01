@@ -20,6 +20,10 @@ import FooterMobile from "@/components/Mobile/FooterMobile";
 
 gsap.registerPlugin(ScrollTrigger);
 
+gsap.config({
+  nullTargetWarn: false,
+});
+
 // Hover on the link
 const handleHover = (e) => {
   gsap.to(e.target, {
@@ -38,7 +42,7 @@ const handleHoverExit = (e) => {
   });
 };
 
-export default function blogPowerOfPsychologyUxDesign() {
+export default function blogHowToDesign() {
   // Hero Section Animation
   useEffect(() => {
     const tl = gsap.timeline();
@@ -106,29 +110,31 @@ export default function blogPowerOfPsychologyUxDesign() {
     return () => ctx.revert();
   });
 
-  // Parallax Image
-  useEffect(() => {
-    let ctx = gsap.context(() => {
-      gsap.utils.toArray(".image-container").forEach(function (container) {
-        let image = container.querySelector("img");
-
-        gsap.to(image, {
-          y: () => image.offsetHeight - container.offsetHeight,
-          ease: "none",
-          startAt: { y: "-25%" },
-          scrollTrigger: {
-            trigger: container,
-            scrub: true,
-            pin: false,
-            markers: false,
-          },
-          y: "25%",
-          ease: "none",
+   // Parallax Image
+   if (globalThis.innerWidth > 776) {
+    useEffect(() => {
+      let ctx = gsap.context(() => {
+        gsap.utils.toArray(".image-container").forEach(function (container) {
+          let image = container.querySelector("img");
+  
+          gsap.to(image, {
+            y: () => image.offsetHeight - container.offsetHeight,
+            ease: "none",
+            startAt: { y: "-25%" },
+            scrollTrigger: {
+              trigger: container,
+              scrub: true,
+              pin: false,
+              markers: false,
+            },
+            y: "25%",
+            ease: "none",
+          });
         });
       });
+      return () => ctx.revert();
     });
-    return () => ctx.revert();
-  });
+  }
 
   // Page Transitions
   useEffect(() => {
@@ -205,7 +211,7 @@ export default function blogPowerOfPsychologyUxDesign() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"
+          content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
         ></meta>
         <link rel="icon" href="/fav-icon.png" />
       </Head>
@@ -329,8 +335,8 @@ export default function blogPowerOfPsychologyUxDesign() {
               psychology in UX design and reveal how understanding the inner
               workings of the human brain can elevate your designs to new
               heights.
-              <br />
-              <br />
+              
+              
             </p>
             <h3 id="anim" 
                 className="bold-h">
@@ -341,8 +347,8 @@ export default function blogPowerOfPsychologyUxDesign() {
                 <img src="/assets/blogs/blog-detail/uxbrain.webp" alt="Img" />
               </div>
             </div>
-            <br />
-            <br />
+            
+            
             <p>
               At its core, UX design is all about understanding human behaviour.
               By applying psychological principles, we can gain valuable
@@ -351,32 +357,32 @@ export default function blogPowerOfPsychologyUxDesign() {
               only look great but also cater to the specific needs, preferences,
               and expectations of users.
             </p>
-            <br />
-            <br />
+            
+            
             <p>
               <strong>
                 Some key psychological concepts that can be applied to UX design
                 include:
               </strong>
             </p>
-            <br />
+            
             <p>
               <strong>Cognitive psychology:</strong> The study of mental
               processes such as perception, memory, and problem-solving.
             </p>
-            <br />
+            
             <p>
               <strong>Behavioural psychology:</strong> The examination of
               observable human behaviour and the factors that influence it.
             </p>
-            <br />
+            
             <p>
               <strong>Social psychology:</strong> The exploration of how people
               interact with one another and how group dynamics affect individual
               behaviour.
             </p>
-            <br />
-            <br />
+            
+            
             <h3 id="anim" 
                 className="bold-h">
                 Cognitive Load and Information Processing
@@ -410,8 +416,8 @@ export default function blogPowerOfPsychologyUxDesign() {
               Leverage visual cues such as colour, contrast, and whitespace to
               guide users' attention.
             </p>
-            <br />
-            <br />
+            
+            
             <h3 id="anim" 
                 className="bold-h">
                 The Power of Habit in User Behaviour
@@ -444,8 +450,7 @@ export default function blogPowerOfPsychologyUxDesign() {
               understand the consequences of their behaviour and reinforcing
               positive habits.
             </p>
-            <br />
-            <br />
+
             <h3 id="anim" 
                 className="bold-h">
                 The Role of Emotions in UX Design
@@ -479,8 +484,7 @@ export default function blogPowerOfPsychologyUxDesign() {
                 <img src="/assets/blogs/blog-detail/Blog-003.webp" alt="Img" />
               </div>
             </div>
-            <br />
-            <br />
+
             <h3 id="anim" 
                 className="bold-h">
                 Social Influence and the Power of Persuasion
@@ -519,8 +523,7 @@ export default function blogPowerOfPsychologyUxDesign() {
               highlighting limited-time offers, exclusive content, or low stock
               levels.
             </p>
-            <br />
-            <br />
+
             <h3 id="anim" 
                 className="bold-h">
                 Decision-Making and Choice Architecture
@@ -559,8 +562,7 @@ export default function blogPowerOfPsychologyUxDesign() {
                 <img src="/assets/blogs/blog-detail/Blog-001.webp" alt="Img" />
               </div>
             </div>
-            <br />
-            <br />
+
             <h3 id="anim" 
                 className="bold-h">
                 The Psychology of Motivation and Engagement
@@ -592,8 +594,7 @@ export default function blogPowerOfPsychologyUxDesign() {
               Incorporate game-like elements, such as points, badges, and leader
               boards, to increase motivation and engagement.
             </p>
-            <br />
-            <br />
+
             <h3 id="anim" 
                 className="bold-h">
                 The Importance of Empathy in UX Design
@@ -622,8 +623,6 @@ export default function blogPowerOfPsychologyUxDesign() {
               actions at different stages of their journey.
             </p>
 
-            <br />
-            <br />
             <h3 id="anim" 
                 className="bold-h">
                 Accessibility and Inclusive Design
@@ -653,8 +652,7 @@ export default function blogPowerOfPsychologyUxDesign() {
               Consider cultural differences and avoid potentially offensive or
               exclusionary content.
             </p>
-            <br />
-            <br />
+
             <h3 id="anim" 
                 className="bold-h">
                 The Ethics of Applying Psychology in UX Design
@@ -688,8 +686,7 @@ export default function blogPowerOfPsychologyUxDesign() {
                 <img src="/assets/blogs/blog-detail/Blog-004.webp" alt="Img" />
               </div>
             </div>
-            <br />
-            <br />
+
             <h3 id="anim" 
                 className="bold-h">
                 Conclusion:
@@ -736,8 +733,6 @@ export default function blogPowerOfPsychologyUxDesign() {
           </div>
         </div>
       </div>
-
-      <div className="space-large desktop"></div>
 
       {/* =================== Related Articles =========================== */}
 
@@ -796,7 +791,7 @@ export default function blogPowerOfPsychologyUxDesign() {
             <div className="img-box-related">
               <Link href="/the-evolution-of-ux-design">
                 <img
-                  src="/assets/blogs/blog-detail/the-evalution/feature.jpg"
+                  src="/assets/blogs/uxbrain.webp"
                   alt="img"
                   data-cursor-text="Read Now"
                   data-cursor-color="#000"
@@ -816,8 +811,6 @@ export default function blogPowerOfPsychologyUxDesign() {
       </div>
       {/* =================== Related Articles END =========================== */}
 
-      <div className="space-large desktop"></div>
-      <div className="space-small mobile"></div>
 
       {/* ======================== Footer ====================== */}
       <div className="desktop-footer">

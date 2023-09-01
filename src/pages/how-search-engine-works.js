@@ -107,28 +107,30 @@ export default function blogSearchEngineWorks() {
   });
 
   // Parallax Image
-  useEffect(() => {
-    let ctx = gsap.context(() => {
-      gsap.utils.toArray(".image-container").forEach(function (container) {
-        let image = container.querySelector("img");
-
-        gsap.to(image, {
-          y: () => image.offsetHeight - container.offsetHeight,
-          ease: "none",
-          startAt: { y: "-25%" },
-          scrollTrigger: {
-            trigger: container,
-            scrub: true,
-            pin: false,
-            markers: false,
-          },
-          y: "25%",
-          ease: "none",
+  if (globalThis.innerWidth > 776) {
+    useEffect(() => {
+      let ctx = gsap.context(() => {
+        gsap.utils.toArray(".image-container").forEach(function (container) {
+          let image = container.querySelector("img");
+  
+          gsap.to(image, {
+            y: () => image.offsetHeight - container.offsetHeight,
+            ease: "none",
+            startAt: { y: "-25%" },
+            scrollTrigger: {
+              trigger: container,
+              scrub: true,
+              pin: false,
+              markers: false,
+            },
+            y: "25%",
+            ease: "none",
+          });
         });
       });
+      return () => ctx.revert();
     });
-    return () => ctx.revert();
-  });
+  }
 
   // Page Transitions
   useEffect(() => {
@@ -201,7 +203,7 @@ export default function blogSearchEngineWorks() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"
+          content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
         ></meta>
         <link rel="icon" href="/fav-icon.png" />
       </Head>
@@ -316,8 +318,6 @@ export default function blogSearchEngineWorks() {
               engines, including the role of web crawlers, indexing, and ranking
               algorithms, and underscores the importance of understanding search
               engine behaviour for effective SEO.
-              <br />
-              <br />
             </p>
             <h3 className="bold-h" id="anim">
               Web Crawlers
@@ -329,7 +329,6 @@ export default function blogSearchEngineWorks() {
               from one page to another, and collecting information about each
               webpage they encounter.
             </p>
-            <br />
             <p id="anim">
               Crawlers collect data such as the content, meta tags, internal and
               external links, and the overall structure of a website. This
@@ -338,7 +337,7 @@ export default function blogSearchEngineWorks() {
               their data to ensure search engines have the most up-to-date
               website information.
             </p>
-            <br />
+            
             <p>
               The frequency with which a site is crawled depends on various
               factors, including its popularity, the frequency of content
@@ -357,8 +356,8 @@ export default function blogSearchEngineWorks() {
               </div>
             </div>
 
-            <br />
-            <br />
+            
+            
             <h3 className="bold-h">
               Indexing
             </h3>
@@ -371,7 +370,7 @@ export default function blogSearchEngineWorks() {
               queries.
             </p>
 
-            <br />
+            
 
             <p>
               Search engines use algorithms to analyse the indexed data,
@@ -383,8 +382,8 @@ export default function blogSearchEngineWorks() {
               indexed and highly visible in search results.
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <h3 className="bold-h">
               Ranking Algorithms
@@ -398,7 +397,7 @@ export default function blogSearchEngineWorks() {
               given search query.
             </p>
 
-            <br />
+            
 
             <h3 className="bold">Some key ranking factors include:</h3>
 
@@ -409,7 +408,7 @@ export default function blogSearchEngineWorks() {
               content quality.
             </p>
 
-            <br />
+            
 
             <p>
               <span className="bold">Authority: </span>
@@ -418,7 +417,7 @@ export default function blogSearchEngineWorks() {
               backlinks, domain age, and brand recognition.
             </p>
 
-            <br />
+            
 
             <p>
               <span className="bold">User Experience: </span>
@@ -428,7 +427,7 @@ export default function blogSearchEngineWorks() {
               ranking websites.
             </p>
 
-            <br />
+            
 
             <p>
               <span className="bold">Personalisation: </span>
@@ -437,7 +436,7 @@ export default function blogSearchEngineWorks() {
               providing more relevant and targeted results.
             </p>
 
-            <br />
+            
 
             <p>
               <span className="bold">Security: </span>
@@ -454,8 +453,8 @@ export default function blogSearchEngineWorks() {
                 />
               </div>
             </div>
-            <br />
-            <br />
+            
+            
 
             <h3 className="bold-h">
               Understanding Search Engine Behaviour for SEO
@@ -467,7 +466,7 @@ export default function blogSearchEngineWorks() {
               indexing, and ranking algorithms, website owners can make informed
               decisions on optimising their sites for higher visibility and
               rankings.
-              <br />
+              
               <br />
               Effective SEO involves implementing best practices, such as
               creating high-quality content, optimising on-page elements (e.g.,
@@ -475,7 +474,7 @@ export default function blogSearchEngineWorks() {
               robust backlink profile. Additionally, addressing technical SEO
               aspects, such as site speed, mobile-friendliness, and structured
               data, further enhances a website's performance in search results.
-              <br />
+              
               <br />
               Staying up-to-date with search engine algorithm updates and
               industry trends is also essential, as search engines continuously
@@ -484,7 +483,7 @@ export default function blogSearchEngineWorks() {
               tools like Google Search Console and Google Analytics can help
               identify areas for improvement and track the effectiveness of
               implemented SEO strategies.
-              <br />
+              
               <br />
               To sum it up, understanding how search engines work lays the
               foundation for successful SEO efforts. By familiarising oneself
@@ -500,7 +499,6 @@ export default function blogSearchEngineWorks() {
         </div>
       </div>
 
-      <div className="space-large desktop"></div>
 
       {/* =================== Related Articles =========================== */}
 
@@ -576,8 +574,6 @@ export default function blogSearchEngineWorks() {
       </div>
       {/* =================== Related Articles END =========================== */}
 
-      <div className="space-large desktop"></div>
-      <div className="space-small mobile"></div>
 
       {/* ======================== Footer ====================== */}
       <div className="desktop-footer">

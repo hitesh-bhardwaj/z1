@@ -20,6 +20,10 @@ import FooterMobile from "@/components/Mobile/FooterMobile";
 
 gsap.registerPlugin(ScrollTrigger);
 
+gsap.config({
+  nullTargetWarn: false,
+});
+
 // Hover on the link
 const handleHover = (e) => {
   gsap.to(e.target, {
@@ -106,29 +110,31 @@ export default function blogHowToDesign() {
     return () => ctx.revert();
   });
 
-  // Parallax Image
-  useEffect(() => {
-    let ctx = gsap.context(() => {
-      gsap.utils.toArray(".image-container").forEach(function (container) {
-        let image = container.querySelector("img");
-
-        gsap.to(image, {
-          y: () => image.offsetHeight - container.offsetHeight,
-          ease: "none",
-          startAt: { y: "-25%" },
-          scrollTrigger: {
-            trigger: container,
-            scrub: true,
-            pin: false,
-            markers: false,
-          },
-          y: "25%",
-          ease: "none",
+   // Parallax Image
+   if (globalThis.innerWidth > 776) {
+    useEffect(() => {
+      let ctx = gsap.context(() => {
+        gsap.utils.toArray(".image-container").forEach(function (container) {
+          let image = container.querySelector("img");
+  
+          gsap.to(image, {
+            y: () => image.offsetHeight - container.offsetHeight,
+            ease: "none",
+            startAt: { y: "-25%" },
+            scrollTrigger: {
+              trigger: container,
+              scrub: true,
+              pin: false,
+              markers: false,
+            },
+            y: "25%",
+            ease: "none",
+          });
         });
       });
+      return () => ctx.revert();
     });
-    return () => ctx.revert();
-  });
+  }
 
   // Page Transitions
   useEffect(() => {
@@ -207,7 +213,7 @@ export default function blogHowToDesign() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"
+          content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
         ></meta>
         <link rel="icon" href="/fav-icon.png" />
       </Head>
@@ -330,9 +336,9 @@ export default function blogHowToDesign() {
               best practices for designing exceptional experiences across these
               platforms. So, buckle up and get ready to embark on a fun-filled
               journey into the world of UX design mastery!
-              <br />
-              <br />
-              <br />
+              
+              
+              
             </p>
 
             <h3 className="bold-h" id="anim">
@@ -345,25 +351,22 @@ export default function blogHowToDesign() {
               showcase their creativity, and users expect a comprehensive and
               immersive experience. When designing for desktops, consider the
               following:
-              <br />
+              
               <br />
               <span className="bold">Responsive Layouts:</span> Users come with
               a diverse range of screen sizes and resolutions. Harness the power
               of responsive layouts to ensure your design fluidly adapts to any
               screen like a chameleon in a technicolour dream.
               <br />
-              <br />
               <span className="bold">Navigation:</span> Keep the navigation
               intuitive and easily accessible. A well-structured navigation menu
               is the trusty compass that guides users through the digital
               labyrinth.
               <br />
-              <br />
               <span className="bold">Content Hierarchy: </span>
               Establish a clear visual hierarchy to emphasize essential content
               and guide users' attention. Use typography, colour, and whitespace
               to create a harmonious symphony of information
-              <br />
               <br />A superb way to learn is by doing. To apply these principles
               of UX, Imagine designing a platform for movie enthusiasts to
               browse, review, and discuss their favourite films. On a desktop
@@ -381,8 +384,6 @@ export default function blogHowToDesign() {
               </div>
             </div>
 
-            <br />
-            <br />
 
             <h3 className="bold-h">
               TV: The Colossal Canvas
@@ -393,22 +394,18 @@ export default function blogHowToDesign() {
               accommodates the TV's larger screen size and viewing distance.
               Let's explore some essential considerations:
               <br />
-              <br />
               <span className="bold">Viewing Distance:</span> Users typically
               view TVs from a distance of 6 to 10 feet. To ensure readability,
               scale up text size, icons, and interface elements. Go big or go
               home
               <br />
-              <br />
               <span className="bold">Simplified Navigation:</span> Televisions
               often rely on remote controls with limited buttons. Keep your
               navigation straightforward and embrace the power of simplicity.
               <br />
-              <br />
               <span className="bold">Focus on Visuals:</span> TVs are built for
               visual storytelling. Leverage high-quality images, videos, and
               animations to captivate and mesmerize your audience.
-              <br />
               <br />
               Picture a cooking app designed for TV screens. With a focus on
               stunning visuals, you can showcase mouth-watering recipes through
@@ -427,8 +424,6 @@ export default function blogHowToDesign() {
               </div>
             </div>
 
-            <br />
-            <br />
             <h3 className="bold-h">
               Tablets: The Versatile Virtuosos
             </h3>
@@ -439,22 +434,18 @@ export default function blogHowToDesign() {
               approach to accommodate their unique screen size and touch-based
               interactions. Here's what to keep in mind:
               <br />
-              <br />
               <span className="bold">Touch Targets:</span> Fingers are less
               precise than mouse pointers. Design generously sized touch targets
               to make interactions effortless and frustration-free.
-              <br />
               <br />
               <span className="bold">Orientation Flexibility:</span> Tablets are
               masters of rotation. Design your interface to adapt gracefully to
               both portrait and landscape orientations, like a digital acrobat.
               <br />
-              <br />
               <span className="bold">Multi-tasking Power: </span>
               Tablets are the Swiss Army knives of digital devices. Consider
               incorporating split-screen functionality and other multi-tasking
               features to unleash their full potential.
-              <br />
               <br />
               Envision a digital magazine app for art enthusiasts. Utilize the
               tablet's touch capabilities and orientation flexibility to create
@@ -473,8 +464,6 @@ export default function blogHowToDesign() {
               </div>
             </div>
 
-            <br />
-            <br />
             <h3 className="bold-h">
               Mobile Phones: The Pocket-Sized Powerhouses
             </h3>
@@ -486,18 +475,15 @@ export default function blogHowToDesign() {
               devices is a must in today's digital landscape. Here are some key
               considerations for designing exceptional mobile experiences:
               <br />
-              <br />
               <span className="bold">Limited Screen Real Estate:</span> Mobile
               phones pack a punch, but their screens are smaller than desktops
               and tablets. Prioritize content and features to optimize the user
               experience, making sure every pixel counts.
               <br />
-              <br />
               <span className="bold">Touch-Friendly Interface:</span> Mobile
               phones rely on touch-based interactions. Design fingerfriendly
               buttons and touch targets, and embrace swipe gestures to make
               navigation and actions feel smooth and natural.
-              <br />
               <br />
               <span className="bold">Mobile First Approach: </span>
               Given the prevalence of mobile devices, adopting a mobile-first
@@ -505,18 +491,15 @@ export default function blogHowToDesign() {
               the get-go. This approach lays a strong foundation for scaling up
               to larger devices.
               <br />
-              <br />
               <span className="bold">Network Constraints: </span>
               Mobile users often face fluctuating network conditions. Optimize
               your design to load quickly and function seamlessly, even on
               slower connections.
               <br />
-              <br />
               <span className="bold">Accessibility: </span>
               Mobile devices are used in a variety of contexts and environments.
               Consider factors like screen glare, ambient noise, and one-handed
               usage when designing your mobile interface.
-              <br />
               <br />
               To put these principles to a real-world test, let's take an
               example of a music discovery app that allows users to explore new
@@ -525,14 +508,12 @@ export default function blogHowToDesign() {
               album artwork, song titles, and artist names, while hiding
               secondary information behind expandable menus or swipe gestures.
               <br />
-              <br />
               Use touch-friendly buttons for primary actions like play, pause,
               and skip, and incorporate swiping gestures for users to easily
               navigate through playlists and songs. Optimize the app's
               performance to ensure smooth streaming, even on slower
               connections, and consider adding an offline mode for those moments
               when users find themselves without internet access.
-              <br />
               <br />
               Factor in accessibility by using legible fonts, clear contrast,
               and intuitive controls that accommodate one-handed usage, making
@@ -549,8 +530,6 @@ export default function blogHowToDesign() {
               </div>
             </div>
 
-            <br />
-            <br />
             <h3 className="bold-h">
               Wearables: The Tiny Titans
             </h3>
@@ -561,22 +540,18 @@ export default function blogHowToDesign() {
               intimate nature demand a reimagined design approach. Keep these
               factors in mind:
               <br />
-              <br />
               <span className="bold">Glanceability:</span> Users interact with
               wearables in short bursts. Prioritize essential information and
               make it easily digestible at a glance.
-              <br />
               <br />
               <span className="bold">Simplify Interactions:</span> Small screens
               are no place for complexity. Strip down your design to its bare
               essentials and focus on core functionality.
               <br />
-              <br />
               <span className="bold">Contextual Relevance: </span>
               Wearables excel at providing contextual information, like fitness
               stats or weather updates. Harness the power of personalization to
               deliver tailored, relevant content.
-              <br />
               <br />
               Think of a smartwatch fitness app that provides users with
               real-time workout data, like heart rate and calories burned.
@@ -585,11 +560,9 @@ export default function blogHowToDesign() {
               gestures and minimal touch targets, allowing users to access their
               workout stats on the go easily.
               <br />
-              <br />
               Designing for diverse digital platforms – desktops, TVs, tablets,
               wearables, and mobile phones – demands creativity, adaptability,
               and empathy for users' needs and expectations
-              <br />
               <br />
               By understanding the unique characteristics of each platform and
               applying best practices, you can craft delightful, engaging
@@ -601,8 +574,6 @@ export default function blogHowToDesign() {
           </div>
         </div>
       </div>
-
-      <div className="space-large desktop"></div>
 
       {/* =================== Related Articles =========================== */}
 
@@ -619,7 +590,7 @@ export default function blogHowToDesign() {
             <div className="img-box-related">
               <Link href="/what-is-experience-design">
                 <img
-                  src="/assets/blogs/experience-design.webp"
+                  src="/assets/blogs/feature.jpg"
                   alt="img"
                   data-cursor-text="Read Now"
                   data-cursor-color="#000"
@@ -679,9 +650,6 @@ export default function blogHowToDesign() {
         </div>
       </div>
       {/* =================== Related Articles END =========================== */}
-
-      <div className="space-large desktop"></div>
-      <div className="space-small mobile"></div>
 
       {/* ======================== Footer ====================== */}
       <div className="desktop-footer">

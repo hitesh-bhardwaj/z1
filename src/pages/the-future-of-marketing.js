@@ -21,6 +21,10 @@ import FooterMobile from "@/components/Mobile/FooterMobile";
 
 gsap.registerPlugin(ScrollTrigger);
 
+gsap.config({
+  nullTargetWarn: false,
+});
+
 // Hover on the link
 const handleHover = (e) => {
   gsap.to(e.target, {
@@ -39,7 +43,7 @@ const handleHoverExit = (e) => {
   });
 };
 
-export default function blogFutureMarketing() {
+export default function blogHowToDesign() {
   // Hero Section Animation
   useEffect(() => {
     const tl = gsap.timeline();
@@ -107,29 +111,31 @@ export default function blogFutureMarketing() {
     return () => ctx.revert();
   });
 
-  // Parallax Image
-  useEffect(() => {
-    let ctx = gsap.context(() => {
-      gsap.utils.toArray(".image-container").forEach(function (container) {
-        let image = container.querySelector("img");
-
-        gsap.to(image, {
-          y: () => image.offsetHeight - container.offsetHeight,
-          ease: "none",
-          startAt: { y: "-25%" },
-          scrollTrigger: {
-            trigger: container,
-            scrub: true,
-            pin: false,
-            markers: false,
-          },
-          y: "25%",
-          ease: "none",
+   // Parallax Image
+   if (globalThis.innerWidth > 776) {
+    useEffect(() => {
+      let ctx = gsap.context(() => {
+        gsap.utils.toArray(".image-container").forEach(function (container) {
+          let image = container.querySelector("img");
+  
+          gsap.to(image, {
+            y: () => image.offsetHeight - container.offsetHeight,
+            ease: "none",
+            startAt: { y: "-25%" },
+            scrollTrigger: {
+              trigger: container,
+              scrub: true,
+              pin: false,
+              markers: false,
+            },
+            y: "25%",
+            ease: "none",
+          });
         });
       });
+      return () => ctx.revert();
     });
-    return () => ctx.revert();
-  });
+  }
 
   // Page Transitions
   useEffect(() => {
@@ -204,7 +210,7 @@ export default function blogFutureMarketing() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"
+          content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
         ></meta>
         <link rel="icon" href="/fav-icon.png" />
       </Head>
@@ -321,8 +327,8 @@ export default function blogFutureMarketing() {
               revolutionize the way businesses communicate with their audience.
               In this article, we will explore the reasons why every marketer
               should learn neuroscience and master neuromarketing.
-              <br />
-              <br />
+              
+              
             </p>
 
             <h3 className="bold-h" id="anim">
@@ -339,8 +345,8 @@ export default function blogFutureMarketing() {
               with their target audience on a deeper level.
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <h3 className="bold-h" id="anim">
               Create More Persuasive Messaging:
@@ -370,8 +376,8 @@ export default function blogFutureMarketing() {
               </div>
             </div>
 
-            <br />
-            <br />
+            
+            
 
             <h3 className="bold-h" id="anim">
               Enhance Brand Experiences:
@@ -389,8 +395,8 @@ export default function blogFutureMarketing() {
               keep their audience engaged and coming back for more.
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <h3 className="bold-h" id="anim">
               Improve Advertising Effectiveness:
@@ -408,8 +414,8 @@ export default function blogFutureMarketing() {
               with their audience and drive desired actions.
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <h3 className="bold-h" id="anim">
               Optimize Marketing ROI:
@@ -436,8 +442,8 @@ export default function blogFutureMarketing() {
               </div>
             </div>
 
-            <br />
-            <br />
+            
+            
             <h3 className="bold-h">
               Foster Innovation and Creativity:
             </h3>
@@ -452,8 +458,8 @@ export default function blogFutureMarketing() {
               marketing efforts to new heights.
             </p>
 
-            <br />
-            <br />
+            
+            
             <h3 className="bold-h">
               Gain a Competitive Edge:
             </h3>
@@ -471,8 +477,8 @@ export default function blogFutureMarketing() {
               marketing landscape.
             </p>
 
-            <br />
-            <br />
+            
+            
             <h3 className="bold-h">
               Drive Personalization and Relevance:
             </h3>
@@ -501,8 +507,8 @@ export default function blogFutureMarketing() {
               </div>
             </div>
 
-            <br />
-            <br />
+            
+            
             <h3 className="bold-h">
               Enhance Ethical Marketing Practices:
             </h3>
@@ -517,8 +523,8 @@ export default function blogFutureMarketing() {
               ethical marketing industry as a whole.
             </p>
 
-            <br />
-            <br />
+            
+            
             <h3 className="bold-h">
               Future-Proof Your Marketing Career:
             </h3>
@@ -552,8 +558,6 @@ export default function blogFutureMarketing() {
         </div>
       </div>
 
-      <div className="space-large desktop"></div>
-
       {/* =================== Related Articles =========================== */}
 
       <div className="related-articles">
@@ -571,7 +575,7 @@ export default function blogFutureMarketing() {
                 <Image
                   width={1000}
                   height={1000}
-                  src="/assets/blogs/experience-design.webp"
+                  src="/assets/blogs/feature.jpg"
                   alt="img"
                   data-cursor-text="Read Now"
                   data-cursor-color="#000"
@@ -635,9 +639,6 @@ export default function blogFutureMarketing() {
         </div>
       </div>
       {/* =================== Related Articles END =========================== */}
-
-      <div className="space-large desktop"></div>
-      <div className="space-small mobile"></div>
 
       {/* ======================== Footer ====================== */}
       <div className="desktop-footer">

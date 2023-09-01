@@ -110,10 +110,8 @@ function Footer() {
           </div>
           <div className="right-en-box">
             <div className="image-box contact-us-box">
-              <Image
+              <img
                 src="/assets/footer-main/Vector.png"
-                width={250}
-                height={50}
                 className="footer-dark-img"
                 alt="Foter contact image"
               />

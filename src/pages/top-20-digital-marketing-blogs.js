@@ -21,6 +21,10 @@ import FooterMobile from "@/components/Mobile/FooterMobile";
 
 gsap.registerPlugin(ScrollTrigger);
 
+gsap.config({
+  nullTargetWarn: false,
+});
+
 // Hover on the link
 const handleHover = (e) => {
   gsap.to(e.target, {
@@ -39,7 +43,7 @@ const handleHoverExit = (e) => {
   });
 };
 
-export default function blog20DigitalMarketingBlogs() {
+export default function blogHowToDesign() {
   // Hero Section Animation
   useEffect(() => {
     const tl = gsap.timeline();
@@ -107,29 +111,31 @@ export default function blog20DigitalMarketingBlogs() {
     return () => ctx.revert();
   });
 
-  // Parallax Image
-  useEffect(() => {
-    let ctx = gsap.context(() => {
-      gsap.utils.toArray(".image-container").forEach(function (container) {
-        let image = container.querySelector("img");
-
-        gsap.to(image, {
-          y: () => image.offsetHeight - container.offsetHeight,
-          ease: "none",
-          startAt: { y: "-25%" },
-          scrollTrigger: {
-            trigger: container,
-            scrub: true,
-            pin: false,
-            markers: false,
-          },
-          y: "25%",
-          ease: "none",
+   // Parallax Image
+   if (globalThis.innerWidth > 776) {
+    useEffect(() => {
+      let ctx = gsap.context(() => {
+        gsap.utils.toArray(".image-container").forEach(function (container) {
+          let image = container.querySelector("img");
+  
+          gsap.to(image, {
+            y: () => image.offsetHeight - container.offsetHeight,
+            ease: "none",
+            startAt: { y: "-25%" },
+            scrollTrigger: {
+              trigger: container,
+              scrub: true,
+              pin: false,
+              markers: false,
+            },
+            y: "25%",
+            ease: "none",
+          });
         });
       });
+      return () => ctx.revert();
     });
-    return () => ctx.revert();
-  });
+  }
 
   // Page Transitions
   useEffect(() => {
@@ -207,7 +213,7 @@ export default function blog20DigitalMarketingBlogs() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"
+          content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
         ></meta>
         <link rel="icon" href="/fav-icon.png" />
       </Head>
@@ -337,8 +343,8 @@ export default function blog20DigitalMarketingBlogs() {
               digital marketing expertise and explore these must-follow blogs!
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <h3
               className="bold-h blog-mt-0"
@@ -357,8 +363,8 @@ export default function blog20DigitalMarketingBlogs() {
               your website's performance.
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <h3
               className="bold-h blog-mt-0"
@@ -376,8 +382,8 @@ export default function blog20DigitalMarketingBlogs() {
               content marketing campaigns.
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <h3
               className="bold-h blog-mt-0"
@@ -394,8 +400,8 @@ export default function blog20DigitalMarketingBlogs() {
               one-stop-shop for all things inbound marketing.
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <h3
               className="bold-h blog-mt-0"
@@ -412,8 +418,8 @@ export default function blog20DigitalMarketingBlogs() {
               to everyone.
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <h3
               className="bold-h blog-mt-0"
@@ -439,8 +445,8 @@ export default function blog20DigitalMarketingBlogs() {
               </div>
             </div>
 
-            <br />
-            <br />
+            
+            
             <h3 className="bold-h blog-mt-0">
               Search Engine Land
             </h3>
@@ -452,8 +458,8 @@ export default function blog20DigitalMarketingBlogs() {
               staying informed on search-related topics.
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <h3 className="bold-h blog-mt-0">
               Enigma Digital
@@ -469,8 +475,8 @@ export default function blog20DigitalMarketingBlogs() {
               only informative but also engaging and accessible
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <h3 className="bold-h blog-mt-0">
               Copyblogger
@@ -483,8 +489,8 @@ export default function blog20DigitalMarketingBlogs() {
               examples, and focus on writing techniques that drive results.
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <h3 className="bold-h blog-mt-0">
               MarketingProfs
@@ -500,8 +506,8 @@ export default function blog20DigitalMarketingBlogs() {
               skills and stay ahead of the curve.
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <h3 className="bold-h blog-mt-0">
               Convince & Convert
@@ -517,8 +523,8 @@ export default function blog20DigitalMarketingBlogs() {
               customers first.
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <h3 className="bold-h blog-mt-0">
               Ahrefs
@@ -540,8 +546,8 @@ export default function blog20DigitalMarketingBlogs() {
                 />
               </div>
             </div>
-            <br />
-            <br />
+            
+            
 
             <h3 className="bold-h blog-mt-0">
               Buffer
@@ -555,8 +561,8 @@ export default function blog20DigitalMarketingBlogs() {
               presence and drive better results.
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <h3 className="bold-h blog-mt-0">
               Digiday
@@ -571,8 +577,8 @@ export default function blog20DigitalMarketingBlogs() {
               marketers of all skill levels.
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <h3 className="bold-h blog-mt-0">
               Search Engine Journal
@@ -586,8 +592,8 @@ export default function blog20DigitalMarketingBlogs() {
               the most current and effective search marketing strategies.
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <h3 className="bold-h blog-mt-0">
               Marketing Land
@@ -603,8 +609,8 @@ export default function blog20DigitalMarketingBlogs() {
               expertise.
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <h3 className="bold-h blog-mt-0">
               Backlinko
@@ -617,8 +623,8 @@ export default function blog20DigitalMarketingBlogs() {
               providing high-quality, easy-to-understand content.
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <h3 className="bold-h blog-mt-0">
               AdEspresso
@@ -641,8 +647,8 @@ export default function blog20DigitalMarketingBlogs() {
               </div>
             </div>
 
-            <br />
-            <br />
+            
+            
 
             <h3 className="bold-h blog-mt-0">
               Unbounce
@@ -657,8 +663,8 @@ export default function blog20DigitalMarketingBlogs() {
               optimize landing pages that drive results.
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <h3 className="bold-h blog-mt-0">
               KlientBoost
@@ -672,8 +678,8 @@ export default function blog20DigitalMarketingBlogs() {
               marketers.
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <h3 className="bold-h blog-mt-0">
               Grow
@@ -689,8 +695,8 @@ export default function blog20DigitalMarketingBlogs() {
               tactics.
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <h3 className="bold-h blog-mt-0">
               That’s A Wrap..!
@@ -713,7 +719,6 @@ export default function blog20DigitalMarketingBlogs() {
         </div>
       </div>
 
-      <div className="space-large desktop"></div>
 
       {/* =================== Related Articles =========================== */}
 
@@ -789,8 +794,7 @@ export default function blog20DigitalMarketingBlogs() {
       </div>
       {/* =================== Related Articles END =========================== */}
 
-      <div className="space-large desktop"></div>
-      <div className="space-small mobile"></div>
+
 
       {/* ======================== Footer ====================== */}
       <div className="desktop-footer">

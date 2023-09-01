@@ -21,6 +21,10 @@ import FooterMobile from "@/components/Mobile/FooterMobile";
 
 gsap.registerPlugin(ScrollTrigger);
 
+gsap.config({
+  nullTargetWarn: false,
+});
+
 // Hover on the link
 const handleHover = (e) => {
   gsap.to(e.target, {
@@ -39,7 +43,7 @@ const handleHoverExit = (e) => {
   });
 };
 
-export default function blogUnmaskingWebSide() {
+export default function blogHowToDesign() {
   // Hero Section Animation
   useEffect(() => {
     const tl = gsap.timeline();
@@ -107,29 +111,31 @@ export default function blogUnmaskingWebSide() {
     return () => ctx.revert();
   });
 
-  // Parallax Image
-  useEffect(() => {
-    let ctx = gsap.context(() => {
-      gsap.utils.toArray(".image-container").forEach(function (container) {
-        let image = container.querySelector("img");
-
-        gsap.to(image, {
-          y: () => image.offsetHeight - container.offsetHeight,
-          ease: "none",
-          startAt: { y: "-25%" },
-          scrollTrigger: {
-            trigger: container,
-            scrub: true,
-            pin: false,
-            markers: false,
-          },
-          y: "25%",
-          ease: "none",
+   // Parallax Image
+   if (globalThis.innerWidth > 776) {
+    useEffect(() => {
+      let ctx = gsap.context(() => {
+        gsap.utils.toArray(".image-container").forEach(function (container) {
+          let image = container.querySelector("img");
+  
+          gsap.to(image, {
+            y: () => image.offsetHeight - container.offsetHeight,
+            ease: "none",
+            startAt: { y: "-25%" },
+            scrollTrigger: {
+              trigger: container,
+              scrub: true,
+              pin: false,
+              markers: false,
+            },
+            y: "25%",
+            ease: "none",
+          });
         });
       });
+      return () => ctx.revert();
     });
-    return () => ctx.revert();
-  });
+  }
 
   // Page Transitions
   useEffect(() => {
@@ -206,7 +212,7 @@ export default function blogUnmaskingWebSide() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"
+          content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
         ></meta>
         <link rel="icon" href="/fav-icon.png" />
       </Head>
@@ -327,8 +333,8 @@ export default function blogUnmaskingWebSide() {
               and trust. Let's dive in!
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <h3
               className="bold-h blog-mt-0"
@@ -346,8 +352,8 @@ export default function blogUnmaskingWebSide() {
               reputation and customer trust.
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <p id="anim">
               <span className="bold">Alternative:</span> Be upfront and
@@ -358,8 +364,8 @@ export default function blogUnmaskingWebSide() {
               experience.
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <h3
               className="bold-h blog-mt-0"
@@ -376,8 +382,8 @@ export default function blogUnmaskingWebSide() {
               Protection Regulation (GDPR).
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <p id="anim">
               <span className="bold">Alternative:</span> Craft a comprehensive,
@@ -397,8 +403,8 @@ export default function blogUnmaskingWebSide() {
               </div>
             </div>
 
-            <br />
-            <br />
+            
+            
             <h3 className="bold-h blog-mt-0">
               Products Should Never Sneak into the Cart
             </h3>
@@ -409,8 +415,8 @@ export default function blogUnmaskingWebSide() {
               it ultimately damages the user experience and erodes trust.
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <p>
               <span className="bold">Alternative:</span> Prioritize user choice
@@ -421,8 +427,8 @@ export default function blogUnmaskingWebSide() {
               a positive shopping experience.
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <h3 className="bold-h blog-mt-0">
               Charges Should Come with a Notification
@@ -434,8 +440,8 @@ export default function blogUnmaskingWebSide() {
               building long-term customer loyalty.
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <p>
               <span className="bold">Alternative:</span> Disclose all fees and
@@ -446,8 +452,8 @@ export default function blogUnmaskingWebSide() {
               order.
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <h3 className="bold-h blog-mt-0">
               Copyblogger
@@ -460,8 +466,8 @@ export default function blogUnmaskingWebSide() {
               examples, and focus on writing techniques that drive results.
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <p>
               <span className="bold">Alternative:</span> Adopt a respectful and
@@ -480,8 +486,8 @@ export default function blogUnmaskingWebSide() {
                 />
               </div>
             </div>
-            <br />
-            <br />
+            
+            
 
             <h3 className="bold-h blog-mt-0">
               No More False Urgency or Scarcity, Please
@@ -494,8 +500,8 @@ export default function blogUnmaskingWebSide() {
               your website.
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <p>
               <span className="bold">Alternative:</span> Be genuine with your
@@ -507,8 +513,8 @@ export default function blogUnmaskingWebSide() {
               and a positive reputation.
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <p>
               Deceptive patterns in website design can lead to short-term gains,
@@ -518,8 +524,8 @@ export default function blogUnmaskingWebSide() {
               approach is the key to long-lasting success.
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <p>
               By avoiding these deceptive practices and implementing the
@@ -532,7 +538,6 @@ export default function blogUnmaskingWebSide() {
           </div>
         </div>
       </div>
-      <div className="space-large desktop"></div>
 
       {/* =================== Related Articles =========================== */}
       <div className="related-articles">
@@ -606,8 +611,7 @@ export default function blogUnmaskingWebSide() {
         </div>
       </div>
       {/* =================== Related Articles END =========================== */}
-      <div className="space-large desktop"></div>
-      <div className="space-small mobile"></div>
+
       {/* ======================== Footer ====================== */}
       <div className="desktop-footer">
         <Footer />

@@ -20,6 +20,10 @@ import FooterMobile from "@/components/Mobile/FooterMobile";
 
 gsap.registerPlugin(ScrollTrigger);
 
+gsap.config({
+  nullTargetWarn: false,
+});
+
 // Hover on the link
 const handleHover = (e) => {
   gsap.to(e.target, {
@@ -38,7 +42,7 @@ const handleHoverExit = (e) => {
   });
 };
 
-export default function blogBasicsOfSeo() {
+export default function blogHowToDesign() {
   // Hero Section Animation
   useEffect(() => {
     const tl = gsap.timeline();
@@ -106,29 +110,31 @@ export default function blogBasicsOfSeo() {
     return () => ctx.revert();
   });
 
-  // Parallax Image
-  useEffect(() => {
-    let ctx = gsap.context(() => {
-      gsap.utils.toArray(".image-container").forEach(function (container) {
-        let image = container.querySelector("img");
-
-        gsap.to(image, {
-          y: () => image.offsetHeight - container.offsetHeight,
-          ease: "none",
-          startAt: { y: "-25%" },
-          scrollTrigger: {
-            trigger: container,
-            scrub: true,
-            pin: false,
-            markers: false,
-          },
-          y: "25%",
-          ease: "none",
+   // Parallax Image
+   if (globalThis.innerWidth > 776) {
+    useEffect(() => {
+      let ctx = gsap.context(() => {
+        gsap.utils.toArray(".image-container").forEach(function (container) {
+          let image = container.querySelector("img");
+  
+          gsap.to(image, {
+            y: () => image.offsetHeight - container.offsetHeight,
+            ease: "none",
+            startAt: { y: "-25%" },
+            scrollTrigger: {
+              trigger: container,
+              scrub: true,
+              pin: false,
+              markers: false,
+            },
+            y: "25%",
+            ease: "none",
+          });
         });
       });
+      return () => ctx.revert();
     });
-    return () => ctx.revert();
-  });
+  }
 
   // Page Transitions
   useEffect(() => {
@@ -203,7 +209,7 @@ export default function blogBasicsOfSeo() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"
+          content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
         ></meta>
         <link rel="icon" href="/fav-icon.png" />
       </Head>
@@ -318,8 +324,6 @@ export default function blogBasicsOfSeo() {
               rankings. With a focus on ethical practices and a comprehensive
               approach, this guide is designed to be your guide, mentor and
               friend in your SEO journey
-              <br />
-              <br />
             </p>
             <h3 className="bold-h" id="anim">
               White-hat vs. Black-hat SEO
@@ -349,8 +353,8 @@ export default function blogBasicsOfSeo() {
               </div>
             </div>
 
-            <br />
-            <br />
+            
+            
             <h3 className="bold-h">
               On-page SEO
             </h3>
@@ -361,7 +365,7 @@ export default function blogBasicsOfSeo() {
               tags, and site architecture. Key on-page factors include:
             </p>
 
-            <br />
+            
 
             <p>
               <span className="bold">Content:</span> Creating high-quality,
@@ -374,7 +378,7 @@ export default function blogBasicsOfSeo() {
               cater to different learning styles.
             </p>
 
-            <br />
+            
 
             <p>
               <span className="bold">Title tags:</span> Crafting descriptive,
@@ -385,7 +389,7 @@ export default function blogBasicsOfSeo() {
               main topic of a page.
             </p>
 
-            <br />
+            
 
             <p>
               <span className="bold">Meta descriptions: </span>
@@ -396,7 +400,7 @@ export default function blogBasicsOfSeo() {
               influence click-through rates and user engagement.
             </p>
 
-            <br />
+            
 
             <p>
               <span className="bold">Header tags: </span>
@@ -408,7 +412,7 @@ export default function blogBasicsOfSeo() {
               chances of ranking for related keywords.
             </p>
 
-            <br />
+            
 
             <p>
               <span className="bold">Internal linking: </span>
@@ -428,8 +432,8 @@ export default function blogBasicsOfSeo() {
                 />
               </div>
             </div>
-            <br />
-            <br />
+            
+            
 
             <h3 className="bold-h">
               Off-page SEO
@@ -441,8 +445,8 @@ export default function blogBasicsOfSeo() {
               brand mentions. Key off-page strategies include:
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <p>
               <span className="bold">Link building: </span>
@@ -455,7 +459,7 @@ export default function blogBasicsOfSeo() {
               engine algorithms.
             </p>
 
-            <br />
+            
 
             <p>
               <span className="bold">Social media marketing: </span>
@@ -469,7 +473,7 @@ export default function blogBasicsOfSeo() {
               sharing.
             </p>
 
-            <br />
+            
 
             <p>
               <span className="bold">Online reputation management: </span>
@@ -480,7 +484,7 @@ export default function blogBasicsOfSeo() {
               which can influence search engine rankings and user engagement.
             </p>
 
-            <br />
+            
 
             <p>
               <span className="bold">Content promotion and outreach: </span>
@@ -492,7 +496,7 @@ export default function blogBasicsOfSeo() {
               drive traffic to your website.
             </p>
 
-            <br />
+            
 
             <p>
               <span className="bold">Local SEO: </span>
@@ -511,8 +515,8 @@ export default function blogBasicsOfSeo() {
                 />
               </div>
             </div>
-            <br />
-            <br />
+            
+            
 
             <h3 className="bold-h">
               Quality Content, Website Structure, and Promotion
@@ -532,8 +536,8 @@ export default function blogBasicsOfSeo() {
               structure.
             </p>
 
-            <br />
-            <br />
+            
+            
             <p>
               Promoting your site online is crucial for increasing visibility,
               attracting new visitors, and earning backlinks. Utilize social
@@ -556,7 +560,6 @@ export default function blogBasicsOfSeo() {
         </div>
       </div>
 
-      <div className="space-large desktop"></div>
 
       {/* =================== Related Articles =========================== */}
 
@@ -635,8 +638,6 @@ export default function blogBasicsOfSeo() {
       </div>
       {/* =================== Related Articles END =========================== */}
 
-      <div className="space-large desktop"></div>
-      <div className="space-small mobile"></div>
 
       {/* ======================== Footer ====================== */}
       <div className="desktop-footer">

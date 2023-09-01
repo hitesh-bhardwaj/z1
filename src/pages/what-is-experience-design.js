@@ -20,6 +20,10 @@ import FooterMobile from "@/components/Mobile/FooterMobile";
 
 gsap.registerPlugin(ScrollTrigger);
 
+gsap.config({
+  nullTargetWarn: false,
+});
+
 // Hover on the link
 const handleHover = (e) => {
   gsap.to(e.target, {
@@ -38,7 +42,7 @@ const handleHoverExit = (e) => {
   });
 };
 
-export default function blogExperienceDesign() {
+export default function blogHowToDesign() {
   // Hero Section Animation
   useEffect(() => {
     const tl = gsap.timeline();
@@ -106,29 +110,31 @@ export default function blogExperienceDesign() {
     return () => ctx.revert();
   });
 
-  // Parallax Image
-  useEffect(() => {
-    let ctx = gsap.context(() => {
-      gsap.utils.toArray(".image-container").forEach(function (container) {
-        let image = container.querySelector("img");
-
-        gsap.to(image, {
-          y: () => image.offsetHeight - container.offsetHeight,
-          ease: "none",
-          startAt: { y: "-25%" },
-          scrollTrigger: {
-            trigger: container,
-            scrub: true,
-            pin: false,
-            markers: false,
-          },
-          y: "25%",
-          ease: "none",
+   // Parallax Image
+   if (globalThis.innerWidth > 776) {
+    useEffect(() => {
+      let ctx = gsap.context(() => {
+        gsap.utils.toArray(".image-container").forEach(function (container) {
+          let image = container.querySelector("img");
+  
+          gsap.to(image, {
+            y: () => image.offsetHeight - container.offsetHeight,
+            ease: "none",
+            startAt: { y: "-25%" },
+            scrollTrigger: {
+              trigger: container,
+              scrub: true,
+              pin: false,
+              markers: false,
+            },
+            y: "25%",
+            ease: "none",
+          });
         });
       });
+      return () => ctx.revert();
     });
-    return () => ctx.revert();
-  });
+  }
 
   // Page Transitions
   useEffect(() => {
@@ -325,8 +331,8 @@ export default function blogExperienceDesign() {
               Architect. Sometime during the early 1990s, he decided to change
               his title to User Experience Architect. Why did he do it? In Don’s
               own words -
-              <br />
-              <br />
+              
+              
             </p>
             <blockquote className="bold strong" id="anim">
               “I invented the term because I thought Human Interface and
@@ -335,24 +341,26 @@ export default function blogExperienceDesign() {
               graphics, the interface, the physical interaction, and the
               manual.”
             </blockquote>
-            <br />
-            <br />
+            
+            
             <span className="donald">Donald Arthur Norman</span>
+            <br />
+            <br />
             <div className="blog-img">
               <div className="image-container blog-img-container">
                 <img src="/assets/blogs/blog-detail/Blog-001.webp" alt="Img" />
               </div>
             </div>
-            <br />
-            <br />
+            
+            
             <p>
               The term User Experience Design was not coined until the early ,
               but examples of Experience Design date back even earlier. For
               instance, Walt Disney is often regarded as one of the worlds first
               Experience Designer because of his theme parks and resorts.
             </p>
-            <br />
-            <br />
+            
+            
             <p>
               Walt Disney had the vision to create an amusement park that was
               fun for both children and adults alike. However, during thes,
@@ -363,8 +371,8 @@ export default function blogExperienceDesign() {
               (Disney Imagineers).
             </p>
 
-            <br />
-            <br />
+            
+            
             <p>
               An example of good experience design at the parks is the variety
               of choices that visitors can select from. The parks were designed
@@ -379,8 +387,8 @@ export default function blogExperienceDesign() {
                 <img src="/assets/blogs/blog-detail/Blog-003.webp" alt="Img" />
               </div>
             </div>
-            <br />
-            <br />
+            
+            
 
             <p>
               The term User Experience Design was not coined until the early ,
@@ -411,24 +419,24 @@ export default function blogExperienceDesign() {
                 <img src="/assets/blogs/blog-detail/Blog-004.webp" alt="Img" />
               </div>
             </div>
-            <br />
-            <br />
+            
+            
             <h2>
               <strong className="bold fontSize">
                 So, what precisely is the difference between Experience Design &
                 User Experience?
               </strong>
             </h2>
-            <br />
-            <br />
+            
+            
             <p>
               The term User Experience Design was not coined until the early
               1990s, but examples of Experience Design date back even earlier.
               For instance, Walt Disney is often regarded as one of the world’s
               first Experience Designer because of his theme parks and resorts.
             </p>
-            <br />
-            <br />
+            
+            
             <p>
               Walt Disney had the vision to create an amusement park that was
               fun for both children and adults alike. However, during the 1950s,
@@ -438,8 +446,8 @@ export default function blogExperienceDesign() {
               engineers put a lot of thought and contemplation into the park
               (“Disney Imagineers”).
             </p>
-            <br />
-            <br />
+            
+            
             <p>
               An example of good experience design at the parks is the variety
               of choices that visitors can select from. The parks were designed
@@ -451,8 +459,6 @@ export default function blogExperienceDesign() {
           </div>
         </div>
       </div>
-
-      <div className="space-large desktop"></div>
 
       {/* =================== Related Articles =========================== */}
       <div className="related-articles">
@@ -528,9 +534,6 @@ export default function blogExperienceDesign() {
         </div>
       </div>
       {/* =================== Related Articles END =========================== */}
-
-      <div className="space-large desktop"></div>
-      <div className="space-small mobile"></div>
 
       {/* ======================== Footer ====================== */}
       <div className="desktop-footer">

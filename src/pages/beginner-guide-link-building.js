@@ -20,6 +20,10 @@ import FooterMobile from "@/components/Mobile/FooterMobile";
 
 gsap.registerPlugin(ScrollTrigger);
 
+gsap.config({
+  nullTargetWarn: false,
+});
+
 // Hover on the link
 const handleHover = (e) => {
   gsap.to(e.target, {
@@ -74,7 +78,7 @@ export default function blogBeginnerGuideLinkBuilding() {
       },
       {
         delay: 3.8,
-        duration: 1.3,
+        duration: 1,
         opacity: 1,
         stagger: 0.1,
         translateY: 0,
@@ -107,28 +111,31 @@ export default function blogBeginnerGuideLinkBuilding() {
   });
 
   // Parallax Image
-  useEffect(() => {
-    let ctx = gsap.context(() => {
-      gsap.utils.toArray(".image-container").forEach(function (container) {
-        let image = container.querySelector("img");
-
-        gsap.to(image, {
-          y: () => image.offsetHeight - container.offsetHeight,
-          ease: "none",
-          startAt: { y: "-25%" },
-          scrollTrigger: {
-            trigger: container,
-            scrub: true,
-            pin: false,
-            markers: false,
-          },
-          y: "25%",
-          ease: "none",
+  if (globalThis.innerWidth > 776) {
+    useEffect(() => {
+      let ctx = gsap.context(() => {
+        gsap.utils.toArray(".image-container").forEach(function (container) {
+          let image = container.querySelector("img");
+  
+          gsap.to(image, {
+            y: () => image.offsetHeight - container.offsetHeight,
+            ease: "none",
+            startAt: { y: "-25%" },
+            scrollTrigger: {
+              trigger: container,
+              scrub: true,
+              pin: false,
+              markers: false,
+            },
+            y: "25%",
+            ease: "none",
+          });
         });
       });
+      return () => ctx.revert();
     });
-    return () => ctx.revert();
-  });
+  }
+
 
   // Page Transitions
   useEffect(() => {
@@ -201,7 +208,7 @@ export default function blogBeginnerGuideLinkBuilding() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"
+          content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
         ></meta>
         <link rel="icon" href="/fav-icon.png" />
       </Head>
@@ -315,8 +322,6 @@ export default function blogBeginnerGuideLinkBuilding() {
               organic traffic.
             </p>
 
-            <br />
-
             <p id="anim">
               Understanding the importance of link building and implementing
               effective techniques are crucial for any website owner looking to
@@ -325,9 +330,6 @@ export default function blogBeginnerGuideLinkBuilding() {
               building, explain various techniques, and provide tips on
               assessing the value of potential link sources.
             </p>
-
-            <br />
-            <br />
 
             <h3
               className="bold-h-u"
@@ -341,8 +343,6 @@ export default function blogBeginnerGuideLinkBuilding() {
               to improve their search engine rankings and user experience. Some
               key elements of on-page SEO include:
             </p>
-
-            <br />
 
             <h3
               className="bold-h"
@@ -365,8 +365,6 @@ export default function blogBeginnerGuideLinkBuilding() {
               how it would add value to their audience.
             </p>
 
-            <br />
-
             <h3
               className="bold-h"
               id="anim"
@@ -386,8 +384,6 @@ export default function blogBeginnerGuideLinkBuilding() {
               relevant and adds value to their website.
             </p>
 
-            <br />
-
             <h3
               className="bold-h"
               id="anim"
@@ -406,8 +402,6 @@ export default function blogBeginnerGuideLinkBuilding() {
               email, briefly explaining the value your content would bring to
               their resource list.
             </p>
-
-            <br />
 
             <h3
               className="bold-h"
@@ -429,8 +423,6 @@ export default function blogBeginnerGuideLinkBuilding() {
               original content and suggest your improved version as a more
               valuable resource for their audience.
             </p>
-
-            <br />
 
             <h3
               className="bold-h"
@@ -459,9 +451,6 @@ export default function blogBeginnerGuideLinkBuilding() {
               </div>
             </div>
 
-            <br />
-            <br />
-
             <h3
               className="bold-h-u"
             >
@@ -478,7 +467,6 @@ export default function blogBeginnerGuideLinkBuilding() {
               your niche, and a strong online presence.
             </p>
 
-            <br />
             <p>
               To assess the value of potential link sources, consider the
               following factors:
@@ -491,8 +479,6 @@ export default function blogBeginnerGuideLinkBuilding() {
               websites with a DA of at least 30 or higher.
             </p>
 
-            <br />
-
             <p>
               <span className="bold">Relevance: </span>
               Acquiring backlinks from websites within your niche or industry is
@@ -502,8 +488,6 @@ export default function blogBeginnerGuideLinkBuilding() {
               rankings.
             </p>
 
-            <br />
-
             <p>
               <span className="bold">Traffic:</span> Websites with high levels
               of organic traffic are generally more valuable for link building,
@@ -512,8 +496,6 @@ export default function blogBeginnerGuideLinkBuilding() {
               website's traffic before pursuing a backlink.
             </p>
 
-            <br />
-
             <p>
               <span className="bold">Link Profile:</span> Analyse a website's
               link profile to ensure it has a healthy balance of dofollow and
@@ -521,8 +503,6 @@ export default function blogBeginnerGuideLinkBuilding() {
               website with a spammy or unnatural link profile may not be a
               valuable source for backlinks.
             </p>
-
-            <br />
 
             <p>
               <span className="bold">Content Quality: </span>
@@ -540,8 +520,7 @@ export default function blogBeginnerGuideLinkBuilding() {
                 />
               </div>
             </div>
-            <br />
-            <br />
+
             <p>
               Link building is a critical component of a successful SEO
               strategy, and understanding its importance and employing effective
@@ -551,8 +530,6 @@ export default function blogBeginnerGuideLinkBuilding() {
               develop a strong link-building strategy that drives organic
               traffic and helps you achieve your online marketing goals.
             </p>
-
-            <br />
 
             <p>
               Remember to be patient and persistent in your link-building
@@ -566,8 +543,6 @@ export default function blogBeginnerGuideLinkBuilding() {
           </div>
         </div>
       </div>
-
-      <div className="space-large desktop"></div>
 
       {/* =================== Related Articles =========================== */}
 
@@ -642,9 +617,6 @@ export default function blogBeginnerGuideLinkBuilding() {
         </div>
       </div>
       {/* =================== Related Articles END =========================== */}
-
-      <div className="space-large desktop"></div>
-      <div className="space-small mobile"></div>
 
       {/* ======================== Footer ====================== */}
       <div className="desktop-footer">

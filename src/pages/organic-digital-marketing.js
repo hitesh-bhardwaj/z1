@@ -20,6 +20,10 @@ import FooterMobile from "@/components/Mobile/FooterMobile";
 
 gsap.registerPlugin(ScrollTrigger);
 
+gsap.config({
+  nullTargetWarn: false,
+});
+
 // Hover on the link
 const handleHover = (e) => {
   gsap.to(e.target, {
@@ -38,7 +42,7 @@ const handleHoverExit = (e) => {
   });
 };
 
-export default function blogOrganicDigitalMarketing() {
+export default function blogHowToDesign() {
   // Hero Section Animation
   useEffect(() => {
     const tl = gsap.timeline();
@@ -106,29 +110,31 @@ export default function blogOrganicDigitalMarketing() {
     return () => ctx.revert();
   });
 
-  // Parallax Image
-  useEffect(() => {
-    let ctx = gsap.context(() => {
-      gsap.utils.toArray(".image-container").forEach(function (container) {
-        let image = container.querySelector("img");
-
-        gsap.to(image, {
-          y: () => image.offsetHeight - container.offsetHeight,
-          ease: "none",
-          startAt: { y: "-25%" },
-          scrollTrigger: {
-            trigger: container,
-            scrub: true,
-            pin: false,
-            markers: false,
-          },
-          y: "25%",
-          ease: "none",
+   // Parallax Image
+   if (globalThis.innerWidth > 776) {
+    useEffect(() => {
+      let ctx = gsap.context(() => {
+        gsap.utils.toArray(".image-container").forEach(function (container) {
+          let image = container.querySelector("img");
+  
+          gsap.to(image, {
+            y: () => image.offsetHeight - container.offsetHeight,
+            ease: "none",
+            startAt: { y: "-25%" },
+            scrollTrigger: {
+              trigger: container,
+              scrub: true,
+              pin: false,
+              markers: false,
+            },
+            y: "25%",
+            ease: "none",
+          });
         });
       });
+      return () => ctx.revert();
     });
-    return () => ctx.revert();
-  });
+  }
 
   // Page Transitions
   useEffect(() => {
@@ -204,7 +210,7 @@ export default function blogOrganicDigitalMarketing() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"
+          content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
         ></meta>
         <link rel="icon" href="/fav-icon.png" />
       </Head>
@@ -319,8 +325,8 @@ export default function blogOrganicDigitalMarketing() {
               transformative power of organic digital marketing.
             </h3>
 
-            <br />
-            <br />
+            
+            
             <p id="anim">
               The digital marketing landscape is a dynamic, ever-changing
               terrain that can bewilder even the savviest of entrepreneurs. With
@@ -332,8 +338,8 @@ export default function blogOrganicDigitalMarketing() {
               as compared to any other form of digital marketing. So, buckle up
               and prepare for a thrilling ride through the captivating world of
               organic digital marketing
-              <br />
-              <br />
+              
+              
             </p>
             <h3 className="bold-h" id="anim">
               1. The Irresistible Charm of Search Engine Optimization (SEO)
@@ -346,7 +352,7 @@ export default function blogOrganicDigitalMarketing() {
               over other digital marketing approaches:
             </p>
 
-            <br />
+            
             <h3 className="bold-h" id="anim">
               1.1 Long-term Results:
             </h3>
@@ -358,7 +364,7 @@ export default function blogOrganicDigitalMarketing() {
               2018).
             </p>
 
-            <br />
+            
 
             <h3 className="bold-h" id="anim">
               1.2 Cost-effectiveness:
@@ -371,7 +377,7 @@ export default function blogOrganicDigitalMarketing() {
               compared to traditional marketing channels (Forbes, 2020).
             </p>
 
-            <br />
+            
 
             <h3 className="bold-h" id="anim">
               1.3 Trust and Credibility:
@@ -384,7 +390,7 @@ export default function blogOrganicDigitalMarketing() {
               organic listings more than ads (BrightEdge, 2021).
             </p>
 
-            <br />
+            
 
             <h3 className="bold-h" id="anim">
               1.4 Mobile Optimization and Local SEO:
@@ -399,7 +405,7 @@ export default function blogOrganicDigitalMarketing() {
               smartphone visit a store within a day (Google, 2019).
             </p>
 
-            <br />
+            
 
             <h3 className="bold-h" id="anim">
               1.5 Improved User Experience:
@@ -421,8 +427,8 @@ export default function blogOrganicDigitalMarketing() {
               </div>
             </div>
 
-            <br />
-            <br />
+            
+            
             <h3 className="bold-h">
               2. The Mesmerizing Power of Social Media Marketing (SMM)
             </h3>
@@ -435,8 +441,8 @@ export default function blogOrganicDigitalMarketing() {
               tactics:
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <h3 className="bold-h">
               2.1 Immense Reach and Targeting Capabilities:
@@ -450,7 +456,7 @@ export default function blogOrganicDigitalMarketing() {
               interests, and behaviours.
             </p>
 
-            <br />
+            
 
             <h3 className="bold-h">
               2.2 Enhanced Customer Engagement:
@@ -464,7 +470,7 @@ export default function blogOrganicDigitalMarketing() {
               2020).
             </p>
 
-            <br />
+            
 
             <h3 className="bold-h">
               2.3 Valuable Customer Insights:
@@ -477,7 +483,7 @@ export default function blogOrganicDigitalMarketing() {
               marketing strategies accordingly.
             </p>
 
-            <br />
+            
 
             <h3 className="bold-h">
               2.4 Influencer Marketing:
@@ -493,7 +499,7 @@ export default function blogOrganicDigitalMarketing() {
               2019).
             </p>
 
-            <br />
+            
 
             <h3 className="bold-h">
               2.5 User-generated Content:
@@ -515,8 +521,8 @@ export default function blogOrganicDigitalMarketing() {
                 />
               </div>
             </div>
-            <br />
-            <br />
+            
+            
 
             <h3 className="bold-h">
               3. The Spellbinding World of Content Marketing
@@ -530,7 +536,7 @@ export default function blogOrganicDigitalMarketing() {
               marketing techniques:
             </p>
 
-            <br />
+            
             <h3 className="bold-h">
               3.1 Building Trust and Brand Authority:
             </h3>
@@ -543,7 +549,7 @@ export default function blogOrganicDigitalMarketing() {
               and trust in a brand (CMI, 2020).
             </p>
 
-            <br />
+            
             <h3 className="bold-h">
               Increased Collaboration and Innovation
             </h3>
@@ -557,7 +563,7 @@ export default function blogOrganicDigitalMarketing() {
               that embraced remote work saw a 4.4% increase in patents filed,
               indicating a boost in innovation (Harvard Business Review, 2020).
             </p>
-            <br />
+            
             <h3 className="bold-h">
               3.2 Driving Organic Traffic and Generating Leads:
             </h3>
@@ -570,7 +576,7 @@ export default function blogOrganicDigitalMarketing() {
               those that don't (HubSpot, 2021).
             </p>
 
-            <br />
+            
             <h3 className="bold-h">
               3.3 Boosting Conversion Rates:
             </h3>
@@ -583,7 +589,7 @@ export default function blogOrganicDigitalMarketing() {
               mere 0.5% for those without (Aberdeen Group, 2019).
             </p>
 
-            <br />
+            
             <h3 className="bold-h">
               3.4 Diversified Content Formats:
             </h3>
@@ -596,7 +602,7 @@ export default function blogOrganicDigitalMarketing() {
               audience, ensuring maximum engagement and reach.
             </p>
 
-            <br />
+            
             <h3 className="bold-h">
               3.5 Repurposing and Recycling Content:
             </h3>
@@ -609,7 +615,7 @@ export default function blogOrganicDigitalMarketing() {
               saving time and resources.
             </p>
 
-            <br />
+            
 
             <div className="blog-img">
               <div className="image-container blog-img-container">
@@ -619,8 +625,8 @@ export default function blogOrganicDigitalMarketing() {
                 />
               </div>
             </div>
-            <br />
-            <br />
+            
+            
 
             <h3 className="bold-h">
               4. The Compelling Case for Organic Digital Marketing
@@ -633,7 +639,7 @@ export default function blogOrganicDigitalMarketing() {
               compared to other forms of digital marketing:
             </p>
 
-            <br />
+            
             <h3 className="bold-h">
               4.1 Sustainable Growth and Lasting Results:
             </h3>
@@ -647,7 +653,7 @@ export default function blogOrganicDigitalMarketing() {
               methods (McKinsey & Company, 2017).
             </p>
 
-            <br />
+            
             <h3 className="bold-h">
               4.2 Cost-Effectiveness and Higher ROI:
             </h3>
@@ -660,7 +666,7 @@ export default function blogOrganicDigitalMarketing() {
               average ROI of 6.1 times, far surpassing the 2.6 times ROI of paid
               marketing efforts (Deloitte, 2020).
             </p>
-            <br />
+            
             <h3 className="bold-h">
               4.3 Enhanced Customer Experience and Personalization:
             </h3>
@@ -673,7 +679,7 @@ export default function blogOrganicDigitalMarketing() {
               when brands offer personalized experiences (Epsilon, 2018).
             </p>
 
-            <br />
+            
             <h3 className="bold-h">
               4.4 Building a Loyal Community:
             </h3>
@@ -686,7 +692,7 @@ export default function blogOrganicDigitalMarketing() {
               and leads to a sustainable cycle of growth.
             </p>
 
-            <br />
+            
             <h3 className="bold-h">
               4.5 Agility and Adaptability:
             </h3>
@@ -699,7 +705,7 @@ export default function blogOrganicDigitalMarketing() {
               they remain relevant and effective in the long run.
             </p>
 
-            <br />
+            
             <h3 className="bold-h">
               4.6 Synergy Between Strategies:
             </h3>
@@ -712,8 +718,8 @@ export default function blogOrganicDigitalMarketing() {
               additional traffic and engagement.
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <p>
               In this amusing, data-driven article, we have unveiled the
@@ -727,12 +733,10 @@ export default function blogOrganicDigitalMarketing() {
               journey to success!
             </p>
 
-            <br />
+            
           </div>
         </div>
       </div>
-
-      <div className="space-large desktop"></div>
 
       {/* =================== Related Articles =========================== */}
 
@@ -807,9 +811,6 @@ export default function blogOrganicDigitalMarketing() {
         </div>
       </div>
       {/* =================== Related Articles END =========================== */}
-
-      <div className="space-large desktop"></div>
-      <div className="space-small mobile"></div>
 
       {/* ======================== Footer ====================== */}
       <div className="desktop-footer">

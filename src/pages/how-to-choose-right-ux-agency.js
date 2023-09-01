@@ -107,29 +107,31 @@ export default function blogChooseUxAgency() {
     return () => ctx.revert();
   });
 
-  // Parallax Image
-  useEffect(() => {
-    let ctx = gsap.context(() => {
-      gsap.utils.toArray(".image-container").forEach(function (container) {
-        let image = container.querySelector("img");
-
-        gsap.to(image, {
-          y: () => image.offsetHeight - container.offsetHeight,
-          ease: "none",
-          startAt: { y: "-25%" },
-          scrollTrigger: {
-            trigger: container,
-            scrub: true,
-            pin: false,
-            markers: false,
-          },
-          y: "25%",
-          ease: "none",
+   // Parallax Image
+   if (globalThis.innerWidth > 776) {
+    useEffect(() => {
+      let ctx = gsap.context(() => {
+        gsap.utils.toArray(".image-container").forEach(function (container) {
+          let image = container.querySelector("img");
+  
+          gsap.to(image, {
+            y: () => image.offsetHeight - container.offsetHeight,
+            ease: "none",
+            startAt: { y: "-25%" },
+            scrollTrigger: {
+              trigger: container,
+              scrub: true,
+              pin: false,
+              markers: false,
+            },
+            y: "25%",
+            ease: "none",
+          });
         });
       });
+      return () => ctx.revert();
     });
-    return () => ctx.revert();
-  });
+  }
 
   // Page Transitions
   useEffect(() => {
@@ -205,7 +207,7 @@ export default function blogChooseUxAgency() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"
+          content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
         ></meta>
         <link rel="icon" href="/fav-icon.png" />
       </Head>
@@ -329,8 +331,8 @@ export default function blogChooseUxAgency() {
               why each agency deserves a spot on this list. So let's dive in!
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <h3
               className="bold-h blog-mt-0"
@@ -349,8 +351,8 @@ export default function blogChooseUxAgency() {
               publish insightful, well-researched content on UI/UX topics.
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <h3
               className="bold-h blog-mt-0"
@@ -378,8 +380,8 @@ export default function blogChooseUxAgency() {
               </div>
             </div>
 
-            <br />
-            <br />
+            
+            
             <h3 className="bold-h blog-mt-0">
               3. Their portfolio and case studies outline UX challenges and
               solutions
@@ -395,8 +397,8 @@ export default function blogChooseUxAgency() {
               requirements.
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <h3 className="bold-h blog-mt-0">
               4. They have worked on complex UI/UX projects
@@ -410,8 +412,8 @@ export default function blogChooseUxAgency() {
               industries and platforms.
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <h3 className="bold-h blog-mt-0">
               5. They have an extensive skill set
@@ -426,8 +428,8 @@ export default function blogChooseUxAgency() {
               project.
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <h3 className="bold-h blog-mt-0">
               6. They have an established, well-explained workflow and
@@ -443,8 +445,8 @@ export default function blogChooseUxAgency() {
               practices in UX design.
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <h3 className="bold-h blog-mt-0">
               7. Client testimonials and reviews
@@ -457,8 +459,8 @@ export default function blogChooseUxAgency() {
               successful project delivery.
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <h3 className="bold-h blog-mt-0">
               8. Effective communication and collaboration
@@ -472,8 +474,8 @@ export default function blogChooseUxAgency() {
               incorporated into the design process.
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <h3 className="bold-h blog-mt-0">
               9. Flexibility and adaptability
@@ -487,8 +489,8 @@ export default function blogChooseUxAgency() {
               scope.
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <h3 className="bold-h blog-mt-0">
               10. Competitive pricing and transparent cost structure
@@ -510,8 +512,8 @@ export default function blogChooseUxAgency() {
                 />
               </div>
             </div>
-            <br />
-            <br />
+            
+            
 
             <p>
               To get you started on the journey to find the right UX partner,
@@ -523,8 +525,8 @@ export default function blogChooseUxAgency() {
               agency to partner with for your business needs.
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <h3 className="bold-h blog-mt-0">
               1. Enigma Digital
@@ -538,7 +540,7 @@ export default function blogChooseUxAgency() {
               industries.
             </p>
 
-            <br />
+            
 
             <h3 className="bold-h blog-mt-0">
               pros:
@@ -547,7 +549,7 @@ export default function blogChooseUxAgency() {
             <p className="list-blog">Diverse industry experience</p>
             <p className="list-blog">Strong focus on user-centered design</p>
 
-            <br />
+            
 
             <h3 className="bold-h blog-mt-0">
               cons:
@@ -557,7 +559,7 @@ export default function blogChooseUxAgency() {
             </p>
             <p className="list-blog">Pricing might not suit all budgets</p>
 
-            <br />
+            
 
             <p>
               <span className="bold">Clients:</span> Patra Corp, Jellyfish
@@ -565,8 +567,8 @@ export default function blogChooseUxAgency() {
               Pennie Training
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <h3 className="bold-h blog-mt-0">
               2. Lollypop Design Studio
@@ -579,7 +581,7 @@ export default function blogChooseUxAgency() {
               that drive engagement and conversions.
             </p>
 
-            <br />
+            
 
             <h3 className="bold-h blog-mt-0">
               pros:
@@ -588,7 +590,7 @@ export default function blogChooseUxAgency() {
             <p className="list-blog">Strong portfolio of successful projects</p>
             <p className="list-blog">Global client base</p>
 
-            <br />
+            
 
             <h3 className="bold-h blog-mt-0">
               cons:
@@ -600,15 +602,15 @@ export default function blogChooseUxAgency() {
               Pricing might be higher compared to other agencies
             </p>
 
-            <br />
+            
 
             <p>
               <span className="bold">Clients: </span>
               Swiggy, Infosys, Myntra, Practo, Viacom18
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <h3 className="bold-h blog-mt-0">
               3. NetBramha Studios
@@ -621,7 +623,7 @@ export default function blogChooseUxAgency() {
               solutions for clients across various industries.
             </p>
 
-            <br />
+            
 
             <h3 className="bold-h blog-mt-0">
               pros:
@@ -632,7 +634,7 @@ export default function blogChooseUxAgency() {
             </p>
             <p className="list-blog">Collaborative approach to design</p>
 
-            <br />
+            
 
             <h3 className="bold-h blog-mt-0">
               cons:
@@ -642,15 +644,15 @@ export default function blogChooseUxAgency() {
               Pricing may not be suitable for all budgets
             </p>
 
-            <br />
+            
 
             <p>
               <span className="bold">Clients:</span> Airbus, ABB, Adobe, Cisco,
               NASSCOM
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <h3 className="bold-h blog-mt-0">
               4. Fractal Ink Design Studio
@@ -663,7 +665,7 @@ export default function blogChooseUxAgency() {
               tailored to clients' needs.
             </p>
 
-            <br />
+            
 
             <h3 className="bold-h blog-mt-0">
               pros:
@@ -672,7 +674,7 @@ export default function blogChooseUxAgency() {
             <p className="list-blog">Diverse industry experience</p>
             <p className="list-blog">Strong focus on user experience</p>
 
-            <br />
+            
 
             <h3 className="bold-h blog-mt-0">
               cons:
@@ -684,15 +686,15 @@ export default function blogChooseUxAgency() {
               Pricing may not be suitable for all budgets
             </p>
 
-            <br />
+            
 
             <p>
               <span className="bold">Clients:</span> HDFC Bank, ICICI Bank,
               Vodafone, Godrej, Tata Motors
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <h3 className="bold-h blog-mt-0">
               5. Think Design
@@ -705,7 +707,7 @@ export default function blogChooseUxAgency() {
               catered to clients across diverse industries.
             </p>
 
-            <br />
+            
 
             <h3 className="bold-h blog-mt-0">
               pros:
@@ -714,7 +716,7 @@ export default function blogChooseUxAgency() {
             <p className="list-blog">Skilled and experienced team</p>
             <p className="list-blog">Strong focus on user-centered design</p>
 
-            <br />
+            
 
             <h3 className="bold-h blog-mt-0">
               cons:
@@ -722,7 +724,7 @@ export default function blogChooseUxAgency() {
             <p className="list-blog">Limited availability due to high demand</p>
             <p className="list-blog">Pricing might not suit all budgets</p>
 
-            <br />
+            
 
             <p>
               <span className="bold">Clients:</span> Microsoft, Cognizant,
@@ -738,8 +740,8 @@ export default function blogChooseUxAgency() {
               </div>
             </div>
 
-            <br />
-            <br />
+            
+            
 
             <h3 className="bold-h blog-mt-0">
               6. WowMakers
@@ -752,7 +754,7 @@ export default function blogChooseUxAgency() {
               industries.
             </p>
 
-            <br />
+            
 
             <h3 className="bold-h blog-mt-0">
               pros:
@@ -763,7 +765,7 @@ export default function blogChooseUxAgency() {
             <p className="list-blog">Customized solutions for each project</p>
             <p className="list-blog">Collaborative design process</p>
 
-            <br />
+            
 
             <h3 className="bold-h blog-mt-0">
               cons:
@@ -775,15 +777,15 @@ export default function blogChooseUxAgency() {
               Pricing might not be suitable for all budgets
             </p>
 
-            <br />
+            
 
             <p>
               <span className="bold">Clients:</span> FedEx, Decathlon, JLL,
               Bosch, KFC
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <h3 className="bold-h blog-mt-0">
               7. Beard Design
@@ -796,7 +798,7 @@ export default function blogChooseUxAgency() {
               and engaging digital experiences for clients.
             </p>
 
-            <br />
+            
 
             <h3 className="bold-h blog-mt-0">
               pros:
@@ -805,7 +807,7 @@ export default function blogChooseUxAgency() {
             <p className="list-blog">Diverse industry experience</p>
             <p className="list-blog">Strong portfolio of successful projects</p>
 
-            <br />
+            
 
             <h3 className="bold-h blog-mt-0">
               cons:
@@ -815,15 +817,15 @@ export default function blogChooseUxAgency() {
               Higher pricing compared to other agencies
             </p>
 
-            <br />
+            
 
             <p>
               <span className="bold">Clients:</span> FabHotels, IDFC Bank, Tata
               Group, Wipro, Zoomcar
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <h3 className="bold-h blog-mt-0">
               8. Thence
@@ -836,7 +838,7 @@ export default function blogChooseUxAgency() {
               tailored to the client's unique needs and requirements.
             </p>
 
-            <br />
+            
 
             <h3 className="bold-h blog-mt-0">
               pros:
@@ -845,7 +847,7 @@ export default function blogChooseUxAgency() {
             <p className="list-blog">Expertise in multiple industries</p>
             <p className="list-blog">Collaborative design process</p>
 
-            <br />
+            
 
             <h3 className="bold-h blog-mt-0">
               cons:
@@ -857,15 +859,15 @@ export default function blogChooseUxAgency() {
               Pricing may not be suitable for all budgets
             </p>
 
-            <br />
+            
 
             <p>
               <span className="bold">Clients:</span> Infosys, Narayana Health,
               Jio, BlackBuck, AirAsia
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <h3 className="bold-h blog-mt-0">
               9. YUJ Designs
@@ -878,7 +880,7 @@ export default function blogChooseUxAgency() {
               across diverse industries.
             </p>
 
-            <br />
+            
 
             <h3 className="bold-h blog-mt-0">
               pros:
@@ -887,7 +889,7 @@ export default function blogChooseUxAgency() {
             <p className="list-blog">Strong focus on user experience</p>
             <p className="list-blog">Comprehensive design solutions</p>
 
-            <br />
+            
 
             <h3 className="bold-h blog-mt-0">
               cons:
@@ -895,15 +897,15 @@ export default function blogChooseUxAgency() {
             <p className="list-blog">Limited availability due to high demand</p>
             <p className="list-blog">Pricing might not suit all budgets</p>
 
-            <br />
+            
 
             <p>
               <span className="bold">Clients:</span> Honeywell, Samsung, McAfee,
               Tata, Airtel
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <h3 className="bold-h blog-mt-0">
               10. Sparklin Innovations
@@ -917,7 +919,7 @@ export default function blogChooseUxAgency() {
               user engagement and conversions.
             </p>
 
-            <br />
+            
 
             <h3 className="bold-h blog-mt-0">
               pros:
@@ -926,7 +928,7 @@ export default function blogChooseUxAgency() {
             <p className="list-blog">Skilled and experienced team</p>
             <p className="list-blog">Strong focus on user-centered design</p>
 
-            <br />
+            
 
             <h3 className="bold-h blog-mt-0">
               cons:
@@ -938,15 +940,15 @@ export default function blogChooseUxAgency() {
               Pricing may not be suitable for all budgets
             </p>
 
-            <br />
+            
 
             <p>
               <span className="bold">Clients:</span> OYO, Zomato, Paytm, Bajaj
               Finserv, Lenskart
             </p>
 
-            <br />
-            <br />
+            
+            
 
             <p>
               These agencies have consistently delivered high-quality UX designs
@@ -956,9 +958,6 @@ export default function blogChooseUxAgency() {
               will be supported by world-class design expertise, ensuring the
               best possible user experience for your customers.
             </p>
-
-            <br />
-            <br />
 
             <p>
               Choosing the right UX design agency in India for your product
@@ -974,7 +973,6 @@ export default function blogChooseUxAgency() {
           </div>
         </div>
       </div>
-      <div className="space-large desktop"></div>
 
       {/* =================== Related Articles =========================== */}
       <div className="related-articles">
@@ -1048,8 +1046,7 @@ export default function blogChooseUxAgency() {
         </div>
       </div>
       {/* =================== Related Articles END =========================== */}
-      <div className="space-large desktop"></div>
-      <div className="space-small mobile"></div>
+
       {/* ======================== Footer ====================== */}
       <div className="desktop-footer">
         <Footer />

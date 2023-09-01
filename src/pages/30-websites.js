@@ -20,6 +20,10 @@ import FooterMobile from "@/components/Mobile/FooterMobile";
 
 gsap.registerPlugin(ScrollTrigger);
 
+gsap.config({
+  nullTargetWarn: false,
+});
+
 // Hover on the link
 const handleHover = (e) => {
   gsap.to(e.target, {
@@ -107,29 +111,31 @@ export default function blogWebsites() {
   });
 
   // Parallax Image
-  useEffect(() => {
-    let ctx = gsap.context(() => {
-      gsap.utils.toArray(".image-container").forEach(function (container) {
-        let image = container.querySelector("img");
-
-        gsap.to(image, {
-          y: () => image.offsetHeight - container.offsetHeight,
-          ease: "none",
-          startAt: { y: "-25%" },
-          scrollTrigger: {
-            trigger: container,
-            scrub: true,
-            pin: false,
-            markers: false,
-          },
-          y: "25%",
-          ease: "none",
+  if (globalThis.innerWidth > 776) {
+    useEffect(() => {
+      let ctx = gsap.context(() => {
+        gsap.utils.toArray(".image-container").forEach(function (container) {
+          let image = container.querySelector("img");
+  
+          gsap.to(image, {
+            y: () => image.offsetHeight - container.offsetHeight,
+            ease: "none",
+            startAt: { y: "-25%" },
+            scrollTrigger: {
+              trigger: container,
+              scrub: true,
+              pin: false,
+              markers: false,
+            },
+            y: "25%",
+            ease: "none",
+          });
         });
       });
+      return () => ctx.revert();
     });
-    return () => ctx.revert();
-  });
-
+  }
+  
   // Page Transitions
   useEffect(() => {
     let ctx = gsap.context(() => {
@@ -204,16 +210,16 @@ export default function blogWebsites() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"
+          content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
         ></meta>
         <link rel="icon" href="/fav-icon.png" />
       </Head>
 
+{/* Loader */}
       <div className="loader-wrap" id="loader">
         <svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
           <path id="svg" d="M0,1005S175,995,500,995s500,5,500,5V0H0Z" />
         </svg>
-
         <div className="loader-wrap-heading">
           <span>
             <h1>30 websites</h1>
@@ -317,8 +323,6 @@ export default function blogWebsites() {
               each website, we'll outline the process and the type of content
               that needs to be submitted, so you can start building your online
               presence effectively.
-              <br />
-              <br />
             </p>
             <p id="anim">
               These 30 websites encompass a variety of platforms, including
@@ -327,8 +331,6 @@ export default function blogWebsites() {
               websites, you can ensure a well-rounded link-building strategy
               that caters to different audiences and search engine preferences.
             </p>
-
-            <br />
             <p id="anim">
               Each platform requires a specific type of content and approach,
               making it crucial to tailor your submissions to the requirements
@@ -337,9 +339,6 @@ export default function blogWebsites() {
               social media networks such as Pinterest and LinkedIn focus on
               visually engaging content and professional insights, respectively.
             </p>
-
-            <br />
-
             <p id="anim">
               It's essential to remember that effective link-building is not
               merely about the quantity of backlinks you generate but also their
@@ -348,7 +347,6 @@ export default function blogWebsites() {
               audience and positively contributes to the communities in which
               you share it.
             </p>
-            <br />
 
             <p id="anim">
               Building genuine relationships with other professionals, users,
@@ -358,8 +356,6 @@ export default function blogWebsites() {
               will help you build a strong online presence and attract more
               organic traffic to your website.
             </p>
-
-            <br />
 
             <p id="anim">
               To sum it up, this list of 30 websites offers an excellent
@@ -381,8 +377,6 @@ export default function blogWebsites() {
               </div>
             </div>
 
-            <br />
-            <br />
             <h3 className="bold-h blog-mt-0">
               Medium (Blogging platform)
             </h3>
@@ -394,8 +388,6 @@ export default function blogWebsites() {
               Content: High-quality, informative articles related to your niche.
             </p>
 
-            <br />
-
             <h3 className="bold-h blog-mt-0">
               Quora (Q&A platform)
             </h3>
@@ -406,8 +398,6 @@ export default function blogWebsites() {
               appropriate. <br /> Content: Well-written, informative answers
               addressing user questions.
             </p>
-
-            <br />
 
             <h3 className="bold-h blog-mt-0">
               LinkedIn (Professional networking platform)
@@ -421,9 +411,6 @@ export default function blogWebsites() {
               updates.
             </p>
 
-            <br />
-            <br />
-
             <h3 className="bold-h blog-mt-0">
               Blogger (Blogging platform)
             </h3>
@@ -435,7 +422,6 @@ export default function blogWebsites() {
               Content: High-quality, informative articles related to your niche.
             </p>
 
-            <br />
             <h3 className="bold-h blog-mt-0">
               Tumblr (Microblogging platform)
             </h3>
@@ -448,7 +434,6 @@ export default function blogWebsites() {
               relevant to your niche.
             </p>
 
-            <br />
             <h3 className="bold-h blog-mt-0">
               Reddit (Social news aggregation and discussion platform)
             </h3>
@@ -461,7 +446,6 @@ export default function blogWebsites() {
               content that adds value to subreddit discussions.
             </p>
 
-            <br />
             <h3 className="bold-h blog-mt-0">
               Scoop.it (Content curation platform)
             </h3>
@@ -474,7 +458,6 @@ export default function blogWebsites() {
               relevant to your niche
             </p>
 
-            <br />
             <h3 className="bold-h blog-mt-0">
               Pinterest (Visual bookmarking platform)
             </h3>
@@ -487,7 +470,6 @@ export default function blogWebsites() {
               to your niche.
             </p>
 
-            <br />
             <h3 className="bold-h blog-mt-0">
               Slideshare (Slide hosting service)
             </h3>
@@ -500,7 +482,6 @@ export default function blogWebsites() {
               related to your niche.
             </p>
 
-            <br />
             <h3 className="bold-h blog-mt-0">
               Vimeo (Video hosting platform)
             </h3>
@@ -512,7 +493,6 @@ export default function blogWebsites() {
               Content: High-quality, engaging videos related to your niche.
             </p>
 
-            <br />
             <h3 className="bold-h blog-mt-0">
               Dailymotion (Video hosting platform)
             </h3>
@@ -524,7 +504,6 @@ export default function blogWebsites() {
               Content: Engaging, high-quality videos relevant to your niche.
             </p>
 
-            <br />
             <h3 className="bold-h blog-mt-0">
               Flickr (Image and video hosting platform)
             </h3>
@@ -536,7 +515,6 @@ export default function blogWebsites() {
               Content: High-quality images or videos related to your niche.
             </p>
 
-            <br />
             <h3 className="bold-h blog-mt-0">
               HubPages (Content publishing platform)
             </h3>
@@ -549,7 +527,6 @@ export default function blogWebsites() {
               niche.
             </p>
 
-            <br />
             <h3 className="bold-h blog-mt-0">
               EzineArticles (Article directory)
             </h3>
@@ -561,7 +538,6 @@ export default function blogWebsites() {
               Content: High-quality, informative articles related to your niche.
             </p>
 
-            <br />
             <h3 className="bold-h blog-mt-0">
               Triberr (Blogger community platform)
             </h3>
@@ -582,10 +558,7 @@ export default function blogWebsites() {
                 />
               </div>
             </div>
-            <br />
-            <br />
 
-            <br />
             <h3 className="bold-h blog-mt-0">
               BlogEngage (Blog promotion platform)
             </h3>
@@ -597,7 +570,6 @@ export default function blogWebsites() {
               Content: Engaging, informative blog posts related to your niche.
             </p>
 
-            <br />
             <h3 className="bold-h blog-mt-0">
               GrowthHackers (Growth hacking community)
             </h3>
@@ -610,7 +582,6 @@ export default function blogWebsites() {
               hacking and digital marketing.
             </p>
 
-            <br />
             <h3 className="bold-h blog-mt-0">
               BizSugar (Small business community)
             </h3>
@@ -623,7 +594,6 @@ export default function blogWebsites() {
               business, marketing, or entrepreneurship.
             </p>
 
-            <br />
             <h3 className="bold-h blog-mt-0">
               Inbound.org (Inbound marketing community)
             </h3>
@@ -636,7 +606,6 @@ export default function blogWebsites() {
               marketing, SEO, or content marketing.
             </p>
 
-            <br />
             <h3 className="bold-h blog-mt-0">
               Alltop (Content aggregator)
             </h3>
@@ -649,7 +618,6 @@ export default function blogWebsites() {
               niche.
             </p>
 
-            <br />
             <h3 className="bold-h blog-mt-0">
               Blogarama (Blog directory)
             </h3>
@@ -662,7 +630,6 @@ export default function blogWebsites() {
               niche.
             </p>
 
-            <br />
             <h3 className="bold-h blog-mt-0">
               BlogLovin (Blog discovery platform)
             </h3>
@@ -675,7 +642,6 @@ export default function blogWebsites() {
               niche.
             </p>
 
-            <br />
             <h3 className="bold-h blog-mt-0">
               Muck Rack (Journalist and blogger platform)
             </h3>
@@ -688,7 +654,6 @@ export default function blogWebsites() {
               niche.
             </p>
 
-            <br />
             <h3 className="bold-h blog-mt-0">
               Paper.li (Content curation platform)
             </h3>
@@ -701,7 +666,6 @@ export default function blogWebsites() {
               relevant to your niche.
             </p>
 
-            <br />
             <h3 className="bold-h blog-mt-0">
               Visual.ly (Visual content creation platform)
             </h3>
@@ -714,7 +678,6 @@ export default function blogWebsites() {
               related to your niche.
             </p>
 
-            <br />
             <h3 className="bold-h blog-mt-0">
               MyBlogU (Blogger collaboration platform)
             </h3>
@@ -727,7 +690,6 @@ export default function blogWebsites() {
               niche.
             </p>
 
-            <br />
             <h3 className="bold-h blog-mt-0">
               Yell (Online business directory)
             </h3>
@@ -739,7 +701,6 @@ export default function blogWebsites() {
               Content: Business information, description, and website URL.
             </p>
 
-            <br />
             <h3 className="bold-h blog-mt-0">
               Brownbook (Global business directory)
             </h3>
@@ -751,7 +712,6 @@ export default function blogWebsites() {
               Content: Business information, description, and website URL.
             </p>
 
-            <br />
             <h3 className="bold-h blog-mt-0">
               Cylex (Business directory)
             </h3>
@@ -763,7 +723,6 @@ export default function blogWebsites() {
               Content: Business information, description, and website URL.
             </p>
 
-            <br />
             <h3 className="bold-h blog-mt-0">
               Alignable (Small business networking platform)
             </h3>
@@ -776,8 +735,6 @@ export default function blogWebsites() {
               or industry.
             </p>
 
-            <br />
-            <br />
             <p>
               While these websites provide opportunities for easy and quick link
               building, it's important to prioritize quality over quantity.
@@ -790,8 +747,6 @@ export default function blogWebsites() {
           </div>
         </div>
       </div>
-
-      <div className="space-large desktop"></div>
 
       {/* =================== Related Articles =========================== */}
 
@@ -866,9 +821,6 @@ export default function blogWebsites() {
         </div>
       </div>
       {/* =================== Related Articles END =========================== */}
-
-      <div className="space-large desktop"></div>
-      <div className="space-small mobile"></div>
 
       {/* ======================== Footer ====================== */}
       <div className="desktop-footer">

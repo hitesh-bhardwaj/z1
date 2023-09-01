@@ -108,28 +108,30 @@ export default function blogWebsiteCost() {
   });
 
   // Parallax Image
-  useEffect(() => {
-    let ctx = gsap.context(() => {
-      gsap.utils.toArray(".image-container").forEach(function (container) {
-        let image = container.querySelector("img");
-
-        gsap.to(image, {
-          y: () => image.offsetHeight - container.offsetHeight,
-          ease: "none",
-          startAt: { y: "-25%" },
-          scrollTrigger: {
-            trigger: container,
-            scrub: true,
-            pin: false,
-            markers: false,
-          },
-          y: "25%",
-          ease: "none",
+  if (globalThis.innerWidth > 776) {
+    useEffect(() => {
+      let ctx = gsap.context(() => {
+        gsap.utils.toArray(".image-container").forEach(function (container) {
+          let image = container.querySelector("img");
+  
+          gsap.to(image, {
+            y: () => image.offsetHeight - container.offsetHeight,
+            ease: "none",
+            startAt: { y: "-25%" },
+            scrollTrigger: {
+              trigger: container,
+              scrub: true,
+              pin: false,
+              markers: false,
+            },
+            y: "25%",
+            ease: "none",
+          });
         });
       });
+      return () => ctx.revert();
     });
-    return () => ctx.revert();
-  });
+  }
 
   // Page Transitions
   useEffect(() => {
@@ -210,7 +212,7 @@ export default function blogWebsiteCost() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"
+          content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
         ></meta>
         <link rel="icon" href="/fav-icon.png" />
       </Head>
@@ -341,8 +343,6 @@ export default function blogWebsiteCost() {
               decisions for your digital journey.
             </h3>
 
-            <br />
-            <br />
 
             <p id="anim">
               "Or really, how long is a piece of string?" As the famous saying
@@ -354,8 +354,6 @@ export default function blogWebsiteCost() {
               factors, the impact of your business scale and goals on pricing,
               and how your money is spent. So, let's dive into the digital
               rabbit hole and solve this conundrum.
-              <br />
-              <br />
             </p>
             <h3 className="bold-h" id="anim">
               Decoding Website Scoping
@@ -366,7 +364,6 @@ export default function blogWebsiteCost() {
               website build.
             </p>
 
-            <br />
             <h3 className="bold-h" id="anim">
               The Billable Hours Conundrum
             </h3>
@@ -376,7 +373,6 @@ export default function blogWebsiteCost() {
               return. However, this approach can lead you to work with agencies
               that focus on ticking off features without considering your unique
               business needs.
-              <br />
               <br />
               Surprisingly, the number of features on your website doesn't
               significantly impact its cost. Features can often be repurposed
@@ -397,8 +393,6 @@ export default function blogWebsiteCost() {
               </div>
             </div>
 
-            <br />
-            <br />
             <h3 className="bold-h">
               Establishing Your Budget: The Ball is in Your Court
             </h3>
@@ -410,8 +404,6 @@ export default function blogWebsiteCost() {
               for an "allin" solution, a prioritized approach, or a more
               conservative plan.
             </p>
-
-            <br />
 
             <h3 className="bold-h">
               Establishing Your Budget: The How-To Guide
@@ -426,7 +418,6 @@ export default function blogWebsiteCost() {
               requires a junior or mid-level role with a $40k salary, you might
               opt for a more modest website investment.
               <br />
-              <br />
               The key is to assess your current situation: what you can afford,
               your goals, and how you want to achieve them. Once you've grasped
               these fundamentals, it's time to contact the agencies.
@@ -440,9 +431,7 @@ export default function blogWebsiteCost() {
                 />
               </div>
             </div>
-            <br />
-            <br />
-
+            
             <h3 className="bold-h ">
               Navigating the Agency Landscape: Choosing the Right One
             </h3>
@@ -452,12 +441,12 @@ export default function blogWebsiteCost() {
               digital odyssey, remember to look for agencies that offer
               strategic solutions tailored to your unique challenges and
               objectives.
-              <br />
+              
               <br />
               So, the next time someone asks, "How much should a website cost?"
               you can channel your inner Morpheus and say, "The cost is not as
               important as the value it brings to your business."
-              <br />
+              
               <br />
               By following the advice in this guide, you'll be well-prepared to
               embark on your digital journey and create a website that's not
@@ -467,7 +456,6 @@ export default function blogWebsiteCost() {
         </div>
       </div>
 
-      <div className="space-large desktop"></div>
 
       {/* =================== Related Articles =========================== */}
 
@@ -542,9 +530,6 @@ export default function blogWebsiteCost() {
         </div>
       </div>
       {/* =================== Related Articles END =========================== */}
-
-      <div className="space-large desktop"></div>
-      <div className="space-small mobile"></div>
 
       {/* ======================== Footer ====================== */}
       <div className="desktop-footer">

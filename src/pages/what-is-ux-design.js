@@ -20,6 +20,10 @@ import FooterMobile from "@/components/Mobile/FooterMobile";
 
 gsap.registerPlugin(ScrollTrigger);
 
+gsap.config({
+  nullTargetWarn: false,
+});
+
 // Hover on the link
 const handleHover = (e) => {
   gsap.to(e.target, {
@@ -38,7 +42,7 @@ const handleHoverExit = (e) => {
   });
 };
 
-export default function blogUxDesign() {
+export default function blogHowToDesign() {
   // Hero Section Animation
   useEffect(() => {
     const tl = gsap.timeline();
@@ -106,29 +110,31 @@ export default function blogUxDesign() {
     return () => ctx.revert();
   });
 
-  // Parallax Image
-  useEffect(() => {
-    let ctx = gsap.context(() => {
-      gsap.utils.toArray(".image-container").forEach(function (container) {
-        let image = container.querySelector("img");
-
-        gsap.to(image, {
-          y: () => image.offsetHeight - container.offsetHeight,
-          ease: "none",
-          startAt: { y: "-25%" },
-          scrollTrigger: {
-            trigger: container,
-            scrub: true,
-            pin: false,
-            markers: false,
-          },
-          y: "25%",
-          ease: "none",
+   // Parallax Image
+   if (globalThis.innerWidth > 776) {
+    useEffect(() => {
+      let ctx = gsap.context(() => {
+        gsap.utils.toArray(".image-container").forEach(function (container) {
+          let image = container.querySelector("img");
+  
+          gsap.to(image, {
+            y: () => image.offsetHeight - container.offsetHeight,
+            ease: "none",
+            startAt: { y: "-25%" },
+            scrollTrigger: {
+              trigger: container,
+              scrub: true,
+              pin: false,
+              markers: false,
+            },
+            y: "25%",
+            ease: "none",
+          });
         });
       });
+      return () => ctx.revert();
     });
-    return () => ctx.revert();
-  });
+  }
 
   // Page Transitions
   useEffect(() => {
@@ -203,7 +209,7 @@ export default function blogUxDesign() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"
+          content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
         ></meta>
         <link rel="icon" href="/fav-icon.png" />
       </Head>
@@ -313,8 +319,8 @@ export default function blogUxDesign() {
               and let's explore this exciting realm. Our goal is to make UX
               design as accessible and enjoyable as possible, so without further
               ado, let's dive right in!
-              <br />
-              <br />
+              
+              
             </p>
             <h3 className="bold-h">
               What is UX Design?
@@ -328,8 +334,8 @@ export default function blogUxDesign() {
               those desires. In other words, UX design is the superhero behind
               the scene that ensures your digital interactions are as delightful
               as an episode of Friends.
-              <br />
-              <br />
+              
+              
             </p>
             <blockquote className="bold strong" id="anim">
               UX design is all about understanding what users want and need,
@@ -339,10 +345,11 @@ export default function blogUxDesign() {
               app as smooth as Michael Jackson's moonwalk.
             </blockquote>
             <br />
-            <br />
             <span className="donald">
               - Bhaskar Varshney, Founder, Enigma Digital
             </span>
+            <br />
+            <br />
             <div className="blog-img">
               <div className="image-container blog-img-container">
                 <img
@@ -351,8 +358,8 @@ export default function blogUxDesign() {
                 />
               </div>
             </div>
-            <br />
-            <br />
+            
+            
             <p>
               UX design involves researching, planning, and designing various
               elements to create a harmonious flow that makes using a website or
@@ -361,8 +368,8 @@ export default function blogUxDesign() {
               hats. Let's explore the key ingredients that make up the UX design
               recipe.
             </p>
-            <br />
-            <br />
+            
+            
             <p>
               <span className="bold">User Research:</span> Like Sherlock Holmes,
               UX designers are like skilled detectives, conducting research to
@@ -380,8 +387,8 @@ export default function blogUxDesign() {
                 />
               </div>
             </div>
-            <br />
-            <br />
+            
+            
             <p>
               <span className="bold">Information Architecture:</span> UX
               designers organize content and information in a logical and
@@ -390,8 +397,8 @@ export default function blogUxDesign() {
               find what they're looking for, so they don't feel lost or
               overwhelmed.
             </p>
-            <br />
-            <br />
+            
+            
             <p>
               <span className="bold">Interaction Design: </span>
               UX designers are the masterminds behind how users interact with a
@@ -410,8 +417,8 @@ export default function blogUxDesign() {
                 />
               </div>
             </div>
-            <br />
-            <br />
+            
+            
             <p>
               <span className="bold">Usability Testing: </span>
               UX designers test their designs with real users to identify
@@ -420,8 +427,8 @@ export default function blogUxDesign() {
               is polished and effective. It's like a dress rehearsal before the
               big show.
             </p>
-            <br />
-            <br />
+            
+            
             <p>
               <span className="bold">Visual Design: </span>
                Finally, UX designers collaborate with U.I. (User Interface)
@@ -437,8 +444,8 @@ export default function blogUxDesign() {
                 />
               </div>
             </div>
-            <br />
-            <br />
+            
+            
             <p>
               Now that we&#39;ve uncovered the essential elements of UX design,
               you might be wondering how it all comes together. It&#39;s a bit
@@ -457,8 +464,8 @@ export default function blogUxDesign() {
               worked tirelessly to make your journey smooth and enjoyable.
             </p>
 
-            <br />
-            <br />
+            
+            
             <p>
               And that&#39;s a wrap! Now that you know about UX design, go forth
               and spread the word, or better yet, consider joining the ranks of
@@ -468,8 +475,6 @@ export default function blogUxDesign() {
           </div>
         </div>
       </div>
-
-      <div className="space-large desktop"></div>
 
       {/* =================== Related Articles =========================== */}
 
@@ -486,7 +491,7 @@ export default function blogUxDesign() {
             <div className="img-box-related">
               <Link href="/what-is-experience-design">
                 <img
-                  src="/assets/blogs/experience-design.webp"
+                  src="/assets/blogs/feature.jpg"
                   alt="img"
                   data-cursor-text="Read Now"
                   data-cursor-color="#000"
@@ -547,8 +552,6 @@ export default function blogUxDesign() {
       </div>
       {/* =================== Related Articles END =========================== */}
 
-      <div className="space-large desktop"></div>
-      <div className="space-small mobile"></div>
 
       {/* ======================== Footer ====================== */}
       <div className="desktop-footer">

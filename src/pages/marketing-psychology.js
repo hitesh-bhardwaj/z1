@@ -20,6 +20,10 @@ import FooterMobile from "@/components/Mobile/FooterMobile";
 
 gsap.registerPlugin(ScrollTrigger);
 
+gsap.config({
+  nullTargetWarn: false,
+});
+
 // Hover on the link
 const handleHover = (e) => {
   gsap.to(e.target, {
@@ -38,7 +42,7 @@ const handleHoverExit = (e) => {
   });
 };
 
-export default function blogMarketingPsychology() {
+export default function blogHowToDesign() {
   // Hero Section Animation
   useEffect(() => {
     const tl = gsap.timeline();
@@ -106,29 +110,31 @@ export default function blogMarketingPsychology() {
     return () => ctx.revert();
   });
 
-  // Parallax Image
-  useEffect(() => {
-    let ctx = gsap.context(() => {
-      gsap.utils.toArray(".image-container").forEach(function (container) {
-        let image = container.querySelector("img");
-
-        gsap.to(image, {
-          y: () => image.offsetHeight - container.offsetHeight,
-          ease: "none",
-          startAt: { y: "-25%" },
-          scrollTrigger: {
-            trigger: container,
-            scrub: true,
-            pin: false,
-            markers: false,
-          },
-          y: "25%",
-          ease: "none",
+   // Parallax Image
+   if (globalThis.innerWidth > 776) {
+    useEffect(() => {
+      let ctx = gsap.context(() => {
+        gsap.utils.toArray(".image-container").forEach(function (container) {
+          let image = container.querySelector("img");
+  
+          gsap.to(image, {
+            y: () => image.offsetHeight - container.offsetHeight,
+            ease: "none",
+            startAt: { y: "-25%" },
+            scrollTrigger: {
+              trigger: container,
+              scrub: true,
+              pin: false,
+              markers: false,
+            },
+            y: "25%",
+            ease: "none",
+          });
         });
       });
+      return () => ctx.revert();
     });
-    return () => ctx.revert();
-  });
+  }
 
   // Page Transitions
   useEffect(() => {
@@ -203,7 +209,7 @@ export default function blogMarketingPsychology() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"
+          content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
         ></meta>
         <link rel="icon" href="/fav-icon.png" />
       </Head>
@@ -320,8 +326,7 @@ export default function blogMarketingPsychology() {
               psychology and reveal why understanding the human mind is the key
               to transforming your marketing strategies and leaving your
               audience in awe.
-              <br />
-              <br />
+
             </p>
 
             <h3 className="bold-h" id="anim">
@@ -339,9 +344,6 @@ export default function blogMarketingPsychology() {
               their customers, inspire loyalty, and ultimately drive conversions
               and long-term success.
             </p>
-
-            <br />
-            <br />
 
             <h3 className="bold-h" id="anim">
               The Role of Emotions in Marketing:
@@ -374,8 +376,6 @@ export default function blogMarketingPsychology() {
               </div>
             </div>
 
-            <br />
-            <br />
 
             <h3 className="bold-h" id="anim">
               The Power of Social Influence:
@@ -396,8 +396,6 @@ export default function blogMarketingPsychology() {
               buzz around a product or service.
             </p>
 
-            <br />
-            <br />
 
             <h3 className="bold-h" id="anim">
               The Psychology of Persuasion:
@@ -419,8 +417,6 @@ export default function blogMarketingPsychology() {
               conversions, and long-term loyalty.
             </p>
 
-            <br />
-            <br />
 
             <h3 className="bold-h" id="anim">
               The Importance of Cognitive Biases:
@@ -451,8 +447,6 @@ export default function blogMarketingPsychology() {
               </div>
             </div>
 
-            <br />
-            <br />
             <h3 className="bold-h">
               The Role of Memory and Attention:
             </h3>
@@ -481,8 +475,6 @@ export default function blogMarketingPsychology() {
               consumers' attention and improve recall.
             </p>
 
-            <br />
-            <br />
             <h3 className="bold-h">
               The Impact of Personalization and Relevance:
             </h3>
@@ -511,8 +503,6 @@ export default function blogMarketingPsychology() {
               </div>
             </div>
 
-            <br />
-            <br />
             <h3 className="bold-h">
               The Power of Neuromarketing:
             </h3>
@@ -550,8 +540,6 @@ export default function blogMarketingPsychology() {
           </div>
         </div>
       </div>
-
-      <div className="space-large desktop"></div>
 
       {/* =================== Related Articles =========================== */}
 
@@ -628,9 +616,6 @@ export default function blogMarketingPsychology() {
         </div>
       </div>
       {/* =================== Related Articles END =========================== */}
-
-      <div className="space-large desktop"></div>
-      <div className="space-small mobile"></div>
 
       {/* ======================== Footer ====================== */}
       <div className="desktop-footer">
