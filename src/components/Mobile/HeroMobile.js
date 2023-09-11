@@ -7,6 +7,18 @@ export default function HeroMobile() {
   useEffect(() => {
     const tl = gsap.timeline();
     tl.fromTo(
+      "#video",
+      {
+        opacity: 0,
+        scale: 0.5,
+      },
+      {
+        scale: 1,
+        delay: 6,
+        duration: 1,
+        opacity: 1,
+      }
+    ) .fromTo(
       "#anim2",
       {
         rotationX: -80,
@@ -16,46 +28,22 @@ export default function HeroMobile() {
         transformOrigin: "top center",
       },
       {
-        delay: 5,
-        duration: 1.3,
+        delay: -0.6,
+        duration: 1,
         rotationX: 0,
         opacity: 1,
         translateY: 0,
         stagger: 0.2,
       }
-    );
-  }, []);
-
-  // Hero Video Section Animation
-  useEffect(() => {
-    const tl = gsap.timeline();
-    tl.fromTo(
-      "#video",
+    ) .fromTo(
+      "#para p",
       {
         opacity: 0,
-        scale: 0.5,
+        translateY: 100,
       },
       {
-        scale: 1,
-        delay: 5,
-        duration: 1.3,
-        opacity: 1,
-      }
-    );
-  }, []);
-
-  // Text Reveal Animation For Each
-  useEffect(() => {
-    const tl = gsap.timeline();
-    tl.fromTo(
-      "#para h4",
-      {
-        opacity: 0,
-        translateY: 300,
-      },
-      {
-        delay: 6,
-        duration: 2,
+        delay: -0.6,
+        duration: 1,
         opacity: 1,
         translateY: 0,
       }

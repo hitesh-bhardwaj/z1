@@ -127,7 +127,7 @@ export default function ConceptScrollMobile() {
         ".mobli-cont_content p",
         {
           opacity: 1,
-          duration: 2,
+          duration: 5,
           ease: "power1.inOut",
           stagger: 0.5,
           delay: 2,
@@ -144,10 +144,10 @@ export default function ConceptScrollMobile() {
         ".lapi-content p ",
         {
           opacity: 1,
-          duration: 2,
+          duration: 5,
           ease: "power1.inOut",
           stagger: 0.3,
-          y: 20,
+          y: -50,
         },
         43
       );

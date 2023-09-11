@@ -343,35 +343,13 @@ export default function ProjectsHome() {
   //     });
   // });
 
-  // Text Reveal Animation For Each
-  useEffect(() => {
-    const totalSection = document.querySelectorAll("#c-works");
-    totalSection.forEach(function (elem, index) {
-      const text = new SplitType(elem.querySelector("#proj-para-anim"));
-      let textwords = text.words;
-      gsap.from(textwords, {
-        scrollTrigger: {
-          trigger: elem,
-          start: "top 85%",
-          end: "bottom top",
-          markers: false,
-        },
-        duration: 1,
-        opacity: 0,
-        yPercent: 100,
-        ease: "Power3.out",
-        stagger: 0.05,
-      });
-    });
-  }, []);
-
   // Text Reveal Animation Top to Center
   if (globalThis.innerWidth < 1024) {
     useEffect(() => {
       const tl = gsap.timeline({
         scrollTrigger: {
-          trigger: "#c-works",
-          start: "top 80%",
+          trigger: "#m-works",
+          start: "top 90%",
         },
       });
   
@@ -400,8 +378,8 @@ export default function ProjectsHome() {
   useEffect(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: "#c-works",
-        start: "top 80%",
+        trigger: "#m-works",
+        start: "top 85%",
       },
     });
 
@@ -423,7 +401,7 @@ export default function ProjectsHome() {
 
   return (
     <>
-      <div className={styles.projectSectionMain} id="c-works">
+      <div className={styles.projectSectionMain} id="m-works">
         <div className={styles.projectHeading}>
           <div
             className={`${styles.projectFirstBox} ${styles.lineAnim}`}

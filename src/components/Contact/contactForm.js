@@ -118,7 +118,7 @@ export default function Home() {
       </FormControl>
 
       <FormControl
-        isRequired
+        isRequired 
         mb={5}
         isInvalid={touched.number && !values.number}
         className="form-box"

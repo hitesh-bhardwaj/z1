@@ -447,21 +447,6 @@ const Menu = ({ state }) => {
               </div>
               {/* Desktop */}
 
-              <div className="end-footer menu-footer-main  desktop-nav-footer">
-                <div className="end-footer-content menu-footer">
-                  <div className="left">
-                    <div className="f_content__text">
-                      <span className="f_span disabled">timezone</span>
-                      <div className="f_heading">+5:30 GMT</div>
-                    </div>
-                  </div>
-                  <div className="right">
-                    <span className="f_span disabled">location</span>
-                    <div className="f_heading">Noida - India</div>
-                  </div>
-                </div>
-              </div>
-
               {/* Mobile */}
             </div>
           </div>

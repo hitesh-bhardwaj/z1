@@ -44,10 +44,10 @@ function Footer() {
         },
         {
           delay: -0.5,
-          duration: 0.7,
+          duration: 0.6,
           opacity: 1,
           translateX: 0,
-          stagger: 0.5,
+          stagger: 0.1,
         }
       );
     return () => tl.kill();

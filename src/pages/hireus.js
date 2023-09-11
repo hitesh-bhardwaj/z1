@@ -248,14 +248,16 @@ const MyComponent = () => {
             />
 
       <Head>
-        <title>Hire us | Hire us - 50-60 characters</title>
+        <title>Hire us | Tell Us About the Project</title>
         <meta name="description" content="Hire us." />
         <meta
           name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"
+          content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
         />
         <link rel="icon" href="/fav-icon.png" />
       </Head>
+
+
 
       <div className="loader-wrap" id="loader">
         <svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
@@ -268,6 +270,7 @@ const MyComponent = () => {
           </span>
         </div>
       </div>
+
 
       <Cursor isGelly={true} />
       <div className={styles.buttonSection}>
