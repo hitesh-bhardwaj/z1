@@ -377,7 +377,7 @@ export default function ProjectsHome() {
   useEffect(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: "#c-works",
+        trigger: "#m-works",
         start: "top 85%",
       },
     });
@@ -405,7 +405,7 @@ export default function ProjectsHome() {
   useEffect(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: "#c-works",
+        trigger: "#m-works",
         start: "-250 top",
       },
     });
@@ -428,7 +428,7 @@ export default function ProjectsHome() {
 
   return (
     <>
-      <div className={styles.projectSectionMain} id="c-works">
+      <div className={styles.projectSectionMain} id="m-works">
         <div className={styles.projectHeading}>
           <div
             className={`${styles.projectFirstBox} ${styles.lineAnim}`}
