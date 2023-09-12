@@ -472,6 +472,19 @@ body {
   background: transparent;
 }
 
+.mainLoaderBg{
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  }
+
+.mainLoaderBar{
+  width: 20%;
+  height: 100vh;
+  background: var(--black);
+}
+
 .loader-wrap .span {
   overflow: hidden;
   display: inline-flex;
@@ -7333,6 +7346,18 @@ a:hover {
   /* Marquee END */
   /* ================== Services Page Index END ====================== */
 
+  /* ===================About Page ======================== */
+  .gifsubtext span{
+    display: none;
+  }
+  .gifsubtext>p{
+    font-size: 5vw;
+  }
+  .client-about-content-section .first-sub-section .left-box-heading .stroke, 
+  .first-sub-section .left-box-heading .stroke {
+    -webkit-text-stroke-width: 1px !important;
+  }
+
   /* ================== contact Page Index  ====================== */
 
   .img{
@@ -7492,6 +7517,7 @@ a:hover {
 
   .text-container .about-text-aero {
     font-size: 7vw !important;
+    font-weight: 500;
   }
 
   .-s4 {
@@ -8662,10 +8688,6 @@ a:hover {
     font-size: 5vw !important;
   }
 
-  .reel-section-about {
-    height: 35vh;
-  }
-
   .first-about-content-section {
     height: 100%;
   }
@@ -9062,6 +9084,7 @@ a:hover {
 
   .text-container .about-text-aero {
     font-size: 8vw !important;
+    font-weight: 500 !important;
   }
 
   .-s4 {
