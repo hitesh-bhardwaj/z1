@@ -528,7 +528,7 @@ body {
 }
 
 a {
-  color: var(--black1);
+  color: var(--black);
   text-decoration: none;
 }
 
@@ -750,8 +750,25 @@ button:focus {
   top: 0;
   left: 0;
   background-color: var(--black1);
-  height: 100%;
+  height: 100vh;
   width: 100vw;
+  display: none;
+}
+
+.menuLoaderBars {
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  z-index: 1;
+  position: absolute;
+  rotate: 180deg;
+}
+
+.menuLoaderBar {
+  display: block;
+  width: 0;
+  height: 20%;
+  background-color: var(--black);
 }
 
 .overlay-2 {
@@ -764,6 +781,7 @@ button:focus {
   background-color: var(--primary);
   height: 100%;
   width: 100vw;
+  display: none;
 }
 
 .nav {
@@ -771,7 +789,7 @@ button:focus {
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%;
+  height: 100vh;
   width: 100vw;
   list-style-type: none;
   padding: 0;
@@ -812,13 +830,14 @@ button:focus {
 }
 
 .menu-layer {
-  position: relative;
+  position: absolute;
   overflow: hidden;
   height: 100%;
   background: #f6f6f6;
   top: 0;
   left: 0;
   width: 100%;
+  display: none;
 }
 
 .menu-wrapper {
@@ -901,7 +920,7 @@ button:focus {
   line-height: 130%;
   letter-spacing: -0.01vw;
   position: relative;
-  max-width: 40%;
+  max-width: 45%;
 }
 
 .cb-outro-header a:before {
@@ -6190,6 +6209,12 @@ a:hover {
 /* ========================================== Project Marquee END ========================================== */
 
 /* ========================================== Media Queries ========================================== */
+@media (min-width: 481px) {
+  .aero-mob-1 {
+    display: none;
+  }
+}
+
 @media (min-width: 1024px) {
 
   .mobile-projects{
@@ -6506,7 +6531,7 @@ a:hover {
 
 @media screen and (max-width: 1024px) {
   .header-section .header-logo .main-logo {
-    width: 7vw;
+    width: 4.3vw;
   }
 
   .header-right-button {
@@ -6526,7 +6551,7 @@ a:hover {
   }
 
   .showreel .btn-primary {
-    font-size: 1.5vw;
+    font-size: 2vw;
   }
 
   .topHeightAero {
@@ -6669,7 +6694,7 @@ a:hover {
   }
 
   .showreel .btn-primary {
-    font-size: 2.5vw;
+    font-size: 3vw;
   }
 
   .right-section-header{
@@ -6790,7 +6815,7 @@ a:hover {
   .content-hero-box-mobile {
     width: 100%;
     height: 100%;
-    margin-top: 5vw;
+    margin-top: 6vw;
   }
 
   .content-hero-box-mobile .first-text h3 {
@@ -6802,21 +6827,21 @@ a:hover {
 
   .content-hero-box-mobile .second-text h1 {
     color: var(--black2);
-    font-size: 10vw;
+    font-size: 15vw;
     line-height: 1;
     font-weight: 500;
   }
 
   .content-hero-box-mobile .third-text h1 {
     color: var(--primary);
-    font-size: 15vw;
+    font-size: 16vw;
     line-height: 1;
     font-weight: 500;
   }
 
   .content-hero-box-mobile .forth-text h1 {
     color: var(--black2);
-    font-size: 10vw;
+    font-size: 15vw;
     line-height: 1;
     font-weight: 500;
   }
@@ -6829,12 +6854,11 @@ a:hover {
   }
 
   .mobile-hero-para p {
-    margin-top: 5vw;
+    margin: 8vw 0; 
     font-size: 3.7vw;
     font-weight: 400;
     line-height: 145%;
     text-align: justify;
-    letter-spacing: 0.00464286em;
     font-family: 'Ageo';
   }
 
@@ -6883,7 +6907,7 @@ a:hover {
 
   .mobli-cont .mobli-cont_content p {
     opacity: 0;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 10vw;
     color: var(--white);
     margin-left: 2vw;
@@ -6909,8 +6933,8 @@ a:hover {
   }
 
   .lapi-content .word {
-    font-size: 10vw;
-    font-weight: 500;
+    font-size: 9.5vw;
+    font-weight: 400;
     text-align: center;
     color: var(--white);
     opacity: 0;
@@ -6923,14 +6947,13 @@ a:hover {
   .video-section-mobile {
     width: 100%;
     height: 100%;
-    margin: 15vw 0 30vw 0;
     display: flex;
-    flex-direction: column-reverse;
+    justify-content: center;
+    flex-direction: column;
   }
 
   .video-section-mobile .video-box {
     width: 100%;
-    margin-top: 15vw;
     height: 45vh;
   }
 
@@ -6940,7 +6963,7 @@ a:hover {
   }
 
   .video-section-mobile .video-content-box {
-    margin-top: 5vw;
+    margin: 20vw 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -6949,16 +6972,16 @@ a:hover {
 
   .video-section-mobile .video-content-box h1 {
     max-width: 90%;
-    font-size: 4.5vw;
+    font-size: 5.5vw;
     font-weight: 500;
     color: var(--black1);
+    font-family: 'Ageo';
     text-align: center;
-    padding-bottom: 40px;
+    margin-bottom: 50px;
   }
 
 .video-section-mobile .video-content-box a {
-    margin-top: 7vw;
-    font-size: 5vw;
+    font-size: 6vw;
     font-weight: 500;
 }
 
@@ -6970,7 +6993,9 @@ a:hover {
 
   /* ====================== Category Section  ====================== */
   #services{
-    padding: 0 2rem;
+    padding: 0;
+    width: 90%;
+    margin: auto;
   }
   #services .container {
     width: 100%;
@@ -7471,6 +7496,8 @@ a:hover {
 
   .-s4 {
     font-size: 3vw;
+    font-weight: 400;
+    opacity: 0.8;
   }
 
   .cb-particles-item.-p1:before {
@@ -7919,7 +7946,7 @@ a:hover {
 
   .contact-content-socials-icon span {
     font-size: 4vw;
-    color: var(--black1);
+    color: var(--black);
   }
 
   .footer {
@@ -8208,12 +8235,8 @@ a:hover {
   }
 
   .hero-main-content-section .video-box {
-    width: 270px;
-    height: 270px;
-    overflow: hidden;
-    margin: 0 auto;
-    border-radius: 50%;
-    clip-path: inset(0 0 0 0 round 50%);
+    width: 350px;
+    height: 350px;
   }
 
   .hero-main-content-section .video-box video {
@@ -8240,7 +8263,7 @@ a:hover {
   }
 
   .content-hero-box-mobile .second-text h1 {
-    font-size: 11.5vw;
+    font-size: 16.4vw;
   }
 
   .content-hero-box-mobile .third-text h1 {
@@ -8249,8 +8272,7 @@ a:hover {
   }
 
   .content-hero-box-mobile .forth-text h1 {
-    font-size: 11.5vw;
-    line-height: 1.2;
+    font-size: 16.4vw;
   }
 
   .mob-agency {
@@ -8266,11 +8288,7 @@ a:hover {
   }
 
   .mobile-hero-para p {
-    margin-top: 8vw;
     font-size: 4vw;
-    font-family: 'Ageo';
-    line-height: 155%;
-    letter-spacing: 0.00464286em;
   }
 
   .hero-footer {
@@ -8359,17 +8377,9 @@ a:hover {
 
 
   /* Video Section  */
-  .video-section-mobile {
-    width: 100%;
-    height: 100%;
-    margin: 15vw 0 30vw 0;
-    display: flex;
-    flex-direction: column-reverse;
-  }
 
   .video-section-mobile .video-box {
     width: 100%;
-    margin-top: 15vw;
     height: 45vh;
   }
 
@@ -8377,15 +8387,6 @@ a:hover {
     width: 100%;
     height: 100%;
   }
-
-  .video-section-mobile .video-content-box {
-    margin-top: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-
   .video-section-mobile .video-content-box h1 {
     max-width: 90%;
     font-size: 5vw;
@@ -8394,17 +8395,12 @@ a:hover {
     text-align: center;
   }
 
-  .video-section-mobile .cb-outro-header {
-    margin-top: 10vw;
-    max-width: 45%;
-  }
-
   .video-section-mobile .video-content-box a {
     font-size: 5.4vw;
   }
 
   .video-section-mobile .cb-outro-header a:before {
-    top: 5vw;
+    top: 5.5vw;
   }
 
   /* Video Section END */
@@ -8414,14 +8410,6 @@ a:hover {
   }
 
   /* Category Page */
-
-  #services {
-    padding: 0;
-  }
-
-  #services .container {
-    width: 90%;
-  }
 
   .accordion {
     width: 95%;
@@ -9975,14 +9963,29 @@ a:hover {
 }
 
 /*=====================Home Page Hero Section====================*/
+.hero-main-content-section .video-box {
+  width: 300px;
+  height: 300px;
+}
+.content-hero-box-mobile{
+  margin-top: 10vw;
+}
+.content-hero-box-mobile .second-text h1, 
+.content-hero-box-mobile .forth-text h1 {
+  font-size: 17vw;
+}
 .main-section{
   padding-top: 10vw;
 }
 .mobile-hero-para p{
   font-size: 6vw;
 }
+.video-section-mobile .video-content-box h1{
+  font-size: 6.3vw;
+  margin-bottom: 30px;
+}
 .video-section-mobile .video-content-box a{
-  font-size: 6vw;
+  font-size: 7vw;
 }
 .video-section-mobile{
   margin: 15vw 0 0;
@@ -10021,6 +10024,15 @@ a:hover {
 
 .aero-hover{
   height: 60vh;
+}
+.aero-desk-1{
+  display: none;
+}
+.aero-mob-1 {
+  display: block;
+}
+.text-container h1 {
+  font-size: 12vw !important;
 }
 .-s4{
   font-size: 4vw;

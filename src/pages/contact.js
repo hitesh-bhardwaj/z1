@@ -239,7 +239,7 @@ export default function contact() {
                     Work
                   </div>
                   <div className="contact-para" id="contact-anim">
-                    Old ways won't  new doors. If you have an interesting idea, <span className="bold-600">Let's Build the Future Together!</span>
+                    Old ways won't open new doors. If you have an interesting idea, <span className="bold-600">Let's Build the Future Together!</span>
                   </div>
                 </div>
                 <div className="second-box-contact">

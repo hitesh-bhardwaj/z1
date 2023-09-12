@@ -31,13 +31,6 @@ export default function HomeVideoSection() {
   return (
     <>
       <div className="video-section-mobile">
-        <div className="video-box">
-        <LazyVideo
-        src="/assets/reels/hero.webm"
-        title="official reel video"
-      />
-        </div>
-
         <div className="video-content-box">
           <h1 className="para-anim-mobile">
               Empowered by Neuromarketing Principles,
@@ -51,6 +44,13 @@ export default function HomeVideoSection() {
               Say, Hello! <span className="emoji-dark">👋</span>
             </Link>
           </div>
+        </div>
+
+        <div className="video-box">
+        <LazyVideo
+        src="/assets/reels/hero.webm"
+        title="official reel video"
+      />
         </div>
       </div>
     </>

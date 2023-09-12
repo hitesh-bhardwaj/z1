@@ -20,6 +20,7 @@ import TopHomeAero from "@/components/Home/TopAero";
 import Preloader from "@/components/PreLoader/PreLoader";
 import HomeProject from "@/components/ProjectsSection/HomeProject";
 import ProjectsHome from "@/components/Home/ProjectsHome";
+import { useEffect, useState } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -28,6 +29,26 @@ gsap.config({
 });
 
 export default function Home() {
+
+  const [isMobile, setIsMobile] = useState(false);
+
+  // Use useEffect to set isMobile based on window width
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 991); // Adjust the threshold as needed
+    };
+
+    // Initial check on component mount
+    handleResize();
+
+    // Add event listener to handle window resize
+    window.addEventListener("resize", handleResize);
+
+    // Clean up the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   console.clear();
 
@@ -71,7 +92,7 @@ export default function Home() {
 
       <Preloader />
 
-      <SmoothScroll />
+      {isMobile ? null : <SmoothScroll />} {/* Conditionally render SmoothScroll */}
 
       <Cursor isGelly={true} />
 

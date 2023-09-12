@@ -26,7 +26,7 @@ export default function FooterMobile() {
           transformOrigin: "top center",
         },
         {
-          duration: 0.8,
+          duration: 1,
           rotationX: 0,
           opacity: 1,
           translateY: 0,
@@ -34,9 +34,9 @@ export default function FooterMobile() {
         }).from(footerMobileLinks, {
           opacity: 0,
           y: 100,
-          duration: 0.7,
-          delay: -0.3,
-          stagger: 0.2,
+          duration: 1,
+          delay: -0.5,
+          stagger: 0.1,
         });
         });
     return () => ctx.revert();

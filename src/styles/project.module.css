@@ -287,7 +287,7 @@
   }
 
   .glideContent img {
-    top: -20%;
+    top: -30%;
   }
 
   .mb_0 {
@@ -379,7 +379,7 @@
 
   .glideContent img {
     height: 140%;
-    top: -20%;
+    top: -30%;
   }
 
   .c_prj_btn {
@@ -393,5 +393,12 @@
 
   .c_project_info > p {
     font-size: 2vw;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .glideContent img {
+    height: 140%;
+    top: -40%;
   }
 }

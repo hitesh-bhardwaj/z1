@@ -56,10 +56,15 @@ export default function Aerosol() {
       <div className="top-aero-hover">
         {/* Text Container with Blend Mode Effect */}
         <div className="text-container top-aero-demo">
-          <h1 className="">
+          <h1 className="aero-desk-1">
             we make cool things
             <br />
             that do great business
+          </h1>
+          <h1 className="aero-mob-1">
+            we make cool <br/> 
+            things that do 
+            <br /> great business
           </h1>
           <TopHomeParticles />
         </div>

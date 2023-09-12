@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import Scrollbar, { ScrollbarPlugin } from "smooth-scrollbar";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import gsap from "gsap";
-// import OverscrollPlugin from "smooth-scrollbar/dist/plugins/overscroll";
+import OverscrollPlugin from "smooth-scrollbar/dist/plugins/overscroll";
 
 gsap.registerPlugin(ScrollTrigger);
 class ScrollTriggerPlugin extends Scrollbar.ScrollbarPlugin {
@@ -146,7 +146,7 @@ const SmoothScroll = () => {
 
     transformDelta(delta, fromEvent) {
       if (fromEvent.type === "touchmove") {
-        this.scrollbar.options.damping = 0.05; // change this to whatever you want
+        this.scrollbar.options.damping = 0.1; // change this to whatever you want
       }
       return delta;
     }
@@ -156,7 +156,7 @@ const SmoothScroll = () => {
 
     transformDelta(delta, fromEvent) {
       if (fromEvent.type === "touchend") {
-        this.scrollbar.options.damping = 0.01; // change this to whatever you want
+        this.scrollbar.options.damping = 0.1; // change this to whatever you want
       }
       return delta;
     }

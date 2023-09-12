@@ -44,6 +44,7 @@ const Menu = ({ state }) => {
   const link14 = useRef();
   const link15 = useRef();
 
+if (globalThis.innerWidth > 1024) {
   useEffect(() => {
     if (typeof window !== "undefined") {
       // Check if running on the client-side
@@ -83,130 +84,262 @@ const Menu = ({ state }) => {
       };
     }
   }, []);
+}
 
-  useEffect(() => {
-    if (state.clicked === false) {
-      //   menu.current.style.display = "none";
-      gsap.to(
-        [revealMenu.current, backgroundMenu2.current, backgroundMenu.current],
-        {
-          height: 0,
-          duration: 0.5,
-          skewY: 0,
-          ease: "power3.inOut",
-          stagger: {
-            amount: 0.3,
-          },
-        }
-      );
+useEffect(() => {
 
-      gsap.to([menu.current], {
-        duration: 1,
-        css: { display: "none" },
-      });
-    } else if (
-      state.clicked === true ||
-      (state.clicked === true && state.initial === null)
-    ) {
-      //   menu.current.style.display = "block";
+  const menuLoaderBar = document.querySelectorAll(".menuLoaderBar");
 
-      gsap.to([menu.current], {
-        duration: 0,
-        css: { display: "block" },
-      });
+  if(state.clicked === false) {
+    gsap.to(revealMenu.current, { 
+      css: {zIndex: '0'},
+      duration: 0,
+    });
+    gsap.to(menuLoaderBar, {
+      x: '0%',
+      duration: 0.5,
+      stagger: 0.15,
+    });
+    gsap.to(revealMenu.current, { 
+      css: {display: 'none'},
+      duration: 0,
+      delay: 1.2
+    })
+    gsap.to(menuLoaderBar ,{
+      width: '0',
+      duration: 0.5,
+      stagger: 0.15,
+      delay: 1
+    });
+    gsap.to([menu.current], {
+      duration: 1,
+      delay: 1,
+      css: { display: "none" },
+    });
+  } else if (
+    state.clicked === true || 
+    (state.clicked === true && state.initial === null)) 
+  {
+    gsap.to([menu.current], {
+      duration: 0,
+      css: { display: "block" },
+    });
+    gsap.to(menuLoaderBar ,{
+      width: '100%',
+      duration: 0.5,
+      stagger: 0.15,
+    });
+    gsap.to(revealMenu.current, { 
+      css: {display: 'block'},
+      duration: 0,
+      delay: 1
+    })
+    gsap.to(menuLoaderBar ,{
+      x: '100%',
+      duration: 0.5,
+      stagger: 0.15,
+      delay: 1,
+    });
+    gsap.to(revealMenu.current, { 
+      css: {zIndex: '2'},
+      duration: 0,
+      delay: 2
+    });
+    gsap.to(
+            [
+              link1.current,
+              link2.current,
+              link3.current,
+              link4.current,
+              link5.current,
+            ],
+            {
+              duration: 0,
+              rotationX: 0,
+              opacity: 1,
+              translateY: 0,
+              transformPerspective: "1000",
+              transformOrigin: "top center",
+            }
+          );
+    
+          gsap.from(
+            [
+              link1.current,
+              link2.current,
+              link3.current,
+              link4.current,
+              link5.current,
+            ],
+            {
+              delay: 1.3,
+              duration: 0.8,
+              opacity: 0,
+              translateY: 200,
+              rotationX: -80,
+              stagger: {
+                amount: 0.4,
+              },
+            }
+          );
+    
+          gsap.from(
+            [
+              link6.current,
+              link7.current,
+              link8.current,
+              link9.current,
+              link10.current,
+              link11.current,
+              link12.current,
+              link13.current,
+              link14.current,
+              link15.current,
+            ],
+            {
+              delay: 1.8,
+              duration: 0.8,
+              opacity: 0,
+              translateY: "200",
+              rotationX: "-100deg",
+              stagger: {
+                amount: 0.5,
+              },
+            }
+          );
+  }
+}, [state]);
 
-      gsap.to(
-        [backgroundMenu.current, backgroundMenu2.current, revealMenu.current],
-        {
-          opacity: 1,
-          duration: 0,
-          height: "100vh",
-        }
-      );
-      gsap.from(
-        [backgroundMenu.current, backgroundMenu2.current, revealMenu.current],
-        {
-          duration: 0.8,
-          height: 0,
-          top: "0",
-          transformOrigin: "right top",
-          skewY: 2,
-          ease: "power3.inOut",
-          stagger: {
-            amount: 0.5,
-          },
-        }
-      );
+  // useEffect(() => {
+  //   if (state.clicked === false) {
+  //     //   menu.current.style.display = "none";
+  //     gsap.to(
+  //       [revealMenu.current, backgroundMenu2.current, backgroundMenu.current],
+  //       {
+  //         height: 0,
+  //         duration: 0.5,
+  //         skewY: 0,
+  //         ease: "power3.inOut",
+  //         stagger: {
+  //           amount: 0.3,
+  //         },
+  //       }
+  //     );
 
-      gsap.to(
-        [
-          link1.current,
-          link2.current,
-          link3.current,
-          link4.current,
-          link5.current,
-        ],
-        {
-          duration: 0,
-          rotationX: 0,
-          opacity: 1,
-          translateY: 0,
-          transformPerspective: "1000",
-          transformOrigin: "top center",
-        }
-      );
+  //     gsap.to([menu.current], {
+  //       duration: 1,
+  //       css: { display: "none" },
+  //     });
+  //   } else if (
+  //     state.clicked === true ||
+  //     (state.clicked === true && state.initial === null)
+  //   ) {
+  //     //   menu.current.style.display = "block";
 
-      gsap.from(
-        [
-          link1.current,
-          link2.current,
-          link3.current,
-          link4.current,
-          link5.current,
-        ],
-        {
-          delay: 0.8,
-          duration: 0.8,
-          opacity: 0,
-          translateY: 200,
-          rotationX: -80,
-          stagger: {
-            amount: 0.4,
-          },
-        }
-      );
+  //     gsap.to([menu.current], {
+  //       duration: 0,
+  //       css: { display: "block" },
+  //     });
 
-      gsap.from(
-        [
-          link6.current,
-          link7.current,
-          link8.current,
-          link9.current,
-          link10.current,
-          link11.current,
-          link12.current,
-          link13.current,
-          link14.current,
-          link15.current,
-        ],
-        {
-          delay: 1.1,
-          duration: 0.8,
-          opacity: 0,
-          translateY: "200",
-          rotationX: "-100deg",
-          stagger: {
-            amount: 0.5,
-          },
-        }
-      );
-    }
-  }, [state]);
+  //     gsap.to(
+  //       [backgroundMenu.current, backgroundMenu2.current, revealMenu.current],
+  //       {
+  //         opacity: 1,
+  //         duration: 0,
+  //         height: "100vh",
+  //       }
+  //     );
+  //     gsap.from(
+  //       [backgroundMenu.current, backgroundMenu2.current, revealMenu.current],
+  //       {
+  //         duration: 0.8,
+  //         height: 0,
+  //         top: "0",
+  //         transformOrigin: "right top",
+  //         skewY: 2,
+  //         ease: "power3.inOut",
+  //         stagger: {
+  //           amount: 0.5,
+  //         },
+  //       }
+  //     );
+
+  //     gsap.to(
+  //       [
+  //         link1.current,
+  //         link2.current,
+  //         link3.current,
+  //         link4.current,
+  //         link5.current,
+  //       ],
+  //       {
+  //         duration: 0,
+  //         rotationX: 0,
+  //         opacity: 1,
+  //         translateY: 0,
+  //         transformPerspective: "1000",
+  //         transformOrigin: "top center",
+  //       }
+  //     );
+
+  //     gsap.from(
+  //       [
+  //         link1.current,
+  //         link2.current,
+  //         link3.current,
+  //         link4.current,
+  //         link5.current,
+  //       ],
+  //       {
+  //         delay: 0.8,
+  //         duration: 0.8,
+  //         opacity: 0,
+  //         translateY: 200,
+  //         rotationX: -80,
+  //         stagger: {
+  //           amount: 0.4,
+  //         },
+  //       }
+  //     );
+
+  //     gsap.from(
+  //       [
+  //         link6.current,
+  //         link7.current,
+  //         link8.current,
+  //         link9.current,
+  //         link10.current,
+  //         link11.current,
+  //         link12.current,
+  //         link13.current,
+  //         link14.current,
+  //         link15.current,
+  //       ],
+  //       {
+  //         delay: 1.1,
+  //         duration: 0.8,
+  //         opacity: 0,
+  //         translateY: "200",
+  //         rotationX: "-100deg",
+  //         stagger: {
+  //           amount: 0.5,
+  //         },
+  //       }
+  //     );
+  //   }
+  // }, [state]);
 
   return (
     <div ref={menu} className="nav" id="mb_nav">
-      <div ref={backgroundMenu} className="overlay"></div>
-      <div ref={backgroundMenu2} className="overlay-2"></div>
+      <div className="menuLoaderBars">
+        <span className="menuLoaderBar"></span>
+        <span className="menuLoaderBar"></span>
+        <span className="menuLoaderBar"></span>
+        <span className="menuLoaderBar"></span>
+        <span className="menuLoaderBar"></span>
+      </div>
+      {/* <div ref={backgroundMenu} className="overlay"></div>
+      <div ref={backgroundMenu2} className="overlay-2"></div> */}
       <div ref={revealMenu} className="menu-layer">
         <div id="menu-wrapper">
           <div className="wrapper">
@@ -441,13 +574,9 @@ const Menu = ({ state }) => {
                       </div>
                     </div>
                    </div>
-                    
                   </div>
                 </div>
               </div>
-              {/* Desktop */}
-
-              {/* Mobile */}
             </div>
           </div>
         </div>

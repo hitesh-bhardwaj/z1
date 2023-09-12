@@ -12,7 +12,16 @@
                 z-index: 9999;
                 transition: opacity 0.5s ease-in-out;
               }
-              
+              .mainLoaderBg{
+                display: flex;
+                width: 100vw;
+                height: 100vh;
+              }
+              .mainLoaderBar{
+                width: 20%;
+                height: 100vh;
+                background: var(--black);
+              }
               .preloader p {
                 display: flex;
                 color: var(--white);
@@ -37,6 +46,17 @@
                 width: 100vw;
                 height: 110vh;
               }
+
+@media screen and (max-width: 991px) {
+  .mainLoaderBar{
+    width: 25%;
+    height: 100vh;
+    background: var(--black);
+  }
+  .mainLoaderBar:nth-child(5) {
+    display: none;
+  }
+}
 
 @media screen and (max-width: 480px) {
   .preloader p {
