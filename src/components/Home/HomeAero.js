@@ -31,7 +31,9 @@ export default function Aerosol() {
         start: "-200 top",
       },
     });
-    const demoHeader = document.querySelector(".aero-demo h1");
+    
+    const demoHeader = document.querySelectorAll(".aero-demo h1");
+
     // Header
     tl.fromTo(
       demoHeader,

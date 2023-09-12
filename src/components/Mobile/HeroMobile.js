@@ -76,8 +76,12 @@ export default function HeroMobile() {
 
             <div className="forth-text line-height" id="anim2">
               <h1>
-                Design <span className="mob-agency">Agency</span>
+                Design
               </h1>
+            </div>
+
+            <div className="third-text line-height" id="anim2">
+              <h1><span className="mob-agency">Agency</span></h1>
             </div>
 
             <div className="mobile-hero-para" id="para">

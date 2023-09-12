@@ -31,7 +31,7 @@ export default function Aerosol() {
         start: "-200 top",
       },
     });
-    const demoHeader = document.querySelector(".aero-demo h1");
+    const demoHeader = document.querySelectorAll(".aero-demo h1");
     // Header
     tl.fromTo(
       demoHeader,
@@ -56,10 +56,15 @@ export default function Aerosol() {
       <div className="aero-hover">
         {/* Text Container with Blend Mode Effect */}
         <div className="text-container aero-demo">
-          <h1 className="">
+          <h1 className="aero-desk-1">
             you're one call away
             <br />
             from being awesome
+          </h1>
+          <h1 className="aero-mob-1">
+            you're one call
+            <br /> away from 
+            <br />being awesome
           </h1>
           <ContactText />
         </div>

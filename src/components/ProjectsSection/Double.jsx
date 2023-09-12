@@ -14,22 +14,31 @@ gsap.config({
 export default function Index({projects, reversed}) {
 
   useEffect(() => {
-    let ctx = gsap.context(() => {
-      gsap.fromTo("#double-image-anim", {
-        scrollTrigger: {
-          trigger: "#doubleContainer",
-          start: "top 80%",
-        },
-        opacity: 0,
-        y: 100,
-      }, {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        stagger: 0.3,
-      });
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#doubleContainer",
+        start: "top 80%",
+      },
     });
-    return () => ctx.revert();
+
+    const demoHeader = document.querySelectorAll("#double-image-anim");
+
+    // Header
+    tl.fromTo(
+      demoHeader,
+      {
+        opacity: 0,
+        yPercent: 100,
+      },
+      {
+        opacity: 1,
+        yPercent: 0,
+        duration: 3,
+        ease: "expo.out",
+        stagger: 0.2
+      },
+      0
+    );
   });
 
     const firstImage = useRef(null);
@@ -87,7 +96,8 @@ export default function Index({projects, reversed}) {
                 id='double-image-anim'
               />
             </div>
-            <div className={styles.body}>
+            <div className={styles.body}
+            id='double-image-anim'>
                 <h3>{projects[0].name}</h3>
                 <h4>{projects[0].description}</h4>
                 <p>{projects[0].year}</p>
@@ -110,7 +120,8 @@ export default function Index({projects, reversed}) {
                 id='double-image-anim'
               />
             </div>
-            <div className={styles.body}>
+            <div className={styles.body}
+            id='double-image-anim'>
                 <h3>{projects[1].name}</h3>
                 <h4>{projects[1].description}</h4>
                 <p>{projects[1].year}</p>
