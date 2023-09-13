@@ -850,7 +850,7 @@ export default function certvault() {
                 <h1>next up</h1>
               </div>
               <div className={styles.nextProjectHeading}>
-                <Link href="/projects/quickx">
+                <Link href="/quickx">
                   <h1>Quick-X</h1>
                 </Link>
               </div>

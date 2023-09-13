@@ -3,6 +3,7 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import SplitType from "split-type";
 import Image from "next/image";
+import Link from "next/link";
 
 gsap.config({
     nullTargetWarn: false,
@@ -130,20 +131,22 @@ export default function StrategySection() {
             data-cursor-size="110px"
             data-cursor-color="#2b8c87"
           >
+          <Link href='/strategy'>
             <h1 className="ser-text-head-anim">Strategy</h1>
             <h4 data-jelly className="ser-text-head-anim">
               <span>
-                Digital Advisory and Consulting, Integrated Digital Marketing
-                Plan (D.M.P.), User Experience Development, Customer Experience
-                Strategy, Consumer Research, Insights & Target Market Analysis,
-                Digital Capabilities Development, Persona Design & Customer
-                Segmentation, Competitive Analysis & Industry Insights, Brand &
-                Content Strategy, Digital Marketing and Website Performance
-                Audit.
+                  Digital Advisory and Consulting, Integrated Digital Marketing
+                  Plan (D.M.P.), User Experience Development, Customer Experience
+                  Strategy, Consumer Research, Insights & Target Market Analysis,
+                  Digital Capabilities Development, Persona Design & Customer
+                  Segmentation, Competitive Analysis & Industry Insights, Brand &
+                  Content Strategy, Digital Marketing and Website Performance
+                  Audit.
               </span>
             </h4>
-            {/* <h4 className="bottom-text"></h4> */}
+          </Link> 
           </div>
+
           <div className="right-strategy-box">
             <div className="image-container service-box-image">
               <Image
@@ -170,17 +173,19 @@ export default function StrategySection() {
             data-cursor-size="110px"
             data-cursor-color="#000"
           >
+          <Link href='/design'>
             <h1 className="ser-text-head-anim">UI/UX Design</h1>
-            <h4 data-jelly className="ser-text-head-anim">
-              <span>
-                User Interface Design, User Experience Design, Responsive Web
-                Design, Mobile App Design, Digital Interface Design, Design
-                Systems Creation, Experience Mapping, User Flow Mapping,
-                Wireframing & Prototyping, Illustrations & Animations, Visual
-                Designs, and UI Kits.
-              </span>
-            </h4>
-            {/* <h4 className="bottom-text"></h4> */}
+              <h4 data-jelly className="ser-text-head-anim">
+                <span>
+                  User Interface Design, User Experience Design, Responsive Web
+                  Design, Mobile App Design, Digital Interface Design, Design
+                  Systems Creation, Experience Mapping, User Flow Mapping,
+                  Wireframing & Prototyping, Illustrations & Animations, Visual
+                  Designs, and UI Kits.
+                </span>
+              </h4>
+          </Link>
+            
           </div>
           <div className="right-strategy-box">
             <div className="image-container service-box-image">
@@ -207,20 +212,22 @@ export default function StrategySection() {
             data-cursor-size="110px"
             data-cursor-color="#fcc63d"
           >
+          <Link href='/technology'>
             <h1 className="ser-text-head-anim">Technology</h1>
-            <h4 data-jelly className="ser-text-head-anim">
-              <span>
-                Front-End Development, Native & Hybrid Mobile Application
-                Development, Progressive Web Applications, Database Design &
-                Management, Cloud Infrastructure Services, Testing & Automation
-                TECH STACK - HTML, CSS, Sass, Less, JavaScript, jQuery, GSAP,
-                Vue, React, React Native, Ionic, Flutter, NodeJS, Spring, JAVA,
-                Grails, Hibernate, MySQL, PostgreSQL, Oracle, Mongo, AWS and
-                Google Cloud.
-              </span>
-            </h4>
-            {/* <h4 className="bottom-text"></h4> */}
+              <h4 data-jelly className="ser-text-head-anim">
+                <span>
+                  Front-End Development, Native & Hybrid Mobile Application
+                  Development, Progressive Web Applications, Database Design &
+                  Management, Cloud Infrastructure Services, Testing & Automation
+                  TECH STACK - HTML, CSS, Sass, Less, JavaScript, jQuery, GSAP,
+                  Vue, React, React Native, Ionic, Flutter, NodeJS, Spring, JAVA,
+                  Grails, Hibernate, MySQL, PostgreSQL, Oracle, Mongo, AWS and
+                  Google Cloud.
+                </span>
+              </h4>
+          </Link>
           </div>
+
           <div className="right-strategy-box">
             <div className="image-container service-box-image">
               <Image
@@ -245,18 +252,20 @@ export default function StrategySection() {
             data-cursor-size="110px"
             data-cursor-color="#000"
           >
-            <h1 className="ser-text-head-anim">Marketing</h1>
-            <h4 data-jelly className="ser-text-head-anim">
-              <span>
-                Social Media Management, Content Creation & Curation, Search
-                Engine Optimisation, Influencer Management, Auction Media
-                Management, Online Reputation Management, Media Planning &
-                Buying, Marketing Automation, Email Marketing, Conversion Rate
-                Optimisation, Website & SEO Analysis.
-              </span>
-            </h4>
-            {/* <h4 className="bottom-text"></h4> */}
+            <Link href='/marketing'>
+              <h1 className="ser-text-head-anim">Marketing</h1>
+              <h4 data-jelly className="ser-text-head-anim">
+                <span>
+                  Social Media Management, Content Creation & Curation, Search
+                  Engine Optimisation, Influencer Management, Auction Media
+                  Management, Online Reputation Management, Media Planning &
+                  Buying, Marketing Automation, Email Marketing, Conversion Rate
+                  Optimisation, Website & SEO Analysis.
+                </span>
+              </h4>
+            </Link>
           </div>
+
           <div className="right-strategy-box">
             <div className="image-container service-box-image">
               <Image

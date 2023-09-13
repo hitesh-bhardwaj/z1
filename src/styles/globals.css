@@ -4103,7 +4103,7 @@ https://unsplash.com/@vinomamba24
   color: var(--black2);
   position: absolute !important;
   left: 20vw;
-  bottom: -2.5vw;
+  line-height: .8;
 }
 
 .service-footer {
@@ -10184,12 +10184,29 @@ a:hover {
 }
 /* ========================================== Media Queries END ========================================== */
 
+/* Service Detail Page Last Section Offer Cards */
 .font-ageo{
   font-family: 'Ageo';
   font-size: 10vw;
 }
-.service-offer-container{
-  margin-left: 130px;
+
+/*Service Include Section */
+.service-offer{
+  padding: 10% 0 0;
+}
+.service-offer-top{
+  margin-bottom: 10vh;
+}
+.service-offer-top h2{
+  font-size: 4vw;
+  font-weight: 500;
+  color: var(--black1);
+}
+.service-offer-top span{
+  letter-spacing: 2px;
+}
+.service-offer-section{
+  margin-left: 10vw;
 }
 .service-offer-card{
   text-align: center;
@@ -10348,9 +10365,21 @@ a:hover {
 }
 
 @media screen and (max-width: 991px) {
-  .service-offer-container{
+
+  .service-offer-section{
     margin-left: 0;
   }
+  .service-offer{
+    padding: 0;
+    margin: 20% 0 0;
+  }
+  .service-offer-top{
+      margin-bottom: 5vw;
+  }
+  .service-offer-top h2{
+    font-size: 8vw;
+  }
+  
   .service-offer-card-wrapper{
     width: 50%;
   }
@@ -10369,6 +10398,12 @@ a:hover {
 }
 
 @media screen and (max-width: 480px) {
+  .service-offer-top h2{
+    font-size: 11vw;
+  }
+  .service-offer-top{
+    margin-bottom: 5vw;
+  }
   .service-offer-card-wrapper{
     width: 100%;
     padding-left: 0;
@@ -10379,6 +10414,7 @@ a:hover {
   }
 }
 
+/* End Service Detail page Offer Cards */
 
 .contact-form-new input#option1 {
   width: 105px;

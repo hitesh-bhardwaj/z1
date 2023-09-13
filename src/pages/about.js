@@ -270,7 +270,7 @@ export default function about() {
             <span className='mainLoaderBar' id='loaderbars'></span>
           </div>
       </div>
-
+      
       <div className="about-header">
         <Header />
       </div>

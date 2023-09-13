@@ -12,9 +12,9 @@ import styles from '@/styles/serviceDetail.module.css';
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer";
 import FooterMobile from "@/components/Mobile/FooterMobile";
-import CursorAero from '@/components/ServiceDetail/Strategy/StrategyAero';
-import NextBox from '@/components/ServiceDetail/Strategy/StrategyNext';
-import OfferCards from '@/components/ServiceDetail/Strategy/OfferCards';
+import CursorAero from '@/components/ServiceDetail/Technology/TechnologyAero';
+import NextBox from '@/components/ServiceDetail/Technology/TechnologyNext';
+import OfferCards from '@/components/ServiceDetail/Technology/OfferCards';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -269,7 +269,7 @@ useEffect(() => {
 
         <div className="loader-wrap-heading">
           <span>
-            <h1>Strategy & Planning</h1>
+            <h1>Technology & Services</h1>
           </span>
         </div>
       </div>
@@ -288,19 +288,19 @@ useEffect(() => {
 
 {/* Hero Section*/}
         <section className={`${styles['service-detail-hero']} ${styles['main-container']}`} data-cursor-size="10px" data-cursor-text="">
-          <div className={styles['service-detail-hero-content']}>
-            <div className={styles['service-detail-hero-top']}>
+          <div className={`${styles['service-detail-hero-content']} ${styles['hero-content']}`}>
+            <div className={`${styles['service-detail-hero-top']} ${styles['tech']}`}>
               <h1 className='color-primary' id='service-anim'
               data-cursor-magnetic data-cursor-background-image="/assets/gif/4.gif" data-cursor-size="300px" data-cursor-color="#000">
-                Strategy
+                Technology
               </h1>
-              <p className={`${styles['hero-top-para']}`} id='service-anim'>
+              {/* <p className={`${styles['hero-top-para']}  ${styles['tech']}`} id='service-anim'>
                 Our comprehensive range of services leverages our full expertise to boost your digital presence to celestial heights.
-              </p>
+              </p> */}
             </div>
             <div>
-              <h1 className={`${styles['hero-bottom']}`} id='service-anim' data-cursor-magnetic data-cursor-background-image="/assets/gif/5.gif" data-cursor-size="300px" data-cursor-color="#000">
-                <span className='font-ageo'>&</span> Planning
+              <h1 className={`${styles['hero-bottom']} ${styles['tech']}`} id='service-anim' data-cursor-magnetic data-cursor-background-image="/assets/gif/5.gif" data-cursor-size="300px" data-cursor-color="#000">
+                <span className='font-ageo'>&</span> Services
               </h1>
             </div>
           </div>

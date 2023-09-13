@@ -19,7 +19,7 @@
     margin: 15% 0;
   }
   .mb-10{
-    margin-bottom: 10%;
+    margin-bottom: 10% !important;
   }
   .mt-10{
     margin-top: 10%;
@@ -34,7 +34,10 @@
   }
   .service-detail-hero-top {
     display: flex;
-    align-items: center;
+    align-items: center;;
+  }
+  .service-detail-hero-top.design{
+    justify-content: center;
   }
   .service-detail-hero-content h1{
       font-size: 11vw;
@@ -44,7 +47,7 @@
   }
   .hero-top-para {
     width: 30vw;
-    font-size: 1.2vw;
+    font-size: 1.4vw;
     font-weight: 500;
     color: var(--black2);
     letter-spacing: .4px;
@@ -52,11 +55,18 @@
     padding-top: 30px;
     margin-left: 100px;
   }
+  .hero-top-para.tech{
+    display: none;
+  }
   .hero-bottom{
     position: absolute !important;
     right: 3vw
   }
   
+  .hero-bottom.design{
+    right: 6vw
+  }
+
   .service-detail-content{
     padding-left: 30vw;
     width: 100%;
@@ -95,7 +105,6 @@
   
   /* Service Portfolio Section */
   .service-portfolio{
-    position: sticky;
     padding: 15px;
     height: 100vh;
     width: 100vw;
@@ -181,7 +190,7 @@
     display: flex;
     align-items: flex-start;
     text-align: left;
-    padding: 15% 0;
+    padding: 15% 0 0;
     justify-content: space-between;
   }
   .service-detail-process-left {
@@ -258,8 +267,8 @@
   }
 
   .service-approach-left img{
-    height: 100vh;
-    width: auto;
+    height: 100%;
+    width: 100%;
     object-fit: cover;
   }
 
@@ -305,22 +314,6 @@
     letter-spacing: 0.5px;
   }
   
-
-/*Service Include Section */
-  .service-offer{
-    padding: 10% 0;
-  }
-  .service-offer-top{
-    margin-bottom: 10vh;
-  }
-  .service-offer-top h2{
-    font-size: 4vw;
-    font-weight: 500;
-    color: var(--black1);
-  }
-  .service-offer-top span{
-    letter-spacing: 2px;
-  }
   
   /*================Media Queries for Service detail page============================*/
   
@@ -342,6 +335,9 @@
   }
    */
   @media screen and (max-width: 991px) {
+    .service-detail-hero-top.design{
+      justify-content: unset;
+    }
     .service-detail-hero{
       height: 80vh;
       padding: 25% 0;
@@ -478,16 +474,6 @@
       font-size: 3vw;
       font-weight: 400;
     }
-    .service-offer{
-      padding: 0;
-      margin: 20% 0;
-    }
-    .service-offer-top{
-        margin-bottom: 5vw;
-    }
-    .service-offer-top h2{
-      font-size: 7vw;
-    }
     .service-offer-bottom{
       margin: 10% 0;
       justify-content: space-around;
@@ -593,9 +579,7 @@
     gap: 30px;
     align-items: flex-start;
   }
-  .service-offer-top{
-    margin-bottom: 5vw;
-  }
+  
   .service-card-top img{
     width: 100vw;
   }

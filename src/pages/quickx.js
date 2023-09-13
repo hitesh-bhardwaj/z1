@@ -861,7 +861,7 @@ export default function quickx() {
                 <h1>next up</h1>
               </div>
               <div className={styles.nextProjectHeading}>
-                <Link href="/projects/wragby">
+                <Link href="/wragby">
                   <h1>Wragby</h1>
                 </Link>
               </div>

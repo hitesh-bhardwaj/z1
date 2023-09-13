@@ -28,18 +28,26 @@ export default function OfferCards() {
 // FadeUp Animation
     useEffect(() => {
         let ctx = gsap.context(() => {
-          gsap.from(".service-offer-section > div", {
-              scrollTrigger: {
-                  trigger: ".service-offer-container",
-                  start: "top 80%",      
-                  markers: false,
-                },
-              opacity: "0",
-              y: "100",
-              duration: 0.8,
-              stagger: 0.2,
-              ease: 'power1.Out',
-          });
+        const cardHead = document.querySelector(".our-service-anim");
+        const cards = document.querySelectorAll(".service-offer-card");
+        const tl = gsap.timeline({
+            ScrollTrigger: {
+                trigger: '.service-offer-container',
+                start: 'top 85%',
+            }
+        });
+            tl. from(cardHead, {
+                yPercent: 100,
+                opacity: 0, 
+                duration: 0.7
+            })
+            tl.from(cards, {
+                opacity: "0",
+                y: 100,
+                duration: 0.7,
+                stagger: 0.2,
+                ease: 'power1.Out',
+            });
         });
         return () => ctx.revert();
       });
@@ -48,6 +56,13 @@ export default function OfferCards() {
         <>
             <div>
                 <div className="service-offer-container">
+                    <div className='service-offer'>
+                        <div className='service-offer-top'>
+                             <h2 className='our-service-anim'>
+                                Our Services<span className='stroke'> Include</span>
+                            </h2>
+                        </div>
+                    </div>
                     <div className="service-offer-section width-full flex flex-wrap">
                         <div className="service-offer-card-wrapper w-1/3 p-3 image-card-wrapper">
                             <div className="service-offer-card">

@@ -856,7 +856,7 @@ export default function dmtca() {
                 <h1>next up</h1>
               </div>
               <div className={styles.nextProjectHeading}>
-                <Link href="/projects/kedarkala">
+                <Link href="/kedarkala">
                   <h1>Kedarkala</h1>
                 </Link>
               </div>

@@ -12,9 +12,9 @@ import styles from '@/styles/serviceDetail.module.css';
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer";
 import FooterMobile from "@/components/Mobile/FooterMobile";
-import CursorAero from '@/components/ServiceDetail/Strategy/StrategyAero';
-import NextBox from '@/components/ServiceDetail/Strategy/StrategyNext';
-import OfferCards from '@/components/ServiceDetail/Strategy/OfferCards';
+import CursorAero from '@/components/ServiceDetail/Marketing/MarketingAero';
+import NextBox from '@/components/ServiceDetail/Marketing/MarketingNext';
+import OfferCards from '@/components/ServiceDetail/Marketing/OfferCards';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -269,7 +269,7 @@ useEffect(() => {
 
         <div className="loader-wrap-heading">
           <span>
-            <h1>Strategy & Planning</h1>
+            <h1>Marketing & Management</h1>
           </span>
         </div>
       </div>
@@ -292,7 +292,7 @@ useEffect(() => {
             <div className={styles['service-detail-hero-top']}>
               <h1 className='color-primary' id='service-anim'
               data-cursor-magnetic data-cursor-background-image="/assets/gif/4.gif" data-cursor-size="300px" data-cursor-color="#000">
-                Strategy
+                Marketing
               </h1>
               <p className={`${styles['hero-top-para']}`} id='service-anim'>
                 Our comprehensive range of services leverages our full expertise to boost your digital presence to celestial heights.
@@ -300,7 +300,7 @@ useEffect(() => {
             </div>
             <div>
               <h1 className={`${styles['hero-bottom']}`} id='service-anim' data-cursor-magnetic data-cursor-background-image="/assets/gif/5.gif" data-cursor-size="300px" data-cursor-color="#000">
-                <span className='font-ageo'>&</span> Planning
+                <span className='font-ageo'>&</span> Management
               </h1>
             </div>
           </div>
