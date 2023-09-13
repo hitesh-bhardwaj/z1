@@ -266,6 +266,7 @@ export default function kedarkala() {
                   data-cursor-text="Visit!"
                 >
                   <Link href="https://kedarkala.com/" target="_blank" className={styles.Link}>
+                    <button aria-label="link button">
                     kedarkala.com
                     <span className={styles.linkSvg}>
                       <Image
@@ -276,6 +277,7 @@ export default function kedarkala() {
                         id="case-study-arrow"
                       />
                     </span>
+                    </button>
                   </Link>
                 </div>
                 <h1 id="patro">

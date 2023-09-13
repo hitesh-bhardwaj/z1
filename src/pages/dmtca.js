@@ -280,6 +280,7 @@ export default function dmtca() {
                   <Link href="https://dmtca.agency/" 
                         target="_blank" 
                         className={styles.Link}>
+                        <button aria-label="link button">
                         dmtca.agency
                     <span className={styles.linkSvg}>
                       <Image
@@ -290,18 +291,19 @@ export default function dmtca() {
                         id="case-study-arrow"
                       />
                     </span>
+                    </button>
                   </Link>
                 </div>
                 <h1 id="patro">
-                    DMTCA Digital <br /> Marketing Agency
+                    DMTCA: The <br />Digital Vanguard
                 </h1>
               </div>
               <div className={styles.HeroRightBox}>
                 <h5 className={styles.work} id="patroSub">
-                  SAAS
+                  AGENCY
                 </h5>
                 <h5 className={styles.year} id="patroSub">
-                  2019-20
+                  2020
                 </h5>
               </div>
             </div>
@@ -334,25 +336,16 @@ export default function dmtca() {
               <div className={styles.thirdSectionRightBox}>
                 <div className={styles.paraTop}>
                   <h4 className={styles.h4} data-jelly>
-                    Patronum was developed by Bespin Labs as an exclusive Google
-                    Workplace™ management tool. With an intuitive and powerful
-                    interface and advanced automation, it gives IT
-                    administrators all the tools they’ll ever need to
-                    effectively manage their user life cycle and data including
-                    automating repetitive tasks such as email signature
-                    management, contact sharing, and drive management.
+                     DMTCA, a trailblazing digital marketing agency in the West Africa region, stands tall in the vast digital landscape, known for its unparalleled strategies and groundbreaking solutions. As the digital realm continues to evolve, DMTCA sought a brand identity and digital footprint that mirrors its prowess and showcases its illustrious portfolio.
                   </h4>
                 </div>
 
                 <div className={styles.buttonBox}>
                   <h6 data-cursor-size="30px" data-cursor-exclusion>
-                    Web Design
-                  </h6>
-                  <h6 data-cursor-size="30px" data-cursor-exclusion>
                     Branding
                   </h6>
                   <h6 data-cursor-size="30px" data-cursor-exclusion>
-                    Marketing
+                    Web Design
                   </h6>
                 </div>
               </div>
@@ -387,51 +380,16 @@ export default function dmtca() {
               <div className={styles.forthSectionRightBox}>
                 <div className={styles.paraTop}>
                   <h4 className={styles.h4} data-jelly>
-                    The founding team at Patronum was on a quest to create a
-                    brand and online presence that would turn heads and drop
-                    jaws faster than a cheetah chasing its prey.
+                    DMTCA, while being a powerhouse in the digital marketing realm, faced a branding conundrum. DMTCA's brand persona & digital presence needed a revamp. 
                   </h4>
                   <p data-jelly>
-                    They sought a digital partner that could not only help them
-                    navigate the treacherous waters of branding and web
-                    development but also help them create a lasting impression
-                    in the competitive SaaS arena. Hence, Patronum teamed up
-                    with Enigma to craft a brand identity and website that would
-                    shoot Patronum straight to the moon and beyond. Enigma's
-                    team of branding & design maestros, never one to shy away
-                    from a challenge, donned their digital superhero capes and
-                    embarked on a whirlwind adventure of ingenuity and pixel
-                    wizardry that would have made even Doctor Strange envious.
+                    Imagine having a compass that doesn't point north; that's how their previous branding felt. Their existing identity, robust and well-established, somehow missed capturing the full spectrum of their innovative approach. It was directionally ambiguous in a world that demanded precision.
                   </p>
                   <p data-jelly>
-                    The road to stellar branding and web development was paved
-                    with challenges as steep as the Cliffs of Moher. First, We
-                    had to capture the essence of Patronum's innovative SaaS
-                    solutions and translate it into a brand identity that would
-                    turn heads and drop jaws. This was no easy feat, as
-                    Patronum's solutions were as diverse as the colors in a
-                    rainbow, and distilling their unique value proposition into
-                    a cohesive brand narrative was akin to herding cats.
+                    Their website, while functional, was reminiscent of a classic novel in the digital age - rich in content but lacking the modern touch that would make it resonate with the contemporary audience. The branding, though recognizable, needed that extra zest, that unique touch which would make it not just seen but remembered. 
                   </p>
                   <p data-jelly>
-                    Second, Enigma had to design a website that would guide
-                    users through the labyrinth of Patronum's offerings, all
-                    while making it look like a walk in the park. The website
-                    needed to strike a balance between visual appeal, user
-                    experience, and performance, ensuring that users could
-                    explore Patronum's solution offerings without getting lost
-                    in a maze of complexity. In a world where the competition
-                    for users' attention is fiercer than a cage match between
-                    gladiators, Patronum's website had to be nothing short of a
-                    digital masterpiece.
-                  </p>
-                  <p data-jelly>
-                    Lastly, the website needed to be built on a solid foundation
-                    that could accommodate the constant evolution and growth of
-                    Patronum's solutions. The team at Patronum was constantly
-                    churning out new features and offerings, and their website
-                    needed to be agile enough to keep pace with their product's
-                    relentless innovation.
+                    The challenge was not just about enhancing their digital presence but also about refining and redefining their brand identity to truly reflect the dynamism and innovation that DMTCA embodies.
                   </p>
                 </div>
               </div>
@@ -524,20 +482,16 @@ export default function dmtca() {
               <div className={styles.forthSectionRightBox}>
                 <div className={styles.paraTop}>
                   <p data-jelly>
-                    We decided to play by our own rulebook, tossing conventional
-                    wisdom out the window like an old Nokia brick phone. We
-                    began with a deep dive into Wragby's psyche, absorbing their
-                    every quirk and vision like a sponge in the depths of the
-                    ocean. This immersion allowed our team to channel Wragby's
-                    innovative spirit into every aspect of the website.
+                    Redefining a brand is like sculpting a masterpiece from marble; it requires precision, vision, and a deep understanding of the essence of the subject. We embarked on a journey to rediscover DMTCA. We delved deep into DMTCA's ethos, understanding their quirks, their strengths, and their vision. This wasn't just about a digital makeover; it was about capturing the soul of DMTCA.
                   </p>
                   <p data-jelly>
-                    For the website, we employed a user-centric approach,
-                    crafting an information architecture that was intuitive and
-                    would feel like a guided wizard tour to the entire website.
-                    We transformed complex wireframes into breathtaking page
-                    designs, ensuring each element sang in harmony with
-                    Patronum's newfound brand identity.
+                    Through intensive workshops, brainstorming sessions, and deep dives into their past campaigns, successes, and feedback, we pieced together the mosaic that is DMTCA. The narrative was not just spun; it was woven with threads of their achievements, aspirations, and vision. We aimed to create a digital tapestry that showcased every facet of DMTCA. 
+                  </p>
+                  <p data-jelly>
+                    For the branding, we chose elements that were symbolic of their forward-thinking approach and their roots in traditional marketing values. Colors, typography, and design elements were meticulously chosen to reflect their ethos, creating a brand identity that was both modern and timeless. 
+                  </p>
+                  <p data-jelly>
+                    The website was transformed into an interactive digital journey, with each section, each page telling a part of the DMTCA story, drawing visitors into the world of DMTCA. We wanted visitors to not just see DMTCA's work but to experience it. The design was revamped to be sleek, modern, and interactive, turning the website into a digital journey rather than just a digital platform.
                   </p>
                 </div>
               </div>
@@ -624,7 +578,7 @@ export default function dmtca() {
             <div className={styles.fontHeading}>
               <h2 className={styles.h2} >Fonts</h2>
             </div>
-            <div className={styles.dmtcafontImagebox}>
+            <div className={`${styles.dmtcafontImagebox} projectNoInvert`}>
               <img src="/assets/casestudies/dmtca/typo.webp" alt="Fonts" />
             </div>
           </section>
@@ -700,15 +654,7 @@ export default function dmtca() {
               <div className={styles.forthSectionRightBox}>
                 <div className={styles.paraTop}>
                   <p data-jelly>
-                  We opted for a proven technology stack that packed a punch:
-                  HTML, CSS, JS, jQuery, and WordPress. This powerful combo
-                  offered the perfect blend of flexibility, maintainability, and
-                  scalability. HTML and CSS laid the groundwork for the site's
-                  structure and visual appeal, while JavaScript and jQuery
-                  injected interactivity and panache, making the website as
-                  captivating as a Broadway show. WordPress, the pièce de
-                  résistance, provided a user-friendly content management system
-                  that empowered Patronum's team to easily update and manage their content as their product continued to evolve.
+                    Our tech arsenal was chosen to mirror DMTCA's innovative approach. HTML5, CSS3, and JavaScript formed the backbone, ensuring a seamless and dynamic user experience. WordPress was used as the choice of content management platform, easing out the maintenance of the website by the DMTCA team post-delivery. The site wasn't just about looking good; it was about performing exceptionally, ensuring that DMTCA's digital presence was as impactful as their real-world operations.
                   </p>
                 </div>
               </div>
@@ -747,24 +693,13 @@ export default function dmtca() {
               <div className={styles.forthSectionRightBox}>
                 <div className={styles.paraTop}>
                   <p data-jelly>
-                    Enigma's branding and web development triumph was nothing
-                    short of a digital magnum opus. Patronum's new brand
-                    identity radiated the company's innovative spirit, while the
-                    website guided users through a seamless journey of
-                    discovery. Their mesmerizing brand identity and website
-                    catapulted their online presence to stratospheric heights.
-                    With skyrocketing web traffic, lead generation, and
-                    conversions, Patronum's online presence is truly out of this
-                    world, boldly going where no SaaS company had gone before.
+                    The transformation was nothing short of spectacular. DMTCA's new digital avatar was a true reflection of their capabilities. DMTCA emerged with a brand identity that was a true reflection of their stature in the digital marketing world. The logo, the colors, the design elements - each piece of the branding puzzle fit perfectly, creating a cohesive and instantly recognizable identity. 
                   </p>
                   <p data-jelly>
-                    The website's ability to adapt and evolve alongside Wragby's
-                    growth ensured that the company's digital presence would
-                    remain relevant and impressive for years to come. The
-                    collaboration between Enigma Digital and Wragby Business
-                    Solutions produced a website that defied convention and set
-                    a new standard for digital excellence in the African
-                    technology landscape.
+                    The website, with its revamped design and enriched content, became more than just a platform; it became a destination. Visitors were not just informed; they were enthralled, taken on a journey through the world of digital marketing as seen through the eyes of DMTCA. 
+                  </p>
+                  <p data-jelly>
+                    Feedback poured in, with clients, both old and new, lauding the fresh look and the intuitive design. The numbers spoke for themselves, with increased engagement, reduced bounce rates, and a significant uptick in inquiries and leads. The collaboration between DMTCA and Enigma wasn't just successful; it set a new benchmark in digital branding and design.
                   </p>
                 </div>
               </div>
@@ -805,15 +740,7 @@ export default function dmtca() {
                 <div className={styles.clientTestimonialparaTop}>
                   <h4 data-jelly>
                     <span className={styles.clientTestimonialSpan2}>“</span>
-                    Enigma Digital's mastery of web design and development is
-                    truly unparalleled. Their ability to craft a website that
-                    not only captured our essence but also transformed our
-                    digital presence is nothing short of miraculous. We are
-                    beyond thrilled with the results and can't thank the Enigma
-                    team enough for their tireless dedication and creativity.
-                    Our collaboration has been a game-changer for Wragby
-                    Business Solutions, and we wholeheartedly recommend Enigma
-                    Digital to anyone seeking a top-notch digital partner!
+                      Enigma Digital has truly outdone themselves. The new website is not just a testament to their capabilities but a reflection of their understanding of our brand. It's not just a website; it's DMTCA's digital identity. Kudos to the team!"
                   </h4>
                 </div>
                 <div
@@ -821,14 +748,14 @@ export default function dmtca() {
                   data-jelly
                 >
                   <div className={styles.clientTestimonialSectionFigure}>
-                    <img src="/assets/casestudies/patronum/paullees.webp" alt="client img"></img>
+                    <img src="/assets/casestudies/dmtca/client.webp" alt="client img"></img>
                   </div>
                   <div className={styles.clientTestimonialSectionFigureText}>
                     <h4>
-                      Paul Lees
+                      Ankush Chawla
                       <br />
                       <span className={styles.clientTestimonialSpan}>
-                        CEO, Patronum
+                        CEO, DMTCA
                       </span>
                     </h4>
                   </div>

@@ -275,8 +275,9 @@ export default function patra() {
                   data-cursor-color="#436AD6"
                   data-cursor-text="Visit!"
                 >
-                  <Link href="https://certvault.org/" target="_blank" className={styles.Link}>
-                    certvault.org
+                  <Link href="https://www.patracorp.com/" target="_blank" className={styles.Link}>
+                    <button aria-label="link button">
+                    patracorp.com
                     <span className={styles.linkSvg}>
                       <Image
                         width={20}
@@ -286,10 +287,11 @@ export default function patra() {
                         id="case-study-arrow"
                       />
                     </span>
+                    </button>
                   </Link>
                 </div>
                 <h1 id="patro">
-                  Swiss Army Knife <br /> for Google Workspace
+                Client Reporting Dashboard for BPO Services
                 </h1>
               </div>
               <div className={styles.HeroRightBox}>
@@ -297,7 +299,7 @@ export default function patra() {
                   SAAS
                 </h5>
                 <h5 className={styles.year} id="patroSub">
-                  2019
+                  2022
                 </h5>
               </div>
             </div>
@@ -330,25 +332,19 @@ export default function patra() {
               <div className={styles.thirdSectionRightBox}>
                 <div className={styles.paraTop}>
                   <h4 className={styles.h4} data-jelly>
-                    Patronum was developed by Bespin Labs as an exclusive Google
-                    Workplace™ management tool. With an intuitive and powerful
-                    interface and advanced automation, it gives IT
-                    administrators all the tools they’ll ever need to
-                    effectively manage their user life cycle and data including
-                    automating repetitive tasks such as email signature
-                    management, contact sharing, and drive management.
+                    Patra is a global leader in the insurance industry, specializing in delivering business process outsourcing services. With a focus on insurance processes and insurtech solutions, Patra drives profitability and new customer acquisition across the sector. Their commitment to leveraging both human expertise and cutting-edge technology has positioned them as a trusted partner for insurance firms worldwide.
                   </h4>
                 </div>
 
                 <div className={styles.buttonBox}>
                   <h6 data-cursor-size="30px" data-cursor-exclusion>
-                    Branding
+                    UX Planning   
                   </h6>
                   <h6 data-cursor-size="30px" data-cursor-exclusion>
-                    Web Design
+                    UI Desing
                   </h6>
                   <h6 data-cursor-size="30px" data-cursor-exclusion>
-                    Marketing
+                  Development
                   </h6>
                 </div>
               </div>
@@ -382,52 +378,35 @@ export default function patra() {
               </div>
               <div className={styles.forthSectionRightBox}>
                 <div className={styles.paraTop}>
-                  <h4 className={styles.h4} data-jelly>
+                  {/* <h4 className={styles.h4} data-jelly>
                     The founding team at Patronum was on a quest to create a
                     brand and online presence that would turn heads and drop
                     jaws faster than a cheetah chasing its prey.
-                  </h4>
+                  </h4> */}
                   <p data-jelly>
-                    They sought a digital partner that could not only help them
-                    navigate the treacherous waters of branding and web
-                    development but also help them create a lasting impression
-                    in the competitive SaaS arena. Hence, Patronum teamed up
-                    with Enigma to craft a brand identity and website that would
-                    shoot Patronum straight to the moon and beyond. Enigma's
-                    team of branding & design maestros, never one to shy away
-                    from a challenge, donned their digital superhero capes and
-                    embarked on a whirlwind adventure of ingenuity and pixel
-                    wizardry that would have made even Doctor Strange envious.
+                    In an era dominated by digital transformation, Patra's clients were still navigating the cumbersome process of manual report management. The reliance on Excel sheets for disseminating reports, costs, and invoices posed significant challenges. Not only was this method time-consuming, but it also lacked the real-time transparency that modern businesses crave. Clients were often left in the dark about their expenditures with Patra, having to wait for monthly reports from their account managers to gain clarity on their spending across various service verticals.
                   </p>
                   <p data-jelly>
-                    The road to stellar branding and web development was paved
-                    with challenges as steep as the Cliffs of Moher. First, We
-                    had to capture the essence of Patronum's innovative SaaS
-                    solutions and translate it into a brand identity that would
-                    turn heads and drop jaws. This was no easy feat, as
-                    Patronum's solutions were as diverse as the colors in a
-                    rainbow, and distilling their unique value proposition into
-                    a cohesive brand narrative was akin to herding cats.
+                    <strong>
+                      This traditional approach had multiple pain points:
+                    </strong>
                   </p>
                   <p data-jelly>
-                    Second, Enigma had to design a website that would guide
-                    users through the labyrinth of Patronum's offerings, all
-                    while making it look like a walk in the park. The website
-                    needed to strike a balance between visual appeal, user
-                    experience, and performance, ensuring that users could
-                    explore Patronum's solution offerings without getting lost
-                    in a maze of complexity. In a world where the competition
-                    for users' attention is fiercer than a cage match between
-                    gladiators, Patronum's website had to be nothing short of a
-                    digital masterpiece.
+                    <strong>Lack of Real-time Insights: </strong> Clients had no immediate access to their spending data. This delay hindered their ability to make timely decisions, impacting their operational efficiency.
                   </p>
                   <p data-jelly>
-                    Lastly, the website needed to be built on a solid foundation
-                    that could accommodate the constant evolution and growth of
-                    Patronum's solutions. The team at Patronum was constantly
-                    churning out new features and offerings, and their website
-                    needed to be agile enough to keep pace with their product's
-                    relentless innovation.
+                  <strong>
+                  Fragmented Data Sources: </strong> With services spanning policy checking, policy printing & delivery, customer support, and other insurance back-office tasks, the data was scattered across multiple Excel sheets. This fragmentation made it challenging for clients to get a holistic view of their engagement with Patra.
+                  </p>
+                  <p data-jelly>
+                  <strong>
+                    Operational Inefficiencies: </strong> The manual process of collating, sending, and then interpreting these Excel reports was labor-intensive. It consumed valuable time that could have been better utilized in strategic decision-making.
+                  </p>
+                  <p data-jelly>
+                <strong>Potential for Errors:</strong> Manual data entry and report generation always comes with the risk of human errors. Any discrepancies in the reports could lead to misunderstandings and potential conflicts.
+                  </p>
+                  <p data-jelly>
+                    Patra was keen on transitioning from this archaic system to a more streamlined, digital solution. The goal was clear: to design a client reporting dashboard that would not only address these challenges but also position Patra as a forward-thinking leader in the insurance BPO sector. The stakes were high, and the timelines, even tighter.
                   </p>
                 </div>
               </div>
@@ -520,24 +499,13 @@ export default function patra() {
               <div className={styles.forthSectionRightBox}>
                 <div className={styles.paraTop}>
                   <p data-jelly>
-                    Like bees to honey, we were drawn to Patronum's unique
-                    vision and decided to take the road less traveled. We began
-                    by delving deep into Patronum's core values, extracting the
-                    golden nectar that would become the foundation of their
-                    brand identity. Armed with this valuable insight, our team
-                    of branding wizards concocted a visual potion that would
-                    resonate with the brand and capture the hearts and minds of
-                    Patronum's target audience. The resulting brand identity was
-                    a symphony of visual elements that told Patronum's story
-                    with grace and elegance.
+                    Our first step was to immerse ourselves in the world of Patra's clients. We needed to understand their pain points, their expectations, and the kind of data that was crucial for their decision-making processes. Through a series of consultations and brainstorming sessions, we mapped out the user journey, identifying key touchpoints and data retrieval points.
                   </p>
                   <p data-jelly>
-                    For the website, we employed a user-centric approach,
-                    crafting an information architecture that was intuitive and
-                    would feel like a guided wizard tour to the entire website.
-                    We transformed complex wireframes into breathtaking page
-                    designs, ensuring each element sang in harmony with
-                    Patronum's newfound brand identity.
+                    For the UI design, clarity was our mantra. We aimed for a clean, uncluttered interface where data visualization took center stage. Interactive charts, real-time counters, and color-coded alerts were integrated, ensuring that users could grasp the status and updates at a mere glance.
+                  </p>
+                  <p data-jelly>
+                    The UX planning was all about efficiency. We streamlined the data retrieval process, ensuring that the most sought-after information was readily available. Customizable dashboards were introduced, allowing users to tailor their view based on their unique needs. Seamless navigation paths were designed, ensuring that even a first-time user could navigate the dashboard with ease.
                   </p>
                 </div>
               </div>
@@ -683,7 +651,7 @@ export default function patra() {
           {/* ====================== Video Section ======================== */}
           <section className={styles.videoSection}>
             <div className={styles.videoHeading}>
-              <h2 className={styles.videoH2}>The Google <br/> Workspace Manager</h2>
+              <h2 className={styles.videoH2}>100% Transparency with <br /> Real-time Data & Insights</h2>
             </div>
             <div className={styles.videoMainSection}>
               <div className={styles.videoContainer} id="video-container">
@@ -705,21 +673,18 @@ export default function patra() {
           <section className={styles.forthSection}>
             <div className={styles.forthSectionContent}>
               <div className={styles.forthSectionLeftBox}>
-                <h3 className={styles.h3} data-jelly>Tech Stack</h3>
+                <h3 className={styles.h3} data-jelly>UX + Tech</h3>
               </div>
               <div className={styles.forthSectionRightBox}>
                 <div className={styles.paraTop}>
                   <p data-jelly>
-                  We opted for a proven technology stack that packed a punch:
-                  HTML, CSS, JS, jQuery, and WordPress. This powerful combo
-                  offered the perfect blend of flexibility, maintainability, and
-                  scalability. HTML and CSS laid the groundwork for the site's
-                  structure and visual appeal, while JavaScript and jQuery
-                  injected interactivity and panache, making the website as
-                  captivating as a Broadway show. WordPress, the pièce de
-                  résistance, provided a user-friendly content management system
-                  that empowered Patronum's team to easily update and manage their
-                  content as their product continued to evolve.
+                    When it came to UX, we put ourselves in the client's shoes. We felt their pain points and frustrations trying to access and make sense of data. It was clear they needed more than just a functional dashboard - they needed one that felt intuitive. We meticulously planned everything - from how data visualization tools were placed to the flow of information. 
+                  </p>
+                  <p data-jelly>
+                    But the real magic happened when we started building the front-end. This is where the dashboard came alive visually! We leveraged the power of ReactJS to make it dynamic and responsive. No more clunky and static data dashboards. To take it to the next level, we integrated Tailwind, a utility-first CSS framework. Tailwind was like a secret weapon, allowing us to rapidly develop the UI without compromising aesthetics. Suddenly, making it beautiful was quick and easy.
+                  </p>
+                  <p data-jelly>
+                    The end result? A dashboard that was not only gorgeous to look at, but also wicked fast.
                   </p>
                 </div>
               </div>
@@ -758,15 +723,10 @@ export default function patra() {
               <div className={styles.forthSectionRightBox}>
                 <div className={styles.paraTop}>
                   <p data-jelly>
-                    Enigma's branding and web development triumph was nothing
-                    short of a digital magnum opus. Patronum's new brand
-                    identity radiated the company's innovative spirit, while the
-                    website guided users through a seamless journey of
-                    discovery. Their mesmerizing brand identity and website
-                    catapulted their online presence to stratospheric heights.
-                    With skyrocketing web traffic, lead generation, and
-                    conversions, Patronum's online presence is truly out of this
-                    world, boldly going where no SaaS company had gone before.
+                    The Client Reporting Dashboard was unveiled to resounding success. Clients lauded the intuitive design, the customizable features, and the real-time data access. The fusion of our UX planning with the cutting-edge tech stack ensured that Patra's client reporting dashboard was more than just a tool; it was a transformative solution. Clients could now access real-time updates, understand their expenditures across various service verticals, and make informed decisions, all through a platform that epitomized efficiency and speed.
+                  </p>
+                  <p data-jelly>
+                    The dashboard not only strengthened Patra's position as a leader in insurance BPO services but also showcased their commitment to leveraging technology for client benefit. The project, completed under tight timelines, set a new benchmark for insurtech solutions, proving that with the right strategy and execution, challenges can be transformed into opportunities.
                   </p>
                 </div>
               </div>
@@ -807,15 +767,7 @@ export default function patra() {
                 <div className={styles.clientTestimonialparaTop}>
                   <h4 data-jelly>
                     <span className={styles.clientTestimonialSpan2}>“</span>
-                    Enigma Digital's mastery of web design and development is
-                    truly unparalleled. Their ability to craft a website that
-                    not only captured our essence but also transformed our
-                    digital presence is nothing short of miraculous. We are
-                    beyond thrilled with the results and can't thank the Enigma
-                    team enough for their tireless dedication and creativity.
-                    Our collaboration has been a game-changer for Wragby
-                    Business Solutions, and we wholeheartedly recommend Enigma
-                    Digital to anyone seeking a top-notch digital partner!
+                      Enigma Digital's prowess in UI design, UX planning, and front-end development has truly set a new standard. The Client Reporting Dashboard is not just a tool; it's a game-changer. It has empowered our clients with real-time insights, leading to faster decision-making and enhanced operational efficiency. The team's dedication, especially under tight timelines, is commendable. A big shout-out to Enigma Digital for making this project a resounding success!
                   </h4>
                 </div>
                 <div
@@ -823,14 +775,14 @@ export default function patra() {
                   data-jelly
                 >
                   <div className={styles.clientTestimonialSectionFigure}>
-                    <img src="/assets/casestudies/patronum/paullees.webp" alt="client image"></img>
+                    <img src="/assets/casestudies/certvault/client.webp" alt="client image"></img>
                   </div>
                   <div className={styles.clientTestimonialSectionFigureText}>
                     <h4>
-                      Paul Lees
+                      Tony Li
                       <br />
                       <span className={styles.clientTestimonialSpan}>
-                        CEO, Patronum
+                        CTO, Patracorp
                       </span>
                     </h4>
                   </div>

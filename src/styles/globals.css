@@ -72,6 +72,10 @@
   visibility: visible !important;
 }
 
+.dark-mode .projectNoInvert img{
+  filter: invert(0) !important;
+}
+
 .color-primary{
   color: var(--primary) !important;
 }
@@ -10432,11 +10436,11 @@ a:hover {
 
 /* Pop Up Form CSS Start */
 .progress-bar {
-  width: 80vw;
+  width: 60vw;
   height: auto;
   background-color: var(--white);
   position: fixed;
-  top: 30px;
+  top: 10vw;
   border-radius: 20px;
   left: 50%;
   right: 50%;
@@ -10449,7 +10453,6 @@ a:hover {
   background-color: var(--primary);
   transition: width 0.3s ease-in-out;
   font-size: 1rem;
-  font-size: 12px;
   color: var(--white);
   text-align: center;
 }
@@ -10475,6 +10478,34 @@ a:hover {
   font-family: 'Ageo';
   margin-bottom: 1rem;
 } 
+
+.pop-up-div-form{
+  position: relative;
+}
+
+.cb-input_light-line {
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: -3px;
+	height: 59px;
+	width: 300%;
+	-webkit-transform: translateX(-66.66%);
+	-moz-transform: translateX(-66.66%);
+	-ms-transform: translateX(-66.66%);
+	-o-transform: translateX(-66.66%);
+	transform: translateX(-66.66%);
+	opacity: .1;
+	background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjAwIDYwIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJub25lIj48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiMwMDAiIGQ9Ik0wLDU2LjVjMCwwLDI5OC42NjYsMCwzOTkuMzMzLDBDNDQ4LjMzNiw1Ni41LDUxMy45OTQsNDYsNTk3LDQ2Yzc3LjMyNywwLDEzNSwxMC41LDIwMC45OTksMTAuNWM5NS45OTYsMCw0MDIuMDAxLDAsNDAyLjAwMSwwIj48L3BhdGg+PC9zdmc+);
+	background-position: center bottom;
+	pointer-events: none;
+	-webkit-transition: opacity .4s, -webkit-transform 0s cubic-bezier(0, .25, .5, 1);
+	transition: opacity .4s, -webkit-transform 0s cubic-bezier(0, .25, .5, 1);
+	-o-transition: opacity .4s, -o-transform 0s cubic-bezier(0, .25, .5, 1);
+	-moz-transition: transform 0s cubic-bezier(0, .25, .5, 1), opacity .4s, -moz-transform 0s cubic-bezier(0, .25, .5, 1);
+	transition: transform 0s cubic-bezier(0, .25, .5, 1), opacity .4s;
+	transition: transform 0s cubic-bezier(0, .25, .5, 1), opacity .4s, -webkit-transform 0s cubic-bezier(0, .25, .5, 1), -moz-transform 0s cubic-bezier(0, .25, .5, 1), -o-transform 0s cubic-bezier(0, .25, .5, 1)
+}
 
 .name-input-form {
   width: 100% !important;
@@ -10583,8 +10614,8 @@ a:hover {
   color: white;
   border-radius: 100px;
   font-size: 1.5vw;
-  padding: 10px 0;
-  width: 160px;
+  padding: 10px 0px;
+  width: 13rem;
   text-transform: uppercase;
 }
 
@@ -10738,4 +10769,183 @@ label.label:hover:before{
 
 .btn_CTA:focus .btn_CTA-title span {
   transform: translateY(-110%);
+}
+
+@media screen and (max-width: 991px) {
+  .form-sections h1{
+    font-size: 12vw;
+  }
+  .form-sections p{
+    font-size: 6vw;
+  }
+  .name-input-popUp-Form{
+    display: block;
+  }
+  .form-sections input, .form-sections textarea{
+    margin: 0;
+    margin-bottom: 1rem;
+    width: 50vw !important;
+    font-size: 5vw;
+  }
+  .form-sections input::placeholder,.form-sections textarea::placeholder{
+    font-size: 4vw;
+    color: var(--gray);
+    font-weight: 400;
+    font-family: 'Ageo';
+  }
+  .form-button button{
+    font-size: 3vw;
+    width: 11rem;
+  }
+  .progress{
+    font-size: 20px;
+  }
+  .form-sections select{
+    font-size: 5vw;
+    width: 50vw;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .form-sections .error{
+    font-size: 2.5vw;
+    padding-bottom: 25px;
+  }
+  .form-attach button{
+    font-size: 4vw;
+  }
+  .form-attach button img{
+    width: 30px;
+    height: 30px;
+  }
+  #file-chosen {
+    margin-left: 35px;
+    font-size: 4vw;
+  }
+  .popUp-for-TextArea{
+    padding-top: 50px;
+  }
+  .form-sections textarea{
+    height: 60px;
+  }
+  .btn_CTA{
+    font-size: 5vw;
+    height: 10rem;
+    padding: 0 8rem;
+  }
+  .text-green-400{
+    font-size: 2.5vw;
+  }
+  .form-sections select option{
+    font-size: 4vw;
+  }
+}
+
+@media screen and (max-width:480px) {
+  .form-sections .error{
+    font-size: 3.5vw;
+    padding-bottom: 15px;
+  }
+  .form-button button{
+    font-size: 5vw;
+    padding: 5px 0px;
+    width: 8rem;
+  }
+  .btn_CTA{
+    height: 7rem;
+    padding: 0 5rem;
+    font-size: 8vw;
+  }
+}
+
+/* Dark Mode Contact Form Pop */
+.dark-mode .progress,
+.dark-mode .form-sections .error{
+  filter: invert(1);
+}
+
+#patroSub button{
+  text-transform: uppercase;
+}
+
+/* Message Sent Page */
+.message-sent-page{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.message-sent-page h1{
+  font-size: 10vw;
+  font-weight: 500;
+  color: var(--black2);
+}
+.message-sent-page p{
+  font-size: 1.5vw;
+  color: var(--black1);
+  font-family: 'Ageo';
+  width: 60vw;
+  text-align: center;
+  font-weight: 500;
+  line-height: 1.2;
+}
+@media screen and (max-width: 991px) {
+  .message-sent-page h1{
+    font-size: 18vw;
+  }
+  .message-sent-page p{
+    font-size: 4.5vw;
+    width: 85vw;
+  } 
+}
+
+/* Pop Up Form Button */
+.popUpButtonContainer{
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+}
+.popUpButton{
+  border: 1px solid #1a1a1a;
+  width: 50px;
+  height: 50px;
+}
+/* The Modal (background) */
+.PopUpModal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.PopUp-modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+	
+/* The Close Button */
+.PopUpClose {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.PopUpClose:hover,
+.PopUpClose:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
 }

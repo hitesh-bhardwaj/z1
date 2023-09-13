@@ -277,6 +277,7 @@ export default function pdtl() {
                   data-cursor-text="Visit!"
                 >
                   <Link href="https://certvault.org/" target="_blank" className={styles.Link}>
+                  <button aria-label="link button">
                     PDTL.com
                     <span className={styles.linkSvg}>
                       <Image
@@ -287,6 +288,7 @@ export default function pdtl() {
                         id="case-study-arrow"
                       />
                     </span>
+                    </button>
                   </Link>
                 </div>
                 <h1 id="patro">

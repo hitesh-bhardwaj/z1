@@ -34,32 +34,29 @@ const MessageSent = () => {
     color: "#1a1a1a",
   };
 
-  const button = {
-    border: "none",
-    background: "#5D5AD6",
-    color: "#fff",
-    fontSize: "1.2vw",
-    padding: "0.7vw 3vw 0.5vw 3vw",
-    borderRadius: "2vw",
-    marginTop: "4vw",
-    fontFamily: "Ageo",
-    cursor: "pointer",
-  };
-
   return (
     <div>
       <Cursor isGelly={true} />
-      <div className="message-sent-page" style={messageSent}>
-        <h1 style={h1}>
-          Hoooray<span style={span}>!</span>
-        </h1>
-        <p style={p}>
-          It is a pleasure to meet ya! Give us a day and we will schedule our
-          first date.
-        </p>
-        <Link href="/">
-          <button style={button}>go home</button>
-        </Link>
+      <div className="message-sent-page">
+          <h1>
+              Hoooray <span className="color-primary">!</span>
+          </h1>
+          <p>
+            It is a pleasure to meet ya! Give us a day and we will schedule our first date.
+          </p>
+        
+        <div className='form-button-2 mt-10'>
+          <Link href="/">
+            <button className='btn_CTA'>
+                <span className="btn_CTA-ripple">
+                <span></span>
+                </span>
+                <span className='btn_CTA-title'>
+                <span data-text='Go Home'>Go Home</span>
+                </span>
+            </button>
+          </Link>
+        </div>
       </div>
     </div>
   );

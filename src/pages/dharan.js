@@ -258,6 +258,7 @@ export default function dharan() {
                   data-cursor-text="Visit!"
                 >
                   <Link href="https://www.dharan.co.in/" target="_blank" className={styles.Link}>
+                  <button aria-label="link button">
                     Dharan.co.in
                     <span className={styles.linkSvg}>
                       <Image
@@ -268,6 +269,7 @@ export default function dharan() {
                         id="case-study-arrow"
                       />
                     </span>
+                    </button>
                   </Link>
                 </div>
                 <h1 id="patro">

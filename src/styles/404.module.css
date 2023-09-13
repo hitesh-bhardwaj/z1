@@ -6,7 +6,7 @@
     align-items: center;
     flex-direction: column;
     position: relative;
-    background: linear-gradient(180deg,#b5ab9b 0%,hsl(205,22%,44%) 100%);
+    background: linear-gradient(45deg, rgb(222 208 224) 0%, rgba(0,0,0,1) 100%);
 }
 
 .gifBox{
@@ -61,7 +61,7 @@
     margin-top: 3vw;
     border: 1px solid #1a1a1a;
     border-radius: 50px;
-    padding: 0.7vw 2vw;
+    padding: 0.7vw 2rem;
     text-transform: uppercase;
     position: relative;
 }
@@ -139,4 +139,34 @@
 	transition-delay: 0.4s;
     color: #fff;
 	transition-timing-function: linear;
+}
+
+@media screen and (max-width:991px) {
+    .fourZeroFour{
+        font-size: 40vw;
+        margin-top: 10vw;
+    }
+    .paraText{
+        padding: 0 50px;
+        font-size: 4.5vw;
+    }
+    .buttonHome{
+        font-size: 4vw;
+    }
+    .gifBox{
+        top: 10vw
+    }
+}
+
+@media screen and (max-width:480px) {
+    .fourZeroFour{
+        margin-top: 30vw;
+    }
+    .paraText{
+        padding: 0 20px;
+        font-size: 5vw;
+    }
+    .buttonHome{
+        font-size: 6vw;
+    }
 }

@@ -277,6 +277,7 @@ export default function patronum() {
                   data-cursor-color="#0165E1"
                 >
                   <Link href="https://www.patronum.io/" target="_blank" className={styles.Link}>
+                  <button aria-label="link button">
                     Patronum.io
                     <span className={styles.linkSvg}>
                       <Image
@@ -287,6 +288,7 @@ export default function patronum() {
                         id="case-study-arrow"
                       />
                     </span>
+                    </button>
                   </Link>
                 </div>
                 <h1 id="patro">

@@ -277,6 +277,7 @@ export default function certvault() {
                   data-cursor-color="#F50D37"
                 >
                   <Link href="https://certvault.org/" target="_blank" className={styles.Link}>
+                    <button aria-label="link button">
                     certvault.org
                     <span className={styles.linkSvg}>
                       <Image
@@ -287,10 +288,12 @@ export default function certvault() {
                         id="case-study-arrow"
                       />
                     </span>
+                    </button>
+                    
                   </Link>
                 </div>
                 <h1 id="patro">
-                    CertVault a cloud-based <br /> certificate repository
+                    CertVault: A Cloud-based <br /> Certificate Repository
                 </h1>
               </div>
               <div className={styles.HeroRightBox}>
@@ -331,21 +334,17 @@ export default function certvault() {
               <div className={styles.thirdSectionRightBox}>
                 <div className={styles.paraTop}>
                   <h4 className={styles.h4} data-jelly>
-                    Patronum streamlines Google Workplace™ management by
-                    automating repetitive tasks such as email signature
-                    management, contact sharing, and drive management.
+                    CertVault is a pioneering solution in the insurance industry, offering a cloud-based certificate repository and delivery system. Developed under the umbrella of PatraCorp, a global leader in delivering business process outsourcing services to the insurance sector, CertVault aims to revolutionize the way insurance certificates are accessed, managed, and delivered.
                   </h4>
+                  
                 </div>
 
                 <div className={styles.buttonBox}>
                   <h6 data-cursor-size="30px" data-cursor-exclusion>
-                    Branding
+                    UX Planning
                   </h6>
                   <h6 data-cursor-size="30px" data-cursor-exclusion>
-                    Web Design
-                  </h6>
-                  <h6 data-cursor-size="30px" data-cursor-exclusion>
-                    Marketing
+                    UI Design
                   </h6>
                 </div>
               </div>
@@ -379,36 +378,11 @@ export default function certvault() {
               </div>
               <div className={styles.forthSectionRightBox}>
                 <div className={styles.paraTop}>
-                  <h4 className={styles.h4} data-jelly>
-                    As the project commenced, both teams found themselves facing
-                    obstacles that tested their creativity, technical expertise,
-                    and resilience.
-                  </h4>
                   <p data-jelly>
-                    While Wragby's vision was as clear as a cloudless sky, the
-                    challenges were as daunting as climbing Mount Everest in
-                    flip-flops. The first hurdle: creating a website that
-                    encapsulated Wragby's awe-inspiring ingenuity without
-                    getting lost in the vortex of technical jargon. With
-                    Wragby's extensive portfolio of innovative solutions, the
-                    task of organizing and presenting the information in a
-                    digestible format was like trying to solve a Rubik's cube
-                    blindfolded.
+                    CertVault, a groundbreaking cloud-based certificate repository and delivery system, was on the brink of revolutionizing how insurance certificates are accessed and delivered. With a vision to provide instant access to certificates for brokers, insureds, holders, and carriers, CertVault aimed to make certificate delivery more secure, convenient, and efficient. 
                   </p>
                   <p data-jelly>
-                    The second challenge: designing a user experience that even
-                    your tech-averse grandma could navigate with ease. In a
-                    world where attention spans rival those of goldfish, the
-                    website needed to be engaging, intuitive, and snappy while
-                    showcasing Wragby's complex offerings without overwhelming
-                    users.
-                  </p>
-                  <p data-jelly>
-                    And lastly, developing a site that could handle the constant
-                    flux of innovative content. Wragby's brilliance knows no
-                    bounds, and their website needed to be a living, breathing
-                    entity, capable of adapting and growing alongside the
-                    company.
+                    However, the challenge lay in presenting this innovative solution in a user-friendly manner, ensuring that the platform's interface was intuitive and met the needs of its diverse user base. With the Global InsurTech Summit 2020 approaching, the pressure was on to design a UI that not only showcased CertVault's capabilities but also resonated with a global audience.
                   </p>
                 </div>
               </div>
@@ -500,38 +474,14 @@ export default function certvault() {
               <div className={styles.forthSectionRightBox}>
                 <div className={styles.paraTop}>
                   <p data-jelly>
-                    We decided to play by our own rulebook, tossing conventional
-                    wisdom out the window like an old Nokia brick phone. We
-                    began with a deep dive into Wragby's psyche, absorbing their
-                    every quirk and vision like a sponge in the depths of the
-                    ocean. This immersion allowed our team to channel Wragby's
-                    innovative spirit into every aspect of the website.
+                    Diving into the heart of CertVault, we recognized the immense potential and the transformative impact it could have in the realm of insurance certificates. Our strategy was multi-pronged. First, we sought to understand the pain points of the target audience. We engaged in extensive consultations, gathering insights from brokers, insureds, holders, and carriers. This allowed us to identify the key challenges they faced with traditional certificate delivery systems.
                   </p>
                   <p data-jelly>
-                    Next, we concocted a design so visually alluring, it could
-                    make the Sirens of Greek mythology green with envy. The
-                    design featured bold colors, futuristic layouts, and
-                    interactive elements that turned the website into a digital
-                    playground, inviting users to explore and discover Wragby's
-                    groundbreaking solutions.
+                    With this knowledge in hand, we embarked on a meticulous UX planning phase. We aimed to create a seamless journey for users, from the moment they logged in to the point they accessed a certificate. Every touchpoint was optimized to ensure simplicity and efficiency. Recognizing the importance of trust in the insurance domain, we integrated features that would enhance transparency and reliability. The blockchain-backed security was highlighted prominently, assuring users of the integrity of the stored certificates.
+
                   </p>
                   <p data-jelly>
-                    Then we addressed the challenge of presenting complex
-                    information in a digestible manner. We employed storytelling
-                    techniques, weaving Wragby's technical offerings into
-                    engaging narratives that humanized the company and connected
-                    with users on an emotional level. This approach transformed
-                    what could have been a maze of jargon into a thrilling
-                    odyssey through the world of technology.
-                  </p>
-                  <p data-jelly>
-                    And finally, Enigma took a page out of Wragby's book,
-                    deploying agile development methodologies to ensure the
-                    website could grow and evolve with the company like a
-                    chameleon on steroids. This strategy allowed the site to
-                    flex and adapt to Wragby's ever-expanding portfolio of
-                    innovative solutions, ensuring it remained a showcase of
-                    their cutting-edge expertise.
+                    Furthermore, we incorporated feedback mechanisms, allowing users to share their experiences and suggestions. This iterative approach ensured that the platform evolved in line with user expectations and needs.
                   </p>
                 </div>
               </div>
@@ -619,7 +569,7 @@ export default function certvault() {
             <div className={styles.certvaultfontHeading}>
               <h1>Fonts</h1>
             </div>
-            <div className={styles.certvaultfontImagebox}>
+            <div className={`${styles.certvaultfontImagebox}  projectNoInvert`}>
               <img
                 src="/assets/casestudies/certvault/font-typo.webp"
                 alt="Fonts"
@@ -667,7 +617,7 @@ export default function certvault() {
           {/* ====================== Video Section ======================== */}
           <section className={styles.videoSection}>
             <div className={styles.videoHeading}>
-              <h2 className={styles.videoH2}>Certvault <br/> Website Design</h2>
+              <h2 className={styles.videoH2}>Certvault <br/>  Application UI</h2>
             </div>
             <div className={styles.videoMainSection}>
               <div className={styles.videoContainer} id="video-container">
@@ -689,19 +639,16 @@ export default function certvault() {
           <section className={styles.forthSection}>
             <div className={styles.forthSectionContent}>
               <div className={styles.forthSectionLeftBox}>
-                <h3 className={styles.h3} data-jelly>Tech Stack</h3>
+                <h3 className={styles.h3} data-jelly>Our UX Magic
+                </h3>
               </div>
               <div className={styles.forthSectionRightBox}>
                 <div className={styles.paraTop}>
                   <p data-jelly>
-                    Enigma opted for a classic combo: HTML, CSS, JS, jQuery, and
-                    WordPress. This dynamic quintet of technologies provided a
-                    flexible, battle-tested foundation for Wragby's digital fortress
-                    that could withstand the test of time. HTML and CSS laid the
-                    groundwork for visual appeal, while JavaScript and jQuery
-                    injected interactivity and flair, and WordPress offered a
-                    user-friendly content management system for Wragby's
-                    ever-evolving content needs.
+                    The true testament to the success of our UX strategy was evident in the numbers. CertVault, post our intervention, boasted a staggering 1.7M Certificates of Insurance. But numbers only tell half the story. The real value add was in the user experience. Over 75,000 companies registered as users, a testament to the platform's intuitive design and user-centric approach.
+                  </p>
+                  <p data-jelly>
+                    Our UX planning ensured that users, whether they were brokers, insureds, or carriers, could navigate the platform with ease, accessing certificates instantly. The design effectively communicated the platform's core functionalities, from the blockchain-backed security to the instant access of certificates. Alerts and notifications were strategically placed, ensuring users were always informed about certificate expirations, carrier details, and insured names.
                   </p>
                 </div>
               </div>
@@ -742,22 +689,16 @@ export default function certvault() {
               <div className={styles.forthSectionRightBox}>
                 <div className={styles.paraTop}>
                   <p data-jelly>
-                    Wragby's innovative spirit now had a digital home that not
-                    only reflected its essence but also attracted talent,
-                    clients, and partners from across the African continent and
-                    beyond. The seamless user experience had users exploring the
-                    site with the enthusiasm of Indiana Jones on a treasure
-                    hunt, while the engaging narratives forged emotional
-                    connections that turned visitors into loyal clients.
+                    The result was a UI that not only captured the essence of CertVault but also provided an unparalleled user experience. The design effectively communicated the platform's core functionalities, from the blockchain-backed security to the instant access of certificates. Users could now easily navigate through the platform, understanding key features at a glance, from certificate expiration to carrier and insured names. 
                   </p>
                   <p data-jelly>
-                    The website's ability to adapt and evolve alongside Wragby's
-                    growth ensured that the company's digital presence would
-                    remain relevant and impressive for years to come. The
-                    collaboration between Enigma Digital and Wragby Business
-                    Solutions produced a website that defied convention and set
-                    a new standard for digital excellence in the African
-                    technology landscape.
+                    The feedback was overwhelmingly positive at the Global InsurTech Summit 2020, with many praising the intuitive design and the seamless user experience. CertVault, with its revamped UI, was now poised to redefine the way insurance certificates were accessed and delivered, all thanks to a design that was as innovative as the platform itself.
+                  </p>
+                  <p data-jelly>
+                    Moreover, the platform's design instilled a sense of trust and reliability. The blockchain feature was not just a tech add-on; it was a promise of security and transparency. Users could be confident that the certificates they accessed were authentic and unaltered.
+                  </p>
+                  <p data-jelly>
+                    The success of CertVault, with its 1.7M certificates and a growing base of 75,000 registered companies, is a testament to the power of effective UX planning. It's not just about aesthetics; it's about understanding user needs, anticipating challenges, and designing solutions that deliver value at every touchpoint.
                   </p>
                 </div>
               </div>
@@ -798,15 +739,7 @@ export default function certvault() {
                 <div className={styles.clientTestimonialparaTop}>
                   <h4 data-jelly>
                     <span className={styles.clientTestimonialSpan2}>“</span>
-                    Enigma Digital's mastery of web design and development is
-                    truly unparalleled. Their ability to craft a website that
-                    not only captured our essence but also transformed our
-                    digital presence is nothing short of miraculous. We are
-                    beyond thrilled with the results and can't thank the Enigma
-                    team enough for their tireless dedication and creativity.
-                    Our collaboration has been a game-changer for Wragby
-                    Business Solutions, and we wholeheartedly recommend Enigma
-                    Digital to anyone seeking a top-notch digital partner!
+                      Enigma Digital's expertise in UX planning and UI design has been a game-changer for CertVault. Their deep understanding of our audience's needs and their meticulous approach to design have transformed our platform. The numbers speak for themselves, but beyond the numbers, it's the feedback from our users that truly underscores the value Enigma brought to the table. Our platform is now more than just a certificate repository; it's a testament to the power of user-centric design. Kudos to the Enigma team for their exceptional work!"
                   </h4>
                 </div>
                 <div
@@ -819,10 +752,10 @@ export default function certvault() {
                   </div>
                   <div className={styles.clientTestimonialSectionFigureText}>
                     <h4>
-                        Akin Banuso,
+                      Tony Li
                       <br />
                       <span className={styles.clientTestimonialSpan}>
-                        CEO, Wragby Business Solutions
+                       CTO, Patracorp
                       </span>
                     </h4>
                   </div>

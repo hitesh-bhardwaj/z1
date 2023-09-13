@@ -64,7 +64,9 @@
   color: var(--black);
   letter-spacing: 1px;
 }
-
+.work{
+   margin-bottom: 10px;
+}
 .year{
   margin-bottom: 30px;
 }

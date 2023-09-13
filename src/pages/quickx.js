@@ -277,6 +277,7 @@ export default function quickx() {
                   data-cursor-color="#0D0A29"
                 >
                   <Link href="#" target="_blank" className={styles.Link}>
+                  <button aria-label="link button">
                     quickx.app
                     <span className={styles.linkSvg}>
                       <Image
@@ -287,6 +288,7 @@ export default function quickx() {
                         id="case-study-arrow"
                       />
                     </span>
+                  </button>
                   </Link>
                 </div>
                 <h1 id="patro">

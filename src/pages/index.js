@@ -95,6 +95,19 @@ export default function Home() {
         <ConceptScrollNew />
       </section>
 
+      {/* <section className="popUpButtonContainer">
+        <button className="popUpButton">
+          Hi
+        </button>
+        
+        <div id="PopUpMyModal" className="PopUpModal">
+          <div className="PopUp-modal-content">
+            <span className="PopUpClose">&times;</span>
+            <p>Some text in the Modal..</p>
+          </div>
+        </div>
+      </section> */}
+
       <section>
         <ConceptScrollMobile />
       </section>

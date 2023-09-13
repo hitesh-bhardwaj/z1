@@ -278,6 +278,7 @@ export default function wragby() {
                   data-cursor-text="Visit!"
                 >
                   <Link href="https://wragbysolutions.com" target="_blank" className={styles.Link}>
+                  <button aria-label="link button">
                         wragbysolutions.com   
                     <span className={styles.linkSvg}>
                       <Image
@@ -288,6 +289,7 @@ export default function wragby() {
                         id="case-study-arrow"
                       />
                     </span>
+                    </button>
                   </Link>
                 </div>
                 <h1 id="patro">

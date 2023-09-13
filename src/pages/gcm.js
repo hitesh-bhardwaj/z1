@@ -278,6 +278,7 @@ export default function gcm() {
                   data-cursor-text="Visit!"
                 >
                   <Link href="https://grandmall.netlify.app/" target="_blank" className={styles.Link}>
+                  <button aria-label="link button">
                     gardencitymall.com
                     <span className={styles.linkSvg}>
                       <Image
@@ -288,6 +289,7 @@ export default function gcm() {
                         id="case-study-arrow"
                       />
                     </span>
+                    </button>
                   </Link>
                 </div>
                 <h1 id="patro">
