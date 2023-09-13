@@ -276,9 +276,9 @@ export default function pdtl() {
                   data-cursor-color="#234BA7"
                   data-cursor-text="Visit!"
                 >
-                  <Link href="https://certvault.org/" target="_blank" className={styles.Link}>
+                  <Link href="https://www.ptllgv.co.uk/" target="_blank" className={styles.Link}>
                   <button aria-label="link button">
-                    PDTL.com
+                    pttlgv.co.uk
                     <span className={styles.linkSvg}>
                       <Image
                         width={20}

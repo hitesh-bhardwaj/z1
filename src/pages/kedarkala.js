@@ -265,7 +265,7 @@ export default function kedarkala() {
                   data-cursor-color="#000"
                   data-cursor-text="Visit!"
                 >
-                  <Link href="https://kedarkala.com/" target="_blank" className={styles.Link}>
+                  <Link href="https://phpstack-156292-2479564.cloudwaysapps.com/" target="_blank" className={styles.Link}>
                     <button aria-label="link button">
                     kedarkala.com
                     <span className={styles.linkSvg}>
