@@ -436,6 +436,10 @@ body {
 /* Blog  END */
 
 
+.dark-mode .cat-btn-arrow img{
+  filter: invert(0)!important;
+}
+
 /* ========= Case Studies ===============
 ========================================= */
 
@@ -784,8 +788,12 @@ button:focus {
 .menuLoaderBar {
   display: block;
   width: 0;
-  height: 20%;
+  height: 25%;
   background-color: var(--black);
+}
+
+.menuLoaderBar:last-child {
+  display: none;
 }
 
 .overlay-2 {
@@ -2462,11 +2470,11 @@ ul {
 
 /* Create the "+" shape by positioning the spans absolutely */
 .plus-rotate span:first-child {
-    top: 8%;
-    bottom: 8%;
-    width: 15%;
-    left: 33%;
-    transition-delay: 0.05s;
+  top: 12%;
+  bottom: 5%;
+  width: 15%;
+  left: 42%;
+  transition-delay: 0.05s;
 }
 
 .plus-rotate .minus-span {
@@ -2502,16 +2510,16 @@ ul {
 }
 .accordion-list .cont {
   overflow: hidden;
-  -webkit-transition: 0.8s ease-in-out;
-  transition: 0.8s ease-in-out;
+  -webkit-transition: 0.8s ease-in;
+  transition: 0.8s ease-in;
   font-size: 1.3em;
   margin-top: 2vw;
 }
 
 .accordion-list p {
   overflow: hidden;
-  -webkit-transition: 1s ease-in-out;
-  transition: 1s ease-in-out;
+  -webkit-transition: 1s ease-in;
+  transition: 1s ease-in;
   font-size: 1.2vw;
   padding-right: 15%;
   letter-spacing: 1px;
@@ -2526,8 +2534,8 @@ ul {
 .accordion-list li.open .cont {
   max-height: 40vh;
   padding-bottom: 20px;
-  -webkit-transition: 0.4s all ease-in-out;
-  transition: 0.4s all ease-in-out;
+  -webkit-transition: 0.4s all ease-in;
+  transition: 0.4s all ease-in;
 }
 
 .accordion-list li:hover figure {
@@ -2641,14 +2649,14 @@ ul {
 .accordion:hover .accordion-item:hover .accordion-item-content,
 accordion-item--default .accordion .accordion-item-content {
   height: 750px;
-  transition: height 0.9s cubic-bezier(0.2, 1, 0.9, 1);
+  transition: height 0.9s ease-in-out;
 }
 
 .accordion-item-content,
 .accordion:hover .accordion-item-content {
   height: 15vh;
   overflow: hidden;
-  transition: height 0.9s cubic-bezier(0.2, 1, 0.9, 1);
+  transition: height 0.9s ease-in-out;
 }
 
 .accordion {
@@ -6704,6 +6712,27 @@ a:hover {
   .header-section .header-logo .main-logo {
     width: 7vw;
     padding-top: 0;
+  }
+
+  .menuLoaderBar {
+    display: block;
+    width: 0;
+    height: 20%;
+    background-color: var(--black);
+  }
+  
+  .menuLoaderBar:last-child {
+    display: block;
+  }
+
+  .mainLoaderBar{
+    width: 25%;
+    height: 100vh;
+    background: var(--black);
+  }
+
+  .mainLoaderBar:last-child{
+    display: none;
   }
 
   #header-fixed svg{
@@ -10906,7 +10935,7 @@ label.label:hover:before{
   bottom: 50px;
   right: 50px;
 }
-.popUpButton{
+#popUpButton{
   border: 1px solid #1a1a1a;
   width: 50px;
   height: 50px;

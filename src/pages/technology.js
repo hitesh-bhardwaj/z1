@@ -2,8 +2,8 @@ import React, { useEffect, useRef } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 import SmoothScroll from "@/components/utils/SmoothScroll";
-import { gsap } from 'gsap';
 import SplitType from 'split-type';
+import { gsap } from 'gsap';
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { Cursor } from "../../cursor/index";
 import "react-creative-cursor/dist/styles.css";
@@ -12,9 +12,9 @@ import styles from '@/styles/serviceDetail.module.css';
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer";
 import FooterMobile from "@/components/Mobile/FooterMobile";
-import CursorAero from '@/components/ServiceDetail/Technology/TechnologyAero';
-import NextBox from '@/components/ServiceDetail/Technology/TechnologyNext';
-import OfferCards from '@/components/ServiceDetail/Technology/OfferCards';
+import CursorAero from '@/components/ServiceDetail/Strategy/StrategyAero';
+import NextBox from '@/components/ServiceDetail/Strategy/StrategyNext';
+import OfferCards from '@/components/ServiceDetail/Strategy/OfferCards';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -75,7 +75,31 @@ useEffect(() => {
   return () => ctx.revert();
 }, []);
 
-  // Hero Section Animation
+if (globalThis.innerWidth>1200) {
+// Hero Section Animation
+useEffect(() => {
+  const tl = gsap.timeline();
+  tl.fromTo(
+    "#service-anim",
+    {
+      rotationX: -80,
+      opacity: 0,
+      translateY: 300,
+      transformPerspective: "1000",
+      transformOrigin: "top center",
+    },
+    {
+      delay: 3.2,
+      duration: 1,
+      rotationX: 0,
+      opacity: 1,
+      translateY: 0,
+      stagger: 0.2,
+    }
+  );
+  return () => tl.kill();
+}, []);
+} else {
   useEffect(() => {
     const tl = gsap.timeline();
     tl.fromTo(
@@ -83,7 +107,7 @@ useEffect(() => {
       {
         rotationX: -80,
         opacity: 0,
-        translateY: 300,
+        translateY: 100,
         transformPerspective: "1000",
         transformOrigin: "top center",
       },
@@ -97,8 +121,10 @@ useEffect(() => {
       }
     );
     return () => tl.kill();
-  }, []);
+  }
+)};
 
+  
   if (globalThis.innerWidth > 1200) {
 
 // Portfolio Section Animation
@@ -148,49 +174,49 @@ useEffect(() => {
   return () => ctx.revert();
 });
 
+
 // Approach Section Animation
-    useEffect(() => {
-        let approachImages = gsap.utils.toArray(".service-image-container");
-        let approachItems = gsap.utils.toArray(".text-card");
+useEffect(() => {
+  let approachImages = gsap.utils.toArray(".service-image-container");
+  let approachItems = gsap.utils.toArray(".text-card");
 
-        let ctx = gsap.context(() => {
-            gsap.to("#approachImgCont", {
-                scrollTrigger: {
-                  trigger: "#section-5",
-                  pin: "#approachImgCont",
-                  pinSpacing: true,
-                  start: "top top",
-                  end: "bottom bottom",
-                  markers: false
-                }
-              });
-
-              if (approachItems) {
-                approachItems.forEach((image, i) => {
-                  
-                  let tl = gsap.timeline({
-                    scrollTrigger: {
-                      trigger: image,
-                      scrub: 1,
-                      start: "top top-=600",
-                      markers: false,
-                    }
-                  });
-                  tl.to(approachImages[i], {
-                    zIndex: "1",
-                  })
-                  tl.to(approachImages[i], {
-                    opacity: 0,
-                    duration: 1,
-                    scale: 1.2,
-                    ease: "power4.out"
-                  }, "-=1")
-                })
-              }     
+  let ctx = gsap.context(() => {
+      gsap.to("#approachImgCont", {
+          scrollTrigger: {
+            trigger: "#section-5",
+            pin: "#approachImgCont",
+            pinSpacing: true,
+            start: "top top",
+            end: "bottom bottom",
+            markers: false
+          }
         });
-        return () => ctx.revert();
-    }, []);
 
+        if (approachItems) {
+          approachItems.forEach((image, i) => {
+            
+            let tl = gsap.timeline({
+              scrollTrigger: {
+                trigger: image,
+                scrub: 1,
+                start: "top top-=600",
+                markers: false,
+              }
+            });
+            tl.to(approachImages[i], {
+              zIndex: "1",
+            })
+            tl.to(approachImages[i], {
+              opacity: 0,
+              duration: 1,
+              scale: 1.2,
+              ease: "power4.out"
+            }, "-=1")
+          })
+        }     
+  });
+  return () => ctx.revert();
+}, []);
   }
 
 // Text Reveal Animation For Section 2
@@ -201,12 +227,12 @@ useEffect(() => {
         gsap.from(target, {
           scrollTrigger: {
             trigger: target,
-            start: 'top bottom',
+            start: 'top 90%',
             end: 'bottom top',
             markers: false,
           },
           opacity: 0,
-          // y: 50,
+          y: 100,
           duration: 0.8,
           ease: 'Power1.out',
         });
@@ -269,7 +295,7 @@ useEffect(() => {
 
         <div className="loader-wrap-heading">
           <span>
-            <h1>Technology & Services</h1>
+            <h1>Technology</h1>
           </span>
         </div>
       </div>
@@ -288,18 +314,18 @@ useEffect(() => {
 
 {/* Hero Section*/}
         <section className={`${styles['service-detail-hero']} ${styles['main-container']}`} data-cursor-size="10px" data-cursor-text="">
-          <div className={`${styles['service-detail-hero-content']} ${styles['hero-content']}`}>
+          <div className={`${styles['service-detail-hero-content']} ${styles['tech']}`}>
             <div className={`${styles['service-detail-hero-top']} ${styles['tech']}`}>
               <h1 className='color-primary' id='service-anim'
               data-cursor-magnetic data-cursor-background-image="/assets/gif/4.gif" data-cursor-size="300px" data-cursor-color="#000">
                 Technology
               </h1>
-              {/* <p className={`${styles['hero-top-para']}  ${styles['tech']}`} id='service-anim'>
+              <p className={`${styles['hero-top-para']} ${styles['tech']}`} id='service-anim'>
                 Our comprehensive range of services leverages our full expertise to boost your digital presence to celestial heights.
-              </p> */}
+              </p>
             </div>
             <div>
-              <h1 className={`${styles['hero-bottom']} ${styles['tech']}`} id='service-anim' data-cursor-magnetic data-cursor-background-image="/assets/gif/5.gif" data-cursor-size="300px" data-cursor-color="#000">
+              <h1 className={`${styles['hero-bottom']}`} id='service-anim' data-cursor-magnetic data-cursor-background-image="/assets/gif/5.gif" data-cursor-size="300px" data-cursor-color="#000">
                 <span className='font-ageo'>&</span> Services
               </h1>
             </div>
@@ -307,7 +333,8 @@ useEffect(() => {
         </section>
 
 {/* Section 2 */}
-        <section className={`${styles['main-container']} ${styles['mb-10']}`} id='section-2'>
+        <section className={`${styles['main-container']}`} id='section-2'>
+        <div className={styles.contentContainer}>
           <div className={styles['service-detail-content']}>
             <h4 className={`${styles['m-50']} fadeIn`} data-jelly id='fadeIn'>
               <span>
@@ -320,12 +347,14 @@ useEffect(() => {
                 We begin our process by consulting with you because we believe that nobody knows your brand better than you do. We dive deep into understanding your brand, your product, your market, and your competition. This understanding forms the basis of our strategic thinking, idea generation, and campaign plans. Our meticulous planning, extensive research, and detailed understanding of your product/services and business goals enable us to create the perfect strategy. This strategy builds meaningful online experiences across multiple channels, helping your customers find what they're looking for quickly and efficiently, leading to your business's success.
               </span>
             </p>
-            <span className={`${styles['btn-10']} fadeIn`} 
+            <span className={`${styles['btn-10']}`} 
                   data-cursor-size="100px"
                   data-cursor-exclusion>
               kickstart your growth
             </span>
           </div>
+        </div>
+          
         </section>
 
 {/* Aerosol */}
@@ -344,12 +373,13 @@ useEffect(() => {
         <div className={styles['service-portfolio-main']} id='service-port-main'>
           <div className={styles['service-portfolio-title']}>
             <h2 data-cursor-size="300px"
-                data-cursor-exclusion>
+                data-cursor-exclusion id='fadeIn'>
                 Strategy 
                 <br /> 
                 Portfolio
             </h2>
           </div>
+          
           <div className={styles['service-portfolio-cards']}>
             <div className={styles['service-portfolio-cards-item']}
                  data-cursor-size="100px"
@@ -371,7 +401,7 @@ useEffect(() => {
                 </a>
               </div>
               <div className={styles['service-card-bottom']}>
-                <h3>
+                <h3 className='color-primary'>
                   Kedarkala
                 </h3>
                 <p>
@@ -400,7 +430,7 @@ useEffect(() => {
                 </a>
               </div>
               <div className={styles['service-card-bottom']}>
-                <h3>
+                <h3 className='color-primary'>
                   Wragby
                 </h3>
                 <p>
@@ -412,7 +442,7 @@ useEffect(() => {
             <div className={styles['service-portfolio-cards-item']}
                  data-cursor-size="100px"
                  data-cursor-color="#FF8395"
-                 data-cursor-text="View More">
+                 data-cursor-text="View More" id='fadeIn'>
               <div className={styles['service-card-top']}>
                 <div>
                     <Image src='/assets/service-detail/portfolio-3.webp'
@@ -429,7 +459,7 @@ useEffect(() => {
                 </a>
               </div>
               <div className={styles['service-card-bottom']}>
-                <h3>
+                <h3 className='color-primary'>
                   Dharan
                 </h3>
                 <p>
@@ -441,7 +471,7 @@ useEffect(() => {
             <div className={styles['service-portfolio-cards-item']}
                  data-cursor-size="100px"
                  data-cursor-color="#0D0A29"
-                 data-cursor-text="View More">
+                 data-cursor-text="View More" id='fadeIn'>
               <div className={styles['service-card-top']}>
                 <div>
                     <Image src='/assets/service-detail/portfolio-4.webp'
@@ -458,7 +488,7 @@ useEffect(() => {
                 </a>
               </div>
               <div className={styles['service-card-bottom']}>
-                <h3>
+                <h3 className='color-primary'>
                   QuickX
                 </h3>
                 <p>
@@ -497,85 +527,85 @@ useEffect(() => {
     </section>
 
 {/* Section 5 Img And Cards */}
-    <section className={`${styles['main-container']} ${styles['service-approach']}`} id='section-5'>
-      <div className={styles['service-approach-main']}>
-        <div className={styles['service-approach-left']} id='approachImgCont'>
-          <div className={`${styles['service-approach-img-container']} service-image-container`}>
-            <Image src='/assets/service-detail/approach-1.webp' 
-                 alt='approach image'
-                 loading='lazy'
-                 width={1000}
-                 height={1000}
-                 onMouseEnter={(e) => handleHover(e)}
-                 onMouseOut={(e) => handleHoverExit(e)}>
-            </Image>
-          </div>
-          <div className={`${styles['service-approach-img-container']} service-image-container`}>
-            <Image src='/assets/service-detail/approach-2.webp'
-                 alt='approach image'
-                 loading='lazy'
-                 width={1000}
-                 height={1000}
-                 onMouseEnter={(e) => handleHover(e)}
-                 onMouseOut={(e) => handleHoverExit(e)}>
-            </Image>
-          </div>
-          <div className={`${styles['service-approach-img-container']} service-image-container`}>
-            <Image src='/assets/service-detail/approach-3.webp'
-                 alt='approach image'
-                 loading='lazy'
-                 width={1000}
-                 height={1000}
-                 onMouseEnter={(e) => handleHover(e)}
-                 onMouseOut={(e) => handleHoverExit(e)}>
-            </Image>
-          </div>
-        </div>
+<section className={`${styles['main-container']} ${styles['service-approach']}`} id='section-5'>
+            <div className={styles['service-approach-main']}>
+                <div className={styles['service-approach-left']} id='approachImgCont'>
+                <div className={`${styles['service-approach-img-container']} service-image-container`}>
+                    <Image src='/assets/service-detail/approach-1.webp' 
+                        alt='approach image'
+                        loading='lazy'
+                        width={1000}
+                        height={1000}
+                        onMouseEnter={(e) => handleHover(e)}
+                        onMouseOut={(e) => handleHoverExit(e)}>
+                    </Image>
+                </div>
+                <div className={`${styles['service-approach-img-container']} service-image-container`}>
+                    <Image src='/assets/service-detail/approach-2.webp'
+                        alt='approach image'
+                        loading='lazy'
+                        width={1000}
+                        height={1000}
+                        onMouseEnter={(e) => handleHover(e)}
+                        onMouseOut={(e) => handleHoverExit(e)}>
+                    </Image>
+                </div>
+                <div className={`${styles['service-approach-img-container']} service-image-container`}>
+                    <Image src='/assets/service-detail/approach-3.webp'
+                        alt='approach image'
+                        loading='lazy'
+                        width={1000}
+                        height={1000}
+                        onMouseEnter={(e) => handleHover(e)}
+                        onMouseOut={(e) => handleHoverExit(e)}>
+                    </Image>
+                </div>
+                </div>
 
 
-        <div className={styles['service-approach-right']}>
-          <div className={`${styles['service-approach-text-container']} text-card`} 
-               data-cursor-size='100px'
-               data-cursor-exclusion>
-            <div className={`${styles['service-approach-text-box']} service-approach-text-box`}>
-              <h3 className='color-primary'>Understanding Your Brand</h3>
-              <p>
-                We believe that understanding your brand is the first step toward creating a successful strategy. We spend time getting to know your brand, your values, and your vision. This understanding allows us to create strategies that align with your brand and help you achieve your goals.
-              </p>
-            </div>
-            <div className={`${styles['service-approach-text-box']} service-approach-text-box`}>
-              <h3 className='color-primary'>Identifying Your Target Audience</h3>
-              <p>Knowing who your customers are is crucial for creating effective strategies. We conduct thorough research to identify your target audience, understand their needs, and find out what motivates them. This knowledge allows us to create strategies that resonate with your audience and drive engagement.</p>
-            </div>
-          </div>
-          <div className={`${styles['service-approach-text-container']} text-card`}
-               data-cursor-size='100px'
-               data-cursor-exclusion>
-            <div className={`${styles['service-approach-text-box']} service-approach-text-box`}>
-              <h3 className='color-primary'>Analyzing the Competition</h3>
-              <p> Understanding your competition is key to staying ahead. We conduct a detailed analysis of your competitors to understand their strategies, strengths, and weaknesses. This analysis helps us create strategies that give you a competitive edge.</p>
-            </div>
-            <div className={`${styles['service-approach-text-box']} service-approach-text-box`}>
-              <h3 className='color-primary'>Creating a Unique Value Proposition</h3>
-              <p>Your unique value proposition sets you apart from your competitors. We work with you to identify and articulate your unique value proposition. This proposition forms the core of our strategy and helps us create campaigns that highlight your unique strengths.
-              </p>
-            </div>
-          </div>
-          <div className={`${styles['service-approach-text-container']} text-card`}
-               data-cursor-size='100px'
-               data-cursor-exclusion>
-            <div className={`${styles['service-approach-text-box']} service-approach-text-box`}>
-              <h3 className='color-primary'>Setting Measurable Goals</h3>
-              <p>We believe that every strategy should have clear, measurable goals. We work with you to set realistic goals for your campaigns. These goals guide our strategy and help us measure the success of our campaigns.</p>
-            </div>
-            <div className={`${styles['service-approach-text-box']} service-approach-text-box`}>
-              <h3 className='color-primary'>Iterative Improvement</h3>
-              <p>Digital marketing is a dynamic field. We believe in the power of iterative improvement. We continually monitor the performance of our campaigns, gather data, and use this data to refine our strategies. This approach ensures that our strategies are always optimized for maximum performance.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+                <div className={styles['service-approach-right']}>
+                <div className={`${styles['service-approach-text-container']} text-card`} 
+                    data-cursor-size='100px'
+                    data-cursor-exclusion>
+                    <div className={`${styles['service-approach-text-box']} service-approach-text-box`} id='fadeIn'>
+                    <h3 className='color-primary'>Understanding Your Brand</h3>
+                    <p>
+                        We believe that understanding your brand is the first step toward creating a successful strategy. We spend time getting to know your brand, your values, and your vision. This understanding allows us to create strategies that align with your brand and help you achieve your goals.
+                    </p>
+                    </div>
+                    <div className={`${styles['service-approach-text-box']} service-approach-text-box`} id='fadeIn'>
+                    <h3 className='color-primary'>Identifying Your Target Audience</h3>
+                    <p>Knowing who your customers are is crucial for creating effective strategies. We conduct thorough research to identify your target audience, understand their needs, and find out what motivates them. This knowledge allows us to create strategies that resonate with your audience and drive engagement.</p>
+                    </div>
+                </div>
+                <div className={`${styles['service-approach-text-container']} text-card`}
+                    data-cursor-size='100px'
+                    data-cursor-exclusion>
+                    <div className={`${styles['service-approach-text-box']} service-approach-text-box`} id='fadeIn'>
+                    <h3 className='color-primary'>Analyzing the Competition</h3>
+                    <p> Understanding your competition is key to staying ahead. We conduct a detailed analysis of your competitors to understand their strategies, strengths, and weaknesses. This analysis helps us create strategies that give you a competitive edge.</p>
+                    </div>
+                    <div className={`${styles['service-approach-text-box']} service-approach-text-box`} id='fadeIn'>
+                    <h3 className='color-primary'>Creating a Unique Value Proposition</h3>
+                    <p>Your unique value proposition sets you apart from your competitors. We work with you to identify and articulate your unique value proposition. This proposition forms the core of our strategy and helps us create campaigns that highlight your unique strengths.
+                    </p>
+                    </div>
+                </div>
+                <div className={`${styles['service-approach-text-container']} text-card`}
+                    data-cursor-size='100px'
+                    data-cursor-exclusion>
+                    <div className={`${styles['service-approach-text-box']} service-approach-text-box`} id='fadeIn'>
+                    <h3 className='color-primary'>Setting Measurable Goals</h3>
+                    <p>We believe that every strategy should have clear, measurable goals. We work with you to set realistic goals for your campaigns. These goals guide our strategy and help us measure the success of our campaigns.</p>
+                    </div>
+                    <div className={`${styles['service-approach-text-box']} service-approach-text-box`} id='fadeIn'>
+                    <h3 className='color-primary'>Iterative Improvement</h3>
+                    <p>Digital marketing is a dynamic field. We believe in the power of iterative improvement. We continually monitor the performance of our campaigns, gather data, and use this data to refine our strategies. This approach ensures that our strategies are always optimized for maximum performance.</p>
+                    </div>
+                </div>
+                </div>
+                </div>
+            </section>
 
 {/* Section 6 */}
         <section className={`${styles['main-container']}`}>

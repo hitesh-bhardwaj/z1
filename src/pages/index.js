@@ -96,7 +96,7 @@ export default function Home() {
       </section>
 
       {/* <section className="popUpButtonContainer">
-        <button className="popUpButton">
+        <button id="popUpButton">
           Hi
         </button>
         

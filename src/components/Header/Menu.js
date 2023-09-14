@@ -97,17 +97,17 @@ useEffect(() => {
     });
     gsap.to(menuLoaderBar, {
       x: '0%',
-      duration: 0.5,
+      duration: 0.4,
       stagger: 0.15,
     });
     gsap.to(revealMenu.current, { 
       css: {display: 'none'},
       duration: 0,
-      delay: 1.2
+      delay: 0.8
     })
     gsap.to(menuLoaderBar ,{
       width: '0',
-      duration: 0.5,
+      duration: 0.4,
       stagger: 0.15,
       delay: 1
     });
@@ -126,17 +126,17 @@ useEffect(() => {
     });
     gsap.to(menuLoaderBar ,{
       width: '100%',
-      duration: 0.5,
+      duration: 0.4,
       stagger: 0.15,
     });
     gsap.to(revealMenu.current, { 
       css: {display: 'block'},
       duration: 0,
-      delay: 1
+      delay: 0.8
     })
     gsap.to(menuLoaderBar ,{
       x: '100%',
-      duration: 0.5,
+      duration: 0.4,
       stagger: 0.15,
       delay: 1,
     });
@@ -209,125 +209,6 @@ useEffect(() => {
           );
   }
 }, [state]);
-
-  // useEffect(() => {
-  //   if (state.clicked === false) {
-  //     //   menu.current.style.display = "none";
-  //     gsap.to(
-  //       [revealMenu.current, backgroundMenu2.current, backgroundMenu.current],
-  //       {
-  //         height: 0,
-  //         duration: 0.5,
-  //         skewY: 0,
-  //         ease: "power3.inOut",
-  //         stagger: {
-  //           amount: 0.3,
-  //         },
-  //       }
-  //     );
-
-  //     gsap.to([menu.current], {
-  //       duration: 1,
-  //       css: { display: "none" },
-  //     });
-  //   } else if (
-  //     state.clicked === true ||
-  //     (state.clicked === true && state.initial === null)
-  //   ) {
-  //     //   menu.current.style.display = "block";
-
-  //     gsap.to([menu.current], {
-  //       duration: 0,
-  //       css: { display: "block" },
-  //     });
-
-  //     gsap.to(
-  //       [backgroundMenu.current, backgroundMenu2.current, revealMenu.current],
-  //       {
-  //         opacity: 1,
-  //         duration: 0,
-  //         height: "100vh",
-  //       }
-  //     );
-  //     gsap.from(
-  //       [backgroundMenu.current, backgroundMenu2.current, revealMenu.current],
-  //       {
-  //         duration: 0.8,
-  //         height: 0,
-  //         top: "0",
-  //         transformOrigin: "right top",
-  //         skewY: 2,
-  //         ease: "power3.inOut",
-  //         stagger: {
-  //           amount: 0.5,
-  //         },
-  //       }
-  //     );
-
-  //     gsap.to(
-  //       [
-  //         link1.current,
-  //         link2.current,
-  //         link3.current,
-  //         link4.current,
-  //         link5.current,
-  //       ],
-  //       {
-  //         duration: 0,
-  //         rotationX: 0,
-  //         opacity: 1,
-  //         translateY: 0,
-  //         transformPerspective: "1000",
-  //         transformOrigin: "top center",
-  //       }
-  //     );
-
-  //     gsap.from(
-  //       [
-  //         link1.current,
-  //         link2.current,
-  //         link3.current,
-  //         link4.current,
-  //         link5.current,
-  //       ],
-  //       {
-  //         delay: 0.8,
-  //         duration: 0.8,
-  //         opacity: 0,
-  //         translateY: 200,
-  //         rotationX: -80,
-  //         stagger: {
-  //           amount: 0.4,
-  //         },
-  //       }
-  //     );
-
-  //     gsap.from(
-  //       [
-  //         link6.current,
-  //         link7.current,
-  //         link8.current,
-  //         link9.current,
-  //         link10.current,
-  //         link11.current,
-  //         link12.current,
-  //         link13.current,
-  //         link14.current,
-  //         link15.current,
-  //       ],
-  //       {
-  //         delay: 1.1,
-  //         duration: 0.8,
-  //         opacity: 0,
-  //         translateY: "200",
-  //         rotationX: "-100deg",
-  //         stagger: {
-  //           amount: 0.5,
-  //         },
-  //       }
-  //     );
-  //   }
-  // }, [state]);
 
   return (
     <div ref={menu} className="nav" id="mb_nav">
