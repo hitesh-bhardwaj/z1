@@ -21,6 +21,7 @@ import Preloader from "@/components/PreLoader/PreLoader";
 import HomeProject from "@/components/ProjectsSection/HomeProject";
 import ProjectsHome from "@/components/Home/ProjectsHome";
 import { useEffect, useState } from "react";
+import Modal from "../components/PopupForm/formModal";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -95,18 +96,7 @@ export default function Home() {
         <ConceptScrollNew />
       </section>
 
-      {/* <section className="popUpButtonContainer">
-        <button id="popUpButton">
-          Hi
-        </button>
-        
-        <div id="PopUpMyModal" className="PopUpModal">
-          <div className="PopUp-modal-content">
-            <span className="PopUpClose">&times;</span>
-            <p>Some text in the Modal..</p>
-          </div>
-        </div>
-      </section> */}
+        <Modal />
 
       <section>
         <ConceptScrollMobile />

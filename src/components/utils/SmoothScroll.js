@@ -247,6 +247,25 @@ const SmoothScroll = () => {
       fixedMenu.style.left = offset.x + "px";
     });
 
+    // Modal Pop Up form Fixed
+
+    const fixedPopUp = document.querySelector(".PopUpmodal");
+
+    smoothscroll.addListener(function (status) {
+      var offset = status.offset;
+    
+        fixedPopUp.style.top = offset.y + "px";
+        fixedPopUp.style.right = offset.x + "px"; 
+    });
+
+    const fixedPopButton = document.querySelector("#popUpButton");
+
+    smoothscroll.addListener(function (status) {
+      var offset = status.offset;
+      fixedPopButton.style.top = offset.y + "px";
+      fixedPopButton.style.left = offset.x + "px"; 
+    });
+        
     // Loader
 
     const fixedLoader = document.getElementById("loader");

@@ -2676,6 +2676,7 @@ accordion-item--default .accordion .accordion-item-content {
 
 /* ========================================== Home Aero ========================================== */
 /* Aerosoles */
+
 .aero-hover {
   width: 100%;
   height: 100vh;
@@ -6340,10 +6341,6 @@ a:hover {
     transform: scale(6) translate(-80px, -120px);
   }
 
-  .hero-footer .scroll-img {
-    left: -5vw;
-  }
-
   .action-icon {
     width: 7%;
   }
@@ -6456,10 +6453,6 @@ a:hover {
   .project-section-works {
     height: 380vh;
   }
-
-  .hero-footer .scroll-img {
-    left: -5vw;
-  }
   .action-icon {
     width: 7%;
   }
@@ -6569,10 +6562,6 @@ a:hover {
 
   .right-en-box {
     width: 45%;
-  }
-
-  .hero-footer .scroll-img {
-    left: -7vw;
   }
 
   .showreel .btn-primary {
@@ -8338,7 +8327,6 @@ a:hover {
     color: var(--black1);
     -webkit-text-stroke-width: 0.2vw;
     -webkit-text-fill-color: transparent;
-    -webkit-text-stroke-color: var(--black1);
   }
 
   .mobile-hero-para {
@@ -10468,8 +10456,8 @@ a:hover {
   width: 60vw;
   height: auto;
   background-color: var(--white);
-  position: fixed;
-  top: 10vw;
+  position: absolute;
+  top: 5%;
   border-radius: 20px;
   left: 50%;
   right: 50%;
@@ -10487,7 +10475,7 @@ a:hover {
 }
 
 .form-sections{
-  height: 100vh;
+  height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -10930,51 +10918,146 @@ label.label:hover:before{
 }
 
 /* Pop Up Form Button */
-.popUpButtonContainer{
-  position: absolute;
-  bottom: 50px;
-  right: 50px;
-}
-#popUpButton{
-  border: 1px solid #1a1a1a;
-  width: 50px;
-  height: 50px;
-}
-/* The Modal (background) */
-.PopUpModal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+.visible{
+  visibility: visible !important;
+  -webkit-animation-name: fadeIn; /* Fade in the background */
+  -webkit-animation-duration: 0.7s;
+  animation-name: fadeIn;
+  animation-duration: 0.7s;
+  display: block !important;
+  backdrop-filter: blur(3px);
+
 }
 
-/* Modal Content */
-.PopUp-modal-content {
-  background-color: #fefefe;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
+.PopUpmodal{
+  visibility: hidden;
+  display: none;
+  position: fixed;
+  top: 0vh;
+  right: 0vw;
+  z-index: 150;
+  width: 100%;
+  height: 100;
+  }
+
+.PopUpContainer{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #5c5ad614;
+}
+
+.PopUpmodal-content{
+  position: relative;
+  width: 90vw;
+  height: 90vh;
+  background-color: var(--white1);
+  border-radius: 36px;
+  -webkit-animation-name: slideIn;
+  -webkit-animation-duration: 0.7s;
+  animation-name: slideIn;
+  animation-duration: 0.7s;
+}
+
+.popUpButton-div{
+  top: 80vh;
+  right: 40px;
+  width: fit-content;
+  height: fit-content;
+  position: fixed;
+  z-index: 100;
+}
+
+#popUpButton{
+  width: 75px;
+  height: 75px;
+  position: relative;
+  background: var(--primary);
+  border-radius: 50%;
+}
+
+#popUpButton img{
+  width: 55px;
 }
 	
 /* The Close Button */
 .PopUpClose {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
   font-weight: bold;
+  z-index: 1;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  width: 35px;
+  height: 35px;
+}
+.PopUpClose img{
+  width: 30px;
+  transition: all 0.5s ease;
+}
+.PopUpClose:hover img{
+  width: 24px;
+  transform: rotate(180deg);
 }
 
-.PopUpClose:hover,
-.PopUpClose:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
+/* Add Animation */
+@-webkit-keyframes slideIn {
+  from {top: -100px; opacity: 0} 
+  to {top: 0; opacity: 1}
+}
+
+@keyframes slideIn {
+  from {top: -100px; opacity: 0}
+  to {top: 0; opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
+
+/* Dark-mode PopUp Form*/
+.dark-mode .PopUpClose img {
+  filter: invert(0) !important;
+}
+.dark-mode .PopUpContainer {
+  background-color: #5ad61414;
+}
+.dark-mode #popUpButton{
+  filter: invert(1);
+}
+
+/* Media Query Pop Up Form */
+@media screen and (max-width: 991px) {  
+  .popUpButton-div{
+    top: 90vh
+  }  
+}
+
+@media screen and (max-width:778px) {
+  .PopUpClose{
+    top: 30px;
+    right: 30px;
+    width: 25px;
+    height: 25px;
+  }
+}
+@media screen and (max-width:480px) {
+  #popUpButton {
+    width: 55px;
+    height: 55px;
+  }
+  #popUpButton img{
+    width: 40px;
+  }
+  .popUpButton-div {
+    top: 85vh;
+    right: 20px;
+  }
 }
