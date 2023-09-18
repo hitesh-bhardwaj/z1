@@ -20,7 +20,7 @@ export default function HomeProject() {
       gsap.from(textwords, {
         scrollTrigger: {
           trigger: elem,
-          start: "top 85%",
+          start: "top 80%",
           markers: false,
         },
         duration: 1,

@@ -82,7 +82,7 @@ function Footer() {
           opacity: 0,
         },
         {
-          delay: -0.5,
+          delay: -0.8,
           duration: 0.8,
           opacity: 1,
           y: 0,
