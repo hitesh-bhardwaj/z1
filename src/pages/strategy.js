@@ -15,6 +15,7 @@ import FooterMobile from "@/components/Mobile/FooterMobile";
 import CursorAero from '@/components/ServiceDetail/Strategy/StrategyAero';
 import NextBox from '@/components/ServiceDetail/Strategy/StrategyNext';
 import OfferCards from '@/components/ServiceDetail/Strategy/OfferCards';
+import Modal from '../components/PopupForm/formModal';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -308,6 +309,10 @@ useEffect(() => {
     <div>
         <Header />
     </div>
+
+{/* PopUp Modal Button */}
+<Modal />
+{/* End */}
 
     <main className={styles['main']}>
       <div className={styles['container']}>

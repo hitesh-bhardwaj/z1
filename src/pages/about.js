@@ -16,6 +16,7 @@ import VideoPlayer from "@/components/About/VideoPlayer";
 import AboutNextBox from "@/components/NextBoxes/AboutNextBox";
 import LogoCarousel from "@/components/About/LogoCarousel";
 import NewGifSection from "@/components/About/NewGifSection";
+import Modal from "../components/PopupForm/formModal";
 
 gsap.config({
   nullTargetWarn: false,
@@ -274,6 +275,10 @@ export default function about() {
       <div className="about-header">
         <Header />
       </div>
+
+{/* PopUp Modal Button */}
+<Modal />
+{/* End */}
 
       <main>
         <section className="hero-about"

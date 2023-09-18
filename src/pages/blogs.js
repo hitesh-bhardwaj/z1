@@ -12,6 +12,7 @@ import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer";
 import FooterMobile from "@/components/Mobile/FooterMobile";
 import Blogs from "@/components/blogData";
+import Modal from "../components/PopupForm/formModal";
 
 gsap.config({
   nullTargetWarn: false,
@@ -247,6 +248,10 @@ export default function blogs() {
       <div>
         <Header />
       </div>
+
+{/* PopUp Modal Button */}
+  <Modal />
+{/* End */}
 
       <main>
         <div className="blogs-main-section">

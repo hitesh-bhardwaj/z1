@@ -20,6 +20,7 @@ import SmoothScroll from "@/components/utils/SmoothScroll";
 import FooterMobile from "@/components/Mobile/FooterMobile";
 import ProjectWorks from "@/components/studio/ProjectWorks";
 import WorksNextBox from "@/components/NextBoxes/WorksNextBox";
+import Modal from "../components/PopupForm/formModal";
 
 export default function studio() {
   const [loading, setLoading] = useState(true);
@@ -125,6 +126,11 @@ export default function studio() {
 
       <div className="studio">
         <Header />
+
+{/* PopUp Modal Button */}
+<Modal />
+{/* End */}
+
         <AnimatePresence>
           {loading ? (
             <motion.div key="loader">

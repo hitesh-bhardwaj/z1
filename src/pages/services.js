@@ -21,6 +21,7 @@ import ServiceNextBox from "@/components/NextBoxes/ServiceNextBox";
 import SecondVideoLazy from "@/components/ServicePage/SecondVideoLazy";
 import FirstVideoLazy from "@/components/ServicePage/FirstVideoLazy";
 import StrategySection from "@/components/ServicePage/StartegySection";
+import Modal from "../components/PopupForm/formModal";
 
 gsap.config({
   nullTargetWarn: false,
@@ -423,6 +424,10 @@ export default function services() {
       <div>
         <Header />
       </div>
+
+{/* PopUp Modal Button */}
+<Modal />
+{/* End */}
 
       <main>
         <section

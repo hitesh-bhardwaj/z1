@@ -151,24 +151,24 @@ function Footer() {
                 <p> even better call us</p>
                 <div className="num">
                   <div
-                    className="cb-menu-nav-item f__anim"
+                    className="footer-nav-item f__anim"
                     data-cursor-exclusion
                     data-cursor-size="80px"
                   >
                     <a href="tel:+91 8178 026 136">
                       <span data-text="+91 8178 026 136">
-                        <span className="disabled">+91</span> 8178 026 136
-                      </span>
+                        +91 8178 026 136
+                      </span> 
                     </a>
                   </div>
                   <div
-                    className="cb-menu-nav-item f__anim"
+                    className="footer-nav-item f__anim"
                     data-cursor-exclusion
                     data-cursor-size="80px"
                   >
                     <a href="tel:+91 7303 644 520">
                       <span data-text="+91 7303 644 520">
-                        <span className="disabled">+91</span> 7303 644 520
+                        +91 7303 644 520
                       </span>
                     </a>
                   </div>
@@ -180,7 +180,7 @@ function Footer() {
               <div className="socials">
                 <div className="top-socials f__anim">
                   <div
-                    className="cb-menu-nav-item"
+                    className="footer-nav-item"
                     data-cursor-exclusion
                     data-cursor-size="80px"
                   >
@@ -192,7 +192,7 @@ function Footer() {
                     </a>
                   </div>
                   <div
-                    className="cb-menu-nav-item f__anim"
+                    className="footer-nav-item f__anim"
                     data-cursor-exclusion
                     data-cursor-size="80px"
                   >
@@ -204,7 +204,7 @@ function Footer() {
                     </a>
                   </div>
                   <div
-                    className="cb-menu-nav-item f__anim"
+                    className="footer-nav-item f__anim"
                     data-cursor-exclusion
                     data-cursor-size="80px"
                   >
@@ -215,7 +215,7 @@ function Footer() {
                 </div>
                 <div className="bottom-socials f__anim">
                   <div
-                    className="cb-menu-nav-item"
+                    className="footer-nav-item"
                     data-cursor-exclusion
                     data-cursor-size="80px"
                   >
@@ -227,7 +227,7 @@ function Footer() {
                     </a>
                   </div>
                   <div
-                    className="cb-menu-nav-item"
+                    className="footer-nav-item"
                     data-cursor-exclusion
                     data-cursor-size="80px"
                   >
@@ -236,7 +236,7 @@ function Footer() {
                     </a>
                   </div>
                   <div
-                    className="cb-menu-nav-item"
+                    className="footer-nav-item"
                     data-cursor-exclusion
                     data-cursor-size="80px"
                   >

@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import { Cursor } from "../../cursor/index";
+import { Cursor } from "../../../cursor/index";
 import "react-creative-cursor/dist/styles.css";
 import PhoneInput, { isValidPhoneNumber } from 'react-phone-number-input';
 import 'react-phone-number-input/style.css';

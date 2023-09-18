@@ -780,7 +780,6 @@ button:focus {
   width: 100vw;
   height: 100vh;
   display: block;
-  z-index: 1;
   position: absolute;
   rotate: 180deg;
 }
@@ -810,7 +809,7 @@ button:focus {
 }
 
 .nav {
-  z-index: 110;
+  z-index: 115;
   position: absolute;
   top: 0;
   left: 0;
@@ -825,6 +824,38 @@ button:focus {
 .activeMenu {
   -webkit-text-fill-color: var(--primary);
 }
+
+.menu-logo-conatainer{
+  position: absolute;
+  top: 35px;
+  left: 75px;
+}
+
+.menu-logo-conatainer img{
+  width: 2.3vw;
+  filter: invert(1);
+}
+
+@media screen and (max-width:991px) {
+  .menu-logo-conatainer{
+    top: 30px;
+    left: 60px;
+  }
+  .menu-logo-conatainer img{
+    width: 6.5vw;
+  }
+}
+
+@media screen and (max-width:480px) {
+  .menu-logo-conatainer{
+    top: 25px;
+    left: 28px;
+  }
+  .menu-logo-conatainer img{
+    width: 35px;
+  }
+}
+
 
 /* ---------------------------
 ================================
@@ -858,32 +889,18 @@ button:focus {
   position: absolute;
   overflow: hidden;
   height: 100%;
-  background: #f6f6f6;
+  background: #000;
   top: 0;
   left: 0;
   width: 100%;
-  display: none;
+  opacity: 0;
 }
 
-.menu-wrapper {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
+.nav-div{
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  z-index: 100;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
 }
 
-.menu-wrapper.open {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 1;
-}
 
 .menu-cont {
   width: 90%;
@@ -1154,10 +1171,12 @@ label:hover circle {
 .menu--1 input:checked+svg .line--1,
 .menu--1 input:checked+svg .line--3 {
   --offset: -94.1149185097;
+  stroke: var(--white);
 }
 
 .menu--1 input:checked+svg .line--2 {
   --offset: -50;
+  stroke: var(--white);
 }
 
 .debug {
@@ -1175,7 +1194,7 @@ label:hover circle {
 .menu-content {
   width: 77%;
   display: flex;
-  background-image: url("/assets/menu/LOGO.png");
+  background-image: url("/assets/menu/LOGO-new.png");
   background-size: 50vw;
   background-position: center;
   background-repeat: no-repeat;
@@ -1186,9 +1205,9 @@ label:hover circle {
 .text-stroke-fill-ltr {
   font-size: 6vw;
   font-weight: 500;
-  -webkit-text-stroke: var(--black2);
+  -webkit-text-stroke: var(--white2);
   -webkit-text-stroke-width: 0;
-  -webkit-text-fill-color: var(--black2);
+  -webkit-text-fill-color: var(--white2);
 }
 
 /* Normal text */
@@ -1235,7 +1254,7 @@ label:hover circle {
 .content-heading-serial {
   font-size: 1.3vw;
   margin-right: 1vw;
-  -webkit-text-fill-color: var(--black2);
+  -webkit-text-fill-color: var(--gray1);
   font-weight: 500;
 }
 
@@ -1269,13 +1288,13 @@ label:hover circle {
   font-size: 1.4vw;
   font-weight: 400;
   margin-bottom: 2vw;
-  color: var(--black2);
+  color: var(--white1);
   font-family: 'ClashDisplay';
 }
 
 .f_heading {
   font-weight: 500;
-  color: var(--black2);
+  color: var(--gray);
 }
 
 .content-right-body-title {
@@ -1572,7 +1591,7 @@ label:hover circle {
   content: attr(data-text);
   display: block;
   position: absolute;
-  color: var(--black);
+  color: var(--white);
 }
 
 .cb-menu-nav-item a span:before {
@@ -1631,6 +1650,12 @@ label:hover circle {
   -o-transform: translateY(-105%);
   transform: translateY(-105%);
 }
+
+.content-link .cb-outro-header a{
+  color: var(--white);
+}
+
+
 
 /* ========================================== Hero Footer END ========================================== */
 
@@ -6181,6 +6206,35 @@ a:hover {
   font-size: 0.85vw;
 }
 
+.footer-nav-item a {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  padding: 0 0.01em 0 0;
+  font-size: 1.5vw;
+}
+
+.footer-nav-item a span{
+  display: inline-block;
+  transition: transform 1.2s cubic-bezier(.19,1,.22,1);
+}
+
+.footer-nav-item a span:after{
+    top: 105%;
+    transform-origin: left top;
+    transition: transform 2s cubic-bezier(.19,1,.22,1);
+}
+.footer-nav-item a span:after {
+  content: attr(data-text);
+  display: block;
+  position: absolute;
+  color: var(--black);
+}
+
+.footer-nav-item a:focus span, .footer-nav-item a:hover span {
+  transform: translateY(-105%);
+}
+
 /* Footer END */
 /* ========================================== Footer END ========================================== */
 
@@ -6707,7 +6761,6 @@ a:hover {
     display: block;
     width: 0;
     height: 20%;
-    background-color: var(--black);
   }
   
   .menuLoaderBar:last-child {
@@ -10483,6 +10536,20 @@ a:hover {
   text-align: center;
 }
 
+.popUp-form-step{
+  position: absolute;
+  top: 10%;
+  text-align: center;
+}
+
+.popUp-form-step h2{
+  font-size: 1.6vw;
+  color: var(--black);
+}
+.popUp-form-step h2 span{
+  color: var(--gray2);
+}
+
 .form-sections input, .form-sections textarea{
   background: none;
   border-bottom: 1px solid var(--gray);
@@ -10859,7 +10926,7 @@ label.label:hover:before{
 
 @media screen and (max-width:480px) {
   .form-sections .error{
-    font-size: 3.5vw;
+    font-size: 3.8vw;
     padding-bottom: 15px;
   }
   .form-button button{
@@ -10872,12 +10939,42 @@ label.label:hover:before{
     padding: 0 5rem;
     font-size: 8vw;
   }
+  .form-sections select{
+    width: 60vw;
+  }
+  .form-sections input, .form-sections textarea{
+    width: 70vw !important;
+  }
+  .PhoneInput{
+    width: 70vw !important;
+  }
+  .form-attach{
+    width: 70vw;
+  }
+  .form-attach button{
+    font-size: 5vw;
+  }
+  .form-attach button img {
+    margin-right: 5px;
+    margin-bottom: 5px;
+    width: 20px;
+    height: 20px;
+  }
+  .popUp-for-TextArea{
+    padding-top: 20px;
+  }
+  .form-sections textarea{
+    height: 40px;
+  }
 }
 
 /* Dark Mode Contact Form Pop */
 .dark-mode .progress,
 .dark-mode .form-sections .error{
   filter: invert(1);
+}
+.dark-mode .form-attach button img{
+  filter: invert(0) !important;
 }
 
 #patroSub button{
@@ -11038,6 +11135,9 @@ label.label:hover:before{
   .popUpButton-div{
     top: 90vh
   }  
+  .popUp-form-step h2{
+    font-size: 4vw;
+  }
 }
 
 @media screen and (max-width:778px) {
@@ -11060,4 +11160,9 @@ label.label:hover:before{
     top: 85vh;
     right: 20px;
   }
+  .popUp-form-step h2{
+    font-size: 5vw;
+  }
 }
+
+/* Pop up form End */

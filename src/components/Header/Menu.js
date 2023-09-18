@@ -91,29 +91,20 @@ useEffect(() => {
   const menuLoaderBar = document.querySelectorAll(".menuLoaderBar");
 
   if(state.clicked === false) {
-    gsap.to(revealMenu.current, { 
-      css: {zIndex: '0'},
-      duration: 0,
+    gsap.to(revealMenu.current, {
+      opacity: 0,
+      duration: 0.2,
+      delay: 0
     });
-    gsap.to(menuLoaderBar, {
-      x: '0%',
-      duration: 0.4,
-      stagger: 0.15,
-    });
-    gsap.to(revealMenu.current, { 
-      css: {display: 'none'},
-      duration: 0,
-      delay: 0.8
-    })
     gsap.to(menuLoaderBar ,{
       width: '0',
       duration: 0.4,
-      stagger: 0.15,
-      delay: 1
+      stagger: 0.1,
+      delay: 0,
     });
     gsap.to([menu.current], {
-      duration: 1,
-      delay: 1,
+      duration: 0,
+      delay: 1.2,
       css: { display: "none" },
     });
   } else if (
@@ -127,24 +118,14 @@ useEffect(() => {
     gsap.to(menuLoaderBar ,{
       width: '100%',
       duration: 0.4,
-      stagger: 0.15,
+      stagger: 0.1,
+      // ease: 'power2.inOut'
     });
     gsap.to(revealMenu.current, { 
-      css: {display: 'block'},
-      duration: 0,
-      delay: 0.8
+      opacity: 1,
+      duration: 0.5,
+      delay: 0.6
     })
-    gsap.to(menuLoaderBar ,{
-      x: '100%',
-      duration: 0.4,
-      stagger: 0.15,
-      delay: 1,
-    });
-    gsap.to(revealMenu.current, { 
-      css: {zIndex: '2'},
-      duration: 0,
-      delay: 2
-    });
     gsap.to(
             [
               link1.current,
@@ -172,8 +153,8 @@ useEffect(() => {
               link5.current,
             ],
             {
-              delay: 1.3,
-              duration: 0.8,
+              delay: 0.5,
+              duration: 0.7,
               opacity: 0,
               translateY: 200,
               rotationX: -80,
@@ -197,13 +178,13 @@ useEffect(() => {
               link15.current,
             ],
             {
-              delay: 1.8,
-              duration: 0.8,
+              delay: 0.7,
+              duration: 0.7,
               opacity: 0,
               translateY: "200",
               rotationX: "-100deg",
               stagger: {
-                amount: 0.5,
+                amount: 0.4,
               },
             }
           );
@@ -219,10 +200,18 @@ useEffect(() => {
         <span className="menuLoaderBar"></span>
         <span className="menuLoaderBar"></span>
       </div>
-      {/* <div ref={backgroundMenu} className="overlay"></div>
-      <div ref={backgroundMenu2} className="overlay-2"></div> */}
-      <div ref={revealMenu} className="menu-layer">
+      <div ref={revealMenu}       
+        className="menu-layer"
+        data-cursor-exclusion>
         <div id="menu-wrapper">
+        <div className="menu-logo-conatainer">
+          <div data-cursor-size="60px"
+                data-cursor-opaque>
+            <Link href="/">
+              <img src="/assets/header-logo/enigma-en-logo.svg"/>
+            </Link>
+          </div>
+        </div>
           <div className="wrapper">
             <div className="menu-links">
               <div className="menu-content">
@@ -352,7 +341,7 @@ useEffect(() => {
                         <div
                           className="cb-menu-nav-item nav__link"
                           ref={link7}
-                          data-cursor-exclusion
+                          data-cursor-opaque
                           data-cursor-size="50px"
                         >
                           <a href="https://www.facebook.com/in.enigmadigital">
@@ -362,7 +351,7 @@ useEffect(() => {
                         <div
                           className="cb-menu-nav-item nav__link"
                           ref={link8}
-                          data-cursor-exclusion
+                          data-cursor-opaque
                           data-cursor-size="50px"
                         >
                           <a href="https://www.instagram.com/enigmadigital/">
@@ -372,7 +361,7 @@ useEffect(() => {
                         <div
                           className="cb-menu-nav-item nav__link"
                           ref={link9}
-                          data-cursor-exclusion
+                          data-cursor-opaque
                           data-cursor-size="50px"
                         >
                           <a href="https://www.youtube.com/">
@@ -384,7 +373,7 @@ useEffect(() => {
                         <div
                           className="cb-menu-nav-item nav__link"
                           ref={link10}
-                          data-cursor-exclusion
+                          data-cursor-opaque
                           data-cursor-size="50px"
                         >
                           <a href="https://twitter.com/_EnigmaDigital">
@@ -394,7 +383,7 @@ useEffect(() => {
                         <div
                           className="cb-menu-nav-item nav__link"
                           ref={link11}
-                          data-cursor-exclusion
+                          data-cursor-opaque
                           data-cursor-size="50px"
                         >
                           <a href="https://in.linkedin.com/company/in-enigmadigital">
@@ -404,7 +393,7 @@ useEffect(() => {
                         <div
                           className="cb-menu-nav-item nav__link"
                           ref={link12}
-                          data-cursor-exclusion
+                          data-cursor-opaque
                           data-cursor-size="50px"
                         >
                           <a href="https://www.behance.net/enigma-digital">
@@ -427,7 +416,7 @@ useEffect(() => {
                         <div
                           className="content-link  mb-3"
                           data-cursor-size="30px"
-                          data-cursor-exclusion
+                          data-cursor-opaque
                         >
                           <div className="cb-outro-header nav__link" ref={link14}>
                             <a
@@ -442,7 +431,7 @@ useEffect(() => {
                           <div
                             className="cb-menu-nav-item nav__link"
                             ref={link15}
-                            data-cursor-exclusion
+                            data-cursor-opaque
                             data-cursor-size="50px"
                           >
                             <a href="tel:+91 8178 026 136">

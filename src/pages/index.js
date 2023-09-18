@@ -91,12 +91,14 @@ export default function Home() {
             <HeroDesktop />
           </section>
 
+{/* PopUp Modal Button */}
+  <Modal />
+{/* End */}
+
       {/* ======================== Concept Scroll ====================== */}
       <section>
         <ConceptScrollNew />
       </section>
-
-        <Modal />
 
       <section>
         <ConceptScrollMobile />

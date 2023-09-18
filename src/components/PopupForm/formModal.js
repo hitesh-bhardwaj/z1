@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import ContactUs from './contactUs';
+import { easeInOut, motion } from "framer-motion";
 
 export default function Modal() {
   // Define a state variable to track the modal's display state
@@ -34,7 +35,12 @@ export default function Modal() {
   return (
     <>
     {/* Your HTML content here */}
-    <div className='popUpButton-div'>
+    <motion.div 
+        className='popUpButton-div'
+        initial={{ opacity: 0, scale: 0 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 6.2, duration: 0.5, transition: easeInOut }}
+        >
     <button 
       aria-label='open popup form'
       id="popUpButton" 
@@ -45,7 +51,7 @@ export default function Modal() {
         src={isHovered ? '/assets/icons/form-pen.gif' : '/assets/icons/form-pen.png'}
       />
     </button>
-    </div>
+    </motion.div>
     {/* Modal */}
     <div
       id="PopUpMyModal"

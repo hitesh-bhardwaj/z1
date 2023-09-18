@@ -176,116 +176,17 @@ export default function ContactUs(props) {
     };
     
     // Calculate the progress percentage
-    const progressPercentage = (step / totalSteps) * 100;
-  
-    // Page Transitions
-    // useEffect(() => {
-    //   const loaderBars = document.querySelectorAll("#loaderbars");
-    //   const tl = gsap.timeline();
-  
-    //   let ctx = gsap.context(() => {
-  
-    //     tl.from(".loader-wrap-heading h1", {
-    //       delay: 0.5,
-    //       y: 200,
-    //       skewY: 10,
-    //       duration: 1,
-    //     }).to(".loader-wrap-heading h1", {
-    //       delay: 0.5,
-    //       y: -200,
-    //       skewY: 10,
-    //       duration: 1,
-    //     }).to(loaderBars, {
-    //       height: 0,
-    //       duration: 0.6,
-    //       delay: -0.5,
-    //       ease: "power2.easeIn",
-    //       stagger: 0.1,
-    //     }).to("#loader", {
-    //       y: "-1500",
-    //       opacity: 0,
-    //       ease: "power2.inOut",
-    //     });
-    //   });
-    //   return () => ctx.revert();
-    // }, []);
+    // const progressPercentage = (step / totalSteps) * 100;
   
     return (
       <>
-  
-      {/* Next Seo and Head */}
-        {/* <NextSeo
-          title="Contact Enigma Digital | UI/UX, Development & Marketing Experts"
-          description="Get in touch with Enigma Digital's team of UI/UX design, front-end development, and organic marketing specialists to elevate your business and achieve success online."
-          canonical="https://www.weareenigma.com/contact"
-          openGraph={{
-            url: "https://www.weareenigma.com/contact",
-            title:
-              "Contact Enigma Digital | UI/UX, Development & Marketing Experts",
-            description:
-              "Get in touch with Enigma Digital's team of UI/UX design, front-end development, and organic marketing specialists to elevate your business and achieve success online.",
-            images: [
-              {
-                url: "",
-                width: 400,
-                height: 600,
-                alt: "Enigma Image",
-                type: "image/png",
-              },
-              { url: "" },
-            ],
-            siteName: "https://www.weareenigma.com/contact",
-          }}
-        />
-  
-        <Head>
-          <title>
-            Contact Enigma Digital | UI/UX, Development & Marketing Experts
-          </title>
-          <meta
-            name="description"
-            content="Get in touch with Enigma Digital's team of UI/UX design, front-end development, and organic marketing specialists to elevate your business and achieve success online."
-          />
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-          <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
-          ></meta>
-          <link rel="icon" href="/fav-icon.png" />
-        </Head> */}
-  
-  {/* Next Seo and Head END */}
-  
-  {/* <SmoothScroll /> */}
-  
-  
-  {/* <Cursor isGelly={true} /> */}
-  
-  {/* Loader Jsx */}
-          {/* <div className="loader-wrap" id="loader">
-            <div className='mainLoaderBg'>
-              <span className='mainLoaderBar' id='loaderbars'></span>
-              <span className='mainLoaderBar' id='loaderbars'></span>
-              <span className='mainLoaderBar' id='loaderbars'></span>
-              <span className='mainLoaderBar' id='loaderbars'></span>
-              <span className='mainLoaderBar' id='loaderbars'></span>
-            </div>
-            <div className="loader-wrap-heading">
-              <span>
-                <h1>Hi, There! Let's Talk!?</h1>
-              </span>
-            </div>
-          </div> */}
-  
   
   {/* Main Contact Form Start */}
   
   <div className="relative h-full w-full">
   
-  {/* <Header /> */}
-  
   {/* Progress bar */}
-  <div className="progress-bar">
+  {/* <div className="progress-bar">
   <div
     className="progress"
     role="progressbar"
@@ -296,10 +197,15 @@ export default function ContactUs(props) {
   >
     {progressPercentage.toFixed(0)} %
   </div>
-  </div>
+  </div> */}
   
   {step === 1 && (
   <div className="form-sections">
+    <div className="popUp-form-step">
+      <h2>
+        01 —<span className="color-grey"> 04</span>
+      </h2>
+    </div>
   <div className="mt-10"><h1>Hi<span className="color-primary"> There !</span></h1></div>
   <div className="m-10"><p>What's Your Name</p></div>
   <div className="flex gap-10 name-input-popUp-Form">
@@ -338,6 +244,11 @@ export default function ContactUs(props) {
   
   {step === 2 && (
   <div className="form-sections">
+  <div className="popUp-form-step">
+      <h2>
+        02 —<span className="color-grey"> 04</span>
+      </h2>
+    </div>
   <div className="mt-10"><h1>Hello,<span className="color-primary capitalize"> {firstName} !</span></h1></div>
   <div className="m-10"><p>What can we help you with?</p></div>
   <div>
@@ -365,6 +276,11 @@ export default function ContactUs(props) {
   
   {step === 3 && (
   <div className="form-sections">
+  <div className="popUp-form-step">
+      <h2>
+        03 —<span className="color-grey"> 04</span>
+      </h2>
+    </div>
       <div className="mt-10"><h1 className="color-primary">Great !</h1></div>
       <div className="m-10"><p>Please provide your contact information.</p></div>
       <div>
@@ -412,6 +328,11 @@ export default function ContactUs(props) {
   
   {step === 4 && (
   <div className="form-sections">
+  <div className="popUp-form-step">
+      <h2>
+        04 —<span className="color-grey"> 04</span>
+      </h2>
+    </div>
       <div className="mt-10"><p>Do you have a brief?</p></div>
       <div className='form-attach'>
           <input
