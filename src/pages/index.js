@@ -69,6 +69,13 @@ export default function Home() {
           content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
         />
         <link rel="icon" href="/fav-icon.png" />
+        <link
+          rel="preload"
+          href="/ClashDisplay-Regular.woff"
+          as="font"
+          type="font/woff"
+          crossorigin
+        />
       </Head>
 
       <Preloader />

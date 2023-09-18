@@ -10,7 +10,7 @@ export default function App({ Component, pageProps }) {
         strategy="afterInteractive"
         src="https://www.googletagmanager.com/gtag/js?id=G-PKJE9LVB35"
       />
-      <Script
+      {/* <Script
         id="google-analytics"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
@@ -23,7 +23,7 @@ export default function App({ Component, pageProps }) {
           });
         `,
         }}
-      />
+      /> */}
       <Component {...pageProps} />
       <Analytics />
     </>
