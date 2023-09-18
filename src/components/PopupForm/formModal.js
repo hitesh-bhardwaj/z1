@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import ContactUs from './contactUs';
 import { easeInOut, motion } from "framer-motion";
+import Image from 'next/image';
 
 export default function Modal() {
   // Define a state variable to track the modal's display state
@@ -67,7 +68,13 @@ export default function Modal() {
             aria-label='close popup form'
             onClick={closeModal}
             className="PopUpClose">
-            <img loading='lazy' alt='close form' src='/assets/icons/form-close.svg' />
+            <Image
+              height={50}
+              width={50} 
+              priority={false} 
+              alt='close form' 
+              src='/assets/icons/form-close.svg' 
+            />
           </button>
         </div>
         <ContactUs />

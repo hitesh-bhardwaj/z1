@@ -1,5 +1,6 @@
 import { useState, useRef } from "react";
 import styles from "@/styles/VideoPlayer.module.css";
+import Image from "next/image";
 
 const VideoPlayer = () => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -43,7 +44,9 @@ const VideoPlayer = () => {
       data-cursor-size="100px"
       data-cursor-color="#000"
     >
-      <img
+      <Image
+        width={1920}
+        height={1080}
         src="/assets/about/videoOverlay.webp"
         alt="overlay"
         id="overlay"
@@ -63,13 +66,19 @@ const VideoPlayer = () => {
       >
         {isPlaying ? (
           <div className={styles.svgBackground}>
-            <img src="/assets/icons/pause.png"
-            alt="showreel pause" />
+            <Image
+              width={250}
+              height={250} 
+              src="/assets/icons/pause.png"
+              alt="showreel pause" />
           </div>
         ) : (
           <div className={styles.svgBackground}>
-            <img src="/assets/icons/play.png"
-            alt="showreel play" />
+          <Image
+              width={250}
+              height={250}  
+              src="/assets/icons/play.png"
+              alt="showreel play" />
           </div>
         )}
       </div>
