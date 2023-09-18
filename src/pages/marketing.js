@@ -12,9 +12,9 @@ import styles from '@/styles/serviceDetail.module.css';
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer";
 import FooterMobile from "@/components/Mobile/FooterMobile";
-import CursorAero from '@/components/ServiceDetail/Strategy/StrategyAero';
-import NextBox from '@/components/ServiceDetail/Strategy/StrategyNext';
-import OfferCards from '@/components/ServiceDetail/Strategy/OfferCards';
+import CursorAero from '@/components/ServiceDetail/Marketing/MarketingAero';
+import NextBox from '@/components/ServiceDetail/Marketing/MarketingNext';
+import OfferCards from '@/components/ServiceDetail/Marketing/OfferCards';
 import Modal from '../components/PopupForm/formModal';
 
 gsap.registerPlugin(ScrollTrigger);

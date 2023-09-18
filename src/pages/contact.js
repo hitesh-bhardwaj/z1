@@ -14,6 +14,7 @@ import ContactAero from "@/components/Contact/ContactAerosol";
 import MarqueeCata from "@/components/MarqueeCata";
 import FooterMobile from "@/components/Mobile/FooterMobile";
 import ContactForm from "@/components/Contact/contactForm";
+import Modal from "../components/PopupForm/formModal";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -185,6 +186,8 @@ export default function contact() {
         <link rel="icon" href="/fav-icon.png" />
       </Head>
 
+      <SmoothScroll />
+
       <Cursor isGelly={true} />
 
       <div className="loader-wrap" id="loader">
@@ -204,11 +207,12 @@ export default function contact() {
       </div>
 
       <>
-        <main className="content is-loading">
-        
-          <div className="section">
-            <SmoothScroll />
+        <main>
             <Header />
+
+{/* PopUp Modal Button */}
+  <Modal />
+{/* End */}
 
             <section className="contact-hero">
               <div
@@ -340,7 +344,6 @@ export default function contact() {
               <FooterMobile />
             </div>
             {/* ======================== Footer END ====================== */}
-          </div>
         </main>
       </>
     </>

@@ -5829,10 +5829,11 @@ body.loading {
 }
 
 .donald {
-  font-size: 1.8vw;
-  color: var(--black1);
+  font-size: 1.3vw;
+  color: var(--gray2);
   font-weight: 500;
   margin-left: 3.2vw;
+  font-family: 'Ageo';
 }
 
 .bold {
@@ -5840,7 +5841,7 @@ body.loading {
   color: var(--black1);
   margin-bottom: 0.8vw;
   font-family: "Ageo";
-  font-size: 1.5vw !important;
+  font-size: 1.6vw !important;
 }
 .bold-h{
   font-weight: 600;
@@ -6719,6 +6720,10 @@ a:hover {
 /* ====================== Media 991px ======================= */
 
 @media screen and (max-width: 991px) {
+
+  .donald{
+    font-size: 3vw;
+  }
 
   .desktop-projects{
     display: none;
@@ -9801,7 +9806,7 @@ a:hover {
   }
   
   .blog-detail-heading h1 {
-    max-width: 80%;
+    max-width: 100%;
     font-size: 5vw;
   }
 
@@ -9891,7 +9896,7 @@ a:hover {
   }
 
   .blog-img {
-    height: 30vh;
+    height: 40vh;
     margin-top: 7vw;
     margin-bottom: 10vw;
   }

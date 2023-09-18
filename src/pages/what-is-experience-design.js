@@ -330,9 +330,8 @@ export default function blogHowToDesign() {
               Architect. Sometime during the early 1990s, he decided to change
               his title to User Experience Architect. Why did he do it? In Don’s
               own words -
-              
-              
             </p>
+            
             <blockquote className="bold strong" id="anim">
               “I invented the term because I thought Human Interface and
               usability were too narrow: I wanted to cover all aspects of the
@@ -340,9 +339,8 @@ export default function blogHowToDesign() {
               graphics, the interface, the physical interaction, and the
               manual.”
             </blockquote>
+            <span className="donald">— Donald Arthur Norman</span>
             
-            
-            <span className="donald">Donald Arthur Norman</span>
             <br />
             <br />
             <div className="blog-img">

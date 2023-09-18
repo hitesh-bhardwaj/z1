@@ -12,9 +12,10 @@ import styles from '@/styles/serviceDetail.module.css';
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer";
 import FooterMobile from "@/components/Mobile/FooterMobile";
-import CursorAero from '@/components/ServiceDetail/Strategy/StrategyAero';
-import NextBox from '@/components/ServiceDetail/Strategy/StrategyNext';
-import OfferCards from '@/components/ServiceDetail/Strategy/OfferCards';
+import CursorAero from '@/components/ServiceDetail/Design/DesignAero';
+import NextBox from '@/components/ServiceDetail/Design/DesignNext';
+import OfferCards from '@/components/ServiceDetail/Design/OfferCards';
+import Modal from '../components/PopupForm/formModal';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -283,6 +284,10 @@ useEffect(() => {
         <link rel="icon" href="/fav-icon.png" />
       </Head>
 
+<SmoothScroll />
+
+<Cursor isGelly={true} />
+
       {/*Page Loader*/}
       <div className="loader-wrap" id="loader" style={{ zIndex: 999 }}>
       <div className='mainLoaderBg'>
@@ -301,13 +306,13 @@ useEffect(() => {
       </div>
       {/*Page Loader*/}
 
-    <SmoothScroll />
-
-    <Cursor isGelly={true} />
-
     <div>
         <Header />
     </div>
+
+{/* PopUp Modal Button */}
+  <Modal />
+{/* End */}
 
     <main className={styles['main']}>
       <div className={styles['container']}>
