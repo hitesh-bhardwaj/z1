@@ -538,7 +538,7 @@ useEffect(() => {
             <div className={styles['service-approach-main']}>
                 <div className={styles['service-approach-left']} id='approachImgCont'>
                 <div className={`${styles['service-approach-img-container']} service-image-container`}>
-                    <Image src='/assets/service-detail/approach-1.webp' 
+                    <Image src='/assets/service-detail/strategy/strategy1.webp' 
                         alt='approach image'
                         loading='lazy'
                         width={1000}
@@ -548,7 +548,7 @@ useEffect(() => {
                     </Image>
                 </div>
                 <div className={`${styles['service-approach-img-container']} service-image-container`}>
-                    <Image src='/assets/service-detail/approach-2.webp'
+                    <Image src='/assets/service-detail/strategy/strategy2.webp'
                         alt='approach image'
                         loading='lazy'
                         width={1000}
@@ -558,7 +558,7 @@ useEffect(() => {
                     </Image>
                 </div>
                 <div className={`${styles['service-approach-img-container']} service-image-container`}>
-                    <Image src='/assets/service-detail/approach-3.webp'
+                    <Image src='/assets/service-detail/strategy/strategy3.webp'
                         alt='approach image'
                         loading='lazy'
                         width={1000}

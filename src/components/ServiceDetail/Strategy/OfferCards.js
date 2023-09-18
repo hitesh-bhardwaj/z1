@@ -60,7 +60,7 @@ export default function OfferCards() {
                         </div>
                         <div className="service-offer-card-wrapper w-1/3 p-3">
                         <div className="service-offer-card image-card" id="fadeUp">
-                            <Image src='/assets/service-detail/our-service-1.webp' 
+                            <Image src='/assets/service-detail/strategy/strategy4.webp' 
                                     alt='our service image'
                                     loading='lazy'
                                     fill={true}
@@ -83,7 +83,7 @@ export default function OfferCards() {
                         </div>
                         <div className="service-offer-card-wrapper w-1/3 p-3">
                             <div className="service-offer-card image-card" id="fadeUp">
-                            <Image src='/assets/service-detail/our-service-2.webp' 
+                            <Image src='/assets/service-detail/strategy/strategy5.webp' 
                                     alt='our service image'
                                     loading='lazy'
                                     fill={true}
