@@ -67,7 +67,7 @@ export default function Modal() {
             aria-label='close popup form'
             onClick={closeModal}
             className="PopUpClose">
-            <img alt='close form' src='/assets/icons/form-close.svg' />
+            <img loading='lazy' alt='close form' src='/assets/icons/form-close.svg' />
           </button>
         </div>
         <ContactUs />
