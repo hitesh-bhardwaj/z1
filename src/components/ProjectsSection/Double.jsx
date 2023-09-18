@@ -121,8 +121,8 @@ export default function Index({projects, reversed}) {
             </div>
             <div className={styles.body}
             id='double-image-anim'>
-                <h3>{projects[1].name}</h3>
-                <h4>{projects[1].description}</h4>
+                <h2>{projects[1].name}</h2>
+                <h3>{projects[1].description}</h3>
                 <p>{projects[1].year}</p>
             </div>
           </Link>
