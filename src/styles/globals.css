@@ -6259,6 +6259,11 @@ a:hover {
   color: var(--black1);
 }
 
+.project-slider-heading img{
+  width: 2.7vw;
+  height: auto;
+}
+
 .project-marquee-item {
   width: 28vw;
   height: 30vw;
@@ -10926,9 +10931,13 @@ label.label:hover:before{
   }
   .text-green-400{
     font-size: 2.5vw;
+    color: #1a10a6 !important;
   }
   .form-sections select option{
     font-size: 4vw;
+  }
+  .form-button-2 p{
+    font-size: 3vw;
   }
 }
 
@@ -10976,6 +10985,9 @@ label.label:hover:before{
   }
   .form-sections textarea{
     height: 40px;
+  }
+  .form-button-2 p{
+    font-size: 4vw;
   }
 }
 

@@ -318,6 +318,7 @@ export default function patronum() {
                   alt="portfolio image"
                   data-cursor-color="#3F86E4"
                   data-cursor-text="Patronum"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -370,6 +371,7 @@ export default function patronum() {
                 alt="portfolio image"
                 data-cursor-color="#3F86E4"
                 data-cursor-text="Patronum"
+                loading="lazy"
               />
             </div>
           </section>
@@ -451,6 +453,7 @@ export default function patronum() {
                     height={1000}
                     src="/assets/casestudies/patronum/web1.png"
                     alt="Logo"
+                    loading="lazy"
                     data-cursor-color="#EE384E"
                     data-cursor-text="Illustration"
                     data-cursor-size="120px"
@@ -466,6 +469,7 @@ export default function patronum() {
                     height={1000}
                     src="/assets/casestudies/patronum/web2.png"
                     alt="Logo"
+                    loading="lazy"
                     data-cursor-color="#0A489B"
                     data-cursor-text="Logo"
                     data-cursor-size="120px"
@@ -481,6 +485,7 @@ export default function patronum() {
                 <div className={styles.imageContainer} id="image-container">
                   <Image
                     width={1000}
+                    loading="lazy"
                     height={1000}
                     src="/assets/casestudies/patronum/web3.png"
                     alt="Logo"
@@ -496,6 +501,7 @@ export default function patronum() {
                 <div className={styles.imageContainer} id="image-container">
                   <Image
                     width={1000}
+                    loading="lazy"
                     height={1000}
                     src="/assets/casestudies/patronum/web4.png"
                     alt="Logo"
@@ -561,6 +567,7 @@ export default function patronum() {
                     height={1000}
                     src="/assets/casestudies/patronum/web5.png"
                     alt="Logo"
+                    loading="lazy"
                     data-cursor-color="#EE384E"
                     data-cursor-text="Illustration"
                     data-cursor-size="120px"
@@ -574,6 +581,7 @@ export default function patronum() {
                   <Image
                     width={1000}
                     height={1000}
+                    loading="lazy"
                     src="/assets/casestudies/patronum/web6.webp"
                     alt="Logo"
                     data-cursor-color="#0A489B"
@@ -594,6 +602,7 @@ export default function patronum() {
                     height={1000}
                     src="/assets/casestudies/patronum/web7.webp"
                     alt="Logo"
+                    loading="lazy"
                     data-cursor-color="#EE3C50"
                     data-cursor-text="Illustration"
                     data-cursor-size="120px"
@@ -609,6 +618,7 @@ export default function patronum() {
                     height={1000}
                     src="/assets/casestudies/patronum/web8.webp"
                     alt="Logo"
+                    loading="lazy"
                     data-cursor-color="#3F86E4"
                     data-cursor-text="Logo Pattern"
                     data-cursor-size="120px"
@@ -738,6 +748,7 @@ export default function patronum() {
               <div className={styles.imageBox} id="image-container">
                   <img
                     src="/assets/casestudies/patronum/img3.webp"
+                    loading="lazy"
                     className={styles.img}
                     id="img"
                     data-cursor-size="100px"
@@ -787,6 +798,7 @@ export default function patronum() {
                   src="/assets/casestudies/patronum/img4.webp"
                   className={styles.img}
                   id="img"
+                  loading="lazy"
                   data-cursor-size="100px"
                   alt="portfolio image"
                   data-cursor-color="#3F86E4"
@@ -826,7 +838,10 @@ export default function patronum() {
                   data-jelly
                 >
                   <div className={styles.clientTestimonialSectionFigure}>
-                    <img src="/assets/casestudies/patronum/paullees.webp" alt="client image"></img>
+                  <Image 
+                  width={100}
+                  height={100}
+                  src="/assets/casestudies/patronum/paullees.webp" alt="client image" />
                   </div>
                   <div className={styles.clientTestimonialSectionFigureText}>
                     <h4>

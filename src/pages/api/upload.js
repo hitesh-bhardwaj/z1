@@ -43,7 +43,7 @@ const saveFile = async (file, fileName) => {
   await fs.unlinkSync(file.path);
 
   // Return the file path, which will be the URL to the uploaded file
-  return `${baseUrl}/uploads/${fileName}`;
+  return `${baseUrl}/assets/404/temps/${fileName}`;
 };
 
 export default (req, res) => {

@@ -350,6 +350,7 @@ export default function dharan() {
                   src="/assets/casestudies/dharan/img2.webp"
                   className={styles.img}
                   id="img"
+                  loading="lazy"
                   data-cursor-size="100px"
                   data-cursor-color="#FF8395"
                   data-cursor-text="Dharan"
@@ -415,6 +416,7 @@ export default function dharan() {
                     data-cursor-size="120px"
                     onMouseEnter={(e) => handleHover(e)}
                     onMouseOut={(e) => handleHoverExit(e)}
+                    loading="lazy"
                   />
                 </div>
               </div>
@@ -422,6 +424,7 @@ export default function dharan() {
                 <div className={styles.imageContainer} id="image-container">
                   <Image
                     width={1000}
+                    loading="lazy"
                     height={1000}
                     src="/assets/casestudies/dharan/web2.webp"
                     alt="Logo"
@@ -444,6 +447,7 @@ export default function dharan() {
                     src="/assets/casestudies/dharan/web3.webp"
                     alt="Logo"
                     data-cursor-color="#FF8395"
+                    loading="lazy"
                     data-cursor-text="Dharan"
                     data-cursor-size="120px"
                     onMouseEnter={(e) => handleHover(e)}
@@ -455,6 +459,7 @@ export default function dharan() {
                 <div className={styles.imageContainer} id="image-container">
                   <Image
                     width={1000}
+                    loading="lazy"
                     height={1000}
                     src="/assets/casestudies/dharan/web4.webp"
                     alt="Logo"
@@ -527,6 +532,7 @@ export default function dharan() {
                     height={1000}
                     src="/assets/casestudies/dharan/web5.webp"
                     alt="Logo"
+                    loading="lazy"
                     data-cursor-color="#FF8395"
                     data-cursor-text="Dharan"
                     data-cursor-size="120px"
@@ -542,6 +548,7 @@ export default function dharan() {
                     height={1000}
                     src="/assets/casestudies/dharan/web6.webp"
                     alt="Logo"
+                    loading="lazy"
                     data-cursor-color="#FF8395"
                     data-cursor-text="Dharan"
                     data-cursor-size="120px"
@@ -560,6 +567,7 @@ export default function dharan() {
                     height={1000}
                     src="/assets/casestudies/dharan/web7.webp"
                     alt="Logo"
+                    loading="lazy"
                     data-cursor-color="#FF8395"
                     data-cursor-text="Dharan"
                     data-cursor-size="120px"
@@ -573,6 +581,7 @@ export default function dharan() {
                   <Image
                     width={1000}
                     height={1000}
+                    loading="lazy"
                     src="/assets/casestudies/dharan/web8.webp"
                     alt="Logo"
                     data-cursor-color="#FF8395"
@@ -737,6 +746,7 @@ export default function dharan() {
                 <figure className={styles.figure}>
                   <img
                   alt="portfolio image"
+                    loading="lazy"
                     src="/assets/casestudies/dharan/img3.webp"
                     className={styles.img}
                     id="img"
@@ -806,6 +816,7 @@ export default function dharan() {
                     src="/assets/casestudies/dharan/img4.webp"
                     className={styles.img}
                     id="img"
+                    loading="lazy"
                     alt="portfolio image"
                     data-cursor-size="100px"
                     data-cursor-color="#FF8395"
@@ -846,8 +857,11 @@ export default function dharan() {
                   data-jelly
                 >
                   <div className={styles.clientTestimonialSectionFigure}>
-                    <img  alt="client image"
-                          src="/assets/casestudies/dharan/dharanclient.png"></img>
+                    <Image
+                          height={100}
+                          width={100}  
+                          alt="client image"
+                          src="/assets/casestudies/dharan/dharanclient.png" />
                   </div>
                   <div className={styles.clientTestimonialSectionFigureText}>
                     <h4>

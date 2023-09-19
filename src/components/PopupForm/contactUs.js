@@ -164,8 +164,8 @@ export default function ContactUs(props) {
         if (response.ok) {
           setMessageStatus('success');
           setTimeout(() => {
-            router.push('/message-sent');
-          }, 1000);
+            router.push('/thankyou');
+          }, 500);
         } else {
           setMessageStatus('error');
         }
