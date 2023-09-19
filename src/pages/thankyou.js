@@ -1,65 +1,116 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Cursor } from "../../cursor/index";
 import "react-creative-cursor/dist/styles.css";
 import Link from "next/link";
+import { NextSeo } from "next-seo";
+import Head from "next/head";
+import gsap from "gsap";
 
-const MessageSent = () => {
-  const messageSent = {
-    width: "100%",
-    height: "100vh",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    flexDirection: "column",
-  };
+const ThankYou = () => {
 
-  const h1 = {
-    fontSize: "10vw",
-    color: "#1a1a1a",
-    fontFamily: "Ageo",
-  };
+  useEffect(() => {
+    const tl = gsap.timeline();
+    const anim = document.querySelectorAll("#anim");
 
-  const span = {
-    color: "#5D5AD6",
-  };
-
-  const p = {
-    fontSize: "1.4vw",
-    color: "#1a1a1a",
-    fontFamily: "Ageo",
-    padding: "0 28vw",
-    textAlign: "center",
-    fontWeight: "500",
-    lineHeight: "1.3",
-    color: "#1a1a1a",
-  };
+    tl.fromTo("#h1",{
+        rotationX: -80,
+        opacity: 0,
+        translateY: 300,
+        transformPerspective: "1000",
+        transformOrigin: "top center",
+      },
+      {
+        duration: 1,
+        rotationX: 0,
+        opacity: 1,
+        translateY: 0,
+        stagger: 0.2,
+      }).fromTo(
+        anim,
+        {
+          y: 100,
+          opacity: 0,
+        },
+        {
+          delay: -0.7,
+          duration: 1,
+          opacity: 1,
+          y: 0,
+          stagger: 0.2
+        }
+      );
+    return () => tl.kill();
+  }, []);
 
   return (
     <div>
+
+    <NextSeo
+        title="Thank You | Thanks for connecting with us."
+        description="Thanks for connecting with us."
+        canonical="https://www.canonical.ie/"
+        openGraph={{
+          url: "https://www.weareenigma.com/",
+          title: "Thank You | Thanks for connecting with us.",
+          description:
+            "Thanks for connecting with us.",
+          images: [
+            {
+              url: "https://i.ibb.co/k0NMQw9/home.png",
+              width: 400,
+              height: 600,
+              alt: "Enigma Image",
+              type: "image/png",
+            },
+            { url: "https://i.ibb.co/k0NMQw9/home.png" },
+          ],
+          siteName: "weareenigma.com",
+        }}
+      />
+
+      <Head>
+        <title>Thank You | Thanks for connecting with us.</title>
+        <meta
+          name="description"
+          content="Thanks for connecting with us."
+        />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
+        />
+        <link rel="icon" href="/fav-icon.png" />
+      </Head>
+
       <Cursor isGelly={true} />
-      <div className="message-sent-page">
-          <h1>
-              Hoooray <span className="color-primary">!</span>
-          </h1>
-          <p>
-            It is a pleasure to meet ya! Give us a day and we will schedule our first date.
-          </p>
-        
-        <div className='form-button-2 mt-10'>
-          <Link href="/">
-            <button className='btn_CTA'>
-                <span className="btn_CTA-ripple">
-                <span></span>
-                </span>
-                <span className='btn_CTA-title'>
-                <span data-text='Go Home'>Go Home</span>
-                </span>
-            </button>
-          </Link>
+
+      <main>
+        <div className="message-sent-page">
+            <h1 id="h1"
+                data-cursor-magnetic
+                data-cursor-size="300px"
+                data-cursor-exclusion>
+                Hoooray <span className="color-primary">!</span>
+            </h1>
+            <p id="anim">
+              It is a pleasure to meet ya! Give us a day and we will schedule our first date.
+            </p>
+          
+          <div className='form-button-2 mt-10' id="anim">
+            <Link href="/">
+              <button className='btn_CTA'>
+                  <span className="btn_CTA-ripple">
+                  <span></span>
+                  </span>
+                  <span className='btn_CTA-title'>
+                  <span data-text='Go Home'>Go Home</span>
+                  </span>
+              </button>
+            </Link>
+          </div>
         </div>
-      </div>
+      </main>
     </div>
   );
 };
 
-export default MessageSent;
+export default ThankYou;

@@ -98,7 +98,7 @@
     margin: 50px 0;
   }
   
-  .service-detail-content h4{
+  .service-detail-content h2{
     font-size: 1.8vw;
     letter-spacing: 1px;
     color: var(--black1);
@@ -322,7 +322,7 @@
     background: var(--black2);
   }
   
-  .service-approach-text-box h3{
+  .service-approach-text-box h4{
     font-size: 2.2vw;
     padding-bottom: 25px;
     font-weight: 500;
@@ -387,7 +387,7 @@
       height: auto;
       width: 100%;
     }
-    .service-detail-content h4{
+    .service-detail-content h2{
       font-size: 3.5vw;
     }
     .service-detail-content p{
@@ -496,7 +496,7 @@
       width: 100%;
       margin: 30px 0;
     }
-    .service-approach-text-box h3{
+    .service-approach-text-box h4{
       font-size: 4vw;
     }
     .service-approach-text-box p {
@@ -571,7 +571,7 @@
   .contentContainer{
     margin: 15% 0;
   }
-  .service-detail-content h4 {
+  .service-detail-content h2 {
     font-size: 4.8vw;
   }
   .service-detail-content p {
@@ -638,7 +638,7 @@
     border-radius: 18px;
     padding: 30px 20px;
   }
-  .service-approach-text-box h3 {
+  .service-approach-text-box h4 {
     font-size: 6vw;
   }
   .service-approach-text-box p {

@@ -10933,6 +10933,9 @@ label.label:hover:before{
 }
 
 @media screen and (max-width:480px) {
+  .form-sections{
+    height: 90vh;
+  }
   .form-sections .error{
     font-size: 3.8vw;
     padding-bottom: 15px;
@@ -11157,6 +11160,13 @@ label.label:hover:before{
   }
 }
 @media screen and (max-width:480px) {
+  .PopUpContainer{
+    align-items: unset;
+  }
+  .PopUpmodal-content{
+    height: 80vh;
+    margin-top: 8vh;
+  }
   #popUpButton {
     width: 55px;
     height: 55px;

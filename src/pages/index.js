@@ -1,10 +1,8 @@
 import Head from "next/head";
-import gsap from "gsap";
 import { Cursor } from "../../cursor/index";
 import "react-creative-cursor/dist/styles.css";
 import SmoothScroll from "@/components/utils/SmoothScroll";
 import { NextSeo } from "next-seo";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 
 import Header from "@/components/Header/Header";
 import HomeAero from "@/components/Home/HomeAero";
@@ -20,14 +18,7 @@ import TopHomeAero from "@/components/Home/TopAero";
 import Preloader from "@/components/PreLoader/PreLoader";
 import HomeProject from "@/components/ProjectsSection/HomeProject";
 import ProjectsHome from "@/components/Home/ProjectsHome";
-import { useEffect, useState } from "react";
 import Modal from "../components/PopupForm/formModal";
-
-gsap.registerPlugin(ScrollTrigger);
-
-gsap.config({
-  nullTargetWarn: false,
-});
 
 export default function Home() {
 

@@ -343,11 +343,11 @@ useEffect(() => {
         <section className={`${styles['main-container']}`} id='section-2'>
         <div className={styles.contentContainer}>
           <div className={styles['service-detail-content']}>
-            <h4 className={`${styles['m-50']} fadeIn`} data-jelly id='fadeIn'>
+            <h2 className={`${styles['m-50']} fadeIn`} data-jelly id='fadeIn'>
               <span>
                 At Enigma Digital, we believe that a winning strategy isn't a rare gem—it's a well-crafted masterpiece that we create for our clients, time and again. Our strategic planning, rooted in deep insights, forms the bedrock of our operations. We blend strategic thinking, innovative ideas, broad marketing experience, and proven best practices to transform insights into actionable plans that deliver measurable results.
               </span>
-            </h4>
+            </h2>
             <p className={`${styles['m-50']} fadeIn`}
                 data-jelly id='fadeIn'>
               <span>
@@ -575,13 +575,14 @@ useEffect(() => {
                     data-cursor-size='100px'
                     data-cursor-exclusion>
                     <div className={`${styles['service-approach-text-box']} service-approach-text-box`} id='fadeIn'>
-                    <h3 className='color-primary'>Understanding Your Brand</h3>
+                    <h4 className='color-primary'>Understanding Your Brand</h4>
                     <p>
                         We believe that understanding your brand is the first step toward creating a successful strategy. We spend time getting to know your brand, your values, and your vision. This understanding allows us to create strategies that align with your brand and help you achieve your goals.
                     </p>
                     </div>
+
                     <div className={`${styles['service-approach-text-box']} service-approach-text-box`} id='fadeIn'>
-                    <h3 className='color-primary'>Identifying Your Target Audience</h3>
+                    <h4 className='color-primary'>Identifying Your Target Audience</h4>
                     <p>Knowing who your customers are is crucial for creating effective strategies. We conduct thorough research to identify your target audience, understand their needs, and find out what motivates them. This knowledge allows us to create strategies that resonate with your audience and drive engagement.</p>
                     </div>
                 </div>
@@ -589,11 +590,11 @@ useEffect(() => {
                     data-cursor-size='100px'
                     data-cursor-exclusion>
                     <div className={`${styles['service-approach-text-box']} service-approach-text-box`} id='fadeIn'>
-                    <h3 className='color-primary'>Analyzing the Competition</h3>
+                    <h4 className='color-primary'>Analyzing the Competition</h4>
                     <p> Understanding your competition is key to staying ahead. We conduct a detailed analysis of your competitors to understand their strategies, strengths, and weaknesses. This analysis helps us create strategies that give you a competitive edge.</p>
                     </div>
                     <div className={`${styles['service-approach-text-box']} service-approach-text-box`} id='fadeIn'>
-                    <h3 className='color-primary'>Creating a Unique Value Proposition</h3>
+                    <h4 className='color-primary'>Creating a Unique Value Proposition</h4>
                     <p>Your unique value proposition sets you apart from your competitors. We work with you to identify and articulate your unique value proposition. This proposition forms the core of our strategy and helps us create campaigns that highlight your unique strengths.
                     </p>
                     </div>
@@ -602,11 +603,11 @@ useEffect(() => {
                     data-cursor-size='100px'
                     data-cursor-exclusion>
                     <div className={`${styles['service-approach-text-box']} service-approach-text-box`} id='fadeIn'>
-                    <h3 className='color-primary'>Setting Measurable Goals</h3>
+                    <h4 className='color-primary'>Setting Measurable Goals</h4>
                     <p>We believe that every strategy should have clear, measurable goals. We work with you to set realistic goals for your campaigns. These goals guide our strategy and help us measure the success of our campaigns.</p>
                     </div>
                     <div className={`${styles['service-approach-text-box']} service-approach-text-box`} id='fadeIn'>
-                    <h3 className='color-primary'>Iterative Improvement</h3>
+                    <h4 className='color-primary'>Iterative Improvement</h4>
                     <p>Digital marketing is a dynamic field. We believe in the power of iterative improvement. We continually monitor the performance of our campaigns, gather data, and use this data to refine our strategies. This approach ensures that our strategies are always optimized for maximum performance.</p>
                     </div>
                 </div>
