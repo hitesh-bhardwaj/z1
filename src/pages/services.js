@@ -548,14 +548,14 @@ export default function services() {
         <section className="main-how">
           <div className="how-we-work">
             <div className="first-heading-box">
-              <h1 className="sub-first-heading line-anim">
+              <div className="sub-first-heading line-anim">
                 <span className="span">
                   This is <span className="sub-first-highlight"> how</span>
                 </span>
-              </h1>
-              <h1 className="sub-second-heading line-anim">
+              </div>
+              <div className="sub-second-heading line-anim">
                 <span className="span">we work</span>
-              </h1>
+              </div>
             </div>
           </div>
 

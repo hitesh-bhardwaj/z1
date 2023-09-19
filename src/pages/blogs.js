@@ -298,8 +298,8 @@ export default function blogs() {
                             data-cursor-size="120px"
                             data-cursor-color="#000"
                             alt="Blog-img"
-                            width={600}
-                            height={800}
+                            width={800}
+                            height={1160}
                             priority={false}
                           />
                         </div>
