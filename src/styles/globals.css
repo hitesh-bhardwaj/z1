@@ -4833,8 +4833,8 @@ https://unsplash.com/@vinomamba24
 }
 
 .banner .banner-row.center {
-  padding-right: 200px;
-  justify-content: flex-end;
+  padding-right: 0;
+  justify-content: center;
   text-align: center;
 }
 
@@ -5036,14 +5036,14 @@ span.row-letter:nth-child(20) {
   position: relative;
   -webkit-transform: translate3d(-25%, 0, 0);
   transform: translate3d(-25%, 0, 0);
-  -webkit-animation: marquee 5s linear infinite;
-  animation: marquee 5s linear infinite;
+  -webkit-animation: marquee 6s linear infinite;
+  animation: marquee 6s linear infinite;
   -webkit-animation-play-state: paused;
   animation-play-state: paused;
 }
 
 .marquee .row-title {
-  padding: 0 8vw;
+  padding: 0 3vw;
 }
 
 @-webkit-keyframes marquee {
@@ -6357,22 +6357,14 @@ a:hover {
   .marquee .marquee__inner {
     -webkit-transform: translate3d(calc(-25% + 10vw), 0, 0);
     transform: translate3d(calc(-25% + 10vw), 0, 0);
-    -webkit-animation: marquee-lg 5s linear infinite;
-    animation: marquee-lg 5s linear infinite;
+    -webkit-animation: marquee-lg 8s linear infinite;
+    animation: marquee-lg 8s linear infinite;
     -webkit-animation-play-state: paused;
     animation-play-state: paused;
   }
 
-  .marquee .row-title {
-    padding: 0 10vw;
-  }
 }
 
-@media screen and (max-width: 1920px) {
-  /* .container_hero_content #enigma-svg #e {
-    transform: scale(6) translate(-85px, -122px);
-  } */
-}
 
 @media screen and (max-width: 1536px) {
   .header-section {
@@ -7429,6 +7421,25 @@ a:hover {
 
   /* Marquee END */
   /* ================== Services Page Index END ====================== */
+
+/* ================== Works Page start 991px ====================== */
+.banner{
+  margin-top: 25vw;
+}
+.banner .banner-row .row-letter, .banner .banner-row .row-title{
+  font-size: 15vw;
+  letter-spacing: 0;
+}
+.banner .banner-row .row-col {
+  width: 100%;
+  margin-left: 0;
+}
+.studio-img-hero{
+  margin-top: 30vw;
+}
+
+/* ================== Works Page END 991px ====================== */
+
 
   /* ===================About Page ======================== */
   .gifsubtext span{
@@ -9444,17 +9455,6 @@ a:hover {
 
   /* ===================== Works Page Index END ==================== */
 
-  .banner .banner-row .row-col {
-    width: 85%;
-    margin: 0 auto;
-    justify-content: flex-start;
-    padding-top: 10vw;
-  }
-
-  .banner .banner-row .row-letter,
-  .banner .banner-row .row-title {
-    font-size: 17vw;
-  }
 
   .loader .loader-inner .image-block.image-3 {
     width: 200px;
@@ -9480,10 +9480,6 @@ a:hover {
     width: 200px;
     left: 4%;
     bottom: 25%;
-  }
-
-  .banner .banner-row.center {
-    padding-right: 0px;
   }
 
   .studio-img-hero {
