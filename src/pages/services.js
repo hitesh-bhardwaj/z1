@@ -459,9 +459,9 @@ export default function services() {
                 <span className="w-e">We</span>
               </div>
 
-              <h3 className="para-hero" id="service-anim">
+              <p className="para-hero" id="service-anim">
                 We are a globally recognised, award-winning UI UX design studio. Our comprehensive range of services leverages our full expertise to boost your digital presence to celestial heights.
-              </h3>
+              </p>
             </div>
 
             <h1
@@ -548,14 +548,14 @@ export default function services() {
         <section className="main-how">
           <div className="how-we-work">
             <div className="first-heading-box">
-              <div className="sub-first-heading line-anim">
+              <h1 className="sub-first-heading line-anim">
                 <span className="span">
                   This is <span className="sub-first-highlight"> how</span>
                 </span>
-              </div>
-              <div className="sub-second-heading line-anim">
+              </h1>
+              <h1 className="sub-second-heading line-anim">
                 <span className="span">we work</span>
-              </div>
+              </h1>
             </div>
           </div>
 
@@ -579,15 +579,15 @@ export default function services() {
               data-cursor-text="Define"
             >
               <div className="box-we">
-                <h1 className="disabled-work">Define</h1>
+                <h4 className="disabled-work">Define</h4>
               </div>
               <div className="box-we-para">
-                <h4>
+                <p>
                   <span>
                     Develop a thorough understanding of the project, audience,
                     and objectives to formulate a strategy.
                   </span>
-                </h4>
+                </p>
               </div>
             </div>
           </div>
@@ -608,15 +608,15 @@ export default function services() {
               data-cursor-text="Design"
             >
               <div className="box-we">
-                <h1 className="disabled-work">Design</h1>
+                <h4 className="disabled-work">Design</h4>
               </div>
               <div className="box-we-para">
-                <h4>
+                <p>
                   <span>
                     Craft a purposeful design to reflect the objectives and
                     indicate the direction for the entire project.
                   </span>
-                </h4>
+                </p>
               </div>
             </div>
           </div>
@@ -639,15 +639,15 @@ export default function services() {
             ></div>
             <div className="first-box-how box-anim-gsap">
               <div className="box-we">
-                <h1 className="disabled-work">Implement</h1>
+                <h4 className="disabled-work">Implement</h4>
               </div>
               <div className="box-we-para">
-                <h4>
+                <p>
                   <span>
                     Bring the design to life in the form of an interactive and
                     functional prototype. Review, refine and optimise.
                   </span>
-                </h4>
+                </p>
               </div>
             </div>
           </div>
@@ -669,15 +669,15 @@ export default function services() {
             <div className="box-anim-gsap develop-box-service">
               <div className="first-box-how">
                 <div className="box-we flex-start-remove">
-                  <h1 className="disabled-work">Develop</h1>
+                  <h4 className="disabled-work">Develop</h4>
                 </div>
                 <div className="box-we-para">
-                  <h4>
+                  <p>
                     <span>
                       Incorporate implementation and technical components into a
                       highly functional system, ready for review.
                     </span>
-                  </h4>
+                  </p>
                 </div>
               </div>
             </div>
@@ -701,15 +701,15 @@ export default function services() {
             ></div>
             <div className="first-box-how box-anim-gsap">
               <div className="box-we">
-                <h1 className="disabled-work">Deliver</h1>
+                <h4 className="disabled-work">Deliver</h4>
               </div>
               <div className="box-we-para">
-                <h4>
+                <p>
                   <span>
                     Review, refine, test and prepare final product for delivery.
                     Launch and continue to evolve over time.
                   </span>
-                </h4>
+                </p>
               </div>
             </div>
           </div>

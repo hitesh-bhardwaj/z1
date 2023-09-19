@@ -4112,10 +4112,10 @@ https://unsplash.com/@vinomamba24
 .first-box-service .what-we {
   font-size: 10.5vw;
   font-weight: 500;
-  color: var(--black2);
+  color: var(--black1);
 }
 
-.first-box-service h3 {
+.first-box-service p {
   font-size: 1.3vw;
   font-weight: 400;
   text-align: justify;
@@ -4224,7 +4224,7 @@ https://unsplash.com/@vinomamba24
   width: 30vw;
 }
 
-.service-cap-section .right-box h1 {
+.service-cap-section .right-box h2 {
   font-size: 3vw;
   color: var(--black1);
   margin-bottom: 3vw;
@@ -4232,7 +4232,7 @@ https://unsplash.com/@vinomamba24
   font-weight: 500;
 }
 
-.service-cap-section .right-box h4 {
+.service-cap-section .right-box p {
   max-width: 35vw;
   font-size: 1.2vw;
   font-weight: 400;
@@ -4260,7 +4260,7 @@ https://unsplash.com/@vinomamba24
   width: 50%;
 }
 
-.left-strategy-box h1 {
+.left-strategy-box h3 {
   font-size: 5vw;
   color: var(--black2);
   margin-bottom: 2vw;
@@ -4268,7 +4268,7 @@ https://unsplash.com/@vinomamba24
   font-weight: 500;
 }
 
-.left-strategy-box h4 {
+.left-strategy-box p {
   max-width: 33vw;
   font-size: 1.2vw;
   font-weight: 400;
@@ -4396,7 +4396,7 @@ https://unsplash.com/@vinomamba24
   margin-right: 1vw;
 }
 
-.box-we-para h4 {
+.box-we-para p {
   font-size: 1.7vw;
   color: var(--black1);
   font-weight: 500;
@@ -7177,23 +7177,22 @@ a:hover {
 
   .service-hero {
     width: 90%;
-    height: 40vh;
+    height: 65vh;
+    margin-bottom: 100px;
   }
 
   .first-box-service .what-we {
-    font-size: 11vw;
+    font-size: 20vw;
+    line-height: 1.2;
   }
 
-  .first-box-service h3 {
-    margin-left: 4.5vw;
-  }
-
-  .first-box-service h3 {
-    font-size: 2vw;
+  .first-box-service p {
+    font-size: 4vw;
+    margin-left: 0vw;
     position: absolute;
-    top: 31.5vw;
-    right: 0;
-    max-width: 40vw;
+    bottom: 0;
+    left: 0;
+    max-width: 85vw;
   }
 
   .second-box-service .do {
@@ -7205,9 +7204,9 @@ a:hover {
   }
 
   .do {
-    font-size: 11vw;
+    font-size: 20vw;
     position: static !important;
-    margin-left: 17vw;
+    margin-left: 35vw;
   }
 
   .mobile-video-service-section {
@@ -7265,11 +7264,11 @@ a:hover {
     font-size: 3vw;
   }
 
-  .service-cap-section .right-box h1 {
+  .service-cap-section .right-box h2 {
     font-size: 5vw;
   }
 
-  .service-cap-section .right-box h4 {
+  .service-cap-section .right-box p {
     font-size: 3vw;
     max-width: 40vw;
   }
@@ -7279,11 +7278,12 @@ a:hover {
     height: 60vh;
   }
 
-  .left-strategy-box h1 {
-    font-size: 7vw;
+  .left-strategy-box h3 {
+    font-size: 6.9vw;
   }
 
-  .left-strategy-box h4 {
+
+  .left-strategy-box p {
     max-width: 45vw;
     font-size: 2.8vw;
     text-align: justify;
@@ -7333,7 +7333,7 @@ a:hover {
     font-size: 5vw;
   }
 
-  .box-we-para h4 {
+  .box-we-para p {
     font-size: 3vw;
     text-align: justify;
   }
@@ -9175,20 +9175,16 @@ a:hover {
 
   /* ===================== Services Page Index ==================== */
   .service-hero {
-    height: 55vh;
+    height: 70vh;
+    margin-bottom: 30vw;
   }
 
   .first-box-service {
     width: 100%;
   }
 
-  .first-box-service .what-we {
-    font-size: 17vw;
-    margin-left: 2vw;
-  }
-
-  .first-box-service h3 {
-    display: none;
+  .first-box-service p {
+    bottom: 0;
   }
 
   .image-en {
@@ -9200,12 +9196,6 @@ a:hover {
     flex-direction: column;
     margin-left: 0;
     align-items: flex-end;
-  }
-
-  .do {
-    position: static !important;
-    font-size: 18vw;
-    margin-left: 35vw;
   }
 
   .second-box-service h3 {
@@ -9273,7 +9263,7 @@ a:hover {
   }
 
   .service-cap-section .left-box .sub-text {
-    font-size: 6vw;
+    font-size: 4vw;
   }
 
   .service-cap-section .right-box {
@@ -9281,11 +9271,11 @@ a:hover {
     margin-top: 6vw;
   }
 
-  .service-cap-section .right-box h1 {
+  .service-cap-section .right-box h2 {
     font-size: 7vw;
   }
 
-  .service-cap-section .right-box h4 {
+  .service-cap-section .right-box p {
     max-width: 100vw;
     font-size: 4vw;
   }
@@ -9319,11 +9309,11 @@ a:hover {
     margin: 10vw 0;
   }
 
-  .left-strategy-box h1 {
+  .left-strategy-box h3 {
     font-size: 10vw;
   }
 
-  .left-strategy-box h4 {
+  .left-strategy-box p {
     max-width: 100%;
     font-size: 4vw;
     width: 100%;
@@ -9333,7 +9323,7 @@ a:hover {
 
   /* How we Work  */
   .main-how{
-    padding-top: 10vw;
+    padding-top: 20vw;
   }
   .how-we-work .first-heading-box {
     width: 100%;
@@ -9356,17 +9346,18 @@ a:hover {
   }
 
   .main-how .top-box {
-    width: 85%;
+    width: 100%;
     height: 100%;
     align-items: flex-start;
     flex-direction: column;
+    margin: 0 5% 0 5%;
   }
 
   .main-how .top-box .first-box-how {
     width: 100%;
-    margin-bottom: 10vw;
+    margin-bottom: 7vw;
     flex-direction: column;
-    height: 20vh;
+    height: 25vh;
     align-items: flex-start;
   }
 
@@ -9389,13 +9380,12 @@ a:hover {
     margin-right: 2vw;
   }
 
-  .box-we-para h4 {
+  .box-we-para p {
     font-size: 4vw;
   }
 
   .main-how .top-box.last-box {
-    margin-left: 7vw;
-    width: 85%;
+    width: 100%;
   }
 
   /* How we Work  END */
@@ -10152,19 +10142,33 @@ a:hover {
   font-size: 5vw;
 }
 .main-how .top-box .first-box-how{
-  margin-bottom: 5vw;
+  margin-bottom: 7vw;
+  height: 22vh;
 }
 .service-marquee{
   padding: 5vw 0;
 }
-.service-cap-section .right-box h1{
-  font-size: 10vw;
-}
-.service-cap-section .right-box h4{
+.service-cap-section .left-box .sub-text{
   font-size: 5vw;
 }
-.left-strategy-box h4{
+.service-cap-section .right-box h2{
+  font-size: 10vw;
+}
+.service-cap-section .right-box p{
+  font-size: 5vw;
+}
+.left-strategy-box p{
   font-size: 4.5vw;
+}
+  .service-hero {
+    height: 100vh;
+    display: block;
+    padding: 20vh 0;
+}
+.first-box-service p{
+  font-size: 5vw;
+  top: 44vh;
+  height: 100%;
 }
 
 /* Service Page 480px End */
@@ -11137,7 +11141,7 @@ label.label:hover:before{
 /* Media Query Pop Up Form */
 @media screen and (max-width: 991px) {  
   .popUpButton-div{
-    top: 90vh
+    top: 85vh
   }  
   .popUp-form-step h2{
     font-size: 4vw;
