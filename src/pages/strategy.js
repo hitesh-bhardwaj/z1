@@ -373,7 +373,7 @@ useEffect(() => {
         </section>
 
 {/* Section 3 Portfolio */}
-    <section className={`${styles['service-portfolio']} ${styles['main-container']}`} 
+<section className={`${styles['service-portfolio']} ${styles['main-container']}`} 
         id='section-3'>
       <div id='servicePortfolioAnim' 
        className={styles['service-anim-portfolio']}>
@@ -394,7 +394,7 @@ useEffect(() => {
                  data-cursor-text="View More" id='fadeIn'>
               <div className={styles['service-card-top']}>
                 <div>
-                    <Image src='/assets/service-detail/portfolio-1.webp'
+                    <Image src='/assets/service-detail/portfolio/kedarkala.webp'
                         loading='lazy'
                         alt='portfolio image'
                         width={600}
@@ -423,7 +423,7 @@ useEffect(() => {
                  data-cursor-text="View More" id='fadeIn'>
               <div className={styles['service-card-top']}>
                 <div>
-                    <Image src='/assets/service-detail/portfolio-2.webp'
+                    <Image src='/assets/service-detail/portfolio/wragby.webp'
                          loading='lazy'
                          width={600}
                         height={600}
@@ -452,7 +452,7 @@ useEffect(() => {
                  data-cursor-text="View More" id='fadeIn'>
               <div className={styles['service-card-top']}>
                 <div>
-                    <Image src='/assets/service-detail/portfolio-3.webp'
+                    <Image src='/assets/service-detail/portfolio/dharan.webp'
                         alt='portfolio image'
                         width={600}
                         height={600}
@@ -481,7 +481,7 @@ useEffect(() => {
                  data-cursor-text="View More" id='fadeIn'>
               <div className={styles['service-card-top']}>
                 <div>
-                    <Image src='/assets/service-detail/portfolio-4.webp'
+                    <Image src='/assets/service-detail/portfolio/quickx.webp'
                         alt='portfolio image'
                         width={600}
                         height={600}
