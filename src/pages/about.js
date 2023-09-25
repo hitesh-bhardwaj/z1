@@ -212,6 +212,30 @@ export default function about() {
     });
   }, []);
 
+  useEffect(() => {
+    const aboutLogo = document.querySelector(".header-logo");
+    let ctx = gsap.context(() => {
+    gsap.to(aboutLogo, {
+      opacity: 0,
+      delay: 6.2
+    }) 
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".about-header",
+        start: "top -500",
+        scrub: 1,
+      }
+    });
+    
+    tl.to(aboutLogo, {
+      opacity: 1,
+      duration: 10,
+    });
+      
+    });
+    return () => ctx.revert();
+  }, []);
+
   console.clear();
 
   return (
