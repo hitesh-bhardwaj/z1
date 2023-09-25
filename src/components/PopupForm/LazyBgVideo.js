@@ -9,7 +9,7 @@ const LazyVideo = ({ src, title }) => {
       <div ref={ref}>
         {inView && (
           <video
-            poster='/assets/contact/poster-bg.webp'
+            // poster='/assets/contact/poster-bg.webp'
             className="VideoPopUp"
             id={`${title}-video`}
             autoPlay

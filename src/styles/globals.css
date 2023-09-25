@@ -3411,16 +3411,14 @@ textarea::placeholder {
 /* About Reel SVG */
 
 .action-icon {
-  position: fixed !important;
-  /* display: block; */
-  width: 6%;
-  cursor: pointer;
-  bottom: 1vw;
-  right: 1vw;
+  position: absolute !important;
+  width: fit-content;
+  bottom: -20px;
+  right: 7px;
   overflow: hidden;
-  opacity: 0.5;
-  display: none;
+  opacity: 1;
 }
+
 
 .action-icon .scroll-icon {
   display: inline-block;
@@ -6399,10 +6397,6 @@ a:hover {
     transform: scale(6) translate(-80px, -120px);
   }
 
-  .action-icon {
-    width: 7%;
-  }
-
   .action-icon .inner {
     left: 3vw;
     top: 3vw;
@@ -6511,10 +6505,6 @@ a:hover {
   .project-section-works {
     height: 380vh;
   }
-  .action-icon {
-    width: 7%;
-  }
-
   .container_hero_content #enigma-svg #e {
     transform: scale(6.2) translate(-80px, -123px);
   }
@@ -6555,9 +6545,7 @@ a:hover {
 }
 
 @media screen and (max-width: 1280px) {
-  .action-icon {
-    width: 8%;
-  }
+
 
   .action-icon .inner {
     left: 3vw;
@@ -6634,9 +6622,6 @@ a:hover {
     font-size: 6.5vw;
   }
 
-  .action-icon {
-    width: 10%;
-  }
 
   .action-icon .inner {
     left: 4.3vw;
@@ -7587,10 +7572,6 @@ a:hover {
   .container_hero_content .small_heading {
     top: 0.5vh;
     font-size: 2.2vw;
-  }
-
-  .action-icon {
-    width: 13%;
   }
 
   .action-icon .inner {
@@ -8762,13 +8743,14 @@ a:hover {
     transform: scale(3.5) translate(-546px, 469px);
   }
 
-  .action-icon svg {
-    width: 85px;
+  .action-icon img {
+    width: 18px;
   }
 
   .action-icon {
-    width: 85px;
-    bottom: 15vw;
+    width: fit-content;
+    bottom: 20px;
+    right: 3px;
 }
 
   .action-icon .inner {
@@ -10088,6 +10070,17 @@ a:hover {
 }
 .video-section-mobile{
   margin: 15vw 0 0;
+}
+
+/* About Page Action Icon */
+.action-icon img {
+  width: 14px;
+}
+
+.action-icon {
+  width: fit-content;
+  bottom: -20px;
+  right: 3px;
 }
 
 /* category Section */
