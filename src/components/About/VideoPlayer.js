@@ -59,7 +59,6 @@ const VideoPlayer = () => {
         }}
       /> */}
       <video ref={videoRef} 
-      preload="none"
       poster="/assets/about/videoOverlay.webp"
       src="/assets/reels/showreel.mp4"/>
       <div
