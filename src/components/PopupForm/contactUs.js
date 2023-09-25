@@ -4,7 +4,7 @@ import 'react-phone-number-input/style.css';
 import { useRouter } from 'next/router';
 import { Cursor } from "./../../../cursor/index";
 import "react-creative-cursor/dist/styles.css";
-import { gsap } from "gsap";
+import LazyVideo from "./LazyBgVideo";
 
 export default function ContactUs({props}) {
   // Create a ref to the dropdown element
@@ -271,15 +271,10 @@ const handleBudgetChange = (value) => {
   {/* Main Contact Form Start */}
   
   <div className="popUpFormContainer">
-    <video 
-      className="VideoPopUp"
-      muted
-      autoPlay
-      loop
-      // controls
-      src="/assets/icons/bg.webm">
-    </video>
-  
+    <LazyVideo
+      src="/assets/contact/bg.webm"
+      title="PopUp Form BG Video" />
+        
   {/* Form Step 1 */}
   {step === 1 && (
     <div className="form-sections">

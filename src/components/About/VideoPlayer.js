@@ -8,10 +8,10 @@ const VideoPlayer = () => {
 
   const togglePlay = () => {
     const video = videoRef.current;
-    const overlay = document.getElementById("overlay");
+    // const overlay = document.getElementById("overlay");
 
-    // Set opacity to 0 to make the image disappear
-    overlay.style.opacity = 0;
+    // // Set opacity to 0 to make the image disappear
+    // overlay.style.opacity = 0;
 
     if (isPlaying) {
       video.pause();
@@ -44,7 +44,7 @@ const VideoPlayer = () => {
       data-cursor-size="100px"
       data-cursor-color="#000"
     >
-      <Image
+      {/* <Image
         width={1920}
         height={1080}
         src="/assets/about/videoOverlay.webp"
@@ -57,8 +57,11 @@ const VideoPlayer = () => {
           width: "auto",
           height: "auto",
         }}
-      />
-      <video ref={videoRef} src="/assets/reels/showreel.mp4"/>
+      /> */}
+      <video ref={videoRef} 
+      preload="none"
+      poster="/assets/about/videoOverlay.webp"
+      src="/assets/reels/showreel.mp4"/>
       <div
         className="play-pause-button"
         style={playPauseButtonStyle}
@@ -67,16 +70,16 @@ const VideoPlayer = () => {
         {isPlaying ? (
           <div className={styles.svgBackground}>
             <Image
-              width={250}
-              height={250} 
+              width={350}
+              height={350} 
               src="/assets/icons/pause.png"
               alt="showreel pause" />
           </div>
         ) : (
           <div className={styles.svgBackground}>
           <Image
-              width={250}
-              height={250}  
+              width={350}
+              height={350}  
               src="/assets/icons/play.png"
               alt="showreel play" />
           </div>

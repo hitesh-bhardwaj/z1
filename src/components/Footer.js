@@ -114,8 +114,8 @@ function Footer() {
                 src="/assets/footer-main/Vector.png"
                 className="footer-dark-img"
                 alt="Foter contact image"
-                width={150}
-                height={150}
+                width={500}
+                height={500}
               />
             </div>
             <div
