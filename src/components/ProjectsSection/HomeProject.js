@@ -1,5 +1,3 @@
-'use client'
-
 import styles from './styles.module.css'
 import { projects } from './ProjectData';
 import Double from './Double';

@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import ContactUs from './contactUs';
 import { easeInOut, motion } from "framer-motion";
 import Image from 'next/image';
+import { Cursor } from "./../../../cursor/index";
+import "react-creative-cursor/dist/styles.css";
 
 export default function Modal() {
   // Define a state variable to track the modal's display state
@@ -26,15 +28,24 @@ export default function Modal() {
     setModalOpen(false);
   }
 
+  const resetFormCallback = () => {
+    // Implement the logic to reset the form fields in this function
+    // You can also call closeModal if needed
+    // Example:
+    closeModal(); // Close the modal when resetting the form
+  };
+
   // Function to close the modal when clicking outside of it
   const handleOutsideClick = (event) => {
     if (event.target === event.currentTarget) {
       closeModal();
+      resetForm();
     }
   }
 
   return (
     <>
+
     {/* Your HTML content here */}
     <motion.div 
         className='popUpButton-div'
@@ -48,7 +59,19 @@ export default function Modal() {
       onClick={openModal}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}>
-      <img alt="Image" className='popUpImg'
+      <Image 
+        data-cursor-size='80px'
+        data-cursor-exclusion
+        width={100}
+        height={100}
+        className='popUpRotate'
+        alt='Hire Us Image'
+        src="/assets/icons/hire-us.svg"
+      />
+      <Image 
+        height={50}
+        width={50}
+        alt="Image" className='popUpImg'
         src={isHovered ? '/assets/icons/form-pen.gif' : '/assets/icons/form-pen.png'}
       />
     </button>
@@ -77,7 +100,7 @@ export default function Modal() {
             />
           </button>
         </div>
-        <ContactUs />
+        <ContactUs resetFormCallback={resetFormCallback} />
       </div>
     </div>
     </div>

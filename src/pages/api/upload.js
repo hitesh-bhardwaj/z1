@@ -1,5 +1,4 @@
 // // upload.js
-
 import formidable from "formidable";
 import fs from "fs";
 import path from "path";
@@ -57,4 +56,3 @@ export default (req, res) => {
     ? console.log("GET")
     : res.status(404).send("");
 };
-

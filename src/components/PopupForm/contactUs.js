@@ -2,38 +2,77 @@ import { useEffect, useRef, useState } from "react";
 import PhoneInput, { isValidPhoneNumber } from 'react-phone-number-input';
 import 'react-phone-number-input/style.css';
 import { useRouter } from 'next/router';
+import { Cursor } from "./../../../cursor/index";
+import "react-creative-cursor/dist/styles.css";
 
+export default function ContactUs({ resetFormCallback }) {
+  // Create a ref to the dropdown element
+  const dropdownRef = useRef(null);
 
-export default function ContactUs(props) {
     const [step, setStep] = useState(1);
     const router = useRouter();
-    const totalSteps = 4; // Define the total number of steps
+    const totalSteps = 6; // Define the total number of steps
     const [attemptedSubmitName, setAttemptedSubmitName] = useState(false); // New state variable
     const [attemptedSubmitService, setAttemptedSubmitService] = useState(false);
     const [attemptedSubmitContact, setAttemptedSubmitContact] = useState(false);
     const [messageStatus, setMessageStatus] = useState(null);  
     const [phoneNumberErrorMessage, setPhoneNumberErrorMessage] = useState("");
-  
+    const [attemptedSubmitBudget, setAttemptedSubmitBudget] = useState(false);
+    const [attemptedSubmitOrgName, setAttemptedSubmitOrgName] = useState(false);
+    const [attemptedSubmitRole, setAttemptedSubmitRole] = useState(false);
   
     // User information
     const [firstName, setFirstName] = useState("");
     const [lastName, setLastName] = useState("");
   
     // Service information
-    const [selectedService, setSelectedService] = useState("");
+    const [selectedService, setSelectedService] = useState("Select Service");
+    const [isServiceDropdownOpen, setIsServiceDropdownOpen] = useState(false); // Add this state variable
+    const serviceOptions = ["Select Service","UI-UX", "Website", "Marketing", "Branding"];
   
     // Contact information
     const [phoneNumber, setPhoneNumber] = useState("");
     const [email, setEmail] = useState("");
+    const [orgName, setOrgName] = useState("");
+    const [role, setRole] = useState("");
   
     // File and message
     const [filePath, setFilePath] = useState(null);
     const [file, setFile] = useState(null);
     const [message, setMessage] = useState("");
+    const [fileErrorMessage, setFileErrorMessage] = useState(""); // New state variable for file error message
+    const MAX_FILE_SIZE = 10 * 1024 * 1024; // 10MB in bytes
+    const [isFileSelected, setIsFileSelected] = useState(false);
   
   // Valid Email
   const [isEmailValid, setIsEmailValid] = useState(true);
   const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+  // Budget Selector
+  const [selectedBudget, setSelectedBudget] = useState("");
+  const [budgetRangeText, setBudgetRangeText] = useState("");
+  const budgetRanges = [
+    "0 $",
+    "1-10k $",
+    "10k-25k $",
+    "25k-50k $",
+    "50k-100k $",
+    "Above 100k $",
+  ];
+  // Create a mapping object
+const budgetRangeMapping = {
+  0: "0 $",
+  1: "0-10k $",
+  2: "10k-25k $",
+  3: "25k-50k $",
+  4: "50k-100k $",
+  5: "Above 100k $",
+};
+
+const handleBudgetChange = (value) => {
+  setSelectedBudget(value);
+  setBudgetRangeText(budgetRangeMapping[value]);
+};
   
   const nextStep = () => {
       if (step === 1) {
@@ -44,17 +83,10 @@ export default function ContactUs(props) {
           setStep(step + 1);
         }
       } else if (step === 2) {
-        if (selectedService === "") {
-          setAttemptedSubmitService(true);
-        } else {
-          setAttemptedSubmitService(false);
-          setStep(step + 1);
-        }
-      } else if (step === 3) {
           if (!isValidPhoneNumber(phoneNumber)) {
             setAttemptedSubmitContact(true);
             // Set an appropriate error message for an invalid phone number
-            setPhoneNumberErrorMessage("Phone number is not valid");
+            setPhoneNumberErrorMessage("Phone number is not valid.");
           } else if (phoneNumber === "") {
             setAttemptedSubmitContact(true);
             // Clear any previous error message for phone number
@@ -65,7 +97,28 @@ export default function ContactUs(props) {
             // Clear any previous error message for phone number
             setPhoneNumberErrorMessage("");
           }
-        }
+      } else if (step === 3) {
+        if (selectedService === "Select Service") {
+          setAttemptedSubmitService(true);
+        } else {
+          setAttemptedSubmitService(false);
+          setStep(step + 1);
+        } 
+      } else if (step === 4) {
+        if (selectedBudget === "0") {
+          setAttemptedSubmitBudget(true);
+        } else {
+          setAttemptedSubmitBudget(false);
+          setStep(step + 1);
+        } 
+      } else if (step === 5) {
+        if (orgName === "" || role === "") {
+          setAttemptedSubmitOrgName(true);
+        } else {
+          setAttemptedSubmitOrgName(false);
+          setStep(step + 1);
+        } 
+      }
     };
     
     const prevStep = () => {
@@ -75,22 +128,71 @@ export default function ContactUs(props) {
   
     const handleFileChange = (event) => {
       const selectedFile = event.target.files[0];
-      
+  
       if (selectedFile) {
         // Check if the selected file type is allowed
         if (isValidFileType(selectedFile)) {
+          // Check if the file size is within the limit
+          if (selectedFile.size <= MAX_FILE_SIZE) {
           setFile(selectedFile);
-          setFilePath(URL.createObjectURL(selectedFile));
+          setIsFileSelected(true);
+          setFileErrorMessage("");
         } else {
-          alert("Invalid file type. Please select a PDF, DOCX, or PPTX file.");
+          setFileErrorMessage("File size exceeds the limit of 10MB.");
         }
       }
+       else {
+        setFileErrorMessage("Invalid file type. Please select a pdf, docx, or pptx file.");
+        }
+      } else {
+        // If no file is selected, clear the file and reset the flag
+        setFile(null);
+        setIsFileSelected(false);
+        event.target.value = ""; // Reset the file input value
+      }
+    };
+  
+    const handleFileRemove = () => {
+      // Clear the file and reset the flag
+      setFile(null);
+      setIsFileSelected(false);
+      document.getElementById("attach").value = ""; // Reset the file input value
     };
   
     const isValidFileType = (file) => {
       const allowedTypes = ["application/pdf", "application/vnd.openxmlformats-officedocument.wordprocessingml.document", "application/vnd.openxmlformats-officedocument.presentationml.presentation"];
       return allowedTypes.includes(file.type);
     };
+
+    // const resetForm = () => {
+    //   setStep(1);
+    //   setAttemptedSubmitName(false);
+    //   setAttemptedSubmitService(false);
+    //   setAttemptedSubmitContact(false);
+    //   setMessageStatus(null);
+    //   setPhoneNumberErrorMessage("");
+    //   setAttemptedSubmitBudget(false);
+    //   setAttemptedSubmitOrgName(false);
+    //   setAttemptedSubmitRole(false);
+    
+    //   setFirstName("");
+    //   setLastName("");
+    //   setSelectedService("Select Service");
+    //   setPhoneNumber("");
+    //   setEmail("");
+    //   setOrgName("");
+    //   setRole("");
+    //   setFilePath(null);
+    //   setFile(null);
+    //   setMessage("");
+    //   setFileErrorMessage("");
+    //   setIsFileSelected(false);
+    //   setIsEmailValid(true);
+    
+    //   // Reset the budget and budgetRangeText values
+    //   setSelectedBudget("");
+    //   setBudgetRangeText("");
+    // };
   
   const handleFileUpload = async () => {
       if (file) {
@@ -127,13 +229,13 @@ export default function ContactUs(props) {
       formData.append("firstName", firstName);
       formData.append("lastName", lastName);
       formData.append("selectedService", selectedService);
-  
-      // Add contact information to the formData
+      formData.append("selectedBudget", selectedBudget);
       formData.append("phoneNumber", phoneNumber);
       formData.append("email", email);
-  
+      formData.append("orgName", orgName);
+      formData.append("role", role);
+
       // Check if a file is selected
-  
       const uploadedFilePath = await handleFileUpload();
   
       if (uploadedFilePath !== null) {
@@ -153,9 +255,12 @@ export default function ContactUs(props) {
           },
           body: JSON.stringify({
             message: `Name: ${firstName} ${lastName}
-                    \nRequested Service: ${selectedService}
                     \nConatct Number: ${phoneNumber}
                     \nEmail: ${email}
+                    \nRequested Service: ${selectedService}
+                    \nBudget Range: ${budgetRangeText}
+                    \nOrganisation Name: ${orgName}
+                    \nYour Role: ${role}
                     \nFile Url: ${uploadedFilePath}
                     \nMessage: ${message}`,
           }),
@@ -165,6 +270,7 @@ export default function ContactUs(props) {
           setMessageStatus('success');
           setTimeout(() => {
             router.push('/thankyou');
+            resetForm(); // Call the resetForm function here
           }, 500);
         } else {
           setMessageStatus('error');
@@ -174,193 +280,430 @@ export default function ContactUs(props) {
         setMessageStatus('error');
       }
     };
-    
-    // Calculate the progress percentage
-    // const progressPercentage = (step / totalSteps) * 100;
-  
+
+    useEffect(() => {
+      function handleClickOutside(event) {
+        if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+          setIsServiceDropdownOpen(false);
+        }
+      }
+      document.addEventListener("mousedown", handleClickOutside);
+      return () => {
+        document.removeEventListener("mousedown", handleClickOutside);
+      };
+    }, []);
+
     return (
       <>
-  
   {/* Main Contact Form Start */}
   
-  <div className="relative h-full w-full">
+  <div className="popUpFormContainer">
+    <video 
+      className="VideoPopUp"
+      muted
+      autoPlay
+      loop
+      // controls
+      src="/assets/icons/bg.webm">
+    </video>
   
-  {/* Progress bar */}
-  {/* <div className="progress-bar">
-  <div
-    className="progress"
-    role="progressbar"
-    style={{ width: `${progressPercentage}%` }}
-    aria-valuenow={progressPercentage}
-    aria-valuemin="0"
-    aria-valuemax="100"
-  >
-    {progressPercentage.toFixed(0)} %
-  </div>
-  </div> */}
-  
+  {/* Form Step 1 */}
   {step === 1 && (
   <div className="form-sections">
     <div className="popUp-form-step">
       <h2>
-        01 —<span className="color-grey"> 04</span>
+        <span className="color-primary">01</span> / 06
       </h2>
     </div>
-  <div className="mt-10"><h1>Hi<span className="color-primary"> There !</span></h1></div>
-  <div className="m-10"><p>What's Your Name</p></div>
-  <div className="flex gap-10 name-input-popUp-Form">
-        <div className="pop-up-div-form">
-          <input className="name-input-form"
-                type="text"
-                placeholder="First Name"
-                value={firstName}
-                onChange={(e) => setFirstName(e.target.value)}
-            />
-            {attemptedSubmitName && firstName === "" && (
-                  <p className="error">Please enter your name</p>
-              )}
+  <div>
+    <h1>Hi
+      <span className="color-primary"> There!</span>
+    </h1>
+  </div>
+  <div>
+    <p>What is Your Name?</p>
+  </div>
+
+  <div className="popUp-form-content">
+    <div className="pop-up-div-form">
+      <input className="name-input-form"
+        type="text"
+        name="fname"
+        placeholder="First Name*"
+        value={firstName}
+        onChange={(e) => setFirstName(e.target.value)}
+      />
+        {attemptedSubmitName && firstName === "" && (
+          <p className="error">Please enter your name.</p>
+        )}  
+    </div>
+    <div className="pop-up-div-form">
+      <input className="name-input-form"
+        type="text"
+        name="lname"
+        placeholder="Last Name"
+        value={lastName}
+        onChange={(e) => setLastName(e.target.value)}
+      />
+    </div>
+  </div>
   
-        </div>
-        <div className="pop-up-div-form">
-          <input className="name-input-form"
-                type="text"
-                placeholder="Last Name"
-                value={lastName}
-                onChange={(e) => setLastName(e.target.value)}
-            />
-        </div>
-      </div>
-  
-  <div className="form-button m-10">
+    <div className="form-button">    
       <button
-          type="button"
-          onClick={nextStep}
+        type="button"
+        onClick={nextStep}
       >
-          Next
+      <span>
+        Next
+      </span>
+      <img src="/assets/icons/next.png" />
       </button>
     </div>
   </div>
   )}
+
+{/* Form Step 1 END*/}
   
+{/* Form Step 2 */}
   {step === 2 && (
-  <div className="form-sections">
-  <div className="popUp-form-step">
+  <div className="form-sections step2">
+    <div className="popUp-form-step">
       <h2>
-        02 —<span className="color-grey"> 04</span>
+        <span className="color-primary">02</span> / 06
       </h2>
     </div>
-  <div className="mt-10"><h1>Hello,<span className="color-primary capitalize"> {firstName} !</span></h1></div>
-  <div className="m-10"><p>What can we help you with?</p></div>
-  <div>
-    <select
-      value={selectedService}
-      onChange={(e) => setSelectedService(e.target.value)}
-    >
-          <option className="form-select-option" value="">Select Service</option>
-          <option value="UI-UX">UI-UX</option>
-          <option value="Website">Website</option>
-          <option value="Marketing">Marketing</option>
-          <option value="Branding">Branding</option>
-    </select>
-      {attemptedSubmitService && selectedService === "" && (
-          <p className="error">Please select a service</p>
-      )}
-  </div>
-  <div className="form-button mt-10 flex gap-5">
-      <button onClick={prevStep}>Previous</button>
-      <button onClick={nextStep}>Next</button>
-  </div>
-  </div>
-  )}
-  
-  
-  {step === 3 && (
-  <div className="form-sections">
-  <div className="popUp-form-step">
-      <h2>
-        03 —<span className="color-grey"> 04</span>
-      </h2>
+    <div className="step2">
+      <h1>Nice to meet you,
+        <span className="color-primary capitalize"> {firstName}!</span>
+      </h1>
     </div>
-      <div className="mt-10"><h1 className="color-primary">Great !</h1></div>
-      <div className="m-10"><p>Please provide your contact information.</p></div>
+    
+    <div>
+      <p>Please provide your contact information?</p>
+    </div>
+    
+    <div className="popUp-form-content step2">
       <div>
-    <PhoneInput
-      international
-      defaultCountry="US"
-      placeholder="Your Number"
-      value={phoneNumber}
-      error={!phoneNumber ? 'Phone number is required' : !isValidPhoneNumber(String(phoneNumber)) ? 'Phone number is not valid' : undefined}
-      onChange={(value) => setPhoneNumber(value)}
-    />
-    {attemptedSubmitContact && phoneNumber === "" && (
-      <p className="error">Phone number is required</p>
-    )}
-    {attemptedSubmitContact && phoneNumber && !isValidPhoneNumber(String(phoneNumber)) && (
-      <p className="error">Phone number is not valid</p>
-    )}
-  </div>
-  
-      
-      <div>
-      <input
+        <PhoneInput
           type="text"
-          placeholder="Your Email"
+          name="number"
+          international
+          defaultCountry="US"
+          placeholder="Your Number*"
+          countryCallingCodeEditable={false}
+          value={phoneNumber}
+          error={!phoneNumber ? 'Please enter your number.' : !isValidPhoneNumber(String(phoneNumber)) ? 'Phone number is not valid' : undefined}
+          onChange={(value) => setPhoneNumber(value)}
+        />
+        {attemptedSubmitContact && phoneNumber === "" && (
+          <p className="error">Phone number is required</p>
+        )}
+        {attemptedSubmitContact && phoneNumber && !isValidPhoneNumber(String(phoneNumber)) && (
+          <p className="error">Phone number is not valid</p>
+        )}
+      </div>
+
+      <div>
+        <input
+          type="email"
+          name="email"
+          placeholder="Your Email*"
           value={email}
           onChange={(e) => {setEmail(e.target.value);
           setIsEmailValid(emailRegex.test(e.target.value));
           }}
-      />
-      {attemptedSubmitContact && email === "" && (
-          <p className="error">Email is required.</p>
-      )}
-      {!isEmailValid && (
-          <p className="error">This email looks a bit weird.</p>
-      )}
-      </div>
+        />
+        {attemptedSubmitContact && email === "" && (
+            <p className="error">Please enter your email.</p>
+        )}
+        {!isEmailValid && (
+            <p className="error">This email looks a bit weird.</p>
+        )}
+        </div>
+    </div>
   
-      <div className="form-button mt-10 flex gap-5"> 
-          <button onClick={prevStep}>Previous</button>
-          <button onClick={nextStep}>Next</button>
-      </div>
+  <div className="back-button">
+    <div 
+        data-cursor-size="60px"
+        data-cursor-exclusion>
+      <button
+          type="button"
+          onClick={prevStep}
+        >
+        <img src="/assets/icons/arrow-back.png" />
+      </button>
+    </div>
+  </div>
+    
+
+    <div className="form-button">    
+      <button
+          type="button"
+          onClick={nextStep}
+      >
+      <span>
+        Next
+      </span>
+      <img src="/assets/icons/next.png" />
+      </button>
+  </div>
   </div>
   )}
-  
-  
-  {step === 4 && (
+{/* Form Step 2 END*/}
+
+
+{/* Form Step 3 */}
+  {step === 3 && (
   <div className="form-sections">
-  <div className="popUp-form-step">
+    <div className="popUp-form-step">
       <h2>
-        04 —<span className="color-grey"> 04</span>
+        <span className="color-primary">03</span> / 06
       </h2>
     </div>
-      <div className="mt-10"><p>Do you have a brief?</p></div>
-      <div className='form-attach'>
-          <input
-              type="file"
-              id='attach'
-              name="myFile"
-              accept=".pdf,.docx,.pptx"
-              onChange={handleFileChange}
-              hidden
-          />
-          <button>
-              <img src="/assets/icons/attach.png" />
-              <label className="label" htmlFor='attach'>
-              Add Attachment
-              </label>
-          </button>
-          <div className='mt-3'>
-              <span id='file-chosen'>{file ? file.name : 'No file chosen'}</span>
+    <div>
+      <h1>Superb, <span className="color-primary">{firstName}!</span></h1>
+    </div>
+    <div>
+      <p>What can we help you with?</p>
+    </div>
+        <div className="popUp-form-content step3">
+          <div className={`dropdown ${attemptedSubmitService && selectedService === "Select Service" ? "error" : ""}`} ref={dropdownRef}>
+            <div
+              onClick={() => {
+                setIsServiceDropdownOpen(!isServiceDropdownOpen);
+              }}
+              className="dropdown-btn"
+            >
+              {selectedService}
+              <span
+                className={isServiceDropdownOpen ? "fa fa-caret-up" : "fa fa-caret-down"}
+              />
+            </div>
+            <div
+              className="dropdown-content"
+              style={{ display: isServiceDropdownOpen ? "block" : "none" }}
+            >
+              {serviceOptions.map((option) => (
+                <div
+                  key={option}
+                  onClick={() => {
+                    setSelectedService(option);
+                    setIsServiceDropdownOpen(false);
+                  }}
+                  className="item"
+                >
+                  {option}
+                </div>
+              ))}
+            </div>
           </div>
+          {attemptedSubmitService && selectedService === "Select Service" && (
+            <p className="error">Please select a service.</p>
+          )}
+        </div>
+  
+  {/* Button step 3 */}
+    <div>
+      <button
+          className="back-button"
+          type="button"
+          onClick={prevStep}
+        >
+        <img src="/assets/icons/arrow-back.png" />
+      </button>
+    </div>
+    <div className="form-button">    
+      <button
+          type="button"
+          onClick={nextStep}
+      >
+      <span>
+        Next
+      </span>
+      <img src="/assets/icons/next.png" />
+      </button>
+  </div>
+  </div>
+  )}  
+{/* Form Step 3 END*/}
+
+{/* Form Step 4 */}
+{step === 4 && (
+  <div className="form-sections step4">
+    <div className="popUp-form-step">
+      <h2>
+        <span className="color-primary">04</span> / 06
+      </h2>
+    </div>
+    <div>
+      <p>What's your budget range for this project?</p>
+    </div>
+    
+    <div className="budget-slider-container">
+      <input
+        type="range"
+        min="0"
+        max="5"
+        step="1"
+        value={selectedBudget}
+        onChange={(e) => handleBudgetChange(e.target.value)}
+        className="budget-slider"
+      />
+      <h3>
+        Approximate Budget
+      </h3>
+      <div className="budget-range">{budgetRanges[selectedBudget]}</div>
+      {attemptedSubmitBudget && selectedBudget === "0" && (
+        <p className="error">Please select a budget range.</p>
+      )}
+    </div>
+
+{/* Button step 4 */}
+    <div>
+      <button
+          className="back-button"
+          type="button"
+          onClick={prevStep}
+        >
+        <img src="/assets/icons/arrow-back.png" />
+      </button>
+    </div>
+    <div className="form-button">    
+      <button
+          type="button"
+          onClick={nextStep}
+      >
+      <span>
+        Next
+      </span>
+      <img src="/assets/icons/next.png" />
+      </button>
+  </div>
+  </div>
+)}
+{/* Form Step 4 END*/}
+
+{/* Form Step 5 */}
+{step === 5 && (
+  <div className="form-sections step4">
+    <div className="popUp-form-step">
+      <h2>
+        <span className="color-primary">05</span> / 06
+      </h2>
+    </div>
+  <div>
+    <p>What organisation do you work with?</p>
+  </div>
+    <div className="pop-up-div-form m-5">
+      <input
+        type="text"
+        name="oname"
+        placeholder="Your Organisation*"
+        value={orgName}
+        onChange={(e) => setOrgName(e.target.value)}
+      />
+    </div>
+  <div>
+    <p>What's your role there?</p>
+  </div>
+    <div className="pop-up-div-form m-5">
+      <input
+        type="text"
+        name="role"
+        placeholder="Your Role*"
+        value={role}
+        onChange={(e) => setRole(e.target.value)}
+      />
+      {attemptedSubmitOrgName && orgName === "" || role === "" && (
+      <p className="error">Please fill above details.</p>
+    )}
+    </div>
+    <div>
+        <button
+          className="back-button"
+          type="button"
+          onClick={prevStep}
+        >
+        <img src="/assets/icons/arrow-back.png" />
+      </button>
+    </div>
+  
+    <div className="form-button">    
+      <button
+        type="button"
+        onClick={nextStep}
+      >
+      <span>
+        Next
+      </span>
+      <img src="/assets/icons/next.png" />
+      </button>
+    </div>
+  </div>
+  )}
+
+{/* Form Step 5 END*/}
+
+{/* Form Step 6 */}
+  {step === 6 && (
+  <div className="form-sections step4">
+    <div className="popUp-form-step">
+      <h2>
+        <span className="color-primary">06</span> / 06
+      </h2>
+    </div>
+      <div>
+        <p>Do you have any docs detailing your needs?</p>
       </div>
+
+      <div className="form-attach">
+        <input
+          type="file"
+          id="attach"
+          name="myFile"
+          accept=".pdf,.docx,.pptx"
+          onChange={handleFileChange}
+          hidden
+        />
+        <button>
+          <label className="label" htmlFor="attach">
+            <img src="/assets/icons/attach.png" />
+            Feel free to attach it!
+          </label>
+        </button>
+        {isFileSelected ? (
+          <span id="file-chosen">
+            {file ? file.name : "No file chosen"}
+            <button onClick={handleFileRemove}>✖</button>
+          </span>
+        ) : (
+          <span id="file-chosen">No file chosen</span>
+        )}
+        <div className="mt-3">
+          <p className="terms">* Only .pdf, .ppt & .doc is allowed. Max file size is 10 Mb.</p>
+        </div>
+        {fileErrorMessage && <p className="error">{fileErrorMessage}</p>}
+      </div>
+
       <div className="popUp-for-TextArea">
           <textarea
-              placeholder="Message"
+              placeholder="Your Message"
               value={message}
               onChange={(e) => setMessage(e.target.value)}
           />
       </div>
-      <div className='form-button-2 mt-10'>
+
+      <div>
+        <button
+          className="back-button"
+          type="button"
+          onClick={prevStep}
+        >
+        <img src="/assets/icons/arrow-back.png" />
+      </button>
+    </div>
+
+      <div className='form-button-2'>
           <button className='btn_CTA' onClick={handleSubmit}>
               <span className="btn_CTA-ripple">
               <span></span>
@@ -369,19 +712,17 @@ export default function ContactUs(props) {
               <span data-text='Submit'>Submit</span>
               </span>
           </button>
-          {messageStatus === 'success' && (
-              <p className="text-green-400">Thanks, Your details have been submitted.</p>
+      </div>
+      {messageStatus === 'success' && (
+              <p className="text-green-400">Thank You, your details have been submitted.</p>
           )}
           {messageStatus === 'error' && (
-              <p>Failed to send the message.</p>
+              <p>Failed to send the message. Please try again later.</p>
           )}
-      </div>
-      {/* <div className="form-button mt-10 flex gap-5"> 
-          <button onClick={prevStep}>Previous</button>
-          <button onClick={handleSubmit}>Submit</button>
-      </div>*/}
-      </div>
+    </div>
       )}
+{/* Form Step 6 END*/}
+
       </div>
       </>
       

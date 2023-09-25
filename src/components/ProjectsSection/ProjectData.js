@@ -2,7 +2,7 @@ export const projects = [
     {
         name: "Patronum",
         client: "Patronum",
-        description: "A partnership between Google & SN37.",
+        description: "Branding, Web Design, Marketing",
         src: "1.webp",
         year: 2023,
         link: "patronum",
@@ -10,7 +10,7 @@ export const projects = [
     {
         name: "Dharan",
         client: "Dharan",
-        description: "Portfolio site for Dharan.",
+        description: "E-Commerce, Web Design, Development",
         src: "2.webp",
         year: 2023,
         link: "dharan"
@@ -18,7 +18,7 @@ export const projects = [
     {
         name: "Kedarkala",
         client: "Kedarkala",
-        description: "Portfolio site for Kedarkala.",
+        description: "Branding, Web Design",
         src: "3.webp",
         year: 2022,
         link: "kedarkala"
@@ -26,7 +26,7 @@ export const projects = [
     {
         name: "Grand City Mall",
         client: "GCM",
-        description: "Portfolio site for GCM.",
+        description: "Web Design, Development",
         src: "4.webp",
         year: 2022,
         link: "gcm"
@@ -34,7 +34,7 @@ export const projects = [
     {
         name: "Quick X",
         client: "Quick X",
-        description: "The online presence for Quick X",
+        description: "Branding, Web Design, Marketing",
         src: "5.webp",
         year: 2023,
         link: "quickx"
@@ -42,15 +42,15 @@ export const projects = [
     {
         name: "Certvault",
         client: "Certvault",
-        description: "An Italian animation studio.",
+        description: "UX Planning, UI Design",
         src: "6.webp",
         year: 2022,
-        link: "pdtl"
+        link: "certvault"
     },
     {
         name: "DMTCA",
         client: "DMTCA",
-        description: "An Italian animation studio.",
+        description: "Branding, Web Design",
         src: "7-2.webp",
         year: 2022,
         link: "dmtca"
@@ -58,7 +58,7 @@ export const projects = [
     {
         name: "PDTL",
         client: "PDTL",
-        description: "An Italian animation studio.",
+        description: "Web Design, Branding, Development",
         src: "9.webp",
         year: 2022,
         link: "pdtl"
@@ -66,7 +66,7 @@ export const projects = [
     {
         name: "Wragby",
         client: "Wragby",
-        description: "An Italian animation studio.",
+        description: "UI/UX Design, Web Design, Development",
         src: "10.webp",
         year: 2022,
         link: "wragby"
@@ -74,7 +74,7 @@ export const projects = [
     {
         name: "Patra",
         client: "Patra",
-        description: "An Italian animation studio.",
+        description: "UX Planning, UI Design, Development",
         src: "8.webp",
         year: 2022,
         link: "patra"
