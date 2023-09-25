@@ -326,7 +326,7 @@ useEffect(() => {
                 UI/UX
               </h1>
               <p className={`${styles['hero-top-para']}`} id='service-anim'>
-                Our comprehensive range of services leverages our full expertise to boost your digital presence to celestial heights.
+                We seamlessly blend physical and digital to craft exceptional experiences that boost revenue, conversions, and loyalty through meticulous attention to detail.
               </p>
             </div>
             <div>
@@ -343,13 +343,13 @@ useEffect(() => {
           <div className={styles['service-detail-content']}>
             <h2 className={`${styles['m-50']} fadeIn`} data-jelly id='fadeIn'>
               <span>
-                At Enigma Digital, we believe that a winning strategy isn't a rare gem—it's a well-crafted masterpiece that we create for our clients, time and again. Our strategic planning, rooted in deep insights, forms the bedrock of our operations. We blend strategic thinking, innovative ideas, broad marketing experience, and proven best practices to transform insights into actionable plans that deliver measurable results.
+                First impressions matter! The user interface (UI) and user experience (UX) make or break that crucial first interaction with your brand. Leveraging the power of modern tools and our unique approach, our UI/UX design masters solve complex design problems through user research, expert analysis, prototyping, and collaborative design with users & stakeholders. At Enigma, our UI/UX design masters craft stunning visual interfaces and smooth digital experiences so your customers keep coming back for more.
               </span>
             </h2>
             <p className={`${styles['m-50']} fadeIn`}
                 data-jelly id='fadeIn'>
               <span>
-                We begin our process by consulting with you because we believe that nobody knows your brand better than you do. We dive deep into understanding your brand, your product, your market, and your competition. This understanding forms the basis of our strategic thinking, idea generation, and campaign plans. Our meticulous planning, extensive research, and detailed understanding of your product/services and business goals enable us to create the perfect strategy. This strategy builds meaningful online experiences across multiple channels, helping your customers find what they're looking for quickly and efficiently, leading to your business's success.
+                A poorly designed website or app can destroy your business. But with our human-centered design approach, we create intuitive digital experiences that delight users and drive results. Our secret sauce is combining empathy and data. We dive deep to understand your users' needs and pains. Then we analyze metrics to identify issues and opportunities. This informs designs that resonate emotionally and convert.
               </span>
             </p>
             <span className={`${styles['btn-10']}`} 
@@ -379,7 +379,7 @@ useEffect(() => {
           <div className={styles['service-portfolio-title']}>
             <h2 data-cursor-size="300px"
                 data-cursor-exclusion id='fadeIn'>
-                Strategy 
+                Design
                 <br /> 
                 Portfolio
             </h2>
@@ -519,12 +519,24 @@ useEffect(() => {
         <div className={styles['service-detail-process-right']}>
           <h4 className='why-us-anim' data-jelly>
             <span>
-              At Enigma Digital, we believe that the journey to digital success is a strategic one, meticulously charted and navigated with precision. Our approach is not just about creating strategies; it's about crafting success stories. We understand that each brand is unique, each with its own story to tell and milestones to achieve. We believe that a strategy is not a static blueprint but a dynamic roadmap, one that evolves with changing market dynamics, customer behaviors, and brand goals.
+              Understanding human behavior is key to great UX. Our secret weapon is neuroscience expertise. Unlike other agencies that claim to be experts in UX Design, our team includes in-house psychologists & neuro-scientists who apply the latest behavioral research to penetrate the user's mindset. This unlocks designs that resonates emotionally and triggers desired actions. Armed with these neurological insights, we create experiences with proven psychological pull. Users feel understood, empowered and engaged. Our unique neuro-informed design process yields:
             </span>
           </h4>
           <p className={`${styles['m-50']} why-us-anim`} data-jelly>
             <span>
-              We begin by immersing ourselves in your brand, absorbing its ethos, understanding its vision, and aligning ourselves with its goals. We delve into the intricate details, the nuances that make your brand unique, and the aspirations that drive it forward. This deep understanding enables us to create strategies that are not just aligned with your brand but are an extension of it.
+                - Clean, intuitive interfaces that feel effortless to use
+            </span>
+            <span>
+              - Smart UX that maps to users' mental models
+            </span>
+            <span>
+              - Pleasant aesthetics that fit brand and user sensibilities
+            </span>
+            <span>
+              - Micro-interactions that surprise and delight
+            </span>
+            <span>
+                - Aligning user needs and business goals for win-win experiences
             </span>
           </p>
         </div>
@@ -573,27 +585,27 @@ useEffect(() => {
                     data-cursor-size='100px'
                     data-cursor-exclusion>
                     <div className={`${styles['service-approach-text-box']} service-approach-text-box`} id='fadeIn'>
-                    <h4 className='color-primary'>Understanding Your Brand</h4>
+                    <h4 className='color-primary'>RESEARCH</h4>
                     <p>
-                        We believe that understanding your brand is the first step toward creating a successful strategy. We spend time getting to know your brand, your values, and your vision. This understanding allows us to create strategies that align with your brand and help you achieve your goals.
+                      (Building the understanding of your business as our own) - We begin at the most fundamental level. We conduct thorough research to gather information about your industry, your company and its products and services. We want to know everything that matters - your company’s vision, the product, its purpose, its U.S.P.s, your target audience and the business expectations.
                     </p>
                     </div>
 
                     <div className={`${styles['service-approach-text-box']} service-approach-text-box`} id='fadeIn'>
-                    <h4 className='color-primary'>Identifying Your Target Audience</h4>
-                    <p>Knowing who your customers are is crucial for creating effective strategies. We conduct thorough research to identify your target audience, understand their needs, and find out what motivates them. This knowledge allows us to create strategies that resonate with your audience and drive engagement.</p>
+                    <h4 className='color-primary'>DISCOVERY</h4>
+                    <p>(Understanding the goals & challenges) - We then sit with you for an extensive discovery session to understand your business goals, challenges and pain points you’re trying to solve through design. We’ll also look at the data that tells us which parts of your current interface are working and which are not. This will help us create a plan of action tailored to your needs.</p>
                     </div>
                 </div>
                 <div className={`${styles['service-approach-text-container']} text-card`}
                     data-cursor-size='100px'
                     data-cursor-exclusion>
                     <div className={`${styles['service-approach-text-box']} service-approach-text-box`} id='fadeIn'>
-                    <h4 className='color-primary'>Analyzing the Competition</h4>
-                    <p> Understanding your competition is key to staying ahead. We conduct a detailed analysis of your competitors to understand their strategies, strengths, and weaknesses. This analysis helps us create strategies that give you a competitive edge.</p>
+                    <h4 className='color-primary'>STORYBOARDS</h4>
+                    <p> (Customer Journey Mapping) - We develop ideas based on our findings in the research & discovery phase. We identify the core functionality of your product, define use cases and build storyboards for each use case.</p>
                     </div>
                     <div className={`${styles['service-approach-text-box']} service-approach-text-box`} id='fadeIn'>
-                    <h4 className='color-primary'>Creating a Unique Value Proposition</h4>
-                    <p>Your unique value proposition sets you apart from your competitors. We work with you to identify and articulate your unique value proposition. This proposition forms the core of our strategy and helps us create campaigns that highlight your unique strengths.
+                    <h4 className='color-primary'>WIRE-FRAMING & PROTOTYPING</h4>
+                    <p>(Designing the Interface) - We present design strategies that include various colour schemes, style tiles, collections of typography, navigation structure, & call to actions that convey your brand identity and message to your target audience.
                     </p>
                     </div>
                 </div>
@@ -601,12 +613,12 @@ useEffect(() => {
                     data-cursor-size='100px'
                     data-cursor-exclusion>
                     <div className={`${styles['service-approach-text-box']} service-approach-text-box`} id='fadeIn'>
-                    <h4 className='color-primary'>Setting Measurable Goals</h4>
-                    <p>We believe that every strategy should have clear, measurable goals. We work with you to set realistic goals for your campaigns. These goals guide our strategy and help us measure the success of our campaigns.</p>
+                    <h4 className='color-primary'>VISUAL/U.I. DESIGN</h4>
+                    <p>We map your audience’s online behaviour and digital touchpoints to define the consumer journey.</p>
                     </div>
                     <div className={`${styles['service-approach-text-box']} service-approach-text-box`} id='fadeIn'>
-                    <h4 className='color-primary'>Iterative Improvement</h4>
-                    <p>Digital marketing is a dynamic field. We believe in the power of iterative improvement. We continually monitor the performance of our campaigns, gather data, and use this data to refine our strategies. This approach ensures that our strategies are always optimized for maximum performance.</p>
+                    <h4 className='color-primary'>REFINEMENT</h4>
+                    <p>(Usability Testing & User Feedback) - We conduct user-testing sessions and perform a detailed analysis on the pre-established KPIs to understand the areas of improvement and the aberration from the desirable effect on the target audience. We then analyse all the collected data and synthesise our findings into actionable design improvements to further enhance your product.</p>
                     </div>
                 </div>
                 </div>

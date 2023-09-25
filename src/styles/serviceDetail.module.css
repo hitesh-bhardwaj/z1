@@ -154,6 +154,7 @@
     font-size: 8vw;
     color: var(--black2);
     font-weight: 500;
+    text-align: center;
   }
   .service-portfolio-cards{
     width: 100%;

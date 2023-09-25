@@ -1,12 +1,11 @@
 import React, { useEffect } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
-import CursorParticles from "./DesignParticles";
-
+import TopHomeParticles from "./TopAeroParticles";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function CursorAero() {
+export default function Aerosol() {
   useEffect(() => {
     document.body.addEventListener("mousemove", (evt) => {
       const mouseX = evt.clientX;
@@ -17,7 +16,7 @@ export default function CursorAero() {
         y: mouseY,
       });
 
-      gsap.to(".shape", {
+      gsap.to(".shape-10", {
         x: mouseX,
         y: mouseY,
         stagger: -0.1,
@@ -28,13 +27,13 @@ export default function CursorAero() {
   useEffect(() => {
     const tl = gsap.timeline({
       scrollTrigger: {
-        trigger: ".aero-hover",
+        trigger: ".top-aero-hover",
         start: "-200 top",
       },
     });
 
-    const demoHeader = document.querySelectorAll(".aero-demo h1");
-    
+    const demoHeader = document.querySelectorAll(".top-aero-demo h1");
+
     // Header
     tl.fromTo(
       demoHeader,
@@ -56,24 +55,26 @@ export default function CursorAero() {
 
   return (
     <>
-      <div className="aero-hover mb-10">
-        {/* Text Container with Blend Mode Effect */}
-        <div className="text-container aero-demo">
+      <div className="top-aero-hover">
+        <div className="text-container top-aero-demo">
           <h1 className="aero-desk-1">
-            With rigorous analysis plus creativity, we craft experiences that customers love.
+            we make cool things
+            <br />
+            that do great business
           </h1>
           <h1 className="aero-mob-1">
-            With rigorous analysis plus creativity, we craft experiences that customers love.
+            we make cool <br/> 
+            things that do 
+            <br /> great business
           </h1>
-          <CursorParticles />
+          <TopHomeParticles />
         </div>
 
         <div className="aerosol-main">
-          <div className="c-cursor"></div>
           <div className="shapes">
-            <div className="shape shape-1"></div>
-            <div className="shape shape-2"></div>
-            <div className="shape shape-3"></div>
+            <div className="shape-10 shape-1"></div>
+            <div className="shape-10 shape-2"></div>
+            <div className="shape-10 shape-3"></div>
           </div>
         </div>
       </div>
