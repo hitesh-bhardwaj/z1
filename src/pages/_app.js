@@ -1,11 +1,11 @@
 import "../styles/globals.css";
-// import { Analytics } from "@vercel/analytics/react";
-// import Script from "next/script";
+import { Analytics } from "@vercel/analytics/react";
+import Script from "next/script";
 
 export default function App({ Component, pageProps }) {
   return (
     <>
-      {/* <Script
+      <Script
         async
         strategy="afterInteractive"
         src="https://www.googletagmanager.com/gtag/js?id=G-PKJE9LVB35"
@@ -23,9 +23,9 @@ export default function App({ Component, pageProps }) {
           });
         `,
         }}
-      /> */}
+      />
       <Component {...pageProps} />
-      {/* <Analytics /> */}
+      <Analytics />
     </>
   );
 }

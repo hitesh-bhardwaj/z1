@@ -217,7 +217,7 @@ export default function about() {
     let ctx = gsap.context(() => {
     gsap.to(aboutLogo, {
       opacity: 0,
-      delay: 6.2
+      delay: 7
     }) 
     const tl = gsap.timeline({
       scrollTrigger: {
