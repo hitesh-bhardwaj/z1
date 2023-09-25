@@ -84,12 +84,7 @@ const ThankYou = () => {
       <Cursor isGelly={true} />
 
       <main>
-        <div className="message-sent-page">
-
-        {/* <svg className="w-screen h-screen">
-          <path d="M 0 0 L 656 -1 C 638 203 386 247 377 477 L 355 477 c -20 -221 -348 -345 -355 -477 Z"/>
-        </svg> */}
-        
+        <div className="message-sent-page">        
             <h1 id="h1"
                 data-cursor-magnetic
                 data-cursor-size="300px"

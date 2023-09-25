@@ -28,18 +28,10 @@ export default function Modal() {
     setModalOpen(false);
   }
 
-  const resetFormCallback = () => {
-    // Implement the logic to reset the form fields in this function
-    // You can also call closeModal if needed
-    // Example:
-    closeModal(); // Close the modal when resetting the form
-  };
-
   // Function to close the modal when clicking outside of it
   const handleOutsideClick = (event) => {
     if (event.target === event.currentTarget) {
       closeModal();
-      resetForm();
     }
   }
 
@@ -100,7 +92,7 @@ export default function Modal() {
             />
           </button>
         </div>
-        <ContactUs resetFormCallback={resetFormCallback} />
+        <ContactUs />
       </div>
     </div>
     </div>

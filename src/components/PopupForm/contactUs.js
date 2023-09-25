@@ -4,10 +4,14 @@ import 'react-phone-number-input/style.css';
 import { useRouter } from 'next/router';
 import { Cursor } from "./../../../cursor/index";
 import "react-creative-cursor/dist/styles.css";
+import { gsap } from "gsap";
 
-export default function ContactUs({ resetFormCallback }) {
+export default function ContactUs({props}) {
   // Create a ref to the dropdown element
   const dropdownRef = useRef(null);
+  const inputRef = useRef(null);
+
+
 
     const [step, setStep] = useState(1);
     const router = useRouter();
@@ -163,36 +167,6 @@ const handleBudgetChange = (value) => {
       const allowedTypes = ["application/pdf", "application/vnd.openxmlformats-officedocument.wordprocessingml.document", "application/vnd.openxmlformats-officedocument.presentationml.presentation"];
       return allowedTypes.includes(file.type);
     };
-
-    // const resetForm = () => {
-    //   setStep(1);
-    //   setAttemptedSubmitName(false);
-    //   setAttemptedSubmitService(false);
-    //   setAttemptedSubmitContact(false);
-    //   setMessageStatus(null);
-    //   setPhoneNumberErrorMessage("");
-    //   setAttemptedSubmitBudget(false);
-    //   setAttemptedSubmitOrgName(false);
-    //   setAttemptedSubmitRole(false);
-    
-    //   setFirstName("");
-    //   setLastName("");
-    //   setSelectedService("Select Service");
-    //   setPhoneNumber("");
-    //   setEmail("");
-    //   setOrgName("");
-    //   setRole("");
-    //   setFilePath(null);
-    //   setFile(null);
-    //   setMessage("");
-    //   setFileErrorMessage("");
-    //   setIsFileSelected(false);
-    //   setIsEmailValid(true);
-    
-    //   // Reset the budget and budgetRangeText values
-    //   setSelectedBudget("");
-    //   setBudgetRangeText("");
-    // };
   
   const handleFileUpload = async () => {
       if (file) {
@@ -270,7 +244,6 @@ const handleBudgetChange = (value) => {
           setMessageStatus('success');
           setTimeout(() => {
             router.push('/thankyou');
-            resetForm(); // Call the resetForm function here
           }, 500);
         } else {
           setMessageStatus('error');
@@ -309,18 +282,18 @@ const handleBudgetChange = (value) => {
   
   {/* Form Step 1 */}
   {step === 1 && (
-  <div className="form-sections">
+    <div className="form-sections">
     <div className="popUp-form-step">
-      <h2>
+      <h2 ref={inputRef}>
         <span className="color-primary">01</span> / 06
       </h2>
     </div>
   <div>
-    <h1>Hi
+    <h1 ref={inputRef}>Hi
       <span className="color-primary"> There!</span>
     </h1>
   </div>
-  <div>
+  <div ref={inputRef}>
     <p>What is Your Name?</p>
   </div>
 
@@ -328,10 +301,13 @@ const handleBudgetChange = (value) => {
     <div className="pop-up-div-form">
       <input className="name-input-form"
         type="text"
+        ref={inputRef}
         name="fname"
         placeholder="First Name*"
         value={firstName}
+        onKeyDown={(e) => { if (e.key === 'Enter') {nextStep();}}}
         onChange={(e) => setFirstName(e.target.value)}
+        
       />
         {attemptedSubmitName && firstName === "" && (
           <p className="error">Please enter your name.</p>
@@ -340,15 +316,17 @@ const handleBudgetChange = (value) => {
     <div className="pop-up-div-form">
       <input className="name-input-form"
         type="text"
+        ref={inputRef}
         name="lname"
         placeholder="Last Name"
         value={lastName}
+        onKeyDown={(e) => { if (e.key === 'Enter') {nextStep();}}}
         onChange={(e) => setLastName(e.target.value)}
       />
     </div>
   </div>
   
-    <div className="form-button">    
+    <div className="form-button" ref={inputRef}>    
       <button
         type="button"
         onClick={nextStep}
@@ -391,6 +369,7 @@ const handleBudgetChange = (value) => {
           defaultCountry="US"
           placeholder="Your Number*"
           countryCallingCodeEditable={false}
+          onKeyDown={(e) => { if (e.key === 'Enter') {nextStep();}}}
           value={phoneNumber}
           error={!phoneNumber ? 'Please enter your number.' : !isValidPhoneNumber(String(phoneNumber)) ? 'Phone number is not valid' : undefined}
           onChange={(value) => setPhoneNumber(value)}
@@ -408,6 +387,7 @@ const handleBudgetChange = (value) => {
           type="email"
           name="email"
           placeholder="Your Email*"
+          onKeyDown={(e) => { if (e.key === 'Enter') {nextStep();}}}
           value={email}
           onChange={(e) => {setEmail(e.target.value);
           setIsEmailValid(emailRegex.test(e.target.value));
@@ -467,8 +447,10 @@ const handleBudgetChange = (value) => {
       <p>What can we help you with?</p>
     </div>
         <div className="popUp-form-content step3">
-          <div className={`dropdown ${attemptedSubmitService && selectedService === "Select Service" ? "error" : ""}`} ref={dropdownRef}>
+          <div className={`dropdown ${attemptedSubmitService && selectedService === "Select Service" ? "error" : ""}`} 
+                ref={dropdownRef}>
             <div
+              onKeyDown={(e) => { if (e.key === 'Enter') {nextStep();}}}
               onClick={() => {
                 setIsServiceDropdownOpen(!isServiceDropdownOpen);
               }}
@@ -481,10 +463,12 @@ const handleBudgetChange = (value) => {
             </div>
             <div
               className="dropdown-content"
+              onKeyDown={(e) => { if (e.key === 'Enter') {nextStep();}}}
               style={{ display: isServiceDropdownOpen ? "block" : "none" }}
             >
               {serviceOptions.map((option) => (
                 <div
+                  onKeyDown={(e) => { if (e.key === 'Enter') {nextStep();}}}
                   key={option}
                   onClick={() => {
                     setSelectedService(option);
@@ -541,6 +525,7 @@ const handleBudgetChange = (value) => {
     
     <div className="budget-slider-container">
       <input
+        onKeyDown={(e) => { if (e.key === 'Enter') {nextStep();}}}
         type="range"
         min="0"
         max="5"
@@ -596,6 +581,7 @@ const handleBudgetChange = (value) => {
   </div>
     <div className="pop-up-div-form m-5">
       <input
+        onKeyDown={(e) => { if (e.key === 'Enter') {nextStep();}}}
         type="text"
         name="oname"
         placeholder="Your Organisation*"
@@ -609,6 +595,7 @@ const handleBudgetChange = (value) => {
     <div className="pop-up-div-form m-5">
       <input
         type="text"
+        onKeyDown={(e) => { if (e.key === 'Enter') {nextStep();}}}
         name="role"
         placeholder="Your Role*"
         value={role}
@@ -717,7 +704,7 @@ const handleBudgetChange = (value) => {
               <p className="text-green-400">Thank You, your details have been submitted.</p>
           )}
           {messageStatus === 'error' && (
-              <p>Failed to send the message. Please try again later.</p>
+              <p className="error">Failed to send the message. Please try again later.</p>
           )}
     </div>
       )}

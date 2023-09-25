@@ -10621,6 +10621,14 @@ a:hover {
   color: fieldtext !important;
 }
 
+/* Change the white to any color */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+  -webkit-background-clip: text;
+}
+
 .form-sec1-head h2{
   font-size: 1vw;
   text-transform: uppercase;
@@ -11383,13 +11391,14 @@ label.label:hover:before{
 
 /* Dark Mode Contact Form Pop */
 .dark-mode .PopUpmodal-content{
-  background-color: var(--black);
+  background-color: var(--white);
 }
 .dark-mode .progress,
-.dark-mode .form-sections .error{
+.dark-mode .form-sections .error, .dark-mode .text-green-400{
   filter: invert(1);
 }
-.dark-mode .form-attach button img{
+.dark-mode .form-attach button img, 
+.dark-mode .VideoPopUp{
   filter: invert(0) !important;
 }
 
@@ -11409,7 +11418,7 @@ label.label:hover:before{
 .message-sent-page h1{
   font-size: 10vw;
   font-weight: 500;
-  color: var(--black2);
+  color: var(--black1);
 }
 .message-sent-page p{
   font-size: 1.5vw;
@@ -11459,7 +11468,7 @@ label.label:hover:before{
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #5c5ad614;
+  background-color: #5c5ad610;
 }
 
 .PopUpmodal-content{
@@ -11554,10 +11563,15 @@ label.label:hover:before{
 /* Dark-mode PopUp Form*/
 
 .dark-mode .PopUpContainer {
-  background-color: #5ad61414;
+  background-color: #5ad61410;
 }
-.dark-mode #popUpButton{
+.dark-mode #popUpButton, 
+.dark-mode .form-sections input.budget-slider{
   filter: invert(1);
+}
+.dark-mode .dropdown-content .item:hover{
+  background-color: var(--dark-primary);
+  color: #000;
 }
 
 
