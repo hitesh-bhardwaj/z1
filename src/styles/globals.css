@@ -10540,10 +10540,6 @@ a:hover {
 
 .form-sections{
   height: 100%;
-  display: flex;
-  /* justify-content: center; */
-  align-items: center;
-  flex-direction: column;
   text-align: center;
   position: relative;
   z-index: 1;
@@ -10554,11 +10550,21 @@ a:hover {
   position: absolute;
   top: 60px;
   text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .popUp-form-step h2{
   font-size: 1.5vw;
   color: #101010;
+}
+.popUp-content-flex{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 4.3vw;
+  margin-top: 7vw;
 }
 
 .popUp-form-step h2 .color-primary{
@@ -10646,18 +10652,17 @@ input:-webkit-autofill:active{
 }
 
 .form-sections p{
-  font-size: 2.2vw;
+  font-size: 2vw;
   line-height: 1.5;
   color: var(--black3);
   font-weight: 500;
   font-family: 'Ageo';
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   margin-top: 1.8rem;
 }
 
 .popUp-form-content{
   display: flex;
-  margin-top: 5rem;
   gap: 50px;
 }
 
@@ -10670,8 +10675,7 @@ input:-webkit-autofill:active{
 }
 
 .form-button{
-  position: absolute;
-  bottom: 5vw;
+  position: relative;
 }
 
 .form-button button{
@@ -10722,23 +10726,25 @@ input:-webkit-autofill:active{
   left: 0;
 }
 
+
+.popUp-content-flex.step2{
+  margin-top: 5vw;
+}
 .popUp-form-content.step2{
   flex-direction: column;
   gap: 30px;
-  margin-top: 3rem;
-}
-.form-sections.step2{
-  padding-top: 4.5vw;
 }
 
+
 .PhoneInput{
-  width: 27vw;
+  width: 33vw;
   display: flex;
   position: relative;
   align-items: center;
   margin: 0;
   padding: 0;
   transition: all 0.5s ease;
+  margin-right: 6vw !important;
 }
 
 .PhoneInput input{
@@ -10811,8 +10817,8 @@ input:-webkit-autofill:active{
 
 /* Service Selection Dropdown */
 .popUp-form-content.step3{
-  display: block;
-  margin-top: 4rem;
+  flex-direction: column;
+  gap: 0;
 }
 .dropdown {
   margin: 0 auto;
@@ -10855,19 +10861,17 @@ input:-webkit-autofill:active{
   overflow: hidden;
   font-family: 'Ageo';
   color: #707070 !important;
-  width: 60%;
+  width: 100%;
   position: absolute;
   top: 0;
   right: 0;
-  font-size: 1.3vw;
+  font-size: 1.5vw;
   background-color: #ffffff;
   border: 0;
   border-radius: 20px;
-  -webkit-backdrop-filter: blur(0.1px);
-  backdrop-filter: blur(0.1px);
   box-shadow: 1px 1px 10px 0px #3f3f3f22;
   transition: all 0.3s ease-in-out;
-  text-align: center;
+  text-align: left;
 }
 
 .dropdown-content.active {
@@ -10879,7 +10883,10 @@ input:-webkit-autofill:active{
   padding: 10px 20px;
   cursor: pointer;
   transition: all 0.1s ease;
+  /* border-bottom: 1px solid #70707010; */
 }
+
+
 .dropdown-content .item:hover {
   background: var(--primary);
   color: var(--white);
@@ -10894,12 +10901,14 @@ input:-webkit-autofill:active{
 
 /* Step 4 */
 /* Add these styles to your CSS */
+.popUp-content-flex.step4{
+  gap: 4vw;
+}
 .budget-slider-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 5rem;
-  gap: 5px;
+  margin-top: 3rem;
 }
 .budget-slider-container h3{
   font-size: 1.3vw;
@@ -10950,15 +10959,19 @@ input:-webkit-autofill:active{
 }
 
 /* Step 5 */
-.form-sections.step4 {
-  padding-top: 8vw; 
+.popUp-content-flex.step5{
+  margin-top: 4rem;
+}
+
+.popUp-content-flex.step6{
+  margin-top: 3vw;
+  gap: 3.5vw;
 }
 .form-attach {
   position: relative;
   width: 27vw;
   text-align: left;
   height: auto;
-  margin: 3rem 0 0rem;
   font-family: 'Ageo';
 }
 
@@ -11017,7 +11030,6 @@ label.label:hover:before{
 }
 .form-sections textarea{
   height: 100%;
-  margin-top: 3rem;
   font-size: 1.4vw;
   padding: 10px 20px;
   max-height: 80px;
@@ -11034,10 +11046,6 @@ label.label:hover:before{
   padding-bottom: 50px;
 }
 
-.form-button-2{
-  position: absolute;
-  bottom: 5vw;
-}
   .btn_CTA{
     align-items: center;
     justify-content: center;
@@ -11126,31 +11134,42 @@ label.label:hover:before{
   letter-spacing: 0 !important;
   font-weight: 400 !important;
   line-height: 1 !important;
-  position: absolute;
-  bottom: 3vw;
+}
+.form-sections textarea{
+  margin-top: 3vw;
 }
 
 /* Media Queries for Pop Up form Start*/
 @media screen and (max-width: 1536px) {
+  .PopUpmodal-content{
+    width: 90vw !important;
+  }
   .form-sections h1{
     font-size: 3.5vw;
+  }
+  .form-sections .step2 h1{
+    margin-top: 3rem;
   }
   .form-sections p{
     font-size: 2vw;
   }
-  .popUp-form-content{
-    margin-top: 3rem;
+  .popUp-content-flex.step4{
+    margin-top: 6vw;
   }
+
   .form-sections.step2{
     padding-top: 4vw;
   }
-  .popUp-form-content.step2 {
-    margin-top: 2rem;
-    gap: 1vw;
-}
   .form-sections textarea{
-    margin-top: 2vw;
+    margin-top: 3vw;
     max-height: 70px;
+  }
+  .PhoneInput{
+    width: 34.5vw;
+    margin-right: 7.5vw !important;
+  }
+  .popUp-form-content.step2{
+    gap: 20px;
   }
 }
 
@@ -11161,8 +11180,8 @@ label.label:hover:before{
     margin: 2rem 0 1rem;
   }
   .PopUpmodal-content{
-    width: 90vw !important;
-    height: 90vh !important;
+    width: 80vw !important;
+    height: 85vh !important;
   }
   .form-sections{
     justify-content: center;
@@ -11172,10 +11191,14 @@ label.label:hover:before{
   }
   .form-sections h1{
     font-size: 8vw;
+    margin-top: 13vw !important;
   }
   .form-sections p{
     font-size: 5vw;
     letter-spacing: 0.5px;
+  }
+  .popUp-content-flex{
+    margin-top: 10vw !important;
   }
   .popUp-form-content{
     display: block;
@@ -11193,6 +11216,7 @@ label.label:hover:before{
   }
   .PhoneInput{
     width: 50vw;
+    margin-right: 0 !important;
   }
   .PhoneInput input{
     margin: 0;
@@ -11211,8 +11235,7 @@ label.label:hover:before{
     font-size: 4vw;
   }
   .dropdown-content{
-    width: 70%;
-    font-size: 3vw;
+    font-size: 4vw;
   }
   .budget-slider-container{
     margin-top: 2rem;
@@ -11314,6 +11337,18 @@ label.label:hover:before{
     padding: 10px;
     font-size: 5vw;
   }
+  .popUp-content-flex.step4{
+    height: 80%;
+  }
+  .popUp-content-flex.step5{
+    height: 100%;
+    margin: 0 !important;
+  }
+  .popUp-content-flex.step6{
+    height: 100%;
+    margin: 0 !important;
+  }
+
   .dropdown-content{
     font-size: 4vw;
     width: 100%;
@@ -11322,15 +11357,13 @@ label.label:hover:before{
   .dropdown-content .item{
     padding: 10px;
   }
-  .dropdown-content .item:nth-of-type(even){
-    background: #70707010;
-  }
+
   .budget-slider-container h3{
     font-size: 4vw;
   }
   .form-sections h1{
     font-size: 10vw;
-    margin: 0;
+    margin-top: 20vw !important;
   }
   .form-sections p{
     margin-top: 1rem;
@@ -11351,6 +11384,7 @@ label.label:hover:before{
   }
   .form-attach{
     width: 70vw;
+    margin: 20px;
   }
   #file-chosen{
     font-size: 4vw;
@@ -11466,8 +11500,8 @@ label.label:hover:before{
 
 .PopUpmodal-content{
   position: relative;
-  width: 80vw;
-  height: 80vh;
+  width: 85vw;
+  height: 90vh;
   background-color: var(--white);
   border-radius: 36px;
   -webkit-animation-name: slideIn;

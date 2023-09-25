@@ -244,7 +244,7 @@ const handleBudgetChange = (value) => {
           setMessageStatus('success');
           setTimeout(() => {
             router.push('/thankyou');
-          }, 500);
+          }, 50000);
         } else {
           setMessageStatus('error');
         }
@@ -278,150 +278,156 @@ const handleBudgetChange = (value) => {
   {/* Form Step 1 */}
   {step === 1 && (
     <div className="form-sections">
-    <div className="popUp-form-step">
-      <h2 ref={inputRef}>
-        <span className="color-primary">01</span> / 06
-      </h2>
-    </div>
-  <div>
-    <h1 ref={inputRef}>Hi
-      <span className="color-primary"> There!</span>
-    </h1>
-  </div>
-  <div ref={inputRef}>
-    <p>What is Your Name?</p>
-  </div>
-
-  <div className="popUp-form-content">
-    <div className="pop-up-div-form">
-      <input className="name-input-form"
-        type="text"
-        ref={inputRef}
-        name="fname"
-        placeholder="First Name*"
-        value={firstName}
-        onKeyDown={(e) => { if (e.key === 'Enter') {nextStep();}}}
-        onChange={(e) => setFirstName(e.target.value)}
-        
-      />
-        {attemptedSubmitName && firstName === "" && (
-          <p className="error">Please enter your name.</p>
-        )}  
-    </div>
-    <div className="pop-up-div-form">
-      <input className="name-input-form"
-        type="text"
-        ref={inputRef}
-        name="lname"
-        placeholder="Last Name"
-        value={lastName}
-        onKeyDown={(e) => { if (e.key === 'Enter') {nextStep();}}}
-        onChange={(e) => setLastName(e.target.value)}
-      />
-    </div>
-  </div>
+      
+      <div className="popUp-form-step">
+        <h2 ref={inputRef}>
+          <span className="color-primary">01</span> / 06
+        </h2>
+      </div>
   
-    <div className="form-button" ref={inputRef}>    
-      <button
-        type="button"
-        onClick={nextStep}
-      >
-      <span>
-        Next
-      </span>
-      <img src="/assets/icons/next.png" />
-      </button>
-    </div>
-  </div>
-  )}
+      <div>
+        <h1 ref={inputRef}>Hi
+          <span className="color-primary"> There!</span>
+        </h1>
+        <p>What is Your Name?</p>
+      </div>
+
+      <div className="popUp-content-flex">
+      <div className="popUp-form-content">
+        <div className="pop-up-div-form">
+          <input className="name-input-form"
+            type="text"
+            ref={inputRef}
+            name="fname"
+            placeholder="First Name*"
+            value={firstName}
+            onKeyDown={(e) => { if (e.key === 'Enter') {nextStep();}}}
+            onChange={(e) => setFirstName(e.target.value)}
+            
+          />
+            {attemptedSubmitName && firstName === "" && (
+              <p className="error">Please enter your name.</p>
+            )}  
+        </div>
+        <div className="pop-up-div-form">
+          <input className="name-input-form"
+            type="text"
+            ref={inputRef}
+            name="lname"
+            placeholder="Last Name"
+            value={lastName}
+            onKeyDown={(e) => { if (e.key === 'Enter') {nextStep();}}}
+            onChange={(e) => setLastName(e.target.value)}
+          />
+        </div>
+      </div>
+
+        <div className="form-button" ref={inputRef}>    
+          <button
+            type="button"
+            onClick={nextStep}
+          >
+          <span>
+            Next
+          </span>
+          <img src="/assets/icons/next.png" />
+          </button>
+        </div>
+      </div>
+      </div>
+    )}
 
 {/* Form Step 1 END*/}
   
 {/* Form Step 2 */}
   {step === 2 && (
-  <div className="form-sections step2">
+  <div className="form-sections">
     <div className="popUp-form-step">
       <h2>
         <span className="color-primary">02</span> / 06
       </h2>
     </div>
+    
     <div className="step2">
       <h1>Nice to meet you,
         <span className="color-primary capitalize"> {firstName}!</span>
       </h1>
-    </div>
-    
-    <div>
       <p>Please provide your contact information?</p>
     </div>
     
-    <div className="popUp-form-content step2">
-      <div>
-        <PhoneInput
-          type="text"
-          name="number"
-          international
-          defaultCountry="US"
-          placeholder="Your Number*"
-          countryCallingCodeEditable={false}
-          onKeyDown={(e) => { if (e.key === 'Enter') {nextStep();}}}
-          value={phoneNumber}
-          error={!phoneNumber ? 'Please enter your number.' : !isValidPhoneNumber(String(phoneNumber)) ? 'Phone number is not valid' : undefined}
-          onChange={(value) => setPhoneNumber(value)}
-        />
-        {attemptedSubmitContact && phoneNumber === "" && (
-          <p className="error">Phone number is required</p>
-        )}
-        {attemptedSubmitContact && phoneNumber && !isValidPhoneNumber(String(phoneNumber)) && (
-          <p className="error">Phone number is not valid</p>
-        )}
+    <div className="popUp-content-flex step2">
+      <div className="popUp-form-content step2">
+        <div>
+          <PhoneInput
+            type="text"
+            name="number"
+            international
+            defaultCountry="US"
+            placeholder="Your Number*"
+            countryCallingCodeEditable={false}
+            onKeyDown={(e) => { if (e.key === 'Enter') {nextStep();}}}
+            value={phoneNumber}
+            error={!phoneNumber ? 'Please enter your number.' : !isValidPhoneNumber(String(phoneNumber)) ? 'Phone number is not valid' : undefined}
+            onChange={(value) => setPhoneNumber(value)}
+          />
+          {attemptedSubmitContact && phoneNumber === "" && (
+            <p className="error">Phone number is required</p>
+          )}
+          {attemptedSubmitContact && phoneNumber && !isValidPhoneNumber(String(phoneNumber)) && (
+            <p className="error">Phone number is not valid</p>
+          )}
+        </div>
+
+        <div>
+          <input
+            type="email"
+            name="email"
+            placeholder="Your Email*"
+            onKeyDown={(e) => { if (e.key === 'Enter') {nextStep();}}}
+            value={email}
+            onChange={(e) => {setEmail(e.target.value);
+            setIsEmailValid(emailRegex.test(e.target.value));
+            }}
+          />
+          {attemptedSubmitContact && email === "" && (
+              <p className="error">Please enter your email.</p>
+          )}
+          {!isEmailValid && (
+              <p className="error">This email looks a bit weird.</p>
+          )}
+          </div>
       </div>
 
-      <div>
-        <input
-          type="email"
-          name="email"
-          placeholder="Your Email*"
-          onKeyDown={(e) => { if (e.key === 'Enter') {nextStep();}}}
-          value={email}
-          onChange={(e) => {setEmail(e.target.value);
-          setIsEmailValid(emailRegex.test(e.target.value));
-          }}
-        />
-        {attemptedSubmitContact && email === "" && (
-            <p className="error">Please enter your email.</p>
-        )}
-        {!isEmailValid && (
-            <p className="error">This email looks a bit weird.</p>
-        )}
-        </div>
-    </div>
-  
-  <div className="back-button">
-    <div 
-        data-cursor-size="60px"
-        data-cursor-exclusion>
-      <button
-          type="button"
-          onClick={prevStep}
-        >
-        <img src="/assets/icons/arrow-back.png" />
-      </button>
-    </div>
-  </div>
-    
 
-    <div className="form-button">    
-      <button
-          type="button"
-          onClick={nextStep}
-      >
-      <span>
-        Next
-      </span>
-      <img src="/assets/icons/next.png" />
-      </button>
-  </div>
+      <div className="back-button">
+        <div 
+            data-cursor-size="60px"
+            data-cursor-exclusion>
+          <button
+              type="button"
+              onClick={prevStep}
+            >
+            <img src="/assets/icons/arrow-back.png" />
+          </button>
+        </div>
+      </div>
+
+        <div className="form-button">    
+          <button
+              type="button"
+              onClick={nextStep}
+          >
+          <span>
+            Next
+          </span>
+          <img src="/assets/icons/next.png" />
+          </button>
+        </div>
+      </div>
+    
+  
+  
+  
   </div>
   )}
 {/* Form Step 2 END*/}
@@ -437,11 +443,11 @@ const handleBudgetChange = (value) => {
     </div>
     <div>
       <h1>Superb, <span className="color-primary">{firstName}!</span></h1>
-    </div>
-    <div>
       <p>What can we help you with?</p>
     </div>
-        <div className="popUp-form-content step3">
+    
+    <div className="popUp-content-flex step3">
+    <div className="popUp-form-content step3">
           <div className={`dropdown ${attemptedSubmitService && selectedService === "Select Service" ? "error" : ""}`} 
                 ref={dropdownRef}>
             <div
@@ -482,42 +488,51 @@ const handleBudgetChange = (value) => {
         </div>
   
   {/* Button step 3 */}
-    <div>
-      <button
-          className="back-button"
-          type="button"
-          onClick={prevStep}
+      <div className="back-button">
+        <div 
+            data-cursor-size="60px"
+            data-cursor-exclusion>
+          <button
+              type="button"
+              onClick={prevStep}
+            >
+            <img src="/assets/icons/arrow-back.png" />
+          </button>
+        </div>
+      </div>
+
+      <div className="form-button">    
+        <button
+            type="button"
+            onClick={nextStep}
         >
-        <img src="/assets/icons/arrow-back.png" />
-      </button>
+          <span>
+            Next
+          </span>
+          <img src="/assets/icons/next.png" />
+        </button>
+      </div>
     </div>
-    <div className="form-button">    
-      <button
-          type="button"
-          onClick={nextStep}
-      >
-      <span>
-        Next
-      </span>
-      <img src="/assets/icons/next.png" />
-      </button>
-  </div>
+        
   </div>
   )}  
 {/* Form Step 3 END*/}
 
 {/* Form Step 4 */}
 {step === 4 && (
-  <div className="form-sections step4">
+  <div className="form-sections">
     <div className="popUp-form-step">
       <h2>
         <span className="color-primary">04</span> / 06
       </h2>
     </div>
+
+    
+
+    <div className="popUp-content-flex step4">
     <div>
       <p>What's your budget range for this project?</p>
     </div>
-    
     <div className="budget-slider-container">
       <input
         onKeyDown={(e) => { if (e.key === 'Enter') {nextStep();}}}
@@ -539,15 +554,19 @@ const handleBudgetChange = (value) => {
     </div>
 
 {/* Button step 4 */}
-    <div>
-      <button
-          className="back-button"
-          type="button"
-          onClick={prevStep}
-        >
-        <img src="/assets/icons/arrow-back.png" />
-      </button>
-    </div>
+      <div className="back-button">
+        <div 
+            data-cursor-size="60px"
+            data-cursor-exclusion>
+          <button
+              type="button"
+              onClick={prevStep}
+            >
+            <img src="/assets/icons/arrow-back.png" />
+          </button>
+        </div>
+      </div>
+
     <div className="form-button">    
       <button
           type="button"
@@ -558,57 +577,66 @@ const handleBudgetChange = (value) => {
       </span>
       <img src="/assets/icons/next.png" />
       </button>
-  </div>
+    </div>
+    </div>
+
   </div>
 )}
 {/* Form Step 4 END*/}
 
 {/* Form Step 5 */}
 {step === 5 && (
-  <div className="form-sections step4">
+  <div className="form-sections">
     <div className="popUp-form-step">
       <h2>
         <span className="color-primary">05</span> / 06
       </h2>
     </div>
-  <div>
-    <p>What organisation do you work with?</p>
-  </div>
-    <div className="pop-up-div-form m-5">
-      <input
-        onKeyDown={(e) => { if (e.key === 'Enter') {nextStep();}}}
-        type="text"
-        name="oname"
-        placeholder="Your Organisation*"
-        value={orgName}
-        onChange={(e) => setOrgName(e.target.value)}
-      />
-    </div>
-  <div>
-    <p>What's your role there?</p>
-  </div>
-    <div className="pop-up-div-form m-5">
-      <input
-        type="text"
-        onKeyDown={(e) => { if (e.key === 'Enter') {nextStep();}}}
-        name="role"
-        placeholder="Your Role*"
-        value={role}
-        onChange={(e) => setRole(e.target.value)}
-      />
-      {attemptedSubmitOrgName && orgName === "" || role === "" && (
-      <p className="error">Please fill above details.</p>
-    )}
-    </div>
+
+  <div className="popUp-content-flex step5"> 
     <div>
-        <button
-          className="back-button"
-          type="button"
-          onClick={prevStep}
-        >
-        <img src="/assets/icons/arrow-back.png" />
-      </button>
+      <p>What organisation do you work with?</p>
+      <div className="pop-up-div-form mt-5">
+        <input
+          onKeyDown={(e) => { if (e.key === 'Enter') {nextStep();}}}
+          type="text"
+          name="oname"
+          placeholder="Your Organisation*"
+          value={orgName}
+          onChange={(e) => setOrgName(e.target.value)}
+        />
+      </div>
     </div>
+
+    <div>
+      <p>What's your role there?</p>
+      <div className="pop-up-div-form mt-5">
+        <input
+          type="text"
+          onKeyDown={(e) => { if (e.key === 'Enter') {nextStep();}}}
+          name="role"
+          placeholder="Your Role*"
+          value={role}
+          onChange={(e) => setRole(e.target.value)}
+        />
+        {attemptedSubmitOrgName && orgName === "" || role === "" && (
+        <p className="error">Please fill above details.</p>
+      )}
+      </div>
+    </div>
+
+    <div className="back-button">
+        <div 
+            data-cursor-size="60px"
+            data-cursor-exclusion>
+          <button
+              type="button"
+              onClick={prevStep}
+            >
+            <img src="/assets/icons/arrow-back.png" />
+          </button>
+        </div>
+      </div>
   
     <div className="form-button">    
       <button
@@ -622,68 +650,77 @@ const handleBudgetChange = (value) => {
       </button>
     </div>
   </div>
+  
+  </div>
   )}
 
 {/* Form Step 5 END*/}
 
 {/* Form Step 6 */}
   {step === 6 && (
-  <div className="form-sections step4">
+  <div className="form-sections">
     <div className="popUp-form-step">
       <h2>
         <span className="color-primary">06</span> / 06
       </h2>
     </div>
+
+      <div className="popUp-content-flex step6">
       <div>
         <p>Do you have any docs detailing your needs?</p>
       </div>
-
-      <div className="form-attach">
-        <input
-          type="file"
-          id="attach"
-          name="myFile"
-          accept=".pdf,.docx,.pptx"
-          onChange={handleFileChange}
-          hidden
-        />
-        <button>
-          <label className="label" htmlFor="attach">
-            <img src="/assets/icons/attach.png" />
-            Feel free to attach it!
-          </label>
-        </button>
-        {isFileSelected ? (
-          <span id="file-chosen">
-            {file ? file.name : "No file chosen"}
-            <button onClick={handleFileRemove}>✖</button>
-          </span>
-        ) : (
-          <span id="file-chosen">No file chosen</span>
-        )}
-        <div className="mt-3">
-          <p className="terms">* Only .pdf, .ppt & .doc is allowed. Max file size is 10 Mb.</p>
-        </div>
-        {fileErrorMessage && <p className="error">{fileErrorMessage}</p>}
-      </div>
-
-      <div className="popUp-for-TextArea">
-          <textarea
-              placeholder="Your Message"
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
+        <div>
+        <div className="form-attach">
+          <input
+            type="file"
+            id="attach"
+            name="myFile"
+            accept=".pdf,.docx,.pptx"
+            onChange={handleFileChange}
+            hidden
           />
-      </div>
+          <button>
+            <label className="label" htmlFor="attach">
+              <img src="/assets/icons/attach.png" />
+              Attach File
+            </label>
+          </button>
+          {isFileSelected ? (
+            <span id="file-chosen">
+              {file ? file.name : "No file chosen"}
+              <button onClick={handleFileRemove}>✖</button>
+            </span>
+          ) : (
+            <span id="file-chosen">No file chosen</span>
+          )}
+          <div className="mt-3">
+            <p className="terms">* Only .pdf, .ppt & .doc is allowed. Max file size is 10 Mb.</p>
+          </div>
+          {fileErrorMessage && <p className="error">{fileErrorMessage}</p>}
+        </div>
 
-      <div>
-        <button
-          className="back-button"
-          type="button"
-          onClick={prevStep}
-        >
-        <img src="/assets/icons/arrow-back.png" />
-      </button>
-    </div>
+        <div className="popUp-for-TextArea">
+            <textarea
+                placeholder="Your Message"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+            />
+        </div>
+        </div>
+        
+
+        <div className="back-button">
+        <div 
+            data-cursor-size="60px"
+            data-cursor-exclusion>
+          <button
+              type="button"
+              onClick={prevStep}
+            >
+            <img src="/assets/icons/arrow-back.png" />
+          </button>
+        </div>
+      </div>
 
       <div className='form-button-2'>
           <button className='btn_CTA' onClick={handleSubmit}>
@@ -694,13 +731,14 @@ const handleBudgetChange = (value) => {
               <span data-text='Submit'>Submit</span>
               </span>
           </button>
-      </div>
-      {messageStatus === 'success' && (
+          {messageStatus === 'success' && (
               <p className="text-green-400">Thank You, your details have been submitted.</p>
           )}
           {messageStatus === 'error' && (
               <p className="error">Failed to send the message. Please try again later.</p>
           )}
+      </div>
+      </div>
     </div>
       )}
 {/* Form Step 6 END*/}
