@@ -475,6 +475,7 @@
 .memberContent img{
     text-align: left;
     margin-top: 20vw;
+    width: 80%;
 }
 .memberButton {
     margin-top: 40px;
@@ -497,5 +498,89 @@
     padding: 0 20px;
 }
 
+/* Pricing Table */
+.pricingTable .btnCta{
+    color: #ffffff;
+    width: 100%;
+}
 
+.pricingTable .btnCtaTitle span:after {
+    color: #000000 !important;
+}
+
+/* Faq */
+.faq{
+    padding: 8% 10%;
+    text-align: center;
+}
+.faqTopBox .para1{
+    text-align: center;
+    width: auto;
+}
+.faqBottomBox{
+    width: 70%;
+    margin: auto;
+    text-align: left;
+    margin-top: 100px;
+}
+.faqBottomBox h4{
+    font-family: 'Arial';
+    font-size: 1.6vw;
+}
+.faqBottomBox p{
+    font-size: 1.4vw;
+}
+
+
+/* Footer */
+.footer{
+    width: 100%;
+    padding: 5% 0;
+    padding-bottom: 0;
+}
+.footerTop{
+    background: #f1f1f1;
+    padding: 8%;
+    overflow: hidden;
+    position: relative;
+}
+.footerTop img{
+    position: absolute;
+    right: -35%;
+    bottom: -35%;
+    width: 80%;
+}
+
+.footerCta{
+    display: flex;
+    gap: 70px;
+    padding-top: 80px;
+}
+
+.footerBottom{
+    width: 84%;
+    margin: auto;
+    padding: 80px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footerLeft{
+    text-align: center;
+}
+
+.footerLeft p{
+    margin-top: 25px;
+    font-size: 28px;
+}
+
+.footerRight ul{
+    display: flex;
+    gap: 100px;
+}
+.footerRight ul li a{
+    font-size: 1.5vw;
+    color: var(--gray);
+}
 

@@ -15,6 +15,8 @@ import Testimonial from "../components/LandingPage/Design/Testimonial";
 import Membership from "../components/LandingPage/Design/Membership";
 import RecentWork from "../components/LandingPage/Design/RecentWork";
 import Pricing from "../components/LandingPage/Design/Pricing";
+import Faq from "../components/LandingPage/Design/Faq";
+import Footer from "../components/LandingPage/Design/Footer";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -50,16 +52,16 @@ const Home = () => {
                 <Header />
                 <Hero />
                 <Section2 />
-
                 <div className={styles.testimonialContainer}>
                     <div className={styles.testimonial}>
                         <Testimonial />
                     </div>
                 </div>
-
                 <Membership />
                 <RecentWork />
                 <Pricing />
+                <Faq />
+                <Footer />
             </main>
         </>
     )

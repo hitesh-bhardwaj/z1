@@ -7,7 +7,7 @@ export default function Pricing() {
 
     return(
         <>
-            <div className="w-full">
+            <div className="w-full mb-20">
                 <div className="my-24 w-[85%] mx-auto">
                     <h2 className={styles.heading1}>
                         Transparent<span className={styles.reinventTextGradient}> Pricing
@@ -17,7 +17,7 @@ export default function Pricing() {
                         Choose a plan that’s right for you
                     </p>
                 </div>
-                <div className="w-full relative">
+                <div className={`${styles.pricingTable} w-full relative pb-[10vw]`}>
                     <div className="w-full bg-[#F3F3F3] h-[50%] absolute bottom-0 left-0">
                     </div>
                     <div className="w-[85%] relative m-auto z-index-1 flex justify-center items-center gap-8">
@@ -46,7 +46,7 @@ export default function Pricing() {
                                         <span></span>
                                     </span>
                                     <span className={styles.btnCtaTitle}>
-                                        <span data-text='See Plans'>Book a call</span>
+                                        <span data-text='Book a call'>Book a call</span>
                                     </span>
                                 </button>
                             </div>
@@ -77,7 +77,7 @@ export default function Pricing() {
                                         <span></span>
                                     </span>
                                     <span className={styles.btnCtaTitle}>
-                                        <span data-text='See Plans'>Book a call</span>
+                                        <span data-text='Book a call'>Book a call</span>
                                     </span>
                                 </button>
                             </div>
@@ -109,7 +109,7 @@ export default function Pricing() {
                                         <span></span>
                                     </span>
                                     <span className={styles.btnCtaTitle}>
-                                        <span data-text='See Plans'>Book a call</span>
+                                        <span data-text='Book a call'>Book a call</span>
                                     </span>
                                 </button>
                             </div>
