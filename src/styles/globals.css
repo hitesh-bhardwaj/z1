@@ -13,6 +13,7 @@
   --primary: #5d5ad6;
   --black: #000000;
   --black1: #1a1a1a;
+  --black4: #1f1f1f;
   --black2: #383838;
   --black3: #101010;
   --white: #ffffff;
@@ -11662,3 +11663,24 @@ label.label:hover:before{
 }
 
 /* Pop up form End */
+
+/* Landing Page Design */
+#DesignLandingTesti .horizontalSlider___281Ls{
+  height: 100%;
+  width: 50%;
+  margin: 0 auto;
+  overflow: hidden !important;
+}
+#DesignLandingTesti .sliderTray___-vHFQ{
+  height: 100%;
+}
+#DesignLandingTesti .horizontalSlider___281Ls .slideHorizontal___1NzNV{
+  padding: 0 !important;
+  height: 100%;
+}
+#DesignLandingTesti .slideInner___2mfX9{
+  background: none;
+  position: unset !important;
+  height: 70vh;
+}
+

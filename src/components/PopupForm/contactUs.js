@@ -11,8 +11,6 @@ export default function ContactUs({props}) {
   const dropdownRef = useRef(null);
   const inputRef = useRef(null);
 
-
-
     const [step, setStep] = useState(1);
     const router = useRouter();
     const totalSteps = 6; // Define the total number of steps
@@ -424,10 +422,6 @@ const handleBudgetChange = (value) => {
           </button>
         </div>
       </div>
-    
-  
-  
-  
   </div>
   )}
 {/* Form Step 2 END*/}
