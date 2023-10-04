@@ -1,7 +1,22 @@
 import React, { useEffect } from "react";
 import styles from "@/styles/designLanding.module.css";
+import gsap from "gsap";
+import  ScrollToPlugin  from 'gsap/dist/ScrollToPlugin';
+
+gsap.registerPlugin(ScrollToPlugin);
 
 export default function Footer() {
+
+    const handleSmoothScroll = (e, targetId) => {
+        e.preventDefault();
+        const targetElement = document.getElementById(targetId);
+        const targetPosition = targetElement.offsetTop;
+            gsap.to(window, {
+                duration: 2,
+                scrollTo: targetPosition,
+                ease: "power4.inOut",
+            });
+          };
 
     return(
         <>
@@ -44,16 +59,24 @@ export default function Footer() {
                     <div className={styles.footerRight}>
                         <ul>
                             <li>
-                                <a href="#">Latest Projects</a>
+                                <a href="#work" onClick={(e) => handleSmoothScroll(e, 'work')}>
+                                    Latest Projects
+                                </a>
                             </li>
                             <li>
-                                <a href="#">Pricing</a>
+                                <a href="#pricing" onClick={(e) => handleSmoothScroll(e, 'pricing')}>
+                                    Pricing
+                                </a>
                             </li>
                             <li>
-                                <a href="#">Contact</a>
+                                <a href="#">
+                                    Contact
+                                </a>
                             </li>
                             <li>
-                                <a href="#">FAQs</a>
+                                <a href="#faq" onClick={(e) => handleSmoothScroll(e, 'faq')}>
+                                    FAQs
+                                </a>
                             </li>
                         </ul>
                     </div>

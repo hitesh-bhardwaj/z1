@@ -31,7 +31,14 @@ export default function Membership() {
                         </div>
                     </div>
                     <img 
+                        className={styles.memberDeskImg}
+                        alt="laptop image"
                         src="/assets/landing-page/design/member.png"
+                    />
+                    <img 
+                        className={styles.memberMobImg}
+                        alt="benefit image"
+                        src="/assets/landing-page/design/member-benefit.png"
                     />
                 </div>
             </div>

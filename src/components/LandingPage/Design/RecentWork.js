@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import styles from "@/styles/designLanding.module.css";
-import Image from "next/image";
-import gsap from "gsap";
+import SliderComponent from "./RecentWorkCarousel";
+
 
 export default function RecentWork() {
 
@@ -28,8 +28,10 @@ export default function RecentWork() {
                     </div>
                     </div>
                     <div className={styles.workTesti}>
-                        <div className={styles.workTestiContainer}>
-                            
+                        <div className={styles.workWhiteSpace}>
+                        </div>
+                            <SliderComponent />
+                        <div className={styles.workWhiteSpace1}>
                         </div>
                     </div>
                     

@@ -8,7 +8,7 @@ export default function Pricing() {
     return(
         <>
             <div className="w-full mb-20">
-                <div className="my-24 w-[85%] mx-auto">
+                <div className="desk-sm:my-24 mt-24 mb-14 desk-sm:w-[85%] w-full px-[5%] mx-auto">
                     <h2 className={styles.heading1}>
                         Transparent<span className={styles.reinventTextGradient}> Pricing
                         </span> 
@@ -20,8 +20,8 @@ export default function Pricing() {
                 <div className={`${styles.pricingTable} w-full relative pb-[10vw]`}>
                     <div className="w-full bg-[#F3F3F3] h-[50%] absolute bottom-0 left-0">
                     </div>
-                    <div className="w-[85%] relative m-auto z-index-1 flex justify-center items-center gap-8">
-                        <div className="w-1/3 bg-gray-900 px-12 py-20 text-white/75 rounded-2xl shadow-xl relative overflow-hidden hover:text-white transition-all hover:shadow-3xl hover:bg-gray-800 duration-300">
+                    <div className="desk-sm:w-[85%] w-full px-[5%] desk-sm:px-[0] relative m-auto z-index-1 desk-sm:flex flex-col flex justify-center items-center gap-8">
+                        <div className="desk-sm:w-1/3 w-full bg-gray-900 px-12 py-20 text-white/75 rounded-2xl shadow-xl relative overflow-hidden hover:text-white transition-all hover:shadow-3xl hover:bg-gray-800 duration-300">
                             <div className="mb-10">
                                 <h5 className="text-3xl mb-2 font-medium">Monthly</h5>
                                 <p className="text-lg pl-2 font-body-2 w-5/6">Add as many design requests to your board as you'd like.</p>
@@ -52,7 +52,7 @@ export default function Pricing() {
                             </div>
                         </div>
 
-                        <div className="w-1/3 bg-gray-900 px-12 py-20 text-white/75 rounded-2xl shadow-xl relative overflow-hidden hover:text-white transition-all hover:shadow-3xl hover:bg-gray-800 duration-300">
+                        <div className="desk-sm:w-1/3 w-full bg-gray-900 px-12 py-20 text-white/75 rounded-2xl shadow-xl relative overflow-hidden hover:text-white transition-all hover:shadow-3xl hover:bg-gray-800 duration-300">
                             <div className="mb-10">
                                 <h5 className="text-3xl mb-2 font-medium">Quaterly</h5>
                                 <p className="text-lg pl-2 font-body-2 w-5/6">Add as many design requests to your board as you'd like.</p>
@@ -83,7 +83,7 @@ export default function Pricing() {
                             </div>
                         </div>
 
-                        <div className="w-1/3 bg-[#2545FF] px-12 py-20 text-white/75 rounded-2xl shadow-xl relative overflow-hidden hover:text-white transition-all hover:shadow-3xl hover:bg-blue-600 duration-300">
+                        <div className="desk-sm:w-1/3 bg-[#2545FF] w-full px-12 py-20 text-white/75 rounded-2xl shadow-xl relative overflow-hidden hover:text-white transition-all hover:shadow-3xl hover:bg-blue-600 duration-300">
                             <div className="text-white font-body-2 bg-white/20 rounded-md tracking-wide absolute top-0 right-0 p-2 text-lg">Recommended</div>
                             <div className="mb-10">
                                 <h5 className="text-3xl mb-2 font-medium text-white">Yearly</h5>

@@ -11684,3 +11684,17 @@ label.label:hover:before{
   height: 70vh;
 }
 
+@media screen and (max-width: 991px) {
+  #DesignLandingTesti .horizontalSlider___281Ls{
+    width: 90%;
+  }
+  #DesignLandingTesti .sliderTray___-vHFQ{
+    height: 80vh;
+  }
+  #DesignLandingTesti .slideInner___2mfX9{
+    height: 100%;
+    width: 50%;
+  }
+}
+
+
