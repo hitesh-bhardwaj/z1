@@ -548,12 +548,79 @@
 
 
 /* Pricing Table */
-.pricingTable .btnCta{
+.pricing{
+    width: 100%;
+    margin: 5% auto;
+}
+.pricingTop{
+    width: 85%;
+    margin: auto;
+    padding-bottom: 5%;
+}
+.pricingTop .para1{
+    width: 100%;
+}
+.pricingTable{
+    position: relative;
+    padding-bottom: 5%;
+}
+.priceCards{
+    display: flex;
+    gap: 2rem;
+    width: 85%;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+}
+.priceCard{
+    transition: all 0.3s ease;
+    padding: 3vw 2.5vw;
+    background: #111827;
+    border-radius: 20px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+.priceCard:last-child{
+    background: #2545ff;
+}
+.priceCard h5{
+    font-size: 1.5vw;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.priceCard p{
+    font-size: 1vw;
+}
+.priceh5{
+    font-size: 1.4vw;
+    font-family: 'Arial';
+}
+.priceCard ul{
+    list-style: disc;
+    font-family: 'Arial';
+    margin-left: 20px;
+}
+.priceCard ul li{
+    font-size: 1vw;
+    margin-bottom: 5px;
+}
+.priceRecommend{
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-radius: 5px;
+    background: #ffffff30;
+    color: white;
+    font-size: 0.8vw;
+    font-family: 'Arial';
+    padding: 10px 10px;
+}
+.priceCard .btnCta{
     color: #ffffff;
     width: 100%;
 }
-
-.pricingTable .btnCtaTitle span:after {
+.priceCard .btnCtaTitle span:after {
     color: #000000 !important;
 }
 
@@ -692,8 +759,20 @@
     }
 }
 
+  .headerMobile{
+    display: none;
+  }
 
-/* Mobile */
+  @media screen and (max-width:991px) {
+    /* Mobile */
+    /* .hamburger{
+        width: 100px;
+        height: 100px;
+        background: #00000080;
+        backdrop-filter: blur(10px);
+        box-shadow: 2px 2px 8px #00000090;
+        border-radius: 50%;
+    } */
 .ham {
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
@@ -702,7 +781,7 @@
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    width: 55px;
+    width: 80px;
     margin-right: 10px;
     position: relative;
     z-index: 100;
@@ -732,11 +811,406 @@
   .active .lineBottom {
     stroke-dashoffset: -68px;
   }
-  .headerMobile{
-    display: none;
-  }
+    .headerContainer{
+        margin-top: 0;
+    }
+    .headerDesktop{
+        display: none;
+    }
+    .headerMobile{
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+    .headerMobileContainer{
+        padding: 15px 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .headLogo{
+        width: fit-content;
+        margin-left: 20px;
+    }
+    .headLogo img{
+        width: 55px;
+    }
+    .mobileNav{
+        right: -100%;
+        top: 0;
+        position: absolute;
+        width: 80vw;
+        z-index: 10;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        background: white;
+        box-shadow: 0 -2px 8px #00000030;
+        padding-left: 50px;
+        transition: all 0.5s ease;
+        overflow: hidden;
+    }
+    .activeNav{
+        right: 0%;
+        transition: all 0.5s ease;
+    }
+    .mobileNavBg{
+        position: absolute;
+        width: 300%;
+        right: -80%;;
+        max-width: -moz-fit-content;
+        max-width: fit-content;
+        z-index: -1;
+    }
+    .mobileNavLinks{
+        position: relative;
+        z-index: 2;
+    }
+    .navListLinks a{
+      font-size: 7vw;
+      font-family: 'ClashDisplay' !important;
+      font-weight: 500;
+    }
+    .navCta{
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        display: inline-flex;
+        transform: translateZ(0);
+        border-radius: 100px;
+        line-height: 1.5;
+        font-size: 5.5vw;
+        transition: transform .3s;
+        position: relative;
+        background: #000000;
+        color: #ffffff;
+        margin-top: 30px;
+        padding: 1vw 10vw;
+      }
+      .navCta a{
+        color: #ffffff;
+        letter-spacing: 1px;
+      }
+      .navBottom{
+        margin-top: 150px;
+      }
+      .navBottom img{
+        width: 12rem;
+        filter: invert(1);
+      }
 
-@media screen and (max-width:991px) {
+      /* Hero */
+      .backgroundImg{
+        width: 80%;
+        filter: blur(2px);
+      }
+      .heroContent{
+        padding-top: 10vw;
+      }
+      .heroTopEle{
+        width: 100%;
+      }
+      .heroTopEle h1{
+        font-size: 14vw;
+        text-shadow: none;
+    }
+    .heroTopEle h1 .span{
+        font-size: 10vw;
+    }
+    .heroTopEle h1 .headContainer{
+        font-size: 10vw;
+        position: absolute;
+        bottom: 0px;
+        left: 40px;
+        height: 8vh;
+        line-height: 1.2;
+    }
+    .heroTopEle h1 .headContainer .headItems{
+        display: flex;
+        flex-direction: column;
+        animation: moveUp 6s infinite;
+    }
+    .heroBottom{
+        margin-top: 5vw;
+        gap: 3vw;
+        width: 100%;
+    }
+    .heroBottom p{
+        font-size: 4vw;
+    }
+    .btnCta{
+        padding: 0;
+        font-size: 5vw;
+        height: 90px;
+        width: 55vw;
+    }
+    .heroBottom p:last-child{
+        font-size: 4vw;
+    }
+
+    /* Second Section */
+    .reinventContainer{
+        display: block;
+        padding: 0;
+        width: 100%;
+    }
+    .reinvent{
+        width: 100%;
+        padding: 0 5%;
+        margin: 0;
+    }
+    .reinventLeft{
+        width: 100%;
+    }
+    .reinventRight{
+        width: 100%;
+        margin-top: 15vw;
+    }
+    .heading1{
+        font-size: 8vw;
+    }
+    .para1{
+        width: 100%;
+        font-size: 4vw;
+    }
+    .reinventItems{
+        height: 60vh;
+    }
+    .reinventItem img{
+        width: 70%;
+    }
+    .reinventRightText{
+        height: 20vh;
+        padding: 20px;
+        bottom: 0;
+    }
+    .reinventRightText h3{
+        font-size: 7vw;
+    }
+    .reinventRightText p{
+        font-size: 3.5vw;
+        letter-spacing: 0.5px;
+    }
+
+
+    /* Testimonial */
+    .testiContent{
+        font-size: 8vw !important;
+    }
+    .testiName{
+        font-size: 6vw;
+    }
+    .testiButtonContainer{
+        width: 60%;
+        left: 50%;
+        top: 80%;
+    }
+    .testiButton{
+        background: #ffffff50;
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        transition: all 0.2s ease;
+        padding: 15px;
+        margin: 0;
+    }
+
+    /* MemberShip */
+    .membership{
+        padding: 10% 5%;
+        background: #f1f1f1;
+    }
+    .memberContentBox{
+        position: relative;
+        width: 100%;
+        top: unset;
+        right: unset;
+        margin-bottom: 10%;
+    }
+    .memberContentBox p{
+        width: 100%;
+    }
+    .memberDeskImg{
+        display: none;
+    }
+    .memberMobImg{
+        display: block;
+        width: 100%;
+    }
+
+    /*Recent Work */
+    .work{
+        padding: 25% 5% 10%;
+        text-align: left;
+    }
+    .workTopBox{
+        width: 100%;
+        height: 100%;
+        margin-bottom: 15vw;
+    }
+    .workTopBox p{
+        padding: 0;
+    }
+    .memberButton{
+        margin-top: 30px;
+    }
+    .workCarouselImg{
+        height: 50vh;
+    }
+    .workWhiteSpace{
+        height: 120px;
+        top: -8%;
+    }
+    .workWhiteSpace1{
+        height: 120px;
+        bottom: -10%;
+    }
+
+    /* pricing */
+    .pricing{
+        margin: 10vh auto;
+    }
+    .pricingTop{
+        width: 90%;
+        padding-bottom: 10%;
+    }
+    .priceCards{
+        width: 90%;
+        flex-direction: column;
+    }
+    .priceCard{
+        width: 100%;
+        padding: 7vw;
+    }
+    .priceCard h5{
+        font-size: 5vw;
+    }
+    .priceCard p{
+        font-size: 4vw;
+    }
+    .priceCard ul li{
+        font-size: 4vw;
+    }
+    .priceCard div{
+        margin-bottom: 40px;
+    }
+    .priceCard div:last-child{
+        padding-top: 10px;
+        margin-bottom: 0;
+    }
+    .priceRecommend{
+        font-size: 3vw;
+    }
+
+    /* Faq */
+    .faq{
+        text-align: left;
+        padding: 5%;
+        width: 100%;
+    }
+    .faqTopBox .para1 {
+        text-align: left;
+        margin-top: 10px;
+    }
+    .faqBottomBox{
+        width: 100%;
+        margin-top: 0;
+    }
+    .faqBottomBox h4{
+        font-size: 4.5vw;
+    }
+    .faqBottomBox p{
+        font-size: 3.5vw;
+        width: 90%;
+        text-align: justify;
+    }
+    .arrowStatic, .arrowRotate{
+        width: 3vw;
+    }
+    .contentVisible {
+        height: 280px;
+    }
+
+    /* Footer */
+    .footer{
+        padding: 15vh 0 5vh;
+    }
+    .footerTop img{
+        width: 150%;
+        bottom: -50px;
+        max-width: unset;
+        right: -50%;
+    }
+    .footerTop{
+        width: 100%;
+        padding: 10% 5%;
+    }
+    .footerCta{
+        padding: 8% 0;
+        width: 100%;
+        flex-direction: column;
+        gap: 30px;
+        position: relative;
+        z-index: 1;
+    }
+    .footerBottom{
+        width: 100%;
+        padding: 10% 5% 0;
+        align-items: flex-start;
+    }
+    .footerLeft{
+        width: 50%;
+        text-align: left;
+    }
+    .footerLeft img{
+        width: 60%;
+    }
+    .footerLeft p{
+        margin-top: 5px;
+        font-size: 3.3vw;
+    }
+    .footerRight ul{
+        gap: 10px;
+        flex-direction: column;
+    }
+    .footerRight ul li a{
+        font-size: 3.5vw;
+    }
+}
+
+@media screen and (max-width:776px) {
+    .heroTopEle h1 .span,
+    .heroTopEle h1 .headContainer{
+        font-size: 8vw;
+    }
+    .reinventRight{
+        margin-top: 10vw;
+    }
+    .reinventItems{
+        height: 67vh;
+    }
+    .workCarouselImg{
+        height: 60vh;
+    }
+}
+
+@media screen and (max-width:450px) {
+    .ham {
+        cursor: pointer;
+        -webkit-tap-highlight-color: transparent;
+        transition: transform 400ms;
+        -moz-user-select: none;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        width: 55px;
+        margin-right: 10px;
+        position: relative;
+        z-index: 100;
+      }
     .headerContainer{
         margin-top: 0;
     }
@@ -771,7 +1245,7 @@
         height: 100vh;
         display: flex;
         justify-content: center;
-        align-items: start;
+        align-items: flex-start;
         flex-direction: column;
         background: white;
         box-shadow: 0 -2px 8px #00000030;
@@ -981,7 +1455,43 @@
     }
     .workWhiteSpace1{
         height: 80px;
-        bottom: -10%;
+        bottom: -5%;
+    }
+
+    /* pricing */
+    .pricing{
+        margin: 10vh auto;
+    }
+    .pricingTop{
+        width: 90%;
+        padding-bottom: 10%;
+    }
+    .priceCards{
+        width: 90%;
+        flex-direction: column;
+    }
+    .priceCard{
+        width: 100%;
+        padding: 7vw;
+    }
+    .priceCard h5{
+        font-size: 5vw;
+    }
+    .priceCard p{
+        font-size: 4vw;
+    }
+    .priceCard ul li{
+        font-size: 4vw;
+    }
+    .priceCard div{
+        margin-bottom: 40px;
+    }
+    .priceCard div:last-child{
+        padding-top: 10px;
+        margin-bottom: 0;
+    }
+    .priceRecommend{
+        font-size: 3vw;
     }
 
     /* Faq */

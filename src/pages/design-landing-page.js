@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useState, useEffect } from "react";
 import { useRef } from "react";
 import Lenis from '@studio-freight/lenis';
@@ -47,6 +49,8 @@ useEffect(() => {
         }
       }, [])
 
+      console.clear();
+
     return (
         <>
         <Cursor isGelly={true} />
@@ -58,7 +62,7 @@ useEffect(() => {
                 </section>
                 
                 <Section2 />
-                
+
                 <div className={styles.testimonialContainer}>
                     <div className={styles.testimonial}>
                         <Testimonial />

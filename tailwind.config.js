@@ -16,14 +16,7 @@ module.exports = {
         'display': 'ClashDisplay',
         'body': 'Ageo',
         'body-2': 'Arial',
-      },
-      screens: {
-        'tablet': '991px',
-        'desk-sm': '1280px',
-        'mac': '1440px',
-        'mac-lg': '1536px',
-        'desk': '1680px',
-      },
+      }
     },
   },
   plugins: [],

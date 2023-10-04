@@ -1,3 +1,4 @@
+'use client'
 import React from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
@@ -20,6 +21,11 @@ const SliderComponent = () => {
         settings = {
             ...settings,
             slidesToShow: 3,
+        };
+    } else if (globalThis.innerWidth<1024 && globalThis.innerWidth>770) {
+        settings = {
+            ...settings,
+            slidesToShow: 2,
         };
     }
 

@@ -11693,8 +11693,13 @@ label.label:hover:before{
   }
   #DesignLandingTesti .slideInner___2mfX9{
     height: 100%;
-    width: 50%;
+    width: 77%;
   }
 }
 
+@media screen and (max-width: 776px) {
+  #DesignLandingTesti .slideInner___2mfX9{
+    width: 50%;
+  }
+}
 
