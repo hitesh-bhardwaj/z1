@@ -33,12 +33,20 @@ export default function Membership() {
                     <img 
                         className={styles.memberDeskImg}
                         alt="laptop image"
-                        src="/assets/landing-page/design/member.png"
+                        loading="lazy"
+                        src="/assets/landing-page/design/member.webp"
                     />
                     <img 
                         className={styles.memberMobImg}
+                        loading="lazy"
                         alt="benefit image"
-                        src="/assets/landing-page/design/member-benefit.png"
+                        src="/assets/landing-page/design/member-benefit.webp"
+                    />
+                    <img 
+                        className={styles.darkMemberMobImg}
+                        loading="lazy"
+                        alt="benefit image"
+                        src="/assets/landing-page/design/dark-member-benefit.png"
                     />
                 </div>
             </div>

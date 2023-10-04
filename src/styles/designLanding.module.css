@@ -1,19 +1,154 @@
+
 .mainContainer{
     position: relative;
     background: var(--white);
+    transition: all 0.3s ease;
 }
-
-.div{
-    height: 100vh;
-    width: 100%;
-    background-color: var(--primary);
-}
-
 .mainContainer p, .mainContainer a{
     font-family: 'Arial';
     font-weight: 400;
 } 
 
+
+/* -----------------------Dark Mode -----------------------*/
+
+.dark .c-cursor{
+    filter: invert(1) !important;
+}
+
+.dark #c-cursor{
+    filter: invert(1) !important;
+}
+.dark .mainContainer{
+    background: var(--black);
+}
+.dark .backgroundImg{
+    display: none;
+}
+.dark .darkBackgroundImg{
+    display: block;
+    opacity: 1;
+}
+
+/* Header */
+.dark img, .dark svg{
+    filter: invert(1);
+}
+.dark .headerMain{
+    background: #00000050;
+    backdrop-filter: blur(10px);
+    box-shadow: none;
+    border: 2px solid #ffffff20;
+}
+.dark .headerCta{
+    filter: invert(1);
+}
+.dark .darkToggle img{
+    filter: invert(0);
+}
+.dark .mobileNav {
+    filter: invert(1);
+}
+
+/* Hero */
+.dark .hero{
+    filter: invert(1);
+    transition: all 0.3s ease;
+}
+.dark .heroBottom p span{
+    filter: invert(1);
+}
+
+/* Section 2 */
+.dark .reinvent{
+    filter: invert(1);
+    transition: all 0.3s ease;
+}
+.dark .reinventTextGradient {
+    background-image: -moz-linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(218,186,0,1) 100%);
+    background-image: -webkit-linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(218,186,0,1) 100%);
+    background-image: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(218,186,0,1) 100%);
+}
+.dark .reinventRightText{
+    filter: invert(1);
+}
+
+/* Benefit */
+.dark .membership{
+    filter: invert(1);
+    transition: all 0.3s ease;
+}
+
+@media screen and (max-width: 991px) {
+    .dark .memberMobImg{
+        display: none;
+    }
+    .dark .darkMemberMobImg{
+        filter: invert(1);
+        display: block;
+    }
+}
+
+/* Work */
+.dark .work{
+    filter: invert(1);
+    transition: all 0.3s ease;
+}
+
+/* Pricing */
+.dark .pricing{
+    transition: all 0.3s ease;
+}
+.dark .pricingTop{
+    filter: invert(1);
+}
+.dark .pricingBg{
+    display: none;
+}
+.dark .priceCard{
+    background: #00000020;
+    backdrop-filter: blur(10px);
+    border: 1px solid #ffffff20;
+}
+.dark .pricingBg{
+    display: none;
+}
+.dark .darkPricingBg{
+    filter: invert(1);
+    display: block;
+    position: absolute;
+    width: 100%;
+    bottom: -10%;
+    left: 0;
+}
+.dark .priceCard:last-child{
+    background: #2545ff90;
+}
+
+/* Faq */
+.dark .faq{
+    filter: invert(1);
+    transition: all 0.3s ease;
+}
+.dark .faq img{
+    filter: invert(0);
+}
+
+/* Footer */
+.dark .footer{
+    filter: invert(1);
+    transition: all 0.3s ease;
+}
+.dark .footerBottom img{
+    filter: invert(0);
+}
+
+
+/*------------------ Dark Mode CSS End-------------------- */
+
+/*------------------Main CSS Start ----------------------*/
+
+/* Header */
 .headerContainer{
     position: fixed;
     top: 0;
@@ -34,7 +169,7 @@
     width: 8%;
 }
 .headLogo img{
-    width: 3vw;
+    width: 2.5vw;
 }
 .headerMain{
     background: #000000ab;
@@ -60,6 +195,21 @@
     font-weight: 400;
     font-size: 1.2vw;
     letter-spacing: 2%;
+}
+
+.darkToggle{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 18vw;
+    background-color: #f1f1f1;
+    z-index: 100;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+}
+.darkToggle img{
+    width: 75%;
 }
 
 .headerCta{
@@ -99,6 +249,14 @@
     width: 100%;
     height: auto;
 }
+.darkBackgroundImg{
+    display: none;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
 .heroContent{
     display: flex;
     justify-content: center;
@@ -106,6 +264,7 @@
     height: 100%;
     z-index: 1;
     flex-direction: column;
+    position: relative;
 }
 .heroTopEle h1{
     color: var(--black3);
@@ -476,6 +635,7 @@
     right: 0;
     width: 45%;
     top: 15%;
+    z-index: 1;
 }
 .memberContentBox p{
     width: 80%;
@@ -489,8 +649,9 @@
     margin-top: 40px;
 }
 
-.memberMobImg{
+.memberMobImg, .darkMemberMobImg{
     display: none;
+    border-radius: 20px;
 }
 
 /* Recent Work */
@@ -572,6 +733,9 @@
     justify-content: space-between;
     align-items: center;
 }
+.darkPricingBg{
+    display: none;
+}
 .priceCard{
     transition: all 0.3s ease;
     padding: 3vw 2.5vw;
@@ -639,7 +803,7 @@
     text-align: left;
     margin-top: 100px;
 }
-.faqBottomBox h4{
+.faqBottomBox h5{
     font-family: 'Arial';
     font-size: 1.6vw;
 }
@@ -765,14 +929,6 @@
 
   @media screen and (max-width:991px) {
     /* Mobile */
-    /* .hamburger{
-        width: 100px;
-        height: 100px;
-        background: #00000080;
-        backdrop-filter: blur(10px);
-        box-shadow: 2px 2px 8px #00000090;
-        border-radius: 50%;
-    } */
 .ham {
     cursor: pointer;
     -webkit-tap-highlight-color: transparent;
@@ -1073,6 +1229,9 @@
     .pricing{
         margin: 10vh auto;
     }
+    .darkPricingBg{
+        display: none !important;
+    }
     .pricingTop{
         width: 90%;
         padding-bottom: 10%;
@@ -1119,7 +1278,7 @@
         width: 100%;
         margin-top: 0;
     }
-    .faqBottomBox h4{
+    .faqBottomBox h5{
         font-size: 4.5vw;
     }
     .faqBottomBox p{
@@ -1508,7 +1667,7 @@
         width: 100%;
         margin-top: 0;
     }
-    .faqBottomBox h4{
+    .faqBottomBox h5{
         font-size: 5.5vw;
     }
     .faqBottomBox p{

@@ -55,8 +55,9 @@ export default function Faq() {
                                     className="flex justify-between items-center font-medium cursor-pointer list-none"
                                     onClick={() => handleToggle(index)}
                                 >
-                                    <h4>{item.question}</h4>
+                                    <h5>{item.question}</h5>
                                     <img 
+                                        alt="faq arrow"
                                         src="/assets/landing-page/design/arrow-faq.svg" 
                                         className={openIndex === index ? styles.arrowRotate : styles.arrowStatic}
                                     />

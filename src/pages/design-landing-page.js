@@ -25,6 +25,23 @@ gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 const Home = () => {
     const [dimension, setDimension] = useState({width:0, height:0});
     const lenisRef = useRef(null);
+    const [isDarkMode, setIsDarkMode] = useState(false);
+
+    // Load dark mode status from localStorage on component mount
+    useEffect(() => {
+      const savedDarkMode = localStorage.getItem('isDarkMode') === 'true';
+      setIsDarkMode(savedDarkMode);
+  }, []);
+
+   // Save dark mode status to localStorage whenever it changes
+   useEffect(() => {
+    localStorage.setItem('isDarkMode', isDarkMode);
+    document.body.classList.toggle(styles.dark, isDarkMode);
+}, [isDarkMode]);
+
+const toggleDarkMode = () => {
+    setIsDarkMode(prevMode => !prevMode);
+};
 
 useEffect(() => {
     lenisRef.current = new Lenis();
@@ -53,9 +70,26 @@ useEffect(() => {
 
     return (
         <>
+        <Head>
+          <title>
+            Design Services | Design Subscription
+          </title>
+          <meta
+            name="description"
+            content="Experience top-tier UI/UX design, front-end development, and organic marketing services with Enigma Digital, enhancing your online presence and business growth."
+          />
+          <meta name="viewport" content="width=device-width, initial-scale=1" />
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, maximum-scale=5.0">          
+          </meta>
+          <link rel="icon" href="/fav-icon.png" />
+        </Head>
+
         <Cursor isGelly={true} />
-            <main className={styles.mainContainer}>
-                <Header />
+              <main id="design-landing" className={`${styles.mainContainer} ${isDarkMode ? styles.dark : "dark"}`}>
+                
+                <Header isDarkMode={isDarkMode} toggleDarkMode={toggleDarkMode} />
 
                 <section id="home">
                   <Hero />

@@ -18,7 +18,10 @@ export default function Pricing() {
                     </p>
                 </div>
                 <div className={styles.pricingTable}>
-                    <div className="w-full bg-[#F3F3F3] h-[50%] absolute bottom-0 left-0">
+                    <div className={`w-full bg-[#F3F3F3] h-[50%] absolute bottom-0 left-0 ${styles.pricingBg} `}>
+                    </div>
+                    <div className={styles.darkPricingBg}>
+                        <img loading="lazy" src="/assets/landing-page/design/pricingBg.webp" alt="Pricing Bg" />
                     </div>
                     <div className={styles.priceCards}>
                         <div className={`${styles.priceCard} text-white/75 hover:text-white hover:bg-gray-800 w-1/3`}>

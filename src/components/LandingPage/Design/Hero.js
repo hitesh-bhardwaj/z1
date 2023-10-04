@@ -8,7 +8,14 @@ export default function Hero() {
             <div className={styles.hero}>
                 <div className={styles.backgroundImg}>
                     <img
-                        src="/assets/landing-page/design/hero-img.png"
+                        src="/assets/landing-page/design/hero-img.webp"
+                        alt="hero image" />
+                </div>
+
+                <div className={styles.darkBackgroundImg}>
+                    <img
+                        loading="lazy"
+                        src="/assets/landing-page/design/dark-hero-bg.png"
                         alt="hero image" />
                 </div>
 

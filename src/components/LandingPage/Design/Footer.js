@@ -47,13 +47,14 @@ export default function Footer() {
                         </button>
                     </div>
                     <img 
-                        src="/assets/landing-page/design/bg-gradient.png" 
+                        loading="lazy"
+                        src="/assets/landing-page/design/bg-gradient.webp" 
                         alt="bg-gradient"
                     />
                 </div>
                 <div className={styles.footerBottom}>
                     <div className={styles.footerLeft}>
-                        <img src="/assets/landing-page/design/enigma-logo.svg" alt="enigma logo" />
+                        <img loading="lazy" src="/assets/landing-page/design/enigma-logo.svg" alt="enigma logo" />
                         <p>We Make Magic<span className={styles.tradeMark}>ᵀᴹ</span></p>
                     </div>
                     <div className={styles.footerRight}>

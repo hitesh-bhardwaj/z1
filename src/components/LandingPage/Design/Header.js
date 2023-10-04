@@ -5,12 +5,8 @@ import styles from "@/styles/designLanding.module.css";
 
 gsap.registerPlugin(ScrollToPlugin);
 
-export default function Header() {
+export default function Header({ isDarkMode, toggleDarkMode }) {
     const [isActive, setIsActive] = useState(false);
-
-    const handleClick = () => {
-      setIsActive(!isActive);
-    };
 
     const handleSmoothScroll = (e, targetId) => {
         e.preventDefault();
@@ -21,11 +17,24 @@ export default function Header() {
                 scrollTo: targetPosition,
                 ease: "power4.inOut",
             });
-          };
+          };    
+
+    const handleClick = () => {
+        setIsActive(!isActive);
+    };
+
+    useEffect(() => {
+        const tl = gsap.timeline();
+        tl.fromTo(
+          "#landing-dark-img",
+          { scale: 0, rotate: "-280deg" },
+          { scale: 1, rotate: "0deg", duration: 0.7 }
+        );
+      });
 
     return(
         <>
-            <header className={styles.headerContainer}>
+            <header className={`${styles.headerContainer}`}>
                 <div className={styles.headerDesktop}>
                     <div className={styles.headLogo}>
                         <img 
@@ -65,6 +74,17 @@ export default function Header() {
                             </a>
                         </button>
                     </div>
+                    <button 
+                        aria-label="Dark Mode"
+                        className={styles.darkToggle}
+                        onClick={toggleDarkMode} 
+                    >
+                        <img 
+                            id="landing-dark-img"
+                            alt="dark mode" 
+                            src={isDarkMode ? '/assets/dark/sun.svg' : '/assets/dark/moon.svg'}
+                        />
+                    </button>
                 </div>
 
 {/* Mobile Header */}
@@ -75,6 +95,17 @@ export default function Header() {
                                 src="/assets/landing-page/design/header-logo.svg"
                                 alt="logo" />
                         </div>
+                        <button 
+                            aria-label="Dark Mode"
+                            className={styles.darkToggle}
+                            onClick={toggleDarkMode} 
+                        >
+                            <img 
+                                id="landing-dark-img"
+                                alt="dark mode" 
+                                src={isDarkMode ? '/assets/dark/sun.svg' : '/assets/dark/moon.svg'}
+                            />
+                        </button>
                         <div className={styles.hamburger}>
                             <svg
                                 className={`${styles.ham} ${styles.hamRotate} ${isActive ? styles.active : ''}`}
@@ -88,8 +119,9 @@ export default function Header() {
                         </div>
                         <div className={`${styles.mobileNav} ${isActive ? styles.activeNav : ''}`}>
                             <img 
+                                loading="lazy"
                                 className={styles.mobileNavBg}
-                                src="/assets/landing-page/design/mobile-nav-bg.png"
+                                src="/assets/landing-page/design/mobile-nav-bg.webp"
                                 alt="nav-bg"
                                 />
                             <div className={styles.mobileNavLinks}>
@@ -130,18 +162,14 @@ export default function Header() {
                                 </div>
                                 <div className={styles.navBottom}>
                                     <img 
-                                        src="/assets/landing-page/design/nav-bottom.png"
+                                        alt="enigma trademark"
+                                        src="/assets/landing-page/design/nav-bottom.webp"
                                     />
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-
-
-
-                  
               </header>
         </>
     );

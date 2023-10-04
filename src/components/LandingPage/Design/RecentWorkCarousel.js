@@ -31,12 +31,12 @@ const SliderComponent = () => {
 
     return (
         <Slider {...settings}>
-            <div className={styles.workCarouselImg}><img src="/assets/landing-page/design/c-1.png" alt="Image 1" /></div>
-            <div className={styles.workCarouselImg}><img src="/assets/landing-page/design/c-2.png" alt="Image 2" /></div>
-            <div className={styles.workCarouselImg}><img src="/assets/landing-page/design/c-3.png" alt="Image 3" /></div>
-            <div className={styles.workCarouselImg}><img src="/assets/landing-page/design/c-4.png" alt="Image 4" /></div>
-            <div className={styles.workCarouselImg}><img src="/assets/landing-page/design/c-5.png" alt="Image 5" /></div>
-            <div className={styles.workCarouselImg}><img src="/assets/landing-page/design/c-6.png" alt="Image 6" /></div>
+            <div className={styles.workCarouselImg}><img loading='lazy' src="/assets/landing-page/design/c-1.webp" alt="Image 1" /></div>
+            <div className={styles.workCarouselImg}><img loading='lazy' src="/assets/landing-page/design/c-2.webp" alt="Image 2" /></div>
+            <div className={styles.workCarouselImg}><img loading='lazy' src="/assets/landing-page/design/c-3.webp" alt="Image 3" /></div>
+            <div className={styles.workCarouselImg}><img loading='lazy' src="/assets/landing-page/design/c-4.webp" alt="Image 4" /></div>
+            <div className={styles.workCarouselImg}><img loading='lazy' src="/assets/landing-page/design/c-5.webp" alt="Image 5" /></div>
+            <div className={styles.workCarouselImg}><img loading='lazy' src="/assets/landing-page/design/c-6.webp" alt="Image 6" /></div>
         </Slider>
     );
 };
