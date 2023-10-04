@@ -1,5 +1,3 @@
-'use client'
-
 import React, { useState, useEffect } from "react";
 import { useRef } from "react";
 import Lenis from '@studio-freight/lenis';
@@ -19,6 +17,7 @@ import RecentWork from "../components/LandingPage/Design/RecentWork";
 import Pricing from "../components/LandingPage/Design/Pricing";
 import Faq from "../components/LandingPage/Design/Faq";
 import Footer from "../components/LandingPage/Design/Footer";
+import Head from "next/head";
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
