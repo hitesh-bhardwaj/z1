@@ -21,7 +21,9 @@ export default function Section2() {
                     <div className={styles.reinventRight}>
                         <div className={styles.reinventItems}>
                             <div className={styles.reinventItem}>
-                                <img 
+                                <Image
+                                    width={800}
+                                    height={800}
                                     loading="lazy"
                                     src="/assets/landing-page/design/section2_1.webp"
                                     alt="hero image" />
@@ -35,7 +37,9 @@ export default function Section2() {
                                 </div>
                             </div>
                             <div className={styles.reinventItem}>
-                                <img 
+                                <Image
+                                    width={800}
+                                    height={800}
                                     loading="lazy"
                                     src="/assets/landing-page/design/section2_2.webp"
                                     alt="hero image" />
@@ -49,7 +53,9 @@ export default function Section2() {
                                 </div>
                             </div>
                             <div className={styles.reinventItem}>
-                                <img 
+                                <Image
+                                    width={800}
+                                    height={800}
                                     loading="lazy"
                                     src="/assets/landing-page/design/section2_3.webp"
                                     alt="hero image" />

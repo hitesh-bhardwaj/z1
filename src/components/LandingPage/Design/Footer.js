@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import styles from "@/styles/designLanding.module.css";
 import gsap from "gsap";
 import  ScrollToPlugin  from 'gsap/dist/ScrollToPlugin';
+import Image from "next/image";
 
 gsap.registerPlugin(ScrollToPlugin);
 
@@ -46,7 +47,9 @@ export default function Footer() {
                             </span>
                         </button>
                     </div>
-                    <img 
+                    <Image
+                        height={1000}
+                        width={1000} 
                         loading="lazy"
                         src="/assets/landing-page/design/bg-gradient.webp" 
                         alt="bg-gradient"
@@ -54,7 +57,11 @@ export default function Footer() {
                 </div>
                 <div className={styles.footerBottom}>
                     <div className={styles.footerLeft}>
-                        <img loading="lazy" src="/assets/landing-page/design/enigma-logo.svg" alt="enigma logo" />
+                    <Image
+                        height={220}
+                        width={220}
+                        src="/assets/landing-page/design/enigma-logo.svg" 
+                        alt="enigma logo" />
                         <p>We Make Magic<span className={styles.tradeMark}>ᵀᴹ</span></p>
                     </div>
                     <div className={styles.footerRight}>

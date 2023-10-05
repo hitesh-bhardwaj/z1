@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 import styles from "@/styles/designLanding.module.css";
+import Image from 'next/image';
 
 const testimonials = [
   {
@@ -63,10 +64,10 @@ const Testimonial = () => {
       </Slider>
       <div className={styles.testiButtonContainer}>
         <ButtonBack className={`${styles.testiButton} ${styles.backbtn}`}>
-          <img src='/assets/icons/next.png' alt='arrow'/>
+          <Image height={30} width={30} src='/assets/icons/next.png' alt='arrow'/>
         </ButtonBack>
         <ButtonNext className={styles.testiButton}>
-          <img src='/assets/icons/next.png' alt='arrow'/>
+          <Image height={30} width={30} src='/assets/icons/next.png' alt='arrow'/>
         </ButtonNext>
       </div>
     </CarouselProvider>

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styles from "@/styles/designLanding.module.css";
+import Image from "next/image";
 
 export default function Faq() {
     const [openIndex, setOpenIndex] = useState(0);
@@ -55,8 +56,11 @@ export default function Faq() {
                                     className="flex justify-between items-center font-medium cursor-pointer list-none"
                                     onClick={() => handleToggle(index)}
                                 >
-                                    <h5>{item.question}</h5>
-                                    <img 
+                                    <h6>{item.question}</h6>
+                                    <Image
+                                        priority={false}
+                                        height={40}
+                                        width={40} 
                                         alt="faq arrow"
                                         src="/assets/landing-page/design/arrow-faq.svg" 
                                         className={openIndex === index ? styles.arrowRotate : styles.arrowStatic}

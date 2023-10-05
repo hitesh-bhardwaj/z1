@@ -803,7 +803,7 @@
     text-align: left;
     margin-top: 100px;
 }
-.faqBottomBox h5{
+.faqBottomBox h6{
     font-family: 'Arial';
     font-size: 1.6vw;
 }
@@ -1278,7 +1278,7 @@
         width: 100%;
         margin-top: 0;
     }
-    .faqBottomBox h5{
+    .faqBottomBox h6{
         font-size: 4.5vw;
     }
     .faqBottomBox p{
@@ -1412,6 +1412,13 @@
         transition: all 0.5s ease;
         overflow: hidden;
     }
+
+    .darkToggle{
+        width: 28px;
+        height: 28px;
+        z-index: 10;
+    }
+
     .activeNav{
         right: 0%;
         transition: all 0.5s ease;
@@ -1667,7 +1674,7 @@
         width: 100%;
         margin-top: 0;
     }
-    .faqBottomBox h5{
+    .faqBottomBox h6{
         font-size: 5.5vw;
     }
     .faqBottomBox p{

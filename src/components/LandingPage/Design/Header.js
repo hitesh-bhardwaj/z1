@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import gsap from "gsap";
 import  ScrollToPlugin  from 'gsap/dist/ScrollToPlugin';
 import styles from "@/styles/designLanding.module.css";
+import Image from "next/image";
 
 gsap.registerPlugin(ScrollToPlugin);
 
@@ -37,9 +38,13 @@ export default function Header({ isDarkMode, toggleDarkMode }) {
             <header className={`${styles.headerContainer}`}>
                 <div className={styles.headerDesktop}>
                     <div className={styles.headLogo}>
-                        <img 
-                            src="/assets/landing-page/design/header-logo.svg"
-                            alt="logo" />
+                        <a href="#home" onClick={(e) => handleSmoothScroll(e, 'home')}>
+                            <Image
+                                height={50}
+                                width={50} 
+                                src="/assets/landing-page/design/header-logo.svg"
+                                alt="logo" />
+                        </a>
                     </div>
                     <div className={styles.headerMain}>
                         <div className={styles.nav}>
@@ -79,7 +84,9 @@ export default function Header({ isDarkMode, toggleDarkMode }) {
                         className={styles.darkToggle}
                         onClick={toggleDarkMode} 
                     >
-                        <img 
+                        <Image
+                            height={20}
+                            width={20} 
                             id="landing-dark-img"
                             alt="dark mode" 
                             src={isDarkMode ? '/assets/dark/sun.svg' : '/assets/dark/moon.svg'}
@@ -91,7 +98,9 @@ export default function Header({ isDarkMode, toggleDarkMode }) {
                 <div className={styles.headerMobile}>
                     <div className={styles.headerMobileContainer}>
                         <div className={styles.headLogo}>
-                            <img 
+                            <Image
+                                height={50}
+                                width={50} 
                                 src="/assets/landing-page/design/header-logo.svg"
                                 alt="logo" />
                         </div>
@@ -100,7 +109,9 @@ export default function Header({ isDarkMode, toggleDarkMode }) {
                             className={styles.darkToggle}
                             onClick={toggleDarkMode} 
                         >
-                            <img 
+                            <Image
+                                height={20}
+                                width={20} 
                                 id="landing-dark-img"
                                 alt="dark mode" 
                                 src={isDarkMode ? '/assets/dark/sun.svg' : '/assets/dark/moon.svg'}
@@ -118,8 +129,7 @@ export default function Header({ isDarkMode, toggleDarkMode }) {
                             </svg>
                         </div>
                         <div className={`${styles.mobileNav} ${isActive ? styles.activeNav : ''}`}>
-                            <img 
-                                loading="lazy"
+                            <img
                                 className={styles.mobileNavBg}
                                 src="/assets/landing-page/design/mobile-nav-bg.webp"
                                 alt="nav-bg"
@@ -161,7 +171,9 @@ export default function Header({ isDarkMode, toggleDarkMode }) {
                                     </button>
                                 </div>
                                 <div className={styles.navBottom}>
-                                    <img 
+                                    <Image
+                                        width={150}
+                                        height={150} 
                                         alt="enigma trademark"
                                         src="/assets/landing-page/design/nav-bottom.webp"
                                     />

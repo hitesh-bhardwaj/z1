@@ -30,19 +30,24 @@ export default function Membership() {
                             </button>
                         </div>
                     </div>
-                    <img 
+                    <Image
+                        height={1000}
+                        width={1500} 
                         className={styles.memberDeskImg}
                         alt="laptop image"
-                        loading="lazy"
                         src="/assets/landing-page/design/member.webp"
                     />
-                    <img 
+                    <Image
+                        width={500}
+                        height={1000}
                         className={styles.memberMobImg}
                         loading="lazy"
                         alt="benefit image"
                         src="/assets/landing-page/design/member-benefit.webp"
                     />
-                    <img 
+                    <Image 
+                        width={500}
+                        height={1000}
                         className={styles.darkMemberMobImg}
                         loading="lazy"
                         alt="benefit image"

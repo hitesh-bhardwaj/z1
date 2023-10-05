@@ -42,6 +42,12 @@ const toggleDarkMode = () => {
     setIsDarkMode(prevMode => !prevMode);
 };
 
+
+// Set the scroll position to the top of the page
+useEffect(() => {
+  window.scrollTo(0, 0);
+}, []);
+
 useEffect(() => {
     lenisRef.current = new Lenis();
     
