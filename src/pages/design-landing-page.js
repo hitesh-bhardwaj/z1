@@ -7,6 +7,7 @@ import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import  ScrollToPlugin  from 'gsap/dist/ScrollToPlugin';
 import { Cursor } from "../../cursor/index";
 import "react-creative-cursor/dist/styles.css";
+import Head from "next/head";
 
 import Header from "../components/LandingPage/Design/Header";
 import Hero from "../components/LandingPage/Design/Hero";
@@ -17,8 +18,6 @@ import RecentWork from "../components/LandingPage/Design/RecentWork";
 import Pricing from "../components/LandingPage/Design/Pricing";
 import Faq from "../components/LandingPage/Design/Faq";
 import Footer from "../components/LandingPage/Design/Footer";
-import Head from "next/head";
-import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
@@ -43,38 +42,70 @@ const toggleDarkMode = () => {
     setIsDarkMode(prevMode => !prevMode);
 };
 
-
 // Set the scroll position to the top of the page
 useEffect(() => {
-  window.scrollTo(0, 0);
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
 }, []);
 
 useEffect(() => {
-    lenisRef.current = new Lenis();
-    
-    const raf = (time) => {
-        lenisRef.current.raf(time);
-        requestAnimationFrame(raf);
-    };
-    
-        const resize = () => {
-          setDimension({width: window.innerWidth, height: window.innerHeight})
-        }
-    
-        window.addEventListener("resize", resize)
-        requestAnimationFrame(raf);
-        resize();
+  window.scrollTo(0, 0);
 
-        requestAnimationFrame(raf);
-    
-        return () => {
-          window.removeEventListener("resize", resize);
-        }
-      }, [])
+  const raf = (time) => {
+      lenisRef.current?.raf(time);
+      requestAnimationFrame(raf);
+  };
+  
+  const resize = () => {
+      setDimension({width: window.innerWidth, height: window.innerHeight})
+  }
 
-      console.clear();
+  // Delay enabling Lenis slightly after ensuring scroll to top
+  setTimeout(() => {
+      lenisRef.current = new Lenis();
+      window.addEventListener("resize", resize)
+      requestAnimationFrame(raf);
+      resize();
+  }, 100);  // You may need to adjust the delay
 
-    return (
+  return () => {
+      window.removeEventListener("resize", resize);
+  }
+}, []);
+
+// Loader Transitions
+  useEffect(() => {
+    const loaderBars = document.querySelectorAll("#loaderbars");
+    const tl = gsap.timeline();
+
+    let ctx = gsap.context(() => {
+
+      tl.from(".loader-wrap-heading h1", {
+        delay: 0.5,
+        y: 200,
+        skewY: 10,
+        duration: 1,
+      }).to(".loader-wrap-heading h1", {
+        delay: 0.5,
+        y: -200,
+        skewY: 10,
+        duration: 1,
+      }).to(loaderBars, {
+        height: 0,
+        duration: 0.6,
+        delay: -0.5,
+        ease: "power2.easeIn",
+        stagger: 0.1,
+      }).to("#loader", {
+        y: "-1500",
+        opacity: 0,
+        ease: "power2.inOut",
+      });
+    });
+    return () => ctx.revert();
+  }, []);
+
+  return (
         <>
         <Head>
           <title>
@@ -84,13 +115,28 @@ useEffect(() => {
             name="description"
             content="Experience top-tier UI/UX design, front-end development, and organic marketing services with Enigma Digital, enhancing your online presence and business growth."
           />
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta
             name="viewport"
             content="width=device-width, initial-scale=1.0, maximum-scale=5.0">          
           </meta>
           <link rel="icon" href="/fav-icon.png" />
         </Head>
+
+{/* Loader */}
+        <div className={`loader-wrap ${styles.loader}`} id="loader" style={{ zIndex: 999 }}>
+          <div className='mainLoaderBg'>
+            <span className='mainLoaderBar' id='loaderbars'></span>
+            <span className='mainLoaderBar' id='loaderbars'></span>
+            <span className='mainLoaderBar' id='loaderbars'></span>
+            <span className='mainLoaderBar' id='loaderbars'></span>
+            <span className='mainLoaderBar' id='loaderbars'></span>
+          </div>
+          <div className="loader-wrap-heading">
+            <span>
+              <h1>Design Subscription</h1>
+            </span>
+          </div>
+        </div>
 
         <Cursor isGelly={true} />
               <main id="design-landing" className={`${styles.mainContainer} ${isDarkMode ? styles.dark : "dark"}`}>

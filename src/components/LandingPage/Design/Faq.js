@@ -1,6 +1,11 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "@/styles/designLanding.module.css";
 import Image from "next/image";
+import gsap from "gsap";
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import SplitType from "split-type";
+
+gsap.registerPlugin(ScrollTrigger);  
 
 export default function Faq() {
     const [openIndex, setOpenIndex] = useState(0);
@@ -36,22 +41,67 @@ export default function Faq() {
         },
     ]
 
+    useEffect(() => {
+        const textElements = document.querySelectorAll("#designP");
+        textElements.forEach(function (elem, index) {
+          const text = new SplitType(elem);
+          let textwords = text.words;
+          gsap.from(textwords, {
+            scrollTrigger: {
+              trigger: textwords,
+              start: "top 80%",
+              markers: false,
+            },
+            duration: 1,
+            opacity: 0,
+            yPercent: 100,
+            ease: "Power3.out",
+            stagger: 0.05,
+          });
+        });
+      }, []);
+
+      useEffect(() => {
+        const elementsToFadeIn = document.querySelectorAll("#fadeIn");
+        elementsToFadeIn.forEach(function (elem, index) {
+          gsap.fromTo(
+            elem,
+            {
+                y: 100,
+                opacity: 0,
+            },
+            {
+              scrollTrigger: {
+                trigger: elem,
+                start: "top 80%",
+                markers: false,
+                stagger: 0.2,
+              },
+              duration: 1.5,
+              y: 0,
+              opacity: 1,
+              ease: "Power3.out",
+            }
+          );
+        });
+      }, []);
+
     return (
         <>
             <div className={styles.faq}>
                 <div className={styles.faqTopBox}>
-                    <h2 className={styles.heading1}>
+                    <h2 id="fadeIn" className={styles.heading1}>
                         FA<span className={styles.reinventTextGradient}>Qs
                         </span> 
                     </h2>
-                    <p className={styles.para1}>
+                    <p id="designP" className={styles.para1}>
                         Got questions? We got answers
                     </p>
                 </div>
                 <div className={styles.faqBottomBox}>
                     <div className="grid divide-y divide-neutral-200 mx-auto mt-8">
                         {faqData.map((item, index) => (
-                            <div className="pt-8 desk-sm:py-8" key={index}>
+                            <div id="fadeIn" className="pt-8 desk-sm:py-8" key={index}>
                                 <div 
                                     className="flex justify-between items-center font-medium cursor-pointer list-none"
                                     onClick={() => handleToggle(index)}

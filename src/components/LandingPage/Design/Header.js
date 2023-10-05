@@ -33,11 +33,31 @@ export default function Header({ isDarkMode, toggleDarkMode }) {
         );
       });
 
+// Header Animation
+useEffect(() => {
+    const tl = gsap.timeline();
+    tl.fromTo(
+      "#head-anim",
+      {
+        y: -80,
+        opacity: 0,
+      },
+      {
+        delay: 4,
+        duration: 1.3,
+        y: 0,
+        opacity: 1,
+        stagger: 0.2,
+      }
+    );
+    return () => tl.kill();
+  }, []);
+
     return(
         <>
             <header className={`${styles.headerContainer}`}>
                 <div className={styles.headerDesktop}>
-                    <div className={styles.headLogo}>
+                    <div id="head-anim" className={styles.headLogo}>
                         <a href="#home" onClick={(e) => handleSmoothScroll(e, 'home')}>
                             <Image
                                 height={50}
@@ -46,7 +66,7 @@ export default function Header({ isDarkMode, toggleDarkMode }) {
                                 alt="logo" />
                         </a>
                     </div>
-                    <div className={styles.headerMain}>
+                    <div id="head-anim" className={styles.headerMain}>
                         <div className={styles.nav}>
                             <div className={styles.navItems}>
                                 <a href="#benefit" onClick={(e) => handleSmoothScroll(e, 'benefit')}>
@@ -70,7 +90,7 @@ export default function Header({ isDarkMode, toggleDarkMode }) {
                             </div>
                         </div>
                     </div>
-                    <div className={styles.headerCta}>
+                    <div id="head-anim" className={styles.headerCta}>
                         <button>
                             <a href="#">
                                 <span>
@@ -79,7 +99,7 @@ export default function Header({ isDarkMode, toggleDarkMode }) {
                             </a>
                         </button>
                     </div>
-                    <button 
+                    <button id="head-anim"
                         aria-label="Dark Mode"
                         className={styles.darkToggle}
                         onClick={toggleDarkMode} 
@@ -96,7 +116,7 @@ export default function Header({ isDarkMode, toggleDarkMode }) {
 
 {/* Mobile Header */}
                 <div className={styles.headerMobile}>
-                    <div className={styles.headerMobileContainer}>
+                    <div id="head-anim" className={styles.headerMobileContainer}>
                         <div className={styles.headLogo}>
                             <Image
                                 height={50}

@@ -148,6 +148,10 @@
 
 /*------------------Main CSS Start ----------------------*/
 
+.loader{
+    position: fixed;
+}
+
 /* Header */
 .headerContainer{
     position: fixed;
@@ -888,7 +892,6 @@
     font-size: 1.5vw;
     color: var(--gray);
 }
-
 
 /* Media Queries */
 @media screen and (max-width:1536px) {
