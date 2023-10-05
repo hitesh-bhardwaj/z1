@@ -56,7 +56,7 @@ export default function Faq() {
                                     className="flex justify-between items-center font-medium cursor-pointer list-none"
                                     onClick={() => handleToggle(index)}
                                 >
-                                    <h6>{item.question}</h6>
+                                    <span>{item.question}</span>
                                     <Image
                                         priority={false}
                                         height={40}

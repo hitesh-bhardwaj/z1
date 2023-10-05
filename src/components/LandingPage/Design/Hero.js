@@ -21,8 +21,8 @@ export default function Hero() {
             <div className={styles.hero}>
                 <div className={styles.backgroundImg}>
                     <Image
-                        height={1500}
-                        width={1500}
+                        height={1000}
+                        width={1000}
                         src="/assets/landing-page/design/hero-img.webp"
                         alt="hero image" />
                 </div>
@@ -31,7 +31,6 @@ export default function Hero() {
                     <Image
                         height={1000}
                         width={1000}
-                        loading="lazy"
                         src="/assets/landing-page/design/dark-hero-bg.png"
                         alt="hero image" />
                 </div>

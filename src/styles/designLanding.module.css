@@ -550,7 +550,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(/assets/landing-page/design/testimonial.jpg);
+    background-image: url(/assets/landing-page/design/testimonial.webp);
     background-position: center center;
     margin: 15vh 0;
 }
@@ -652,6 +652,7 @@
 .memberMobImg, .darkMemberMobImg{
     display: none;
     border-radius: 20px;
+    width: 100%;
 }
 
 /* Recent Work */
@@ -748,7 +749,7 @@
 .priceCard:last-child{
     background: #2545ff;
 }
-.priceCard h5{
+.priceCard span.h5{
     font-size: 1.5vw;
     font-weight: 500;
     margin-bottom: 5px;
@@ -803,7 +804,7 @@
     text-align: left;
     margin-top: 100px;
 }
-.faqBottomBox h6{
+.faqBottomBox span{
     font-family: 'Arial';
     font-size: 1.6vw;
 }
@@ -1244,7 +1245,7 @@
         width: 100%;
         padding: 7vw;
     }
-    .priceCard h5{
+    .priceCard span.h5{
         font-size: 5vw;
     }
     .priceCard p{
@@ -1278,7 +1279,7 @@
         width: 100%;
         margin-top: 0;
     }
-    .faqBottomBox h6{
+    .faqBottomBox span{
         font-size: 4.5vw;
     }
     .faqBottomBox p{
@@ -1640,7 +1641,7 @@
         width: 100%;
         padding: 7vw;
     }
-    .priceCard h5{
+    .priceCard span.h5{
         font-size: 5vw;
     }
     .priceCard p{
@@ -1674,7 +1675,7 @@
         width: 100%;
         margin-top: 0;
     }
-    .faqBottomBox h6{
+    .faqBottomBox span{
         font-size: 5.5vw;
     }
     .faqBottomBox p{

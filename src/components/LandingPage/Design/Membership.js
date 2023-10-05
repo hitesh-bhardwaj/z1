@@ -39,7 +39,7 @@ export default function Membership() {
                     />
                     <Image
                         width={500}
-                        height={1000}
+                        height={500}
                         className={styles.memberMobImg}
                         loading="lazy"
                         alt="benefit image"
@@ -47,7 +47,7 @@ export default function Membership() {
                     />
                     <Image 
                         width={500}
-                        height={1000}
+                        height={500}
                         className={styles.darkMemberMobImg}
                         loading="lazy"
                         alt="benefit image"

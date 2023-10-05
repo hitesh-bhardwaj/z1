@@ -18,6 +18,7 @@ import Pricing from "../components/LandingPage/Design/Pricing";
 import Faq from "../components/LandingPage/Design/Faq";
 import Footer from "../components/LandingPage/Design/Footer";
 import Head from "next/head";
+import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
