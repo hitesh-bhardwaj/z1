@@ -14,10 +14,11 @@ import styles from '@/styles/serviceDetail.module.css';
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer";
 import FooterMobile from "@/components/Mobile/FooterMobile";
-import CursorAero from '@/components/ServiceDetail/Technology/TechnologyAero';
-import NextBox from '@/components/ServiceDetail/Technology/TechnologyNext';
-import OfferCards from '@/components/ServiceDetail/Technology/OfferCards';
+import CursorAero from '@/components/ServiceDetail/Strategy/StrategyAero';
+import NextBox from '@/components/ServiceDetail/Strategy/StrategyNext';
+import OfferCards from '@/components/ServiceDetail/Strategy/OfferCards';
 import Modal from '../components/PopupForm/formModal';
+import { NextSeo } from 'next-seo';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -270,25 +271,44 @@ useEffect(() => {
 
   return (
     <>
+        <NextSeo
+        title="Strategy and Planning Services"
+        description="Experience top-tie front-end development services with Enigma Digital, enhancing your online presence and business growth."
+        canonical="https://www.weareenigma.com/strategy-and-planning"
+        openGraph={{
+          url: "https://www.weareenigma.com/strategy-and-planning",
+          title:
+            "Strategy and Planning Services",
+          description:
+            "Experience top-tie front-end development services with Enigma Digital, enhancing your online presence and business growth.",
+            images: [
+                  {
+                    url: "https://i.ibb.co/k0NMQw9/home.png",
+                    width: 400,
+                    height: 600,
+                    alt: "Enigma Image",
+                    type: "image/png",
+                  },
+                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
+          ],
+          siteName: "https://www.weareenigma.com/strategy-and-planning",
+        }}
+      />
+
         <Head>
         <title>
-          Enigma Digital | Services | Expert UI/UX, Development & Marketing
+          Strategy and Planning Services
         </title>
         <meta
           name="description"
-          content="Experience top-tier UI/UX design, front-end development, and organic marketing services with Enigma Digital, enhancing your online presence and business growth."
+          content="Experience top-tie front-end development services with Enigma Digital, enhancing your online presence and business growth."
         />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
         ></meta>
         <link rel="icon" href="/fav-icon.png" />
       </Head>
-
-<SmoothScroll />
-
-<Cursor isGelly={true} />
 
       {/*Page Loader*/}
       <div className="loader-wrap" id="loader" style={{ zIndex: 999 }}>
@@ -302,11 +322,15 @@ useEffect(() => {
 
         <div className="loader-wrap-heading">
           <span>
-            <h1>Technology</h1>
+            <h1>Strategy & Planning</h1>
           </span>
         </div>
       </div>
       {/*Page Loader*/}
+
+    <SmoothScroll />
+
+    <Cursor isGelly={true} />
 
     <div>
         <Header />
@@ -321,19 +345,19 @@ useEffect(() => {
 
 {/* Hero Section*/}
         <section className={`${styles['service-detail-hero']} ${styles['main-container']}`} data-cursor-size="10px" data-cursor-text="">
-          <div className={`${styles['service-detail-hero-content']} ${styles['tech']}`}>
-            <div className={`${styles['service-detail-hero-top']} ${styles['tech']}`}>
+          <div className={styles['service-detail-hero-content']}>
+            <div className={styles['service-detail-hero-top']}>
               <h1 className='color-primary' id='service-anim'
               data-cursor-magnetic data-cursor-background-image="/assets/gif/4.gif" data-cursor-size="300px" data-cursor-color="#000">
-                Technology
+                Strategy
               </h1>
-              <p className={`${styles['hero-top-para']} ${styles['tech']}`} id='service-anim'>
+              <p className={`${styles['hero-top-para']}`} id='service-anim'>
                 Our comprehensive range of services leverages our full expertise to boost your digital presence to celestial heights.
               </p>
             </div>
             <div>
               <h1 className={`${styles['hero-bottom']}`} id='service-anim' data-cursor-magnetic data-cursor-background-image="/assets/gif/5.gif" data-cursor-size="300px" data-cursor-color="#000">
-                <span className='font-ageo'>&</span> Services
+                <span className='font-ageo'>&</span> Planning
               </h1>
             </div>
           </div>
@@ -538,7 +562,7 @@ useEffect(() => {
             <div className={styles['service-approach-main']}>
                 <div className={styles['service-approach-left']} id='approachImgCont'>
                 <div className={`${styles['service-approach-img-container']} service-image-container`}>
-                    <Image src='/assets/service-detail/technology/technology1.webp' 
+                    <Image src='/assets/service-detail/strategy/strategy1.webp' 
                         alt='approach image'
                         loading='lazy'
                         width={1000}
@@ -548,7 +572,7 @@ useEffect(() => {
                     </Image>
                 </div>
                 <div className={`${styles['service-approach-img-container']} service-image-container`}>
-                    <Image src='/assets/service-detail/technology/technology2.webp'
+                    <Image src='/assets/service-detail/strategy/strategy2.webp'
                         alt='approach image'
                         loading='lazy'
                         width={1000}
@@ -558,7 +582,7 @@ useEffect(() => {
                     </Image>
                 </div>
                 <div className={`${styles['service-approach-img-container']} service-image-container`}>
-                    <Image src='/assets/service-detail/technology/technology3.webp'
+                    <Image src='/assets/service-detail/strategy/strategy3.webp'
                         alt='approach image'
                         loading='lazy'
                         width={1000}

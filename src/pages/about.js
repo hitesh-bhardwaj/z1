@@ -249,15 +249,15 @@ export default function about() {
           title: "About Enigma | India's Premier UX Agency",
           description:
             "Learn about Enigma, India's leading UX agency, offering exceptional UI/UX design, front-end development, and organic marketing services for global clients",
-          images: [
-            {
-              url: "",
-              width: 400,
-              height: 600,
-              alt: "Enigma Image",
-              type: "image/png",
-            },
-            { url: "" },
+            images: [
+                  {
+                    url: "https://i.ibb.co/k0NMQw9/home.png",
+                    width: 400,
+                    height: 600,
+                    alt: "Enigma Image",
+                    type: "image/png",
+                  },
+                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
           ],
           siteName: "https://www.weareenigma.com/about",
         }}
@@ -269,7 +269,6 @@ export default function about() {
           name="description"
           content="Learn about Learn about Enigma, India's leading UX agency, offering exceptional UI/UX design, front-end development, and organic marketing services for global clients"
         />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=5.0"

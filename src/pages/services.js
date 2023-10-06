@@ -371,15 +371,15 @@ export default function services() {
             " Enigma Digital | Services | Expert UI/UX, Development & Marketing",
           description:
             "Experience top-tier UI/UX design, front-end development, and organic marketing services with Enigma Digital, enhancing your online presence and business growth.",
-          images: [
-            {
-              url: "",
-              width: 400,
-              height: 600,
-              alt: "Enigma Image",
-              type: "image/png",
-            },
-            { url: "" },
+            images: [
+                  {
+                    url: "https://i.ibb.co/k0NMQw9/home.png",
+                    width: 400,
+                    height: 600,
+                    alt: "Enigma Image",
+                    type: "image/png",
+                  },
+                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
           ],
           siteName: "https://www.weareenigma.com/services",
         }}
@@ -393,7 +393,6 @@ export default function services() {
           name="description"
           content="Experience top-tier UI/UX design, front-end development, and organic marketing services with Enigma Digital, enhancing your online presence and business growth."
         />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=5.0">          

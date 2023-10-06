@@ -131,7 +131,7 @@ export default function StrategySection() {
             data-cursor-size="110px"
             data-cursor-color="#2b8c87"
           >
-          <Link href='/strategy'>
+          <Link href='/strategy-and-planning'>
             <h3 className="ser-text-head-anim">Strategy</h3>
             <p data-jelly className="ser-text-head-anim">
               <span>
@@ -173,7 +173,7 @@ export default function StrategySection() {
             data-cursor-size="110px"
             data-cursor-color="#000"
           >
-          <Link href='/design'>
+          <Link href='/ui-ux-design'>
             <h3 className="ser-text-head-anim">UI/UX Design</h3>
               <p data-jelly className="ser-text-head-anim">
                 <span>
@@ -212,7 +212,7 @@ export default function StrategySection() {
             data-cursor-size="110px"
             data-cursor-color="#fcc63d"
           >
-          <Link href='/technology'>
+          <Link href='/technology-stack'>
             <h3 className="ser-text-head-anim">Technology</h3>
               <p data-jelly className="ser-text-head-anim">
                 <span>
@@ -252,7 +252,7 @@ export default function StrategySection() {
             data-cursor-size="110px"
             data-cursor-color="#000"
           >
-            <Link href='/marketing'>
+            <Link href='/marketing-and-analysis'>
               <h3 className="ser-text-head-anim">Marketing</h3>
               <p data-jelly className="ser-text-head-anim">
                 <span>

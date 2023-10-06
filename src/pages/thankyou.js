@@ -48,23 +48,23 @@ const ThankYou = () => {
     <NextSeo
         title="Thank You | Thanks for connecting with us."
         description="Thanks for connecting with us."
-        canonical="https://www.canonical.ie/"
+        canonical="https://www.weareenigma.com/thankyou"
         openGraph={{
-          url: "https://www.weareenigma.com/",
+          url: "https://www.weareenigma.com/thankyou",
           title: "Thank You | Thanks for connecting with us.",
           description:
             "Thanks for connecting with us.",
-          images: [
-            {
-              url: "https://i.ibb.co/k0NMQw9/home.png",
-              width: 400,
-              height: 600,
-              alt: "Enigma Image",
-              type: "image/png",
-            },
-            { url: "https://i.ibb.co/k0NMQw9/home.png" },
+            images: [
+                  {
+                    url: "https://i.ibb.co/k0NMQw9/home.png",
+                    width: 400,
+                    height: 600,
+                    alt: "Enigma Image",
+                    type: "image/png",
+                  },
+                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
           ],
-          siteName: "weareenigma.com",
+          siteName: "https://www.weareenigma.com/thankyou",
         }}
       />
 

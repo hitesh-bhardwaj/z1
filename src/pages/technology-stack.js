@@ -1,3 +1,5 @@
+'use client'
+
 import React, { useEffect, useRef } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
@@ -12,10 +14,11 @@ import styles from '@/styles/serviceDetail.module.css';
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer";
 import FooterMobile from "@/components/Mobile/FooterMobile";
-import CursorAero from '@/components/ServiceDetail/Design/DesignAero';
-import NextBox from '@/components/ServiceDetail/Design/DesignNext';
-import OfferCards from '@/components/ServiceDetail/Design/OfferCards';
+import CursorAero from '@/components/ServiceDetail/Technology/TechnologyAero';
+import NextBox from '@/components/ServiceDetail/Technology/TechnologyNext';
+import OfferCards from '@/components/ServiceDetail/Technology/OfferCards';
 import Modal from '../components/PopupForm/formModal';
+import { NextSeo } from 'next-seo';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -42,7 +45,7 @@ const handleHover = (e) => {
     });
   };  
 
-export default function Strategy() {
+export default function technology() {
 
 // Page Transitions
 useEffect(() => {
@@ -268,15 +271,38 @@ useEffect(() => {
 
   return (
     <>
+      <NextSeo
+        title="Technology Services"
+        description="Experience top-tie Technology services with Enigma Digital, enhancing your online presence and business growth."
+        canonical="https://www.weareenigma.com/technology-stack"
+        openGraph={{
+          url: "https://www.weareenigma.com/technology-stack",
+          title:
+            "Technology Services",
+          description:
+            "Experience top-tie Technology services with Enigma Digital, enhancing your online presence and business growth.",
+            images: [
+                  {
+                    url: "https://i.ibb.co/k0NMQw9/home.png",
+                    width: 400,
+                    height: 600,
+                    alt: "Enigma Image",
+                    type: "image/png",
+                  },
+                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
+          ],
+          siteName: "https://www.weareenigma.com/technology-stack",
+        }}
+      />
+
         <Head>
         <title>
-          Enigma Digital | Services | Expert UI/UX, Development & Marketing
+          Technology Services
         </title>
         <meta
           name="description"
-          content="Experience top-tier UI/UX design, front-end development, and organic marketing services with Enigma Digital, enhancing your online presence and business growth."
+          content="Experience top-tie Technology services with Enigma Digital, enhancing your online presence and business growth."
         />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
@@ -300,7 +326,7 @@ useEffect(() => {
 
         <div className="loader-wrap-heading">
           <span>
-            <h1>UI/UX Design</h1>
+            <h1>Technology</h1>
           </span>
         </div>
       </div>
@@ -311,7 +337,7 @@ useEffect(() => {
     </div>
 
 {/* PopUp Modal Button */}
-  <Modal />
+<Modal />
 {/* End */}
 
     <main className={styles['main']}>
@@ -319,19 +345,19 @@ useEffect(() => {
 
 {/* Hero Section*/}
         <section className={`${styles['service-detail-hero']} ${styles['main-container']}`} data-cursor-size="10px" data-cursor-text="">
-          <div className={styles['service-detail-hero-content']}>
-            <div className={styles['service-detail-hero-top']}>
+          <div className={`${styles['service-detail-hero-content']} ${styles['tech']}`}>
+            <div className={`${styles['service-detail-hero-top']} ${styles['tech']}`}>
               <h1 className='color-primary' id='service-anim'
               data-cursor-magnetic data-cursor-background-image="/assets/gif/4.gif" data-cursor-size="300px" data-cursor-color="#000">
-                UI/UX
+                Technology
               </h1>
-              <p className={`${styles['hero-top-para']}`} id='service-anim'>
-                We seamlessly blend physical and digital to craft exceptional experiences that boost revenue, conversions, and loyalty through meticulous attention to detail.
+              <p className={`${styles['hero-top-para']} ${styles['tech']}`} id='service-anim'>
+                Our comprehensive range of services leverages our full expertise to boost your digital presence to celestial heights.
               </p>
             </div>
             <div>
               <h1 className={`${styles['hero-bottom']}`} id='service-anim' data-cursor-magnetic data-cursor-background-image="/assets/gif/5.gif" data-cursor-size="300px" data-cursor-color="#000">
-                 Design
+                <span className='font-ageo'>&</span> Services
               </h1>
             </div>
           </div>
@@ -343,13 +369,13 @@ useEffect(() => {
           <div className={styles['service-detail-content']}>
             <h2 className={`${styles['m-50']} fadeIn`} data-jelly id='fadeIn'>
               <span>
-                First impressions matter! The user interface (UI) and user experience (UX) make or break that crucial first interaction with your brand. Leveraging the power of modern tools and our unique approach, our UI/UX design masters solve complex design problems through user research, expert analysis, prototyping, and collaborative design with users & stakeholders. At Enigma, our UI/UX design masters craft stunning visual interfaces and smooth digital experiences so your customers keep coming back for more.
+                At Enigma Digital, we believe that a winning strategy isn't a rare gem—it's a well-crafted masterpiece that we create for our clients, time and again. Our strategic planning, rooted in deep insights, forms the bedrock of our operations. We blend strategic thinking, innovative ideas, broad marketing experience, and proven best practices to transform insights into actionable plans that deliver measurable results.
               </span>
             </h2>
             <p className={`${styles['m-50']} fadeIn`}
                 data-jelly id='fadeIn'>
               <span>
-                A poorly designed website or app can destroy your business. But with our human-centered design approach, we create intuitive digital experiences that delight users and drive results. Our secret sauce is combining empathy and data. We dive deep to understand your users' needs and pains. Then we analyze metrics to identify issues and opportunities. This informs designs that resonate emotionally and convert.
+                We begin our process by consulting with you because we believe that nobody knows your brand better than you do. We dive deep into understanding your brand, your product, your market, and your competition. This understanding forms the basis of our strategic thinking, idea generation, and campaign plans. Our meticulous planning, extensive research, and detailed understanding of your product/services and business goals enable us to create the perfect strategy. This strategy builds meaningful online experiences across multiple channels, helping your customers find what they're looking for quickly and efficiently, leading to your business's success.
               </span>
             </p>
             <span className={`${styles['btn-10']}`} 
@@ -371,7 +397,7 @@ useEffect(() => {
         </section>
 
 {/* Section 3 Portfolio */}
-    <section className={`${styles['service-portfolio']} ${styles['main-container']}`} 
+<section className={`${styles['service-portfolio']} ${styles['main-container']}`} 
         id='section-3'>
       <div id='servicePortfolioAnim' 
        className={styles['service-anim-portfolio']}>
@@ -379,7 +405,7 @@ useEffect(() => {
           <div className={styles['service-portfolio-title']}>
             <h2 data-cursor-size="300px"
                 data-cursor-exclusion id='fadeIn'>
-                Design
+                Strategy 
                 <br /> 
                 Portfolio
             </h2>
@@ -519,24 +545,12 @@ useEffect(() => {
         <div className={styles['service-detail-process-right']}>
           <h4 className='why-us-anim' data-jelly>
             <span>
-              Understanding human behavior is key to great UX. Our secret weapon is neuroscience expertise. Unlike other agencies that claim to be experts in UX Design, our team includes in-house psychologists & neuro-scientists who apply the latest behavioral research to penetrate the user's mindset. This unlocks designs that resonates emotionally and triggers desired actions. Armed with these neurological insights, we create experiences with proven psychological pull. Users feel understood, empowered and engaged. Our unique neuro-informed design process yields:
+              At Enigma Digital, we believe that the journey to digital success is a strategic one, meticulously charted and navigated with precision. Our approach is not just about creating strategies; it's about crafting success stories. We understand that each brand is unique, each with its own story to tell and milestones to achieve. We believe that a strategy is not a static blueprint but a dynamic roadmap, one that evolves with changing market dynamics, customer behaviors, and brand goals.
             </span>
           </h4>
           <p className={`${styles['m-50']} why-us-anim`} data-jelly>
             <span>
-                - Clean, intuitive interfaces that feel effortless to use
-            </span>
-            <span>
-              - Smart UX that maps to users' mental models
-            </span>
-            <span>
-              - Pleasant aesthetics that fit brand and user sensibilities
-            </span>
-            <span>
-              - Micro-interactions that surprise and delight
-            </span>
-            <span>
-                - Aligning user needs and business goals for win-win experiences
+              We begin by immersing ourselves in your brand, absorbing its ethos, understanding its vision, and aligning ourselves with its goals. We delve into the intricate details, the nuances that make your brand unique, and the aspirations that drive it forward. This deep understanding enables us to create strategies that are not just aligned with your brand but are an extension of it.
             </span>
           </p>
         </div>
@@ -548,7 +562,7 @@ useEffect(() => {
             <div className={styles['service-approach-main']}>
                 <div className={styles['service-approach-left']} id='approachImgCont'>
                 <div className={`${styles['service-approach-img-container']} service-image-container`}>
-                    <Image src='/assets/service-detail/design/design1.webp' 
+                    <Image src='/assets/service-detail/technology/technology1.webp' 
                         alt='approach image'
                         loading='lazy'
                         width={1000}
@@ -558,7 +572,7 @@ useEffect(() => {
                     </Image>
                 </div>
                 <div className={`${styles['service-approach-img-container']} service-image-container`}>
-                    <Image src='/assets/service-detail/design/design2.webp'
+                    <Image src='/assets/service-detail/technology/technology2.webp'
                         alt='approach image'
                         loading='lazy'
                         width={1000}
@@ -568,7 +582,7 @@ useEffect(() => {
                     </Image>
                 </div>
                 <div className={`${styles['service-approach-img-container']} service-image-container`}>
-                    <Image src='/assets/service-detail/design/design3.webp'
+                    <Image src='/assets/service-detail/technology/technology3.webp'
                         alt='approach image'
                         loading='lazy'
                         width={1000}
@@ -585,27 +599,27 @@ useEffect(() => {
                     data-cursor-size='100px'
                     data-cursor-exclusion>
                     <div className={`${styles['service-approach-text-box']} service-approach-text-box`} id='fadeIn'>
-                    <h4 className='color-primary'>RESEARCH</h4>
+                    <h4 className='color-primary'>Understanding Your Brand</h4>
                     <p>
-                      (Building the understanding of your business as our own) - We begin at the most fundamental level. We conduct thorough research to gather information about your industry, your company and its products and services. We want to know everything that matters - your company’s vision, the product, its purpose, its U.S.P.s, your target audience and the business expectations.
+                        We believe that understanding your brand is the first step toward creating a successful strategy. We spend time getting to know your brand, your values, and your vision. This understanding allows us to create strategies that align with your brand and help you achieve your goals.
                     </p>
                     </div>
 
                     <div className={`${styles['service-approach-text-box']} service-approach-text-box`} id='fadeIn'>
-                    <h4 className='color-primary'>DISCOVERY</h4>
-                    <p>(Understanding the goals & challenges) - We then sit with you for an extensive discovery session to understand your business goals, challenges and pain points you’re trying to solve through design. We’ll also look at the data that tells us which parts of your current interface are working and which are not. This will help us create a plan of action tailored to your needs.</p>
+                    <h4 className='color-primary'>Identifying Your Target Audience</h4>
+                    <p>Knowing who your customers are is crucial for creating effective strategies. We conduct thorough research to identify your target audience, understand their needs, and find out what motivates them. This knowledge allows us to create strategies that resonate with your audience and drive engagement.</p>
                     </div>
                 </div>
                 <div className={`${styles['service-approach-text-container']} text-card`}
                     data-cursor-size='100px'
                     data-cursor-exclusion>
                     <div className={`${styles['service-approach-text-box']} service-approach-text-box`} id='fadeIn'>
-                    <h4 className='color-primary'>STORYBOARDS</h4>
-                    <p> (Customer Journey Mapping) - We develop ideas based on our findings in the research & discovery phase. We identify the core functionality of your product, define use cases and build storyboards for each use case.</p>
+                    <h4 className='color-primary'>Analyzing the Competition</h4>
+                    <p> Understanding your competition is key to staying ahead. We conduct a detailed analysis of your competitors to understand their strategies, strengths, and weaknesses. This analysis helps us create strategies that give you a competitive edge.</p>
                     </div>
                     <div className={`${styles['service-approach-text-box']} service-approach-text-box`} id='fadeIn'>
-                    <h4 className='color-primary'>WIRE-FRAMING & PROTOTYPING</h4>
-                    <p>(Designing the Interface) - We present design strategies that include various colour schemes, style tiles, collections of typography, navigation structure, & call to actions that convey your brand identity and message to your target audience.
+                    <h4 className='color-primary'>Creating a Unique Value Proposition</h4>
+                    <p>Your unique value proposition sets you apart from your competitors. We work with you to identify and articulate your unique value proposition. This proposition forms the core of our strategy and helps us create campaigns that highlight your unique strengths.
                     </p>
                     </div>
                 </div>
@@ -613,12 +627,12 @@ useEffect(() => {
                     data-cursor-size='100px'
                     data-cursor-exclusion>
                     <div className={`${styles['service-approach-text-box']} service-approach-text-box`} id='fadeIn'>
-                    <h4 className='color-primary'>VISUAL/U.I. DESIGN</h4>
-                    <p>We map your audience’s online behaviour and digital touchpoints to define the consumer journey.</p>
+                    <h4 className='color-primary'>Setting Measurable Goals</h4>
+                    <p>We believe that every strategy should have clear, measurable goals. We work with you to set realistic goals for your campaigns. These goals guide our strategy and help us measure the success of our campaigns.</p>
                     </div>
                     <div className={`${styles['service-approach-text-box']} service-approach-text-box`} id='fadeIn'>
-                    <h4 className='color-primary'>REFINEMENT</h4>
-                    <p>(Usability Testing & User Feedback) - We conduct user-testing sessions and perform a detailed analysis on the pre-established KPIs to understand the areas of improvement and the aberration from the desirable effect on the target audience. We then analyse all the collected data and synthesise our findings into actionable design improvements to further enhance your product.</p>
+                    <h4 className='color-primary'>Iterative Improvement</h4>
+                    <p>Digital marketing is a dynamic field. We believe in the power of iterative improvement. We continually monitor the performance of our campaigns, gather data, and use this data to refine our strategies. This approach ensures that our strategies are always optimized for maximum performance.</p>
                     </div>
                 </div>
                 </div>

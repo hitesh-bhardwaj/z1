@@ -18,6 +18,7 @@ import CursorAero from '@/components/ServiceDetail/Marketing/MarketingAero';
 import NextBox from '@/components/ServiceDetail/Marketing/MarketingNext';
 import OfferCards from '@/components/ServiceDetail/Marketing/OfferCards';
 import Modal from '../components/PopupForm/formModal';
+import { NextSeo } from 'next-seo';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -44,7 +45,7 @@ const handleHover = (e) => {
     });
   };  
 
-export default function Strategy() {
+export default function marketingandplanning() {
 
 // Page Transitions
 useEffect(() => {
@@ -270,15 +271,40 @@ useEffect(() => {
 
   return (
     <>
+            <NextSeo
+              title="Marketing Services"
+              description="Marketing services professionals are continually searching for innovative
+              ways to engage and captivate their target audience."
+              canonical="https://www.weareenigma.com/marketing-and-analysis"
+              openGraph={{
+                url: "https://www.weareenigma.com/marketing-and-analysis",
+                title: "Marketing Services",
+                description:
+                  "Marketing services professionals are continually searching for innovative ways to engage and captivate their target audience.",
+                  images: [
+                  {
+                    url: "https://i.ibb.co/k0NMQw9/home.png",
+                    width: 400,
+                    height: 600,
+                    alt: "Enigma Image",
+                    type: "image/png",
+                  },
+                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
+                ],
+                siteName: "https://www.weareenigma.com/marketing-and-analysis",
+              }}
+            />  
+
+
         <Head>
         <title>
-          Enigma Digital | Services | Expert UI/UX, Development & Marketing
+          Marketing Services
         </title>
         <meta
           name="description"
-          content="Experience top-tier UI/UX design, front-end development, and organic marketing services with Enigma Digital, enhancing your online presence and business growth."
+          content="Marketing services professionals are continually searching for innovative
+              ways to engage and captivate their target audience."
         />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=5.0"

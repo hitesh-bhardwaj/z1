@@ -156,15 +156,15 @@ export default function contact() {
             "Contact Enigma Digital | UI/UX, Development & Marketing Experts",
           description:
             "Get in touch with Enigma Digital's team of UI/UX design, front-end development, and organic marketing specialists to elevate your business and achieve success online.",
-          images: [
-            {
-              url: "",
-              width: 400,
-              height: 600,
-              alt: "Enigma Image",
-              type: "image/png",
-            },
-            { url: "" },
+            images: [
+                  {
+                    url: "https://i.ibb.co/k0NMQw9/home.png",
+                    width: 400,
+                    height: 600,
+                    alt: "Enigma Image",
+                    type: "image/png",
+                  },
+                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
           ],
           siteName: "https://www.weareenigma.com/contact",
         }}
@@ -178,7 +178,6 @@ export default function contact() {
           name="description"
           content="Get in touch with Enigma Digital's team of UI/UX design, front-end development, and organic marketing specialists to elevate your business and achieve success online."
         />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=5.0"

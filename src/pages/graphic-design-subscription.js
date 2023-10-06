@@ -18,10 +18,11 @@ import RecentWork from "../components/LandingPage/Design/RecentWork";
 import Pricing from "../components/LandingPage/Design/Pricing";
 import Faq from "../components/LandingPage/Design/Faq";
 import Footer from "../components/LandingPage/Design/Footer";
+import { NextSeo } from "next-seo";
 
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
-const Home = () => {
+const GraphicDesginSubscription = () => {
     const [dimension, setDimension] = useState({width:0, height:0});
     const lenisRef = useRef(null);
     const [isDarkMode, setIsDarkMode] = useState(false);
@@ -107,13 +108,37 @@ useEffect(() => {
 
   return (
         <>
+
+            <NextSeo
+              title="Graphic Design Services | Graphic Design Subscription"
+              description="Graphic Design Services | Graphic Design Subscription"
+              canonical="https://www.weareenigma.com/graphic-design-subscription"
+              openGraph={{
+                url: "https://www.weareenigma.com/graphic-design-subscription",
+                title: "Graphic Design Services | Graphic Design Subscription",
+                description:
+                  "Graphic Design Services | Graphic Design Subscription",
+                  images: [
+                  {
+                    url: "https://i.ibb.co/k0NMQw9/home.png",
+                    width: 400,
+                    height: 600,
+                    alt: "Enigma Image",
+                    type: "image/png",
+                  },
+                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
+                ],
+                siteName: "https://www.weareenigma.com/graphic-design-subscription",
+              }}
+            />
+
         <Head>
           <title>
-            Design Services | Design Subscription
+           Graphic Design Services | Graphic Design Subscription
           </title>
           <meta
             name="description"
-            content="Experience top-tier UI/UX design, front-end development, and organic marketing services with Enigma Digital, enhancing your online presence and business growth."
+            content="Graphic Design Services | Graphic Design Subscription"
           />
           <meta
             name="viewport"
@@ -176,4 +201,5 @@ useEffect(() => {
         </>
     )
 };
-export default Home;
+
+export default GraphicDesginSubscription;

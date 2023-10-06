@@ -29,7 +29,7 @@ export default function Home() {
       <NextSeo
         title="Enigma | Digital Product Design, UI/UX & Neuromarketing Agency"
         description="Enigma is India's Leading UI/UX Design Agency that Leverages the Power of Emotion, Design, Technology, and Neuromarketing Strategies to Create Digital Products that People Love to Use."
-        canonical="https://www.canonical.ie/"
+        canonical="https://www.weareenigma.com/"
         openGraph={{
           url: "https://www.weareenigma.com/",
           title: "Enigma | Digital Product Design, UI/UX & Neuromarketing Agency",
@@ -45,7 +45,7 @@ export default function Home() {
             },
             { url: "https://i.ibb.co/k0NMQw9/home.png" },
           ],
-          siteName: "weareenigma.com",
+          siteName: "weareenigma.com/",
         }}
       />
 
