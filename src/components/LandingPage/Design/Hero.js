@@ -90,6 +90,7 @@ useEffect(() => {
             <div className={styles.hero} id="hero">
                 <div id="img-anim" className={styles.backgroundImg}>
                     <Image
+                        priority={true}
                         height={1000}
                         width={1000}
                         src="/assets/landing-page/design/hero-img.webp"
@@ -100,7 +101,7 @@ useEffect(() => {
                     <Image
                         height={1000}
                         width={1000}
-                        src="/assets/landing-page/design/dark-hero-bg.png"
+                        src="/assets/landing-page/design/dark-hero-bg.webp"
                         alt="hero image" />
                 </div>
 

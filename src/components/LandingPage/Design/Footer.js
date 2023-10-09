@@ -47,6 +47,36 @@ export default function Footer() {
             });
           }, []);
 
+          useEffect(() => {            
+            const footerList = document.querySelectorAll("#footerFadeIn>li")
+            const tl = gsap.timeline({
+                scrollTrigger: {
+                    trigger: ".footer-bottom-landing-desgin",
+                    start: "top 90%",
+                    markers: false,
+                }
+            });
+            tl.fromTo("#footerImg" ,{
+                y: 100,
+                opacity: 0,
+            },{
+                y: 0,
+                opacity: 1,
+                duration: 1,
+            }).fromTo(footerList ,{
+                y: 100,
+                opacity: 0
+            },
+            {
+                y: 0,
+                delay: -0.8,
+                opacity: 1,
+                duration: 1,
+                stagger: 0.2,
+            });
+            return ()=>tl.kill();
+          }, []);
+
     return(
         <>
             <div className={styles.footer}>
@@ -84,35 +114,43 @@ export default function Footer() {
                         alt="bg-gradient"
                     />
                 </div>
-                <div className={styles.footerBottom}>
-                    <div id="fadeIn" className={styles.footerLeft}>
-                    <Image 
-                        height={220}
-                        width={220}
-                        src="/assets/landing-page/design/enigma-logo.svg" 
-                        alt="enigma logo" />
+                <div className={` ${styles.footerBottom} footer-bottom-landing-desgin`}>
+                    <div data-cursor-size="100px" data-cursor-exclusion id="footerImg" className={styles.footerLeft}>
+                        <Image 
+                            height={220}
+                            width={220}
+                            src="/assets/landing-page/design/enigma-logo.svg" 
+                            alt="enigma logo" />
                         <p>We Make Magic<span className={styles.tradeMark}>ᵀᴹ</span></p>
                     </div>
                     <div className={styles.footerRight}>
-                        <ul >
-                            <li >
-                                <a href="#work" onClick={(e) => handleSmoothScroll(e, 'work')}>
-                                    Latest Projects
+                        <ul id="footerFadeIn">
+                            <li className={styles.footerNav}>
+                                <a data-cursor-size="70px" data-cursor-exclusion href="#work" onClick={(e) => handleSmoothScroll(e, 'work')}>
+                                    <span data-text="Latest Projects">
+                                        Latest Projects
+                                    </span>
                                 </a>
                             </li>
-                            <li>
-                                <a href="#pricing" onClick={(e) => handleSmoothScroll(e, 'pricing')}>
-                                    Pricing
+                            <li className={styles.footerNav}>
+                                <a data-cursor-size="70px" data-cursor-exclusion href="#pricing" onClick={(e) => handleSmoothScroll(e, 'pricing')}>
+                                    <span data-text="Pricing">
+                                        Pricing
+                                    </span>
                                 </a>
                             </li>
-                            <li >
-                                <a href="#">
-                                    Contact
+                            <li className={styles.footerNav}>
+                                <a data-cursor-size="70px" data-cursor-exclusion href="#">
+                                    <span data-text="Contact">
+                                        Contact
+                                    </span>
                                 </a>
                             </li>
-                            <li >
-                                <a href="#faq" onClick={(e) => handleSmoothScroll(e, 'faq')}>
-                                    FAQs
+                            <li className={styles.footerNav}>
+                                <a data-cursor-size="70px" data-cursor-exclusion href="#faq" onClick={(e) => handleSmoothScroll(e, 'faq')}>
+                                    <span data-text="FAQs">
+                                        FAQs
+                                    </span>
                                 </a>
                             </li>
                         </ul>

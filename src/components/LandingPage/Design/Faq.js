@@ -116,7 +116,7 @@ export default function Faq() {
                                         className={openIndex === index ? styles.arrowRotate : styles.arrowStatic}
                                     />
                                 </div>
-                                <p className={`text-neutral-400 mt-5 ${openIndex === index ? styles.contentVisible : styles.contentHidden}`}>
+                                <p className={`text-neutral-400 mt-5 ${openIndex === index ? styles.contentVisible : styles.contentHidden} ${index === 2 ? styles.thirdItem : ''}`}>
                                     {item.answer}
                                 </p>
                             </div>

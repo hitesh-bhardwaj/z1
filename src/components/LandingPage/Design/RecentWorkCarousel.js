@@ -7,6 +7,7 @@ import Image from 'next/image';
 
 const SliderComponent = () => {
     const [slidesToShow, setSlidesToShow] = useState(1);
+    const [slidesToScroll, setSetSlidesToScroll] = useState(1);
 
     useEffect(() => {
         const updateSlidesToShow = () => {
@@ -26,11 +27,29 @@ const SliderComponent = () => {
         };
     }, []);
 
+    useEffect(() => {
+        const updateSlidesToScroll = () => {
+            if (window.innerWidth > 1024) {
+                setSetSlidesToScroll(3);
+            } else if (window.innerWidth < 1024 && window.innerWidth > 770) {
+                setSetSlidesToScroll(2);
+            } else {
+                setSetSlidesToScroll(1);
+            }
+        };
+
+        updateSlidesToScroll();
+        window.addEventListener('resize', updateSlidesToScroll);
+        return () => {
+            window.removeEventListener('resize', updateSlidesToScroll);
+        };
+    }, []);
+
     const settings = {
         infinite: true,
         speed: 500,
         slidesToShow,
-        slidesToScroll: 1,
+        slidesToScroll,
         draggable: true,
         button: false,
     };
@@ -40,8 +59,8 @@ const SliderComponent = () => {
             {[1, 2, 3, 4, 5, 6].map(num => (
                 <div key={num} className={styles.workCarouselImg}>
                     <Image
-                        width={1000}
-                        height={1000}
+                        height={500}
+                        width={500}
                         src={`/assets/landing-page/design/c-${num}.webp`} 
                         alt={`Image ${num}`} 
                     />

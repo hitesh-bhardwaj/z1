@@ -58,7 +58,7 @@ useEffect(() => {
             <header className={`${styles.headerContainer}`}>
                 <div className={styles.headerDesktop}>
                     <div id="head-anim" className={styles.headLogo}>
-                        <a href="#home" onClick={(e) => handleSmoothScroll(e, 'home')}>
+                        <a data-cursor-exclusion data-cursor-size="70px" href="#home" onClick={(e) => handleSmoothScroll(e, 'home')}>
                             <Image
                                 height={50}
                                 width={50} 
@@ -69,23 +69,31 @@ useEffect(() => {
                     <div id="head-anim" className={styles.headerMain}>
                         <div className={styles.nav}>
                             <div className={styles.navItems}>
-                                <a href="#benefit" onClick={(e) => handleSmoothScroll(e, 'benefit')}>
-                                    Benefits
+                                <a data-cursor-size="70px" data-cursor-exclusion href="#benefit" onClick={(e) => handleSmoothScroll(e, 'benefit')}>
+                                    <span data-text="Benefits">
+                                        Benefits
+                                    </span>
                                 </a>
                             </div>
                             <div className={styles.navItems}>
-                                <a href="#work" onClick={(e) => handleSmoothScroll(e, 'work')}>
-                                    Recent Work
+                                <a data-cursor-size="70px" data-cursor-exclusion href="#work" onClick={(e) => handleSmoothScroll(e, 'work')}>
+                                    <span data-text="Recent Work">
+                                        Recent Work
+                                    </span>
                                 </a>
                             </div>
                             <div className={styles.navItems}>
-                                <a href="#pricing" onClick={(e) => handleSmoothScroll(e, 'pricing')}>
-                                    Pricing
+                                <a data-cursor-size="70px" data-cursor-exclusion href="#pricing" onClick={(e) => handleSmoothScroll(e, 'pricing')}>
+                                    <span data-text="Pricing">
+                                        Pricing
+                                    </span>
                                 </a>
                             </div>
                             <div className={styles.navItems}>
-                                <a href="#faq" onClick={(e) => handleSmoothScroll(e, 'faq')}>
-                                    FAQs
+                                <a data-cursor-size="70px" data-cursor-exclusion href="#faq" onClick={(e) => handleSmoothScroll(e, 'faq')}>
+                                    <span data-text="FAQs">
+                                        FAQs
+                                    </span>
                                 </a>
                             </div>
                         </div>
@@ -151,7 +159,8 @@ useEffect(() => {
                         <div className={`${styles.mobileNav} ${isActive ? styles.activeNav : ''}`}>
                             <img
                                 className={styles.mobileNavBg}
-                                src="/assets/landing-page/design/mobile-nav-bg.webp"
+                                loading="lazy"
+                                src="/assets/landing-page/design/dark-nav.png"
                                 alt="nav-bg"
                                 />
                             <div className={styles.mobileNavLinks}>

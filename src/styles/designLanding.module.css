@@ -12,13 +12,10 @@
 
 /* -----------------------Dark Mode -----------------------*/
 
-.dark .c-cursor{
-    filter: invert(1) !important;
+.dark .cursorDesign{
+    background: #ffffff !important;
 }
 
-.dark #c-cursor{
-    filter: invert(1) !important;
-}
 .dark .mainContainer{
     background: var(--black);
 }
@@ -174,6 +171,7 @@
 }
 .headLogo img{
     width: 2.5vw;
+    height: auto;
 }
 .headerMain{
     background: #000000ab;
@@ -198,7 +196,40 @@
     font-family: 'Arial';
     font-weight: 400;
     font-size: 1.2vw;
-    letter-spacing: 2%;
+    letter-spacing: 1px;
+    height: 30px;
+    display: block;
+    overflow: hidden;
+}
+
+.footerNav a{
+    color: var(--black1);
+    font-size: 1.3vw;
+    letter-spacing: 1px;
+    height: 40px;
+    display: block;
+    overflow: hidden;
+}
+
+.navItems a span, .footerNav a span{
+    display: block;
+    transition: transform .45s ease;
+}
+.navItems a span:after, .footerNav a span:after{
+    content: attr(data-text);
+    display: block;
+    position: absolute;
+    top: 110%;
+    left: 0;
+    color: var(--white);
+}
+
+.footerNav a span:after{
+    color: var(--black1) !important;
+}
+
+.navItems a:hover span, .footerNav a:hover span{
+    transform: translateY(-110%);
 }
 
 .darkToggle{
@@ -646,8 +677,8 @@
 }
 .memberDeskImg{
     text-align: left;
-    margin-top: 20vw;
-    width: 80%;
+    margin-top: 10vw;
+    width: 75%;
 }
 .memberButton {
     margin-top: 40px;
@@ -663,7 +694,7 @@
 .work{
     height: 100%;
     text-align: center;
-    padding: 10%;
+    padding: 10% 5%;
 }
 .workTopBox{
     width: 50%;
@@ -703,7 +734,7 @@
 .workCarouselImg{
     height: 60vh;
     width: 100%;
-    padding: 0 10px;
+    padding: 0 20px;
 }
 .workCarouselImg img{
     height: 100%;
@@ -831,7 +862,7 @@
 }
 
 .contentVisible {
-    height: 150px;
+    height: 180px;
     overflow: hidden;
     transition: all 0.5s ease;
 }
@@ -888,10 +919,6 @@
     display: flex;
     gap: 100px;
 }
-.footerRight ul li a{
-    font-size: 1.5vw;
-    color: var(--gray);
-}
 
 /* Media Queries */
 @media screen and (max-width:1536px) {
@@ -920,6 +947,9 @@
     }
     .testiButtonContainer{
         top: 45%;
+    }
+    .contentVisible{
+        height: 150px;
     }
 }
 
@@ -1022,11 +1052,12 @@
     }
     .mobileNavBg{
         position: absolute;
-        width: 300%;
-        right: -80%;;
+        right: 0%;
         max-width: -moz-fit-content;
-        max-width: fit-content;
+        max-width: unset;
         z-index: -1;
+        height: 100%;
+        width: inherit;
     }
     .mobileNavLinks{
         position: relative;
@@ -1066,6 +1097,7 @@
       }
       .darkToggle{
         right: 15vw;
+        z-index: 10;
       }
 
       /* Hero */
@@ -1225,6 +1257,7 @@
     }
     .workCarouselImg{
         height: 50vh;
+        padding: 10px;
     }
     .workWhiteSpace{
         height: 120px;
@@ -1434,14 +1467,6 @@
         right: 0%;
         transition: all 0.5s ease;
     }
-    .mobileNavBg{
-        position: absolute;
-        width: 300%;
-        right: -150%;
-        max-width: -moz-fit-content;
-        max-width: fit-content;
-        z-index: -1;
-    }
     .mobileNavLinks{
         position: relative;
         z-index: 2;
@@ -1602,9 +1627,6 @@
         right: unset;
         margin-bottom: 10%;
     }
-    .memberDeskImg{
-        display: none;
-    }
     .memberMobImg{
         display: block;
         width: 100%;
@@ -1697,9 +1719,12 @@
     .contentHidden{
         height: 0;
     }
-    .contentVisible {
-        height: 240px;
+    .contentVisible.thirdItem {
+        height: 330px;
     }
+      .contentVisible:not(.thirdItem) {
+        height: 250px;
+      }
 
     /* Footer */
     .footer{
