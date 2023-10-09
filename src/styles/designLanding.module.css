@@ -1412,9 +1412,9 @@
         position: relative;
         z-index: 100;
       }
-    .headerContainer{
+   .headerContainer{
         margin-top: 0;
-    }
+    } 
     .headerDesktop{
         display: none;
     }
