@@ -59,6 +59,7 @@ export default function Home() {
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
         />
+        <meta name="google-site-verification" content="f5EhO4Nukzdd8faFrxbU5UWkc9x_lbQqKPSky4qW1Ds" />
         <link rel="icon" href="/fav-icon.png" />
       </Head>
 

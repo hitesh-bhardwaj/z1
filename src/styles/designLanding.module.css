@@ -902,6 +902,9 @@
     .headerMain{
         height: 70px;
     }
+    .darkToggle{
+        right: 20vw
+    }
     .reinvent{
         height: 100%;
     }
@@ -1060,6 +1063,9 @@
       .navBottom img{
         width: 12rem;
         filter: invert(1);
+      }
+      .darkToggle{
+        right: 15vw;
       }
 
       /* Hero */
@@ -1421,6 +1427,7 @@
         width: 28px;
         height: 28px;
         z-index: 10;
+        right: 18vw;
     }
 
     .activeNav{
