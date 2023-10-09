@@ -157,10 +157,12 @@ useEffect(() => {
                             </svg>
                         </div>
                         <div className={`${styles.mobileNav} ${isActive ? styles.activeNav : ''}`}>
-                            <img
+                            <Image
+                                height={800}
+                                width={500}
                                 className={styles.mobileNavBg}
                                 loading="lazy"
-                                src="/assets/landing-page/design/dark-nav.png"
+                                src="/assets/landing-page/design/dark-nav.webp"
                                 alt="nav-bg"
                                 />
                             <div className={styles.mobileNavLinks}>

@@ -1052,12 +1052,11 @@
     }
     .mobileNavBg{
         position: absolute;
-        right: 0%;
-        max-width: -moz-fit-content;
+        right: -20%;
         max-width: unset;
         z-index: -1;
         height: 100%;
-        width: inherit;
+        width: auto;
     }
     .mobileNavLinks{
         position: relative;
@@ -1454,6 +1453,9 @@
         padding-left: 30px;
         transition: all 0.5s ease;
         overflow: hidden;
+    }
+    .mobileNavBg{
+        right: -40%;
     }
 
     .darkToggle{
