@@ -38,10 +38,8 @@ const HeroDesktop = () => {
           opacity: 1,
           y: 0,
           stagger: 0.1
-        }).fromTo(".reel-anim", {
-          scale: 0,
-          opacity: 0,
-        },{
+        });
+        tl.to(".reel-anim", {
           scale: 1,
           opacity: 1,
           delay: -1.8,
