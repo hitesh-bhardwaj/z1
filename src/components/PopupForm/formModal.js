@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import ContactUs from './contactUs';
-import { easeInOut, motion, AnimatePresence } from "framer-motion";
+import { easeInOut, motion } from "framer-motion";
 import Image from 'next/image';
 import { Cursor } from "./../../../cursor/index";
 import "react-creative-cursor/dist/styles.css";
@@ -9,18 +9,6 @@ export default function Modal() {
   // Define a state variable to track the modal's display state
   const [modalOpen, setModalOpen] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
-
-  const modalVariants = {
-    hidden: { scale: 0.7 ,opacity: 0 },
-    visible: { scale: 1, opacity: 1  },
-    exit: { scale: 0.7, opacity: 0 }
-  };
-
-  const overlayVariants = {
-    hidden: { opacity: 0 },
-    visible: { opacity: 1 },
-    exit: { opacity: 0 }
-  };
 
   const handleMouseEnter = () => {
     setIsHovered(true);
@@ -80,51 +68,34 @@ export default function Modal() {
       />
     </button>
     </motion.div>
-
-
     {/* Modal */}
-    <AnimatePresence mode='wait'>
-      {modalOpen && (
-        <>
-          <motion.div
-            id="PopUpMyModal"
-            initial="hidden"
-            animate="visible"
-            exit="exit"
-            variants={overlayVariants}
-            transition={{ duration: 0.5 }}
-            className={`PopUpmodal ${modalOpen ? 'visible' : ''}`}
-          >
-            <div className='PopUpContainer' onClick={handleOutsideClick}>
-              <motion.div
-                className="PopUpmodal-content"
-                variants={modalVariants}
-                transition={{ ease: "easeInOut", duration: 0.3 }}
-              >
-                {/* Your modal content here */}
-                <div 
-                  data-cursor-size="70px"
-                  data-cursor-exclusion>
-                  <button
-                    aria-label='close popup form'
-                    onClick={closeModal}
-                    className="PopUpClose">
-                    <Image
-                      height={50}
-                      width={50} 
-                      priority={false} 
-                      alt='close form' 
-                      src='/assets/icons/form-close.svg' 
-                    />
-                  </button>
-                </div>
-                <ContactUs />
-              </motion.div>
-            </div>
-          </motion.div>
-        </>
-      )}
-    </AnimatePresence>
+    <div
+      id="PopUpMyModal"
+      className={`PopUpmodal ${modalOpen ? 'form-visible' : ''}`}
+    >
+    <div className='PopUpContainer' onClick={handleOutsideClick}>
+    <div className="PopUpmodal-content">
+        {/* Your modal content here */}
+        <div 
+          data-cursor-size="60px"
+          data-cursor-exclusion>
+          <button
+            aria-label='close popup form'
+            onClick={closeModal}
+            className="PopUpClose">
+            <Image
+              height={50}
+              width={50} 
+              priority={false} 
+              alt='close form' 
+              src='/assets/icons/form-close.svg' 
+            />
+          </button>
+        </div>
+        <ContactUs />
+      </div>
+    </div>
+    </div>
     </>
   );
 }
