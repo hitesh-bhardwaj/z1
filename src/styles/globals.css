@@ -1434,6 +1434,10 @@ label:hover circle {
   object-fit: cover;
   border-radius: 5vw;
 }
+.reel-anim{
+  opacity: 0;
+  scale: 0;
+}
 
 .third-section {
   width: 78%;

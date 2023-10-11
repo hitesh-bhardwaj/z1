@@ -38,8 +38,15 @@ const HeroDesktop = () => {
           opacity: 1,
           y: 0,
           stagger: 0.1
-        }
-      );
+        }).fromTo(".reel-anim", {
+          scale: 0,
+          opacity: 0,
+        },{
+          scale: 1,
+          opacity: 1,
+          delay: -1.8,
+          duration: 1.3,
+        });
     return () => tl.kill();
   }, []);
 
@@ -82,15 +89,7 @@ const HeroDesktop = () => {
                   </div>
 
                   <div className="reel-hero">
-                    <motion.div
-                      initial={{ opacity: 0, scale: 0 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      transition={{
-                        ease: "easeInOut",
-                        duration: 1,
-                        delay: 6.5,
-                      }}
-                    >
+                    <div className='reel-anim'>
                       <video
                         src="/assets/reels/hero.webm"
                         muted
@@ -99,7 +98,7 @@ const HeroDesktop = () => {
                         preload="auto"
                         className="hero-video"
                       ></video>
-                    </motion.div>
+                    </div>
                   </div>
                 </div>
 
