@@ -2,7 +2,7 @@ import Link from "next/link";
 import React from "react";
 import styles from "@/styles/next.module.css";
 
-export default function NextBox() {
+export default function NextBox({ data }) {
   return (
     <>
       <div className={styles.nextContainer}>
@@ -16,8 +16,8 @@ export default function NextBox() {
             data-cursor-color="#000"
             data-cursor-size="400px"
           >
-            <Link href="/works">
-              <h1>Works</h1>
+            <Link href={data.page.servicePage.nextLink}>
+              <h1>{data.page.servicePage.nextH}</h1>
             </Link>
           </div>
         </div>

@@ -1,10 +1,12 @@
 import "../styles/globals.css";
 import { Analytics } from "@vercel/analytics/react";
 import Script from "next/script";
+import { ApolloProvider } from '@apollo/client';
+import client from '../components/lib/apolloClient';
 
 export default function App({ Component, pageProps }) {
   return (
-    <>
+    <ApolloProvider client={client}>
       <Script
         async
         strategy="lazyOnload"
@@ -26,6 +28,6 @@ export default function App({ Component, pageProps }) {
       />
       <Component {...pageProps} />
       <Analytics />
-    </>
+    </ApolloProvider>
   );
 }

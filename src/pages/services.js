@@ -1,5 +1,3 @@
-'use client'
-
 import React, { useEffect } from "react";
 import Head from "next/head";
 import { Cursor } from "../../cursor/index";
@@ -29,24 +27,6 @@ gsap.config({
 });
 
 gsap.registerPlugin(ScrollTrigger);
-5;
-// Hover on the link
-// const handleHover = (e) => {
-//   gsap.to(e.target, {
-//     duration: 0.5,
-//     scale: 1.1,
-//     ease: "power1.inOut",
-//   });
-// };
-
-// Hover off the link
-// const handleHoverExit = (e) => {
-//   gsap.to(e.target, {
-//     duration: 0.5,
-//     scale: 1,
-//     ease: "power1.inOut",
-//   });
-// };
 
 // Hover on the link
 const handleHoverSecond = (f) => {
@@ -133,28 +113,6 @@ export default function services() {
     );
     return () => tl.kill();
   }, []);
-
-  // Parallax Image
-  // useEffect(() => {
-  //   gsap.utils.toArray(".image-container").forEach(function (container) {
-  //     let image = container.querySelector("img");
-
-  //     gsap.to(image, {
-  //       y: () => image.offsetHeight - container.offsetHeight,
-  //       ease: "none",
-  //       startAt: { y: "-25%" },
-  //       scrollTrigger: {
-  //         trigger: container,
-  //         scrub: true,
-  //         pin: false,
-  //         markers: false,
-  //         invalidateOnRefresh: true,
-  //       },
-  //       y: "25%",
-  //       ease: "none",
-  //     });
-  //   });
-  // });
 
   //   Rotate SVG on Scroll
   useEffect(() => {
@@ -274,27 +232,6 @@ export default function services() {
     );
     return () => tl.kill();
   }, []);
-
-  // Text Reveal Animation For Each
-  // useEffect(() => {
-  //   const totalSection = document.querySelectorAll(".strategy-box-anim");
-  //   totalSection.forEach(function (elem, index) {
-  //     const text = new SplitType(elem.querySelectorAll(".ser-text-head-anim"));
-  //     let textwords = text.words;
-  //     gsap.from(textwords, {
-  //       scrollTrigger: {
-  //         trigger: elem,
-  //         start: "top 85%",
-  //         markers: false,
-  //       },
-  //       duration: 0.5,
-  //       opacity: 0,
-  //       yPercent: 100,
-  //       ease: "Power3.out",
-  //       stagger: 0.02,
-  //     });
-  //   });
-  // });
 
   // Text Reveal Animation For Each
   useEffect(() => {
