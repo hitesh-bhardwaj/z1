@@ -19,7 +19,6 @@ import ServiceNextBox from "@/components/NextBoxes/ServiceNextBox";
 import SecondVideoLazy from "@/components/ServicePage/SecondVideoLazy";
 import FirstVideoLazy from "@/components/ServicePage/FirstVideoLazy";
 import StrategySection from "@/components/ServicePage/StartegySection";
-import Modal from "../components/PopupForm/formModal";
 
 gsap.config({
   nullTargetWarn: false,
@@ -234,6 +233,27 @@ export default function services() {
   }, []);
 
   // Text Reveal Animation For Each
+  // useEffect(() => {
+  //   const totalSection = document.querySelectorAll(".strategy-box-anim");
+  //   totalSection.forEach(function (elem, index) {
+  //     const text = new SplitType(elem.querySelectorAll(".ser-text-head-anim"));
+  //     let textwords = text.words;
+  //     gsap.from(textwords, {
+  //       scrollTrigger: {
+  //         trigger: elem,
+  //         start: "top 85%",
+  //         markers: false,
+  //       },
+  //       duration: 0.5,
+  //       opacity: 0,
+  //       yPercent: 100,
+  //       ease: "Power3.out",
+  //       stagger: 0.02,
+  //     });
+  //   });
+  // });
+
+  // Text Reveal Animation For Each
   useEffect(() => {
     const totalSection = document.querySelectorAll(".top-box");
     totalSection.forEach(function (elem, index) {
@@ -308,15 +328,15 @@ export default function services() {
             " Enigma Digital | Services | Expert UI/UX, Development & Marketing",
           description:
             "Experience top-tier UI/UX design, front-end development, and organic marketing services with Enigma Digital, enhancing your online presence and business growth.",
-            images: [
-                  {
-                    url: "https://i.ibb.co/k0NMQw9/home.png",
-                    width: 400,
-                    height: 600,
-                    alt: "Enigma Image",
-                    type: "image/png",
-                  },
-                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
+          images: [
+            {
+              url: "",
+              width: 400,
+              height: 600,
+              alt: "Enigma Image",
+              type: "image/png",
+            },
+            { url: "" },
           ],
           siteName: "https://www.weareenigma.com/services",
         }}
@@ -330,6 +350,7 @@ export default function services() {
           name="description"
           content="Experience top-tier UI/UX design, front-end development, and organic marketing services with Enigma Digital, enhancing your online presence and business growth."
         />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=5.0">          
@@ -361,10 +382,6 @@ export default function services() {
         <Header />
       </div>
 
-{/* PopUp Modal Button */}
-<Modal />
-{/* End */}
-
       <main>
         <section
           className="service-hero"
@@ -395,9 +412,9 @@ export default function services() {
                 <span className="w-e">We</span>
               </div>
 
-              <p className="para-hero" id="service-anim">
+              <h3 className="para-hero" id="service-anim">
                 We are a globally recognised, award-winning UI UX design studio. Our comprehensive range of services leverages our full expertise to boost your digital presence to celestial heights.
-              </p>
+              </h3>
             </div>
 
             <h1
@@ -453,6 +470,179 @@ export default function services() {
           <StrategySection />
         </section>
 
+
+        {/* <div className="service-cap-section strategy-box-anim">
+          <div className="left-box" data-jelly>
+            <h2 className="sub-text ser-text-head-anim">
+              <span>
+                Here's how we help you
+                <br /> grow.
+              </span>
+            </h2>
+          </div>
+          <div className="right-box">
+            <div className="right-sub-content strategy-box-anim">
+              <h1 className="ser-text-head-anim">Our Capabilities</h1>
+              <h4 data-jelly className="ser-text-head-anim">
+                <span>
+                  We create evergreen brands that are highly effective at
+                  boosting revenue, increasing brand equity, and improving ROI.
+                  Our big picture approach powers your entire business, not just
+                  the marketing department.
+                </span>
+              </h4>
+            </div>
+          </div>
+        </div> */}
+
+
+        {/* Strategy Box 1  */}
+        {/* <div className="strategy-box strategy-box-anim">
+          <div
+            className="left-strategy-box"
+            data-cursor-text="Know More!"
+            data-cursor-size="110px"
+            data-cursor-color="#2b8c87"
+          >
+            <h1 className="ser-text-head-anim">Strategy</h1>
+            <h4 data-jelly className="ser-text-head-anim">
+              <span>
+                Digital Advisory and Consulting, Integrated Digital Marketing
+                Plan (D.M.P.), User Experience Development, Customer Experience
+                Strategy, Consumer Research, Insights & Target Market Analysis,
+                Digital Capabilities Development, Persona Design & Customer
+                Segmentation, Competitive Analysis & Industry Insights, Brand &
+                Content Strategy, Digital Marketing and Website Performance
+                Audit.
+              </span>
+            </h4>
+          </div>
+          <div className="right-strategy-box">
+            <div className="image-container service-box-image">
+              <Image
+                src="/assets/services/strategy.png"
+                width={500}
+                height={1000}
+                alt="services"
+                onMouseEnter={(e) => handleHover(e)}
+                onMouseOut={(e) => handleHoverExit(e)}
+                className="anim-img-service"
+              />
+            </div>
+          </div>
+        </div> */}
+
+        {/* Strategy Box 1  END */}
+
+
+        {/* Strategy Box 2  */}
+        {/* <div className="strategy-box strategy-box-anim flex-reverse">
+          <div
+            className="left-strategy-box"
+            data-cursor-text="Know More!"
+            data-cursor-size="110px"
+            data-cursor-color="#000"
+          >
+            <h1 className="ser-text-head-anim">UI/UX Design</h1>
+            <h4 data-jelly className="ser-text-head-anim">
+              <span>
+                User Interface Design, User Experience Design, Responsive Web
+                Design, Mobile App Design, Digital Interface Design, Design
+                Systems Creation, Experience Mapping, User Flow Mapping,
+                Wireframing & Prototyping, Illustrations & Animations, Visual
+                Designs, and UI Kits.
+              </span>
+            </h4>
+          </div>
+          <div className="right-strategy-box">
+            <div className="image-container service-box-image">
+              <Image
+                src="/assets/services/design.png"
+                width={500}
+                height={1000}
+                alt="services"
+                onMouseEnter={(e) => handleHover(e)}
+                onMouseOut={(e) => handleHoverExit(e)}
+                className="anim-img-service"
+              />
+            </div>
+          </div>
+        </div> */}
+        {/* Strategy Box 2  END */}
+
+
+        {/* Strategy Box 3  */}
+        {/* <div className="strategy-box strategy-box-anim">
+          <div
+            className="left-strategy-box"
+            data-cursor-text="Know More!"
+            data-cursor-size="110px"
+            data-cursor-color="#fcc63d"
+          >
+            <h1 className="ser-text-head-anim">Technology</h1>
+            <h4 data-jelly className="ser-text-head-anim">
+              <span>
+                Front-End Development, Native & Hybrid Mobile Application
+                Development, Progressive Web Applications, Database Design &
+                Management, Cloud Infrastructure Services, Testing & Automation
+                TECH STACK - HTML, CSS, Sass, Less, JavaScript, jQuery, GSAP,
+                Vue, React, React Native, Ionic, Flutter, NodeJS, Spring, JAVA,
+                Grails, Hibernate, MySQL, PostgreSQL, Oracle, Mongo, AWS and
+                Google Cloud.
+              </span>
+            </h4>
+  
+          </div>
+          <div className="right-strategy-box">
+            <div className="image-container service-box-image">
+              <Image
+                src="/assets/services/tech.png"
+                width={500}
+                height={1000}
+                alt="services"
+                onMouseEnter={(e) => handleHover(e)}
+                onMouseOut={(e) => handleHoverExit(e)}
+                className="anim-img-service"
+              />
+            </div>
+          </div>
+        </div> */}
+        {/* Strategy Box 3  END */}
+
+        {/* Strategy Box 4  */}
+        {/* <div className="strategy-box strategy-box-anim flex-reverse">
+          <div
+            className="left-strategy-box"
+            data-cursor-text="Know More!"
+            data-cursor-size="110px"
+            data-cursor-color="#000"
+          >
+            <h1 className="ser-text-head-anim">Marketing</h1>
+            <h4 data-jelly className="ser-text-head-anim">
+              <span>
+                Social Media Management, Content Creation & Curation, Search
+                Engine Optimisation, Influencer Management, Auction Media
+                Management, Online Reputation Management, Media Planning &
+                Buying, Marketing Automation, Email Marketing, Conversion Rate
+                Optimisation, Website & SEO Analysis.
+              </span>
+            </h4>
+          </div>
+          <div className="right-strategy-box">
+            <div className="image-container service-box-image">
+              <Image
+                src="/assets/services/market.png"
+                width={500}
+                height={1000}
+                alt="services"
+                onMouseEnter={(e) => handleHover(e)}
+                onMouseOut={(e) => handleHoverExit(e)}
+                className="anim-img-service"
+              />
+            </div>
+          </div>
+        </div> */}
+        {/* Strategy Box 4  END */}
         {/* =================== Services and Capabilities Section END ========================= */}
 
         {/* =================== Bottom Image Section ========================= */}
@@ -515,15 +705,15 @@ export default function services() {
               data-cursor-text="Define"
             >
               <div className="box-we">
-                <h4 className="disabled-work">Define</h4>
+                <h1 className="disabled-work">Define</h1>
               </div>
               <div className="box-we-para">
-                <p>
+                <h4>
                   <span>
                     Develop a thorough understanding of the project, audience,
                     and objectives to formulate a strategy.
                   </span>
-                </p>
+                </h4>
               </div>
             </div>
           </div>
@@ -544,15 +734,15 @@ export default function services() {
               data-cursor-text="Design"
             >
               <div className="box-we">
-                <h4 className="disabled-work">Design</h4>
+                <h1 className="disabled-work">Design</h1>
               </div>
               <div className="box-we-para">
-                <p>
+                <h4>
                   <span>
                     Craft a purposeful design to reflect the objectives and
                     indicate the direction for the entire project.
                   </span>
-                </p>
+                </h4>
               </div>
             </div>
           </div>
@@ -575,15 +765,15 @@ export default function services() {
             ></div>
             <div className="first-box-how box-anim-gsap">
               <div className="box-we">
-                <h4 className="disabled-work">Implement</h4>
+                <h1 className="disabled-work">Implement</h1>
               </div>
               <div className="box-we-para">
-                <p>
+                <h4>
                   <span>
                     Bring the design to life in the form of an interactive and
                     functional prototype. Review, refine and optimise.
                   </span>
-                </p>
+                </h4>
               </div>
             </div>
           </div>
@@ -605,15 +795,15 @@ export default function services() {
             <div className="box-anim-gsap develop-box-service">
               <div className="first-box-how">
                 <div className="box-we flex-start-remove">
-                  <h4 className="disabled-work">Develop</h4>
+                  <h1 className="disabled-work">Develop</h1>
                 </div>
                 <div className="box-we-para">
-                  <p>
+                  <h4>
                     <span>
                       Incorporate implementation and technical components into a
                       highly functional system, ready for review.
                     </span>
-                  </p>
+                  </h4>
                 </div>
               </div>
             </div>
@@ -637,15 +827,15 @@ export default function services() {
             ></div>
             <div className="first-box-how box-anim-gsap">
               <div className="box-we">
-                <h4 className="disabled-work">Deliver</h4>
+                <h1 className="disabled-work">Deliver</h1>
               </div>
               <div className="box-we-para">
-                <p>
+                <h4>
                   <span>
                     Review, refine, test and prepare final product for delivery.
                     Launch and continue to evolve over time.
                   </span>
-                </p>
+                </h4>
               </div>
             </div>
           </div>

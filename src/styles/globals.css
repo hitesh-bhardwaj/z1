@@ -87,6 +87,13 @@
   filter: invert(1);
 }
 
+.bgc-primary{
+  background: var(--primary);
+}
+.dark-mode .bgc-primary{
+  background: var(--dark-primary) !important;
+}
+
 /*01. Fonts */
 /*==============FONTS===================*/
 @font-face {
@@ -11067,6 +11074,32 @@ label.label:hover:before{
     border: 1px solid;
   }
 
+  .form-button-2 .btn_CTA{
+    padding: 0;
+    width: 12.5rem
+  }
+
+  .loading-state{
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    display: flex;
+    height: 4rem;
+    border-radius: 100px;
+    position: relative;
+    border: 1px solid;
+    width: 12.5rem;
+    padding: 0;
+    background: currentColor;
+  }
+
+  .loading-state img{
+    position: absolute;
+    width: 36px;
+    z-index: 100;
+    animation: rotate-animation 0.7s infinite linear;
+  }
+
   .btn_CTA-title {
     position: relative;
     display: block;
@@ -11706,3 +11739,93 @@ label.label:hover:before{
   }
 }
 
+
+/* Careers Page Testimonial */
+.c__testimain .slick-list{
+  padding: 20px 0px;
+  width: 90%;
+  margin: auto;
+}
+
+.c__testimain .slick-prev:before, 
+.c__testimain .slick-next:before{
+  color: #1a1a1a !important;
+  font-family: unset !important;
+  font-size: 40px !important;
+}
+
+.c__testimain .slick-prev, 
+.c__testimain .slick-next{
+  width: auto;
+}
+
+.c__testimain .slick-prev{
+  transform: rotate(180deg);
+  left: 0;
+}
+.c__testimain .slick-next{
+  right: 0;
+}
+
+.c__testimain .slick-next:before{
+  content: '➜';
+}
+.c__testimain .slick-prev:before{
+  content: '➜';
+}
+
+
+/* JD Page */
+.jd__bgcover{
+  background: #0000009e;
+  position: absolute;
+  height: 57vh;
+  width: 100%;
+  top: -7vh;
+  z-index: -1;
+}
+
+.jd__main .menu svg path {
+  stroke: var(--white);
+}
+.jd__main .showreel .btn-primary{
+  color: var(--white);
+}
+.jd__main .header-section .header-logo .main-logo{
+  filter: invert(1);
+}
+.dark-mode .jd__main .jd__bg{
+  z-index: -2;
+}
+.dark-mode .jd__bgcover{
+  filter: invert(1);
+  z-index: -1;
+}
+.dark-mode .jd__head{
+  filter: invert(1);
+}
+.dark-mode .jd__main .menu svg path {
+  filter: invert(1);
+}
+.dark-mode .jd__main .menu--1 input:checked+svg .line--1,.dark-mode .jd__main .menu--1 input:checked+svg .line--3{
+  stroke: #000000;
+}
+.dark-mode .jd__main .showreel .btn-primary{
+  color: var(--black);
+}
+.dark-mode .jd__main .dark-mode-btn{
+  background: #ffffff;
+}
+
+.jd__form__content input:-webkit-autofill, 
+.jd__form__content input:-webkit-autofill:hover, 
+.jd__form__content input:-webkit-autofill:focus, 
+.jd__form__content input:-webkit-autofill:active{
+  background-clip: unset;
+  background-color: none !important;
+  border: 1px solid #00000010;
+}
+
+.jd__form__content input:-internal-autofill-selected {
+  background-color: none !important;
+}

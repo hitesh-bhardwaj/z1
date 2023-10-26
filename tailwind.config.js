@@ -16,6 +16,14 @@ module.exports = {
         'display': 'ClashDisplay',
         'body': 'Ageo',
         'body-2': 'Arial',
+      },
+      colors: {
+        'primary': '#5d5ad6',
+        'dark-primary': '#a2a529',
+        'black-1': '#1a1a1a',
+      },
+      boxShadow: {
+        '3xl': '0 10px 30px -10px rgba(0, 0, 0, 0.2)',
       }
     },
   },
