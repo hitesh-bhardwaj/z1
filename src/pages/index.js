@@ -125,6 +125,10 @@ export default function Home() {
         <ProjectsHome />
       </section>
 
+      <a href="/careers">
+        Careers
+      </a>
+
       {/* ======================== Projects Slide END ====================== */}
 
       {/* ======================== Home Aero ====================== */}
