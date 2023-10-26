@@ -6,6 +6,7 @@ import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import Link from "next/link";
 import SplitType from "split-type";
 
+gsap.registerPlugin("ScrollTrigger");
 
 var _s,
   ws,
