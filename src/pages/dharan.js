@@ -258,9 +258,9 @@ export default function dharan() {
                   data-cursor-color="#FF8395"
                   data-cursor-text="Visit!"
                 >
-                  <Link href="https://www.dharan.co.in/" target="_blank" className={styles.Link}>
+                  <Link href="https://www.dharanclothing.com/" target="_blank" className={styles.Link}>
                   <button aria-label="link button">
-                    Dharan.co.in
+                    dharanclothing.co.in
                     <span className={styles.linkSvg}>
                       <Image
                         width={20}

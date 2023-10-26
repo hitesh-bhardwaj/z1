@@ -19,6 +19,7 @@ import Preloader from "@/components/PreLoader/PreLoader";
 import HomeProject from "@/components/ProjectsSection/HomeProject";
 import ProjectsHome from "@/components/Home/ProjectsHome";
 import Modal from "../components/PopupForm/formModal";
+import Link from "next/link";
 
 export default function Home() {
 
@@ -125,10 +126,6 @@ export default function Home() {
         <ProjectsHome />
       </section>
 
-      <a href="/careers">
-        Careers
-      </a>
-
       {/* ======================== Projects Slide END ====================== */}
 
       {/* ======================== Home Aero ====================== */}
@@ -136,7 +133,83 @@ export default function Home() {
         <HomeAero />
       </section>
       {/* ======================== Home Aero END ====================== */}
+      
+      {/* ======================== Related Blogs ====================== */}
+      <div className="related-articles">
+        <div className="related-article-heading">
+          <h1>RELATED ARTICLES</h1>
+          <Link href="/blogs">
+            <h4>All articles</h4>
+          </Link>
+        </div>
 
+        <div className="related-box-img">
+          <div className="box-img-content">
+            <div className="img-box-related">
+              <Link href="/what-is-experience-design">
+                <img
+                  src="/assets/blogs/feature.webp"
+                  alt="img"
+                  data-cursor-text="Read Now"
+                  data-cursor-color="#000"
+                  data-cursor-size="100px"
+                  onMouseEnter={(e) => handleHover(e)}
+                  onMouseOut={(e) => handleHoverExit(e)}
+                />
+                <h2>Design</h2>
+              </Link>
+            </div>
+            <h1>
+              What is Experience Design, And How is it Different from User
+              Experience Design (UX)?
+            </h1>
+          </div>
+
+          <div className="box-img-content">
+            <div className="img-box-related">
+              <Link href="/the-power-of-psychology-in-ux-design">
+                <img
+                  src="/assets/blogs/uxbrain.webp"
+                  alt="img"
+                  data-cursor-text="Read Now"
+                  data-cursor-color="#000"
+                  data-cursor-size="100px"
+                  onMouseEnter={(e) => handleHover(e)}
+                  onMouseOut={(e) => handleHoverExit(e)}
+                />
+                <h2>Design</h2>
+              </Link>
+            </div>
+            <h1>
+              The Power of Psychology in UX Design: Unlocking the Human Element
+            </h1>
+          </div>
+
+          <div className="box-img-content">
+            <div className="img-box-related">
+              <Link href="/what-is-ux-design">
+                <img
+                  src="/assets/blogs/blog-detail/what-is-ux/feature.webp"
+                  alt="img"
+                  data-cursor-text="Read Now"
+                  data-cursor-color="#000"
+                  data-cursor-size="100px"
+                  onMouseEnter={(e) => handleHover(e)}
+                  onMouseOut={(e) => handleHoverExit(e)}
+                />
+                <h2>Design</h2>
+              </Link>
+            </div>
+            <h1>
+              What is UX Design: A Simple and Informative Guide for the Curious
+              Minds
+            </h1>
+          </div>
+        </div>
+      </div>
+
+      {/* ======================== Related Blogs ====================== */}
+      
       {/* ======================== Footer ====================== */}
       <section className="desktop-footer mt-150">
         <Footer />

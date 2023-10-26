@@ -573,7 +573,7 @@ export default function futureofmarketing() {
                 <Image
                   width={1000}
                   height={1000}
-                  src="/assets/blogs/feature.jpg"
+                  src="/assets/blogs/feature.webp"
                   alt="img"
                   data-cursor-text="Read Now"
                   data-cursor-color="#000"

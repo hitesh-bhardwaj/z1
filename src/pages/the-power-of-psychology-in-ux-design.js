@@ -747,7 +747,7 @@ export default function powerofpsychology() {
             <div className="img-box-related">
               <Link href="/what-is-experience-design">
                 <img
-                  src="/assets/blogs/feature.jpg"
+                  src="/assets/blogs/feature.webp"
                   alt="img"
                   data-cursor-text="Read Now"
                   data-cursor-color="#000"
