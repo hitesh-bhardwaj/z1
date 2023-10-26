@@ -1,7 +1,5 @@
 import React, { useEffect } from "react";
 import gsap from "gsap";
-import { gql } from '@apollo/client';
-import client from '../components/lib/apolloClient';
 
 // Main View
 const Marquee = ({ serviceMarquee }) => {
