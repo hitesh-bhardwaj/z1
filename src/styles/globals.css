@@ -5539,7 +5539,7 @@ body.loading {
 }
 
 .blogs-sub-section {
-  width: 90%;
+  width: 85%;
   height: 100%;
   margin: 0 auto;
 }
@@ -5562,10 +5562,11 @@ body.loading {
 
 .blogs-section {
   margin-top: 2vw;
+  margin-bottom: 4rem;
 }
 
 .blog-page-grid {
-  width: 33%;
+  width: 100%;
 }
 
 .blogs-section button {
@@ -5664,10 +5665,9 @@ body.loading {
 
 .blogs-section .ul-blog {
   position: relative;
-  margin-top: 7vw;
-  width: 90%;
+  margin-top: 5vw;
+  width: 100%;
   height: 100%;
-  margin-right: 3vw;
 }
 
 .image-box-blog {
@@ -5690,9 +5690,9 @@ body.loading {
 }
 
 .ul-items {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
+  display: grid;
+  grid-template-columns: 31% 31% 31%;
+  justify-content: space-between;
   align-items: flex-start;
 }
 
@@ -7817,6 +7817,9 @@ a:hover {
   /* ==================== Blog Page  ====================== */
   .blogs-heading h1 {
     font-size: 11.5vw;
+    line-height: 1;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
   }
 
   .blogs-section button {
@@ -7827,15 +7830,12 @@ a:hover {
     justify-content: space-between;
     margin: 0 auto;
     width: 100%;
-    padding-top: 7vw;
+    padding-top: 5vw;
+    grid-template-columns: 47% 47%;
   }
 
   .blogs-section .ul-blog {
     width: 100%;
-  }
-
-  .blog-page-grid {
-    width: 47%;
   }
 
   .image-box-blog {
@@ -9740,7 +9740,7 @@ a:hover {
   }
 
   .blogs-section button {
-    font-size: 4vw;
+    font-size: 1.5rem;
     margin-right: 3vw;
     padding: 2vw 5vw;
     margin-bottom: 3vw;
@@ -9768,10 +9768,11 @@ a:hover {
 
   .ul-items {
     width: 100%;
-    margin-top: 10vw;
+    margin-top: 5vw;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    grid-template-columns: 100%;
   }
 
   .blog-page-grid {
@@ -9933,6 +9934,12 @@ a:hover {
   .related-box-img h1 {
     font-size: 4.5vw;
     text-align: justify;
+  }
+
+  @media screen and (max-width: 480px) {
+    .blogs-section button {
+      font-size: 1rem;
+    }
   }
 
   /* Blog Detail END */
