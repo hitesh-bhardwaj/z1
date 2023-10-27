@@ -205,14 +205,14 @@ export default function dmtca() {
     <>
 
             <NextSeo
-              title="DMTCA | Case Study"
-              description="DMTCA case study showcases the work done by Enigma in Branding, UI/UX design and front-end development, driving exceptional results for the client."
-              canonical="https://www.weareenigma.com/dmtca"
+              title="DMTCA - Branding, Web Design & Development Case Study | Enigma"
+              description="Witness the digital rebranding journey & website transformation of a leading West African digital marketing agency with Enigma."
+              canonical="https://weareenigma.com/dmtca-digital-branding-case-study"
               openGraph={{
-                url: "https://www.weareenigma.com/dmtca",
-                title: "DMTCA | Case Study",
+                url: "https://weareenigma.com/dmtca-digital-branding-case-study",
+                title: "DMTCA - Branding, Web Design & Development Case Study | Enigma",
                 description:
-                  "DMTCA case study showcases the work done by Enigma in Branding, UI/UX design and front-end development, driving exceptional results for the client.",
+                  "Witness the digital rebranding journey & website transformation of a leading West African digital marketing agency with Enigma.",
                   images: [
                   {
                     url: "https://i.ibb.co/k0NMQw9/home.png",
@@ -223,13 +223,13 @@ export default function dmtca() {
                   },
             { url: "https://i.ibb.co/k0NMQw9/home.png" },
                 ],
-                siteName: "https://www.weareenigma.com/dmtca",
+                siteName: "https://weareenigma.com/dmtca-digital-branding-case-study",
               }}
             />
 
       <Head>
-        <title>DMTCA | Case Study</title>
-        <meta name="description" content="DMTCA case study showcases the work done by Enigma in Branding, UI/UX design and front-end development, driving exceptional results for the client." />
+        <title>DMTCA - Branding, Web Design & Development Case Study | Enigma</title>
+        <meta name="description" content="Witness the digital rebranding journey & website transformation of a leading West African digital marketing agency with Enigma." />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=5.0"

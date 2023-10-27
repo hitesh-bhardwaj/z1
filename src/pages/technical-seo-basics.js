@@ -165,16 +165,14 @@ export default function technicleSeo() {
     <>
 
             <NextSeo
-              title="Beginner's Guide to Technical SEO"
-              description="Technical SEO refers to the process of optimizing your website's
-              infrastructure and underlying code, making it easier for search
-              engines to crawl, index, and rank your content."
-              canonical="https://www.weareenigma.com/beginner-guide-to-technical-seo"
+              title="Comprehensive Guide to Technical SEO Essentials"
+              description="Master technical SEO & learn to optimize your website's infrastructure for better search engine visibility and user experience with this guide."
+              canonical="https://weareenigma.com/technical-seo-basics"
               openGraph={{
-                url: "https://www.weareenigma.com/beginner-guide-to-technical-seo",
-                title: "Beginner's Guide to Technical SEO",
+                url: "https://weareenigma.com/technical-seo-basics",
+                title: "Comprehensive Guide to Technical SEO Essentials",
                 description:
-                  "Technical SEO refers to the process of optimizing your website's infrastructure and underlying code, making it easier for search engines to crawl, index, and rank your content.",
+                  "Master technical SEO & learn to optimize your website's infrastructure for better search engine visibility and user experience with this guide.",
                   images: [
                   {
                     url: "https://i.ibb.co/k0NMQw9/home.png",
@@ -185,13 +183,13 @@ export default function technicleSeo() {
                   },
                   { url: "https://i.ibb.co/k0NMQw9/home.png" },
                 ],
-                siteName: "https://www.weareenigma.com/beginner-guide-to-technical-seo",
+                siteName: "https://weareenigma.com/technical-seo-basics",
               }}
             />
 
       <Head>
-        <title>Beginner's Guide to Technical SEO</title>
-        <meta name="description" content="Technical SEO refers to the process of optimizing your website's infrastructure and underlying code, making it easier for search engines to crawl, index, and rank your content." />
+        <title>Comprehensive Guide to Technical SEO Essentials</title>
+        <meta name="description" content="Master technical SEO & learn to optimize your website's infrastructure for better search engine visibility and user experience with this guide." />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
@@ -682,7 +680,6 @@ export default function technicleSeo() {
           </div>
         </div>
       </div>
-
 
       {/* =================== Related Articles =========================== */}
 

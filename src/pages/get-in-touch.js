@@ -147,15 +147,15 @@ export default function contact() {
   return (
     <>
       <NextSeo
-        title="Contact Enigma Digital | UI/UX, Development & Marketing Experts"
-        description="Get in touch with Enigma Digital's team of UI/UX design, front-end development, and organic marketing specialists to elevate your business and achieve success online."
-        canonical="https://www.weareenigma.com/contact"
+        title="We Elevate Your Digital Presence | Contact Enigma"
+        description="Contact Enigma for top-tier UI/UX design, front-end development, and organic digital marketing solutions. Let's collaborate and ascend your digital presence."
+        canonical="https://weareenigma.com/get-in-touch"
         openGraph={{
-          url: "https://www.weareenigma.com/contact",
+          url: "https://weareenigma.com/get-in-touch",
           title:
-            "Contact Enigma Digital | UI/UX, Development & Marketing Experts",
+            "We Elevate Your Digital Presence | Contact Enigma",
           description:
-            "Get in touch with Enigma Digital's team of UI/UX design, front-end development, and organic marketing specialists to elevate your business and achieve success online.",
+            "Contact Enigma for top-tier UI/UX design, front-end development, and organic digital marketing solutions. Let's collaborate and ascend your digital presence.",
             images: [
                   {
                     url: "https://i.ibb.co/k0NMQw9/home.png",
@@ -166,17 +166,17 @@ export default function contact() {
                   },
                   { url: "https://i.ibb.co/k0NMQw9/home.png" },
           ],
-          siteName: "https://www.weareenigma.com/contact",
+          siteName: "https://weareenigma.com/get-in-touch",
         }}
       />
 
       <Head>
         <title>
-          Contact Enigma Digital | UI/UX, Development & Marketing Experts
+          We Elevate Your Digital Presence | Contact Enigma
         </title>
         <meta
           name="description"
-          content="Get in touch with Enigma Digital's team of UI/UX design, front-end development, and organic marketing specialists to elevate your business and achieve success online."
+          content="Contact Enigma for top-tier UI/UX design, front-end development, and organic digital marketing solutions. Let's collaborate and ascend your digital presence."
         />
         <meta
           name="viewport"

@@ -827,7 +827,7 @@ export default function ProjectsHome() {
 
             <div className={styles.glide}>
               <div className={styles.glideContent} id="image-container">
-                <a href="/dharan">
+                <a href="/dharan-ecommerce-case-study">
                   <Image
                     src="/assets/projects/new-project/dharan.webp"
                     width={1000}
@@ -908,7 +908,7 @@ export default function ProjectsHome() {
                 className={`${styles.glideContent} ${styles.mt20} ${styles.mt0} ${styles.forthMt}`}
                 id="image-container"
               >
-                <a href="/certvault">
+                <a href="/certvault-case-study">
                   <Image
                     src="/assets/projects/new-project/cert.png"
                     width={1000}
@@ -1137,7 +1137,7 @@ export default function ProjectsHome() {
 
             <div className={styles.glide}>
               <div className={styles.glideContent} id="image-container">
-                <a href="/dmtca">
+                <a href="/dmtca-digital-branding-case-study">
                   <Image
                     src="/assets/projects/new-project/dmtca.png"
                     width={1000}

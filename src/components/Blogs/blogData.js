@@ -69,7 +69,7 @@ const Blogs = [
     {
       name: "Marketing",
       category: "marketing",
-      Link: "/30-websites",
+      Link: "/link-building-website-list",
       image: "/assets/blogs/blog-detail/30-websites/feature.webp",
       description:
         "Beginners Guide to SEO: 30 websites to help you getting started on your link building journey",
@@ -77,14 +77,14 @@ const Blogs = [
     {
       name: "Marketing",
       category: "marketing",
-      Link: "/beginner-guide-to-technical-seo",
+      Link: "/technical-seo-basics",
       image: "/assets/blogs/blog-detail/the-technical-seo/feature.webp",
       description: "A Beginner's Guide to Technical SEO",
     },
     {
       name: "Marketing",
       category: "marketing",
-      Link: "/beginner-guide-link-building",
+      Link: "/essential-link-building-guide",
       image: "/assets/blogs/blog-detail/link-building/feature.webp",
       description: "A Beginner's Guide to Link Building",
     },

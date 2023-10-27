@@ -28,9 +28,9 @@ export default function Home() {
       <NextSeo
         title="Enigma | Digital Product Design, UI/UX & Neuromarketing Agency"
         description="Enigma is India's Leading UI/UX Design Agency that Leverages the Power of Emotion, Design, Technology, and Neuromarketing Strategies to Create Digital Products that People Love to Use."
-        canonical="https://www.weareenigma.com/"
+        canonical="https://weareenigma.com/"
         openGraph={{
-          url: "https://www.weareenigma.com/",
+          url: "https://weareenigma.com/",
           title: "Enigma | Digital Product Design, UI/UX & Neuromarketing Agency",
           description:
             "Enigma is India's Leading UI/UX Design Agency that Leverages the Power of Emotion, Design, Technology, and Neuromarketing Strategies to Create Digital Products that People Love to Use.",
@@ -44,7 +44,7 @@ export default function Home() {
             },
             { url: "https://i.ibb.co/k0NMQw9/home.png" },
           ],
-          siteName: "weareenigma.com/",
+          siteName: "https://weareenigma.com/",
         }}
       />
 
@@ -135,7 +135,7 @@ export default function Home() {
       {/* ======================== Home Aero END ====================== */}
       
       {/* ======================== Related Blogs ====================== */}
-      <div className="related-articles">
+      {/* <div className="related-articles">
         <div className="related-article-heading">
           <h1>RELATED ARTICLES</h1>
           <Link href="/blog">
@@ -206,7 +206,7 @@ export default function Home() {
             </h1>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* ======================== Related Blogs ====================== */}
       

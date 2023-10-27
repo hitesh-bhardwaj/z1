@@ -7,8 +7,8 @@ export default function JobApply(){
     const [location, setLocation] = useState("");
     const [url, setUrl] = useState("");
     const [experiences, setExperiences] = useState([]);
-    const [selectedSkills, setSelectedSkills] = useState([]);
-    const [showDropdown, setShowDropdown] = useState(false);
+    // const [selectedSkills, setSelectedSkills] = useState([]);
+    // const [showDropdown, setShowDropdown] = useState(false);
     const [selectedFileName, setSelectedFileName] = useState("");
     const [fileError, setFileError] = useState("");
     const [messageStatus, setMessageStatus] = useState(null); 
@@ -18,7 +18,7 @@ export default function JobApply(){
     const dropdownRef = useRef(null);
     const inputRef = useRef(null);
 
-    const skills = ["JavaScript", "React", "Node.js", "Python", "CSS"];
+    // const skills = ["JavaScript", "React", "Node.js", "Python", "CSS"];
 
     // Handle Input Change
     const handleNameChange = (event) => {
@@ -54,16 +54,16 @@ export default function JobApply(){
         }
     };
 
-    const handleSkillChange = (event) => {
-        setSelectedSkills(event.target.value);
-        if (event.target.value.trim()) {
-            setErrors(prevErrors => {
-                const newErrors = { ...prevErrors };
-                delete newErrors.selectedSkills;
-                return newErrors;
-            });
-        }
-    };
+    // const handleSkillChange = (event) => {
+    //     setSelectedSkills(event.target.value);
+    //     if (event.target.value.trim()) {
+    //         setErrors(prevErrors => {
+    //             const newErrors = { ...prevErrors };
+    //             delete newErrors.selectedSkills;
+    //             return newErrors;
+    //         });
+    //     }
+    // };
 
     useEffect(() => {
         function handleClickOutside(event) {
@@ -110,29 +110,29 @@ export default function JobApply(){
         setExperiences(experiences.filter((_, index) => index !== indexToRemove));
     };
 
-    const toggleSkill = (skill) => {
-        let newSkills;
-        if (selectedSkills.includes(skill)) {
-            newSkills = selectedSkills.filter(s => s !== skill);
-        } else {
-            newSkills = [...selectedSkills, skill];
-        }
-        setSelectedSkills(newSkills);
+    // const toggleSkill = (skill) => {
+    //     let newSkills;
+    //     if (selectedSkills.includes(skill)) {
+    //         newSkills = selectedSkills.filter(s => s !== skill);
+    //     } else {
+    //         newSkills = [...selectedSkills, skill];
+    //     }
+    //     setSelectedSkills(newSkills);
     
-        // Clear the custom skill input field after adding
-        if (skill === customSkill) {
-            setCustomSkill("");
-        }
+    //     // Clear the custom skill input field after adding
+    //     if (skill === customSkill) {
+    //         setCustomSkill("");
+    //     }
         
-        // Check if the skills array is not empty and remove error if any
-        if (newSkills.length > 0) {
-            setErrors(prevErrors => {
-                const newErrors = { ...prevErrors };
-                delete newErrors.selectedSkills;
-                return newErrors;
-            });
-        }
-    };
+    //     // Check if the skills array is not empty and remove error if any
+    //     if (newSkills.length > 0) {
+    //         setErrors(prevErrors => {
+    //             const newErrors = { ...prevErrors };
+    //             delete newErrors.selectedSkills;
+    //             return newErrors;
+    //         });
+    //     }
+    // };
 
     const onFileChange = (event) => {
         const file = event.target.files[0];
@@ -159,9 +159,9 @@ export default function JobApply(){
         if (!number.trim()) {
             newErrors.number = "Number is required.";
         }
-        if (selectedSkills.length === 0) {
-            newErrors.selectedSkills = "Please select at least one skill.";
-        }
+        // if (selectedSkills.length === 0) {
+        //     newErrors.selectedSkills = "Please select at least one skill.";
+        // }
         if (!selectedFileName) {
             newErrors.selectedFileName = "Please upload your resume.";
         }
@@ -175,7 +175,7 @@ export default function JobApply(){
         message += `Email: ${data.email}\n`;
         message += `Number: ${data.number}\n`;
         message += `Location: ${data.location}\n`;
-        message += `Skills: ${data.skills.join(', ')}\n`;
+        // message += `Skills: ${data.skills.join(', ')}\n`;
         message += `Portfolio URL: ${data.url}\n\n`;
     
         message += "Experience Details:\n";
@@ -203,7 +203,7 @@ export default function JobApply(){
         setLocation("");
         setUrl("");
         setExperiences([]);
-        setSelectedSkills([]);
+        // setSelectedSkills([]);
         setSelectedFileName("");
         setFileError("");
         document.getElementById("dropzone-file").value = ""; // Reset file input
@@ -247,7 +247,7 @@ export default function JobApply(){
             email: email,
             number: number,
             location: location,
-            skills: selectedSkills,
+            // skills: selectedSkills,
             url: url,
             experiences: experiences.map((_, index) => {
                 const years = parseInt(event.target[`years_${index}`].value) || 0;
@@ -306,9 +306,9 @@ export default function JobApply(){
                         value={name}
                         placeholder="Name*"
                         onChange={handleNameChange}
-                        className={`bg-white font-body text-xl px-4 py-3 rounded-md focus:ring-2 ring-primary duration-300 ${errors.name ? 'border-red-400 border ring-red-500' : ''}`}
+                        className={`tw-border bg-white font-body text-xl px-4 py-3 rounded-md focus:ring-2 ring-primary duration-300 ${errors.name ? 'border-red-400 border ring-red-500' : ''}`}
                         />
-                    {errors.name && <p className="text-red-400 font-medium text-md mt-2">{errors.name}</p>}
+                    {errors.name && <p className="tw-no-invert text-red-500 font-medium text-md mt-2">{errors.name}</p>}
                 </div>
 
                 <div className="flex flex-col mb-3">
@@ -319,9 +319,9 @@ export default function JobApply(){
                         value={email}
                         placeholder="Email*"
                         onChange={handleEmailChange}
-                        className={`bg-white font-body text-xl px-4 py-3 rounded-md focus:ring-2 ring-primary duration-300 ${errors.email ? 'border-red-400 border ring-red-500' : ''}`}
+                        className={`tw-border bg-white font-body text-xl px-4 py-3 rounded-md focus:ring-2 ring-primary duration-300 ${errors.email ? 'border-red-400 border ring-red-500' : ''}`}
                         />
-                    {errors.email && <p className="text-red-400 font-medium text-md mt-2">{errors.email}</p>}
+                    {errors.email && <p className="tw-no-invert text-red-500 font-medium text-md mt-2">{errors.email}</p>}
                 </div>
 
                 <div className="flex flex-col mb-3">
@@ -332,20 +332,20 @@ export default function JobApply(){
                         value={number}
                         placeholder="Number*"
                         onChange={handleNumberChange}
-                        className={`bg-white font-body text-xl px-4 py-3 rounded-md focus:ring-2 ring-primary duration-300 ${errors.number ? 'border-red-400 border ring-red-500' : ''}`}
+                        className={`tw-border bg-white font-body text-xl px-4 py-3 rounded-md focus:ring-2 ring-primary duration-300 ${errors.number ? 'border-red-400 border ring-red-500' : ''}`}
                         />
-                    {errors.number && <p className="text-red-400 font-medium text-md mt-2">{errors.number}</p>}
+                    {errors.number && <p className="tw-no-invert text-red-500 font-medium text-md mt-2">{errors.number}</p>}
                 </div>
 
                 <div className="flex flex-col mb-3">
                     <label className="text-2xl mb-2">Location</label>
-                    <input type="text" name="location" value={location} onChange={(e) => setLocation(e.target.value)} placeholder="Location" className="bg-white font-body text-xl px-4 py-3 rounded-md focus:ring-2 ring-primary duration-300"/>
+                    <input type="text" name="location" value={location} onChange={(e) => setLocation(e.target.value)} placeholder="Location" className="tw-border bg-white font-body text-xl px-4 py-3 rounded-md focus:ring-2 ring-primary duration-300"/>
                 </div>
-                <div className="font-body mb-14 w-full">
+
+                {/* <div className="font-body mb-14 w-full">
                     <h4 className="text-3xl font-medium mb-4">
                         Skills
                     </h4>
-
                     <div className="relative w-full">
                     <input 
                         type="text"
@@ -379,7 +379,7 @@ export default function JobApply(){
                             </div>
                         )}
                     </div>
-                </div>
+                </div> */}
             </div>
 
             <div className="font-body mb-14">
@@ -388,7 +388,7 @@ export default function JobApply(){
                 </h4>
                 <div className="flex flex-col">
                     <label className="text-2xl mb-2">URL (LinkedIn, Behance, Dribble)</label>
-                    <input type="text" name="url" value={url} onChange={(e) => setUrl(e.target.value)} placeholder="Portfolio URL" className="bg-white read-only:bg-gray-500 font-body text-xl px-4 py-3 rounded-md focus:ring-2 ring-primary duration-300"/>
+                    <input type="text" name="url" value={url} onChange={(e) => setUrl(e.target.value)} placeholder="Portfolio URL" className="tw-border bg-white read-only:bg-gray-500 font-body text-xl px-4 py-3 rounded-md focus:ring-2 ring-primary duration-300"/>
                 </div>
             </div>
 
@@ -398,15 +398,15 @@ export default function JobApply(){
                 </h4>
                 {experiences.map((_, index) => (
                     <div key={index} className="experience-input mb-4 bg-white relative shadow-lg p-3 rounded-lg grid grid-cols-2 gap-3 mr-8">
-                        <input type="text" name={`jobTitle_${index}`} placeholder="Job Title" className="border font-body text-xl px-4 py-2 rounded-sm focus:ring-2 ring-primary duration-300" />
-                        <input type="text" name={`company_${index}`} placeholder="Company" className="border font-body text-xl px-4 py-2 rounded-sm focus:ring-2 ring-primary duration-300" />
-                        <input type="number" name={`years_${index}`} placeholder="Years" className="border font-body text-xl px-4 py-2 rounded-sm focus:ring-2 ring-primary duration-300" />
-                        <input type="number" min="0" max="12" name={`months_${index}`} placeholder="Months" className="out-of-range:border-red-400 out-of-range:ring-red-500 border font-body text-xl px-4 py-2 rounded-sm focus:ring-2 ring-primary duration-300" />
+                        <input type="text" name={`jobTitle_${index}`} placeholder="Job Title" className="tw-border border font-body text-xl px-4 py-2 rounded-sm focus:ring-2 ring-primary duration-300" />
+                        <input type="text" name={`company_${index}`} placeholder="Company" className="tw-border border font-body text-xl px-4 py-2 rounded-sm focus:ring-2 ring-primary duration-300" />
+                        <input type="number" name={`years_${index}`} placeholder="Years" className="tw-border border font-body text-xl px-4 py-2 rounded-sm focus:ring-2 ring-primary duration-300" />
+                        <input type="number" min="0" max="12" name={`months_${index}`} placeholder="Months" className="tw-border out-of-range:border-red-400 out-of-range:ring-red-500 border font-body text-xl px-4 py-2 rounded-sm focus:ring-2 ring-primary duration-300" />
                         
-                        <button type="button" onClick={() => removeExperience(index)} className="absolute top-2 right-[-2rem] text-2xl text-red-500">✖</button>
+                        <button type="button" onClick={() => removeExperience(index)} className="absolute top-2 right-[-2rem] text-2xl text-black">✖</button>
                     </div>
                 ))}
-                    <button type="button" onClick={addExperience} className="text-primary text-2xl font-medium py-2 rounded-md">Add Experience + </button>
+                    <button type="button" onClick={addExperience} className="text-primary text-2xl font-medium py-2 rounded-md tw-no-invert">Add Experience + </button>
                 </div>
 
             <div className="font-body mb-16">
@@ -415,9 +415,9 @@ export default function JobApply(){
                 </h4>
                 <div className="flex flex-col mb-5">
                     <p className="text-2xl mb-2">Only .docx or .pdf files are allowed</p>
-                    <label htmlFor="dropzone-file" className={`bg-white flex flex-col items-start justify-center w-full h-32 border border-primary border-dashed rounded-lg cursor-pointer ${errors.selectedFileName ? 'border-red-400' : ''}`}>
+                    <label htmlFor="dropzone-file" className={`tw-border bg-white flex flex-col items-start justify-center w-full h-32 border border-primary border-dashed rounded-lg cursor-pointer ${errors.selectedFileName ? 'border-red-400' : ''}`}>
                         <div className="flex flex-col items-start justify-center py-4 px-5">
-                            <svg className="w-10 h-10 text-primary" stroke="currentColor" fill="none" viewBox="0 0 55 43" xmlns="http://www.w3.org/2000/svg">
+                            <svg className="w-10 h-10 text-primary tw-no-invert" stroke="currentColor" fill="none" viewBox="0 0 55 43" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M5.99896 6.82256L13.5247 5.53845V32.7692L10.9976 33.3139C7.69143 34.0265 4.44992 31.867 3.83386 28.5415L1.10852 13.83C0.49886 10.539 2.69967 7.38551 5.99896 6.82256Z" strokeWidth="2"/>
                                 <path d="M49.001 6.82256L41.4753 5.53845V32.7692L44.0024 33.3139C47.3086 34.0265 50.5501 31.867 51.1661 28.5415L53.8915 13.83C54.5011 10.539 52.3003 7.38551 49.001 6.82256Z" strokeWidth="2"/>
                                 <g filter="url(#filter0_dd_25_3290)">
@@ -455,24 +455,24 @@ export default function JobApply(){
                         <p className="text-black/50 mt-2 ml-1 font-medium text-lg">No File Chosen</p>
                     )}
                     {fileError && (
-                        <p className="text-red-400 font-medium text-md mt-2">{fileError}</p>
+                        <p className="tw-no-invert text-red-500 font-medium text-md mt-2">{fileError}</p>
                     )}
                     {errors.selectedFileName && (
-                        <p className="text-red-400 font-medium text-md mt-2">{errors.selectedFileName}</p>
+                        <p className="tw-no-invert text-red-500 font-medium text-md mt-2">{errors.selectedFileName}</p>
                     )}
                 </div>
             </div>
 
             <div className="text-center">
                 {Object.keys(errors).length > 0 && (
-                    <p className="text-red-500 font-medium text-lg mb-4">Please fill in all the required details.</p>
+                    <p className="tw-no-invert text-red-500 font-medium text-lg mb-4">Please fill in all the required details.</p>
                 )}
                 {isLoading ? (
                     <button className="bg-primary h-14 w-56 shadow-lg rounded-xl" disabled>
                         <img className="h-6 w-6 animate-spin" alt="loading icon" src="/assets/icons/loading.svg"/>
                     </button>
                 ) : (
-                    <button type="submit" className="hover:bg-primary hover:shadow-lg duration-300 hover:text-white border-primary border-2 rounded-xl h-14 w-56">
+                    <button type="submit" className="tw-primary hover:bg-primary hover:shadow-lg duration-300 hover:text-white border-primary border-2 rounded-xl h-14 w-56">
                     <span className="flex gap-4 items-center justify-center font-medium text-2xl font-body">
                         Submit
                             <span>
@@ -490,10 +490,10 @@ export default function JobApply(){
                 )}
 
                 {messageStatus === 'success' && (
-                <p className="text-green-500 mt-4 font-medium text-xl">Thank you, your details have been submitted. Please check your mail.</p>
+                <p className="tw-no-invert text-green-500 mt-4 font-medium text-xl">Thank you, your details have been submitted. Please check your mail.</p>
                 )}
                 {messageStatus === 'error' && (
-                <p className="text-red-400 font-medium mt-4 text-xl">Failed to send the message. Please try again later.</p>
+                <p className="tw-no-invert text-red-500 font-medium mt-4 text-xl">Failed to send the message. Please try again later.</p>
                 )}
             </div>
         </form>

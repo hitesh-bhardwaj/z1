@@ -48,15 +48,15 @@ export default function CareerTestimonial() {
       };
 
       return (
-        <section className="w-full text-center py-24 my-[15vh] bg-[#F8F8F8] h-[80vh]">
-            <div className='w-[75%] mx-auto'>
+        <section className="w-full text-center py-12 md:py-24 my-[15vh] bg-[#F8F8F8] 2xl:h-[80vh] h-auto">
+            <div className='w-[90%] md:w-[80%] 2xl:w-[75%] mx-auto'>
                 <div className='mb-10'>
-                    <h2 className="text-[3.5vw] font-medium">
+                    <h2 className="text-4xl md:text-[7vw] 2xl:text-[3.5vw] font-medium">
                         What People Say<span className="color-primary"> About Us</span>
                     </h2>
                 </div>
 
-                <Slider className='mb-10 w-[90%] mx-auto c__testimain' {...settings}>
+                <Slider className='mb-10 w-full 2xl:w-[90%] mx-auto c__testimain' {...settings}>
                     {testimonials.map((testimonial, index) => (
                         <div 
                             key={index} 
@@ -117,6 +117,28 @@ export default function CareerTestimonial() {
                     font-family: 'Ageo';
                 }
                 
+                @media screen and (max-width: 480px) {
+                    
+                    .testimonial-card {
+                    width: 95% !important;
+                    padding: 1rem;
+                    border-radius: 18px;
+                    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    }
+                    .testimonial-text{
+                        font-size: 1.4rem;
+                    }
+                    .testimonial-description {
+                    font-size: 1.2rem;
+                    color: #1a1a1a;
+                    margin-bottom: 1rem;
+                    font-family: 'Ageo';
+                    }
+                }
+
             `}</style>
         </section>
     );

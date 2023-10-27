@@ -218,7 +218,7 @@ useEffect(() => {
                     <div className="content-left-body-row">
                       <div className="content-left-body-row-column">
                         <div className="content-heading nav__link" ref={link1}>
-                          <Link href="/about" className="btn-music">
+                          <Link href="/who-we-are" className="btn-music">
                             <span className="content-heading-serial">01</span>
                             <span
                               className="content-heading-slideup text-stroke-fill-ltr"
@@ -228,7 +228,7 @@ useEffect(() => {
                             >
                               <span
                                 className={
-                                  router.pathname == "/about"
+                                  router.pathname == "/who-we-are"
                                     ? "activeMenu"
                                     : ""
                                 }
@@ -304,7 +304,7 @@ useEffect(() => {
                           </Link>
                         </div>
                         <div className="content-heading nav__link" ref={link5}>
-                          <Link href="/contact" className="btn-music">
+                          <Link href="/get-in-touch" className="btn-music">
                             <span className="content-heading-serial">05</span>
                             <span
                               className="content-heading-slideup text-stroke-fill-ltr"
@@ -314,7 +314,7 @@ useEffect(() => {
                             >
                               <span
                                 className={
-                                  router.pathname == "/contact"
+                                  router.pathname == "/get-in-touch"
                                     ? "activeMenu"
                                     : ""
                                 }

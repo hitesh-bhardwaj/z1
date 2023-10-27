@@ -171,17 +171,14 @@ export default function blogWebsites() {
   return (
     <>
       <NextSeo
-        title="Beginners Guide to SEO: 30 websites to help you getting started on
-          your link building journey"
-        description="Link-building is a crucial aspect of any SEO strategy, helping to
-              establish your website's authority and increase its visibility on
-              search engines."
-        canonical="https://www.weareenigma.com/30-websites"
+        title="List of 30 Link Building Websites - SEO Guide"
+        description="Dive into our comprehensive guide on 30 websites for effective link-building in SEO. Boost your website's authority and visibility now!"
+        canonical="https://weareenigma.com/link-building-website-list"
         openGraph={{
-          url: "https://www.weareenigma.com/30-websites",
-          title: "About Enigma | India's Premier UX Agency",
+          url: "https://weareenigma.com/link-building-website-list",
+          title: "List of 30 Link Building Websites - SEO Guide",
           description:
-            "Link-building is a crucial aspect of any SEO strategy, helping to establish your website's authority and increase its visibility on search engines.",
+            "Dive into our comprehensive guide on 30 websites for effective link-building in SEO. Boost your website's authority and visibility now!",
             images: [
                   {
                     url: "https://i.ibb.co/k0NMQw9/home.png",
@@ -192,16 +189,15 @@ export default function blogWebsites() {
                   },
             { url: "https://i.ibb.co/k0NMQw9/home.png" },
           ],
-          siteName: "https://www.weareenigma.com/30-websites",
+          siteName: "https://weareenigma.com/link-building-website-list",
         }}
       />
 
       <Head>
         <title>
-          Beginners Guide to SEO: 30 websites to help you getting started on
-          your link building journey
+          List of 30 Link Building Websites - SEO Guide
         </title>
-        <meta name="description" content="Link-building is a crucial aspect of any SEO strategy, helping to establish your website's authority and increase its visibility on search engines." />
+        <meta name="description" content="Dive into our comprehensive guide on 30 websites for effective link-building in SEO. Boost your website's authority and visibility now!" />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=5.0"

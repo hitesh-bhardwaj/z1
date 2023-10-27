@@ -123,7 +123,7 @@ function JobDetail() {
       </Head>
 
       {/* Loader */}
-        <div className="loader-wrap" id="loader" style={{ zIndex: 999 }}>
+        <div className="invisible loader-wrap" id="loader" style={{ zIndex: 999 }}>
           <div className='mainLoaderBg'>
             <span className='mainLoaderBar' id='loaderbars'></span>
             <span className='mainLoaderBar' id='loaderbars'></span>
@@ -156,8 +156,8 @@ function JobDetail() {
           height={800}/>
           <div className='w-[80%] '>
             <div className='w-full text-white jd__head'>
-                <h1 className='text-[5vw] font-medium'>{job.title}</h1>
-                <p className='text-2xl text-gray-100 tracking-wide font-body'>{job.sDescription}</p>
+                <h1 className='text-[7vw] lg:text-[5vw] font-medium'>{job.title}</h1>
+                <p className='text-xl md:text-2xl text-gray-100 tracking-wide font-body'>{job.sDescription}</p>
                 
                 <div className='my-4 font-body flex items-center'>
                   
@@ -180,31 +180,31 @@ function JobDetail() {
           </div>          
         </section>
 
-        <section className='w-[80%] mx-auto flex gap-10 font-body mb-24'>
-          <div className='w-1/2'>
-            <div className='w-[90%] mb-24'>
-              <h2 className='mb-6 text-[3vw]'>Responsibilities</h2>
+        <section className='w-[90%] md:w-[80%] mx-auto block lg:flex gap-10 font-body mb-24'>
+          <div className='w-full lg:w-1/2'>
+            <div className='w-full md:w-[90%] mb-24'>
+              <h3 className='mb-4 md:mb-6 text-3xl md:text-4xl lg:text-[2.4vw]'>Responsibilities</h3>
               <ul className='ml-1'>
               {job.responsibilities.map((responsibility, index) => (
-                <li className='text-black/70 before:left-0 before:h-2 before:w-2 before:rounded-full before:absolute before:bg-black/70 before:top-[10px] relative text-2xl pl-4 mb-4 ' key={index}>{responsibility}</li>
+                <li className='text-black/70 before:left-0 before:h-2 before:w-2 before:rounded-full before:absolute before:bg-black/70 before:top-[10px] relative text-xl md:text-2xl pl-4 mb-4 ' key={index}>{responsibility}</li>
               ))}
             </ul>
             </div>
 
             <div className='w-[90%] mb-24'>
-              <h2 className='mb-6 text-[3vw]'>Requirements</h2>
+              <h3 className='mb-4 md:mb-6 text-3xl md:text-4xl lg:text-[2.4vw]'>Requirements</h3>
               <ul className='ml-1'>
               {job.requirements.map((requirement, index) => (
-                <li className='text-black/70 before:left-0 before:h-2 before:w-2 before:rounded-full before:absolute before:bg-black/70 before:top-[10px] relative text-2xl pl-4 mb-4 ' key={index}>{requirement}</li>
+                <li className='text-black/70 before:left-0 before:h-2 before:w-2 before:rounded-full before:absolute before:bg-black/70 before:top-[10px] relative text-xl md:text-2xl pl-4 mb-4' key={index}>{requirement}</li>
               ))}
             </ul>
             </div>
             
           </div>
 
-          <div className='w-1/2 shadow-3xl rounded-xl px-16 py-10'>
+          <div className='w-full lg:w-1/2 shadow-3xl rounded-xl px-8 md:px-16 py-10'>
             <div className='text-center mb-8'>
-              <h2 className="text-[2.8vw] font-display font-medium">
+              <h2 className="text-4xl lg:text-[3vw] font-display font-medium">
                 Apply<span className="color-primary"> Now</span>
               </h2>
             </div>
@@ -214,9 +214,15 @@ function JobDetail() {
           </div>
         </section>
         
-        {/* Footer */}
-        <Footer/>
-        <FooterMobile/>
+        {/* ======================== Footer ====================== */}
+        <div className="desktop-footer">
+          <Footer />
+        </div>
+
+        <div className="mobile-footer">
+          <FooterMobile />
+        </div>
+        {/* ======================== Footer END ====================== */}
       </main>
     </>
   );

@@ -13,7 +13,7 @@ export const projects = [
         description: "E-Commerce, Web Design, Development",
         src: "2.webp",
         year: 2023,
-        link: "dharan"
+        link: "dharan-ecommerce-case-study"
     },
     {
         name: "Kedarkala",
@@ -45,7 +45,7 @@ export const projects = [
         description: "UX Planning, UI Design",
         src: "6.webp",
         year: 2022,
-        link: "certvault"
+        link: "certvault-case-study"
     },
     {
         name: "DMTCA",
@@ -53,7 +53,7 @@ export const projects = [
         description: "Branding, Web Design",
         src: "7-2.webp",
         year: 2022,
-        link: "dmtca"
+        link: "dmtca-digital-branding-case-study"
     },
     {
         name: "PDTL",

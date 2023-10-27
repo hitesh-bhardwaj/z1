@@ -4056,7 +4056,24 @@ https://unsplash.com/@vinomamba24
   align-items: center;
   flex-direction: column;
 }
-
+.bottom-caro-link-content{
+  width: 100%;
+  padding: 0 2.5vw;
+  display: flex;
+  justify-content: space-between;
+}
+.hide-div-caro-link {
+  font-size: 1.4rem;
+  font-weight: 500;
+  border: 1px solid #000000;
+  border-radius: 18px;
+  padding: 10px 30px;
+  color: #ffffff;
+  background: #000000;
+}
+.hide-div-caro-link:hover{
+  color: #ffffff;
+}
 .hide-caro-box {
   background: var(--black1);
   display: flex;
@@ -4066,7 +4083,6 @@ https://unsplash.com/@vinomamba24
   height: 1.5vw;
   border-radius: 50%;
   align-self: flex-end;
-  margin-right: 2.3vw;
 }
 
 .hide-div-caro p {
@@ -8958,7 +8974,7 @@ a:hover {
 
   .Carousel_slide__caro__ckaQX {
     width: 9% !important;
-    height: 40vh !important;
+    height: 60vh !important;
     padding: 10px;
   }
 
@@ -9939,6 +9955,13 @@ a:hover {
   @media screen and (max-width: 480px) {
     .blogs-section button {
       font-size: 1rem;
+    }
+    .Carousel_slide__caro__ckaQX{
+      height: 40vh !important;
+    }
+    .hide-div-caro-link {
+      font-size: 1rem;
+      padding: 5px 20px;
     }
   }
 
@@ -11781,6 +11804,21 @@ label.label:hover:before{
 }
 
 
+@media screen and (max-width: 480px){
+  .c__testimain .slick-prev, 
+  .c__testimain .slick-next{
+  display: none;
+}
+.c__testimain .slick-prev:before, 
+.c__testimain .slick-next:before{
+  display: none;
+}
+.c__testimain .slick-list{
+  width: 100%;
+}
+}
+
+
 /* JD Page */
 .jd__bgcover{
   background: #0000009e;
@@ -11834,4 +11872,28 @@ label.label:hover:before{
 
 .jd__form__content input:-internal-autofill-selected {
   background-color: none !important;
+}
+
+
+/* Dark Mode Careers */
+.dark-mode .tw-primary{
+  filter: invert(1);
+  color: #ffffff !important;
+}
+
+.dark-mode .tw-hover:hover{
+  color: var(--dark-primary);
+}
+
+.dark-mode .tw-no-invert{
+  filter: invert(1);
+}
+
+.dark-mode .tw-no-invert img{
+  filter: invert(0) !important;
+}
+
+.dark-mode .tw-border {
+  --tw-ring-color: var(--dark-primary) !important;
+  border-color: var(--dark-primary) !important;
 }

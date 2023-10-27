@@ -241,14 +241,14 @@ export default function about() {
   return (
     <>
       <NextSeo
-        title="About Enigma | India's Premier UX Agency"
-        description="Learn about Enigma, India's leading UX agency, offering exceptional UI/UX design, front-end development, and organic marketing services for global clients"
-        canonical="https://www.weareenigma.com/about"
+        title="About Enigma - UI/UX Design & Digital Marketing Agency India"
+        description="Enigma is a team of creators, discoverers, dreamers, & doers, crafting exceptional digital experiences. We are India's leading UI UX design & marketing agency."
+        canonical="https://weareenigma.com/who-we-are"
         openGraph={{
-          url: "https://www.weareenigma.com/about",
-          title: "About Enigma | India's Premier UX Agency",
+          url: "https://weareenigma.com/who-we-are",
+          title: "About Enigma - UI/UX Design & Digital Marketing Agency India",
           description:
-            "Learn about Enigma, India's leading UX agency, offering exceptional UI/UX design, front-end development, and organic marketing services for global clients",
+            "Enigma is a team of creators, discoverers, dreamers, & doers, crafting exceptional digital experiences. We are India's leading UI UX design & marketing agency.",
             images: [
                   {
                     url: "https://i.ibb.co/k0NMQw9/home.png",
@@ -259,15 +259,15 @@ export default function about() {
                   },
                   { url: "https://i.ibb.co/k0NMQw9/home.png" },
           ],
-          siteName: "https://www.weareenigma.com/about",
+          siteName: "https://weareenigma.com/who-we-are",
         }}
       />
 
       <Head>
-        <title>About Enigma | India's Premier UX Agency</title>
+        <title>About Enigma - UI/UX Design & Digital Marketing Agency India</title>
         <meta
           name="description"
-          content="Learn about Learn about Enigma, India's leading UX agency, offering exceptional UI/UX design, front-end development, and organic marketing services for global clients"
+          content="Enigma is a team of creators, discoverers, dreamers, & doers, crafting exceptional digital experiences. We are India's leading UI UX design & marketing agency."
         />
         <meta
           name="viewport"

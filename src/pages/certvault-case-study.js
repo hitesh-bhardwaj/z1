@@ -4,7 +4,7 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { Cursor } from "../../cursor/index";
 import "react-creative-cursor/dist/styles.css";
-import styles from "../styles/dharan.module.css";
+import styles from "@/styles/certvault.module.css";
 import Link from "next/link";
 import { NextSeo } from "next-seo";
 
@@ -12,7 +12,7 @@ import Header from "@/components/Header/Header";
 import SmoothScroll from "@/components/utils/SmoothScroll";
 import Footer from "@/components/Footer";
 import FooterMobile from "@/components/Mobile/FooterMobile";
-import PatronumSlider from "@/components/CaseStudies/PatronumSlider";
+import WragbySlider from "@/components/CaseStudies/WragbySlider";
 import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -39,9 +39,8 @@ const handleHoverExit = (e) => {
   });
 };
 
-export default function dharan() {
-  
-  
+export default function certvault() {
+
   // Page Transitions
   useEffect(() => {
     const loaderBars = document.querySelectorAll("#loaderbars");
@@ -87,7 +86,7 @@ export default function dharan() {
         transformOrigin: "top center",
       },
       {
-        delay: 3.5,
+        delay: 3.6,
         duration: 1.3,
         rotationX: 0,
         opacity: 1,
@@ -107,7 +106,7 @@ export default function dharan() {
         translateY: 100,
       },
       {
-        delay: 3.5,
+        delay: 3.7,
         duration: 1.3,
         opacity: 1,
         translateY: 0,
@@ -127,7 +126,7 @@ export default function dharan() {
         transformOrigin: "top center",
       },
       {
-        delay: 4,
+        delay: 4.2,
         duration: 1.3,
         opacity: 1,
         translateY: 0,
@@ -181,20 +180,38 @@ export default function dharan() {
     return () => ctx.revert();
   });
 
+  // LI Animate
+  useEffect(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#colorsection",
+        start: "-150 top",
+      },
+    });
+    tl.fromTo(
+      "#line",
+      { opacity: 0, scale: 0 },
+      {
+        scale: 1,
+        opacity: 1,
+        stagger: 0.1,
+        duration: 1,
+      }
+    );
+  });
+
   return (
     <>
 
-            
-
             <NextSeo
-              title="Dharan | Case Study"
-              description="Dharan case study showcases the work done by Enigma in Branding, UI/UX design and front-end development, driving exceptional results for the client."
-              canonical="https://www.weareenigma.com/dharan"
+              title="Certvault Design & Development Case Study | Enigma"
+              description="Discover how Enigma overhauled the User Experience & transformed the User Interface of USA's largest digital insurance certificate storage and delivery platform."
+              canonical="https://weareenigma.com/certvault-case-study"
               openGraph={{
-                url: "https://www.weareenigma.com/dharan",
-                title: "Dharan | Case Study",
+                url: "https://weareenigma.com/certvault-case-study",
+                title: "Certvault Design & Development Case Study | Enigma",
                 description:
-                  "Dharan case study showcases the work done by Enigma in Branding, UI/UX design and front-end development, driving exceptional results for the client.",
+                  "Discover how Enigma overhauled the User Experience & transformed the User Interface of USA's largest digital insurance certificate storage and delivery platform.",
                   images: [
                   {
                     url: "https://i.ibb.co/k0NMQw9/home.png",
@@ -205,13 +222,13 @@ export default function dharan() {
                   },
                   { url: "https://i.ibb.co/k0NMQw9/home.png" },
                 ],
-                siteName: "https://www.weareenigma.com/dharan",
+                siteName: "https://weareenigma.com/certvault-case-study",
               }}
             />
 
       <Head>
-        <title>Dharan | Case Study</title>
-        <meta name="description" content="Dharan case study showcases the work done by Enigma in Branding, UI/UX design and front-end development, driving exceptional results for the client." />
+        <title>Certvault Design & Development Case Study | Enigma</title>
+        <meta name="description" content="Discover how Enigma overhauled the User Experience & transformed the User Interface of USA's largest digital insurance certificate storage and delivery platform." />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
@@ -233,7 +250,7 @@ export default function dharan() {
         <div className="loader-wrap-heading">
           <span>
             <h1>
-              <span className="loader-font">Dharan</span>
+              <span className="loader-font">Certvault</span>
             </h1>
           </span>
         </div>
@@ -247,20 +264,20 @@ export default function dharan() {
         </div>
 
         <div className={styles.Main}>
-          {/*Section 1  */}
-          <section
+           {/*Section 1  */}
+           <section
             className={styles.HeroSection}>
             <div className={styles.mainSubSection}>
               <div className={styles.HeroLeftBox} data-jelly>
                 <div
                   id="patroSub"
                   data-cursor-size="60px"
-                  data-cursor-color="#FF8395"
                   data-cursor-text="Visit!"
+                  data-cursor-color="#F50D37"
                 >
-                  <Link href="https://www.dharanclothing.com/" target="_blank" className={styles.Link}>
-                  <button aria-label="link button">
-                    dharanclothing.co.in
+                  <Link href="https://certvault.org/" target="_blank" className={styles.Link}>
+                    <button aria-label="link button">
+                    certvault.org
                     <span className={styles.linkSvg}>
                       <Image
                         width={20}
@@ -268,21 +285,23 @@ export default function dharan() {
                         src="/assets/casestudies/Vector.svg"
                         alt="Svg"
                         id="case-study-arrow"
+                        loading="lazy"
                       />
                     </span>
                     </button>
+                    
                   </Link>
                 </div>
                 <h1 id="patro">
-                    Dharan - Fashionable <br /> Ecommerce Website
+                    CertVault: A Cloud-based <br /> Certificate Repository
                 </h1>
               </div>
               <div className={styles.HeroRightBox}>
                 <h5 className={styles.work} id="patroSub">
-                    E-COMMERCE
+                    SAAS
                 </h5>
                 <h5 className={styles.year} id="patroSub">
-                    2020
+                    2019-20
                 </h5>
               </div>
             </div>
@@ -293,13 +312,14 @@ export default function dharan() {
             <div className="image-anim">
               <div className={styles.imageBox} id="image-container">
                 <img
-                  src="/assets/casestudies/dharan/img1.webp"
+                  src="/assets/casestudies/certvault/img1.webp"
                   className={styles.img}
                   id="img"
                   data-cursor-size="100px"
-                  data-cursor-color="#FF8395"
-                  data-cursor-text="Dharan"
+                  data-cursor-color="#F50D37"
+                  data-cursor-text="Certvault"
                   alt="portfolio image"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -315,28 +335,17 @@ export default function dharan() {
               <div className={styles.thirdSectionRightBox}>
                 <div className={styles.paraTop}>
                   <h4 className={styles.h4} data-jelly>
-                    Dharan, a renowned hand-block-printed clothing manufacturer
-                    based in India, is known for its exquisite garments
-                    featuring traditional designs, pastel shades, and intricate
-                    craftsmanship. Despite having a loyal customer base, Dharan
-                    struggled to translate its unique essence and charm into a
-                    compelling online presence. The client was on the lookout
-                    for a partner that would help them create a state-of-the-art
-                    e-commerce website that would not only showcase Dharan's
-                    magnificent products but also encapsulate the essence of
-                    their brand.
+                    CertVault is a pioneering solution in the insurance industry, offering a cloud-based certificate repository and delivery system. Developed under the umbrella of PatraCorp, a global leader in delivering business process outsourcing services to the insurance sector, CertVault aims to revolutionize the way insurance certificates are accessed, managed, and delivered.
                   </h4>
+                  
                 </div>
 
                 <div className={styles.buttonBox}>
                   <h6 data-cursor-size="30px" data-cursor-exclusion>
-                    E-Commerce
+                    UX Planning
                   </h6>
                   <h6 data-cursor-size="30px" data-cursor-exclusion>
-                    Web Design
-                  </h6>
-                  <h6 data-cursor-size="30px" data-cursor-exclusion>
-                    Development
+                    UI Design
                   </h6>
                 </div>
               </div>
@@ -348,14 +357,14 @@ export default function dharan() {
           <section className={styles.imageSection}>
             <div className={styles.imageBox} id="image-container">
               <img
-                  src="/assets/casestudies/dharan/img2.webp"
+                  src="/assets/casestudies/certvault/img2.webp"
                   className={styles.img}
                   id="img"
-                  loading="lazy"
                   data-cursor-size="100px"
-                  data-cursor-color="#FF8395"
-                  data-cursor-text="Dharan"
+                  data-cursor-color="#F50D37"
                   alt="portfolio image"
+                  data-cursor-text="Certvault"
+                  loading="lazy"
               />
             </div>
           </section>
@@ -371,27 +380,11 @@ export default function dharan() {
               </div>
               <div className={styles.forthSectionRightBox}>
                 <div className={styles.paraTop}>
-                  <h4 className={styles.h4} data-jelly>
-                    Dharan's existing website was plagued by several issues,
-                    including outdated design, poor navigation, and a lackluster
-                    user experience.
-                  </h4>
                   <p data-jelly>
-                    The website failed to evoke the same feelings of beauty,
-                    sophistication, and craftsmanship that Dharan's
-                    hand-block-printed clothing offered. The team at Enigma was
-                    tasked to design a website that reflects tradition,
-                    craftsmanship, and quality as the key brand identifiers.
+                    CertVault, a groundbreaking cloud-based certificate repository and delivery system, was on the brink of revolutionizing how insurance certificates are accessed and delivered. With a vision to provide instant access to certificates for brokers, insureds, holders, and carriers, CertVault aimed to make certificate delivery more secure, convenient, and efficient. 
                   </p>
                   <p data-jelly>
-                    The key challenge was to design & develop an engaging and
-                    interactive platform that highlights the unique aspects of
-                    Dharan's products, such as the traditional techniques,
-                    intricate designs, and pastel color palette that is used in
-                    traditional hand-block-printing. Next, we had to integrate
-                    an e-commerce solution that streamlines the purchasing
-                    process and ensures a secure, efficient, and hassle-free
-                    experience for customers.
+                    However, the challenge lay in presenting this innovative solution in a user-friendly manner, ensuring that the platform's interface was intuitive and met the needs of its diverse user base. With the Global InsurTech Summit 2020 approaching, the pressure was on to design a UI that not only showcased CertVault's capabilities but also resonated with a global audience.
                   </p>
                 </div>
               </div>
@@ -400,7 +393,6 @@ export default function dharan() {
 
           {/* ====================== Third Section END ======================== */}
 
-
           {/* ========================== The LOGO Section =========================== */}
 
           <section className={styles.logoSection}>
@@ -408,16 +400,16 @@ export default function dharan() {
               <div className={styles.firstLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
                   <Image
+                        loading="lazy"
                     width={1000}
                     height={1000}
-                    src="/assets/casestudies/dharan/web1.webp"
+                    src="/assets/casestudies/certvault/web1.webp"
                     alt="Logo"
-                    data-cursor-color="#FF8395"
-                    data-cursor-text="Dharan"
+                    data-cursor-color="#F50D37"
+                    data-cursor-text="Certvault"
                     data-cursor-size="120px"
                     onMouseEnter={(e) => handleHover(e)}
                     onMouseOut={(e) => handleHoverExit(e)}
-                    loading="lazy"
                   />
                 </div>
               </div>
@@ -425,12 +417,12 @@ export default function dharan() {
                 <div className={styles.imageContainer} id="image-container">
                   <Image
                     width={1000}
-                    loading="lazy"
                     height={1000}
-                    src="/assets/casestudies/dharan/web2.webp"
+                    src="/assets/casestudies/certvault/web2.webp"
                     alt="Logo"
-                    data-cursor-color="#FF8395"
-                    data-cursor-text="Dharan"
+                    loading="lazy"
+                    data-cursor-color="#F50D37"
+                    data-cursor-text="Certvault"
                     data-cursor-size="120px"
                     onMouseEnter={(e) => handleHover(e)}
                     onMouseOut={(e) => handleHoverExit(e)}
@@ -445,11 +437,11 @@ export default function dharan() {
                   <Image
                     width={1000}
                     height={1000}
-                    src="/assets/casestudies/dharan/web3.webp"
-                    alt="Logo"
-                    data-cursor-color="#FF8395"
                     loading="lazy"
-                    data-cursor-text="Dharan"
+                    src="/assets/casestudies/certvault/web3.webp"
+                    alt="Logo"
+                    data-cursor-color="#F50D37"
+                    data-cursor-text="Certvault"
                     data-cursor-size="120px"
                     onMouseEnter={(e) => handleHover(e)}
                     onMouseOut={(e) => handleHoverExit(e)}
@@ -460,12 +452,12 @@ export default function dharan() {
                 <div className={styles.imageContainer} id="image-container">
                   <Image
                     width={1000}
-                    loading="lazy"
                     height={1000}
-                    src="/assets/casestudies/dharan/web4.webp"
+                    src="/assets/casestudies/certvault/web4.webp"
                     alt="Logo"
-                    data-cursor-color="#FF8395"
-                    data-cursor-text="Dharan"
+                    loading="lazy"
+                    data-cursor-color="#F50D37"
+                    data-cursor-text="Certvault"
                     data-cursor-size="120px"
                     onMouseEnter={(e) => handleHover(e)}
                     onMouseOut={(e) => handleHoverExit(e)}
@@ -488,32 +480,14 @@ export default function dharan() {
               <div className={styles.forthSectionRightBox}>
                 <div className={styles.paraTop}>
                   <p data-jelly>
-                    To address these challenges, Enigma adopted a groundbreaking
-                    approach, which involved a meticulous blend of art and
-                    technology, resulting in a website that was both visually
-                    captivating and highly functional. Our team immersed
-                    themselves in Dharan's history, design philosophy, and hand
-                    block printing techniques to gain a comprehensive
-                    understanding of the brand. This deep dive laid the
-                    foundation for a website design that would effectively
-                    embody Dharan's unique aesthetic.
+                    Diving into the heart of CertVault, we recognized the immense potential and the transformative impact it could have in the realm of insurance certificates. Our strategy was multi-pronged. First, we sought to understand the pain points of the target audience. We engaged in extensive consultations, gathering insights from brokers, insureds, holders, and carriers. This allowed us to identify the key challenges they faced with traditional certificate delivery systems.
                   </p>
                   <p data-jelly>
-                    We then prioritized user experience, creating an intuitive
-                    site layout that would guide visitors through the shopping
-                    process with ease. The site was designed with a focus on
-                    product discovery, enticing visitors to explore Dharan's
-                    stunning collection. To create an engaging and immersive
-                    experience, we integrated storytelling elements throughout
-                    the website, sharing the history of Dharan's craftsmanship
-                    and the journey behind each unique garment.
+                    With this knowledge in hand, we embarked on a meticulous UX planning phase. We aimed to create a seamless journey for users, from the moment they logged in to the point they accessed a certificate. Every touchpoint was optimized to ensure simplicity and efficiency. Recognizing the importance of trust in the insurance domain, we integrated features that would enhance transparency and reliability. The blockchain-backed security was highlighted prominently, assuring users of the integrity of the stored certificates.
+
                   </p>
                   <p data-jelly>
-                    Lastly, we drew inspiration from Dharan's clothing designs
-                    and prints and incorporated pastel color schemes reflecting
-                    the traditional hues used in Indian block printing and
-                    intricate patterns throughout the website, evoking the
-                    beauty and craftsmanship of the garments themselves.
+                    Furthermore, we incorporated feedback mechanisms, allowing users to share their experiences and suggestions. This iterative approach ensured that the platform evolved in line with user expectations and needs.
                   </p>
                 </div>
               </div>
@@ -521,6 +495,7 @@ export default function dharan() {
           </section>
 
           {/* ====================== FOURTH Section END ============================ */}
+
 
           {/* ========================== The LOGO Section =========================== */}
 
@@ -531,11 +506,11 @@ export default function dharan() {
                   <Image
                     width={1000}
                     height={1000}
-                    src="/assets/casestudies/dharan/web5.webp"
+                    src="/assets/casestudies/certvault/web5.webp"
                     alt="Logo"
                     loading="lazy"
-                    data-cursor-color="#FF8395"
-                    data-cursor-text="Dharan"
+                    data-cursor-color="#F50D37"
+                    data-cursor-text="Certvault"
                     data-cursor-size="120px"
                     onMouseEnter={(e) => handleHover(e)}
                     onMouseOut={(e) => handleHoverExit(e)}
@@ -547,11 +522,11 @@ export default function dharan() {
                   <Image
                     width={1000}
                     height={1000}
-                    src="/assets/casestudies/dharan/web6.webp"
-                    alt="Logo"
+                    src="/assets/casestudies/certvault/web6.webp"
                     loading="lazy"
-                    data-cursor-color="#FF8395"
-                    data-cursor-text="Dharan"
+                    alt="Logo"
+                    data-cursor-color="#F50D37"
+                    data-cursor-text="Certvault"
                     data-cursor-size="120px"
                     onMouseEnter={(e) => handleHover(e)}
                     onMouseOut={(e) => handleHoverExit(e)}
@@ -566,11 +541,11 @@ export default function dharan() {
                   <Image
                     width={1000}
                     height={1000}
-                    src="/assets/casestudies/dharan/web7.webp"
-                    alt="Logo"
+                    src="/assets/casestudies/certvault/web7.webp"
                     loading="lazy"
-                    data-cursor-color="#FF8395"
-                    data-cursor-text="Dharan"
+                    alt="Logo"
+                    data-cursor-color="#F50D37"
+                    data-cursor-text="Certvault"
                     data-cursor-size="120px"
                     onMouseEnter={(e) => handleHover(e)}
                     onMouseOut={(e) => handleHoverExit(e)}
@@ -582,11 +557,11 @@ export default function dharan() {
                   <Image
                     width={1000}
                     height={1000}
-                    loading="lazy"
-                    src="/assets/casestudies/dharan/web8.webp"
+                    src="/assets/casestudies/certvault/web8.webp"
                     alt="Logo"
-                    data-cursor-color="#FF8395"
-                    data-cursor-text="Dharan"
+                    loading="lazy"
+                    data-cursor-color="#F50D37"
+                    data-cursor-text="Certvault"
                     data-cursor-size="120px"
                     onMouseEnter={(e) => handleHover(e)}
                     onMouseOut={(e) => handleHoverExit(e)}
@@ -599,48 +574,49 @@ export default function dharan() {
           {/* ========================== The LOGO Section END ======================= */}
           
           {/* ====================== Fonts Section ======================== */}
-          <section className={styles.fontSection}>
-            <div className={styles.fontHeading}>
-              <h2 className={styles.h2} >Fonts</h2>
+          
+          <section className={styles.certvaultfontSection}>
+            <div className={styles.certvaultfontHeading}>
+              <h1>Fonts</h1>
             </div>
-            <div className={styles.dharanfontImagebox}>
-              <img src="/assets/casestudies/dharan/font.png" alt="Fonts" />
+            <div className={`${styles.certvaultfontImagebox}  projectNoInvert`}>
+              <img
+                src="/assets/casestudies/certvault/font-typo.webp"
+                alt="Fonts"
+              />
             </div>
           </section>
           {/* ====================== Fonts Section END ==================== */}
 
           {/* ====================== COLORS Section ==================== */}
 
-          <section className={styles.colorSection} id="colorsection">
-            <div className={styles.colorHeading}>
-              <h2 className={styles.h2} >Colors</h2>
+          <section className={styles.certvaultcolorSection} id="colorsection">
+            <div className={styles.certvaultcolorHeading}>
+              <h1>COLORS</h1>
             </div>
-            <div className={styles.dharancolorMainBox}>
-              <div className={styles.dharancolorBox}>
-                <div className={styles.dharancolorBoxHeadingBackground}>
+            <div className={styles.certvaultcolorMainBox}>
+              <div className={styles.certvaultcolorBox}>
+                <div className={styles.certvaultcolorBoxHeadingBackground}>
                   <h2 data-speed="1.3">
-                    Colour <span className={styles.dharanpalette}>Palette</span>
+                    Colour{" "}
+                    <span className={styles.certvaultpalette} id="palette">
+                      Palette
+                    </span>
                   </h2>
                 </div>
               </div>
 
               <div
-                className={styles.dharancolorBoxesSection}
-                id="dark-mode-colors-casestudy">
+                className={styles.certvaultcolorBoxesSection}
+                id="dark-mode-colors-casestudy"
+              >
                 <ul>
-                  <li className={styles.dharancolorOne} id="line">
-                    #EB298E
-                  </li>
-                  <li className={styles.dharancolorTwo} id="line">
-                    #48484B
-                  </li>
+                  <li className={styles.certvaultcolorOne} id="line"></li>
+                  <li className={styles.certvaultcolorTwo} id="line"></li>
+                  <li className={styles.certvaultcolorThree} id="line"></li>
+                  <li className={styles.certvaultcolorFour} id="line"></li>
+                  <li className={styles.certvaultcolorFive} id="line"></li>
                 </ul>
-              </div>
-              <div className={styles.dharanmobileImg}>
-                <img
-                  src="/assets/casestudies/dharan/mobile-lady.webp"
-                  alt="Mobile"
-                />
               </div>
             </div>
           </section>
@@ -651,16 +627,16 @@ export default function dharan() {
           {/* ====================== Video Section ======================== */}
           <section className={styles.videoSection}>
             <div className={styles.videoHeading}>
-              <h2 className={styles.videoH2}>Dharan - Sustainable Faishon</h2>
+              <h2 className={styles.videoH2}>Certvault <br/>  Application UI</h2>
             </div>
             <div className={styles.videoMainSection}>
               <div className={styles.videoContainer} id="video-container">
                 <video
-                  src="/assets/casestudies/dharan/dharan.webm"
+                  src="/assets/casestudies/certvault/certvault.webm"
                   autoPlay
                   loop
                   muted
-                  alt='patronum video'
+                  alt='certvault video'
                 />
               </div>
             </div>
@@ -673,64 +649,16 @@ export default function dharan() {
           <section className={styles.forthSection}>
             <div className={styles.forthSectionContent}>
               <div className={styles.forthSectionLeftBox}>
-                <h3 className={styles.h3} data-jelly>Tech Stack</h3>
+                <h3 className={styles.h3} data-jelly>Our UX Magic
+                </h3>
               </div>
               <div className={styles.forthSectionRightBox}>
                 <div className={styles.paraTop}>
-                    <h4 className={styles.h4} data-jelly>
-                        HTML, CSS, JS, jQuery, GSAP, and Woo-Commerce
-                    </h4>
-                    <p data-jelly>
-                        Our decision to choose WooCommerce over other e-commerce
-                        platforms including Shopify and Magento was driven by
-                        several factors, including:
-                    </p>
-                    <p data-jelly>
-                        <strong>Seamless integration with WordPress: </strong>As
-                        Dharan's team was already familiar with wordpress and they
-                        wanted their new website to be built on WordPress,
-                        WooCommerce offered seamless integration and a unified
-                        experience, enabling the team to manage both the website and
-                        e-commerce functionalities effortlessly.
-                    </p>
-                    <p data-jelly>
-                        <strong>Cost-effectiveness: </strong>WooCommerce, being an
-                        open-source platform, is more cost-effective than Shopify
-                        and Magento, especially for small to medium-sized businesses
-                        like Dharan. This allowed Dharan to focus on other aspects
-                        of their business without having to worry about hefty
-                        platform fees.
+                  <p data-jelly>
+                    The true testament to the success of our UX strategy was evident in the numbers. CertVault, post our intervention, boasted a staggering 1.7M Certificates of Insurance. But numbers only tell half the story. The real value add was in the user experience. Over 75,000 companies registered as users, a testament to the platform's intuitive design and user-centric approach.
                   </p>
                   <p data-jelly>
-                        <strong>Flexibility and Customizability: </strong>
-                        WooCommerce provides a high degree of flexibility and
-                        customization options compared to Shopify and Magento. This
-                        was essential for Dharan, as it allowed Enigma to create a
-                        truly unique and tailor-made e-commerce experience that
-                        aligned with the brand's aesthetics and requirements.
-                  </p>
-                  <p data-jelly>
-                        <strong>Extensive Plugin Ecosystem: </strong>WooCommerce
-                        boasts an extensive plugin ecosystem that can be leveraged
-                        to add additional functionality and features to the
-                        e-commerce platform. This enabled Enigma to easily integrate
-                        various tools and plugins to enhance the shopping experience
-                        and streamline operations for Dharan.
-                  </p>
-                  <p data-jelly>
-                        <strong>Scalability: </strong>WooCommerce offered a scalable
-                        solution that could grow alongside Dharan's business. As the
-                        brand expands its product range and customer base, the
-                        WooCommerce platform can be easily adapted to accommodate
-                        this growth, ensuring a consistent and reliable e-commerce
-                        experience.
-                  </p>
-                  <p data-jelly>
-                        By leveraging this powerful technology stack, Enigma was
-                        able to create a visually captivating, highly engaging, and
-                        user-friendly e-commerce website that not only showcased
-                        Dharan's exquisite hand block-printed clothing but also
-                        encapsulated the essence of the brand.
+                    Our UX planning ensured that users, whether they were brokers, insureds, or carriers, could navigate the platform with ease, accessing certificates instantly. The design effectively communicated the platform's core functionalities, from the blockchain-backed security to the instant access of certificates. Alerts and notifications were strategically placed, ensuring users were always informed about certificate expirations, carrier details, and insured names.
                   </p>
                 </div>
               </div>
@@ -746,14 +674,14 @@ export default function dharan() {
               <div className={styles.imageBox} id="image-container">
                 <figure className={styles.figure}>
                   <img
-                  alt="portfolio image"
-                    loading="lazy"
-                    src="/assets/casestudies/dharan/img3.webp"
+                    src="/assets/casestudies/certvault/img3.webp"
                     className={styles.img}
                     id="img"
                     data-cursor-size="100px"
-                    data-cursor-color="#FF8395"
-                    data-cursor-text="Dharan"
+                    data-cursor-color="#F50D37"
+                    alt="portfolio image"
+                    data-cursor-text="Certvault"
+                    loading="lazy"
                   />
                 </figure>
               </div>
@@ -771,36 +699,18 @@ export default function dharan() {
               </div>
               <div className={styles.forthSectionRightBox}>
                 <div className={styles.paraTop}>
-                    <p data-jelly>
-                        The end result was a visually stunning, highly engaging, and
-                        user-friendly e-commerce website that not only showcased
-                        Dharan's exquisite hand-block-printed clothing but also
-                        encapsulated the essence of the brand. Key achievements of
-                        the project included:
-                    </p>
-                    <p data-jelly>
-                        A dramatic increase in online sales, attributable to the
-                        improved user experience, intuitive navigation, and
-                        captivating visual design.
-                    </p>
-                    <p data-jelly>
-                        Enhanced brand recognition and credibility, as the new
-                        website effectively communicated Dharan's unique value
-                        proposition and commitment to quality and craftsmanship
-                    </p>
-                    <p data-jelly>
-                        An increase in organic search traffic, driven by the
-                        website's mobile-first design, optimized performance, and
-                        adherence to SEO best practices.
-                    </p>
-                    <p data-jelly>
-                        As Dharan continues to grow and expand its reach, the
-                        lessons learned from this project will serve as a guiding
-                        light, informing future digital initiatives and ensuring
-                        that the brand's commitment to quality, tradition, and
-                        craftsmanship remains at the forefront of their online
-                        presence.
-                    </p>
+                  <p data-jelly>
+                    The result was a UI that not only captured the essence of CertVault but also provided an unparalleled user experience. The design effectively communicated the platform's core functionalities, from the blockchain-backed security to the instant access of certificates. Users could now easily navigate through the platform, understanding key features at a glance, from certificate expiration to carrier and insured names. 
+                  </p>
+                  <p data-jelly>
+                    The feedback was overwhelmingly positive at the Global InsurTech Summit 2020, with many praising the intuitive design and the seamless user experience. CertVault, with its revamped UI, was now poised to redefine the way insurance certificates were accessed and delivered, all thanks to a design that was as innovative as the platform itself.
+                  </p>
+                  <p data-jelly>
+                    Moreover, the platform's design instilled a sense of trust and reliability. The blockchain feature was not just a tech add-on; it was a promise of security and transparency. Users could be confident that the certificates they accessed were authentic and unaltered.
+                  </p>
+                  <p data-jelly>
+                    The success of CertVault, with its 1.7M certificates and a growing base of 75,000 registered companies, is a testament to the power of effective UX planning. It's not just about aesthetics; it's about understanding user needs, anticipating challenges, and designing solutions that deliver value at every touchpoint.
+                  </p>
                 </div>
               </div>
             </div>
@@ -814,14 +724,14 @@ export default function dharan() {
             <div className="image-anim">
               <div className={styles.imageBox} id="image-container">
                 <img
-                    src="/assets/casestudies/dharan/img4.webp"
+                    src="/assets/casestudies/certvault/img4.webp"
                     className={styles.img}
                     id="img"
-                    loading="lazy"
-                    alt="portfolio image"
                     data-cursor-size="100px"
-                    data-cursor-color="#FF8395"
-                    data-cursor-text="Dharan"
+                    alt="portfolio image"
+                    data-cursor-color="#F50D37"
+                    data-cursor-text="Certvault"
+                    loading="lazy"
                 />
               </div>
             </div>
@@ -841,16 +751,7 @@ export default function dharan() {
                 <div className={styles.clientTestimonialparaTop}>
                   <h4 data-jelly>
                     <span className={styles.clientTestimonialSpan2}>“</span>
-                    Dharan's collaboration with Enigma has been nothing short of
-                    transformative. The team at Enigma not only created a
-                    stunning e-commerce website that perfectly embodies our
-                    brand but also exceeded our expectations in terms of
-                    customer engagement and sales growth. The new website is
-                    truly a reflection of the beauty, craftsmanship, and
-                    tradition that define our hand block-printed clothing. We
-                    couldn't be more thrilled with the results and look forward
-                    to a continued partnership with Enigma as we take our
-                    digital presence to even greater heights.
+                      Enigma Digital's expertise in UX planning and UI design has been a game-changer for CertVault. Their deep understanding of our audience's needs and their meticulous approach to design have transformed our platform. The numbers speak for themselves, but beyond the numbers, it's the feedback from our users that truly underscores the value Enigma brought to the table. Our platform is now more than just a certificate repository; it's a testament to the power of user-centric design. Kudos to the Enigma team for their exceptional work!"
                   </h4>
                 </div>
                 <div
@@ -858,18 +759,19 @@ export default function dharan() {
                   data-jelly
                 >
                   <div className={styles.clientTestimonialSectionFigure}>
-                    <Image
-                          height={100}
-                          width={100}  
-                          alt="client image"
-                          src="/assets/casestudies/dharan/dharanclient.png" />
+                    <Image  
+                      height={100}
+                      width={100}
+                      loading="lazy"
+                      alt="portfolio image" 
+                      src="/assets/casestudies/certvault/client.webp" />
                   </div>
                   <div className={styles.clientTestimonialSectionFigureText}>
                     <h4>
-                        Dhananjey Singh
+                      Tony Li
                       <br />
                       <span className={styles.clientTestimonialSpan}>
-                        Founder and Creative Director, Dharan
+                       CTO, Patracorp
                       </span>
                     </h4>
                   </div>
@@ -883,7 +785,7 @@ export default function dharan() {
 
           {/* ========================== Next Project =========================== */}
           <div className={styles.desktopSlider}>
-            <PatronumSlider />
+            <WragbySlider />
           </div>
 
           {/* ========================== Next Project END ======================= */}
@@ -897,8 +799,8 @@ export default function dharan() {
                 <h1>next up</h1>
               </div>
               <div className={styles.nextProjectHeading}>
-                <Link href="/wragby">
-                  <h1>Wragby</h1>
+                <Link href="/quickx">
+                  <h1>Quick-X</h1>
                 </Link>
               </div>
             </div>

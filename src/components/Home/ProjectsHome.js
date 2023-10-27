@@ -805,7 +805,7 @@ export default function ProjectsHome() {
 
             <div className={styles.glide}>
               <div className={styles.glideContent} id="image-container">
-                <a href="/dharan">
+                <a href="/dharan-ecommerce-case-study">
                   <Image
                     src="/assets/projects/new-project/dharan.webp"
                     width={1000}

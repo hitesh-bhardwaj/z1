@@ -173,16 +173,14 @@ export default function blogBeginnerGuideLinkBuilding() {
     <>
     
             <NextSeo
-              title="A Beginner's Guide to Link Building"
-              description="Link building is an essential aspect of Search Engine Optimization
-              (SEO), which involves acquiring backlinks from other websites to
-              your own."
-              canonical="https://www.weareenigma.com/beginner-guide-link-building"
+              title="Ultimate Beginner's Guide to Effective Link Building"
+              description="Dive deep into the world of link building with our comprehensive guide. Learn techniques to boost your site's authority and SEO rankings."
+              canonical="https://weareenigma.com/essential-link-building-guide"
               openGraph={{
-                url: "https://www.weareenigma.com/beginner-guide-link-building",
-                title: "A Beginner's Guide to Link Building",
+                url: "https://weareenigma.com/essential-link-building-guide",
+                title: "Ultimate Beginner's Guide to Effective Link Building",
                 description:
-                  "Link building is an essential aspect of Search Engine Optimization (SEO), which involves acquiring backlinks from other websites to your own.",
+                  "Dive deep into the world of link building with our comprehensive guide. Learn techniques to boost your site's authority and SEO rankings.",
                   images: [
                   {
                     url: "https://i.ibb.co/k0NMQw9/home.png",
@@ -193,13 +191,13 @@ export default function blogBeginnerGuideLinkBuilding() {
                   },
                   { url: "https://i.ibb.co/k0NMQw9/home.png" },
                 ],
-                siteName: "https://www.weareenigma.com/beginner-guide-link-building",
+                siteName: "https://weareenigma.com/essential-link-building-guide",
               }}
             />
 
       <Head>
-        <title>A Beginner's Guide to Link Building</title>
-        <meta name="description" content="Link building is an essential aspect of Search Engine Optimization (SEO), which involves acquiring backlinks from other websites to your own." />
+        <title>Ultimate Beginner's Guide to Effective Link Building</title>
+        <meta name="description" content="Dive deep into the world of link building with our comprehensive guide. Learn techniques to boost your site's authority and SEO rankings." />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
