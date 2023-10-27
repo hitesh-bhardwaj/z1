@@ -37,11 +37,11 @@ const handleHoverExit = (e) => {
 };
 
 const buttons = [
-  { label: "All" },
-  { label: "Strategy" },
-  { label: "Design" },
-  { label: "Technology" },
-  { label: "Marketing" },
+  { label: "All", path: "/blog" },
+  { label: "Strategy", path: "/blog/strategy" },
+  { label: "Design", path: "/blog/design" },
+  { label: "Technology", path: "/blog/technology" },
+  { label: "Marketing", path: "/blog/marketing" },
 ];
 
 const BlogPost = ({ post, delay }) => {
@@ -74,7 +74,7 @@ const BlogPost = ({ post, delay }) => {
               height={1160}
               priority={false}
             />
-            <h2 className="blog-list-tag">{post.category}</h2>
+            <h2 className="blog-list-tag">{post.name}</h2>
           </div>
           <h3 className="desc-tag">{post.description}</h3>
         </Link>
@@ -267,19 +267,12 @@ export default function BlogsPage() {
             </div>
 
             <div className="blogs-section">
-              {buttons &&
-                buttons.map((type, index) => (
-                  <>
-                    <button
-                      className={
-                        activeIndex === index ? "active" : "button--calypso"
-                      }
-                      key={index}
-                      id="anim"
-                    >
-                      <span>{type.label}</span>
+                {buttons.map((button, index) => (
+                  <Link href={button.path} key={index}>
+                    <button className={activeIndex === index ? "active" : "button--calypso"} id="anim">
+                      <span>{button.label}</span>
                     </button>
-                  </>
+                  </Link>
                 ))}
 
                   <div className="ul-items">

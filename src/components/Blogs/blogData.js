@@ -1,7 +1,7 @@
 const Blogs = [
     {
       name: "Design",
-      category: "Design",
+      category: "design",
       Link: "/ux-design-glossary",
       image: "/assets/blogs/blog-detail/top-20-digital-marketing-blogs/feature2.webp",
       description:
@@ -9,7 +9,7 @@ const Blogs = [
     },
     {
       name: "Strategy",
-      category: "Strategy",
+      category: "strategy",
       Link: "/how-much-should-a-website-cost",
       image: "/assets/blogs/blog-detail/website-cost/feature.webp",
       description:
@@ -17,7 +17,7 @@ const Blogs = [
     },
     {
       name: "Design",
-      category: "Design",
+      category: "design",
       Link: "/how-to-choose-right-ux-agency",
       image: "/assets/blogs/blog-detail/right-ux-agency/feature.webp",
       description:
@@ -25,7 +25,7 @@ const Blogs = [
     },
     {
       name: "Design",
-      category: "Design",
+      category: "design",
       Link: "/unmasking-the-web-dark-side",
       image: "/assets/blogs/blog-detail/unmasking-web-dark/feature.webp",
       description:
@@ -33,7 +33,7 @@ const Blogs = [
     },
     {
       name: "Design",
-      category: "Design",
+      category: "design",
       Link: "/the-power-of-psychology-in-ux-design",
       image: "/assets/blogs/uxbrain.webp",
       description:
@@ -41,7 +41,7 @@ const Blogs = [
     },
     {
       name: "Design",
-      category: "Design",
+      category: "design",
       Link: "/what-is-experience-design",
       image: "/assets/blogs/feature.webp",
       description:
@@ -51,7 +51,7 @@ const Blogs = [
   
     {
       name: "Marketing",
-      category: "Marketing",
+      category: "marketing",
       Link: "/top-20-digital-marketing-blogs",
       image:
         "/assets/blogs/blog-detail/top-20-digital-marketing-blogs/feature.webp",
@@ -60,7 +60,7 @@ const Blogs = [
     },
     {
       name: "Marketing",
-      category: "Marketing",
+      category: "marketing",
       Link: "/the-minds-playground",
       image: "/assets/blogs/blog-detail/the-mind-playground/feature.webp",
       description:
@@ -68,7 +68,7 @@ const Blogs = [
     },
     {
       name: "Marketing",
-      category: "Marketing",
+      category: "marketing",
       Link: "/30-websites",
       image: "/assets/blogs/blog-detail/30-websites/feature.webp",
       description:
@@ -76,14 +76,14 @@ const Blogs = [
     },
     {
       name: "Marketing",
-      category: "Marketing",
+      category: "marketing",
       Link: "/beginner-guide-to-technical-seo",
       image: "/assets/blogs/blog-detail/the-technical-seo/feature.webp",
       description: "A Beginner's Guide to Technical SEO",
     },
     {
       name: "Marketing",
-      category: "Marketing",
+      category: "marketing",
       Link: "/beginner-guide-link-building",
       image: "/assets/blogs/blog-detail/link-building/feature.webp",
       description: "A Beginner's Guide to Link Building",
@@ -91,7 +91,7 @@ const Blogs = [
   
     {
       name: "Marketing",
-      category: "Marketing",
+      category: "marketing",
       Link: "/onpage-and-offpage-seo",
       image: "/assets/blogs/blog-detail/off-on-page-seo/feature.webp",
       description:
@@ -99,28 +99,28 @@ const Blogs = [
     },
     {
       name: "Marketing",
-      category: "Marketing",
+      category: "marketing",
       Link: "/keyword-research",
       image: "/assets/blogs/blog-detail/keyword-research/feature.webp",
       description: "Keyword Research: A Comprehensive Guide for SEO Success",
     },
     {
       name: "Marketing",
-      category: "Marketing",
+      category: "marketing",
       Link: "/the-basics-of-seo",
       image: "/assets/blogs/blog-detail/basic-seo/feature.webp",
       description: "The Basics of SEO: A Comprehensive Beginner's Guide",
     },
     {
       name: "Marketing",
-      category: "Marketing",
+      category: "marketing",
       Link: "/how-search-engine-works",
       image: "/assets/blogs/blog-detail/how-search-engine/feature.webp",
       description: "How Search Engines Work: A Comprehensive Guide",
     },
     {
       name: "Marketing",
-      category: "Marketing",
+      category: "marketing",
       Link: "/organic-digital-marketing",
       image: "/assets/blogs/blog-detail/organic-digital-marketing/feature.webp",
       description:
@@ -128,7 +128,7 @@ const Blogs = [
     },
     {
       name: "Marketing",
-      category: "Marketing",
+      category: "marketing",
       Link: "/turbo-charge-your-b2b-linkedin",
       image: "/assets/blogs/blog-detail/b2b-linkedin/feature.webp",
       description:
@@ -136,7 +136,7 @@ const Blogs = [
     },
     {
       name: "Marketing",
-      category: "Marketing",
+      category: "marketing",
       Link: "/unleashing-the-power-of-remote-designers",
       image: "/assets/blogs/blog-detail/unleash/feature.webp",
       description:
@@ -145,7 +145,7 @@ const Blogs = [
   
     {
       name: "Marketing",
-      category: "Marketing",
+      category: "marketing",
       Link: "/marketing-psychology",
       image: "/assets/blogs/blog-detail/marketing-psychology/feature.webp",
       description:
@@ -153,7 +153,7 @@ const Blogs = [
     },
     {
       name: "Marketing",
-      category: "Marketing",
+      category: "marketing",
       Link: "/the-future-of-marketing",
       image: "/assets/blogs/blog-detail/the-future-of-marketing/feature.webp",
       description:
@@ -161,7 +161,7 @@ const Blogs = [
     },
     {
       name: "Design",
-      category: "Design",
+      category: "design",
       Link: "/top-20-ux-design-blogs",
       image: "/assets/blogs/blog-detail/top-20-ux-design-blogs/feature.webp",
       description:
@@ -169,7 +169,7 @@ const Blogs = [
     },
     {
       name: "Design",
-      category: "Design",
+      category: "design",
       Link: "/how-to-delightfully-design",
       image: "/assets/blogs/blog-detail/delightfully/feature.webp",
       description:
@@ -177,7 +177,7 @@ const Blogs = [
     },
     {
       name: "Design",
-      category: "Design",
+      category: "design",
       Link: "/the-evolution-of-ux-design",
       image: "/assets/blogs/blog-detail/the-evalution/feature.webp",
       description:
@@ -185,7 +185,7 @@ const Blogs = [
     },
     {
       name: "Design",
-      category: "Design",
+      category: "design",
       Link: "/what-is-ux-design",
       image: "/assets/blogs/blog-detail/what-is-ux/feature.webp",
       description:
