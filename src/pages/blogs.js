@@ -74,6 +74,7 @@ const BlogPost = ({ post, delay }) => {
               height={1160}
               priority={false}
             />
+            <h2 className="blog-list-tag">{post.category}</h2>
           </div>
           <h3 className="desc-tag">{post.description}</h3>
         </Link>
@@ -282,7 +283,7 @@ export default function BlogsPage() {
                 ))}
 
                   <div className="ul-items">
-                    {blogs.map((post, index) => (
+                    {Blogs.map((post, index) => (
                       <BlogPost key={index} post={post} delay={index < ITEMS_PER_PAGE ? 3.8 : 0} />
                     ))}
                   </div>
