@@ -460,7 +460,7 @@ export default function experiencedesignblog() {
       <div className="related-articles">
         <div className="related-article-heading">
           <h1>RELATED ARTICLES</h1>
-          <Link href="/blogs">
+          <Link href="/blog">
             <h4>All articles</h4>
           </Link>
         </div>

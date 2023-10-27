@@ -283,7 +283,7 @@ useEffect(() => {
                       </div>
                       <div className="content-left-body-row-column">
                         <div className="content-heading nav__link" ref={link4}>
-                          <Link href="/blogs" className="btn-music">
+                          <Link href="/blog" className="btn-music">
                             <span className="content-heading-serial">04</span>
                             <span
                               className="content-heading-slideup text-stroke-fill-ltr"
@@ -293,7 +293,7 @@ useEffect(() => {
                             >
                               <span
                                 className={
-                                  router.pathname == "/blogs"
+                                  router.pathname == "/blog"
                                     ? "activeMenu"
                                     : ""
                                 }
