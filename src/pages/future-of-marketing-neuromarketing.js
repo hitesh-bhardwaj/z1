@@ -555,10 +555,8 @@ export default function futureofmarketing() {
         <div className="related-box-img">
           <div className="box-img-content">
             <div className="img-box-related">
-              <Link href="/what-is-experience-design">
-                <Image
-                  width={1000}
-                  height={1000}
+              <Link href="/experience-design-vs-ux">
+                <img
                   src="/assets/blogs/feature.webp"
                   alt="img"
                   data-cursor-text="Read Now"
@@ -578,10 +576,8 @@ export default function futureofmarketing() {
 
           <div className="box-img-content">
             <div className="img-box-related">
-              <Link href="/the-power-of-psychology-in-ux-design">
-                <Image
-                  width={1000}
-                  height={1000}
+              <Link href="/psychology-in-ux">
+                <img
                   src="/assets/blogs/uxbrain.webp"
                   alt="img"
                   data-cursor-text="Read Now"
@@ -600,11 +596,9 @@ export default function futureofmarketing() {
 
           <div className="box-img-content">
             <div className="img-box-related">
-              <Link href="/what-is-ux-design">
-                <Image
-                  width={1000}
-                  height={1000}
-                  src="/assets/blogs/blog-detail/what-is-ux/feature.webp"
+              <Link href="/evolution-of-ux-design">
+                <img
+                  src="/assets/blogs/blog-detail/the-evalution/feature.webp"
                   alt="img"
                   data-cursor-text="Read Now"
                   data-cursor-color="#000"
@@ -616,8 +610,8 @@ export default function futureofmarketing() {
               </Link>
             </div>
             <h1>
-              What is UX Design: A Simple and Informative Guide for the Curious
-              Minds
+              The Evolution of UX Design: An Informative Expedition Through The
+              History
             </h1>
           </div>
         </div>

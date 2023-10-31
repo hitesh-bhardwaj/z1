@@ -1,7 +1,5 @@
 import { useRouter } from 'next/router';
-// import jobs from "@/components/Careers/JobsData";
-const jobs = require('@/components/Careers/JobsData.js');
-
+import jobs from "@/components/Careers/JobsData";
 import Head from 'next/head';
 import Image from 'next/image';
 import SmoothScroll from "@/components/utils/SmoothScroll";

@@ -606,7 +606,7 @@ export default function turbochargeb2blinking() {
         <div className="related-box-img">
           <div className="box-img-content">
             <div className="img-box-related">
-              <Link href="/the-future-of-marketing">
+              <Link href="/future-of-marketing-neuromarketing">
                 <img
                   src="/assets/blogs/blog-detail/the-future-of-marketing/feature.webp"
                   alt="img"
@@ -627,9 +627,9 @@ export default function turbochargeb2blinking() {
 
           <div className="box-img-content">
             <div className="img-box-related">
-              <Link href="/the-basics-of-seo">
+              <Link href="/delightful-digital-design-guide">
                 <img
-                  src="/assets/blogs/blog-detail/basic-seo/feature.webp"
+                  src="/assets/blogs/blog-detail/delightfully/feature.webp"
                   alt="img"
                   data-cursor-text="Read Now"
                   data-cursor-color="#000"
@@ -637,15 +637,18 @@ export default function turbochargeb2blinking() {
                   onMouseEnter={(e) => handleHover(e)}
                   onMouseOut={(e) => handleHoverExit(e)}
                 />
-                <h2>Marketing</h2>
+                <h2>Design</h2>
               </Link>
             </div>
-            <h1>The Basics of SEO: A Comprehensive Beginner's Guide</h1>
+            <h1>
+              How to Delightfully Design for Diverse Digital Platforms: A User's
+              Guide to Creative UX Mastery
+            </h1>
           </div>
 
           <div className="box-img-content">
             <div className="img-box-related">
-              <Link href="/marketing-psychology">
+              <Link href="/captivate-audiences-marketing-psychology">
                 <img
                   src="/assets/blogs/blog-detail/marketing-psychology/feature.webp"
                   alt="img"

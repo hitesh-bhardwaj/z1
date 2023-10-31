@@ -447,6 +447,7 @@ export default function experiencedesignblog() {
       </div>
 
       {/* =================== Related Articles =========================== */}
+
       <div className="related-articles">
         <div className="related-article-heading">
           <h1>RELATED ARTICLES</h1>
@@ -458,7 +459,28 @@ export default function experiencedesignblog() {
         <div className="related-box-img">
           <div className="box-img-content">
             <div className="img-box-related">
-              <Link href="/the-power-of-psychology-in-ux-design">
+              <Link href="/experience-design-vs-ux">
+                <img
+                  src="/assets/blogs/feature.webp"
+                  alt="img"
+                  data-cursor-text="Read Now"
+                  data-cursor-color="#000"
+                  data-cursor-size="100px"
+                  onMouseEnter={(e) => handleHover(e)}
+                  onMouseOut={(e) => handleHoverExit(e)}
+                />
+                <h2>Design</h2>
+              </Link>
+            </div>
+            <h1>
+              What is Experience Design, And How is it Different from User
+              Experience Design (UX)?
+            </h1>
+          </div>
+
+          <div className="box-img-content">
+            <div className="img-box-related">
+              <Link href="/psychology-in-ux">
                 <img
                   src="/assets/blogs/uxbrain.webp"
                   alt="img"
@@ -478,28 +500,7 @@ export default function experiencedesignblog() {
 
           <div className="box-img-content">
             <div className="img-box-related">
-              <Link href="/what-is-ux-design">
-                <img
-                  src="/assets/blogs/blog-detail/what-is-ux/feature.webp"
-                  alt="img"
-                  data-cursor-text="Read Now"
-                  data-cursor-color="#000"
-                  data-cursor-size="100px"
-                  onMouseEnter={(e) => handleHover(e)}
-                  onMouseOut={(e) => handleHoverExit(e)}
-                />
-                <h2>Design</h2>
-              </Link>
-            </div>
-            <h1>
-              What is UX Design: A Simple and Informative Guide for the Curious
-              Minds
-            </h1>
-          </div>
-
-          <div className="box-img-content">
-            <div className="img-box-related">
-              <Link href="/the-evolution-of-ux-design">
+              <Link href="/evolution-of-ux-design">
                 <img
                   src="/assets/blogs/blog-detail/the-evalution/feature.webp"
                   alt="img"

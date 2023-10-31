@@ -554,9 +554,9 @@ export default function blogHowToDesign() {
         </div>
       </div>
 
-      {/* =================== Related Articles =========================== */}
+       {/* =================== Related Articles =========================== */}
 
-      <div className="related-articles">
+       <div className="related-articles">
         <div className="related-article-heading">
           <h1>RELATED ARTICLES</h1>
           <Link href="/blog">
@@ -567,7 +567,7 @@ export default function blogHowToDesign() {
         <div className="related-box-img">
           <div className="box-img-content">
             <div className="img-box-related">
-              <Link href="/what-is-experience-design">
+              <Link href="/experience-design-vs-ux">
                 <img
                   src="/assets/blogs/feature.webp"
                   alt="img"
@@ -588,7 +588,7 @@ export default function blogHowToDesign() {
 
           <div className="box-img-content">
             <div className="img-box-related">
-              <Link href="/the-power-of-psychology-in-ux-design">
+              <Link href="/psychology-in-ux">
                 <img
                   src="/assets/blogs/uxbrain.webp"
                   alt="img"
@@ -608,9 +608,9 @@ export default function blogHowToDesign() {
 
           <div className="box-img-content">
             <div className="img-box-related">
-              <Link href="/what-is-ux-design">
+              <Link href="/evolution-of-ux-design">
                 <img
-                  src="/assets/blogs/blog-detail/what-is-ux/feature.webp"
+                  src="/assets/blogs/blog-detail/the-evalution/feature.webp"
                   alt="img"
                   data-cursor-text="Read Now"
                   data-cursor-color="#000"
@@ -622,8 +622,8 @@ export default function blogHowToDesign() {
               </Link>
             </div>
             <h1>
-              What is UX Design: A Simple and Informative Guide for the Curious
-              Minds
+              The Evolution of UX Design: An Informative Expedition Through The
+              History
             </h1>
           </div>
         </div>

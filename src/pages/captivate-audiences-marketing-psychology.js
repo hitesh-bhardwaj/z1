@@ -538,9 +538,9 @@ export default function marketpsychology() {
         <div className="related-box-img">
           <div className="box-img-content">
             <div className="img-box-related">
-              <Link href="/the-evolution-of-ux-design">
+              <Link href="/experience-design-vs-ux">
                 <img
-                  src="/assets/blogs/blog-detail/the-evalution/feature.webp"
+                  src="/assets/blogs/feature.webp"
                   alt="img"
                   data-cursor-text="Read Now"
                   data-cursor-color="#000"
@@ -552,14 +552,14 @@ export default function marketpsychology() {
               </Link>
             </div>
             <h1>
-              The Evolution of UX Design: An Informative Expedition Through The
-              History
+              What is Experience Design, And How is it Different from User
+              Experience Design (UX)?
             </h1>
           </div>
 
           <div className="box-img-content">
             <div className="img-box-related">
-              <Link href="/the-power-of-psychology-in-ux-design">
+              <Link href="/psychology-in-ux">
                 <img
                   src="/assets/blogs/uxbrain.webp"
                   alt="img"
@@ -579,9 +579,9 @@ export default function marketpsychology() {
 
           <div className="box-img-content">
             <div className="img-box-related">
-              <Link href="/how-to-delightfully-design">
+              <Link href="/evolution-of-ux-design">
                 <img
-                  src="/assets/blogs/blog-detail/delightfully/feature.webp"
+                  src="/assets/blogs/blog-detail/the-evalution/feature.webp"
                   alt="img"
                   data-cursor-text="Read Now"
                   data-cursor-color="#000"
@@ -593,8 +593,8 @@ export default function marketpsychology() {
               </Link>
             </div>
             <h1>
-              How to Delightfully Design for Diverse Digital Platforms: A User's
-              Guide to Creative UX Mastery
+              The Evolution of UX Design: An Informative Expedition Through The
+              History
             </h1>
           </div>
         </div>

@@ -533,9 +533,9 @@ export default function powerofremotedesigners() {
         <div className="related-box-img">
           <div className="box-img-content">
             <div className="img-box-related">
-              <Link href="/the-future-of-marketing">
+              <Link href="/experience-design-vs-ux">
                 <img
-                  src="/assets/blogs/blog-detail/the-future-of-marketing/feature.webp"
+                  src="/assets/blogs/feature.webp"
                   alt="img"
                   data-cursor-text="Read Now"
                   data-cursor-color="#000"
@@ -543,20 +543,20 @@ export default function powerofremotedesigners() {
                   onMouseEnter={(e) => handleHover(e)}
                   onMouseOut={(e) => handleHoverExit(e)}
                 />
-                <h2>Marketing</h2>
+                <h2>Design</h2>
               </Link>
             </div>
             <h1>
-              The Future of Marketing: Why Every Marketer Should Learn
-              Neuroscience and Master Neuromarketing
+              What is Experience Design, And How is it Different from User
+              Experience Design (UX)?
             </h1>
           </div>
 
           <div className="box-img-content">
             <div className="img-box-related">
-              <Link href="/the-basics-of-seo">
+              <Link href="/psychology-in-ux">
                 <img
-                  src="/assets/blogs/blog-detail/basic-seo/feature.webp"
+                  src="/assets/blogs/uxbrain.webp"
                   alt="img"
                   data-cursor-text="Read Now"
                   data-cursor-color="#000"
@@ -564,17 +564,19 @@ export default function powerofremotedesigners() {
                   onMouseEnter={(e) => handleHover(e)}
                   onMouseOut={(e) => handleHoverExit(e)}
                 />
-                <h2>Marketing</h2>
+                <h2>Design</h2>
               </Link>
             </div>
-            <h1>The Basics of SEO: A Comprehensive Beginner's Guide</h1>
+            <h1>
+              The Power of Psychology in UX Design: Unlocking the Human Element
+            </h1>
           </div>
 
           <div className="box-img-content">
             <div className="img-box-related">
-              <Link href="/marketing-psychology">
+              <Link href="/evolution-of-ux-design">
                 <img
-                  src="/assets/blogs/blog-detail/marketing-psychology/feature.webp"
+                  src="/assets/blogs/blog-detail/the-evalution/feature.webp"
                   alt="img"
                   data-cursor-text="Read Now"
                   data-cursor-color="#000"
@@ -582,12 +584,12 @@ export default function powerofremotedesigners() {
                   onMouseEnter={(e) => handleHover(e)}
                   onMouseOut={(e) => handleHoverExit(e)}
                 />
-                <h2>Marketing</h2>
+                <h2>Design</h2>
               </Link>
             </div>
             <h1>
-              Marketing Psychology: The Secret to Captivating Your Audience and
-              Building Unforgettable Brands
+              The Evolution of UX Design: An Informative Expedition Through The
+              History
             </h1>
           </div>
         </div>
