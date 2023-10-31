@@ -189,21 +189,10 @@ export default function blogBeginnerGuideLinkBuilding() {
                     alt: "Enigma Image",
                     type: "image/png",
                   },
-                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
                 ],
-                siteName: "https://weareenigma.com/essential-link-building-guide",
+                siteName: "Enigma Digital Website",
               }}
             />
-
-      <Head>
-        <title>Ultimate Beginner's Guide to Effective Link Building</title>
-        <meta name="description" content="Dive deep into the world of link building with our comprehensive guide. Learn techniques to boost your site's authority and SEO rankings." />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
-        ></meta>
-        <link rel="icon" href="/fav-icon.png" />
-      </Head>
 
       <div className="loader-wrap" id="loader">
           <div className='mainLoaderBg'>

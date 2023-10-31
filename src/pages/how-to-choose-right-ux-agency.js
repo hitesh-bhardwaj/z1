@@ -173,9 +173,9 @@ useEffect(() => {
               description="Your product ideas deserve the best possible user experience (UX)
               design, and to achieve that, you need to partner with the right UX
               agency."
-              canonical="https://www.weareenigma.com/how-to-choose-right-ux-agency"
+              canonical="https://weareenigma.com/how-to-choose-right-ux-agency"
               openGraph={{
-                url: "https://www.weareenigma.com/how-to-choose-right-ux-agency",
+                url: "https://weareenigma.com/how-to-choose-right-ux-agency",
                 title: "How to Choose the Right UX Agency to Partner with for Your Product Ideas",
                 description:
                   "Your product ideas deserve the best possible user experience (UX) design, and to achieve that, you need to partner with the right UX agency.",
@@ -187,24 +187,11 @@ useEffect(() => {
                     alt: "Enigma Image",
                     type: "image/png",
                   },
-                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
                 ],
-                siteName: "https://www.weareenigma.com/how-to-choose-right-ux-agency",
+                siteName: "Enigma Digital Website",
               }}
             />
 
-      <Head>
-        <title>
-          How to Choose the Right UX Agency to Partner with for Your Product
-          Ideas
-        </title>
-        <meta name="description" content="Your product ideas deserve the best possible user experience (UX) design, and to achieve that, you need to partner with the right UX agency." />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
-        ></meta>
-        <link rel="icon" href="/fav-icon.png" />
-      </Head>
       <div className="loader-wrap" id="loader">
       <div className='mainLoaderBg'>
             <span className='mainLoaderBar' id='loaderbars'></span>

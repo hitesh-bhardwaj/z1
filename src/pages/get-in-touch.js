@@ -164,26 +164,10 @@ export default function contact() {
                     alt: "Enigma Image",
                     type: "image/png",
                   },
-                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
           ],
-          siteName: "https://weareenigma.com/get-in-touch",
+          siteName: "Enigma Digital Website",
         }}
       />
-
-      <Head>
-        <title>
-          We Elevate Your Digital Presence | Contact Enigma
-        </title>
-        <meta
-          name="description"
-          content="Contact Enigma for top-tier UI/UX design, front-end development, and organic digital marketing solutions. Let's collaborate and ascend your digital presence."
-        />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
-        ></meta>
-        <link rel="icon" href="/fav-icon.png" />
-      </Head>
 
       <SmoothScroll />
 

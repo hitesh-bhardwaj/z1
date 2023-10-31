@@ -172,15 +172,14 @@ export default function whatuxdesignblog() {
     <>
 
     <NextSeo
-      title="What is UX Design: A Simple and Informative Guide for the Curious
-          Minds"
-      description=" Welcome to the fascinating world of UX design. Grab your popcorn, and let's explore this exciting realm. Our goal is to make UX design as accessible and enjoyable as possible, so without further ado, let's dive right in!"
-      canonical="https://www.weareenigma.com/what-is-ux-design"
+      title="UX Design Explained: A Simple Guide for Everyone"
+      description="Embark on a journey into UX design. Learn the essentials of user experience, the process, techniques, and principles and how it shapes digital interactions."
+      canonical="https://weareenigma.com/what-is-ux-design"
       openGraph={{
-        url: "https://www.weareenigma.com/what-is-ux-design",
-        title: "What is UX Design: A Simple and Informative Guide for the Curious Minds",
+        url: "https://weareenigma.com/what-is-ux-design",
+        title: "UX Design Explained: A Simple Guide for Everyone",
         description:
-          "Welcome to the fascinating world of UX design. Grab your popcorn, and let's explore this exciting realm. Our goal is to make UX design as accessible and enjoyable as possible, so without further ado, let's dive right in!",
+          "Embark on a journey into UX design. Learn the essentials of user experience, the process, techniques, and principles and how it shapes digital interactions.",
           images: [
                   {
                     url: "https://i.ibb.co/k0NMQw9/home.png",
@@ -191,22 +190,10 @@ export default function whatuxdesignblog() {
                   },
                   { url: "https://i.ibb.co/k0NMQw9/home.png" },
         ],
-        siteName: "https://www.weareenigma.com/what-is-ux-design",
+        siteName: "Enigma Digital Website",
       }}
     />    
 
-      <Head>
-        <title>
-          What is UX Design: A Simple and Informative Guide for the Curious
-          Minds
-        </title>
-        <meta name="description" content="Welcome to the fascinating world of UX design. Grab your popcorn, and let's explore this exciting realm. Our goal is to make UX design as accessible and enjoyable as possible, so without further ado, let's dive right in!" />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
-        ></meta>
-        <link rel="icon" href="/fav-icon.png" />
-      </Head>
 
       <div className="loader-wrap" id="loader">
       <div className='mainLoaderBg'>

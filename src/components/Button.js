@@ -43,7 +43,7 @@ export default function Button() {
   return (
     <>
       <div id="button-container">
-        <Link href="/works">
+        <Link href="/our-portfolio">
           <MagneticButton
             className="primary-button"
             data-cursor-text="click"

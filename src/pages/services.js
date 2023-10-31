@@ -319,44 +319,28 @@ export default function services() {
   return (
     <>
       <NextSeo
-        title=" Enigma Digital | Services | Expert UI/UX, Development & Marketing"
-        description="Experience top-tier UI/UX design, front-end development, and organic marketing services with Enigma Digital, enhancing your online presence and business growth."
-        canonical="https://www.weareenigma.com/services"
+        title="Award-Winning Web Design, UX Design & Digital Marketing Services"
+        description="Enigma offers UI UX design, Web Design, Mobile App Design, Frontend Development and Organic Digital Marketing Services. See how we can help your business grow."
+        canonical="https://weareenigma.com/services"
         openGraph={{
-          url: "https://www.weareenigma.com/services",
+          url: "https://weareenigma.com/services",
           title:
-            " Enigma Digital | Services | Expert UI/UX, Development & Marketing",
+            "Award-Winning Web Design, UX Design & Digital Marketing Services",
           description:
-            "Experience top-tier UI/UX design, front-end development, and organic marketing services with Enigma Digital, enhancing your online presence and business growth.",
+            "Enigma offers UI UX design, Web Design, Mobile App Design, Frontend Development and Organic Digital Marketing Services. See how we can help your business grow.",
           images: [
             {
-              url: "",
+              url: "https://i.ibb.co/k0NMQw9/home.png",
               width: 400,
               height: 600,
               alt: "Enigma Image",
               type: "image/png",
             },
-            { url: "" },
+            { url: "https://i.ibb.co/k0NMQw9/home.png" },
           ],
-          siteName: "https://www.weareenigma.com/services",
+          siteName: "Enigma Digital Website",
         }}
       />
-
-      <Head>
-        <title>
-          Enigma Digital | Services | Expert UI/UX, Development & Marketing
-        </title>
-        <meta
-          name="description"
-          content="Experience top-tier UI/UX design, front-end development, and organic marketing services with Enigma Digital, enhancing your online presence and business growth."
-        />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=5.0">          
-        </meta>
-        <link rel="icon" href="/fav-icon.png" />
-      </Head>
 
       <div className="loader-wrap" id="loader" style={{ zIndex: 999 }}>
       <div className='mainLoaderBg'>

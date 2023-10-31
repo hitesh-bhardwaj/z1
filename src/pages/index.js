@@ -42,24 +42,10 @@ export default function Home() {
               alt: "Enigma Image",
               type: "image/png",
             },
-            { url: "https://i.ibb.co/k0NMQw9/home.png" },
           ],
           siteName: "https://weareenigma.com/",
         }}
       />
-
-      <Head>
-        <title>Enigma | Digital Product Design, UI/UX & Neuromarketing Agency</title>
-        <meta
-          name="description"
-          content="Enigma is India's Leading UI/UX Design Agency that Leverages the Power of Emotion, Design, Technology, and Neuromarketing Strategies to Create Digital Products that People Love to Use."
-        />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
-        />
-        <link rel="icon" href="/fav-icon.png" />
-      </Head>
 
       <Preloader />
 

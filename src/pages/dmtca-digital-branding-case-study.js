@@ -1,4 +1,3 @@
-import Head from "next/head";
 import React, { useEffect } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
@@ -12,8 +11,8 @@ import Header from "@/components/Header/Header";
 import SmoothScroll from "@/components/utils/SmoothScroll";
 import Footer from "@/components/Footer";
 import FooterMobile from "@/components/Mobile/FooterMobile";
-import WragbySlider from "@/components/CaseStudies/WragbySlider";
 import Image from "next/image";
+import ProjectSlider from "../components/CaseStudies/ProjectSlider";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -221,21 +220,10 @@ export default function dmtca() {
                     alt: "Enigma Image",
                     type: "image/png",
                   },
-            { url: "https://i.ibb.co/k0NMQw9/home.png" },
                 ],
-                siteName: "https://weareenigma.com/dmtca-digital-branding-case-study",
+                siteName: "Enigma Digital Website",
               }}
             />
-
-      <Head>
-        <title>DMTCA - Branding, Web Design & Development Case Study | Enigma</title>
-        <meta name="description" content="Witness the digital rebranding journey & website transformation of a leading West African digital marketing agency with Enigma." />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
-        ></meta>
-        <link rel="icon" href="/fav-icon.png" />
-      </Head>
 
       <SmoothScroll />
 
@@ -768,7 +756,7 @@ export default function dmtca() {
 
           {/* ========================== Next Project =========================== */}
           <div className={styles.desktopSlider}>
-            <WragbySlider />
+            <ProjectSlider currentProjectLink="dmtca-digital-branding-case-study" />
           </div>
 
           {/* ========================== Next Project END ======================= */}
@@ -782,8 +770,8 @@ export default function dmtca() {
                 <h1>next up</h1>
               </div>
               <div className={styles.nextProjectHeading}>
-                <Link href="/kedarkala">
-                  <h1>Kedarkala</h1>
+                <Link href="/pdtl-ecommerce-automation-case-study">
+                  <h1>PDTL</h1>
                 </Link>
               </div>
             </div>

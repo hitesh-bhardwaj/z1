@@ -1,4 +1,3 @@
-import Head from "next/head";
 import React, { useEffect } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
@@ -12,7 +11,7 @@ import Header from "@/components/Header/Header";
 import SmoothScroll from "@/components/utils/SmoothScroll";
 import Footer from "@/components/Footer";
 import FooterMobile from "@/components/Mobile/FooterMobile";
-import PatronumSlider from "@/components/CaseStudies/PatronumSlider";
+import ProjectSlider from "../components/CaseStudies/ProjectSlider";
 import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -184,8 +183,7 @@ export default function dharan() {
   return (
     <>
 
-            
-
+          
             <NextSeo
               title="Dharan E-Commerce Design & Development Case Study | Enigma"
               description="Discover Dharan's journey with Enigma, from traditional hand-block-printed clothing to a compelling online e-commerce presence. Read the transformation Story"
@@ -203,21 +201,10 @@ export default function dharan() {
                     alt: "Enigma Image",
                     type: "image/png",
                   },
-                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
                 ],
-                siteName: "https://weareenigma.com/dharan-ecommerce-case-study",
+                siteName: "Enigma Digital Website",
               }}
             />
-
-      <Head>
-        <title>Dharan E-Commerce Design & Development Case Study | Enigma</title>
-        <meta name="description" content="Discover Dharan's journey with Enigma, from traditional hand-block-printed clothing to a compelling online e-commerce presence. Read the transformation Story" />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
-        ></meta>
-        <link rel="icon" href="/fav-icon.png" />
-      </Head>
 
       <SmoothScroll />
 
@@ -883,7 +870,7 @@ export default function dharan() {
 
           {/* ========================== Next Project =========================== */}
           <div className={styles.desktopSlider}>
-            <PatronumSlider />
+            <ProjectSlider currentProjectLink="dharan-ecommerce-case-study" />
           </div>
 
           {/* ========================== Next Project END ======================= */}
@@ -897,8 +884,8 @@ export default function dharan() {
                 <h1>next up</h1>
               </div>
               <div className={styles.nextProjectHeading}>
-                <Link href="/wragby">
-                  <h1>Wragby</h1>
+                <Link href="/kedarkala-portfolio-website-case-study">
+                  <h1>Kedarkala</h1>
                 </Link>
               </div>
             </div>

@@ -189,21 +189,9 @@ export default function blogWebsites() {
                   },
             { url: "https://i.ibb.co/k0NMQw9/home.png" },
           ],
-          siteName: "https://weareenigma.com/link-building-website-list",
+          siteName: "Enigma Digital Website",
         }}
       />
-
-      <Head>
-        <title>
-          List of 30 Link Building Websites - SEO Guide
-        </title>
-        <meta name="description" content="Dive into our comprehensive guide on 30 websites for effective link-building in SEO. Boost your website's authority and visibility now!" />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
-        ></meta>
-        <link rel="icon" href="/fav-icon.png" />
-      </Head>
 
 {/* Loader */}
       <div className="loader-wrap" id="loader">

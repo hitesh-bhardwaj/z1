@@ -208,21 +208,10 @@ export default function BlogsPage() {
                     alt: "Enigma Image",
                     type: "image/png",
                   },
-                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
                 ],
-                siteName: "https://weareenigma.com/blog",
+                siteName: "Enigma Digital Website",
               }}
             />
-
-      <Head>
-        <title>The Enigma Blog | Discover, Learn & Be Future Ready</title>
-        <meta name="description" content="Dive into our curated collection of articles on UI/UX Design, Digital Marketing, Technology & Human Psychology. Stay updated with the latest trends." />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
-        ></meta>
-        <link rel="icon" href="/fav-icon.png" />
-      </Head>
 
       <SmoothScroll onScroll={handleScroll} />
 

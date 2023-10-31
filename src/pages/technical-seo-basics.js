@@ -183,19 +183,9 @@ export default function technicleSeo() {
                   },
                   { url: "https://i.ibb.co/k0NMQw9/home.png" },
                 ],
-                siteName: "https://weareenigma.com/technical-seo-basics",
+                siteName: "Enigma Digital Website",
               }}
             />
-
-      <Head>
-        <title>Comprehensive Guide to Technical SEO Essentials</title>
-        <meta name="description" content="Master technical SEO & learn to optimize your website's infrastructure for better search engine visibility and user experience with this guide." />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
-        ></meta>
-        <link rel="icon" href="/fav-icon.png" />
-      </Head>
 
       <div className="loader-wrap" id="loader">
       <div className='mainLoaderBg'>

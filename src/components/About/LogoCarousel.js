@@ -296,7 +296,7 @@ export default function carousel() {
                 </span>
               </p>
               <div className="bottom-caro-link-content">
-                <a className="hide-div-caro-link" href="/kedarkala">Read More</a>
+                <a className="hide-div-caro-link" href="/kedarkala-portfolio-website-case-study">Read More</a>
                 <div className="bottom-caro-box hide-caro-box">
                   <Image
                       height={50}
@@ -468,7 +468,7 @@ export default function carousel() {
                 </span>
               </p>
               <div className="bottom-caro-link-content">
-                <a className="hide-div-caro-link" href="/quickx">Read More</a>
+                <a className="hide-div-caro-link" href="/quickx-crypto-case-study">Read More</a>
                 <div className="bottom-caro-box hide-caro-box">
                   <Image
                       height={50}
@@ -582,7 +582,7 @@ export default function carousel() {
                 </span>
               </p>
               <div className="bottom-caro-link-content">
-                <a className="hide-div-caro-link" href="/patronum">Read More</a>
+                <a className="hide-div-caro-link" href="/patronum-saas-case-study">Read More</a>
                 <div className="bottom-caro-box hide-caro-box">
                   <Image
                       height={50}
@@ -638,7 +638,7 @@ export default function carousel() {
                 </span>
               </p>
               <div className="bottom-caro-link-content">
-                <a className="hide-div-caro-link" href="/patra">Read More</a>
+                <a className="hide-div-caro-link" href="/patra-saas-insurtech-case-study">Read More</a>
                 <div className="bottom-caro-box hide-caro-box">
                   <Image
                       height={50}
