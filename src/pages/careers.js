@@ -14,9 +14,8 @@ import FooterMobile from '@/components/Mobile/FooterMobile';
 import Link from "next/link";
 
 // Jobs Data
-// import jobs from "@/components/Careers/JobsData";
+import jobs from "@/components/Careers/JobsData";
 
-const jobs = require('@/components/Careers/JobsData.js');
 import CareerTestimonial from "../components/Careers/Testimonial";
 
 gsap.registerPlugin(ScrollTrigger);
