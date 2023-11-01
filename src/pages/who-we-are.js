@@ -236,8 +236,6 @@ export default function about() {
     return () => ctx.revert();
   }, []);
 
-  console.clear();
-
   return (
     <>
       <NextSeo
@@ -259,22 +257,9 @@ export default function about() {
                   },
                   { url: "https://i.ibb.co/k0NMQw9/home.png" },
           ],
-          siteName: "https://weareenigma.com/who-we-are",
+          siteName: "Enigma Digital Website",
         }}
       />
-
-      <Head>
-        <title>About Enigma - UI/UX Design & Digital Marketing Agency India</title>
-        <meta
-          name="description"
-          content="Enigma is a team of creators, discoverers, dreamers, & doers, crafting exceptional digital experiences. We are India's leading UI UX design & marketing agency."
-        />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
-        ></meta>
-        <link rel="icon" href="/fav-icon.png" />
-      </Head>
 
       <SmoothScroll />
 

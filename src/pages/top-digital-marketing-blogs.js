@@ -1,10 +1,8 @@
-import React, { useEffect, useState } from "react";
-import Head from "next/head";
+import React, { useEffect } from "react";
 import { Cursor } from "../../cursor/index";
 import "react-creative-cursor/dist/styles.css";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
-import Link from "next/link";
 import { NextSeo } from "next-seo";
 import {
   FacebookShareButton,
@@ -12,36 +10,18 @@ import {
   TwitterShareButton,
   WhatsappShareButton,
 } from "next-share";
-import Image from "next/image";
 
 import Header from "@/components/Header/Header";
 import SmoothScroll from "@/components/utils/SmoothScroll";
 import Footer from "@/components/Footer";
 import FooterMobile from "@/components/Mobile/FooterMobile";
+import RelatedBlogs from "../components/Blogs/relatedBlogs";
 
 gsap.registerPlugin(ScrollTrigger);
 
 gsap.config({
   nullTargetWarn: false,
 });
-
-// Hover on the link
-const handleHover = (e) => {
-  gsap.to(e.target, {
-    duration: 0.5,
-    scale: 1.1,
-    ease: "power1.inOut",
-  });
-};
-
-// Hover off the link
-const handleHoverExit = (e) => {
-  gsap.to(e.target, {
-    duration: 0.5,
-    scale: 1,
-    ease: "power1.inOut",
-  });
-};
 
 export default function digitalmarketingblogs() {
   // Hero Section Animation
@@ -573,9 +553,6 @@ export default function digitalmarketingblogs() {
               the most current and effective search marketing strategies.
             </p>
 
-            
-            
-
             <h3 className="bold-h blog-mt-0">
               Marketing Land
             </h3>
@@ -590,9 +567,6 @@ export default function digitalmarketingblogs() {
               expertise.
             </p>
 
-            
-            
-
             <h3 className="bold-h blog-mt-0">
               Backlinko
             </h3>
@@ -603,9 +577,6 @@ export default function digitalmarketingblogs() {
               known for its actionable, data-driven strategies and commitment to
               providing high-quality, easy-to-understand content.
             </p>
-
-            
-            
 
             <h3 className="bold-h blog-mt-0">
               AdEspresso
@@ -628,9 +599,6 @@ export default function digitalmarketingblogs() {
               </div>
             </div>
 
-            
-            
-
             <h3 className="bold-h blog-mt-0">
               Unbounce
             </h3>
@@ -644,9 +612,6 @@ export default function digitalmarketingblogs() {
               optimize landing pages that drive results.
             </p>
 
-            
-            
-
             <h3 className="bold-h blog-mt-0">
               KlientBoost
             </h3>
@@ -658,9 +623,6 @@ export default function digitalmarketingblogs() {
               strategies, focusing on improving ROI and performance for digital
               marketers.
             </p>
-
-            
-            
 
             <h3 className="bold-h blog-mt-0">
               Grow
@@ -675,9 +637,6 @@ export default function digitalmarketingblogs() {
               encourages marketers to think beyond conventional strategies and
               tactics.
             </p>
-
-            
-            
 
             <h3 className="bold-h blog-mt-0">
               That’s A Wrap..!
@@ -700,85 +659,9 @@ export default function digitalmarketingblogs() {
         </div>
       </div>
 
-
       {/* =================== Related Articles =========================== */}
-
-      <div className="related-articles">
-        <div className="related-article-heading">
-          <h1>RELATED ARTICLES</h1>
-          <Link href="/blog">
-            <h4>All articles</h4>
-          </Link>
-        </div>
-
-        <div className="related-box-img">
-          <div className="box-img-content">
-            <div className="img-box-related">
-              <Link href="/future-of-marketing-neuromarketing">
-                <img
-                  src="/assets/blogs/blog-detail/the-future-of-marketing/feature.webp"
-                  alt="img"
-                  data-cursor-text="Read Now"
-                  data-cursor-color="#000"
-                  data-cursor-size="100px"
-                  onMouseEnter={(e) => handleHover(e)}
-                  onMouseOut={(e) => handleHoverExit(e)}
-                />
-                <h2>Marketing</h2>
-              </Link>
-            </div>
-            <h1>
-              The Future of Marketing: Why Every Marketer Should Learn
-              Neuroscience and Master Neuromarketing
-            </h1>
-          </div>
-
-          <div className="box-img-content">
-            <div className="img-box-related">
-              <Link href="/delightful-digital-design-guide">
-                <img
-                  src="/assets/blogs/blog-detail/delightfully/feature.webp"
-                  alt="img"
-                  data-cursor-text="Read Now"
-                  data-cursor-color="#000"
-                  data-cursor-size="100px"
-                  onMouseEnter={(e) => handleHover(e)}
-                  onMouseOut={(e) => handleHoverExit(e)}
-                />
-                <h2>Design</h2>
-              </Link>
-            </div>
-            <h1>
-              How to Delightfully Design for Diverse Digital Platforms: A User's
-              Guide to Creative UX Mastery
-            </h1>
-          </div>
-
-          <div className="box-img-content">
-            <div className="img-box-related">
-              <Link href="/captivate-audiences-marketing-psychology">
-                <img
-                  src="/assets/blogs/blog-detail/marketing-psychology/feature.webp"
-                  alt="img"
-                  data-cursor-text="Read Now"
-                  data-cursor-color="#000"
-                  data-cursor-size="100px"
-                  onMouseEnter={(e) => handleHover(e)}
-                  onMouseOut={(e) => handleHoverExit(e)}
-                />
-                <h2>Marketing</h2>
-              </Link>
-            </div>
-            <h1>
-              Marketing Psychology: The Secret to Captivating Your Audience and
-              Building Unforgettable Brands
-            </h1>
-          </div>
-        </div>
-      </div>
+        <RelatedBlogs currentBlogLink={"/top-digital-marketing-blogs"} category={"marketing"} />
       {/* =================== Related Articles END =========================== */}
-
-
 
       {/* ======================== Footer ====================== */}
       <div className="desktop-footer">

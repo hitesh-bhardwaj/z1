@@ -1,7 +1,4 @@
-'use client'
-
 import React, { useEffect, useRef } from 'react';
-import Head from 'next/head';
 import Image from 'next/image';
 import SmoothScroll from "@/components/utils/SmoothScroll";
 import SplitType from 'split-type';
@@ -19,6 +16,7 @@ import NextBox from '@/components/ServiceDetail/Strategy/StrategyNext';
 import OfferCards from '@/components/ServiceDetail/Strategy/OfferCards';
 import Modal from '../components/PopupForm/formModal';
 import { NextSeo } from 'next-seo';
+import ServiceBlogs from '../components/ServiceDetail/ServiceBlogs';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -632,7 +630,11 @@ useEffect(() => {
             <NextBox />
         </section>
         {/* ======================= Next Page Box END ====================== */}
-
+        
+        {/* ================================Related Blogs==================== */}
+          <ServiceBlogs category={"marketing"} />
+        {/* ================================Related Blogs==================== */}
+       
         {/* ======================== Footer ====================== */}
         <div className="footer-desktop">
           <Footer />

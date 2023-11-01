@@ -1,10 +1,8 @@
-import React, { useEffect, useState } from "react";
-import Head from "next/head";
+import React, { useEffect } from "react";
 import { Cursor } from "../../cursor/index";
 import "react-creative-cursor/dist/styles.css";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
-import Link from "next/link";
 import { NextSeo } from "next-seo";
 import {
   FacebookShareButton,
@@ -17,30 +15,13 @@ import Header from "@/components/Header/Header";
 import SmoothScroll from "@/components/utils/SmoothScroll";
 import Footer from "@/components/Footer";
 import FooterMobile from "@/components/Mobile/FooterMobile";
+import RelatedBlogs from "../components/Blogs/relatedBlogs";
 
 gsap.registerPlugin(ScrollTrigger);
 
 gsap.config({
   nullTargetWarn: false,
 });
-
-// Hover on the link
-const handleHover = (e) => {
-  gsap.to(e.target, {
-    duration: 0.5,
-    scale: 1.1,
-    ease: "power1.inOut",
-  });
-};
-
-// Hover off the link
-const handleHoverExit = (e) => {
-  gsap.to(e.target, {
-    duration: 0.5,
-    scale: 1,
-    ease: "power1.inOut",
-  });
-};
 
 export default function evolutionofdesign() {
   // Hero Section Animation
@@ -192,22 +173,7 @@ export default function evolutionofdesign() {
         ],
         siteName: "Enigma Digital Website",
       }}
-    />    
-
-      <Head>
-        <title>
-          The Evolution of UX Design: An Informative Expedition Through The
-          History
-        </title>
-        <meta name="description" content="Welcome to a thrilling adventure through the history of UX design!
-              Fasten your seatbelts, and join us on this journey as we uncover
-              the origins of User Experience Design." />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
-        ></meta>
-        <link rel="icon" href="/fav-icon.png" />
-      </Head>
+    />   
 
       <div className="loader-wrap" id="loader">
       <div className='mainLoaderBg'>
@@ -547,86 +513,9 @@ export default function evolutionofdesign() {
         </div>
       </div>
 
-      <div className="space-large desktop"></div>
-
       {/* =================== Related Articles =========================== */}
-
-      <div className="related-articles">
-        <div className="related-article-heading">
-          <h1>RELATED ARTICLES</h1>
-          <Link href="/blog">
-            <h4>All articles</h4>
-          </Link>
-        </div>
-
-        <div className="related-box-img">
-          <div className="box-img-content">
-            <div className="img-box-related">
-              <Link href="/experience-design-vs-ux">
-                <img
-                  src="/assets/blogs/feature.webp"
-                  alt="img"
-                  data-cursor-text="Read Now"
-                  data-cursor-color="#000"
-                  data-cursor-size="100px"
-                  onMouseEnter={(e) => handleHover(e)}
-                  onMouseOut={(e) => handleHoverExit(e)}
-                />
-                <h2>Design</h2>
-              </Link>
-            </div>
-            <h1>
-              What is Experience Design, And How is it Different from User
-              Experience Design (UX)?
-            </h1>
-          </div>
-
-          <div className="box-img-content">
-            <div className="img-box-related">
-              <Link href="/psychology-in-ux">
-                <img
-                  src="/assets/blogs/uxbrain.webp"
-                  alt="img"
-                  data-cursor-text="Read Now"
-                  data-cursor-color="#000"
-                  data-cursor-size="100px"
-                  onMouseEnter={(e) => handleHover(e)}
-                  onMouseOut={(e) => handleHoverExit(e)}
-                />
-                <h2>Design</h2>
-              </Link>
-            </div>
-            <h1>
-              The Power of Psychology in UX Design: Unlocking the Human Element
-            </h1>
-          </div>
-
-          <div className="box-img-content">
-            <div className="img-box-related">
-              <Link href="/evolution-of-ux-design">
-                <img
-                  src="/assets/blogs/blog-detail/the-evalution/feature.webp"
-                  alt="img"
-                  data-cursor-text="Read Now"
-                  data-cursor-color="#000"
-                  data-cursor-size="100px"
-                  onMouseEnter={(e) => handleHover(e)}
-                  onMouseOut={(e) => handleHoverExit(e)}
-                />
-                <h2>Design</h2>
-              </Link>
-            </div>
-            <h1>
-              The Evolution of UX Design: An Informative Expedition Through The
-              History
-            </h1>
-          </div>
-        </div>
-      </div>
+        <RelatedBlogs currentBlogLink={"/evolution-of-ux-design"} category={"design"} />
       {/* =================== Related Articles END =========================== */}
-
-      <div className="space-large desktop"></div>
-      <div className="space-small mobile"></div>
 
       {/* ======================== Footer ====================== */}
       <div className="desktop-footer">
