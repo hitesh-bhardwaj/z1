@@ -269,9 +269,19 @@ const SmoothScroll = ({ onScroll }) => {
         fixedPopButton.style.left = offset.x + "px";
       });
     }
-        
-    // Loader
 
+    // Progress Bar
+    const progressBar = document.querySelector(".progress-bar-container");
+
+    if (progressBar) {
+      smoothscroll.addListener(function (status) {
+        var offset = status.offset;
+        progressBar.style.top = offset.y + "px";
+        progressBar.style.left = offset.x + "px";
+      });
+    }
+    
+    // Loader
     const fixedLoader = document.getElementById("loader");
 
     smoothscroll.addListener(function (status) {

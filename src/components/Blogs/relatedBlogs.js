@@ -50,6 +50,7 @@ const RelatedBlogs = ({ currentBlogLink, category }) => {
                             data-cursor-size="100px"
                             onMouseEnter={(e) => handleHover(e)}
                             onMouseOut={(e) => handleHoverExit(e)}
+                            loading='lazy'
                             />
                             <h2>{blog.category}</h2>
                         </Link>

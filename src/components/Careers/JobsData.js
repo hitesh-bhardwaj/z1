@@ -1,4 +1,3 @@
-
 function generateSlug(title) {
   return title.toLowerCase().replace(/[\s\W-]+/, '-');
 }
@@ -7,7 +6,7 @@ const jobs = [
     {
         id: '1',
         title: 'Web Developer',
-        slug: generateSlug('Web Developer'),
+        slug: generateSlug('Web-Developer'),
         type: 'Development',
         image: 'job1.png',
         sDescription: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
@@ -38,7 +37,7 @@ const jobs = [
     { 
         id: '2',
         title: 'UI/UX Designer',
-        slug: generateSlug('UI/UX Designer'),
+        slug: generateSlug('UI/UX-Designer'),
         type: 'Design',
         image: 'job2.png',
         sDescription: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
@@ -69,7 +68,7 @@ const jobs = [
     {
         id: '3',
         title: 'Marketing Intern',
-        slug: generateSlug('Marketing Intern'),
+        slug: generateSlug('Marketing-Intern'),
         type: 'Marketing',
         image: 'job3.png',
         sDescription: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',

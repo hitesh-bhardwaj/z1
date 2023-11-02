@@ -1,5 +1,4 @@
 import React, {useRef, useState, useEffect } from "react";
-import Head from "next/head";
 import Link from "next/link";
 import { Cursor } from "../../cursor/index";
 import "react-creative-cursor/dist/styles.css";
@@ -270,11 +269,6 @@ export default function BlogsPage() {
                     ))}
                   </div>
                 </div>
-                {/* {!hasMore && (
-                  <div className="no-more-blogs">
-                    <p>No more articles to load.</p>
-                  </div>
-                )} */}
               </div>
             </div>
           </main>

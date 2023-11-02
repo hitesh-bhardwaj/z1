@@ -92,6 +92,7 @@ const HomeBlogs = () => {
                     <div className="img-box-related homeBlog">
                         <Link href={blog.Link}>
                             <img
+                            loading='lazy'
                             src={blog.image}
                             alt={blog.name}
                             data-cursor-text="Read Now"

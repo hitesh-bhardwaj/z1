@@ -78,6 +78,7 @@ export default function Header() {
             data-cursor-size="60px"
             data-cursor-exclusion
             id="main-logo"
+            priority={true}
           />
         </Link>
       </motion.div>
@@ -145,6 +146,7 @@ export default function Header() {
               width={25}
               height={25}
               className="gsap-dark-img"
+              priority={true}
             />
           </button>
         </motion.div>
