@@ -82,7 +82,6 @@ export default function BlogDetail() {
     return () => ctx.revert();
   });
 
-
   return (
     <>
         <NextSeo
@@ -117,7 +116,6 @@ export default function BlogDetail() {
     <Cursor isGelly={true} />
 
     <Header />
-
 
       <div className="blog-detail-main-section" id="blog-detail-main-section">
         <div

@@ -43,11 +43,6 @@ const CategoryPage = ({ category }) => {
   const postRef = useRef([]);
   const [activeIndex, setActiveIndex] = useState(0);
 
-  // Dynamic SEO Tags
-  const seoTitle = `Top ${category} Articles | Enigma Digital`;
-  const seoDescription = `Explore our latest articles on ${category}. Stay updated with the trends and insights in ${category}.`;
-  const seoCanonical = `https://www.weareenigma.com/blogs/${category.toLowerCase()}`;
-
   // Filter blogs based on the category
   const filteredBlogs = Blogs.filter((blog) => blog.category === category);
 
@@ -112,9 +107,14 @@ const CategoryPage = ({ category }) => {
     };
   }, [category]);
 
+  // Dynamic SEO Tags
+  const seoTitle = `Top ${category} Articles | Enigma Digital`;
+  const seoDescription = `Explore our latest articles on ${category}. Stay updated with the trends and insights in ${category}.`;
+  const seoCanonical = `https://weareenigma.com/blog/${category.toLowerCase()}`;
 
   return (
     <>
+
       <NextSeo
         title={seoTitle}
         description={seoDescription}

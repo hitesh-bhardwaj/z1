@@ -42,7 +42,7 @@ export default function Home() {
               type: "image/png",
             },
           ],
-          siteName: "https://weareenigma.com/",
+          siteName: "Enigma Digital Website",
         }}
       />
 
@@ -54,9 +54,7 @@ export default function Home() {
 
       <main>
       
-        <section>
-          <Header />
-        </section>
+      <Header />
 
       {/*===============================Hero Section=========================*/}
           <section className="main-section"
