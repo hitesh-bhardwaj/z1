@@ -34,7 +34,7 @@ const PageLoader = ({ text }) => {
   }, []);
 
   return (
-    <>
+      <div className="loader-wrap" id="loader">
         <div className='mainLoaderBg'>
             <span className='mainLoaderBar' id='loaderbars'></span>
             <span className='mainLoaderBar' id='loaderbars'></span>
@@ -47,7 +47,7 @@ const PageLoader = ({ text }) => {
                 <h1>{text}</h1>
             </span>
         </div>
-    </>
+      </div>
   );
 };
 

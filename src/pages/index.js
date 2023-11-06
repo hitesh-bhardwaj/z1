@@ -17,8 +17,8 @@ import TopHomeAero from "@/components/Home/TopAero";
 import Preloader from "@/components/PreLoader/PreLoader";
 import HomeProject from "@/components/ProjectsSection/HomeProject";
 import ProjectsHome from "@/components/Home/ProjectsHome";
-import Modal from "../components/PopupForm/formModal";
-import HomeBlogs from "../components/Home/HomeBlogs";
+import Modal from "@/components/PopupForm/formModal";
+import HomeBlogs from "@/components/Home/HomeBlogs";
 
 export default function Home() {
 

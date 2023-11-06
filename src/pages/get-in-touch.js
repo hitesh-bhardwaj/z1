@@ -15,6 +15,7 @@ import MarqueeCata from "@/components/MarqueeCata";
 import FooterMobile from "@/components/Mobile/FooterMobile";
 import ContactForm from "@/components/Contact/contactForm";
 import Modal from "../components/PopupForm/formModal";
+import PageLoader from "@/components/pageLoader";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -41,38 +42,6 @@ export default function contact() {
       }
     );
     return () => tl.kill();
-  }, []);
-
-  // Page Transitions
-  useEffect(() => {
-    const loaderBars = document.querySelectorAll("#loaderbars");
-    const tl = gsap.timeline();
-
-    let ctx = gsap.context(() => {
-
-      tl.from(".loader-wrap-heading h1", {
-        delay: 0.5,
-        y: 200,
-        skewY: 10,
-        duration: 1,
-      }).to(".loader-wrap-heading h1", {
-        delay: 0.5,
-        y: -200,
-        skewY: 10,
-        duration: 1,
-      }).to(loaderBars, {
-        height: 0,
-        duration: 0.6,
-        delay: -0.5,
-        ease: "power2.easeIn",
-        stagger: 0.1,
-      }).to("#loader", {
-        y: "-1500",
-        opacity: 0,
-        ease: "power2.inOut",
-      });
-    });
-    return () => ctx.revert();
   }, []);
 
   // Reveal TimeLine Contact left Elements On Scroll Stagger
@@ -141,9 +110,6 @@ export default function contact() {
   });
 }
 
-// console.clear;
-
-
   return (
     <>
       <NextSeo
@@ -173,21 +139,7 @@ export default function contact() {
 
       <Cursor isGelly={true} />
 
-      <div className="loader-wrap" id="loader">
-      <div className='mainLoaderBg'>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-          </div>
-
-        <div className="loader-wrap-heading">
-          <span>
-            <h1>Hi, There! Let's Talk!?</h1>
-          </span>
-        </div>
-      </div>
+      <PageLoader text="Hi, There! Let's Talk!?" />
 
       <>
         <main>

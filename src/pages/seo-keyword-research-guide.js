@@ -4,26 +4,17 @@ import "react-creative-cursor/dist/styles.css";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { NextSeo } from "next-seo";
-import {
-  FacebookShareButton,
-  LinkedinShareButton,
-  TwitterShareButton,
-  WhatsappShareButton,
-} from "next-share";
-
 import Header from "@/components/Header/Header";
 import SmoothScroll from "@/components/utils/SmoothScroll";
 import Footer from "@/components/Footer";
 import FooterMobile from "@/components/Mobile/FooterMobile";
-import RelatedBlogs from "../components/Blogs/relatedBlogs";
+import RelatedBlogs from "@/components/Blogs/relatedBlogs";
+import BlogInfo from "@/components/Blogs/BlogInfo";
+import PageLoader from "@/components/pageLoader";
 
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.config({
-  nullTargetWarn: false,
-});
-
-export default function blogKeywordResearch() {
+export default function BlogDetail() {
   // Hero Section Animation
   useEffect(() => {
     const tl = gsap.timeline();
@@ -52,13 +43,13 @@ export default function blogKeywordResearch() {
   useEffect(() => {
     const tl = gsap.timeline();
     tl.fromTo(
-      "#anim",
+      "#right-section",
       {
         opacity: 0,
         translateY: 200,
       },
       {
-        delay: 3.8,
+        delay: 4,
         duration: 1.3,
         opacity: 1,
         stagger: 0.1,
@@ -68,10 +59,11 @@ export default function blogKeywordResearch() {
     return () => tl.kill();
   }, []);
 
+
+if (globalThis.innerWidth>1024) {
   // Section Pinnnig
   useEffect(() => {
     let ctx = gsap.context(() => {
-      let brandImageBlock = document.getElementById("main-blog-container");
       let brandImagePin = document.getElementById("left-section");
       let brandImageNotPin = document.getElementById("right-section");
       ScrollTrigger.create({
@@ -79,75 +71,14 @@ export default function blogKeywordResearch() {
         start: "top 10%",
         endTrigger: brandImageNotPin,
         end: "bottom 80%",
-        // the nect line (with the arrow function) is 'a functional value' () =>
-        // end: () => `${brandImageNotPin.offsetHeight - brandImagePin.offsetHeight}px 20%`,
-        // this line ensures the functional value gets recalculated on resize
         invalidateOnRefresh: true,
         pin: brandImagePin,
-        // pinSpacing: true,
         markers: false,
       });
     });
     return () => ctx.revert();
   });
-
-   // Parallax Image
-   if (globalThis.innerWidth > 776) {
-    useEffect(() => {
-      let ctx = gsap.context(() => {
-        gsap.utils.toArray(".image-container").forEach(function (container) {
-          let image = container.querySelector("img");
-  
-          gsap.to(image, {
-            y: () => image.offsetHeight - container.offsetHeight,
-            ease: "none",
-            startAt: { y: "-25%" },
-            scrollTrigger: {
-              trigger: container,
-              scrub: true,
-              pin: false,
-              markers: false,
-            },
-            y: "25%",
-            ease: "none",
-          });
-        });
-      });
-      return () => ctx.revert();
-    });
-  }
-
-  // Page Transitions
-  useEffect(() => {
-    const loaderBars = document.querySelectorAll("#loaderbars");
-    const tl = gsap.timeline();
-
-    let ctx = gsap.context(() => {
-
-      tl.from(".loader-wrap-heading h1", {
-        delay: 0.5,
-        y: 200,
-        skewY: 10,
-        duration: 1,
-      }).to(".loader-wrap-heading h1", {
-        delay: 0.5,
-        y: -200,
-        skewY: 10,
-        duration: 1,
-      }).to(loaderBars, {
-        height: 0,
-        duration: 0.6,
-        delay: -0.5,
-        ease: "power2.easeIn",
-        stagger: 0.1,
-      }).to("#loader", {
-        y: "-1500",
-        opacity: 0,
-        ease: "power2.inOut",
-      });
-    });
-    return () => ctx.revert();
-  }, []);
+}
 
   return (
     <>
@@ -174,110 +105,31 @@ export default function blogKeywordResearch() {
               }}
             />
 
-      <div className="loader-wrap" id="loader">
-      <div className='mainLoaderBg'>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-          </div>
-
-        <div className="loader-wrap-heading">
-          <span>
-            <h1>Keyword Research</h1>
-          </span>
-        </div>
-      </div>
-
       <SmoothScroll />
 
       <Cursor isGelly={true} />
 
-      <div>
-        <Header />
-      </div>
+      <PageLoader text="Comprehensive Guide to Keyword Research" />
 
-      <div className="blog-detail-main-section">
+      <Header />
+
+      <div className="b__dt-main">
         <div
-          className="blog-detail-heading"
+          className="b__dt-head-contain"
           data-cursor-size="10px"
-          data-cursor-text=""
-        >
+          data-cursor-text="">
           <h1 data-jelly id="blog">
             Keyword Research: A Comprehensive Guide for SEO Success
           </h1>
         </div>
 
-        <div className="main-blog-container" id="main-blog-container">
-          <div className="left-section" id="left-section">
-            <div className="box-blog" id="anim">
-              <h1>Posted By</h1>
-              <h2>Bhaskar Varshney</h2>
-            </div>
-            <div className="box-blog" id="anim">
-              <h1>Posted on</h1>
-              <h2>13/01/2023</h2>
-            </div>
-            <div className="box-blog" id="anim">
-              <h1>Share Article</h1>
-              <div className="social-icons">
-                <LinkedinShareButton
-                  url={"https://weareenigma.com/keyword-research"}
-                  quote={
-                    "next-share is a social share buttons for your next React apps."
-                  }
-                  hashtag={"#weareenigma"}
-                >
-                  <img
-                    src="/assets\blogs\blog-detail\social/linkedin.webp"
-                    alt="social-icons"
-                  />
-                </LinkedinShareButton>
-
-                <FacebookShareButton
-                  url={"https://weareenigma.com/keyword-research"}
-                  quote={
-                    "next-share is a social share buttons for your next React apps."
-                  }
-                  hashtag={"#weareenigma"}
-                >
-                  <img
-                    src="/assets\blogs\blog-detail\social/facebook.webp"
-                    alt="social-icons"
-                  />
-                </FacebookShareButton>
-
-                <TwitterShareButton
-                  url={"https://weareenigma.com/keyword-research"}
-                  quote={
-                    "next-share is a social share buttons for your next React apps."
-                  }
-                  hashtag={"#weareenigma"}
-                >
-                  <img
-                    src="/assets\blogs\blog-detail\social/twitter.webp"
-                    alt="social-icons"
-                  />
-                </TwitterShareButton>
-
-                <WhatsappShareButton
-                  url={"https://weareenigma.com/keyword-research"}
-                  quote={
-                    "next-share is a social share buttons for your next React apps."
-                  }
-                  hashtag={"#weareenigma"}
-                >
-                  <img
-                    src="/assets\blogs\blog-detail\social/whatsapp.webp"
-                    alt="social-icons"
-                  />
-                </WhatsappShareButton>
-              </div>
-            </div>
+        <div className="b__dt-main-blog" id="main-blog-container">
+          <div className="b__dt-auth" id="left-section">
+            <BlogInfo author={"Bhaskar Varshney"} date={"13/01/2023"} shareLink={"seo-keyword-research-guide"} />
           </div>
-          <div className="right-section" id="right-section">
-            <p id="anim">
+
+          <div className="b__dt-content" id="right-section">
+            <p>
               Keyword research is a critical component of any successful SEO
               strategy. It involves identifying popular search terms and phrases
               that users enter into search engines when looking for information,
@@ -290,12 +142,20 @@ export default function blogKeywordResearch() {
               Additionally, we will cover the significance of long-tail keywords
               and local SEO.
             </p>
-            <h3 className="bold-h" id="anim">
-              The Importance of Keyword Research
-            </h3>
-            <p id="anim">Keyword research is essential for several reasons:</p>
 
-            <p id="anim">
+            <div className="b__dt-img">
+              <img
+                src="/assets/blogs/blog-detail/keyword-research/keyword-research-1.webp"
+                alt="Keyword Research Blog Image 1"
+              />
+            </div>
+
+            <h2>
+              The Importance of Keyword Research
+            </h2>
+            <p>Keyword research is essential for several reasons:</p>
+
+            <p>
               <span className="bold">Relevance: </span>By targeting keywords
               that are relevant to your niche, you can ensure that your website
               attracts users who are genuinely interested in your products or
@@ -304,7 +164,7 @@ export default function blogKeywordResearch() {
             </p>
 
 
-            <p id="anim">
+            <p>
               <span className="bold">Competitiveness:</span> Understanding the
               competition for specific keywords can help you identify
               opportunities where you can rank higher with less effort. This can
@@ -313,25 +173,16 @@ export default function blogKeywordResearch() {
             </p>
 
 
-            <p id="anim">
+            <p>
               <span className="bold">User intent:</span> Analysing user intent
               behind keywords can help you create content that addresses users'
               needs and expectations, leading to a better user experience and
               higher search engine rankings.
             </p>
 
-            <div className="blog-img">
-              <div className="image-container blog-img-container">
-                <img
-                  src="/assets/blogs/blog-detail/keyword-research/1.jpg"
-                  alt="Img"
-                />
-              </div>
-            </div>
-
-            <h3 className="bold-h">
+            <h2>
               Keyword Research Tools
-            </h3>
+            </h2>
 
             <p>
               There are several tools available for conducting keyword research.
@@ -384,18 +235,16 @@ export default function blogKeywordResearch() {
               excellent option for small businesses and those on a tight budget.
             </p>
 
-            <div className="blog-img">
-              <div className="image-container blog-img-container">
-                <img
-                  src="/assets/blogs/blog-detail/keyword-research/2.jpg"
-                  alt="Img"
-                />
-              </div>
+            <div className="b__dt-img">
+              <img
+                src="/assets/blogs/blog-detail/keyword-research/keyword-research-2.webp"
+                alt="Keyword Research Blog Image 2"
+              />
             </div>
 
-            <h3 className="bold-h">
+            <h2>
               Analysing Keyword Competitiveness, Search Volume, and User Intent
-            </h3>
+            </h2>
 
             <p>
               When conducting keyword research, it's crucial to analyse three
@@ -436,9 +285,9 @@ export default function blogKeywordResearch() {
               addresses their needs and increases the likelihood of conversions.
             </p>
 
-            <h3 className="bold-h">
+            <h2>
               Creating a Targeted Keyword List
-            </h3>
+            </h2>
 
             <p>
               After analysing keyword competitiveness, search volume, and user
@@ -451,18 +300,16 @@ export default function blogKeywordResearch() {
               industry trends and search engine algorithm changes.
             </p>
 
-            <div className="blog-img">
-              <div className="image-container blog-img-container">
-                <img
-                  src="/assets/blogs/blog-detail/keyword-research/3.jpg"
-                  alt="Img"
-                />
-              </div>
+            <div className="b__dt-img">
+              <img
+                src="/assets/blogs/blog-detail/keyword-research/keyword-research-3.webp"
+                alt="Keyword Research Blog Image 3"
+              />
             </div>
 
-            <h3 className="bold-h">
+            <h2>
               The Importance of Long-tail Keywords
-            </h3>
+            </h2>
 
             <p>
               Long-tail keywords are longer, more specific phrases that
@@ -476,9 +323,9 @@ export default function blogKeywordResearch() {
               terms.
             </p>
 
-            <h3 className="bold-h">
+            <h2>
               Local SEO and Keyword Research
-            </h3>
+            </h2>
 
             <p>
               Local SEO and Keyword Research For businesses targeting local
@@ -502,6 +349,21 @@ export default function blogKeywordResearch() {
               resonates with your target audience, making your online presence
               both engaging and enjoyable to explore.
             </p>
+
+            <div className="blog__dt-tags">
+                <h1 className="blog__dt-tag">
+                    Keyword Research
+                </h1>
+                <h1 className="blog__dt-tag">
+                    Local Seo
+                </h1>
+                <h1 className="blog__dt-tag">
+                    Targeted Keyword
+                </h1>
+                <h1 className="blog__dt-tag">
+                    Seo Strategy
+                </h1>
+            </div>
 
           </div>
         </div>

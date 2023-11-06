@@ -13,6 +13,7 @@ import Footer from "@/components/Footer";
 import FooterMobile from "@/components/Mobile/FooterMobile";
 import Image from "next/image";
 import ProjectSlider from "../components/CaseStudies/ProjectSlider";
+import PageLoader from "../components/pageLoader";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -134,30 +135,6 @@ export default function dmtca() {
     );
   });
 
-  // Parallax Image
-  useEffect(() => {
-    let ctx = gsap.context(() => {
-      gsap.utils.toArray("#image-container").forEach(function (container) {
-        let image = container.querySelector("img");
-
-        gsap.to(image, {
-          y: () => image.offsetHeight - container.offsetHeight,
-          ease: "none",
-          startAt: { y: "-25%" },
-          scrollTrigger: {
-            trigger: container,
-            scrub: true,
-            pin: false,
-            markers: false,
-          },
-          y: "25%",
-          ease: "none",
-        });
-      });
-    });
-    return () => ctx.revert();
-  });
-
   // Data Speed Control
   useEffect(() => {
     let ctx = gsap.context(() => {
@@ -227,30 +204,13 @@ export default function dmtca() {
 
       <SmoothScroll />
 
-      <div className="loader-wrap" id="loader">
-      <div className='mainLoaderBg'>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-          </div>
-
-        <div className="loader-wrap-heading">
-          <span>
-            <h1>
-              <span className="loader-font">DMTCA</span>
-            </h1>
-          </span>
-        </div>
-      </div>
-
       <Cursor isGelly={true} />
 
+      <PageLoader text="DMTCA Case Study" />
+
       <main>
-        <div>
-          <Header />
-        </div>
+        
+        <Header />
 
         <div className={styles.Main}>
  {/*Section 1  */}

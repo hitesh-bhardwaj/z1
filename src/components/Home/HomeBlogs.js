@@ -94,7 +94,7 @@ const HomeBlogs = () => {
                             <img
                             loading='lazy'
                             src={blog.image}
-                            alt={blog.name}
+                            alt={blog.description}
                             data-cursor-text="Read Now"
                             data-cursor-color="#000"
                             data-cursor-size="100px"

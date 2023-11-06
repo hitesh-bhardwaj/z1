@@ -1,6 +1,4 @@
 import React, { useEffect, useState, useLayoutEffect } from "react";
-import Head from "next/head";
-import Image from "next/image";
 import { Cursor } from "../../cursor/index";
 import "react-creative-cursor/dist/styles.css";
 import { motion, AnimateSharedLayout, AnimatePresence } from "framer-motion";
@@ -18,7 +16,8 @@ import SmoothScroll from "@/components/utils/SmoothScroll";
 import FooterMobile from "@/components/Mobile/FooterMobile";
 import ProjectWorks from "@/components/studio/ProjectWorks";
 import WorksNextBox from "@/components/NextBoxes/WorksNextBox";
-import Modal from "../components/PopupForm/formModal";
+import Modal from "@/components/PopupForm/formModal";
+import PageLoader from '@/components/pageLoader';
 
 export default function studio() {
   const [loading, setLoading] = useState(true);
@@ -32,38 +31,6 @@ export default function studio() {
     [loading],
     3000
   );
-
-  // Page Transitions
-  useEffect(() => {
-    const loaderBars = document.querySelectorAll("#loaderbars");
-    const tl = gsap.timeline();
-
-    let ctx = gsap.context(() => {
-
-      tl.from(".loader-wrap-heading h1", {
-        delay: 0.5,
-        y: 200,
-        skewY: 10,
-        duration: 1,
-      }).to(".loader-wrap-heading h1", {
-        delay: 0.5,
-        y: -200,
-        skewY: 10,
-        duration: 1,
-      }).to(loaderBars, {
-        height: 0,
-        duration: 0.6,
-        delay: -0.5,
-        ease: "power2.easeIn",
-        stagger: 0.1,
-      }).to("#loader", {
-        y: "-1500",
-        opacity: 0,
-        ease: "power2.inOut",
-      });
-    });
-    return () => ctx.revert();
-  }, []);
 
   return (
     <>
@@ -95,21 +62,7 @@ export default function studio() {
 
       <SmoothScroll />
 
-      <div className="loader-wrap" id="loader" style={{ zIndex: 9999 }}>
-      <div className='mainLoaderBg'>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-          </div>
-
-        <div className="loader-wrap-heading">
-          <span>
-            <h1>Our Meticulously Crafted Projects</h1>
-          </span>
-        </div>
-      </div>
+      <PageLoader text="Our Meticulously Crafted Projects" />
 
       <div className="studio">
         <Header />

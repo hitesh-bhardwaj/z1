@@ -3,7 +3,6 @@ import { Cursor } from "../../cursor/index";
 import "react-creative-cursor/dist/styles.css";
 import Link from "next/link";
 import { NextSeo } from "next-seo";
-import Head from "next/head";
 import gsap from "gsap";
 
 const ThankYou = () => {

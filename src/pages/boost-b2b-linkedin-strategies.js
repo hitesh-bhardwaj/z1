@@ -4,26 +4,17 @@ import "react-creative-cursor/dist/styles.css";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { NextSeo } from "next-seo";
-import {
-  FacebookShareButton,
-  LinkedinShareButton,
-  TwitterShareButton,
-  WhatsappShareButton,
-} from "next-share";
-
 import Header from "@/components/Header/Header";
 import SmoothScroll from "@/components/utils/SmoothScroll";
 import Footer from "@/components/Footer";
 import FooterMobile from "@/components/Mobile/FooterMobile";
-import RelatedBlogs from "../components/Blogs/relatedBlogs";
+import RelatedBlogs from "@/components/Blogs/relatedBlogs";
+import BlogInfo from "@/components/Blogs/BlogInfo";
+import PageLoader from "@/components/pageLoader";
 
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.config({
-  nullTargetWarn: false,
-});
-
-export default function turbochargeb2blinking() {
+export default function BlogDetail() {
   // Hero Section Animation
   useEffect(() => {
     const tl = gsap.timeline();
@@ -52,13 +43,13 @@ export default function turbochargeb2blinking() {
   useEffect(() => {
     const tl = gsap.timeline();
     tl.fromTo(
-      "#anim",
+      "#right-section",
       {
         opacity: 0,
         translateY: 200,
       },
       {
-        delay: 3.8,
+        delay: 4,
         duration: 1.3,
         opacity: 1,
         stagger: 0.1,
@@ -68,10 +59,11 @@ export default function turbochargeb2blinking() {
     return () => tl.kill();
   }, []);
 
+
+if (globalThis.innerWidth>1024) {
   // Section Pinnnig
   useEffect(() => {
     let ctx = gsap.context(() => {
-      let brandImageBlock = document.getElementById("main-blog-container");
       let brandImagePin = document.getElementById("left-section");
       let brandImageNotPin = document.getElementById("right-section");
       ScrollTrigger.create({
@@ -79,74 +71,14 @@ export default function turbochargeb2blinking() {
         start: "top 10%",
         endTrigger: brandImageNotPin,
         end: "bottom 80%",
-        // the nect line (with the arrow function) is 'a functional value' () =>
-        // end: () => `${brandImageNotPin.offsetHeight - brandImagePin.offsetHeight}px 20%`,
-        // this line ensures the functional value gets recalculated on resize
         invalidateOnRefresh: true,
         pin: brandImagePin,
-        // pinSpacing: true,
         markers: false,
       });
     });
     return () => ctx.revert();
   });
-
-   // Parallax Image
-   if (globalThis.innerWidth > 776) {
-    useEffect(() => {
-      let ctx = gsap.context(() => {
-        gsap.utils.toArray(".image-container").forEach(function (container) {
-          let image = container.querySelector("img");
-  
-          gsap.to(image, {
-            y: () => image.offsetHeight - container.offsetHeight,
-            ease: "none",
-            startAt: { y: "-25%" },
-            scrollTrigger: {
-              trigger: container,
-              scrub: true,
-              pin: false,
-              markers: false,
-            },
-            y: "25%",
-            ease: "none",
-          });
-        });
-      });
-      return () => ctx.revert();
-    });
-  }
- // Page Transitions
- useEffect(() => {
-  const loaderBars = document.querySelectorAll("#loaderbars");
-  const tl = gsap.timeline();
-
-  let ctx = gsap.context(() => {
-
-    tl.from(".loader-wrap-heading h1", {
-      delay: 0.5,
-      y: 200,
-      skewY: 10,
-      duration: 1,
-    }).to(".loader-wrap-heading h1", {
-      delay: 0.5,
-      y: -200,
-      skewY: 10,
-      duration: 1,
-    }).to(loaderBars, {
-      height: 0,
-      duration: 0.6,
-      delay: -0.5,
-      ease: "power2.easeIn",
-      stagger: 0.1,
-    }).to("#loader", {
-      y: "-1500",
-      opacity: 0,
-      ease: "power2.inOut",
-    });
-  });
-  return () => ctx.revert();
-}, []);
+}
 
   return (
     <>
@@ -174,111 +106,32 @@ export default function turbochargeb2blinking() {
       }}
     />    
 
-      <div className="loader-wrap" id="loader">
-      <div className='mainLoaderBg'>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-          </div>
-
-        <div className="loader-wrap-heading">
-          <span>
-            <h1>Turbocharge Your B2B LinkedIn</h1>
-          </span>
-        </div>
-      </div>
-
       <SmoothScroll />
 
       <Cursor isGelly={true} />
 
-      <div>
-        <Header />
-      </div>
+      <PageLoader text="Turbocharge Your B2B LinkedIn" />
 
-      <div className="blog-detail-main-section">
+      <Header />
+
+      <div className="b__dt-main">
         <div
-          className="blog-detail-heading"
+          className="b__dt-head-contain"
           data-cursor-size="10px"
-          data-cursor-text=""
-        >
+          data-cursor-text="">
           <h1 data-jelly id="blog">
-            Turbocharge Your B2B LinkedIn Game with these 6 unbelievable
-            strategies
+            Turbocharge Your B2B LinkedIn Game with these 6 unbelievable strategies
           </h1>
         </div>
 
-        <div className="main-blog-container" id="main-blog-container">
-          <div className="left-section" id="left-section">
-            <div className="box-blog" id="anim">
-              <h1>Posted By</h1>
-              <h2>Bhaskar Varshney</h2>
-            </div>
-            <div className="box-blog" id="anim">
-              <h1>Posted on</h1>
-              <h2>16/12/2022</h2>
-            </div>
-            <div className="box-blog" id="anim">
-              <h1>Share Article</h1>
-              <div className="social-icons">
-                <LinkedinShareButton
-                  url={"https://weareenigma.com/turbo-charge-your-b2b-linkedin"}
-                  quote={
-                    "next-share is a social share buttons for your next React apps."
-                  }
-                  hashtag={"#weareenigma"}
-                >
-                  <img
-                    src="/assets\blogs\blog-detail\social/linkedin.webp"
-                    alt="social-icons"
-                  />
-                </LinkedinShareButton>
-
-                <FacebookShareButton
-                  url={"https://weareenigma.com/turbo-charge-your-b2b-linkedin"}
-                  quote={
-                    "next-share is a social share buttons for your next React apps."
-                  }
-                  hashtag={"#weareenigma"}
-                >
-                  <img
-                    src="/assets\blogs\blog-detail\social/facebook.webp"
-                    alt="social-icons"
-                  />
-                </FacebookShareButton>
-
-                <TwitterShareButton
-                  url={"https://weareenigma.com/turbo-charge-your-b2b-linkedin"}
-                  quote={
-                    "next-share is a social share buttons for your next React apps."
-                  }
-                  hashtag={"#weareenigma"}
-                >
-                  <img
-                    src="/assets\blogs\blog-detail\social/twitter.webp"
-                    alt="social-icons"
-                  />
-                </TwitterShareButton>
-
-                <WhatsappShareButton
-                  url={"https://weareenigma.com/turbo-charge-your-b2b-linkedin"}
-                  quote={
-                    "next-share is a social share buttons for your next React apps."
-                  }
-                  hashtag={"#weareenigma"}
-                >
-                  <img
-                    src="/assets\blogs\blog-detail\social/whatsapp.webp"
-                    alt="social-icons"
-                  />
-                </WhatsappShareButton>
-              </div>
-            </div>
+        <div className="b__dt-main-blog" id="main-blog-container">
+          <div className="b__dt-auth" id="left-section">
+            <BlogInfo author={"Bhaskar Varshney"} date={"16/12/2022"} shareLink={"boost-b2b-linkedin-strategies"} />
           </div>
-          <div className="right-section" id="right-section">
-            <p id="anim">
+
+          <div className="b__dt-content" id="right-section">
+          
+            <p>
               Ah, LinkedIn - the sophisticated, well-dressed sibling of the
               social media family. Suited up and ready for business, LinkedIn
               has evolved into the go-to platform for B2B marketing
@@ -289,13 +142,19 @@ export default function turbochargeb2blinking() {
               this blog, we'll unveil six astonishing tips to optimise your
               LinkedIn content for B2B marketing. So, grab your monocle and
               let's dive into the world of LinkedIn mastery!
-              
-              
             </p>
-            <h3 className="bold-h" id="anim">
+
+            <div className="b__dt-img">
+              <img
+                src="/assets/blogs/blog-detail/b2b-linkedin/b2b-linkedin-1.webp"
+                alt="B2B LinkedIn Blog Image 1"
+              />
+            </div>
+
+            <h2>
               Tip 1: Consistent Content & Visuals: Your Brand's Stylish Ensemble
-            </h3>
-            <p id="anim">
+            </h2>
+            <p>
               Picture this: You walk into a networking event dressed in
               mismatched clothing, like a psychedelic fever dream. How seriously
               do you think others would take you? The same applies to your
@@ -304,10 +163,10 @@ export default function turbochargeb2blinking() {
             </p>
 
             
-            <h3 className="bold-h" id="anim">
+            <p className="bold">
               1.1 Develop a Content Calendar:
-            </h3>
-            <p id="anim">
+            </p>
+            <p>
               A content calendar is your B2B marketing wardrobe. Plan your
               content ahead of time to ensure you're consistently posting and
               covering a variety of topics relevant to your audience. Regularly
@@ -317,46 +176,31 @@ export default function turbochargeb2blinking() {
 
             
 
-            <h3 className="bold-h" id="anim">
+            <p className="bold" >
               1.2 Create a Cohesive Visual Identity:
-            </h3>
-            <p id="anim">
+            </p>
+            <p>
               Much like a perfectly tailored suit, a cohesive visual identity
               gives your brand that polished, professional look. Use consistent
               colours, fonts, and imagery that reflect your brand's personality.
               This visual consistency makes your content instantly recognizable,
               like a fashion icon on the red carpet.
-            </p>
+            </p>         
             
-
-            <div className="blog-img">
-              <div className="image-container blog-img-container">
-                <img
-                  src="/assets/blogs/blog-detail/b2b-linkedin/1.jpg"
-                  alt="Img"
-                />
-              </div>
-            </div>
-
-            
-            
-            <h3 className="bold-h">
+            <h2>
               Tip 2: Targeting the Right Audience: LinkedIn's Secret Handshake
-            </h3>
+            </h2>
 
             <p>
               LinkedIn is teeming with professionals from every industry, so how
               can you make sure your content reaches the right people? By
               targeting the right audience, you can ensure that your content
               lands in the hands of those who will appreciate it the most.
-            </p>
-
+            </p>          
             
-            
-
-            <h3 className="bold-h">
+            <p className="bold">
               2.1 Use LinkedIn's Native Targeting Tools:
-            </h3>
+            </p>
 
             <p>
               LinkedIn offers a plethora of targeting options, such as job
@@ -364,13 +208,9 @@ export default function turbochargeb2blinking() {
               tools, you can tailor your content to your ideal audience, like
               sending an exclusive invitation to an elite soiree.
             </p>
-
-            
-
-            <h3 className="bold-h">
+            <p className="bold">
               2.2 Engage in Relevant Groups and Conversations:
-            </h3>
-
+            </p>
             <p>
               Participate in LinkedIn groups and conversations related to your
               industry to establish connections with like-minded professionals.
@@ -378,37 +218,32 @@ export default function turbochargeb2blinking() {
               relationships, much like mingling at a high-class networking
               event.
             </p>
-
-            
-            
-
-            <h3 className="bold-h">
+            <div className="b__dt-img">
+              <img
+                src="/assets/blogs/blog-detail/b2b-linkedin/b2b-linkedin-2.webp"
+                alt="B2B LinkedIn Blog Image 2"
+              />
+            </div>
+            <h2>
               Tip 3: Establish Credibility: Your LinkedIn Seal of Approval{" "}
-            </h3>
-
+            </h2>
             <p>
               In the world of B2B marketing, credibility is king. Without it,
               your content may be dismissed as just another sales pitch. Here's
               how to establish credibility and win the trust of your audience:
             </p>
-
-            
-            <h3 className="bold-h">
+            <p className="bold">
               3.1 Showcase Your Expertise:
-            </h3>
-
+            </p>
             <p>
               Share case studies, whitepapers, and research that demonstrate
               your industry knowledge and experience. By showcasing your
               expertise, you'll be seen as a reliable source of information,
               like the keynote speaker at a prestigious conference.
             </p>
-
-            
-            <h3 className="bold-h">
+            <p className="bold">
               3.2 Highlight Client Testimonials and Success Stories:
-            </h3>
-
+            </p>
             <p>
               Client testimonials and success stories are the B2B equivalent of
               rave reviews. Share these endorsements on your LinkedIn profile to
@@ -416,44 +251,26 @@ export default function turbochargeb2blinking() {
               results.
             </p>
 
-            <div className="blog-img">
-              <div className="image-container blog-img-container">
-                <img
-                  src="/assets/blogs/blog-detail/b2b-linkedin/2.jpg"
-                  alt="Img"
-                />
-              </div>
-            </div>
-            
-            
-
-            <h3 className="bold-h">
+            <h2>
               Tip 4: Establish Thought Leadership: The B2B LinkedIn VIP Lounge
-            </h3>
-
+            </h2>
             <p>
               Thought leadership is the ultimate B2B marketing status symbol. By
               establishing yourself as a thought leader, you can attract
               prospects who are eager to learn from your insights and expertise.
             </p>
-
-            
-            <h3 className="bold-h">
+            <p className="bold">
               4.1 Share Original, Insightful Content:
-            </h3>
-
+            </p>
             <p>
               Create and share original, thought-provoking content that
               challenges conventional wisdom and offers fresh perspectives on
               industry trends and issues. Much like a captivating TED Talk, your
               content should inspire, educate, and engage your audience.
             </p>
-
-            
-            <h3 className="bold-h">
+            <p className="bold">
               4.2 Engage with Industry Influencers and Experts:
-            </h3>
-
+            </p>
             <p>
               Connect and engage with influential professionals in your
               industry. Share, comment on, and discuss their content to
@@ -462,14 +279,16 @@ export default function turbochargeb2blinking() {
               your peers, like an esteemed guest at an exclusive roundtable
               discussion.
             </p>
-
-            
-            
-
-            <h3 className="bold-h">
+            <div className="b__dt-img">
+              <img
+                src="/assets/blogs/blog-detail/b2b-linkedin/b2b-linkedin-3.webp"
+                alt="B2B LinkedIn Blog Image 3"
+              />
+            </div>
+            <h2>
               Tip 5: Experiment with and Improve Your Content: The LinkedIn
               Laboratory
-            </h3>
+            </h2>
 
             <p>
               Success on LinkedIn isn't a one-size-fits-all formula. Like a mad
@@ -480,9 +299,9 @@ export default function turbochargeb2blinking() {
 
             
 
-            <h3 className="bold-h">
+            <p className="bold">
               5.1 Test Different Content Formats:
-            </h3>
+            </p>
 
             <p>
               LinkedIn offers an array of content formats, such as text, images,
@@ -493,9 +312,9 @@ export default function turbochargeb2blinking() {
             </p>
             
 
-            <h3 className="bold-h">
+            <p className="bold">
               5.2 Analyse and Optimize:{" "}
-            </h3>
+            </p>
 
             <p>
               Review your LinkedIn analytics to identify patterns and trends in
@@ -514,12 +333,9 @@ export default function turbochargeb2blinking() {
               </div>
             </div>
 
-            
-            
-
-            <h3 className="bold-h">
+            <h2>
               Tip 6: A Proper B2B Marketing Strategy: The LinkedIn Master Plan
-            </h3>
+            </h2>
 
             <p>
               Finally, to achieve LinkedIn greatness, you must have a
@@ -529,11 +345,9 @@ export default function turbochargeb2blinking() {
               game.
             </p>
 
-            
-
-            <h3 className="bold-h">
+            <p className="bold">
               6.1 Set Clear Goals and Objectives:
-            </h3>
+            </p>
 
             <p>
               Define your LinkedIn marketing goals and objectives, such as
@@ -542,11 +356,9 @@ export default function turbochargeb2blinking() {
               and help you measure your success.
             </p>
 
-            
-
-            <h3 className="bold-h">
+            <p className="bold">
               6.2 Align Your LinkedIn Strategy with Your Overall Marketing Plan:
-            </h3>
+            </p>
 
             <p>
               Ensure that your LinkedIn strategy complements and supports your
@@ -555,8 +367,6 @@ export default function turbochargeb2blinking() {
               cohesive brand presence that commands attention and drives
               results.
             </p>
-
-            
             
             <p>
               There you have it - six unbelievably effective tips to optimize
@@ -568,6 +378,21 @@ export default function turbochargeb2blinking() {
               top hat, raise your glass, and toast to your newfound LinkedIn
               prowess. Cheers to your success!
             </p>
+
+            <div className="blog__dt-tags">
+                <h1 className="blog__dt-tag">
+                    LinkedIn Strategies
+                </h1>
+                <h1 className="blog__dt-tag">
+                    B2B
+                </h1>
+                <h1 className="blog__dt-tag">
+                    Marketing
+                </h1>
+                <h1 className="blog__dt-tag">
+                    Optimize
+                </h1>
+            </div>
             
           </div>
         </div>

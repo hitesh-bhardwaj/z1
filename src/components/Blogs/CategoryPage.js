@@ -11,7 +11,7 @@ import Footer from '@/components/Footer';
 import FooterMobile from '@/components/Mobile/FooterMobile';
 import Blogs from '@/components/Blogs/blogData';
 import Modal from '@/components/PopupForm/formModal';
-import { relative } from 'path';
+import categoryData from '@/components/Blogs/CategoryData';
 
 // Hover on the link
 const handleHover = (e) => {
@@ -31,28 +31,27 @@ const handleHoverExit = (e) => {
   });
 };
 
-const buttons = [
-  { label: 'All', path: '/blog' },
-  { label: 'Strategy', path: '/blog/strategy' },
-  { label: 'Design', path: '/blog/design' },
-  { label: 'Technology', path: '/blog/technology' },
-  { label: 'Marketing', path: '/blog/marketing' },
-];
-
 const CategoryPage = ({ category }) => {
+  // Find the category data based on the category slug
+  const categoryInfo = categoryData.find((data) => data.slug === category);
+
+  if (!categoryInfo) {
+    // Handle the case where the category is not found
+    return <p>Category not found</p>;
+  }
+
+  const {
+    categoryName,
+    metaTitle,
+    metaDescription,
+    metaImage,
+    twitterCardImage,
+  } = categoryInfo;
+
   const postRef = useRef([]);
-  const [activeIndex, setActiveIndex] = useState(0);
 
   // Filter blogs based on the category
   const filteredBlogs = Blogs.filter((blog) => blog.category === category);
-
-  // Set the active index based on the category
-  useEffect(() => {
-    const index = buttons.findIndex(
-      (button) => button.label.toLowerCase() === category.toLowerCase()
-    );
-    setActiveIndex(index);
-  }, [category]);
 
   // Hero Section Animation
   useEffect(() => {
@@ -107,25 +106,20 @@ const CategoryPage = ({ category }) => {
     };
   }, [category]);
 
-  // Dynamic SEO Tags
-  const seoTitle = `Top ${category} Articles | Enigma Digital`;
-  const seoDescription = `Explore our latest articles on ${category}. Stay updated with the trends and insights in ${category}.`;
-  const seoCanonical = `https://weareenigma.com/blog/${category.toLowerCase()}`;
 
   return (
     <>
-
       <NextSeo
-        title={seoTitle}
-        description={seoDescription}
-        canonical={seoCanonical}
+        title={metaTitle}
+        description={metaDescription}
+        canonical={`https://weareenigma.com/blog/${category.toLowerCase()}`}
         openGraph={{
-          url: seoCanonical,
-          title: seoTitle,
-          description: seoDescription,
+          url: `https://weareenigma.com/blog/${category.toLowerCase()}`,
+          title: metaTitle,
+          description: metaDescription,
           images: [
             {
-              url: 'https://i.ibb.co/k0NMQw9/home.png',
+              url: metaImage,
               width: 400,
               height: 600,
               alt: 'Enigma Image',
@@ -137,94 +131,70 @@ const CategoryPage = ({ category }) => {
       />
 
       <SmoothScroll />
-
-{/*========Loader========*/}
-      <div className="invisible loader-wrap" id="loader">
-      <div className='mainLoaderBg'>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-          </div>
-
-        <div className="loader-wrap-heading">
-          <span>
-            <h1>Our Thoughts & Resources</h1>
-          </span>
-        </div>
-      </div>
-
       <Cursor isGelly={true} />
+      
+      <Header />
 
-      <div>
-        <Header />
-      </div>
-
-{/* PopUp Modal Button */}
-  <Modal />
-{/* End */}
+      {/* PopUp Modal Button */}
+      <Modal />
+      {/* End */}
 
       <main>
-      
-      <div className="blogs-main-section">
+        <div className="blogs-main-section">
           <div className="blogs-sub-section">
-            <div
-              className="blogs-heading"
-              data-cursor-size="10px"
-              data-cursor-text=""
-            >
+            <div className="blogs-heading" data-cursor-size="10px" data-cursor-text="">
               <h1 id="blog">
-                <span>All Articles</span>
+                <span>{categoryName} Blogs</span>
               </h1>
             </div>
 
             <div className="blogs-section">
-          {buttons.map((button, index) => (
-            <Link className='blog-cat-button' href={button.path} key={index}>
-              <button
-                className={
-                  activeIndex === index ? 'active' : 'button--calypso'
-                }
-                id="anim"
-              >
-                <span>{button.label}</span>
-              </button>
-            </Link>
-          ))}
-          <div className="ul-items">
-            {filteredBlogs.map((post, index) => (
-              <div
-                ref={(el) => (postRef.current[index] = el)}
-                className="blog-page-grid anim"
-                key={post.id}
-              >
-                <div className="ul-blog" id="img">
-                  <Link href={`${post.Link}`}>
-                    <div className="image-box-blog">
-                      <Image
-                        src={post.image}
-                        className="img-blog"
-                        onMouseEnter={(e) => handleHover(e)}
-                        onMouseOut={(e) => handleHoverExit(e)}
-                        data-cursor-text="Read Now"
-                        data-cursor-size="120px"
-                        data-cursor-color="#000"
-                        alt="Blog-img"
-                        width={800}
-                        height={1160}
-                        priority={false}
-                      />
-                      <h2 className="blog-list-tag">{post.name}</h2>
-                    </div>
-                    <h3 className="desc-tag">{post.description}</h3>
-                  </Link>
-                </div>
-              </div>
+              <Link className="blog-cat-button" href="/blog">
+                <button className='button--calypso' id="anim">
+                  <span>All</span>
+                </button>
+              </Link>
+            {categoryData.map((data, index) => (
+              <Link className="blog-cat-button" href={data.slug} key={index}>
+                <button className={data.slug === category ? 'active' : 'button--calypso'} id="anim">
+                  <span>{data.categoryName}</span>
+                </button>
+              </Link>
             ))}
+
+              <div className="ul-items">
+                {filteredBlogs.length === 0 ? (
+                  <p className="no-blog-msg">No blogs found for this category.</p>
+                ) : (
+                  filteredBlogs.map((post, index) => (
+                    <div ref={(el) => (postRef.current[index] = el)} className="blog-page-grid anim" key={post.id}>
+                      <div className="ul-blog" id="img">
+                        <Link href={`${post.Link}`}>
+                          <div className="image-box-blog">
+                            <Image
+                              src={post.image}
+                              className="img-blog"
+                              onMouseEnter={(e) => handleHover(e)}
+                              onMouseOut={(e) => handleHoverExit(e)}
+                              data-cursor-text="Read Now"
+                              data-cursor-size="120px"
+                              data-cursor-color="#000"
+                              alt="Blog-img"
+                              width={800}
+                              height={1160}
+                              priority={false}
+                            />
+                            <h2 className="blog-list-tag">{post.name}</h2>
+                          </div>
+                          <h3 className="desc-tag">{post.description}</h3>
+                        </Link>
+                      </div>
+                    </div>
+                  ))
+                )}
+              </div>
+            </div>
           </div>
-        </div>
-        </div>
         </div>
       </main>
 

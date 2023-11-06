@@ -31,38 +31,30 @@ const BlogInfo = ({ author, date, shareLink }) => {
 
   return (
     <>
-      <div className="box-blog" id='anim'>
-        <div className="share-box-blog" >
-          <div>
-            <h6 className='auth__dt'>Author</h6>
-          </div>
-        </div>
-        <p className="auth__dt-ans">{author}</p>
+      <div className="b__dt-auth-box" id='anim'>
+        <h6 className='b__dt-auth-dt'>Author</h6>
+        <p className="b__dt-auth-dt-ans">{author}</p>
       </div>
-      <div className="box-blog" id='anim'>
-        <div className="share-box-blog">
-          <div>
-            <h6 className='auth__dt'>Posted on</h6>
-          </div>
-        </div>
-        <p className="auth__dt-ans">{date}</p>
+
+      <div className="b__dt-auth-box" id='anim'>
+        <h6 className='b__dt-auth-dt'>Posted on</h6>
+        <p className="b__dt-auth-dt-ans">{date}</p>
       </div>
-      <div className="box-blog" id='anim'>
-        <div className="share-box-blog">
-          <h6 className='auth__dt'>Share Article</h6>
-        </div>
-        <div className="social-icons">
+
+      <div className="b__dt-auth-box" id='anim'>
+          <h6 className='b__dt-auth-dt'>Share Article</h6>
+        <div className="b__dt-s-icon">
           <LinkedinShareButton url={"https://weareenigma.com/"} quote="Read more articles like this on our website - https://weareenigma.com" hashtag="#weareenigma">
-            <img src="/assets/blogs/blog-detail/social/linkedin.webp" alt="social-icon" />
+            <img src="/assets/blogs/blog-detail/social/linkedin.webp" alt="social icon" />
           </LinkedinShareButton>
           <FacebookShareButton url={"https://weareenigma.com/"} quote="Read more articles like this on our website - https://weareenigma.com" hashtag="#weareenigma">
-            <img src="/assets/blogs/blog-detail/social/facebook.webp" alt="social-icon" />
+            <img src="/assets/blogs/blog-detail/social/facebook.webp" alt="social icon" />
           </FacebookShareButton>
           <TwitterShareButton url={"https://weareenigma.com/"} quote="Read more articles like this on our website - https://weareenigma.com" hashtag="#weareenigma">
-            <img src="/assets/blogs/blog-detail/social/twitter.webp" alt="social-icon" />
+            <img src="/assets/blogs/blog-detail/social/twitter.webp" alt="social icon" />
           </TwitterShareButton>
           <WhatsappShareButton url={"https://weareenigma.com/"} quote="Read more articles like this on our website - https://weareenigma.com" hashtag="#weareenigma">
-            <img src="/assets/blogs/blog-detail/social/whatsapp.webp" alt="social-icon" />
+            <img src="/assets/blogs/blog-detail/social/whatsapp.webp" alt="social icon" />
           </WhatsappShareButton>
         </div>
       </div>

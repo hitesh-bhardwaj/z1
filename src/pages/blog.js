@@ -12,6 +12,7 @@ import Footer from "@/components/Footer";
 import FooterMobile from "@/components/Mobile/FooterMobile";
 import Blogs from "../components/Blogs/blogData";
 import Modal from "../components/PopupForm/formModal";
+import PageLoader from "../components/pageLoader";
 
 gsap.config({
   nullTargetWarn: false,
@@ -41,9 +42,10 @@ const buttons = [
   { label: "Design", path: "/blog/design" },
   { label: "Technology", path: "/blog/technology" },
   { label: "Marketing", path: "/blog/marketing" },
+  { label: 'Psychology', path: '/blog/consumer-psychology' },
 ];
 
-const BlogPost = ({ post, delay }) => {
+const BlogPost = ({ post }) => {
   const postRef = useRef(null);
 
   useEffect(() => {
@@ -51,9 +53,9 @@ const BlogPost = ({ post, delay }) => {
     gsap.fromTo(
       postRef.current,
       { autoAlpha: 0, y: 200 },
-      { autoAlpha: 1, y: 0, duration: 1.5, delay: delay }
+      { autoAlpha: 1, y: 0, duration: 1.5, delay: 3.8 }
     );
-  }, [delay]);
+  }, []);
 
   return (
     <div ref={postRef} className="blog-page-grid">
@@ -82,35 +84,8 @@ const BlogPost = ({ post, delay }) => {
   );
 };
 
-const ITEMS_PER_PAGE = 6; // Number of blogs to load per page
-
 export default function BlogsPage() {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [blogs, setBlogs] = useState([]);
-  const [hasMore, setHasMore] = useState(true);
-
-  useEffect(() => {
-    setBlogs(Blogs.slice(0, ITEMS_PER_PAGE));
-  }, []);
-
-  const loadMoreBlogs = () => {
-    const currentLength = blogs.length;
-    const moreBlogs = Blogs.slice(currentLength, currentLength + ITEMS_PER_PAGE);
-  
-    if (moreBlogs.length) {
-      setBlogs([...blogs, ...moreBlogs]);
-    } else {
-      setHasMore(false); // No more blogs to load
-    }
-  };
-
-    // Scroll event listener for infinite scrolling
-  const handleScroll = ({ offset }) => {
-    // Check if the user has scrolled near the bottom
-    if (offset.y + window.innerHeight >= document.body.scrollHeight - (-500)) {
-      loadMoreBlogs();
-    }
-  };
 
   // Hero Section Animation
   useEffect(() => {
@@ -155,38 +130,6 @@ export default function BlogsPage() {
     );
     return () => tl.kill();
   }, []);
-
-  // Page Transitions
-  useEffect(() => {
-    const loaderBars = document.querySelectorAll("#loaderbars");
-    const tl = gsap.timeline();
-
-    let ctx = gsap.context(() => {
-
-      tl.from(".loader-wrap-heading h1", {
-        delay: 0.5,
-        y: 200,
-        skewY: 10,
-        duration: 1,
-      }).to(".loader-wrap-heading h1", {
-        delay: 0.5,
-        y: -200,
-        skewY: 10,
-        duration: 1,
-      }).to(loaderBars, {
-        height: 0,
-        duration: 0.6,
-        delay: -0.5,
-        ease: "power2.easeIn",
-        stagger: 0.1,
-      }).to("#loader", {
-        y: "-1500",
-        opacity: 0,
-        ease: "power2.inOut",
-      });
-    });
-    return () => ctx.revert();
-  }, []);
   
   return (
     <>
@@ -212,30 +155,14 @@ export default function BlogsPage() {
               }}
             />
 
-      <SmoothScroll onScroll={handleScroll} />
+      <SmoothScroll />
 
 {/*========Loader========*/}
-      <div className="loader-wrap" id="loader">
-      <div className='mainLoaderBg'>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-          </div>
+    <PageLoader text="Our Thoughts & Resources" />
 
-        <div className="loader-wrap-heading">
-          <span>
-            <h1>Our Thoughts & Resources</h1>
-          </span>
-        </div>
-      </div>
+    <Cursor isGelly={true} />
 
-      <Cursor isGelly={true} />
-
-      <div>
-        <Header />
-      </div>
+    <Header />
 
 {/* PopUp Modal Button */}
   <Modal />
@@ -265,7 +192,7 @@ export default function BlogsPage() {
 
                   <div className="ul-items">
                     {Blogs.map((post, index) => (
-                      <BlogPost key={index} post={post} delay={index < ITEMS_PER_PAGE ? 3.8 : 0} />
+                      <BlogPost key={index} post={post} />
                     ))}
                   </div>
                 </div>

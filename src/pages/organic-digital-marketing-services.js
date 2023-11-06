@@ -16,7 +16,8 @@ import NextBox from '@/components/ServiceDetail/Marketing/MarketingNext';
 import OfferCards from '@/components/ServiceDetail/Marketing/OfferCards';
 import Modal from '../components/PopupForm/formModal';
 import { NextSeo } from 'next-seo';
-import ServiceBlogs from '../components/ServiceDetail/ServiceBlogs';
+import ServiceBlogs from '@/components/ServiceDetail/ServiceBlogs';
+import PageLoader from '@/components/pageLoader';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -44,38 +45,6 @@ const handleHover = (e) => {
   };  
 
 export default function marketingandplanning() {
-
-// Page Transitions
-useEffect(() => {
-  const loaderBars = document.querySelectorAll("#loaderbars");
-  const tl = gsap.timeline();
-
-  let ctx = gsap.context(() => {
-
-    tl.from(".loader-wrap-heading h1", {
-      delay: 0.5,
-      y: 200,
-      skewY: 10,
-      duration: 1,
-    }).to(".loader-wrap-heading h1", {
-      delay: 0.5,
-      y: -200,
-      skewY: 10,
-      duration: 1,
-    }).to(loaderBars, {
-      height: 0,
-      duration: 0.6,
-      delay: -0.5,
-      ease: "power2.easeIn",
-      stagger: 0.1,
-    }).to("#loader", {
-      y: "-1500",
-      opacity: 0,
-      ease: "power2.inOut",
-    });
-  });
-  return () => ctx.revert();
-}, []);
 
 if (globalThis.innerWidth>1200) {
 // Hero Section Animation
@@ -292,27 +261,11 @@ useEffect(() => {
               }}
             />  
 
-      {/*Page Loader*/}
-      <div className="loader-wrap" id="loader" style={{ zIndex: 999 }}>
-      <div className='mainLoaderBg'>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-          </div>
-
-        <div className="loader-wrap-heading">
-          <span>
-            <h1>Marketing & Services</h1>
-          </span>
-        </div>
-      </div>
-      {/*Page Loader*/}
-
     <SmoothScroll />
 
     <Cursor isGelly={true} />
+
+    <PageLoader text="Marketing & Services" />
 
     <div>
         <Header />

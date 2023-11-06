@@ -1,26 +1,20 @@
 import React, { useEffect } from "react";
-import Head from "next/head";
 import { Cursor } from "../../cursor/index";
 import "react-creative-cursor/dist/styles.css";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { NextSeo } from "next-seo";
-import {
-  FacebookShareButton,
-  LinkedinShareButton,
-  TwitterShareButton,
-  WhatsappShareButton,
-} from "next-share";
-
 import Header from "@/components/Header/Header";
 import SmoothScroll from "@/components/utils/SmoothScroll";
 import Footer from "@/components/Footer";
 import FooterMobile from "@/components/Mobile/FooterMobile";
-import RelatedBlogs from "../components/Blogs/relatedBlogs";
+import RelatedBlogs from "@/components/Blogs/relatedBlogs";
+import BlogInfo from "@/components/Blogs/BlogInfo";
+import PageLoader from "@/components/pageLoader";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export default function blogWebsiteCost() {
+export default function BlogDetail() {
   // Hero Section Animation
   useEffect(() => {
     const tl = gsap.timeline();
@@ -49,13 +43,13 @@ export default function blogWebsiteCost() {
   useEffect(() => {
     const tl = gsap.timeline();
     tl.fromTo(
-      "#anim",
+      "#right-section",
       {
         opacity: 0,
         translateY: 200,
       },
       {
-        delay: 3.8,
+        delay: 4,
         duration: 1.3,
         opacity: 1,
         stagger: 0.1,
@@ -65,10 +59,11 @@ export default function blogWebsiteCost() {
     return () => tl.kill();
   }, []);
 
+
+if (globalThis.innerWidth>1024) {
   // Section Pinnnig
   useEffect(() => {
     let ctx = gsap.context(() => {
-      let brandImageBlock = document.getElementById("main-blog-container");
       let brandImagePin = document.getElementById("left-section");
       let brandImageNotPin = document.getElementById("right-section");
       ScrollTrigger.create({
@@ -76,75 +71,14 @@ export default function blogWebsiteCost() {
         start: "top 10%",
         endTrigger: brandImageNotPin,
         end: "bottom 80%",
-        // the nect line (with the arrow function) is 'a functional value' () =>
-        // end: () => `${brandImageNotPin.offsetHeight - brandImagePin.offsetHeight}px 20%`,
-        // this line ensures the functional value gets recalculated on resize
         invalidateOnRefresh: true,
         pin: brandImagePin,
-        // pinSpacing: true,
         markers: false,
       });
     });
     return () => ctx.revert();
   });
-
-  // Parallax Image
-  if (globalThis.innerWidth > 776) {
-    useEffect(() => {
-      let ctx = gsap.context(() => {
-        gsap.utils.toArray(".image-container").forEach(function (container) {
-          let image = container.querySelector("img");
-  
-          gsap.to(image, {
-            y: () => image.offsetHeight - container.offsetHeight,
-            ease: "none",
-            startAt: { y: "-25%" },
-            scrollTrigger: {
-              trigger: container,
-              scrub: true,
-              pin: false,
-              markers: false,
-            },
-            y: "25%",
-            ease: "none",
-          });
-        });
-      });
-      return () => ctx.revert();
-    });
-  }
-
-  // Page Transitions
-  useEffect(() => {
-    const loaderBars = document.querySelectorAll("#loaderbars");
-    const tl = gsap.timeline();
-
-    let ctx = gsap.context(() => {
-
-      tl.from(".loader-wrap-heading h1", {
-        delay: 0.5,
-        y: 200,
-        skewY: 10,
-        duration: 1,
-      }).to(".loader-wrap-heading h1", {
-        delay: 0.5,
-        y: -200,
-        skewY: 10,
-        duration: 1,
-      }).to(loaderBars, {
-        height: 0,
-        duration: 0.6,
-        delay: -0.5,
-        ease: "power2.easeIn",
-        stagger: 0.1,
-      }).to("#loader", {
-        y: "-1500",
-        opacity: 0,
-        ease: "power2.inOut",
-      });
-    });
-    return () => ctx.revert();
-  }, []);
+}
 
   return (
     <>
@@ -172,131 +106,32 @@ export default function blogWebsiteCost() {
               }}
             />
 
-      <Head>
-        <title>
-          How Much Should a Website Cost? Enigma's Insightful Guide
-        </title>
-        <meta name="description" content="Unravel the complexities of website pricing with Enigma's comprehensive guide. Understand factors influencing costs and the value of strategic planning." />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
-        ></meta>
-        <link rel="icon" href="/fav-icon.png" />
-      </Head>
-
-      <div className="loader-wrap" id="loader">
-      <div className='mainLoaderBg'>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-          </div>
-        <div className="loader-wrap-heading">
-          <span>
-            <h1>How Much Should a Website Cost?</h1>
-          </span>
-        </div>
-      </div>
-
       <SmoothScroll />
 
       <Cursor isGelly={true} />
 
-      <div>
-        <Header />
-      </div>
+      <PageLoader text="How Much Should a Website Cost?" />
 
-      <div className="blog-detail-main-section">
+      <Header />
+
+      <div className="b__dt-main">
         <div
-          className="blog-detail-heading"
+          className="b__dt-head-contain"
           data-cursor-size="10px"
-          data-cursor-text=""
-        >
+          data-cursor-text="">
           <h1 data-jelly id="blog">
             How Much Should a Website Cost? Cracking the Ultimate Conundrum
           </h1>
         </div>
 
-        <div className="main-blog-container" id="main-blog-container">
-          <div className="left-section" id="left-section">
-            <div className="box-blog" id="anim">
-              <div className="share-box-blog">
-                <div>
-                  <h1>Posted By</h1>
-                </div>
-              </div>
-              <h2 className="timezone-update">Bhaskar Varshney</h2>
-            </div>
-            <div className="box-blog" id="anim">
-              <div className="share-box-blog">
-                <div>
-                  <h1>Posted on</h1>
-                </div>
-              </div>
-              <h2 className="timezone-update">14/03/2023</h2>
-            </div>
-            <div className="box-blog" id="anim">
-              <div className="share-box-blog">
-                <h1>Share Article</h1>
-              </div>
-              <div className="social-icons">
-                <LinkedinShareButton
-                  url={"https://weareenigma.com/how-much-should-a-website-cost"}
-                  quote={
-                    "next-share is a social share buttons for your next React apps."
-                  }
-                  hashtag={"#weareenigma"}
-                >
-                  <img
-                    src="/assets\blogs\blog-detail\social/linkedin.webp"
-                    alt="social-icons"
-                  />
-                </LinkedinShareButton>
-
-                <FacebookShareButton
-                  url={"https://weareenigma.com/how-much-should-a-website-cost"}
-                  quote={
-                    "next-share is a social share buttons for your next React apps."
-                  }
-                  hashtag={"#weareenigma"}
-                >
-                  <img
-                    src="/assets\blogs\blog-detail\social/facebook.webp"
-                    alt="social-icons"
-                  />
-                </FacebookShareButton>
-
-                <TwitterShareButton
-                  url={"https://weareenigma.com/how-much-should-a-website-cost"}
-                  quote={
-                    "next-share is a social share buttons for your next React apps."
-                  }
-                  hashtag={"#weareenigma"}
-                >
-                  <img
-                    src="/assets\blogs\blog-detail\social/twitter.webp"
-                    alt="social-icons"
-                  />
-                </TwitterShareButton>
-
-                <WhatsappShareButton
-                  url={"https://weareenigma.com/how-much-should-a-website-cost"}
-                  quote={
-                    "next-share is a social share buttons for your next React apps."
-                  }
-                  hashtag={"#weareenigma"}
-                >
-                  <img
-                    src="/assets\blogs\blog-detail\social/whatsapp.webp"
-                    alt="social-icons"
-                  />
-                </WhatsappShareButton>
-              </div>
-            </div>
+        <div className="b__dt-main-blog" id="main-blog-container">
+          <div className="b__dt-auth" id="left-section">
+            <BlogInfo author={"Bhaskar Varshney"} date={"14/03/2023"} shareLink={"website-cost-guide"} />
           </div>
-          <div className="right-section" id="right-section">
-            <h3 id="anim" className="italic-text">
+
+          <div className="b__dt-content" id="right-section">
+
+            <p className="b__dt-it">
               Are you struggling to figure out the cost of a website? Navigating
               the complex world of website pricing can be challenging, but our
               comprehensive guide is here to help you unravel the mystery. In
@@ -311,10 +146,16 @@ export default function blogWebsiteCost() {
               join us as we break down the enigma of website costs, making the
               entire process more accessible and empowering you to make informed
               decisions for your digital journey.
-            </h3>
+            </p>
 
+            <div className="b__dt-img">
+              <img
+                src="/assets/blogs/blog-detail/website-cost-guide/website-cost-guide-1.webp"
+                alt="Website Cost Guide Blog Image 1"
+              />
+            </div>
 
-            <p id="anim">
+            <p>
               "Or really, how long is a piece of string?" As the famous saying
               goes, trying to estimate the cost of a website can feel like an
               impossible task. With agencies offering vastly different pricing
@@ -325,25 +166,27 @@ export default function blogWebsiteCost() {
               and how your money is spent. So, let's dive into the digital
               rabbit hole and solve this conundrum.
             </p>
-            <h3 className="bold-h" id="anim">
+            <h2>
               Decoding Website Scoping
-            </h3>
-            <p id="anim">
+            </h2>
+            <p>
               Before we tackle the budgeting aspect, it's essential to
               understand how agencies allocate your money at each stage of a
               website build.
             </p>
 
-            <h3 className="bold-h" id="anim">
+            <h2>
               The Billable Hours Conundrum
-            </h3>
-            <p id="anim">
+            </h2>
+            <p>
               You might be tempted to approach an agency with a detailed list of
               features and sections for your website, hoping for a quote in
               return. However, this approach can lead you to work with agencies
               that focus on ticking off features without considering your unique
               business needs.
-              <br />
+            </p>
+
+            <p>
               Surprisingly, the number of features on your website doesn't
               significantly impact its cost. Features can often be repurposed
               from previous projects, assembled from templates, or shoehorned
@@ -354,18 +197,9 @@ export default function blogWebsiteCost() {
               is, the better they're likely to be at delivering.
             </p>
 
-            <div className="blog-img">
-              <div className="image-container blog-img-container">
-                <img
-                  src="/assets/blogs/blog-detail/website-cost/1.jpg"
-                  alt="Img"
-                />
-              </div>
-            </div>
-
-            <h3 className="bold-h">
+            <h2>
               Establishing Your Budget: The Ball is in Your Court
-            </h3>
+            </h2>
             <p>
               The best agencies excel at finding solutions – including your
               budget. Providing your budget helps the agency strategize
@@ -375,9 +209,16 @@ export default function blogWebsiteCost() {
               conservative plan.
             </p>
 
-            <h3 className="bold-h">
+            <div className="b__dt-img">
+              <img
+                src="/assets/blogs/blog-detail/website-cost-guide/website-cost-guide-2.webp"
+                alt="Website Cost Guide Blog Image 2"
+              />
+            </div>
+
+            <h2>
               Establishing Your Budget: The How-To Guide
-            </h3>
+            </h2>
             <p>
               The ideal way to set your budget is by considering your business
               scale and the expected return from the project. Comparing the
@@ -387,41 +228,51 @@ export default function blogWebsiteCost() {
               achieve comparable value per year. Conversely, if your business
               requires a junior or mid-level role with a $40k salary, you might
               opt for a more modest website investment.
-              <br />
+            </p>
+
+            <p>
               The key is to assess your current situation: what you can afford,
               your goals, and how you want to achieve them. Once you've grasped
               these fundamentals, it's time to contact the agencies.
             </p>
-
-            <div className="blog-img">
-              <div className="image-container blog-img-container">
-                <img
-                  src="/assets/blogs/blog-detail/website-cost/2.jpg"
-                  alt="Img"
-                />
-              </div>
-            </div>
             
-            <h3 className="bold-h ">
+            <h2>
               Navigating the Agency Landscape: Choosing the Right One
-            </h3>
+            </h2>
             <p>
               With a clear understanding of your budget and website scope, you
               can now approach agencies confidently. As you embark on this
               digital odyssey, remember to look for agencies that offer
               strategic solutions tailored to your unique challenges and
               objectives.
-              
-              <br />
+            </p>
+
+            <p>
               So, the next time someone asks, "How much should a website cost?"
               you can channel your inner Morpheus and say, "The cost is not as
               important as the value it brings to your business."
-              
-              <br />
+            </p>
+
+            <p>
               By following the advice in this guide, you'll be well-prepared to
               embark on your digital journey and create a website that's not
               only cost-effective but also designed to deliver results.
             </p>
+
+            <div className="blog__dt-tags">
+                <h1 className="blog__dt-tag">
+                    Website Costing
+                </h1>
+                <h1 className="blog__dt-tag">
+                    Marketing
+                </h1>
+                <h1 className="blog__dt-tag">
+                    UI/UX Design
+                </h1>
+                <h1 className="blog__dt-tag">
+                    Strategy
+                </h1>
+            </div>
           </div>
         </div>
       </div>

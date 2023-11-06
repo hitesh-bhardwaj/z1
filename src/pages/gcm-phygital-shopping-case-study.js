@@ -12,7 +12,8 @@ import SmoothScroll from "@/components/utils/SmoothScroll";
 import Footer from "@/components/Footer";
 import FooterMobile from "@/components/Mobile/FooterMobile";
 import Image from "next/image";
-import ProjectSlider from "../components/CaseStudies/ProjectSlider";
+import ProjectSlider from "@/components/CaseStudies/ProjectSlider";
+import PageLoader from "@/components/pageLoader";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -226,30 +227,12 @@ export default function gcm() {
 
       <SmoothScroll />
 
-      <div className="loader-wrap" id="loader">
-      <div className='mainLoaderBg'>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-          </div>
-
-        <div className="loader-wrap-heading">
-          <span>
-            <h1>
-              Garden <span className="loader-font">City</span> Mall
-            </h1>
-          </span>
-        </div>
-      </div>
-
       <Cursor isGelly={true} />
 
+      <PageLoader text="Garden City Mall Case Study" />
+
       <main>
-        <div>
-          <Header />
-        </div>
+        <Header />
 
         <div className={styles.Main}>
 

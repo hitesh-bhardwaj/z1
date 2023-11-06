@@ -1,8 +1,6 @@
 import React, { useEffect } from "react";
-import Head from "next/head";
 import { Cursor } from "../../cursor/index";
 import "react-creative-cursor/dist/styles.css";
-import Image from "next/image";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import SmoothScroll from "@/components/utils/SmoothScroll";
@@ -17,77 +15,44 @@ import Link from "next/link";
 import jobs from "@/components/Careers/JobsData";
 
 import CareerTestimonial from "../components/Careers/Testimonial";
+import PageLoader from "../components/pageLoader";
+import { NextSeo } from "next-seo";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Careers(){
 
-// Page Transitions
-  useEffect(() => {
-    const loaderBars = document.querySelectorAll("#loaderbars");
-    const tl = gsap.timeline();
-
-    let ctx = gsap.context(() => {
-
-      tl.from(".loader-wrap-heading h1", {
-        delay: 0.5,
-        y: 200,
-        skewY: 10,
-        duration: 1,
-      }).to(".loader-wrap-heading h1", {
-        delay: 0.5,
-        y: -200,
-        skewY: 10,
-        duration: 1,
-      }).to(loaderBars, {
-        height: 0,
-        duration: 0.6,
-        delay: -0.5,
-        ease: "power2.easeIn",
-        stagger: 0.1,
-      }).to("#loader", {
-        y: "-1500",
-        opacity: 0,
-        ease: "power2.inOut",
-      });
-    });
-    return () => ctx.revert();
-  }, []);
-
     return(
         <div className="bg-white">
-            <Head>
-                <title>
-                    Enigma Digital | Careers | Find The Right Jobs
-                </title>
-                <meta
-                    name="description"
-                    content="Experience top-tier UI/UX design, front-end development, and organic marketing jobs with Enigma Digital. Find The Right Jobs"
-                />
-                <meta
-                    name="viewport"
-                    content="width=device-width, initial-scale=1.0, maximum-scale=5.0">          
-                </meta>
-                <link rel="icon" href="/fav-icon.png" />
-            </Head>
 
-            <div className="loader-wrap" id="loader" style={{ zIndex: 999 }}>
-                <div className='mainLoaderBg'>
-                    <span className='mainLoaderBar' id='loaderbars'></span>
-                    <span className='mainLoaderBar' id='loaderbars'></span>
-                    <span className='mainLoaderBar' id='loaderbars'></span>
-                    <span className='mainLoaderBar' id='loaderbars'></span>
-                    <span className='mainLoaderBar' id='loaderbars'></span>
-                </div>
-                <div className="loader-wrap-heading">
-                <span>
-                    <h1>Find Jobs</h1>
-                </span>
-                </div>
-            </div>
+            <NextSeo
+              title="Enigma Digital | Careers | Find The Right Jobs"
+              description="Experience top-tier UI/UX design, front-end development, and organic marketing jobs with Enigma Digital. Find The Right Jobs"
+              canonical="https://weareenigma.com/careers"
+              openGraph={{
+                url: "https://weareenigma.com/careers",
+                title: "Enigma Digital | Careers | Find The Right Jobs",
+                description:
+                  "Experience top-tier UI/UX design, front-end development, and organic marketing jobs with Enigma Digital. Find The Right Jobs",
+                  images: [
+                  {
+                    url: "https://i.ibb.co/k0NMQw9/home.png",
+                    width: 400,
+                    height: 600,
+                    alt: "Enigma Image",
+                    type: "image/png",
+                  },
+                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
+                ],
+                siteName: "Enigma Digital Website",
+              }}
+            />    
 
             <SmoothScroll />
+
             <Cursor isGelly={true} />
+
+            <PageLoader text="Find Jobs" />
 
             <Header/>        
 

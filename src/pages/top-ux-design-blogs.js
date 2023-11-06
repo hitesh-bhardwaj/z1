@@ -4,26 +4,17 @@ import "react-creative-cursor/dist/styles.css";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { NextSeo } from "next-seo";
-import {
-  FacebookShareButton,
-  LinkedinShareButton,
-  TwitterShareButton,
-  WhatsappShareButton,
-} from "next-share";
-
 import Header from "@/components/Header/Header";
 import SmoothScroll from "@/components/utils/SmoothScroll";
 import Footer from "@/components/Footer";
 import FooterMobile from "@/components/Mobile/FooterMobile";
-import RelatedBlogs from "../components/Blogs/relatedBlogs";
+import RelatedBlogs from "@/components/Blogs/relatedBlogs";
+import BlogInfo from "@/components/Blogs/BlogInfo";
+import PageLoader from "@/components/pageLoader";
 
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.config({
-  nullTargetWarn: false,
-});
-
-export default function uxdesigntools() {
+export default function BlogDetail() {
   // Hero Section Animation
   useEffect(() => {
     const tl = gsap.timeline();
@@ -52,13 +43,13 @@ export default function uxdesigntools() {
   useEffect(() => {
     const tl = gsap.timeline();
     tl.fromTo(
-      "#anim",
+      "#right-section",
       {
         opacity: 0,
         translateY: 200,
       },
       {
-        delay: 3.8,
+        delay: 4,
         duration: 1.3,
         opacity: 1,
         stagger: 0.1,
@@ -68,10 +59,11 @@ export default function uxdesigntools() {
     return () => tl.kill();
   }, []);
 
+
+if (globalThis.innerWidth>1024) {
   // Section Pinnnig
   useEffect(() => {
     let ctx = gsap.context(() => {
-      let brandImageBlock = document.getElementById("main-blog-container");
       let brandImagePin = document.getElementById("left-section");
       let brandImageNotPin = document.getElementById("right-section");
       ScrollTrigger.create({
@@ -79,75 +71,14 @@ export default function uxdesigntools() {
         start: "top 10%",
         endTrigger: brandImageNotPin,
         end: "bottom 80%",
-        // the nect line (with the arrow function) is 'a functional value' () =>
-        // end: () => `${brandImageNotPin.offsetHeight - brandImagePin.offsetHeight}px 20%`,
-        // this line ensures the functional value gets recalculated on resize
         invalidateOnRefresh: true,
         pin: brandImagePin,
-        // pinSpacing: true,
         markers: false,
       });
     });
     return () => ctx.revert();
   });
-
-   // Parallax Image
-   if (globalThis.innerWidth > 776) {
-    useEffect(() => {
-      let ctx = gsap.context(() => {
-        gsap.utils.toArray(".image-container").forEach(function (container) {
-          let image = container.querySelector("img");
-  
-          gsap.to(image, {
-            y: () => image.offsetHeight - container.offsetHeight,
-            ease: "none",
-            startAt: { y: "-25%" },
-            scrollTrigger: {
-              trigger: container,
-              scrub: true,
-              pin: false,
-              markers: false,
-            },
-            y: "25%",
-            ease: "none",
-          });
-        });
-      });
-      return () => ctx.revert();
-    });
-  }
-
-  // Page Transitions
-  useEffect(() => {
-    const loaderBars = document.querySelectorAll("#loaderbars");
-    const tl = gsap.timeline();
-
-    let ctx = gsap.context(() => {
-
-      tl.from(".loader-wrap-heading h1", {
-        delay: 0.5,
-        y: 200,
-        skewY: 10,
-        duration: 1,
-      }).to(".loader-wrap-heading h1", {
-        delay: 0.5,
-        y: -200,
-        skewY: 10,
-        duration: 1,
-      }).to(loaderBars, {
-        height: 0,
-        duration: 0.6,
-        delay: -0.5,
-        ease: "power2.easeIn",
-        stagger: 0.1,
-      }).to("#loader", {
-        y: "-1500",
-        opacity: 0,
-        ease: "power2.inOut",
-      });
-    });
-    return () => ctx.revert();
-  }, []);
+}
 
   return (
     <>
@@ -175,121 +106,33 @@ export default function uxdesigntools() {
       }}
     />    
 
-      <div className="loader-wrap" id="loader">
-      <div className='mainLoaderBg'>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-          </div>
-
-        <div className="loader-wrap-heading">
-          <span>
-            <h1>Top 20 UX Design Blogs</h1>
-          </span>
-        </div>
-      </div>
-
       <SmoothScroll />
 
       <Cursor isGelly={true} />
 
-      <div>
-        <Header />
-      </div>
+      <PageLoader text="Top 20 UX Design Blogs" />
 
-      <div className="blog-detail-main-section">
+      <Header />
+
+      <div className="b__dt-main">
         <div
-          className="blog-detail-heading"
+          className="b__dt-head-contain"
           data-cursor-size="10px"
-          data-cursor-text=""
-        >
+          data-cursor-text="">
           <h1 data-jelly id="blog">
             Top 20 UX Design Blogs to Follow for Innovative Ideas and Expert
             Insights
           </h1>
         </div>
 
-        <div className="main-blog-container" id="main-blog-container">
-          <div className="left-section" id="left-section">
-            <div className="box-blog" id="anim">
-              <div className="share-box-blog">
-                <div>
-                  <h1>Posted By</h1>
-                </div>
-              </div>
-              <h2 className="timezone-update">Bhaskar Varshney</h2>
-            </div>
-            <div className="box-blog" id="anim">
-              <div className="share-box-blog">
-                <div>
-                  <h1>Posted on</h1>
-                </div>
-              </div>
-              <h2 className="timezone-update">25/11/2022</h2>
-            </div>
-            <div className="box-blog" id="anim">
-              <div className="share-box-blog">
-                <h1>Share Article</h1>
-              </div>
-              <div className="social-icons">
-                <LinkedinShareButton
-                  url={"https://weareenigma.com/top-20-ux-design-blogs"}
-                  quote={
-                    "next-share is a social share buttons for your next React apps."
-                  }
-                  hashtag={"#weareenigma"}
-                >
-                  <img
-                    src="/assets\blogs\blog-detail\social/linkedin.webp"
-                    alt="social-icons"
-                  />
-                </LinkedinShareButton>
-
-                <FacebookShareButton
-                  url={"https://weareenigma.com/top-20-ux-design-blogs"}
-                  quote={
-                    "next-share is a social share buttons for your next React apps."
-                  }
-                  hashtag={"#weareenigma"}
-                >
-                  <img
-                    src="/assets\blogs\blog-detail\social/facebook.webp"
-                    alt="social-icons"
-                  />
-                </FacebookShareButton>
-
-                <TwitterShareButton
-                  url={"https://weareenigma.com/top-20-ux-design-blogs"}
-                  quote={
-                    "next-share is a social share buttons for your next React apps."
-                  }
-                  hashtag={"#weareenigma"}
-                >
-                  <img
-                    src="/assets\blogs\blog-detail\social/twitter.webp"
-                    alt="social-icons"
-                  />
-                </TwitterShareButton>
-
-                <WhatsappShareButton
-                  url={"https://weareenigma.com/top-20-ux-design-blogs"}
-                  quote={
-                    "next-share is a social share buttons for your next React apps."
-                  }
-                  hashtag={"#weareenigma"}
-                >
-                  <img
-                    src="/assets\blogs\blog-detail\social/whatsapp.webp"
-                    alt="social-icons"
-                  />
-                </WhatsappShareButton>
-              </div>
-            </div>
+        <div className="b__dt-main-blog" id="main-blog-container">
+          <div className="b__dt-auth" id="left-section">
+            <BlogInfo author={"Bhaskar Varshney"} date={"25/11/2022"} shareLink={"top-ux-design-blogs"} />
           </div>
-          <div className="right-section" id="right-section">
-            <p id="anim">
+
+          <div className="b__dt-content" id="right-section">
+
+            <p className="b__dt-it">
               The realm of User Experience (UX) design is ever-evolving, with
               new trends, tools, and best practices constantly emerging to
               create better, more user-centred digital experiences. The dynamic
@@ -303,10 +146,7 @@ export default function uxdesigntools() {
               inspiration from industry experts.
             </p>
 
-            
-            
-
-            <p id="anim">
+            <p>
               To help you stay informed and inspired, we have meticulously
               compiled a list of the top 20 UX design blogs to follow. These
               blogs cover a wide array of topics, including interaction design,
@@ -319,16 +159,17 @@ export default function uxdesigntools() {
               this journey of discovery and self-improvement!
             </p>
 
-            
-            
+            <div className="b__dt-img">
+              <img
+                src="/assets/blogs/blog-detail/top-20-ux-design-blogs/top-20-ux-design-blogs-1.webp"
+                alt="Top UX Design Blogs Image 1"
+              />
+            </div>
 
-            <h3
-              className="bold-h blog-mt-0"
-              id="anim"
-            >
+            <h2>
               NN/g Nielsen Norman Group
-            </h3>
-            <p id="anim">
+            </h2>
+            <p>
               NN/g is a pioneer in the field of UX design, led by usability
               experts Jakob Nielsen and Don Norman. Their blog covers a wide
               range of UX design topics, from usability testing to interaction
@@ -340,16 +181,10 @@ export default function uxdesigntools() {
               Comprehensive guides, research articles, and expert opinions.
             </p>
 
-            
-            
-
-            <h3
-              className="bold-h blog-mt-0"
-              id="anim"
-            >
+            <h2>
               UX Collective
-            </h3>
-            <p id="anim">
+            </h2>
+            <p>
               UX Collective is a popular Medium publication that features a
               diverse range of UX design articles written by industry
               professionals. Their blog covers topics such as interaction
@@ -362,16 +197,10 @@ export default function uxdesigntools() {
               Thought-provoking articles, case studies, and practical guides.
             </p>
 
-            
-            
-
-            <h3
-              className="bold-h blog-mt-0"
-              id="anim"
-            >
+            <h2>
               A List Apart
-            </h3>
-            <p id="anim">
+            </h2>
+            <p>
               A List Apart is a well-respected web design and development
               publication that also features valuable UX design content. Their
               blog focuses on topics such as responsive design, accessibility,
@@ -383,16 +212,10 @@ export default function uxdesigntools() {
               Expert opinions, in-depth articles, and design case studies.
             </p>
 
-            
-            
-
-            <h3
-              className="bold-h blog-mt-0"
-              id="anim"
-            >
+            <h2>
               Smashing Magazine
-            </h3>
-            <p id="anim">
+            </h2>
+            <p>
               Smashing Magazine is a leading web design and development resource
               that also covers UX design topics. Their blog offers a wide range
               of articles, from design trends to best practices and practical
@@ -403,21 +226,10 @@ export default function uxdesigntools() {
               <span className="bold span-font-size-2">Content type:</span>{" "}
               Practical guides, design inspiration, and industry news.
             </p>
-
-            <div className="blog-img">
-              <div className="image-container blog-img-container">
-                <img
-                  src="/assets/blogs/blog-detail/top-20-ux-design-blogs/1.jpg"
-                  alt="Img"
-                />
-              </div>
-            </div>
-
             
-            
-            <h3 className="bold-h blog-mt-0">
+            <h2>
               Enigma Digital
-            </h3>
+            </h2>
             <p>
               Enigma Digital's UX design blog offers valuable insights and
               practical tips for UX design professionals looking to improve
@@ -432,12 +244,9 @@ export default function uxdesigntools() {
               In-depth articles, case studies, and practical guides.
             </p>
 
-            
-            
-
-            <h3 className="bold-h blog-mt-0">
+            <h2>
               UX Design
-            </h3>
+            </h2>
             <p>
               UX Design, another popular Medium publication, focuses on all
               aspects of user experience design. Their blog covers topics such
@@ -449,12 +258,16 @@ export default function uxdesigntools() {
               Thought-provoking articles, practical guides, and case studies.
             </p>
 
-            
-            
+            <div className="b__dt-img">
+              <img
+                src="/assets/blogs/blog-detail/top-20-ux-design-blogs/top-20-ux-design-blogs-2.webp"
+                alt="Top UX Design Blogs Image 2"
+              />
+            </div>
 
-            <h3 className="bold-h blog-mt-0">
+            <h2>
               UX Booth
-            </h3>
+            </h2>
             <p>
               UX Booth is a popular UX design blog that covers a wide range of
               topics, including information architecture, usability testing, and
@@ -467,12 +280,9 @@ export default function uxdesigntools() {
               Expert opinions, practical guides, and in-depth articles.
             </p>
 
-            
-            
-
-            <h3 className="bold-h blog-mt-0">
+            <h2>
               UX Matters
-            </h3>
+            </h2>
             <p>
               UX Matters is an online magazine dedicated to exploring all
               aspects of user experience design. Their blog offers insightful
@@ -486,12 +296,9 @@ export default function uxdesigntools() {
               Interviews, in-depth articles, and case studies.
             </p>
 
-            
-            
-
-            <h3 className="bold-h blog-mt-0">
+            <h2>
               InVision Blog
-            </h3>
+            </h2>
             <p>
               InVision, a leading digital product design platform, also offers a
               popular blog that covers UX design topics, as well as design
@@ -505,12 +312,9 @@ export default function uxdesigntools() {
               Expert opinions, practical guides, and design inspiration.
             </p>
 
-            
-            
-
-            <h3 className="bold-h blog-mt-0">
+            <h2>
               UX Planet
-            </h3>
+            </h2>
             <p>
               UX Planet is another popular Medium publication that focuses on
               user experience design. Their blog covers topics such as usability
@@ -523,20 +327,9 @@ export default function uxdesigntools() {
               Thought-provoking articles, practical guides, and case studies.
             </p>
 
-            <div className="blog-img">
-              <div className="image-container blog-img-container">
-                <img
-                  src="/assets/blogs/blog-detail/top-20-ux-design-blogs/2.jpg"
-                  alt="Img"
-                />
-              </div>
-            </div>
-            
-            
-
-            <h3 className="bold-h blog-mt-0">
+            <h2>
               Usability Geek
-            </h3>
+            </h2>
             <p>
               Usability Geek is a UX design blog that offers practical advice
               and tips for improving usability and user experience. Their blog
@@ -549,12 +342,9 @@ export default function uxdesigntools() {
               Practical guides, expert opinions, and case studies.
             </p>
 
-            
-            
-
-            <h3 className="bold-h blog-mt-0">
+            <h2>
               52 Weeks of UX
-            </h3>
+            </h2>
             <p>
               52 Weeks of UX is a unique UX design blog that explores a
               different aspect of user experience design each week. The blog
@@ -567,12 +357,16 @@ export default function uxdesigntools() {
               In-depth articles, practical guides, and expert opinions.
             </p>
 
-            
-            
+            <div className="b__dt-img">
+              <img
+                src="/assets/blogs/blog-detail/top-20-ux-design-blogs/top-20-ux-design-blogs-3.webp"
+                alt="Top UX Design Blogs Image 3"
+              />
+            </div>
 
-            <h3 className="bold-h blog-mt-0">
+            <h2>
               UIE Brain Sparks
-            </h3>
+            </h2>
             <p>
               UIE Brain Sparks is the blog of User Interface Engineering, a
               leading research and training organization for UX professionals.
@@ -586,12 +380,9 @@ export default function uxdesigntools() {
               Research articles, expert opinions, and practical guides.
             </p>
 
-            
-            
-
-            <h3 className="bold-h blog-mt-0">
+            <h2>
               UX Movement
-            </h3>
+            </h2>
             <p>
               UX Movement is a UX design blog that offers practical tips, best
               practices, and design inspiration. Their blog covers topics such
@@ -604,12 +395,9 @@ export default function uxdesigntools() {
               Practical guides, design inspiration, and expert opinions.
             </p>
 
-            
-            
-
-            <h3 className="bold-h blog-mt-0">
+            <h2>
               The UX Blog
-            </h3>
+            </h2>
             <p>
               The UX Blog is a popular Medium publication that features a wide
               range of UX design articles, covering topics such as user
@@ -622,12 +410,9 @@ export default function uxdesigntools() {
               Thought-provoking articles, practical guides, and case studies.
             </p>
 
-            
-            
-
-            <h3 className="bold-h blog-mt-0">
+            <h2>
               UX Mastery
-            </h3>
+            </h2>
             <p>
               UX Mastery is a comprehensive resource for UX design
               professionals, offering expert advice, practical tips, and design
@@ -641,21 +426,9 @@ export default function uxdesigntools() {
               Practical guides, expert opinions, and design inspiration.
             </p>
 
-            <div className="blog-img">
-              <div className="image-container blog-img-container">
-                <img
-                  src="/assets/blogs/blog-detail/top-20-ux-design-blogs/3.jpg"
-                  alt="Img"
-                />
-              </div>
-            </div>
-
-            
-            
-
-            <h3 className="bold-h blog-mt-0">
+            <h2>
               Interaction Design Foundation (IDF) Blog
-            </h3>
+            </h2>
             <p>
               The Interaction Design Foundation is a leading educational
               platform for UX and UI design. Their blog offers valuable insights
@@ -668,12 +441,9 @@ export default function uxdesigntools() {
               In-depth articles, expert opinions, and practical guides.
             </p>
 
-            
-            
-
-            <h3 className="bold-h blog-mt-0">
+            <h2>
               Studio by UXPin
-            </h3>
+            </h2>
             <p>
               Studio by UXPin, the blog of the popular UX design tool UXPin,
               offers expert advice, practical tips, and design inspiration.
@@ -686,12 +456,9 @@ export default function uxdesigntools() {
               practical guides, design inspiration, and expert opinions.
             </p>
 
-            
-            
-
-            <h3 className="bold-h blog-mt-0">
+            <h2>
               Loop11 Blog
-            </h3>
+            </h2>
             <p>
               Loop11 is a user testing platform, and their blog offers valuable
               insights and practical tips on usability testing, user research,
@@ -705,12 +472,9 @@ export default function uxdesigntools() {
               Practical guides, expert opinions, and case studies.
             </p>
 
-            
-            
-
-            <h3 className="bold-h blog-mt-0">
+            <h2>
               Usabilla Blog
-            </h3>
+            </h2>
             <p>
               Usabilla, a popular user feedback platform, also offers a UX
               design blog that covers topics such as design principles, user
@@ -723,12 +487,9 @@ export default function uxdesigntools() {
               Expert opinions, practical guides, and design inspiration.
             </p>
 
-            
-            
-
-            <h3 className="bold-h blog-mt-0">
+            <h2>
               That’s A Wrap..!
-            </h3>
+            </h2>
             <p>
               By following these top 20 UX design blogs, you will be equipped
               with the most up-to-date industry insights, trends, and best
@@ -742,6 +503,21 @@ export default function uxdesigntools() {
               subscribe to their newsletters, and immerse yourself in the wealth
               of knowledge they have to offer. Happy reading and designing!
             </p>
+
+            <div className="blog__dt-tags">
+                <h1 className="blog__dt-tag">
+                    Top Design Blogs
+                </h1>
+                <h1 className="blog__dt-tag">
+                    Design Inspirations
+                </h1>
+                <h1 className="blog__dt-tag">
+                    UI/UX Design
+                </h1>
+                <h1 className="blog__dt-tag">
+                    Expert Design Insights
+                </h1>
+            </div>
           </div>
         </div>
       </div>

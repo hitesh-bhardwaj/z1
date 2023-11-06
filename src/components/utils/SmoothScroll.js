@@ -284,12 +284,14 @@ const SmoothScroll = ({ onScroll }) => {
     // Loader
     const fixedLoader = document.getElementById("loader");
 
+    if (fixedLoader) {
     smoothscroll.addListener(function (status) {
       var offset = status.offset;
 
       fixedLoader.style.top = offset.y + "px";
       fixedLoader.style.left = offset.x + "px";
     });
+  }
 
     // LOGO Fixed
 

@@ -4,26 +4,17 @@ import "react-creative-cursor/dist/styles.css";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { NextSeo } from "next-seo";
-import {
-  FacebookShareButton,
-  LinkedinShareButton,
-  TwitterShareButton,
-  WhatsappShareButton,
-} from "next-share";
-
 import Header from "@/components/Header/Header";
 import SmoothScroll from "@/components/utils/SmoothScroll";
 import Footer from "@/components/Footer";
 import FooterMobile from "@/components/Mobile/FooterMobile";
-import RelatedBlogs from "../components/Blogs/relatedBlogs";
+import RelatedBlogs from "@/components/Blogs/relatedBlogs";
+import BlogInfo from "@/components/Blogs/BlogInfo";
+import PageLoader from "@/components/pageLoader";
 
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.config({
-  nullTargetWarn: false,
-});
-
-export default function experiencedesignblog() {
+export default function BlogDetail() {
   // Hero Section Animation
   useEffect(() => {
     const tl = gsap.timeline();
@@ -52,13 +43,13 @@ export default function experiencedesignblog() {
   useEffect(() => {
     const tl = gsap.timeline();
     tl.fromTo(
-      "#anim",
+      "#right-section",
       {
         opacity: 0,
         translateY: 200,
       },
       {
-        delay: 3.8,
+        delay: 4,
         duration: 1.3,
         opacity: 1,
         stagger: 0.1,
@@ -68,10 +59,11 @@ export default function experiencedesignblog() {
     return () => tl.kill();
   }, []);
 
+
+if (globalThis.innerWidth>1024) {
   // Section Pinnnig
   useEffect(() => {
     let ctx = gsap.context(() => {
-      let brandImageBlock = document.getElementById("main-blog-container");
       let brandImagePin = document.getElementById("left-section");
       let brandImageNotPin = document.getElementById("right-section");
       ScrollTrigger.create({
@@ -79,75 +71,14 @@ export default function experiencedesignblog() {
         start: "top 10%",
         endTrigger: brandImageNotPin,
         end: "bottom 80%",
-        // the nect line (with the arrow function) is 'a functional value' () =>
-        // end: () => `${brandImageNotPin.offsetHeight - brandImagePin.offsetHeight}px 20%`,
-        // this line ensures the functional value gets recalculated on resize
         invalidateOnRefresh: true,
         pin: brandImagePin,
-        // pinSpacing: true,
         markers: false,
       });
     });
     return () => ctx.revert();
   });
-
-   // Parallax Image
-   if (globalThis.innerWidth > 776) {
-    useEffect(() => {
-      let ctx = gsap.context(() => {
-        gsap.utils.toArray(".image-container").forEach(function (container) {
-          let image = container.querySelector("img");
-  
-          gsap.to(image, {
-            y: () => image.offsetHeight - container.offsetHeight,
-            ease: "none",
-            startAt: { y: "-25%" },
-            scrollTrigger: {
-              trigger: container,
-              scrub: true,
-              pin: false,
-              markers: false,
-            },
-            y: "25%",
-            ease: "none",
-          });
-        });
-      });
-      return () => ctx.revert();
-    });
-  }
-
-  // Page Transitions
-  useEffect(() => {
-    const loaderBars = document.querySelectorAll("#loaderbars");
-    const tl = gsap.timeline();
-
-    let ctx = gsap.context(() => {
-
-      tl.from(".loader-wrap-heading h1", {
-        delay: 0.5,
-        y: 200,
-        skewY: 10,
-        duration: 1,
-      }).to(".loader-wrap-heading h1", {
-        delay: 0.5,
-        y: -200,
-        skewY: 10,
-        duration: 1,
-      }).to(loaderBars, {
-        height: 0,
-        duration: 0.6,
-        delay: -0.5,
-        ease: "power2.easeIn",
-        stagger: 0.1,
-      }).to("#loader", {
-        y: "-1500",
-        opacity: 0,
-        ease: "power2.inOut",
-      });
-    });
-    return () => ctx.revert();
-  }, []);
+}
 
   return (
     <>
@@ -175,150 +106,62 @@ export default function experiencedesignblog() {
       }}
     />    
 
-      <div className="loader-wrap" id="loader">
-      <div className='mainLoaderBg'>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-          </div>
-
-        <div className="loader-wrap-heading">
-          <span>
-            <h1>Experience Design & UX Design</h1>
-          </span>
-        </div>
-      </div>
-
       <SmoothScroll />
 
       <Cursor isGelly={true} />
 
-      <div>
-        <Header />
-      </div>
+      <PageLoader text="Experience Design & UX Design" />
 
-      <div className="blog-detail-main-section">
+      <Header />
+
+      <div className="b__dt-main">
         <div
-          className="blog-detail-heading"
+          className="b__dt-head-contain"
           data-cursor-size="10px"
-          data-cursor-text=""
-        >
+          data-cursor-text="">
           <h1 data-jelly id="blog">
-            WHAT IS EXPERIENCE DESIGN, AND HOW IS IT DIFFERENT FROM USER
-            EXPERIENCE DESIGN (UX)?
+            What is Experience Design, And How Is It Different From User Experience Design (UX)?
           </h1>
         </div>
 
-        <div className="main-blog-container" id="main-blog-container">
-          <div className="left-section" id="left-section">
-            <div className="box-blog" id="anim">
-              <h1>Posted By</h1>
-              <h2>Bhaskar Varshney</h2>
-            </div>
-            <div className="box-blog" id="anim">
-              <h1>Posted on</h1>
-              <h2>17/02/2023</h2>
-            </div>
-            <div className="box-blog" id="anim">
-              <h1>Share Article</h1>
-              <div className="social-icons">
-                <LinkedinShareButton
-                  url={
-                    "https://weareenigma.vercel.app/what-is-experience-design"
-                  }
-                  quote={
-                    "next-share is a social share buttons for your next React apps."
-                  }
-                  hashtag={"#weareenigma"}
-                >
-                  <img
-                    src="/assets\blogs\blog-detail\social/linkedin.webp"
-                    alt="social-icons"
-                  />
-                </LinkedinShareButton>
-
-                <FacebookShareButton
-                  url={
-                    "https://weareenigma.vercel.app/what-is-experience-design"
-                  }
-                  quote={
-                    "next-share is a social share buttons for your next React apps."
-                  }
-                  hashtag={"#weareenigma"}
-                >
-                  <img
-                    src="/assets\blogs\blog-detail\social/facebook.webp"
-                    alt="social-icons"
-                  />
-                </FacebookShareButton>
-
-                <TwitterShareButton
-                  url={
-                    "https://weareenigma.vercel.app/what-is-experience-design"
-                  }
-                  quote={
-                    "next-share is a social share buttons for your next React apps."
-                  }
-                  hashtag={"#weareenigma"}
-                >
-                  <img
-                    src="/assets\blogs\blog-detail\social/twitter.webp"
-                    alt="social-icons"
-                  />
-                </TwitterShareButton>
-
-                <WhatsappShareButton
-                  url={
-                    "https://weareenigma.vercel.app/what-is-experience-design"
-                  }
-                  quote={
-                    "next-share is a social share buttons for your next React apps."
-                  }
-                  hashtag={"#weareenigma"}
-                >
-                  <img
-                    src="/assets\blogs\blog-detail\social/whatsapp.webp"
-                    alt="social-icons"
-                  />
-                </WhatsappShareButton>
-              </div>
-            </div>
+        <div className="b__dt-main-blog" id="main-blog-container">
+          <div className="b__dt-auth" id="left-section">
+            <BlogInfo author={"Bhaskar Varshney"} date={"17/02/2023"} shareLink={"experience-design-vs-ux"} />
           </div>
-          <div className="right-section" id="right-section">
-            <p id="anim">
+
+          <div className="b__dt-content" id="right-section">
+
+            <p className="b__dt-it">
               Over the past few years, the term Experience Design and User
               Experience have become so closely associated that they're often
               used interchangeably. They're interconnected, but they're not
               identical. And that disparity means there are vital differences
               between them.
-              <br />
-              <br />
-              <strong> Donald Arthur Norman</strong> coined the term ‘User
+            </p>
+            <p>
+              <span className="bold">Donald Arthur Norman </span>coined the term ‘User
               Experience Design’ while employed at Apple as a User Interface
               Architect. Sometime during the early 1990s, he decided to change
               his title to User Experience Architect. Why did he do it? In Don’s
               own words -
             </p>
             
-            <blockquote className="bold strong" id="anim">
-              “I invented the term because I thought Human Interface and
-              usability were too narrow: I wanted to cover all aspects of the
-              person’s experience with a system, including industrial design,
-              graphics, the interface, the physical interaction, and the
-              manual.”
-            </blockquote>
-            <span className="donald">— Donald Arthur Norman</span>
+            <div className="b__dt-quote">
+              <p className="bold">
+                “I invented the term because I thought Human Interface and
+                usability were too narrow: I wanted to cover all aspects of the
+                person’s experience with a system, including industrial design,
+                graphics, the interface, the physical interaction, and the
+                manual.”
+              </p>
+              <span className="quote-auth light">— Donald Arthur Norman</span>
+            </div>          
             
-            <br />
-            <br />
-            <div className="blog-img">
-              <div className="image-container blog-img-container">
-                <img src="/assets/blogs/blog-detail/Blog-001.webp" alt="Img" />
-              </div>
+            <div className="b__dt-img">
+              <img 
+                src="/assets/blogs/blog-detail/what-is-experience-design/what-is-experience-design-1.webp" 
+                alt="What is experience design blog image 1" />
             </div>
-            
             
             <p>
               The term User Experience Design was not coined until the early ,
@@ -326,7 +169,6 @@ export default function experiencedesignblog() {
               instance, Walt Disney is often regarded as one of the worlds first
               Experience Designer because of his theme parks and resorts.
             </p>
-            
             
             <p>
               Walt Disney had the vision to create an amusement park that was
@@ -337,8 +179,6 @@ export default function experiencedesignblog() {
               engineers put a lot of thought and contemplation into the park
               (Disney Imagineers).
             </p>
-
-            
             
             <p>
               An example of good experience design at the parks is the variety
@@ -349,21 +189,20 @@ export default function experiencedesignblog() {
               everyone here.
             </p>
 
-            <div className="blog-img">
-              <div className="image-container blog-img-container">
-                <img src="/assets/blogs/blog-detail/Blog-003.webp" alt="Img" />
-              </div>
+            <div className="b__dt-img">
+              <img 
+                src="/assets/blogs/blog-detail/what-is-experience-design/what-is-experience-design-2.webp" 
+                alt="What is experience design blog image 2" />
             </div>
-            
-            
 
             <p>
               The term User Experience Design was not coined until the early ,
               but examples of Experience Design date back even earlier. For
               instance, Walt Disney is often regarded as one of the worlds first
               Experience Designer because of his theme parks and resorts.
-              <br />
-              <br />
+            </p>
+            
+            <p>
               Walt Disney had the vision to create an amusement park that was
               fun for both children and adults alike. However, during thes,
               amusement parks were seen as dirty and dowdy places where children
@@ -371,8 +210,9 @@ export default function experiencedesignblog() {
               provide park-goers with a positive experience. The designers and
               engineers put a lot of thought and contemplation into the park
               (Disney Imagineers).
-              <br />
-              <br />
+            </p>
+            
+            <p>
               An example of good experience design at the parks is the variety
               of choices that visitors can select from. The parks were designed
               to appeal to all kinds of guests. Whether youre a teenager looking
@@ -381,29 +221,22 @@ export default function experiencedesignblog() {
               everyone here.
             </p>
 
-            <div className="blog-img">
-              <div className="image-container blog-img-container">
-                <img src="/assets/blogs/blog-detail/Blog-004.webp" alt="Img" />
-              </div>
+            <div className="b__dt-img">
+              <img 
+                src="/assets/blogs/blog-detail/what-is-experience-design/what-is-experience-design-3.webp" 
+                alt="What is experience design blog image 3" />
             </div>
             
             
             <h2>
-              <strong className="bold fontSize">
-                So, what precisely is the difference between Experience Design &
-                User Experience?
-              </strong>
+              So, what precisely is the difference between Experience Design User Experience?
             </h2>
-            
-            
             <p>
               The term User Experience Design was not coined until the early
               1990s, but examples of Experience Design date back even earlier.
               For instance, Walt Disney is often regarded as one of the world’s
               first Experience Designer because of his theme parks and resorts.
             </p>
-            
-            
             <p>
               Walt Disney had the vision to create an amusement park that was
               fun for both children and adults alike. However, during the 1950s,
@@ -413,8 +246,6 @@ export default function experiencedesignblog() {
               engineers put a lot of thought and contemplation into the park
               (“Disney Imagineers”).
             </p>
-            
-            
             <p>
               An example of good experience design at the parks is the variety
               of choices that visitors can select from. The parks were designed
@@ -423,6 +254,21 @@ export default function experiencedesignblog() {
               Dumbo the flying elephant or the teacup ride, there’s something
               for everyone here.
             </p>
+
+            <div className="blog__dt-tags">
+                <h1 className="blog__dt-tag">
+                    UX Design
+                </h1>
+                <h1 className="blog__dt-tag">
+                    Donald Arthur
+                </h1>
+                <h1 className="blog__dt-tag">
+                    Animations
+                </h1>
+                <h1 className="blog__dt-tag">
+                    Experience Design
+                </h1>
+            </div>
           </div>
         </div>
       </div>

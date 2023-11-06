@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Head from "next/head";
 import { Cursor } from "../../cursor/index";
 import styles from "@/styles/404.module.css";
 import SmoothScroll from "@/components/utils/SmoothScroll";

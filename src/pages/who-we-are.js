@@ -16,7 +16,8 @@ import VideoPlayer from "@/components/About/VideoPlayer";
 import AboutNextBox from "@/components/NextBoxes/AboutNextBox";
 import LogoCarousel from "@/components/About/LogoCarousel";
 import NewGifSection from "@/components/About/NewGifSection";
-import Modal from "../components/PopupForm/formModal";
+import Modal from "@/components/PopupForm/formModal";
+import PageLoader from "@/components/pageLoader";
 
 gsap.config({
   nullTargetWarn: false,
@@ -136,38 +137,6 @@ export default function about() {
     return () => ctx.revert();
   }, []);
 
-  // Page Transitions
-  useEffect(() => {
-    const loaderBars = document.querySelectorAll("#loaderbars");
-    const tl = gsap.timeline();
-
-    let ctx = gsap.context(() => {
-
-      tl.from(".loader-wrap-heading h1", {
-        delay: 0.5,
-        y: 200,
-        skewY: 10,
-        duration: 1,
-      }).to(".loader-wrap-heading h1", {
-        delay: 0.5,
-        y: -200,
-        skewY: 10,
-        duration: 1,
-      }).to(loaderBars, {
-        height: 0,
-        duration: 0.6,
-        delay: -0.5,
-        ease: "power2.easeIn",
-        stagger: 0.1,
-      }).to("#loader", {
-        y: "-1500",
-        opacity: 0,
-        ease: "power2.inOut",
-      });
-    });
-    return () => ctx.revert();
-  }, []);
-
   // Text Reveal Animation For Each Whys US
   useEffect(() => {
     const totalSection = document.querySelectorAll(
@@ -265,20 +234,7 @@ export default function about() {
 
       <Cursor isGelly={true} />
 
-      <div className="loader-wrap" id="loader" style={{ zIndex: 9999 }}>
-        <div className="loader-wrap-heading">
-          <span>
-            <h1>Who We Are</h1>
-          </span>
-        </div>
-        <div className='mainLoaderBg'>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-          </div>
-      </div>
+      <PageLoader text="Who We Are" />
       
       <div className="about-header">
         <Header />

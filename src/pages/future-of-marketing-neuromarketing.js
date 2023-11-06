@@ -4,27 +4,17 @@ import "react-creative-cursor/dist/styles.css";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { NextSeo } from "next-seo";
-import {
-  FacebookShareButton,
-  LinkedinShareButton,
-  TwitterShareButton,
-  WhatsappShareButton,
-} from "next-share";
-import Image from "next/image";
-
 import Header from "@/components/Header/Header";
 import SmoothScroll from "@/components/utils/SmoothScroll";
 import Footer from "@/components/Footer";
 import FooterMobile from "@/components/Mobile/FooterMobile";
-import RelatedBlogs from "../components/Blogs/relatedBlogs";
+import RelatedBlogs from "@/components/Blogs/relatedBlogs";
+import BlogInfo from "@/components/Blogs/BlogInfo";
+import PageLoader from "@/components/pageLoader";
 
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.config({
-  nullTargetWarn: false,
-});
-
-export default function futureofmarketing() {
+export default function BlogDetail() {
   // Hero Section Animation
   useEffect(() => {
     const tl = gsap.timeline();
@@ -53,13 +43,13 @@ export default function futureofmarketing() {
   useEffect(() => {
     const tl = gsap.timeline();
     tl.fromTo(
-      "#anim",
+      "#right-section",
       {
         opacity: 0,
         translateY: 200,
       },
       {
-        delay: 3.8,
+        delay: 4,
         duration: 1.3,
         opacity: 1,
         stagger: 0.1,
@@ -69,10 +59,11 @@ export default function futureofmarketing() {
     return () => tl.kill();
   }, []);
 
+
+if (globalThis.innerWidth>1024) {
   // Section Pinnnig
   useEffect(() => {
     let ctx = gsap.context(() => {
-      let brandImageBlock = document.getElementById("main-blog-container");
       let brandImagePin = document.getElementById("left-section");
       let brandImageNotPin = document.getElementById("right-section");
       ScrollTrigger.create({
@@ -80,75 +71,14 @@ export default function futureofmarketing() {
         start: "top 10%",
         endTrigger: brandImageNotPin,
         end: "bottom 80%",
-        // the nect line (with the arrow function) is 'a functional value' () =>
-        // end: () => `${brandImageNotPin.offsetHeight - brandImagePin.offsetHeight}px 20%`,
-        // this line ensures the functional value gets recalculated on resize
         invalidateOnRefresh: true,
         pin: brandImagePin,
-        // pinSpacing: true,
         markers: false,
       });
     });
     return () => ctx.revert();
   });
-
-   // Parallax Image
-   if (globalThis.innerWidth > 776) {
-    useEffect(() => {
-      let ctx = gsap.context(() => {
-        gsap.utils.toArray(".image-container").forEach(function (container) {
-          let image = container.querySelector("img");
-  
-          gsap.to(image, {
-            y: () => image.offsetHeight - container.offsetHeight,
-            ease: "none",
-            startAt: { y: "-25%" },
-            scrollTrigger: {
-              trigger: container,
-              scrub: true,
-              pin: false,
-              markers: false,
-            },
-            y: "25%",
-            ease: "none",
-          });
-        });
-      });
-      return () => ctx.revert();
-    });
-  }
-
- // Page Transitions
- useEffect(() => {
-  const loaderBars = document.querySelectorAll("#loaderbars");
-  const tl = gsap.timeline();
-
-  let ctx = gsap.context(() => {
-
-    tl.from(".loader-wrap-heading h1", {
-      delay: 0.5,
-      y: 200,
-      skewY: 10,
-      duration: 1,
-    }).to(".loader-wrap-heading h1", {
-      delay: 0.5,
-      y: -200,
-      skewY: 10,
-      duration: 1,
-    }).to(loaderBars, {
-      height: 0,
-      duration: 0.6,
-      delay: -0.5,
-      ease: "power2.easeIn",
-      stagger: 0.1,
-    }).to("#loader", {
-      y: "-1500",
-      opacity: 0,
-      ease: "power2.inOut",
-    });
-  });
-  return () => ctx.revert();
-}, []);
+}
 
   return (
     <>
@@ -176,111 +106,33 @@ export default function futureofmarketing() {
       }}
     />    
 
-      <div className="loader-wrap" id="loader">
-      <div className='mainLoaderBg'>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-          </div>
-
-        <div className="loader-wrap-heading">
-          <span>
-            <h1>Neuroscience: The Future of Marketing</h1>
-          </span>
-        </div>
-      </div>
-
       <SmoothScroll />
 
       <Cursor isGelly={true} />
 
-      <div>
-        <Header />
-      </div>
+      <PageLoader text="Neuroscience: The Future of Marketing" />
 
-      <div className="blog-detail-main-section">
+      <Header />
+
+      <div className="b__dt-main">
         <div
-          className="blog-detail-heading"
+          className="b__dt-head-contain"
           data-cursor-size="10px"
-          data-cursor-text=""
-        >
+          data-cursor-text="">
           <h1 data-jelly id="blog">
             The Future of Marketing: Why Every Marketer Should Learn
             Neuroscience and Master Neuromarketing
           </h1>
         </div>
 
-        <div className="main-blog-container" id="main-blog-container">
-          <div className="left-section" id="left-section">
-            <div className="box-blog" id="anim">
-              <h1>Posted By</h1>
-              <h2>Bhaskar Varshney</h2>
-            </div>
-            <div className="box-blog" id="anim">
-              <h1>Posted on</h1>
-              <h2>29/11/2022</h2>
-            </div>
-            <div className="box-blog" id="anim">
-              <h1>Share Article</h1>
-              <div className="social-icons">
-                <LinkedinShareButton
-                  url={"https://weareenigma.com/the-future-of-marketing"}
-                  quote={
-                    "next-share is a social share buttons for your next React apps."
-                  }
-                  hashtag={"#weareenigma"}
-                >
-                  <img
-                    src="/assets\blogs\blog-detail\social/linkedin.webp"
-                    alt="social-icons"
-                  />
-                </LinkedinShareButton>
-
-                <FacebookShareButton
-                  url={"https://weareenigma.com/the-future-of-marketing"}
-                  quote={
-                    "next-share is a social share buttons for your next React apps."
-                  }
-                  hashtag={"#weareenigma"}
-                >
-                  <img
-                    src="/assets\blogs\blog-detail\social/facebook.webp"
-                    alt="social-icons"
-                  />
-                </FacebookShareButton>
-
-                <TwitterShareButton
-                  url={"https://weareenigma.com/the-future-of-marketing"}
-                  quote={
-                    "next-share is a social share buttons for your next React apps."
-                  }
-                  hashtag={"#weareenigma"}
-                >
-                  <img
-                    src="/assets\blogs\blog-detail\social/twitter.webp"
-                    alt="social-icons"
-                  />
-                </TwitterShareButton>
-
-                <WhatsappShareButton
-                  url={"https://weareenigma.com/the-future-of-marketing"}
-                  quote={
-                    "next-share is a social share buttons for your next React apps."
-                  }
-                  hashtag={"#weareenigma"}
-                >
-                  <img
-                    src="/assets\blogs\blog-detail\social/whatsapp.webp"
-                    alt="social-icons"
-                  />
-                </WhatsappShareButton>
-              </div>
-            </div>
+        <div className="b__dt-main-blog" id="main-blog-container">
+          <div className="b__dt-auth" id="left-section">
+            <BlogInfo author={"Bhaskar Varshney"} date={"29/11/2022"} shareLink={"future-of-marketing-neuromarketing"} />
           </div>
-          <div className="right-section" id="right-section">
-            <p id="anim">
+
+          <div className="b__dt-content" id="right-section">
+
+            <p >
               Marketing professionals are always on the lookout for new
               strategies and methods to engage their target audiences. With the
               ever-evolving landscape of digital marketing and the constant
@@ -292,15 +144,20 @@ export default function futureofmarketing() {
               revolutionize the way businesses communicate with their audience.
               In this article, we will explore the reasons why every marketer
               should learn neuroscience and master neuromarketing.
-              
-              
             </p>
 
-            <h3 className="bold-h" id="anim">
-              Unveiling the Mystery of Consumer Decision-Making:
-            </h3>
+            <div className="b__dt-img">
+              <img
+                src="/assets/blogs/blog-detail/the-future-of-marketing/future-of-marketing-1.webp"
+                alt="Future of Marketing Blog Image 1"
+              />
+            </div>
 
-            <p id="anim">
+            <h2 >
+              Unveiling the Mystery of Consumer Decision-Making:
+            </h2>
+
+            <p >
               Neuromarketing seeks to understand the cognitive processes that
               drive consumers' decisions. By studying the brain's response to
               various marketing stimuli, neuromarketers can predict consumers'
@@ -309,15 +166,12 @@ export default function futureofmarketing() {
               enables marketers to create more effective campaigns that resonate
               with their target audience on a deeper level.
             </p>
-
             
-            
-
-            <h3 className="bold-h" id="anim">
+            <h2 >
               Create More Persuasive Messaging:
-            </h3>
+            </h2>
 
-            <p id="anim">
+            <p >
               The field of neuromarketing is rooted in the understanding that
               human decision-making is often emotional rather than logical. By
               leveraging this knowledge, marketers can craft messages that
@@ -330,25 +184,13 @@ export default function futureofmarketing() {
               compelling messaging.
             </p>
 
-            <div className="blog-img">
-              <div className="image-container blog-img-container">
-                <Image
-                  width={1000}
-                  height={1000}
-                  src="/assets/blogs/blog-detail/the-future-of-marketing/1.webp"
-                  alt="Img"
-                />
-              </div>
-            </div>
-
-            
             
 
-            <h3 className="bold-h" id="anim">
+            <h2 >
               Enhance Brand Experiences:
-            </h3>
+            </h2>
 
-            <p id="anim">
+            <p >
               One of the most potent aspects of neuromarketing is its ability to
               influence sensory perception. By understanding how sensory inputs
               (e.g., sight, sound, touch, taste, and smell) affect the brain,
@@ -360,14 +202,11 @@ export default function futureofmarketing() {
               keep their audience engaged and coming back for more.
             </p>
 
-            
-            
-
-            <h3 className="bold-h" id="anim">
+            <h2 >
               Improve Advertising Effectiveness:
-            </h3>
+            </h2>
 
-            <p id="anim">
+            <p >
               Neuromarketing can help advertisers better understand how their
               audience processes information and responds to advertising
               stimuli. This knowledge can be used to create advertisements that
@@ -379,14 +218,19 @@ export default function futureofmarketing() {
               with their audience and drive desired actions.
             </p>
 
-            
+            <div className="b__dt-img">
+              <img
+                src="/assets/blogs/blog-detail/the-future-of-marketing/future-of-marketing-2.webp"
+                alt="Future of Marketing Blog Image 2"
+              />
+            </div>
             
 
-            <h3 className="bold-h" id="anim">
+            <h2 >
               Optimize Marketing ROI:
-            </h3>
+            </h2>
 
-            <p id="anim">
+            <p >
               In today's data-driven world, marketers are under constant
               pressure to prove the ROI of their efforts. By incorporating
               neuromarketing principles into campaign strategy and execution,
@@ -396,22 +240,9 @@ export default function futureofmarketing() {
               campaign and refine strategies to maximize ROI.
             </p>
 
-            <div className="blog-img">
-              <div className="image-container blog-img-container">
-                <Image
-                  width={1000}
-                  height={1000}
-                  src="/assets/blogs/blog-detail/the-future-of-marketing/2.webp"
-                  alt="Img"
-                />
-              </div>
-            </div>
-
-            
-            
-            <h3 className="bold-h">
+            <h2 >
               Foster Innovation and Creativity:
-            </h3>
+            </h2>
 
             <p>
               Neuromarketing can serve as a catalyst for innovation and
@@ -425,9 +256,9 @@ export default function futureofmarketing() {
 
             
             
-            <h3 className="bold-h">
+            <h2 >
               Gain a Competitive Edge:
-            </h3>
+            </h2>
 
             <p>
               As the marketing landscape becomes increasingly saturated and
@@ -442,11 +273,16 @@ export default function futureofmarketing() {
               marketing landscape.
             </p>
 
+            <div className="b__dt-img">
+              <img
+                src="/assets/blogs/blog-detail/the-future-of-marketing/future-of-marketing-3.webp"
+                alt="Future of Marketing Blog Image 3"
+              />
+            </div>
             
-            
-            <h3 className="bold-h">
+            <h2 >
               Drive Personalization and Relevance:
-            </h3>
+            </h2>
 
             <p>
               In an age where consumers are inundated with marketing messages,
@@ -460,23 +296,10 @@ export default function futureofmarketing() {
               campaigns that are more likely to engage consumers and drive
               conversions.
             </p>
-
-            <div className="blog-img">
-              <div className="image-container blog-img-container">
-                <Image
-                  width={1000}
-                  height={1000}
-                  src="/assets/blogs/blog-detail/the-future-of-marketing/3.webp"
-                  alt="Img"
-                />
-              </div>
-            </div>
-
             
-            
-            <h3 className="bold-h">
+            <h2 >
               Enhance Ethical Marketing Practices:
-            </h3>
+            </h2>
 
             <p>
               While the power of neuromarketing is undeniable, it's crucial for
@@ -488,11 +311,9 @@ export default function futureofmarketing() {
               ethical marketing industry as a whole.
             </p>
 
-            
-            
-            <h3 className="bold-h">
+            <h2 >
               Future-Proof Your Marketing Career:
-            </h3>
+            </h2>
 
             <p>
               As the marketing landscape continues to evolve and become
@@ -519,6 +340,21 @@ export default function futureofmarketing() {
               the power of neuromarketing and unlock the full potential of your
               marketing efforts.
             </p>
+
+            <div className="blog__dt-tags">
+                <h1 className="blog__dt-tag">
+                    Neuromarketing
+                </h1>
+                <h1 className="blog__dt-tag">
+                    Marketing
+                </h1>
+                <h1 className="blog__dt-tag">
+                    Ethical Practices
+                </h1>
+                <h1 className="blog__dt-tag">
+                  Innovation and Creativity
+                </h1>
+            </div>
           </div>
         </div>
       </div>
