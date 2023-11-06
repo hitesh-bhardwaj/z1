@@ -94,18 +94,15 @@ if (globalThis.innerWidth>1024) {
                   "Unravel the complexities of website pricing with Enigma's comprehensive guide. Understand factors influencing costs and the value of strategic planning.",
                   images: [
                   {
-                    url: "https://weareenigma.com/assets/featured-images/website-cost.png",
+                    url: "https://z900.vercel.app/assets/featured-images/website-cost.png",
                     width: 1200,
                     height: 630,
                     alt: "Website Cost Guide",
                     type: "image/png",
                   },
-                  { url: "https://weareenigma.com/assets/featured-images/website-cost.png", },
+                  { url: "https://z900.vercel.app/assets/featured-images/website-cost.png", },
                 ],
                 siteName: "Enigma Digital",
-              }}
-              twitter={{
-                
               }}
             />
 

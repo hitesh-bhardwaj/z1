@@ -94,13 +94,13 @@ if (globalThis.innerWidth>1024) {
           "Embark on a journey into UX design. Learn the essentials of user experience, the process, techniques, and principles and how it shapes digital interactions.",
           images: [
                   {
-                    url: "https://weareenigma.com/assets/featured-images/what-is-ux.png",
+                    url: "https://z900.vercel.app/assets/featured-images/what-is-ux.png",
                     width: 1500,
                     height: 935,
                     alt: "What is UX Design",
                     type: "image/png",
                   },
-                  { url: "https://weareenigma.com/assets/featured-images/what-is-ux.png" },
+                  { url: "https://z900.vercel.app/assets/featured-images/what-is-ux.png" },
         ],
         siteName: "Enigma Digital",
       }}
