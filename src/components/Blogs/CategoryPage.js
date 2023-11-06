@@ -45,7 +45,6 @@ const CategoryPage = ({ category }) => {
     metaTitle,
     metaDescription,
     metaImage,
-    twitterCardImage,
   } = categoryInfo;
 
   const postRef = useRef([]);
