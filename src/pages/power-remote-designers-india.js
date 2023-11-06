@@ -94,15 +94,15 @@ if (globalThis.innerWidth>1024) {
           "Discover the advantages of hiring remote designers from India, debunking myths and showcasing the benefits for your business",
           images: [
                   {
-                    url: "https://i.ibb.co/k0NMQw9/home.png",
-                    width: 400,
-                    height: 600,
-                    alt: "Enigma Image",
+                    url: "https://weareenigma.com/assets/featured-images/power-of-remote-designers.png",
+                    width: 1200,
+                    height: 630,
+                    alt: "power of remote designers in India",
                     type: "image/png",
                   },
-                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
-        ],
-        siteName: "Enigma Digital Website",
+                  { url: "https://weareenigma.com/assets/featured-images/power-of-remote-designers.png" },
+                ],
+                siteName: "Enigma Digital",
       }}
     />    
 

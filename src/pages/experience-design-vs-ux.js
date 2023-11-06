@@ -94,15 +94,15 @@ if (globalThis.innerWidth>1024) {
           "Dive into the world of Experience Design and UX. Learn their differences and how they shape user interactions and brand experiences.",
           images: [
                   {
-                    url: "https://i.ibb.co/k0NMQw9/home.png",
-                    width: 400,
-                    height: 600,
-                    alt: "Enigma Image",
+                    url: "https://weareenigma.com/assets/featured-images/expeirence-design-vs-ux.png",
+                    width: 1200,
+                    height: 630,
+                    alt: "expeirence design vs user experience design",
                     type: "image/png",
                   },
-                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
-        ],
-        siteName: "Enigma Digital Website",
+                  { url: "https://weareenigma.com/assets/featured-images/expeirence-design-vs-ux.png" },
+                ],
+          siteName: "Enigma Digital",
       }}
     />    
 

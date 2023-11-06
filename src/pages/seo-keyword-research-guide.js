@@ -94,14 +94,15 @@ if (globalThis.innerWidth>1024) {
                   "Keyword research is a critical component of any successful SEO strategy. It involves identifying popular search terms and phrases that users enter into search engines when looking for information, products, or services related to your niche.",
                   images: [
                   {
-                    url: "https://i.ibb.co/k0NMQw9/home.png",
-                    width: 400,
-                    height: 600,
-                    alt: "Enigma Image",
+                    url: "https://weareenigma.com/assets/featured-images/seo-keyword-research-guide.png",
+                    width: 1200,
+                    height: 630,
+                    alt: "seo keyword research guide",
                     type: "image/png",
                   },
+                  { url: "https://weareenigma.com/assets/featured-images/seo-keyword-research-guide.png" },
                 ],
-                siteName: "Enigma Digital Website",
+                siteName: "Enigma Digital",
               }}
             />
 

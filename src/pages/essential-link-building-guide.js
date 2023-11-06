@@ -93,15 +93,16 @@ if (globalThis.innerWidth>1024) {
                 description:
                   "Dive deep into the world of link building with our comprehensive guide. Learn techniques to boost your site's authority and SEO rankings.",
                   images: [
-                  {
-                    url: "https://i.ibb.co/k0NMQw9/home.png",
-                    width: 400,
-                    height: 600,
-                    alt: "Enigma Image",
-                    type: "image/png",
-                  },
-                ],
-                siteName: "Enigma Digital Website",
+                    {
+                      url: "https://weareenigma.com/assets/featured-images/link-building-guide.png",
+                      width: 1200,
+                      height: 630,
+                      alt: "essential link building guide",
+                      type: "image/png",
+                    },
+                    { url: "https://weareenigma.com/assets/featured-images/link-building-guide.png" },
+                  ],
+                  siteName: "Enigma Digital",
               }}
             />
 

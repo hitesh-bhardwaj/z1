@@ -93,15 +93,15 @@ if (globalThis.innerWidth>1024) {
             "Dive into our comprehensive guide on 30 websites for effective link-building in SEO. Boost your website's authority and visibility now!",
             images: [
                   {
-                    url: "https://i.ibb.co/k0NMQw9/home.png",
-                    width: 400,
-                    height: 600,
-                    alt: "Enigma Image",
+                    url: "https://weareenigma.com/assets/featured-images/link-building-website-list.png",
+                    width: 1200,
+                    height: 630,
+                    alt: "link building website list",
                     type: "image/png",
                   },
-            { url: "https://i.ibb.co/k0NMQw9/home.png" },
-          ],
-          siteName: "Enigma Digital Website",
+                  { url: "https://weareenigma.com/assets/featured-images/link-building-website-list.png" },
+                ],
+            siteName: "Enigma Digital",
         }}
       />
 

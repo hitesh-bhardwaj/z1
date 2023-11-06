@@ -94,15 +94,15 @@ if (globalThis.innerWidth>1024) {
                   "Uncover the mechanics of search engines with Enigma. Understand web crawlers, indexing, ranking algorithms, and optimize for better SEO.",
                   images: [
                   {
-                    url: "https://i.ibb.co/k0NMQw9/home.png",
-                    width: 400,
-                    height: 600,
-                    alt: "Enigma Image",
+                    url: "https://weareenigma.com/assets/featured-images/search-engines-mechanics.png",
+                    width: 1200,
+                    height: 630,
+                    alt: "search engines mechanics",
                     type: "image/png",
                   },
-                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
+                  { url: "https://weareenigma.com/assets/featured-images/search-engines-mechanics.png" },
                 ],
-                siteName: "Enigma Digital Website",
+                siteName: "Enigma Digital",
               }}
             />
 

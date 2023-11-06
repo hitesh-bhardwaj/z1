@@ -94,15 +94,15 @@ if (globalThis.innerWidth>1024) {
           "Explore the top 20 UX design blogs for innovative ideas, expert insights, and the latest trends in user experience design.",
           images: [
                   {
-                    url: "https://i.ibb.co/k0NMQw9/home.png",
-                    width: 400,
-                    height: 600,
-                    alt: "Enigma Image",
+                    url: "https://weareenigma.com/assets/featured-images/top-ux-design-blogs.png",
+                    width: 1200,
+                    height: 630,
+                    alt: "Top UX Design Blogs",
                     type: "image/png",
                   },
-                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
+                  { url: "https://weareenigma.com/assets/featured-images/top-ux-design-blogs.png" },
         ],
-        siteName: "Enigma Digital Website",
+        siteName: "Enigma Digital",
       }}
     />    
 

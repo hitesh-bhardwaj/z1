@@ -82,28 +82,28 @@ if (globalThis.innerWidth>1024) {
 
   return (
     <>
-        <NextSeo
-      title="A Beginner's Guide to Search Engine Optimization | Enigma"
-      description="Our beginner's guide to SEO covers all the basic on-page, off-page strategies and best practices to improve your site's search visibility and ranking."
-      canonical="https://weareenigma.com/basics-of-seo"
-      openGraph={{
-        url: "https://weareenigma.com/basics-of-seo",
-        title: "A Beginner's Guide to Search Engine Optimization | Enigma",
-        description:
-          "Our beginner's guide to SEO covers all the basic on-page, off-page strategies and best practices to improve your site's search visibility and ranking.",
+      <NextSeo
+        title="A Beginner's Guide to Search Engine Optimization | Enigma"
+        description="Our beginner's guide to SEO covers all the basic on-page, off-page strategies and best practices to improve your site's search visibility and ranking."
+        canonical="https://weareenigma.com/basics-of-seo"
+        openGraph={{
+          url: "https://weareenigma.com/basics-of-seo",
+          title: "A Beginner's Guide to Search Engine Optimization | Enigma",
+          description:
+            "Our beginner's guide to SEO covers all the basic on-page, off-page strategies and best practices to improve your site's search visibility and ranking.",
           images: [
-                  {
-                    url: "https://i.ibb.co/k0NMQw9/home.png",
-                    width: 400,
-                    height: 600,
-                    alt: "Enigma Image",
-                    type: "image/png",
-                  },
-                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
-        ],
-        siteName: "Enigma Digital Website",
-      }}
-    />   
+            {
+              url: "https://weareenigma.com/assets/featured-images/basics-of-seo.png",
+              width: 1200,
+              height: 630,
+              alt: "basics of seo",
+              type: "image/png",
+            },
+            { url: "https://weareenigma.com/assets/featured-images/basics-of-seo.png" },
+          ],
+          siteName: "Enigma Digital",
+        }}
+      />   
     
     <SmoothScroll />
 

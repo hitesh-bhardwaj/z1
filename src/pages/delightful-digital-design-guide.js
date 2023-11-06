@@ -93,15 +93,16 @@ if (globalThis.innerWidth>1024) {
                 description:
                   "Dive into Enigma's guide on crafting delightful designs for diverse digital platforms. From desktops to wearables, master the art of UX design.",
                   images: [
-                  {
-                    url: "https://i.ibb.co/k0NMQw9/home.png",
-                    width: 400,
-                    height: 600,
-                    alt: "Enigma Image",
-                    type: "image/png",
-                  },
-                ],
-                siteName: "Enigma Digital Website",
+                    {
+                      url: "https://weareenigma.com/assets/featured-images/digital-design-guide.png",
+                      width: 1200,
+                      height: 630,
+                      alt: "delightful digital design guide",
+                      type: "image/png",
+                    },
+                    { url: "https://weareenigma.com/assets/featured-images/digital-design-guide.png" },
+                  ],
+                  siteName: "Enigma Digital",
               }}
             />     
 

@@ -94,15 +94,15 @@ if (globalThis.innerWidth>1024) {
           "A Journey through the transformative history of UX design. Discover its origins, pivotal moments, and the future of user-centric digital experiences.",
           images: [
                   {
-                    url: "https://i.ibb.co/k0NMQw9/home.png",
-                    width: 400,
-                    height: 600,
-                    alt: "Enigma Image",
+                    url: "https://weareenigma.com/assets/featured-images/evolution-of-ux-design.png",
+                    width: 1200,
+                    height: 630,
+                    alt: "evolution of ux design",
                     type: "image/png",
                   },
-                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
-        ],
-        siteName: "Enigma Digital Website",
+                  { url: "https://weareenigma.com/assets/featured-images/evolution-of-ux-design.png" },
+                ],
+          siteName: "Enigma Digital",
       }}
     />   
 

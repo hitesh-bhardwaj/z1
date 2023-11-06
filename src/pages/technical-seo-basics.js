@@ -94,15 +94,15 @@ if (globalThis.innerWidth>1024) {
                   "Master technical SEO & learn to optimize your website's infrastructure for better search engine visibility and user experience with this guide.",
                   images: [
                   {
-                    url: "https://i.ibb.co/k0NMQw9/home.png",
-                    width: 400,
-                    height: 600,
-                    alt: "Enigma Image",
+                    url: "https://weareenigma.com/assets/featured-images/technical-seo-basics.png",
+                    width: 1200,
+                    height: 630,
+                    alt: "Technical SEO Basics",
                     type: "image/png",
                   },
-                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
+                  { url: "https://weareenigma.com/assets/featured-images/technical-seo-basics.png" },
                 ],
-                siteName: "Enigma Digital Website",
+                siteName: "Enigma Digital",
               }}
             />
 

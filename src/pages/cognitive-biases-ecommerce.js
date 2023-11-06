@@ -93,18 +93,18 @@ if (globalThis.innerWidth>1024) {
         description:
           "Dive into 12 cognitive biases crucial for e-commerce marketers. Understand consumer psychology and craft campaigns that resonate and captivate.",
           images: [
-                  {
-                    url: "https://i.ibb.co/k0NMQw9/home.png",
-                    width: 400,
-                    height: 600,
-                    alt: "Enigma Image",
-                    type: "image/png",
-                  },
-                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
-        ],
-        siteName: "Enimga Digital Website",
-      }}
-    />
+            {
+              url: "https://weareenigma.com/assets/featured-images/cognitive-biases-ecommerce.png",
+              width: 1200,
+              height: 630,
+              alt: "cognitive biases ecommerce",
+              type: "image/png",
+            },
+            { url: "https://weareenigma.com/assets/featured-images/cognitive-biases-ecommerce.png" },
+          ],
+          siteName: "Enigma Digital",
+        }}
+      />
 
       <SmoothScroll />
 

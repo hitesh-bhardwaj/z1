@@ -96,14 +96,15 @@ if (globalThis.innerWidth>1024) {
                   "Your product ideas deserve the best possible user experience (UX) design, and to achieve that, you need to partner with the right UX agency.",
                   images: [
                   {
-                    url: "https://i.ibb.co/k0NMQw9/home.png",
-                    width: 400,
-                    height: 600,
-                    alt: "Enigma Image",
+                    url: "https://weareenigma.com/assets/featured-images/right-ux-agency.png",
+                    width: 1200,
+                    height: 630,
+                    alt: "right ux agency",
                     type: "image/png",
                   },
+                  { url: "https://weareenigma.com/assets/featured-images/right-ux-agency.png" },
                 ],
-                siteName: "Enigma Digital Website",
+                siteName: "Enigma Digital",
               }}
             />
 

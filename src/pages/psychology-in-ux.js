@@ -83,28 +83,28 @@ if (globalThis.innerWidth>1024) {
   return (
     <>
 
-    <NextSeo
-      title="Harnessing the Power of Psychology in UX Design"
-      description="Explore the profound connection between psychology and UX design. Unlock insights to create intuitive, effective, and emotionally resonant user experiences."
-      canonical="https://weareenigma.com/psychology-in-ux"
-      openGraph={{
-        url: "https://weareenigma.com/psychology-in-ux",
-        title: "Harnessing the Power of Psychology in UX Design",
-        description:
-          "Explore the profound connection between psychology and UX design. Unlock insights to create intuitive, effective, and emotionally resonant user experiences.",
-          images: [
+          <NextSeo
+            title="Harnessing the Power of Psychology in UX Design"
+            description="Explore the profound connection between psychology and UX design. Unlock insights to create intuitive, effective, and emotionally resonant user experiences."
+            canonical="https://weareenigma.com/psychology-in-ux"
+            openGraph={{
+              url: "https://weareenigma.com/psychology-in-ux",
+              title: "Harnessing the Power of Psychology in UX Design",
+              description:
+                "Explore the profound connection between psychology and UX design. Unlock insights to create intuitive, effective, and emotionally resonant user experiences.",
+                images: [
                   {
-                    url: "https://i.ibb.co/k0NMQw9/home.png",
-                    width: 400,
-                    height: 600,
-                    alt: "Enigma Image",
+                    url: "https://weareenigma.com/assets/featured-images/psychology-in-ux.png",
+                    width: 1200,
+                    height: 630,
+                    alt: "psychology in ux",
                     type: "image/png",
                   },
-                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
-        ],
-        siteName: "Enigma Digital Website",
-      }}
-    />    
+                  { url: "https://weareenigma.com/assets/featured-images/psychology-in-ux.png" },
+                ],
+                siteName: "Enigma Digital",
+              }}
+            />    
 
       <SmoothScroll />
 

@@ -93,16 +93,16 @@ if (globalThis.innerWidth>1024) {
         description:
           "Explore the benefits of organic digital marketing techniques and their transformative power for business growth, backed by data and irrefutable evidence.",
           images: [
-                  {
-                    url: "https://i.ibb.co/k0NMQw9/home.png",
-                    width: 400,
-                    height: 600,
-                    alt: "Enigma Image",
-                    type: "image/png",
-                  },
-                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
-        ],
-        siteName: "Enigma Digital Website",
+                    {
+                      url: "https://weareenigma.com/assets/featured-images/benefits-of-organic-digital-marketing.png",
+                      width: 1200,
+                      height: 630,
+                      alt: "benefits of organic digital marketing",
+                      type: "image/png",
+                    },
+                    { url: "https://weareenigma.com/assets/featured-images/benefits-of-organic-digital-marketing.png" },
+                  ],
+                  siteName: "Enigma Digital",
       }}
     />    
 

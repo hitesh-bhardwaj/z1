@@ -94,15 +94,15 @@ if (globalThis.innerWidth>1024) {
           "Discover how marketing will evolve in the 2030s and beyond. Discover the power of neuromarketing and its impact on the future of marketing.",
           images: [
                   {
-                    url: "https://i.ibb.co/k0NMQw9/home.png",
-                    width: 400,
-                    height: 600,
-                    alt: "Enigma Image",
+                    url: "https://weareenigma.com/assets/featured-images/future-of-marketing.png",
+                    width: 1200,
+                    height: 630,
+                    alt: "future of marketing neuromarketing",
                     type: "image/png",
                   },
-                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
-        ],
-        siteName: "Enigma Digital Website",
+                  { url: "https://weareenigma.com/assets/featured-images/future-of-marketing.png" },
+                ],
+                siteName: "Enigma Digital",
       }}
     />    
 

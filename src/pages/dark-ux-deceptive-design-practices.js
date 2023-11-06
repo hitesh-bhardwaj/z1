@@ -93,17 +93,17 @@ if (globalThis.innerWidth>1024) {
         description:
           "Understand dark UX patterns and how they manipulate users by exploiting cognitive biases. Avoid deceptive design practices and create ethical experiences.",
           images: [
-                  {
-                    url: "https://i.ibb.co/k0NMQw9/home.png",
-                    width: 400,
-                    height: 600,
-                    alt: "Enigma Image",
-                    type: "image/png",
-                  },
-                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
-        ],
-        siteName: "Enimga Digital Website",
-      }}
+                    {
+                      url: "https://weareenigma.com/assets/featured-images/dark-design-practices.png",
+                      width: 1200,
+                      height: 630,
+                      alt: "dark ux design practices",
+                      type: "image/png",
+                    },
+                    { url: "https://weareenigma.com/assets/featured-images/dark-design-practices.png" },
+                  ],
+                  siteName: "Enigma Digital",
+                }}
     />    
 
       <SmoothScroll />

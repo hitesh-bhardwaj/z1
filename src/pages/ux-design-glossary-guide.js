@@ -132,15 +132,15 @@ export default function designglossary() {
           "Confused by UX jargon? Our UX glossary deciphers key UX terms and concepts in simple language, for beginners and experts alike! Bookmark this handy UX guide.",
           images: [
                   {
-                    url: "https://i.ibb.co/k0NMQw9/home.png",
-                    width: 400,
-                    height: 600,
-                    alt: "Enigma Image",
+                    url: "https://weareenigma.com/assets/featured-images/ux-design-glossary.png",
+                    width: 1200,
+                    height: 630,
+                    alt: "UX Design Glossary",
                     type: "image/png",
                   },
-                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
+                  { url: "https://weareenigma.com/assets/featured-images/ux-design-glossary.png" },
         ],
-        siteName: "Enigma Digital Website",
+        siteName: "Enigma Digital",
       }}
     />    
 

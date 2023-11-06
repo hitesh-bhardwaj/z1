@@ -93,16 +93,16 @@ if (globalThis.innerWidth>1024) {
                 description:
                   "Explore the world of marketing psychology with Enigma. Discover the power of emotions, social influence, persuasion, and neuromarketing in shaping consumer behavior.",
                   images: [
-                  {
-                    url: "https://i.ibb.co/k0NMQw9/home.png",
-                    width: 400,
-                    height: 600,
-                    alt: "Enigma Image",
-                    type: "image/png",
-                  },
-                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
-                ],
-                siteName: "Enigma Digital Website",
+                    {
+                      url: "https://weareenigma.com/assets/featured-images/audiences-marketing-psychology.png",
+                      width: 1200,
+                      height: 630,
+                      alt: "audiences marketing psychology",
+                      type: "image/png",
+                    },
+                    { url: "https://weareenigma.com/assets/featured-images/audiences-marketing-psychology.png" },
+                  ],
+                  siteName: "Enigma Digital",
               }}
             />    
 

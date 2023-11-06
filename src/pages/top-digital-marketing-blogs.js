@@ -94,15 +94,15 @@ if (globalThis.innerWidth>1024) {
           "Discover the top 20 digital marketing blogs for the latest trends, organic marketing tips, and expert insights to elevate your marketing strategy.",
           images: [
                   {
-                    url: "https://i.ibb.co/k0NMQw9/home.png",
-                    width: 400,
-                    height: 600,
-                    alt: "Enigma Image",
+                    url: "https://weareenigma.com/assets/featured-images/top-marketing-blogs.png",
+                    width: 1200,
+                    height: 630,
+                    alt: "Top Marketing Blogs",
                     type: "image/png",
                   },
-                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
+                  { url: "https://weareenigma.com/assets/featured-images/top-marketing-blogs.png" },
         ],
-        siteName: "Enimga Digital Website",
+        siteName: "Enigma Digital",
       }}
     />    
 

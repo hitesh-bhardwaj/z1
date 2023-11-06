@@ -93,16 +93,16 @@ if (globalThis.innerWidth>1024) {
         description:
           "Dive into the essentials of on-page and off-page SEO with Enigma. Learn how to optimize content, build authority, and drive organic traffic for success.",
           images: [
-                  {
-                    url: "https://i.ibb.co/k0NMQw9/home.png",
-                    width: 400,
-                    height: 600,
-                    alt: "Enigma Image",
-                    type: "image/png",
-                  },
-                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
-        ],
-        siteName: "Enigma Digital Website",
+                    {
+                      url: "https://weareenigma.com/assets/featured-images/beginner-seo-guide.png",
+                      width: 1200,
+                      height: 630,
+                      alt: "beginner seo guide",
+                      type: "image/png",
+                    },
+                    { url: "https://weareenigma.com/assets/featured-images/beginner-seo-guide.png" },
+                  ],
+                  siteName: "Enigma Digital",
       }}
     />    
 

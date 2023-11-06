@@ -93,16 +93,16 @@ if (globalThis.innerWidth>1024) {
         description:
           "Elevate your B2B LinkedIn presence with 6 unbelievable strategies for standout content and effective marketing.",
           images: [
-                  {
-                    url: "https://i.ibb.co/k0NMQw9/home.png",
-                    width: 400,
-                    height: 600,
-                    alt: "Enigma Image",
-                    type: "image/png",
-                  },
-                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
-        ],
-        siteName: "Enigma Digital Website",
+                    {
+                      url: "https://weareenigma.com/assets/featured-images/b2b-linkedin-strategies.png",
+                      width: 1200,
+                      height: 630,
+                      alt: "boost b2b linkedIn strategies",
+                      type: "image/png",
+                    },
+                    { url: "https://weareenigma.com/assets/featured-images/b2b-linkedin-strategies.png" },
+                  ],
+                  siteName: "Enigma Digital",
       }}
     />    
 
