@@ -191,14 +191,15 @@ export default function dmtca() {
                   "Witness the digital rebranding journey & website transformation of a leading West African digital marketing agency with Enigma.",
                   images: [
                   {
-                    url: "https://i.ibb.co/k0NMQw9/home.png",
-                    width: 400,
-                    height: 600,
-                    alt: "Enigma Image",
+                    url: "https://weareenigma.com/assets/featured-images/portfolio-dmtca.png",
+                    width: 1585,
+                    height: 935,
+                    alt: "DMTCA Casestudy Feature Image",
                     type: "image/png",
                   },
-                ],
-                siteName: "Enigma Digital Website",
+                    { url: "https://weareenigma.com/assets/featured-images/portfolio-dmtca.png" },
+                  ],
+                siteName: "Enigma Digital",
               }}
             />
 

@@ -181,15 +181,15 @@ export default function quickx() {
           "We helped Quickx design India's most user-friendly crypto platform. From branding to UI/UX design, our product design services fueled their growth at every step.",
           images: [
                   {
-                    url: "https://i.ibb.co/k0NMQw9/home.png",
-                    width: 400,
-                    height: 600,
-                    alt: "Enigma Image",
+                    url: "https://weareenigma.com/assets/featured-images/portfolio-quickx.png",
+                    width: 1585,
+                    height: 935,
+                    alt: "QuickX Casestudy Feature Image",
                     type: "image/png",
                   },
-                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
-        ],
-        siteName: "Enigma Digital Website",
+                    { url: "https://weareenigma.com/assets/featured-images/portfolio-quickx.png" },
+                  ],
+                siteName: "Enigma Digital",
       }}
     />    
 

@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import Head from "next/head";
 import { Cursor } from "../../cursor/index";
 import "react-creative-cursor/dist/styles.css";
 import Image from "next/image";
@@ -19,6 +18,7 @@ import ServiceNextBox from "@/components/NextBoxes/ServiceNextBox";
 import SecondVideoLazy from "@/components/ServicePage/SecondVideoLazy";
 import FirstVideoLazy from "@/components/ServicePage/FirstVideoLazy";
 import StrategySection from "@/components/ServicePage/StartegySection";
+import PageLoader from "../components/pageLoader";
 
 gsap.config({
   nullTargetWarn: false,
@@ -148,38 +148,6 @@ export default function services() {
     return () => ctx.revert();
   }, []);
 
-  // Page Transitions
-  useEffect(() => {
-    const loaderBars = document.querySelectorAll("#loaderbars");
-    const tl = gsap.timeline();
-
-    let ctx = gsap.context(() => {
-
-      tl.from(".loader-wrap-heading h1", {
-        delay: 0.5,
-        y: 200,
-        skewY: 10,
-        duration: 1,
-      }).to(".loader-wrap-heading h1", {
-        delay: 0.5,
-        y: -200,
-        skewY: 10,
-        duration: 1,
-      }).to(loaderBars, {
-        height: 0,
-        duration: 0.6,
-        delay: -0.5,
-        ease: "power2.easeIn",
-        stagger: 0.1,
-      }).to("#loader", {
-        y: "-1500",
-        opacity: 0,
-        ease: "power2.inOut",
-      });
-    });
-    return () => ctx.revert();
-  }, []);
-
   // Video Transition on Scroll
   useEffect(() => {
     let ctx = gsap.context(() => {
@@ -249,7 +217,6 @@ export default function services() {
         opacity: 0,
         yPercent: 100,
         ease: "Power3.out",
-        // stagger: 0.2,
       });
     });
   });
@@ -274,26 +241,6 @@ export default function services() {
     );
   });
 
-  // Strategy Image Animate
-  useEffect(() => {
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".service-box-image",
-        start: "top 85%",
-      },
-    });
-    tl.fromTo(
-      ".anim-img-service",
-      { opacity: 0 },
-      {
-        opacity: 1,
-        duration: 1,
-        stagger: 1,
-      }
-    );
-  });
-
-  console.clear();
 
   return (
     <>
@@ -307,43 +254,27 @@ export default function services() {
             "Award-Winning Web Design, UX Design & Digital Marketing Services",
           description:
             "Enigma offers UI UX design, Web Design, Mobile App Design, Frontend Development and Organic Digital Marketing Services. See how we can help your business grow.",
-          images: [
-            {
-              url: "https://i.ibb.co/k0NMQw9/home.png",
-              width: 400,
-              height: 600,
-              alt: "Enigma Image",
-              type: "image/png",
-            },
-            { url: "https://i.ibb.co/k0NMQw9/home.png" },
-          ],
-          siteName: "Enigma Digital Website",
+            images: [
+              {
+                url: "https://weareenigma.com/assets/featured-images/service.png",
+                width: 1585,
+                height: 935,
+                alt: "Services Feature Image",
+                type: "image/png",
+              },
+              { url: "https://weareenigma.com/assets/featured-images/service.png" },
+            ],
+          siteName: "Enigma Digital",
         }}
       />
-
-      <div className="loader-wrap" id="loader" style={{ zIndex: 999 }}>
-      <div className='mainLoaderBg'>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-            <span className='mainLoaderBar' id='loaderbars'></span>
-          </div>
-
-        <div className="loader-wrap-heading">
-          <span>
-            <h1>What We Do</h1>
-          </span>
-        </div>
-      </div>
 
       <SmoothScroll />
 
       <Cursor isGelly={true} />
 
-      <div>
-        <Header />
-      </div>
+      <PageLoader text={"What We Do"} />
+
+      <Header />
 
       <main>
         <section

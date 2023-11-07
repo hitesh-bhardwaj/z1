@@ -250,15 +250,15 @@ useEffect(() => {
             "Enigma offers front-end development, custom web and app development, DevOps, cloud engineering, and other technology services to build seamless digital experiences.",
             images: [
                   {
-                    url: "https://i.ibb.co/k0NMQw9/home.png",
-                    width: 400,
-                    height: 600,
-                    alt: "Enigma Image",
+                    url: "https://weareenigma.com/assets/featured-images/service-technology.png",
+                    width: 1585,
+                    height: 935,
+                    alt: "Technology Services Feature Image",
                     type: "image/png",
                   },
-                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
-          ],
-          siteName: "Enigma Digital Website",
+                    { url: "https://weareenigma.com/assets/featured-images/service-technology.png" },
+                  ],
+                siteName: "Enigma Digital",
         }}
       />
 
@@ -312,11 +312,15 @@ useEffect(() => {
                 We begin our process by consulting with you because we believe that nobody knows your brand better than you do. We dive deep into understanding your brand, your product, your market, and your competition. This understanding forms the basis of our strategic thinking, idea generation, and campaign plans. Our meticulous planning, extensive research, and detailed understanding of your product/services and business goals enable us to create the perfect strategy. This strategy builds meaningful online experiences across multiple channels, helping your customers find what they're looking for quickly and efficiently, leading to your business's success.
               </span>
             </p>
-            <span className={`${styles['btn-10']}`} 
-                  data-cursor-size="100px"
-                  data-cursor-exclusion>
-              kickstart your growth
-            </span>
+              <a 
+                href='/get-in-touch'
+                className={`${styles['btn-10']}`} 
+                data-cursor-size="100px"
+                data-cursor-exclusion>
+                <span>
+                  kickstart your growth
+                </span>
+              </a>
           </div>
         </div>
           

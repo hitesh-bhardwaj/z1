@@ -20,7 +20,6 @@ import Footer from "@/components/LandingPage/Design/Footer";
 import { NextSeo } from "next-seo";
 import PageLoader from "@/components/pageLoader";
 
-
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 const GraphicDesginSubscription = () => {

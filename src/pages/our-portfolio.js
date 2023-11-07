@@ -1,8 +1,7 @@
-import React, { useEffect, useState, useLayoutEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Cursor } from "../../cursor/index";
 import "react-creative-cursor/dist/styles.css";
-import { motion, AnimateSharedLayout, AnimatePresence } from "framer-motion";
-import gsap from "gsap";
+import { motion, AnimatePresence } from "framer-motion";
 import { NextSeo } from "next-seo";
 
 import Banner from "@/components/studio/Banner";
@@ -45,16 +44,16 @@ export default function studio() {
         description:
           "Explore Enigma's portfolio, a showcase of our diverse services in UI/UX design, branding, and web development, driving exceptional results.",
           images: [
-                  {
-                    url: "https://i.ibb.co/k0NMQw9/home.png",
-                    width: 400,
-                    height: 600,
-                    alt: "Enigma Image",
-                    type: "image/png",
-                  },
-                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
-        ],
-        siteName: "Enigma Digital Website",
+              {
+                url: "https://weareenigma.com/assets/featured-images/work.png",
+                width: 1585,
+                height: 935,
+                alt: "Our Portfolio Feature Image",
+                type: "image/png",
+              },
+              { url: "https://weareenigma.com/assets/featured-images/work.png" },
+            ],
+          siteName: "Enigma Digital",
       }}
     />    
 

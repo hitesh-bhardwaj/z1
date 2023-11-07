@@ -142,16 +142,17 @@ export default function BlogsPage() {
                 title: "The Enigma Blog | Discover, Learn & Be Future Ready",
                 description:
                   "Dive into our curated collection of articles on UI/UX Design, Digital Marketing, Technology & Human Psychology. Stay updated with the latest trends.",
-                  images: [
+                images: [
                   {
-                    url: "https://i.ibb.co/k0NMQw9/home.png",
-                    width: 400,
-                    height: 600,
-                    alt: "Enigma Image",
+                    url: "https://weareenigma.com/assets/featured-images/blog.png",
+                    width: 1585,
+                    height: 935,
+                    alt: "Blogs Feature Image",
                     type: "image/png",
                   },
-                ],
-                siteName: "Enigma Digital Website",
+                    { url: "https://weareenigma.com/assets/featured-images/blog.png" },
+                  ],
+                siteName: "Enigma Digital",
               }}
             />
 
@@ -171,6 +172,9 @@ export default function BlogsPage() {
       <main>
         <div className="blogs-main-section">
           <div className="blogs-sub-section">
+            <div className="blogs-featured">
+              
+            </div>
             <div
               className="blogs-heading"
               data-cursor-size="10px"

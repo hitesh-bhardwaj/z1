@@ -182,15 +182,15 @@ export default function patronum() {
           "Enigma's Success Story of Patronum's Branding, UI/UX design, Website Design,and Front-End Development, achieving remarkable results for the SaaS Product.",
           images: [
                   {
-                    url: "https://i.ibb.co/k0NMQw9/home.png",
-                    width: 400,
-                    height: 600,
-                    alt: "Enigma Image",
+                    url: "https://weareenigma.com/assets/featured-images/portfolio-patronum.png",
+                    width: 1585,
+                    height: 935,
+                    alt: "Patronum Casestudy Feature Image",
                     type: "image/png",
                   },
-                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
-        ],
-        siteName: "Enigma Digital Website",
+                    { url: "https://weareenigma.com/assets/featured-images/portfolio-patronum.png" },
+                  ],
+                siteName: "Enigma Digital",
       }}
     />    
 

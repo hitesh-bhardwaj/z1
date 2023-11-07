@@ -182,15 +182,15 @@ export default function wragby() {
           "Explore the Wragby case study showcasing Enigma's expertise in branding, UI/UX design, and front-end development for exceptional results.",
           images: [
                   {
-                    url: "https://i.ibb.co/k0NMQw9/home.png",
-                    width: 400,
-                    height: 600,
-                    alt: "Enigma Image",
+                    url: "https://weareenigma.com/assets/featured-images/portfolio-wragby.png",
+                    width: 1585,
+                    height: 935,
+                    alt: "Wragby Casestudy Feature Image",
                     type: "image/png",
                   },
-                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
-        ],
-        siteName: "Enigma Digital Website",
+                    { url: "https://weareenigma.com/assets/featured-images/portfolio-wragby.png" },
+                  ],
+                siteName: "Enigma Digital",
       }}
     />    
 

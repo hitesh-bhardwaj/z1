@@ -182,14 +182,15 @@ export default function certvault() {
                   "Discover how Enigma overhauled the User Experience & transformed the User Interface of USA's largest digital insurance certificate storage and delivery platform.",
                   images: [
                   {
-                    url: "https://i.ibb.co/k0NMQw9/home.png",
-                    width: 400,
-                    height: 600,
-                    alt: "Enigma Image",
+                    url: "https://weareenigma.com/assets/featured-images/portfolio-certvault.png",
+                    width: 1585,
+                    height: 935,
+                    alt: "Certvault Casestudy Feature Image",
                     type: "image/png",
                   },
-                ],
-                siteName: "Enigma Digital Website",
+                    { url: "https://weareenigma.com/assets/featured-images/portfolio-certvault.png" },
+                  ],
+                siteName: "Enigma Digital",
               }}
             />
 

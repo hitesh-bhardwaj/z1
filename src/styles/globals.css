@@ -5617,7 +5617,7 @@ body.loading {
   font-size: 7vw;
   margin-top: 2vw;
   font-weight: 500;
-  color: var(--black2);
+  color: var(--black1);
   text-transform: uppercase;
 }
 
@@ -5637,7 +5637,7 @@ body.loading {
   margin-right: 1vw;
   cursor: pointer;
   background: transparent;
-  border: 1px solid var(--black1);
+  border: 1px solid var(--black);
   font-family: 'ClashDisplay';
   font-weight: 500;
   position: relative;
@@ -5690,7 +5690,7 @@ body.loading {
 
 .button--calypso::before {
   content: '';
-  background: var(--black1);
+  background: var(--black);
   width: 120%;
   height: 0;
   padding-bottom: 120%;
@@ -5707,7 +5707,7 @@ body.loading {
 
 .button--calypso::after {
   content: '';
-  background: var(--black1);
+  background: var(--black);
   transform: translate3d(0, -100%, 0);
   transition: transform 0.4s cubic-bezier(0.1, 0, 0.3, 1);
 }
@@ -5723,7 +5723,7 @@ body.loading {
 
 .active {
   color: var(--white);
-  background-color: var(--black1) !important;
+  background-color: var(--black) !important;
 }
 
 .blogs-section .ul-blog {
@@ -5782,6 +5782,7 @@ body.loading {
   font-weight: 500;
   background: var(--black);
   color: var(--white);
+  text-transform: capitalize;
 }
 
 .blog-showmore-box {
@@ -6023,7 +6024,7 @@ body.loading {
 }
 
 .related-articles {
-  width: 90%;
+  width: 85%;
   margin: 15vh auto;
 }
 
@@ -6107,23 +6108,10 @@ body.loading {
 .box-img-content.service__d {
   width: 31%;
 }
+
 .img-box-related.service__d img{
   height: 60vh;
 }
-
-.img-box-related h2 {
-  position: absolute;
-  top: 1vw;
-  left: 1vw;
-  background: var(--black1);
-  color: var(--white);
-  font-size: 1.2vw;
-  padding: 0.7vw 1vw;
-  border-radius: 50px;
-  text-transform: uppercase;
-  font-weight: 500;
-}
-
 .related-box-img h1 {
   max-width: 96%;
   font-size: 1.4vw;
@@ -6930,7 +6918,7 @@ a:hover {
   }
 
   .header-section .header-logo .main-logo {
-    width: 7vw;
+    width: 6vw;
     padding-top: 0;
   }
 
@@ -11985,7 +11973,6 @@ label.label:hover:before{
 .jd__bgcover{
   background: #0000009e;
   position: absolute;
-  height: 57vh;
   width: 100%;
   top: -7vh;
   z-index: -1;

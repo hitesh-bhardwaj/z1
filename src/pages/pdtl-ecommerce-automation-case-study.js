@@ -182,15 +182,15 @@ export default function pdtl() {
           "Driving business succeess for a logistics company through marketing automation, neatly integrated with an ecommerce website for ease of maintenance.",
           images: [
                   {
-                    url: "https://i.ibb.co/k0NMQw9/home.png",
-                    width: 400,
-                    height: 600,
-                    alt: "Enigma Image",
+                    url: "https://weareenigma.com/assets/featured-images/portfolio-pdtl.png",
+                    width: 1585,
+                    height: 935,
+                    alt: "PDTL Casestudy Feature Image",
                     type: "image/png",
                   },
-                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
-        ],
-        siteName: "Enimga Digital Website",
+                    { url: "https://weareenigma.com/assets/featured-images/portfolio-pdtl.png" },
+                  ],
+                siteName: "Enigma Digital",
       }}
     />    
 

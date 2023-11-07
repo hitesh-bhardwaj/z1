@@ -163,14 +163,15 @@ export default function dharan() {
                   "Discover Dharan's journey with Enigma, from traditional hand-block-printed clothing to a compelling online e-commerce presence. Read the transformation Story",
                   images: [
                   {
-                    url: "https://i.ibb.co/k0NMQw9/home.png",
-                    width: 400,
-                    height: 600,
-                    alt: "Enigma Image",
+                    url: "https://weareenigma.com/assets/featured-images/portfolio-dharan.png",
+                    width: 1585,
+                    height: 935,
+                    alt: "Dharan Casestudy Feature Image",
                     type: "image/png",
                   },
-                ],
-                siteName: "Enigma Digital Website",
+                    { url: "https://weareenigma.com/assets/featured-images/portfolio-dharan.png" },
+                  ],
+                siteName: "Enigma Digital",
               }}
             />
 

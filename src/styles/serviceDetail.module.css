@@ -222,8 +222,19 @@
     width: 60%;
     margin-top: 30px;
   }
+
+  .sd__approach{
+    font-size: 3.5vw;
+    font-weight: 500;
+    color: var(--black1);
+    padding-bottom: 10vh;
+  }
+
+  .sd__approach span{
+    letter-spacing: 2px;
+  }
   
-  .service-detail-process-left h3{
+  .service-detail-process-left h2{
     font-size: 3.5vw;
     font-weight: 500;
     color: var(--black1);
@@ -259,7 +270,6 @@
     text-align: left;
     align-items: flex-start;
     height: 100%;
-    padding-top: 10vh;
   }
   
   .service-approach-left{

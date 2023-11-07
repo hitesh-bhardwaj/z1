@@ -33,18 +33,19 @@ export default function Home() {
           title: "Enigma | Digital Product Design, UI/UX & Neuromarketing Agency",
           description:
             "Enigma is India's Leading UI/UX Design Agency that Leverages the Power of Emotion, Design, Technology, and Neuromarketing Strategies to Create Digital Products that People Love to Use.",
-          images: [
-            {
-              url: "https://i.ibb.co/k0NMQw9/home.png",
-              width: 400,
-              height: 600,
-              alt: "Enigma Image",
-              type: "image/png",
-            },
-          ],
-          siteName: "Enigma Digital Website",
-        }}
-      />
+            images: [
+              {
+                url: "https://weareenigma.com/assets/featured-images/index.png",
+                width: 1585,
+                height: 935,
+                alt: "HomePage Feature Image",
+                type: "image/png",
+              },
+              { url: "https://weareenigma.com/assets/featured-images/index.png" },
+            ],
+            siteName: "Enigma Digital",
+          }}
+        />
 
       <Preloader />
 

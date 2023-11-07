@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import gsap from "gsap";
-import Head from "next/head";
 import { Cursor } from "../../cursor/index";
 import "react-creative-cursor/dist/styles.css";
 import SmoothScroll from "@/components/utils/SmoothScroll";
@@ -217,16 +216,16 @@ export default function about() {
           description:
             "Enigma is a team of creators, discoverers, dreamers, & doers, crafting exceptional digital experiences. We are India's leading UI UX design & marketing agency.",
             images: [
-                  {
-                    url: "https://i.ibb.co/k0NMQw9/home.png",
-                    width: 400,
-                    height: 600,
-                    alt: "Enigma Image",
-                    type: "image/png",
-                  },
-                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
-          ],
-          siteName: "Enigma Digital Website",
+              {
+                url: "https://weareenigma.com/assets/featured-images/about.png",
+                width: 1585,
+                height: 935,
+                alt: "About Us Feature Image",
+                type: "image/png",
+              },
+              { url: "https://weareenigma.com/assets/featured-images/about.png" },
+            ],
+          siteName: "Enigma Digital",
         }}
       />
 

@@ -23,8 +23,6 @@ const handleHoverExit = (e) => {
 const Menu = ({ state }) => {
   const router = useRouter();
   const menu = useRef();
-  const backgroundMenu = useRef();
-  const backgroundMenu2 = useRef();
   const revealMenu = useRef();
   const link1 = useRef();
   const link2 = useRef();

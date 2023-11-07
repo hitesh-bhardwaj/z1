@@ -52,7 +52,7 @@ const RelatedBlogs = ({ currentBlogLink, category }) => {
                             onMouseOut={(e) => handleHoverExit(e)}
                             loading='lazy'
                             />
-                            <h2>{blog.category}</h2>
+                            <h2 className='blog-list-tag'>{blog.category}</h2>
                         </Link>
                     </div>
                     <h1>{blog.description}</h1>

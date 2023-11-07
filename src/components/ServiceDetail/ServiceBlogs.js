@@ -33,7 +33,7 @@ const ServiceBlogs = ({ category }) => {
         <div className="related-article-heading service__d">
             <div className="left-box-heading">
                 <h1 className="why-us-anim">
-                    related<span className="stroke"> articles</span>
+                    Related<span className="stroke"> Articles</span>
                 </h1>
             </div>
             <Link href="/blog">
@@ -54,7 +54,7 @@ const ServiceBlogs = ({ category }) => {
                             onMouseEnter={(e) => handleHover(e)}
                             onMouseOut={(e) => handleHoverExit(e)}
                             />
-                            <h2>{blog.category}</h2>
+                            <h2 className='blog-list-tag'>{blog.category}</h2>
                         </Link>
                     </div>
                     <h1>{blog.description}</h1>

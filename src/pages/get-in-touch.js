@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
-import Head from "next/head";
 import "react-creative-cursor/dist/styles.css";
 import { Cursor } from "../../cursor/index";
 import SmoothScroll from "@/components/utils/SmoothScroll";
@@ -124,14 +123,15 @@ export default function contact() {
             "Contact Enigma for top-tier UI/UX design, front-end development, and organic digital marketing solutions. Let's collaborate and ascend your digital presence.",
             images: [
                   {
-                    url: "https://i.ibb.co/k0NMQw9/home.png",
-                    width: 400,
-                    height: 600,
-                    alt: "Enigma Image",
+                    url: "https://weareenigma.com/assets/featured-images/contact.png",
+                    width: 1585,
+                    height: 935,
+                    alt: "Contact Us Feature Image",
                     type: "image/png",
                   },
-          ],
-          siteName: "Enigma Digital Website",
+                    { url: "https://weareenigma.com/assets/featured-images/contact.png" },
+                  ],
+                siteName: "Enigma Digital",
         }}
       />
 

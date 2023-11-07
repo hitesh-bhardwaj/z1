@@ -250,15 +250,15 @@ useEffect(() => {
             "Elevate your brand with our UI and UX design services. We craft exceptional digital experiences that boost revenue and user loyalty.",
             images: [
                   {
-                    url: "https://i.ibb.co/k0NMQw9/home.png",
-                    width: 400,
-                    height: 600,
-                    alt: "Enigma Image",
+                    url: "https://weareenigma.com/assets/featured-images/service-ui-ux.png",
+                    width: 1585,
+                    height: 935,
+                    alt: "UI/UX Design Services Feature Image",
                     type: "image/png",
                   },
-                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
-          ],
-          siteName: "Enigma Digital Website",
+                    { url: "https://weareenigma.com/assets/featured-images/service-ui-ux.png" },
+                  ],
+                siteName: "Enigma Digital",
         }}
       />
 
@@ -312,11 +312,15 @@ useEffect(() => {
                 A poorly designed website or app can destroy your business. But with our human-centered design approach, we create intuitive digital experiences that delight users and drive results. Our secret sauce is combining empathy and data. We dive deep to understand your users' needs and pains. Then we analyze metrics to identify issues and opportunities. This informs designs that resonate emotionally and convert.
               </span>
             </p>
-            <span className={`${styles['btn-10']}`} 
-                  data-cursor-size="100px"
-                  data-cursor-exclusion>
-              kickstart your growth
-            </span>
+            <a 
+              href='/get-in-touch'
+              className={`${styles['btn-10']}`} 
+              data-cursor-size="100px"
+              data-cursor-exclusion>
+              <span>
+                kickstart your growth
+              </span>
+            </a>
           </div>
         </div>
           

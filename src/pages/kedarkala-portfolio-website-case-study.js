@@ -163,15 +163,16 @@ export default function kedarkala() {
             "Dive into Kedarkala's transformation with Enigma's branding and Web Design expertise. Discover our approach, tech stack, and the stunning results achieved.",
             images: [
                   {
-                    url: "https://i.ibb.co/k0NMQw9/home.png",
-                    width: 400,
-                    height: 600,
-                    alt: "Enigma Image",
+                    url: "https://weareenigma.com/assets/featured-images/portfolio-kedarkala.png",
+                    width: 1585,
+                    height: 935,
+                    alt: "Kedarkala Casestudy Feature Image",
                     type: "image/png",
                   },
-          ],
-          siteName: "Enigma Digital Website"
-        }}
+                    { url: "https://weareenigma.com/assets/featured-images/portfolio-kedarkala.png" },
+                  ],
+                siteName: "Enigma Digital",
+              }}
       />
 
       <SmoothScroll />

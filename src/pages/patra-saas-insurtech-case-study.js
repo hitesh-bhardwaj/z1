@@ -182,15 +182,15 @@ export default function patra() {
           "Dive into our Strategy, UX Planning, UI Design apporach, and the remarkable results we deliverd for Patra Corp, by building a real time reporting dashboard for their clients.",
           images: [
                   {
-                    url: "https://i.ibb.co/k0NMQw9/home.png",
-                    width: 400,
-                    height: 600,
-                    alt: "Enigma Image",
+                    url: "https://weareenigma.com/assets/featured-images/portfolio-patra.png",
+                    width: 1585,
+                    height: 935,
+                    alt: "Patra Casestudy Feature Image",
                     type: "image/png",
                   },
-            { url: "https://i.ibb.co/k0NMQw9/home.png" },
-        ],
-        siteName: "Enigma Digital Website",
+                    { url: "https://weareenigma.com/assets/featured-images/portfolio-patra.png" },
+                  ],
+                siteName: "Enigma Digital",
       }}
     />    
 

@@ -101,7 +101,7 @@ const HomeBlogs = () => {
                             onMouseEnter={(e) => handleHover(e)}
                             onMouseOut={(e) => handleHoverExit(e)}
                             />
-                            <h2>{blog.category}</h2>
+                            <h2 className='blog-list-tag'>{blog.category}</h2>
                         </Link>
                     </div>
                     <h1>{blog.description}</h1>

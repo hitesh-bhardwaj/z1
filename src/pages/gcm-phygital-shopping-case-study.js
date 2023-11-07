@@ -214,14 +214,15 @@ export default function gcm() {
                   "Witness how we crafted a phygital shopping experience for Lagos' premier retail destination. Explore Garden City Mall's digital transformation case study with Enigma.",
                   images: [
                   {
-                    url: "https://i.ibb.co/k0NMQw9/home.png",
-                    width: 400,
-                    height: 600,
-                    alt: "Enigma Image",
+                    url: "https://weareenigma.com/assets/featured-images/portfolio-gcm.png",
+                    width: 1585,
+                    height: 935,
+                    alt: "GCM Casestudy Feature Image",
                     type: "image/png",
                   },
-                ],
-                siteName: "Enigma Digital Website",
+                    { url: "https://weareenigma.com/assets/featured-images/portfolio-gcm.png" },
+                  ],
+                siteName: "Enigma Digital",
               }}
             />
 
