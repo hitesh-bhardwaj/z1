@@ -10735,7 +10735,7 @@ a:hover {
   transform: translateX(-50%);
 }
 
-.popUp-form-step h2{
+.popUp-form-step h5{
   font-size: 1.5vw;
   color: #101010;
 }
@@ -10748,7 +10748,7 @@ a:hover {
   margin-top: 7vw;
 }
 
-.popUp-form-step h2 .color-primary{
+.popUp-form-step h5 .color-primary{
   font-weight: 600;
 }
 
@@ -11821,7 +11821,7 @@ label.label:hover:before{
   .popUpImg{
     width: 60px;
   }
-  .popUp-form-step h2{
+  .popUp-form-step h5{
     font-size: 3.5vw;
   }
 }
@@ -11862,7 +11862,7 @@ label.label:hover:before{
     top: 85vh;
     right: 20px;
   }
-  .popUp-form-step h2{
+  .popUp-form-step h5{
     font-size: 4vw;
   }
 }

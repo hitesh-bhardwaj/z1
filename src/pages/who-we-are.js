@@ -462,7 +462,9 @@ export default function about() {
               data-cursor-exclusion
             >
               <img
-              src="/assets/hero-footer/scroll.svg"/>
+                src="/assets/hero-footer/scroll.svg"
+                alt="scroll below icon"
+                />
               </div>
           </div>
         </section>
