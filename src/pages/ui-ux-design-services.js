@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 import Image from 'next/image';
 import SmoothScroll from "@/components/utils/SmoothScroll";
 import SplitType from 'split-type';
@@ -18,6 +18,7 @@ import Modal from '../components/PopupForm/formModal';
 import { NextSeo } from 'next-seo';
 import ServiceBlogs from '@/components/ServiceDetail/ServiceBlogs';
 import PageLoader from "@/components/pageLoader";
+import Faq from '../components/ServiceDetail/Faq';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -45,6 +46,33 @@ const handleHover = (e) => {
   };  
 
 export default function uiuxservices() {
+
+  const blogFaqData = [
+    {
+        question: "What is a SAAS platform?",
+        answer: "SAAS platform is a cloud-based software service that allows users to access and use a variety of tools and functionality."
+    },
+    {
+        question: "How does billing work?",
+        answer: "We offers a variety of billing options, including monthly and annual subscription plans, as well as pay-as-you-go pricing for certain services. Payment is typically made through a credit card or other secure online payment method."
+    },
+    {
+        question: "Can I get a refund for my subscription?",
+        answer: "We offers a 30-day money-back guarantee for most of its subscription plans. If you are not satisfied with your subscription within the first 30 days, you can request a full refund. Refunds for subscriptions that have been active for longer than 30 days may be considered on a case-by-case basis."
+    },
+    {
+        question: "How do I cancel my subscription?",
+        answer: "To cancel your We subscription, you can log in to your account and navigate to the subscription management page. From there, you should be able to cancel your subscription and stop future billing."
+    },
+    {
+        question: "Can I try this platform for free?",
+        answer: "We offers a free trial of its  platform for a limited time. During the trial period, you will have access to a limited set of features and functionality, but you will not be charged."
+    },
+    {
+        question: "How do I access documentation?",
+        answer: "Documentation is available on the company's website and can be accessed by logging in to your account. The documentation provides detailed information on how to use the , as well as code examples and other resources."
+    },
+]
 
 if (globalThis.innerWidth>1200) {
 // Hero Section Animation
@@ -122,27 +150,25 @@ useEffect(() => {
   });
 
 // Portfolio Section Animation
-    useEffect(() => {
-      let ctx = gsap.context(() => {
-        const tl = gsap.timeline({
-          scrollTrigger: {
-            trigger: "#section-3",
-            start: "top top",
-            end: "bottom top",
-            scrub: 1,
-            ease: "easeInOut",
-            pin: true,
-            markers: false,
-          },
-        });
-        
-      tl.to("#service-port-main", {
-        duration: 10,
-        x: "-58.5%",
-        delay: 0.5,
-      });
+useEffect(() => {
+  let ctx = gsap.context(() => {
+    const tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: "#section-3",
+        start: "top top",
+        end: "2500 top",
+        scrub: 1,
+        pin: true,
+        markers: false,
+      },
+    });
+    
+  tl.to("#service-port-main", {
+    transform: "translateX(-66.8%)",
+    ease: "power1.out",
   });
-  return () => ctx.revert();
+});
+return () => ctx.revert();
 });
 
 
@@ -157,7 +183,7 @@ useEffect(() => {
             trigger: "#section-5",
             pin: "#approachImgCont",
             pinSpacing: true,
-            start: "top top",
+            start: "top -10%",
             end: "bottom bottom",
             markers: false
           }
@@ -251,8 +277,8 @@ useEffect(() => {
             images: [
                   {
                     url: "https://weareenigma.com/assets/featured-images/service-ui-ux.png",
-                    width: 1585,
-                    height: 935,
+                    width: 1200,
+                    height: 630,
                     alt: "UI/UX Design Services Feature Image",
                     type: "image/png",
                   },
@@ -474,10 +500,10 @@ useEffect(() => {
     <section className={`${styles['main-container']} ${styles['mb-10']}`} id='section-4'>
       <div className={styles['service-detail-process']}>
         <div className={styles['service-detail-process-left']}>
-          <h3 className='why-us-anim'>
-            Approach and
+          <h3 className={`${styles['sd__approach']} why-us-anim`}>
+            Our
             <br />
-            <span className='stroke'>Process</span>
+            <span className='stroke'>Approach</span>
           </h3>
         </div>
         <div className={styles['service-detail-process-right']}>
@@ -509,6 +535,10 @@ useEffect(() => {
 
 {/* Section 5 Img And Cards */}
 <section className={`${styles['main-container']} ${styles['service-approach']}`} id='section-5'>
+              <h3 className={`${styles['sd__approach']} why-us-anim`}>
+                Our
+                <span className='stroke'> Process</span>
+              </h3>
             <div className={styles['service-approach-main']}>
                 <div className={styles['service-approach-left']} id='approachImgCont'>
                 <div className={`${styles['service-approach-img-container']} service-image-container`}>
@@ -594,16 +624,18 @@ useEffect(() => {
           <OfferCards />
         </section>
 
-        {/* ======================= Next Page Box ====================== */}
-        <section className={styles['m-10-15']}>
-            <NextBox />
-        </section>
-        {/* ======================= Next Page Box END ====================== */}
+        {/* faq */}
+        <Faq faqData={blogFaqData} />
 
         {/* ================================Related Blogs==================== */}
         <ServiceBlogs category={"design"} />
         {/* ================================Related Blogs==================== */}
 
+        {/* ======================= Next Page Box ====================== */}
+        <section className={styles['m-10-15']}>
+            <NextBox />
+        </section>
+        {/* ======================= Next Page Box END ====================== */}
 
         {/* ======================== Footer ====================== */}
         <div className="footer-desktop">

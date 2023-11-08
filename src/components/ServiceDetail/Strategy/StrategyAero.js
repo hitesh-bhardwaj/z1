@@ -67,7 +67,7 @@ export default function CursorAero() {
           <h1 className="aero-mob-1">
               we craft strategies 
             <br />that transform into
-            <br />into digital dominance
+            <br />digital dominance
           </h1>
           <CursorParticles />
         </div>

@@ -183,8 +183,8 @@ export default function wragby() {
           images: [
                   {
                     url: "https://weareenigma.com/assets/featured-images/portfolio-wragby.png",
-                    width: 1585,
-                    height: 935,
+                    width: 1200,
+                    height: 630,
                     alt: "Wragby Casestudy Feature Image",
                     type: "image/png",
                   },

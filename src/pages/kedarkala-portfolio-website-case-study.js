@@ -164,8 +164,8 @@ export default function kedarkala() {
             images: [
                   {
                     url: "https://weareenigma.com/assets/featured-images/portfolio-kedarkala.png",
-                    width: 1585,
-                    height: 935,
+                    width: 1200,
+                    height: 630,
                     alt: "Kedarkala Casestudy Feature Image",
                     type: "image/png",
                   },

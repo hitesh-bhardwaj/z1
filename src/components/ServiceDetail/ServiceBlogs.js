@@ -29,12 +29,12 @@ const ServiceBlogs = ({ category }) => {
 
   return (
 
-    <div className="related-articles">
+    <div className="related-articles service__d">
         <div className="related-article-heading service__d">
             <div className="left-box-heading">
-                <h1 className="why-us-anim">
+                <h2 className="why-us-anim service__d-head-blog">
                     Related<span className="stroke"> Articles</span>
-                </h1>
+                </h2>
             </div>
             <Link href="/blog">
                 <h4>All articles</h4>

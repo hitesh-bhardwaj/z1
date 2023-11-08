@@ -324,15 +324,6 @@ if (globalThis.innerWidth>1024) {
               your dance moves to wow the crowd at a high-stakes gala.
             </p>
 
-            <div className="blog-img">
-              <div className="image-container blog-img-container">
-                <img
-                  src="/assets/blogs/blog-detail/b2b-linkedin/3.jpg"
-                  alt="Img"
-                />
-              </div>
-            </div>
-
             <h2>
               Tip 6: A Proper B2B Marketing Strategy: The LinkedIn Master Plan
             </h2>

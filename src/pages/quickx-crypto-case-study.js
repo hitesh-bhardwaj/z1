@@ -182,8 +182,8 @@ export default function quickx() {
           images: [
                   {
                     url: "https://weareenigma.com/assets/featured-images/portfolio-quickx.png",
-                    width: 1585,
-                    height: 935,
+                    width: 1200,
+                    height: 630,
                     alt: "QuickX Casestudy Feature Image",
                     type: "image/png",
                   },

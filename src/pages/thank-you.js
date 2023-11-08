@@ -72,13 +72,13 @@ const ThankYou = () => {
             "Thanks for getting in touch! We'll contact you shortly to discuss how we can help your business grow and succeed online.",
             images: [
                   {
-                    url: "https://i.ibb.co/k0NMQw9/home.png",
-                    width: 400,
-                    height: 600,
+                    url: "https://i.ibb.co/k0NMQw9/index.png",
+                    width: 1200,
+                    height: 630,
                     alt: "Enigma Image",
                     type: "image/png",
                   },
-                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
+                  { url: "https://i.ibb.co/k0NMQw9/index.png" },
           ],
           siteName: "Enigma Digital Website",
         }}

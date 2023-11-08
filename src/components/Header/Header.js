@@ -73,7 +73,7 @@ export default function Header() {
             src="/assets/header-logo/enigma-en-logo.svg"
             width={80}
             height={80}
-            alt="main-logo"
+            alt="website logo"
             className="main-logo svg-dark-mode"
             data-cursor-size="60px"
             data-cursor-exclusion

@@ -22,15 +22,15 @@ export default function NotFound() {
                   "404 Page not found please go back to home. This is Enigma Digital.",
                   images: [
                   {
-                    url: "https://i.ibb.co/k0NMQw9/home.png",
-                    width: 400,
-                    height: 600,
+                    url: "https://weareenigma.com/assets/featured-images/index.png",
+                    width: 1200,
+                    height: 630,
                     alt: "Enigma Image",
                     type: "image/png",
                   },
-                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
+                  { url: "https://weareenigma.com/assets/featured-images/index.png" },
                 ],
-                siteName: "Enigma Digital Website",
+                siteName: "Enigma Digital",
               }}
             />
 

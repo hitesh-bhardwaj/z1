@@ -257,8 +257,8 @@ export default function services() {
             images: [
               {
                 url: "https://weareenigma.com/assets/featured-images/service.png",
-                width: 1585,
-                height: 935,
+                width: 1200,
+                height: 630,
                 alt: "Services Feature Image",
                 type: "image/png",
               },

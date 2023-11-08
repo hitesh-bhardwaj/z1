@@ -466,20 +466,6 @@ if (globalThis.innerWidth>1024) {
                 Invitation links streamline the process of remote user testing, making it efficient for both researchers and participants while ensuring a smooth and reliable user research experience.
             </p>
             
-            
-
-            <div className="blog-img">
-              <div className="image-container blog-img-container">
-                <img
-                  src="/assets/blogs/blog-detail/top-20-digital-marketing-blogs/1.jpg"
-                  alt="Img"
-                />
-              </div>
-            </div>
-            
-            
-
-            
             <h3
               className="bold-h blog-mt-0"
               
@@ -502,19 +488,6 @@ if (globalThis.innerWidth>1024) {
             <p >
                 Internal Usability Testing fosters collaboration and a user-centric culture within organizations. By involving internal stakeholders, companies can improve the efficiency and effectiveness of their internal tools and systems, leading to increased productivity and user satisfaction among employees.
             </p>
-            
-            
-
-            <div className="blog-img">
-              <div className="image-container blog-img-container">
-                <img
-                  src="/assets/blogs/blog-detail/top-20-digital-marketing-blogs/2.jpg"
-                  alt="Img"
-                />
-              </div>
-            </div>
-            
-            
 
             
             <h3

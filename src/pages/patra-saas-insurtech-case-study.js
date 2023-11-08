@@ -183,8 +183,8 @@ export default function patra() {
           images: [
                   {
                     url: "https://weareenigma.com/assets/featured-images/portfolio-patra.png",
-                    width: 1585,
-                    height: 935,
+                    width: 1200,
+                    height: 630,
                     alt: "Patra Casestudy Feature Image",
                     type: "image/png",
                   },
