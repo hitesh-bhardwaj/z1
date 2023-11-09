@@ -201,9 +201,7 @@ export default function patra() {
       <PageLoader text="Patra SAAS Case Study" />
 
       <main>
-        <div>
-          <Header />
-        </div>
+        <Header />
 
         <div className={styles.Main}>
           {/*Section 1  */}
@@ -252,11 +250,11 @@ export default function patra() {
             <div className="image-anim">
               <div className={styles.imageBox} id="image-container">
                 <img
-                  src="/assets/casestudies/patra/img1.png"
+                  src="/assets/casestudies/patra/patra-case-study-image-1.webp"
+                  alt="Patra Case Study Image 1"
                   className={styles.img}
                   id="img"
                   data-cursor-size="100px"
-                  alt="portfolio image"
                   data-cursor-color="#436AD6"
                   data-cursor-text="Patra"
                 />
@@ -298,11 +296,12 @@ export default function patra() {
           <section className={styles.imageSection}>
             <div className={styles.imageBox} id="image-container">
               <img
-                  src="/assets/casestudies/patra/img2.png"
+                  src="/assets/casestudies/patra/patra-case-study-image-2.webp"
+                  alt="Patra Case Study Image 2"
+                  loading="lazy"
                   className={styles.img}
                   id="img"
                   data-cursor-size="100px"
-                  alt="portfolio image"
                   data-cursor-color="#436AD6"
                   data-cursor-text="Patra"
               />
@@ -367,8 +366,9 @@ export default function patra() {
                   <Image
                     width={1000}
                     height={1000}
-                    src="/assets/casestudies/patra/img-m1.png"
-                    alt="Logo"
+                    src="/assets/casestudies/patra/patra-case-study-image-5.webp"
+                    alt="Patra Case Study Image 5"
+                    loading="lazy"
                     data-cursor-color="#436AD6"
                     data-cursor-text="Patra"
                     data-cursor-size="120px"
@@ -382,8 +382,9 @@ export default function patra() {
                   <Image
                     width={1000}
                     height={1000}
-                    src="/assets/casestudies/patra/img-m2.png"
-                    alt="Logo"
+                    src="/assets/casestudies/patra/patra-case-study-image-6.webp"
+                    alt="Patra Case Study Image 6"
+                    loading="lazy"
                     data-cursor-color="#436AD6"
                     data-cursor-text="Patra"
                     data-cursor-size="120px"
@@ -400,8 +401,9 @@ export default function patra() {
                   <Image
                     width={1000}
                     height={1000}
-                    src="/assets/casestudies/patra/img-m3.png"
-                    alt="Logo"
+                    src="/assets/casestudies/patra/patra-case-study-image-7.webp"
+                    alt="Patra Case Study Image 7"
+                    loading="lazy"
                     data-cursor-color="#436AD6"
                     data-cursor-text="Patra"
                     data-cursor-size="120px"
@@ -415,8 +417,9 @@ export default function patra() {
                   <Image
                     width={1000}
                     height={1000}
-                    src="/assets/casestudies/patra/img-m4.png"
-                    alt="Logo"
+                    src="/assets/casestudies/patra/patra-case-study-image-8.webp"
+                    alt="Patra Case Study Image 8"
+                    loading="lazy"
                     data-cursor-color="#436AD6"
                     data-cursor-text="Patra"
                     data-cursor-size="120px"
@@ -466,8 +469,9 @@ export default function patra() {
                   <Image
                     width={1000}
                     height={1000}
-                    src="/assets/casestudies/patra/img-m5.png"
-                    alt="Logo"
+                    src="/assets/casestudies/patra/patra-case-study-image-9.webp"
+                    alt="Patra Case Study Image 9"
+                    loading="lazy"
                     data-cursor-color="#436AD6"
                     data-cursor-text="Patra"
                     data-cursor-size="120px"
@@ -481,8 +485,9 @@ export default function patra() {
                   <Image
                     width={1000}
                     height={1000}
-                    src="/assets/casestudies/patra/img-m6.png"
-                    alt="Logo"
+                    src="/assets/casestudies/patra/patra-case-study-image-10.webp"
+                    alt="Patra Case Study Image 10"
+                    loading="lazy"
                     data-cursor-color="#436AD6"
                     data-cursor-text="Patra"
                     data-cursor-size="120px"
@@ -499,8 +504,9 @@ export default function patra() {
                   <Image
                     width={1000}
                     height={1000}
-                    src="/assets/casestudies/patra/img-m7.png"
-                    alt="Logo"
+                    src="/assets/casestudies/patra/patra-case-study-image-11.webp"
+                    alt="Patra Case Study Image 11"
+                    loading="lazy"
                     data-cursor-color="#436AD6"
                     data-cursor-text="Patra"
                     data-cursor-size="120px"
@@ -514,8 +520,9 @@ export default function patra() {
                   <Image
                     width={1000}
                     height={1000}
-                    src="/assets/casestudies/patra/img-m8.png"
-                    alt="Logo"
+                    src="/assets/casestudies/patra/patra-case-study-image-12.webp"
+                    alt="Patra Case Study Image 12"
+                    loading="lazy"
                     data-cursor-color="#436AD6"
                     data-cursor-text="Patra"
                     data-cursor-size="120px"
@@ -537,13 +544,15 @@ export default function patra() {
             <div className={styles.fontImagebox}>
               <img
                 src="/assets/casestudies/patronum/fonts.webp"
-                alt="Fonts"
+                alt="Patra Case study fonts Mobile Image"
+                loading="lazy"
                 className={styles.desktopFont}
                 id="fonts-dark-casestudy"
               />
               <img
                 src="/assets/casestudies/patronum/font-mobile.webp"
-                alt="Fonts"
+                alt="Patra Case study fonts Mobile Image"
+                loading="lazy"
                 className={styles.mobileFont}
                 id="fonts-dark-casestudy"
               />
@@ -641,11 +650,12 @@ export default function patra() {
             <div className="image-anim">
               <div className={styles.imageBox} id="image-container">
                   <img
-                    src="/assets/casestudies/patra/img3.png"
+                    src="/assets/casestudies/patra/patra-case-study-image-3.webp"
+                    alt="Patra Case Study Image 3"
+                    loading="lazy"
                     className={styles.img}
                     id="img"
                     data-cursor-size="100px"
-                    alt="portfolio image"
                     data-cursor-color="#436AD6"
                     data-cursor-text="Patra"
                   />
@@ -683,11 +693,12 @@ export default function patra() {
             <div className="image-anim">
               <div className={styles.imageBox} id="image-container">
                 <img
-                    src="/assets/casestudies/patra/img4.png"
+                    src="/assets/casestudies/patra/patra-case-study-image-4.webp"
+                    alt="Patra Case Study Image 4"
+                    loading="lazy"
                     className={styles.img}
                     id="img"
                     data-cursor-size="100px"
-                    alt="portfolio image"
                     data-cursor-color="#436AD6"
                     data-cursor-text="Patra"
                 />
@@ -717,7 +728,7 @@ export default function patra() {
                   data-jelly
                 >
                   <div className={styles.clientTestimonialSectionFigure}>
-                    <img src="/assets/casestudies/certvault/client.webp" alt="client image"></img>
+                    <img src="/assets/casestudies/certvault/client-image.webp" alt="Patra Client Image"/>
                   </div>
                   <div className={styles.clientTestimonialSectionFigureText}>
                     <h4>
@@ -742,7 +753,6 @@ export default function patra() {
           </div>
 
           {/* ========================== Next Project END ======================= */}
-
 
           {/* ================ Next Project Mobile ============================== */}
 

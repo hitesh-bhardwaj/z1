@@ -312,7 +312,7 @@ useEffect(() => {
                 UI/UX
               </h1>
               <p className={`${styles['hero-top-para']}`} id='service-anim'>
-                We seamlessly blend physical and digital to craft exceptional experiences that boost revenue, conversions, and loyalty through meticulous attention to detail.
+                We seamlessly blend the physical and digital worlds to craft exceptional experiences that boost revenue, conversions, and loyalty.
               </p>
             </div>
             <div>
@@ -329,13 +329,13 @@ useEffect(() => {
           <div className={styles['service-detail-content']}>
             <h2 className={`${styles['m-50']} fadeIn`} data-jelly id='fadeIn'>
               <span>
-                First impressions matter! The user interface (UI) and user experience (UX) make or break that crucial first interaction with your brand. Leveraging the power of modern tools and our unique approach, our UI/UX design masters solve complex design problems through user research, expert analysis, prototyping, and collaborative design with users & stakeholders. At Enigma, our UI/UX design masters craft stunning visual interfaces and smooth digital experiences so your customers keep coming back for more.
+                Leveraging the power of modern tools, our understanding of human behavioural patterns, and our unique approach, we transform your vision into visually appealing and functionally seamless digital experiences that users love to explore and engage with. By understanding the needs of your users and your business goals, we approach the design process with an emotionally balanced human-centric approach. This enables us to deliver simple, stunning, and user-centric designs that engage your customers and boost your conversion rates as a by-product.
               </span>
             </h2>
             <p className={`${styles['m-50']} fadeIn`}
                 data-jelly id='fadeIn'>
               <span>
-                A poorly designed website or app can destroy your business. But with our human-centered design approach, we create intuitive digital experiences that delight users and drive results. Our secret sauce is combining empathy and data. We dive deep to understand your users' needs and pains. Then we analyze metrics to identify issues and opportunities. This informs designs that resonate emotionally and convert.
+                In a digital-first world, the quality of a user's interaction with your digital touchpoints is pivotal — often the linchpin between a thriving business and a faltering venture. Users demand not just functionality but an intuitive, seamless, and aesthetically pleasing journey through your website or application. Recognising the importance of these touchpoints, we at Enigma Digital champion a human-centred design philosophy that meticulously blends empathy with empirical data to craft digital experiences that captivate and convert. Our approach is thorough: we delve into the heart of user needs and frustrations, employing robust analytics to illuminate the path forward. This culminates into designs that not only meet but exceed user expectations, fostering engagement and driving tangible business results.
               </span>
             </p>
             <a 
@@ -344,7 +344,7 @@ useEffect(() => {
               data-cursor-size="100px"
               data-cursor-exclusion>
               <span>
-                kickstart your growth
+                Advance to Superior UX
               </span>
             </a>
           </div>
@@ -369,9 +369,9 @@ useEffect(() => {
           <div className={styles['service-portfolio-title']}>
             <h2 data-cursor-size="300px"
                 data-cursor-exclusion id='fadeIn'>
-                Design
+                UI UX Design 
                 <br /> 
-                Portfolio
+                Success Stories 
             </h2>
           </div>
           
@@ -382,7 +382,7 @@ useEffect(() => {
                  data-cursor-text="View More" id='fadeIn'>
               <div className={styles['service-card-top']}>
                 <div>
-                    <Image src='/assets/service-detail/portfolio/kedarkala.webp'
+                    <Image src='/assets/service-detail/portfolio/patra.webp'
                         loading='lazy'
                         alt='portfolio image'
                         width={600}
@@ -397,7 +397,7 @@ useEffect(() => {
               </div>
               <div className={styles['service-card-bottom']}>
                 <h3 className='color-primary'>
-                  Kedarkala
+                  Patra CRD 
                 </h3>
                 <p>
                   Digital Advisory and Consulting, Integrated Digital Marketing Plan (D.M.P.), User Experience Development, Customer Experience Strategy, Consumer Research, Insights & Target Market Analysis, Digital.
@@ -421,7 +421,7 @@ useEffect(() => {
                     </Image>
                 </div>
                 <a className={styles['btn-10']} href='#'>
-                  View CaseStudy
+                  QuickX
                 </a>
               </div>
               <div className={styles['service-card-bottom']}>
@@ -440,7 +440,7 @@ useEffect(() => {
                  data-cursor-text="View More" id='fadeIn'>
               <div className={styles['service-card-top']}>
                 <div>
-                    <Image src='/assets/service-detail/portfolio/dharan.webp'
+                    <Image src='/assets/service-detail/portfolio/certvault.webp'
                         alt='portfolio image'
                         width={600}
                         height={600}
@@ -455,7 +455,7 @@ useEffect(() => {
               </div>
               <div className={styles['service-card-bottom']}>
                 <h3 className='color-primary'>
-                  Dharan
+                  Certvault
                 </h3>
                 <p>
                   Digital Advisory and Consulting, Integrated Digital Marketing Plan (D.M.P.), User Experience Development, Customer Experience Strategy, Consumer Research, Insights & Target Market Analysis, Digital.
@@ -469,7 +469,7 @@ useEffect(() => {
                  data-cursor-text="View More" id='fadeIn'>
               <div className={styles['service-card-top']}>
                 <div>
-                    <Image src='/assets/service-detail/portfolio/quickx.webp'
+                    <Image src='/assets/service-detail/portfolio/kedarkala.webp'
                         alt='portfolio image'
                         width={600}
                         height={600}
@@ -484,7 +484,7 @@ useEffect(() => {
               </div>
               <div className={styles['service-card-bottom']}>
                 <h3 className='color-primary'>
-                  QuickX
+                  KedarKala
                 </h3>
                 <p>
                   Digital Advisory and Consulting, Integrated Digital Marketing Plan (D.M.P.), User Experience Development, Customer Experience Strategy, Consumer Research, Insights & Target Market Analysis, Digital.
@@ -514,19 +514,12 @@ useEffect(() => {
           </h4>
           <p className={`${styles['m-50']} why-us-anim`} data-jelly>
             <span>
-                - Clean, intuitive interfaces that feel effortless to use
+              Quality is the cornerstone of our approach at Enigma Digital. We pride ourselves on delivering designs that are meticulously crafted and rigorously tested to meet the highest standards. Our holistic design solutions cover every touchpoint of the user's journey, ensuring a cohesive and impactful digital presence.
             </span>
+          </p>
+          <p className={`${styles['m-50']} why-us-anim`} data-jelly>
             <span>
-              - Smart UX that maps to users' mental models
-            </span>
-            <span>
-              - Pleasant aesthetics that fit brand and user sensibilities
-            </span>
-            <span>
-              - Micro-interactions that surprise and delight
-            </span>
-            <span>
-                - Aligning user needs and business goals for win-win experiences
+              Our team is dedicated to staying ahead of the curve, crafting experiences that are not only contemporary but also future-proof. Data is our compass & human psychology is our co-pilot in this creative journey, guiding our design decisions with actionable insights to enhance usability and conversion rates.
             </span>
           </p>
         </div>
@@ -536,7 +529,7 @@ useEffect(() => {
 {/* Section 5 Img And Cards */}
 <section className={`${styles['main-container']} ${styles['service-approach']}`} id='section-5'>
               <h3 className={`${styles['sd__approach']} why-us-anim`}>
-                Our
+                The
                 <span className='stroke'> Process</span>
               </h3>
             <div className={styles['service-approach-main']}>
@@ -579,27 +572,16 @@ useEffect(() => {
                     data-cursor-size='100px'
                     data-cursor-exclusion>
                     <div className={`${styles['service-approach-text-box']} service-approach-text-box`} id='fadeIn'>
-                    <h4 className='color-primary'>RESEARCH</h4>
+                    <h4 className='color-primary'>Discover</h4>
                     <p>
-                      (Building the understanding of your business as our own) - We begin at the most fundamental level. We conduct thorough research to gather information about your industry, your company and its products and services. We want to know everything that matters - your company’s vision, the product, its purpose, its U.S.P.s, your target audience and the business expectations.
+                      Our process begins with discovery, where we immerse ourselves in your industry, brand, and audience. We conduct market research, analyze your competitors, and identify your unique value proposition to ensure our designs align with your business goals and resonate with your target users.
                     </p>
                     </div>
 
                     <div className={`${styles['service-approach-text-box']} service-approach-text-box`} id='fadeIn'>
-                    <h4 className='color-primary'>DISCOVERY</h4>
-                    <p>(Understanding the goals & challenges) - We then sit with you for an extensive discovery session to understand your business goals, challenges and pain points you’re trying to solve through design. We’ll also look at the data that tells us which parts of your current interface are working and which are not. This will help us create a plan of action tailored to your needs.</p>
-                    </div>
-                </div>
-                <div className={`${styles['service-approach-text-container']} text-card`}
-                    data-cursor-size='100px'
-                    data-cursor-exclusion>
-                    <div className={`${styles['service-approach-text-box']} service-approach-text-box`} id='fadeIn'>
-                    <h4 className='color-primary'>STORYBOARDS</h4>
-                    <p> (Customer Journey Mapping) - We develop ideas based on our findings in the research & discovery phase. We identify the core functionality of your product, define use cases and build storyboards for each use case.</p>
-                    </div>
-                    <div className={`${styles['service-approach-text-box']} service-approach-text-box`} id='fadeIn'>
-                    <h4 className='color-primary'>WIRE-FRAMING & PROTOTYPING</h4>
-                    <p>(Designing the Interface) - We present design strategies that include various colour schemes, style tiles, collections of typography, navigation structure, & call to actions that convey your brand identity and message to your target audience.
+                    <h4 className='color-primary'>Empathize</h4>
+                    <p>
+                      Empathy is the heart of our design philosophy. We engage with real users to understand their needs, frustrations, and desires. Through user interviews, surveys, and persona development, we gain insights that inform every aspect of our design strategy.
                     </p>
                     </div>
                 </div>
@@ -607,12 +589,25 @@ useEffect(() => {
                     data-cursor-size='100px'
                     data-cursor-exclusion>
                     <div className={`${styles['service-approach-text-box']} service-approach-text-box`} id='fadeIn'>
-                    <h4 className='color-primary'>VISUAL/U.I. DESIGN</h4>
-                    <p>We map your audience’s online behaviour and digital touchpoints to define the consumer journey.</p>
+                    <h4 className='color-primary'>Sketch</h4>
+                    <p> With a solid understanding of the user and your business, we move to sketching and wireframing. This stage is all about rapid visualization of ideas, exploring different concepts, and laying the foundation for the user interface.</p>
                     </div>
                     <div className={`${styles['service-approach-text-box']} service-approach-text-box`} id='fadeIn'>
-                    <h4 className='color-primary'>REFINEMENT</h4>
-                    <p>(Usability Testing & User Feedback) - We conduct user-testing sessions and perform a detailed analysis on the pre-established KPIs to understand the areas of improvement and the aberration from the desirable effect on the target audience. We then analyse all the collected data and synthesise our findings into actionable design improvements to further enhance your product.</p>
+                    <h4 className='color-primary'>Iterate</h4>
+                    <p>Iteration is key to excellence. We refine our sketches into detailed prototypes, testing and tweaking as we go. User feedback is integral at this stage, ensuring our designs are not only aesthetically pleasing but also highly functional and user-friendly.
+                    </p>
+                    </div>
+                </div>
+                <div className={`${styles['service-approach-text-container']} text-card`}
+                    data-cursor-size='100px'
+                    data-cursor-exclusion>
+                    <div className={`${styles['service-approach-text-box']} service-approach-text-box`} id='fadeIn'>
+                    <h4 className='color-primary'>Generate</h4>
+                    <p>Once we've honed our designs through multiple iterations, we generate the final high-fidelity designs. This includes the creation of a cohesive visual language for your brand, from color palettes and typography to interactive elements and animations.</p>
+                    </div>
+                    <div className={`${styles['service-approach-text-box']} service-approach-text-box`} id='fadeIn'>
+                    <h4 className='color-primary'>Nurture</h4>
+                    <p>The design journey doesn't end at launch. We continue to nurture and evolve the design based on user interaction data, A/B testing, and ongoing feedback. Our goal is to ensure your UI/UX not only stands the test of time but also adapts to the ever-changing digital landscape.</p>
                     </div>
                 </div>
                 </div>

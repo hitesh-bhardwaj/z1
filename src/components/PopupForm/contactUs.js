@@ -243,7 +243,7 @@ const handleBudgetChange = (value) => {
         if (response.ok) {
           setMessageStatus('success');
           setTimeout(() => {
-            router.push('/thankyou');
+            router.push('/thank-you');
           }, 1000);
         } else {
           setMessageStatus('error');

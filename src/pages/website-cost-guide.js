@@ -11,6 +11,7 @@ import FooterMobile from "@/components/Mobile/FooterMobile";
 import RelatedBlogs from "@/components/Blogs/relatedBlogs";
 import BlogInfo from "@/components/Blogs/BlogInfo";
 import PageLoader from "@/components/pageLoader";
+import Head from "next/head";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -80,6 +81,35 @@ if (globalThis.innerWidth>1024) {
   });
 }
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://weareenigma.com/website-cost-guide"
+  },
+  "headline": "The UX Design Glossary: Deciphering The Alphabet Soup Of UX Jargon",
+  "description": "Unravel the complexities of website pricing with Enigma's comprehensive guide. Understand factors influencing costs and the value of strategic planning.",
+  "image": [
+    "https://weareenigma.com/assets/blogs/blog-detail/website-cost-guide/website-cost-guide-1.webp",
+    "https://weareenigma.com/assets/blogs/blog-detail/website-cost-guide/website-cost-guide-2.webp"
+  ],  
+  "author": {
+    "@type": "Person",
+    "name": "Bhaskar Varshney"
+  },  
+  "publisher": {
+    "@type": "Organization",
+    "name": "https://weareenigma.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://weareenigma.com/assets/header-logo/enigma-en-logo.svg"
+    }
+  },
+  "datePublished": "2023-03-14",
+  "dateModified": "2023-11-09"
+};
+
   return (
     <>
 
@@ -88,6 +118,12 @@ if (globalThis.innerWidth>1024) {
               description="Unravel the complexities of website pricing with Enigma's comprehensive guide. Understand factors influencing costs and the value of strategic planning."
               canonical="https://weareenigma.com/website-cost-guide"
               openGraph={{
+                type: 'article',
+                article: {
+                    publishedTime: '2023-03-14',
+                    modifiedTime: '2023-11-09',
+                    tags: ['Website Costing', 'Marketing', 'UI/UX-Design', 'Strategy'],
+                },
                 url: "https://weareenigma.com/website-cost-guide",
                 title: "How Much Should a Website Cost? Enigma's Insightful Guide",
                 description:
@@ -105,6 +141,13 @@ if (globalThis.innerWidth>1024) {
                 siteName: "Enigma Digital",
               }}
             />
+            
+            <Head>
+              <script 
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+              />
+            </Head>
 
       <SmoothScroll />
 

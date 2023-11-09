@@ -225,7 +225,6 @@ export default function certvault() {
                         src="/assets/casestudies/Vector.svg"
                         alt="Svg"
                         id="case-study-arrow"
-                        loading="lazy"
                       />
                     </span>
                     </button>
@@ -252,14 +251,13 @@ export default function certvault() {
             <div className="image-anim">
               <div className={styles.imageBox} id="image-container">
                 <img
-                  src="/assets/casestudies/certvault/img1.webp"
+                  src="/assets/casestudies/certvault/certvault-casestudy-image-1.webp"
+                  alt="Certvault Casestudy Image 1"
                   className={styles.img}
                   id="img"
                   data-cursor-size="100px"
                   data-cursor-color="#F50D37"
                   data-cursor-text="Certvault"
-                  alt="portfolio image"
-                  loading="lazy"
                 />
               </div>
             </div>
@@ -297,12 +295,12 @@ export default function certvault() {
           <section className={styles.imageSection}>
             <div className={styles.imageBox} id="image-container">
               <img
-                  src="/assets/casestudies/certvault/img2.webp"
+                  src="/assets/casestudies/certvault/certvault-casestudy-image-2.webp"
+                  alt="Certvault Casestudy Image 2"
                   className={styles.img}
                   id="img"
                   data-cursor-size="100px"
                   data-cursor-color="#F50D37"
-                  alt="portfolio image"
                   data-cursor-text="Certvault"
                   loading="lazy"
               />
@@ -340,11 +338,11 @@ export default function certvault() {
               <div className={styles.firstLogoBox}>
                 <div className={styles.imageContainer} id="image-container">
                   <Image
-                        loading="lazy"
+                    loading="lazy"
                     width={1000}
                     height={1000}
-                    src="/assets/casestudies/certvault/web1.webp"
-                    alt="Logo"
+                    src="/assets/casestudies/certvault/certvault-casestudy-image-3.webp"
+                    alt="Certvault Casestudy Image 3"
                     data-cursor-color="#F50D37"
                     data-cursor-text="Certvault"
                     data-cursor-size="120px"
@@ -358,8 +356,8 @@ export default function certvault() {
                   <Image
                     width={1000}
                     height={1000}
-                    src="/assets/casestudies/certvault/web2.webp"
-                    alt="Logo"
+                    src="/assets/casestudies/certvault/certvault-casestudy-image-4.webp"
+                    alt="Certvault Casestudy Image 3"
                     loading="lazy"
                     data-cursor-color="#F50D37"
                     data-cursor-text="Certvault"
@@ -378,8 +376,8 @@ export default function certvault() {
                     width={1000}
                     height={1000}
                     loading="lazy"
-                    src="/assets/casestudies/certvault/web3.webp"
-                    alt="Logo"
+                    src="/assets/casestudies/certvault/certvault-casestudy-image-5.webp"
+                    alt="Certvault Casestudy Image 4"
                     data-cursor-color="#F50D37"
                     data-cursor-text="Certvault"
                     data-cursor-size="120px"
@@ -393,8 +391,8 @@ export default function certvault() {
                   <Image
                     width={1000}
                     height={1000}
-                    src="/assets/casestudies/certvault/web4.webp"
-                    alt="Logo"
+                    src="/assets/casestudies/certvault/certvault-casestudy-image-6.webp"
+                    alt="Certvault Casestudy Image 5"
                     loading="lazy"
                     data-cursor-color="#F50D37"
                     data-cursor-text="Certvault"
@@ -446,8 +444,8 @@ export default function certvault() {
                   <Image
                     width={1000}
                     height={1000}
-                    src="/assets/casestudies/certvault/web5.webp"
-                    alt="Logo"
+                    src="/assets/casestudies/certvault/certvault-casestudy-image-7.webp"
+                    alt="Certvault Casestudy Image 7"
                     loading="lazy"
                     data-cursor-color="#F50D37"
                     data-cursor-text="Certvault"
@@ -462,9 +460,9 @@ export default function certvault() {
                   <Image
                     width={1000}
                     height={1000}
-                    src="/assets/casestudies/certvault/web6.webp"
+                    src="/assets/casestudies/certvault/certvault-casestudy-image-8.webp"
+                    alt="Certvault Casestudy Image 8"
                     loading="lazy"
-                    alt="Logo"
                     data-cursor-color="#F50D37"
                     data-cursor-text="Certvault"
                     data-cursor-size="120px"
@@ -481,9 +479,9 @@ export default function certvault() {
                   <Image
                     width={1000}
                     height={1000}
-                    src="/assets/casestudies/certvault/web7.webp"
+                    src="/assets/casestudies/certvault/certvault-casestudy-image-9.webp"
+                    alt="Certvault Casestudy Image 9"
                     loading="lazy"
-                    alt="Logo"
                     data-cursor-color="#F50D37"
                     data-cursor-text="Certvault"
                     data-cursor-size="120px"
@@ -497,8 +495,8 @@ export default function certvault() {
                   <Image
                     width={1000}
                     height={1000}
-                    src="/assets/casestudies/certvault/web8.webp"
-                    alt="Logo"
+                    src="/assets/casestudies/certvault/certvault-casestudy-image-10.webp"
+                    alt="Certvault Casestudy Image 10"
                     loading="lazy"
                     data-cursor-color="#F50D37"
                     data-cursor-text="Certvault"
@@ -521,8 +519,9 @@ export default function certvault() {
             </div>
             <div className={`${styles.certvaultfontImagebox}  projectNoInvert`}>
               <img
-                src="/assets/casestudies/certvault/font-typo.webp"
-                alt="Fonts"
+                src="/assets/casestudies/certvault/certvault-casestudy-fonts.webp"
+                alt="Certvault Casestudy Fonts Image"
+                loading="lazy"
               />
             </div>
           </section>
@@ -614,14 +613,14 @@ export default function certvault() {
               <div className={styles.imageBox} id="image-container">
                 <figure className={styles.figure}>
                   <img
-                    src="/assets/casestudies/certvault/img3.webp"
+                    src="/assets/casestudies/certvault/certvault-casestudy-image-11.webp"
+                    alt="Certvault Casestudy Image 11"
+                    loading="lazy"
                     className={styles.img}
                     id="img"
                     data-cursor-size="100px"
                     data-cursor-color="#F50D37"
-                    alt="portfolio image"
                     data-cursor-text="Certvault"
-                    loading="lazy"
                   />
                 </figure>
               </div>
@@ -664,11 +663,11 @@ export default function certvault() {
             <div className="image-anim">
               <div className={styles.imageBox} id="image-container">
                 <img
-                    src="/assets/casestudies/certvault/img4.webp"
+                    src="/assets/casestudies/certvault/certvault-casestudy-image-12.webp"
+                    alt="Certvault Casestudy Image 12"
                     className={styles.img}
                     id="img"
                     data-cursor-size="100px"
-                    alt="portfolio image"
                     data-cursor-color="#F50D37"
                     data-cursor-text="Certvault"
                     loading="lazy"
@@ -702,9 +701,8 @@ export default function certvault() {
                     <Image  
                       height={100}
                       width={100}
-                      loading="lazy"
-                      alt="portfolio image" 
-                      src="/assets/casestudies/certvault/client.webp" />
+                      alt="client image" 
+                      src="/assets/casestudies/certvault/client-image.webp" />
                   </div>
                   <div className={styles.clientTestimonialSectionFigureText}>
                     <h4>

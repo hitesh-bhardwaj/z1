@@ -40,39 +40,6 @@ const handleHoverExit = (e) => {
 };
 
 export default function dmtca() {
-  
-  
-  // Page Transitions
-  useEffect(() => {
-    const loaderBars = document.querySelectorAll("#loaderbars");
-    const tl = gsap.timeline();
-
-    let ctx = gsap.context(() => {
-
-      tl.from(".loader-wrap-heading h1", {
-        delay: 0.5,
-        y: 200,
-        skewY: 10,
-        duration: 1,
-      }).to(".loader-wrap-heading h1", {
-        delay: 0.5,
-        y: -200,
-        skewY: 10,
-        duration: 1,
-      }).to(loaderBars, {
-        height: 0,
-        duration: 0.6,
-        delay: -0.5,
-        ease: "power2.easeIn",
-        stagger: 0.1,
-      }).to("#loader", {
-        y: "-1500",
-        opacity: 0,
-        ease: "power2.inOut",
-      });
-    });
-    return () => ctx.revert();
-  }, []);
 
   // Hero Section Animation
   useEffect(() => {
@@ -134,6 +101,30 @@ export default function dmtca() {
       }
     );
   });
+
+    // Parallax Image
+    useEffect(() => {
+      let ctx = gsap.context(() => {
+        gsap.utils.toArray("#image-container").forEach(function (container) {
+          let image = container.querySelector("img");
+  
+          gsap.to(image, {
+            y: () => image.offsetHeight - container.offsetHeight,
+            ease: "none",
+            startAt: { y: "-25%" },
+            scrollTrigger: {
+              trigger: container,
+              scrub: true,
+              pin: false,
+              markers: false,
+            },
+            y: "25%",
+            ease: "none",
+          });
+        });
+      });
+      return () => ctx.revert();
+    });
 
   // Data Speed Control
   useEffect(() => {
@@ -262,10 +253,10 @@ export default function dmtca() {
             <div className="image-anim">
               <div className={styles.imageBox} id="image-container">
                 <img
-                  src="/assets/casestudies/dmtca/img1.webp"
+                  src="/assets/casestudies/dmtca/dmtca-casestudy-image-1.webp"
+                  alt="DMTCA Casestudy Image 1"
                   className={styles.img}
                   id="img"
-                  alt="portfolio image"
                   data-cursor-size="100px"
                   data-cursor-color="#00855A"
                   data-cursor-text="DMTCA"
@@ -305,10 +296,11 @@ export default function dmtca() {
           <section className={styles.imageSection}>
             <div className={styles.imageBox} id="image-container">
               <img
-                src="/assets/casestudies/dmtca/img2.webp"
+                src="/assets/casestudies/dmtca/dmtca-casestudy-image-2.webp"
+                alt="DMTCA Casestudy Image 2"
+                loading="lazy"
                 className={styles.img}
                 id="img"
-                alt="portfolio image"
                 data-cursor-size="100px"
                 data-cursor-color="#00855A"
                 data-cursor-text="DMTCA"
@@ -356,8 +348,9 @@ export default function dmtca() {
                   <Image
                     width={1000}
                     height={1000}
-                    src="/assets/casestudies/dmtca/web1.webp"
-                    alt="Logo"
+                    src="/assets/casestudies/dmtca/dmtca-casestudy-image-3.webp"
+                    alt="DMTCA Casestudy Image 3"
+                    loading="lazy"
                     data-cursor-color="#00855A"
                     data-cursor-text="DMTCA"
                     data-cursor-size="120px"
@@ -371,8 +364,9 @@ export default function dmtca() {
                   <Image
                     width={1000}
                     height={1000}
-                    src="/assets/casestudies/dmtca/web2.webp"
-                    alt="Logo"
+                    src="/assets/casestudies/dmtca/dmtca-casestudy-image-4.webp"
+                    alt="DMTCA Casestudy Image 4"
+                    loading="lazy"
                     data-cursor-color="#00855A"
                     data-cursor-text="DMTCA"
                     data-cursor-size="120px"
@@ -389,8 +383,9 @@ export default function dmtca() {
                   <Image
                     width={1000}
                     height={1000}
-                    src="/assets/casestudies/dmtca/web3.webp"
-                    alt="Logo"
+                    src="/assets/casestudies/dmtca/dmtca-casestudy-image-5.webp"
+                    alt="DMTCA Casestudy Image 5"
+                    loading="lazy"
                     data-cursor-color="#00855A"
                     data-cursor-text="DMTCA"
                     data-cursor-size="120px"
@@ -404,8 +399,9 @@ export default function dmtca() {
                   <Image
                     width={1000}
                     height={1000}
-                    src="/assets/casestudies/dmtca/web4.webp"
-                    alt="Logo"
+                    src="/assets/casestudies/dmtca/dmtca-casestudy-image-6.webp"
+                    alt="DMTCA Casestudy Image 6"
+                    loading="lazy"
                     data-cursor-color="#00855A"
                     data-cursor-text="DMTCA"
                     data-cursor-size="120px"
@@ -458,8 +454,9 @@ export default function dmtca() {
                   <Image
                     width={1000}
                     height={1000}
-                    src="/assets/casestudies/dmtca/web5.webp"
-                    alt="Logo"
+                    src="/assets/casestudies/dmtca/dmtca-casestudy-image-7.webp"
+                    alt="DMTCA Casestudy Image 7"
+                    loading="lazy"
                     data-cursor-color="#00855A"
                     data-cursor-text="DMTCA"
                     data-cursor-size="120px"
@@ -473,8 +470,9 @@ export default function dmtca() {
                   <Image
                     width={1000}
                     height={1000}
-                    src="/assets/casestudies/dmtca/web6.webp"
-                    alt="Logo"
+                    src="/assets/casestudies/dmtca/dmtca-casestudy-image-8.webp"
+                    alt="DMTCA Casestudy Image 8"
+                    loading="lazy"
                     data-cursor-color="#00855A"
                     data-cursor-text="DMTCA"
                     data-cursor-size="120px"
@@ -491,8 +489,9 @@ export default function dmtca() {
                   <Image
                     width={1000}
                     height={1000}
-                    src="/assets/casestudies/dmtca/web7.webp"
-                    alt="Logo"
+                    src="/assets/casestudies/dmtca/dmtca-casestudy-image-9.webp"
+                    alt="DMTCA Casestudy Image 9"
+                    loading="lazy"
                     data-cursor-color="#00855A"
                     data-cursor-text="DMTCA"
                     data-cursor-size="120px"
@@ -506,8 +505,9 @@ export default function dmtca() {
                   <Image
                     width={1000}
                     height={1000}
-                    src="/assets/casestudies/dmtca/web8.webp"
-                    alt="Logo"
+                    src="/assets/casestudies/dmtca/dmtca-casestudy-image-10.webp"
+                    alt="DMTCA Casestudy Image 10"
+                    loading="lazy"
                     data-cursor-color="#00855A"
                     data-cursor-text="DMTCA"
                     data-cursor-size="120px"
@@ -527,7 +527,7 @@ export default function dmtca() {
               <h2 className={styles.h2} >Fonts</h2>
             </div>
             <div className={`${styles.dmtcafontImagebox} projectNoInvert`}>
-              <img src="/assets/casestudies/dmtca/typo.webp" alt="Fonts" />
+              <img src="/assets/casestudies/dmtca/dmtca-casestudy-font-image.webp" alt="DMTCA Casestudy Fonts Image" />
             </div>
           </section>
           {/* ====================== Fonts Section END ==================== */}
@@ -617,11 +617,12 @@ export default function dmtca() {
             <div className="image-anim">
               <div className={styles.imageBox} id="image-container">
                   <img
-                    src="/assets/casestudies/dmtca/img3.webp"
+                    src="/assets/casestudies/dmtca/dmtca-casestudy-image-11.webp"
+                    alt="DMTCA Casestudy Image 11"
+                    loading="lazy"
                     className={styles.img}
                     id="img"
                     data-cursor-size="100px"
-                    alt="portfolio image"
                     data-cursor-color="#00855A"
                     data-cursor-text="DMTCA"
                   />
@@ -662,11 +663,12 @@ export default function dmtca() {
             <div className="image-anim">
               <div className={styles.imageBox} id="image-container">
                 <img
-                  src="/assets/casestudies/dmtca/img4.webp"
+                  src="/assets/casestudies/dmtca/dmtca-casestudy-image-12.webp"
+                  alt="DMTCA Casestudy Image 12"
+                  loading="lazy"
                   className={styles.img}
                   id="img"
                   data-cursor-size="100px"
-                  alt="portfolio image"
                   data-cursor-color="#00855A"
                   data-cursor-text="DMTCA"
                 />
@@ -696,7 +698,7 @@ export default function dmtca() {
                   data-jelly
                 >
                   <div className={styles.clientTestimonialSectionFigure}>
-                    <img src="/assets/casestudies/dmtca/client.webp" alt="client img"></img>
+                    <img src="/assets/casestudies/dmtca/dmtca-client-image.webp" alt="DMTCA Client Image"/>
                   </div>
                   <div className={styles.clientTestimonialSectionFigureText}>
                     <h4>

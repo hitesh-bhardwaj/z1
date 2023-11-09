@@ -88,15 +88,15 @@ useEffect(() => {
                   "Graphic Design Services | Graphic Design Subscription",
                   images: [
                   {
-                    url: "https://i.ibb.co/k0NMQw9/home.png",
-                    width: 400,
-                    height: 600,
-                    alt: "Enigma Image",
+                    url: "https://weareenigma.com/assets/featured-images/index.png",
+                    width: 1200,
+                    height: 630,
+                    alt: "GCM Casestudy Feature Image",
                     type: "image/png",
                   },
-                  { url: "https://i.ibb.co/k0NMQw9/home.png" },
-                ],
-                siteName: "Enigma Digital Website",
+                    { url: "https://weareenigma.com/assets/featured-images/index.png" },
+                  ],
+                siteName: "Enigma Digital",
               }}
             />
 

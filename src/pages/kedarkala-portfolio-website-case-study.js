@@ -234,13 +234,13 @@ export default function kedarkala() {
             <div className="image-anim">
               <div className={styles.imageBox} id="image-container">
                 <img
-                    src="/assets/casestudies/kedarkala/img1.webp"
+                  src="/assets/casestudies/kedarkala/kedarkala-casestudy-image-1.webp"
+                  alt="Kedarkala Casestudy-Image 1"
                   className={styles.img}
                   id="img"
                   data-cursor-size="100px"
                   data-cursor-color="#0F1014"
                   data-cursor-text="Kedarkala"
-                  alt="portfolio image"
                 />
               </div>
             </div>
@@ -283,13 +283,14 @@ export default function kedarkala() {
           <section className={styles.imageSection}>
             <div className={styles.imageBox} id="image-container">
               <img
-                src="/assets/casestudies/kedarkala/img2.webp"
+                src="/assets/casestudies/kedarkala/kedarkala-casestudy-image-2.webp"
+                alt="Kedarkala Casestudy-Image 2"
+                loading="lazy"
                 className={styles.img}
                 id="img"
                 data-cursor-size="100px"
                 data-cursor-color="#0F1014"
                 data-cursor-text="Kedarkala"
-                alt="portfolio image"
               />
             </div>
           </section>
@@ -352,8 +353,9 @@ export default function kedarkala() {
                   <Image
                     width={1000}
                     height={1000}
-                    src="/assets/casestudies/kedarkala/web1.webp"
-                    alt="Logo"
+                    src="/assets/casestudies/kedarkala/kedarkala-casestudy-image-3.webp"
+                    alt="Kedarkala Casestudy-Image 3"
+                    loading="lazy"
                     data-cursor-color="#0F1014"
                     data-cursor-text="Kedarkala"
                     data-cursor-size="120px"
@@ -367,8 +369,9 @@ export default function kedarkala() {
                   <Image
                     width={1000}
                     height={1000}
-                    src="/assets/casestudies/kedarkala/web2.webp"
-                    alt="Logo"
+                    src="/assets/casestudies/kedarkala/kedarkala-casestudy-image-4.webp"
+                    alt="Kedarkala Casestudy-Image 4"
+                    loading="lazy"
                     data-cursor-color="#0F1014"
                     data-cursor-text="Kedarkala"
                     data-cursor-size="120px"
@@ -385,8 +388,9 @@ export default function kedarkala() {
                   <Image
                     width={1000}
                     height={1000}
-                    src="/assets/casestudies/kedarkala/web3.webp"
-                    alt="Logo"
+                    src="/assets/casestudies/kedarkala/kedarkala-casestudy-image-5.webp"
+                    alt="Kedarkala Casestudy-Image 5"
+                    loading="lazy"
                     data-cursor-color="#0F1014"
                     data-cursor-text="Kedarkala"
                     data-cursor-size="120px"
@@ -400,8 +404,9 @@ export default function kedarkala() {
                   <Image
                     width={1000}
                     height={1000}
-                    src="/assets/casestudies/kedarkala/web4.webp"
-                    alt="Logo"
+                    src="/assets/casestudies/kedarkala/kedarkala-casestudy-image-6.webp"
+                    alt="Kedarkala Casestudy-Image 6"
+                    loading="lazy"
                     data-cursor-color="#0F1014"
                     data-cursor-text="Kedarkala"
                     data-cursor-size="120px"
@@ -483,8 +488,9 @@ export default function kedarkala() {
                   <Image
                     width={1000}
                     height={1000}
-                    src="/assets/casestudies/kedarkala/web5.webp"
-                    alt="Logo"
+                    src="/assets/casestudies/kedarkala/kedarkala-casestudy-image-7.webp"
+                    alt="Kedarkala Casestudy-Image 7"
+                    loading="lazy"
                     data-cursor-color="#0F1014"
                     data-cursor-text="Kedarkala"
                     data-cursor-size="120px"
@@ -498,8 +504,9 @@ export default function kedarkala() {
                   <Image
                     width={1000}
                     height={1000}
-                    src="/assets/casestudies/kedarkala/web7.webp"
-                    alt="Logo"
+                    src="/assets/casestudies/kedarkala/kedarkala-casestudy-image-8.webp"
+                    alt="Kedarkala Casestudy-Image 8"
+                    loading="lazy"
                     data-cursor-color="#0F1014"
                     data-cursor-text="Kedarkala"
                     data-cursor-size="120px"
@@ -516,8 +523,9 @@ export default function kedarkala() {
                   <Image
                     width={1000}
                     height={1000}
-                    src="/assets/casestudies/kedarkala/web6.webp"
-                    alt="Logo"
+                    src="/assets/casestudies/kedarkala/kedarkala-casestudy-image-9.webp"
+                    alt="Kedarkala Casestudy-Image 9"
+                    loading="lazy"
                     data-cursor-color="#0F1014"
                     data-cursor-text="Kedarkala"
                     data-cursor-size="120px"
@@ -531,8 +539,9 @@ export default function kedarkala() {
                   <Image
                     width={1000}
                     height={1000}
-                    src="/assets/casestudies/kedarkala/web8.webp"
-                    alt="Logo"
+                    src="/assets/casestudies/kedarkala/kedarkala-casestudy-image-10.webp"
+                    alt="Kedarkala Casestudy Image 10"
+                    loading="lazy"
                     data-cursor-color="#0F1014"
                     data-cursor-text="Kedarkala"
                     data-cursor-size="120px"
@@ -553,14 +562,13 @@ export default function kedarkala() {
             </div>
             <div className={styles.kedarfontImagebox}>
               <img
-                src="/assets/casestudies/kedarkala/typo-img.png"
-                alt="Fonts"
+                src="/assets/casestudies/kedarkala/kedarkala-casestudy-font-image-1.webp"
+                alt="Kedarkala Casestudy Fonts Image 1"
                 className={styles.kedartypoImgFirst}
-                id="kedar-font-img"
               />
               <img
-                src="/assets/casestudies/kedarkala/typo.webp"
-                alt="Fonts"
+                src="/assets/casestudies/kedarkala/kedarkala-casestudy-font-image-2.webp"
+                alt="Kedarkala Casestudy Fonts Image 1"
                 id="kedar-font-img"
               />
             </div>
@@ -626,14 +634,14 @@ export default function kedarkala() {
             <div className="image-anim">
               <div className={styles.imageBox} id="image-container">
                   <img
-                    src="/assets/casestudies/kedarkala/img3.webp"
+                    src="/assets/casestudies/kedarkala/kedarkala-casestudy-image-11.webp"
+                    alt="Kedarkala Casestudy-Image 11"
+                    loading="lazy"
                     className={styles.img}
                     id="img"
                     data-cursor-size="100px"
                     data-cursor-color="#0F1014"
                     data-cursor-text="Kedarkala"
-                  alt="portfolio image"
-
                   />
               </div>
             </div>
@@ -683,12 +691,13 @@ export default function kedarkala() {
             <div className="image-anim">
               <div className={styles.imageBox} id="image-container">
                 <img
-                  src="/assets/casestudies/kedarkala/img4.webp"
+                  src="/assets/casestudies/kedarkala/kedarkala-casestudy-image-12.webp"
+                  alt="Kedarkala Casestudy-Image 12"
+                  loading="lazy"
                   className={styles.img}
                   id="img"
                   data-cursor-size="100px"
                   data-cursor-color="#0F1014"
-                  alt="portfolio image"
                   data-cursor-text="Kedarkala"
                 />
               </div>
@@ -725,8 +734,8 @@ export default function kedarkala() {
                   data-jelly
                 >
                   <div className={styles.clientTestimonialSectionFigure}>
-                    <img src="/assets/casestudies/kedarkala/kedarclient.webp"
-                            alt="client img">
+                    <img src="/assets/casestudies/kedarkala/kedarkala-client-image.webp"
+                          alt="client img">
                     </img>
                   </div>
                   <div className={styles.clientTestimonialSectionFigureText}>

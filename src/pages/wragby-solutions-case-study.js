@@ -227,6 +227,7 @@ export default function wragby() {
                         src="/assets/casestudies/Vector.svg"
                         alt="Svg"
                         id="case-study-arrow"
+                        loading="lazy"
                       />
                     </span>
                     </button>
@@ -252,13 +253,14 @@ export default function wragby() {
             <div className="image-anim">
               <div className={styles.imageBox} id="image-container">
                 <img
-                    src="/assets/casestudies/wragby/img1.png"
+                    src="/assets/casestudies/wragby/wragby-case-study-image-1.webp"
+                    alt="wragby case study image 1"
                     className={styles.img}
                     id="img"
                     data-cursor-size="100px"
                     data-cursor-color="#E30B25"
-                    alt="portfolio image"
                     data-cursor-text="Wragby"
+                    loading="lazy"
                 />
               </div>
             </div>
@@ -302,13 +304,14 @@ export default function wragby() {
           <section className={styles.imageSection}>
             <div className={styles.imageBox} id="image-container">
               <img
-                  src="/assets/casestudies/wragby/img2.png"
+                  src="/assets/casestudies/wragby/wragby-case-study-image-2.webp"
+                  alt="wragby case study image 2"
                   className={styles.img}
                   id="img"
                   data-cursor-size="100px"
                   data-cursor-color="#E30B25"
-                  alt="portfolio image"
                   data-cursor-text="Wragby"
+                  loading="lazy"
               />
             </div>
           </section>
@@ -372,13 +375,14 @@ export default function wragby() {
                   <Image
                     width={1000}
                     height={1000}
-                    src="/assets/casestudies/wragby/web1.png"
-                    alt="Logo"
+                    src="/assets/casestudies/wragby/wragby-case-study-showcase-1.webp"
+                    alt="Wragby casestudy showcase 1"
                     data-cursor-color="#EE384E"
                     data-cursor-text="Illustration"
                     data-cursor-size="120px"
                     onMouseEnter={(e) => handleHover(e)}
                     onMouseOut={(e) => handleHoverExit(e)}
+                    loading="lazy"
                   />
                 </div>
               </div>
@@ -387,13 +391,14 @@ export default function wragby() {
                   <Image
                     width={1000}
                     height={1000}
-                    src="/assets/casestudies/wragby/web2.png"
-                    alt="Logo"
+                    src="/assets/casestudies/wragby/wragby-case-study-showcase-2.webp"
+                    alt="Wragby casestudy showcase 2"
                     data-cursor-color="#0A489B"
                     data-cursor-text="Logo"
                     data-cursor-size="120px"
                     onMouseEnter={(e) => handleHover(e)}
                     onMouseOut={(e) => handleHoverExit(e)}
+                    loading="lazy"
                   />
                 </div>
               </div>
@@ -405,13 +410,14 @@ export default function wragby() {
                   <Image
                     width={1000}
                     height={1000}
-                    src="/assets/casestudies/wragby/web3.png"
-                    alt="Logo"
+                    src="/assets/casestudies/wragby/wragby-case-study-showcase-3.webp"
+                    alt="Wragby casestudy showcase 3"
                     data-cursor-color="#EE3C50"
                     data-cursor-text="Illustration"
                     data-cursor-size="120px"
                     onMouseEnter={(e) => handleHover(e)}
                     onMouseOut={(e) => handleHoverExit(e)}
+                    loading="lazy"
                   />
                 </div>
               </div>
@@ -420,13 +426,14 @@ export default function wragby() {
                   <Image
                     width={1000}
                     height={1000}
-                    src="/assets/casestudies/wragby/web4.png"
-                    alt="Logo"
+                    src="/assets/casestudies/wragby/wragby-case-study-showcase-4.webp"
+                    alt="Wragby casestudy showcase 4"
                     data-cursor-color="#3F86E4"
                     data-cursor-text="Logo Pattern"
                     data-cursor-size="120px"
                     onMouseEnter={(e) => handleHover(e)}
                     onMouseOut={(e) => handleHoverExit(e)}
+                    loading="lazy"
                   />
                 </div>
               </div>
@@ -496,13 +503,14 @@ export default function wragby() {
                   <Image
                     width={1000}
                     height={1000}
-                    src="/assets/casestudies/wragby/web5.png"
-                    alt="Logo"
+                    src="/assets/casestudies/wragby/wragby-case-study-showcase-5.webp"
+                    alt="Wragby casestudy showcase 5"
                     data-cursor-color="#EE384E"
                     data-cursor-text="Illustration"
                     data-cursor-size="120px"
                     onMouseEnter={(e) => handleHover(e)}
                     onMouseOut={(e) => handleHoverExit(e)}
+                    loading="lazy"
                   />
                 </div>
               </div>
@@ -511,13 +519,14 @@ export default function wragby() {
                   <Image
                     width={1000}
                     height={1000}
-                    src="/assets/casestudies/wragby/web6.png"
-                    alt="Logo"
+                    src="/assets/casestudies/wragby/wragby-case-study-showcase-6.webp"
+                    alt="Wragby casestudy showcase 6"
                     data-cursor-color="#0A489B"
                     data-cursor-text="Logo"
                     data-cursor-size="120px"
                     onMouseEnter={(e) => handleHover(e)}
                     onMouseOut={(e) => handleHoverExit(e)}
+                    loading="lazy"
                   />
                 </div>
               </div>
@@ -529,13 +538,14 @@ export default function wragby() {
                   <Image
                     width={1000}
                     height={1000}
-                    src="/assets/casestudies/wragby/web7.png"
-                    alt="Logo"
+                    src="/assets/casestudies/wragby/wragby-case-study-showcase-7.webp"
+                    alt="Wragby casestudy showcase 7"
                     data-cursor-color="#EE3C50"
                     data-cursor-text="Illustration"
                     data-cursor-size="120px"
                     onMouseEnter={(e) => handleHover(e)}
                     onMouseOut={(e) => handleHoverExit(e)}
+                    loading="lazy"
                   />
                 </div>
               </div>
@@ -544,13 +554,14 @@ export default function wragby() {
                   <Image
                     width={1000}
                     height={1000}
-                    src="/assets/casestudies/wragby/web8.png"
-                    alt="Logo"
+                    src="/assets/casestudies/wragby/wragby-case-study-showcase-8.webp"
+                    alt="Wragby casestudy showcase 8"
                     data-cursor-color="#3F86E4"
                     data-cursor-text="Logo Pattern"
                     data-cursor-size="120px"
                     onMouseEnter={(e) => handleHover(e)}
                     onMouseOut={(e) => handleHoverExit(e)}
+                    loading="lazy"
                   />
                 </div>
               </div>
@@ -566,13 +577,15 @@ export default function wragby() {
             </div>
             <div className={styles.wragbyfontImagebox}>
               <img
-                src="/assets/casestudies/wragby/typo-1.png"
-                alt="Fonts"
+                src="/assets/casestudies/wragby/wragby-typography-desktop.webp"
+                alt="Wragby font image"
+                loading="lazy"
                 className={styles.desktopFont}
               />
               <img
-                src="/assets/casestudies/wragby/typo-mobile.png"
-                alt="Fonts"
+                src="/assets/casestudies/wragby/wragby-typography-mobile.webp"
+                alt="Wragby font image"
+                loading="lazy"
                 className={styles.mobileFont}
               />
             </div>
@@ -673,12 +686,13 @@ export default function wragby() {
             <div className="image-anim">
               <div className={styles.imageBox} id="image-container">
                   <img
-                    src="/assets/casestudies/wragby/img3.png"
+                    src="/assets/casestudies/wragby/wragby-case-study-image-3.webp"
+                    alt="wragby case study image 3"
                     className={styles.img}
                     id="img"
+                    loading="lazy"
                     data-cursor-size="100px"
                     data-cursor-color="#E30B25"
-                    alt="portfolio image"
                     data-cursor-text="Wragby"
                   />
               </div>
@@ -727,12 +741,13 @@ export default function wragby() {
             <div className="image-anim">
               <div className={styles.imageBox} id="image-container">
                 <img
-                    src="/assets/casestudies/wragby/img4.png"
+                    src="/assets/casestudies/wragby/wragby-case-study-image-4.webp"
+                    alt="wragby case study image 4"
                     className={styles.img}
                     id="img"
+                    loading="lazy"
                     data-cursor-size="100px"
                     data-cursor-color="#E30B25"
-                    alt="portfolio image"
                     data-cursor-text="Wragby"
                 />
               </div>
@@ -769,7 +784,7 @@ export default function wragby() {
                   data-jelly
                 >
                   <div className={styles.clientTestimonialSectionFigure}>
-                  <img src="/assets/casestudies/wragby/wragbyclient.webp" alt="client image"></img>
+                  <img src="/assets/casestudies/wragby/wragby-client-image.webp" alt="Client Image"></img>
                   </div>
                   <div className={styles.clientTestimonialSectionFigureText}>
                     <h4>

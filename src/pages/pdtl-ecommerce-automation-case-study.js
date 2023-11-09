@@ -201,9 +201,7 @@ export default function pdtl() {
       <PageLoader text="PDTL Case Study" />
 
       <main>
-        <div>
-          <Header />
-        </div>
+        <Header />
 
         <div className={styles.Main}>
           
@@ -254,11 +252,11 @@ export default function pdtl() {
             <div className="image-anim">
               <div className={styles.imageBox} id="image-container">
                 <img
-                  src="/assets/casestudies/pdtl/img1.png"
+                  src="/assets/casestudies/pdtl/pdtl-case-study-image-1.webp"
+                  alt="PDTL Case Study Image 1"
                   className={styles.img}
                   id="img"
                   data-cursor-size="100px"
-                  alt="portfolio image"
                   data-cursor-color="#234BA7"
                   data-cursor-text="PDTL"
                 />
@@ -308,13 +306,14 @@ export default function pdtl() {
           <section className={styles.imageSection}>
             <div className={styles.imageBox} id="image-container">
               <img
-                    src="/assets/casestudies/pdtl/img2.png"
+                    src="/assets/casestudies/pdtl/pdtl-case-study-image-2.webp"
+                    alt="PDTL Case Study Image 2"
                     className={styles.img}
                     id="img"
+                    loading="lazy"
                     data-cursor-size="100px"
                     data-cursor-color="#234BA7"
                     data-cursor-text="PDTL"
-                    alt="portfolio image"
               />
             </div>
           </section>
@@ -377,13 +376,14 @@ export default function pdtl() {
                   <Image
                     width={1000}
                     height={1000}
-                    src="/assets/casestudies/pdtl/web1.webp"
-                    alt="Logo"
+                    src="/assets/casestudies/pdtl/pdtl-case-study-showcase-1.webp"
+                    alt="PDTL case study showcase image 1"
                     data-cursor-color="#234BA7"
                     data-cursor-text="PDTL"
                     data-cursor-size="120px"
                     onMouseEnter={(e) => handleHover(e)}
                     onMouseOut={(e) => handleHoverExit(e)}
+                    loading="lazy"
                   />
                 </div>
               </div>
@@ -392,13 +392,14 @@ export default function pdtl() {
                   <Image
                     width={1000}
                     height={1000}
-                    src="/assets/casestudies/pdtl/web2.png"
-                    alt="Logo"
+                    src="/assets/casestudies/pdtl/pdtl-case-study-showcase-2.webp"
+                    alt="PDTL case study showcase image 2"
                     data-cursor-color="#234BA7"
                     data-cursor-text="PDTL"
                     data-cursor-size="120px"
                     onMouseEnter={(e) => handleHover(e)}
                     onMouseOut={(e) => handleHoverExit(e)}
+                    loading="lazy"
                   />
                 </div>
               </div>
@@ -410,13 +411,14 @@ export default function pdtl() {
                   <Image
                     width={1000}
                     height={1000}
-                    src="/assets/casestudies/pdtl/web3.png"
-                    alt="Logo"
+                    src="/assets/casestudies/pdtl/pdtl-case-study-showcase-3.webp"
+                    alt="PDTL case study showcase image 3"
                     data-cursor-color="#234BA7"
                     data-cursor-text="PDTL"
                     data-cursor-size="120px"
                     onMouseEnter={(e) => handleHover(e)}
                     onMouseOut={(e) => handleHoverExit(e)}
+                    loading="lazy"
                   />
                 </div>
               </div>
@@ -425,13 +427,14 @@ export default function pdtl() {
                   <Image
                     width={1000}
                     height={1000}
-                    src="/assets/casestudies/pdtl/web4.png"
-                    alt="Logo"
+                    src="/assets/casestudies/pdtl/pdtl-case-study-showcase-4.webp"
+                    alt="PDTL case study showcase image 4"
                     data-cursor-color="#234BA7"
                     data-cursor-text="PDTL"
                     data-cursor-size="120px"
                     onMouseEnter={(e) => handleHover(e)}
                     onMouseOut={(e) => handleHoverExit(e)}
+                    loading="lazy"
                   />
                 </div>
               </div>
@@ -492,13 +495,14 @@ export default function pdtl() {
                   <Image
                     width={1000}
                     height={1000}
-                    src="/assets/casestudies/pdtl/web5.png"
-                    alt="Logo"
+                    src="/assets/casestudies/pdtl/pdtl-case-study-showcase-5.webp"
+                    alt="PDTL case study showcase image 5"
                     data-cursor-color="#234BA7"
                     data-cursor-text="PDTL"
                     data-cursor-size="120px"
                     onMouseEnter={(e) => handleHover(e)}
                     onMouseOut={(e) => handleHoverExit(e)}
+                    loading="lazy"
                   />
                 </div>
               </div>
@@ -507,13 +511,14 @@ export default function pdtl() {
                   <Image
                     width={1000}
                     height={1000}
-                    src="/assets/casestudies/pdtl/web6.png"
-                    alt="Logo"
+                    src="/assets/casestudies/pdtl/pdtl-case-study-showcase-6.webp"
+                    alt="PDTL case study showcase image 6"
                     data-cursor-color="#234BA7"
                     data-cursor-text="PDTL"
                     data-cursor-size="120px"
                     onMouseEnter={(e) => handleHover(e)}
                     onMouseOut={(e) => handleHoverExit(e)}
+                    loading="lazy"
                   />
                 </div>
               </div>
@@ -525,13 +530,14 @@ export default function pdtl() {
                   <Image
                     width={1000}
                     height={1000}
-                    src="/assets/casestudies/pdtl/web7.png"
-                    alt="Logo"
+                    src="/assets/casestudies/pdtl/pdtl-case-study-showcase-7.webp"
+                    alt="PDTL case study showcase image 7"
                     data-cursor-color="#234BA7"
                     data-cursor-text="PDTL"
                     data-cursor-size="120px"
                     onMouseEnter={(e) => handleHover(e)}
                     onMouseOut={(e) => handleHoverExit(e)}
+                    loading="lazy"
                   />
                 </div>
               </div>
@@ -540,13 +546,14 @@ export default function pdtl() {
                   <Image
                     width={1000}
                     height={1000}
-                    src="/assets/casestudies/pdtl/web8.png"
-                    alt="Logo"
+                    src="/assets/casestudies/pdtl/pdtl-case-study-showcase-8.webp"
+                    alt="PDTL case study showcase image 8"
                     data-cursor-color="#234BA7"
                     data-cursor-text="PDTL"
                     data-cursor-size="120px"
                     onMouseEnter={(e) => handleHover(e)}
                     onMouseOut={(e) => handleHoverExit(e)}
+                    loading="lazy"
                   />
                 </div>
               </div>
@@ -561,8 +568,8 @@ export default function pdtl() {
               <h2 className={styles.h2} >Fonts</h2>
             </div>
             <div className={styles.pdtlfontImagebox}>
-              <img src="/assets/casestudies/pdtl/font1.webp" alt="Fonts" />
-              <img src="/assets/casestudies/pdtl/font2.webp" alt="Fonts" />
+              <img src="/assets/casestudies/pdtl/pdtl-case-study-fonts-light.webp" loading="lazy" alt="PDTL Case Study Fonts Light" />
+              <img src="/assets/casestudies/pdtl/pdtl-case-study-fonts-dark.webp" loading="lazy" alt="PDTL Case Study Fonts Dark" />
             </div>
           </section>
           {/* ====================== Fonts Section END ==================== */}
@@ -676,12 +683,13 @@ export default function pdtl() {
             <div className="image-anim">
               <div className={styles.imageBox} id="image-container">
                   <img
-                    src="/assets/casestudies/pdtl/img3.png"
+                    src="/assets/casestudies/pdtl/pdtl-case-study-image-3.webp"
+                    alt="PDTL Case Study Image 3"
                     className={styles.img}
                     id="img"
+                    loading="lazy"
                     data-cursor-size="100px"
                     data-cursor-color="#234BA7"
-                    alt="portfolio image"
                     data-cursor-text="PDTL"
                   />
               </div>
@@ -736,12 +744,13 @@ export default function pdtl() {
             <div className="image-anim">
               <div className={styles.imageBox} id="image-container">
                 <img
-                    src="/assets/casestudies/pdtl/img4.png"
+                    src="/assets/casestudies/pdtl/pdtl-case-study-image-4.webp"
+                    alt="PDTL Case Study Image 4"
                     className={styles.img}
                     id="img"
+                    loading="lazy"
                     data-cursor-size="100px"
                     data-cursor-color="#234BA7"
-                    alt="portfolio image"
                     data-cursor-text="PDTL"
                 />
               </div>
@@ -777,7 +786,7 @@ export default function pdtl() {
                   data-jelly
                 >
                   <div className={styles.clientTestimonialSectionFigure}>
-                    <img src="/assets/casestudies/pdtl/pdtlclient.webp" alt="client image"></img>
+                    <img src="/assets/casestudies/pdtl/pdtl-client-image.webp" alt="PDTL Client Image"/>
                   </div>
                   <div className={styles.clientTestimonialSectionFigureText}>
                     <h4>
