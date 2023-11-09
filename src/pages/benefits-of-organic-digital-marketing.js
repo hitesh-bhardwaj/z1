@@ -100,7 +100,6 @@ if (globalThis.innerWidth>1024) {
                       alt: "benefits of organic digital marketing",
                       type: "image/png",
                     },
-                    { url: "https://weareenigma.com/assets/featured-images/benefits-of-organic-digital-marketing.png" },
                   ],
                   siteName: "Enigma Digital",
       }}

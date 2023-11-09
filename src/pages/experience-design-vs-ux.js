@@ -100,7 +100,6 @@ if (globalThis.innerWidth>1024) {
                     alt: "expeirence design vs user experience design",
                     type: "image/png",
                   },
-                  { url: "https://weareenigma.com/assets/featured-images/expeirence-design-vs-ux.png" },
                 ],
           siteName: "Enigma Digital",
       }}

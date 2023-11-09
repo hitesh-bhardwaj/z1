@@ -188,7 +188,6 @@ export default function certvault() {
                     alt: "Certvault Casestudy Feature Image",
                     type: "image/png",
                   },
-                    { url: "https://weareenigma.com/assets/featured-images/portfolio-certvault.png" },
                   ],
                 siteName: "Enigma Digital",
               }}

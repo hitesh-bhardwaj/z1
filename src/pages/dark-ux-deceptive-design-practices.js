@@ -100,7 +100,6 @@ if (globalThis.innerWidth>1024) {
                       alt: "dark ux design practices",
                       type: "image/png",
                     },
-                    { url: "https://weareenigma.com/assets/featured-images/dark-design-practices.png" },
                   ],
                   siteName: "Enigma Digital",
                 }}

@@ -101,7 +101,6 @@ if (globalThis.innerWidth>1024) {
                     alt: "UX Design Glossary",
                     type: "image/png",
                   },
-                  { url: "https://weareenigma.com/assets/featured-images/ux-design-glossary.png" },
         ],
         siteName: "Enigma Digital",
       }}

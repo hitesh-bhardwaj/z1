@@ -187,7 +187,6 @@ export default function quickx() {
                     alt: "QuickX Casestudy Feature Image",
                     type: "image/png",
                   },
-                    { url: "https://weareenigma.com/assets/featured-images/portfolio-quickx.png" },
                   ],
                 siteName: "Enigma Digital",
       }}

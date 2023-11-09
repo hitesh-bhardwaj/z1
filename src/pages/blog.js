@@ -150,7 +150,6 @@ export default function BlogsPage() {
                     alt: "Blogs Feature Image",
                     type: "image/png",
                   },
-                    { url: "https://weareenigma.com/assets/featured-images/blog.png" },
                   ],
                 siteName: "Enigma Digital",
               }}

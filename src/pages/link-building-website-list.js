@@ -99,7 +99,6 @@ if (globalThis.innerWidth>1024) {
                     alt: "link building website list",
                     type: "image/png",
                   },
-                  { url: "https://weareenigma.com/assets/featured-images/link-building-website-list.png" },
                 ],
             siteName: "Enigma Digital",
         }}

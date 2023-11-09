@@ -100,7 +100,6 @@ if (globalThis.innerWidth>1024) {
               alt: "cognitive biases ecommerce",
               type: "image/png",
             },
-            { url: "https://weareenigma.com/assets/featured-images/cognitive-biases-ecommerce.png" },
           ],
           siteName: "Enigma Digital",
         }}

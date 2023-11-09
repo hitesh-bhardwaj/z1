@@ -78,7 +78,6 @@ const ThankYou = () => {
                     alt: "Enigma Image",
                     type: "image/png",
                   },
-                  { url: "https://i.ibb.co/k0NMQw9/index.png" },
           ],
           siteName: "Enigma Digital Website",
         }}

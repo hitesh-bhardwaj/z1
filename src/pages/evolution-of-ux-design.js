@@ -100,7 +100,6 @@ if (globalThis.innerWidth>1024) {
                     alt: "evolution of ux design",
                     type: "image/png",
                   },
-                  { url: "https://weareenigma.com/assets/featured-images/evolution-of-ux-design.png" },
                 ],
           siteName: "Enigma Digital",
       }}

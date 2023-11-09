@@ -100,7 +100,6 @@ if (globalThis.innerWidth>1024) {
                     alt: "seo keyword research guide",
                     type: "image/png",
                   },
-                  { url: "https://weareenigma.com/assets/featured-images/seo-keyword-research-guide.png" },
                 ],
                 siteName: "Enigma Digital",
               }}

@@ -100,7 +100,6 @@ if (globalThis.innerWidth>1024) {
                       alt: "boost b2b linkedIn strategies",
                       type: "image/png",
                     },
-                    { url: "https://weareenigma.com/assets/featured-images/b2b-linkedin-strategies.png" },
                   ],
                   siteName: "Enigma Digital",
       }}

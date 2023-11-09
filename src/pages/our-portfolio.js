@@ -51,7 +51,6 @@ export default function studio() {
                 alt: "Our Portfolio Feature Image",
                 type: "image/png",
               },
-              { url: "https://weareenigma.com/assets/featured-images/work.png" },
             ],
           siteName: "Enigma Digital",
       }}

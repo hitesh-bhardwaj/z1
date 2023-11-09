@@ -100,7 +100,6 @@ if (globalThis.innerWidth>1024) {
                     alt: "Top UX Design Blogs",
                     type: "image/png",
                   },
-                  { url: "https://weareenigma.com/assets/featured-images/top-ux-design-blogs.png" },
         ],
         siteName: "Enigma Digital",
       }}

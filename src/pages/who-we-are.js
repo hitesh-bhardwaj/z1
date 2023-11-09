@@ -223,7 +223,6 @@ export default function about() {
                 alt: "About Us Feature Image",
                 type: "image/png",
               },
-              { url: "https://weareenigma.com/assets/featured-images/about.png" },
             ],
           siteName: "Enigma Digital",
         }}

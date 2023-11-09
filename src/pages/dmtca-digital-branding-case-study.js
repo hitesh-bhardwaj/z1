@@ -188,7 +188,6 @@ export default function dmtca() {
                     alt: "DMTCA Casestudy Feature Image",
                     type: "image/png",
                   },
-                    { url: "https://weareenigma.com/assets/featured-images/portfolio-dmtca.png" },
                   ],
                 siteName: "Enigma Digital",
               }}

@@ -188,7 +188,6 @@ export default function gcm() {
                     alt: "GCM Casestudy Feature Image",
                     type: "image/png",
                   },
-                    { url: "https://weareenigma.com/assets/featured-images/portfolio-gcm.png" },
                   ],
                 siteName: "Enigma Digital",
               }}

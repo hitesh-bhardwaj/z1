@@ -188,7 +188,6 @@ export default function wragby() {
                     alt: "Wragby Casestudy Feature Image",
                     type: "image/png",
                   },
-                    { url: "https://weareenigma.com/assets/featured-images/portfolio-wragby.png" },
                   ],
                 siteName: "Enigma Digital",
       }}

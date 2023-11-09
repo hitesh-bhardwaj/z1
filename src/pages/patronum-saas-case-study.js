@@ -188,7 +188,6 @@ export default function patronum() {
                     alt: "Patronum Casestudy Feature Image",
                     type: "image/png",
                   },
-                    { url: "https://weareenigma.com/assets/featured-images/portfolio-patronum.png" },
                   ],
                 siteName: "Enigma Digital",
       }}

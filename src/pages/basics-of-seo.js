@@ -99,7 +99,6 @@ if (globalThis.innerWidth>1024) {
               alt: "basics of seo",
               type: "image/png",
             },
-            { url: "https://weareenigma.com/assets/featured-images/basics-of-seo.png" },
           ],
           siteName: "Enigma Digital",
         }}

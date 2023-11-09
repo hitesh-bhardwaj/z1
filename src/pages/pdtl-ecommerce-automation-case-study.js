@@ -188,7 +188,6 @@ export default function pdtl() {
                     alt: "PDTL Casestudy Feature Image",
                     type: "image/png",
                   },
-                    { url: "https://weareenigma.com/assets/featured-images/portfolio-pdtl.png" },
                   ],
                 siteName: "Enigma Digital",
       }}

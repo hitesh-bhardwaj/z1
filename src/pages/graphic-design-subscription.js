@@ -91,10 +91,9 @@ useEffect(() => {
                     url: "https://weareenigma.com/assets/featured-images/index.png",
                     width: 1200,
                     height: 630,
-                    alt: "GCM Casestudy Feature Image",
+                    alt: "Graphic Design Subscription",
                     type: "image/png",
                   },
-                    { url: "https://weareenigma.com/assets/featured-images/index.png" },
                   ],
                 siteName: "Enigma Digital",
               }}

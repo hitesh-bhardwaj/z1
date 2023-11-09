@@ -100,7 +100,6 @@ if (globalThis.innerWidth>1024) {
                     alt: "search engines mechanics",
                     type: "image/png",
                   },
-                  { url: "https://weareenigma.com/assets/featured-images/search-engines-mechanics.png" },
                 ],
                 siteName: "Enigma Digital",
               }}

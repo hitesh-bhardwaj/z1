@@ -111,8 +111,8 @@ function JobDetail() {
           images: [
             {
               url: "https://weareenigma.com/assets/featured-images/career.png",
-              width: 1585,
-              height: 935,
+              width: 1200,
+              height: 630,
               alt: "Career Feature Image",
               type: "image/png",
             },
@@ -125,7 +125,7 @@ function JobDetail() {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-        />  
+        />
       </Head>        
 
       <SmoothScroll />

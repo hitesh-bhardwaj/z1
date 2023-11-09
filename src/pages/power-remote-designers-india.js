@@ -100,7 +100,6 @@ if (globalThis.innerWidth>1024) {
                     alt: "power of remote designers in India",
                     type: "image/png",
                   },
-                  { url: "https://weareenigma.com/assets/featured-images/power-of-remote-designers.png" },
                 ],
                 siteName: "Enigma Digital",
       }}

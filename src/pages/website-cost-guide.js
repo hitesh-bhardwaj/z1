@@ -136,7 +136,6 @@ const structuredData = {
                     alt: "Website Cost Guide",
                     type: "image/png",
                   },
-                  { url: "https://weareenigma.com/assets/featured-images/website-cost.png", },
                 ],
                 siteName: "Enigma Digital",
               }}

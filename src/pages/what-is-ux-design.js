@@ -100,7 +100,6 @@ if (globalThis.innerWidth>1024) {
                     alt: "What is UX Design",
                     type: "image/png",
                   },
-                  { url: "https://weareenigma.com/assets/featured-images/what-is-ux.png" },
         ],
         siteName: "Enigma Digital",
       }}

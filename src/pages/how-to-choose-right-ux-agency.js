@@ -102,7 +102,6 @@ if (globalThis.innerWidth>1024) {
                     alt: "right ux agency",
                     type: "image/png",
                   },
-                  { url: "https://weareenigma.com/assets/featured-images/right-ux-agency.png" },
                 ],
                 siteName: "Enigma Digital",
               }}

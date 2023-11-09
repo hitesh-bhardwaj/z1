@@ -41,7 +41,6 @@ export default function Home() {
                 alt: "HomePage Feature Image",
                 type: "image/png",
               },
-              { url: "https://weareenigma.com/assets/featured-images/index.png" },
             ],
             siteName: "Enigma Digital",
           }}

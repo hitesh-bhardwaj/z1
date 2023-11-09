@@ -18,7 +18,7 @@ import Modal from '../components/PopupForm/formModal';
 import { NextSeo } from 'next-seo';
 import ServiceBlogs from '@/components/ServiceDetail/ServiceBlogs';
 import PageLoader from "@/components/pageLoader";
-import Faq from '../components/ServiceDetail/Faq';
+// import Faq from '../components/ServiceDetail/Faq';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -47,32 +47,32 @@ const handleHover = (e) => {
 
 export default function uiuxservices() {
 
-  const blogFaqData = [
-    {
-        question: "What is a SAAS platform?",
-        answer: "SAAS platform is a cloud-based software service that allows users to access and use a variety of tools and functionality."
-    },
-    {
-        question: "How does billing work?",
-        answer: "We offers a variety of billing options, including monthly and annual subscription plans, as well as pay-as-you-go pricing for certain services. Payment is typically made through a credit card or other secure online payment method."
-    },
-    {
-        question: "Can I get a refund for my subscription?",
-        answer: "We offers a 30-day money-back guarantee for most of its subscription plans. If you are not satisfied with your subscription within the first 30 days, you can request a full refund. Refunds for subscriptions that have been active for longer than 30 days may be considered on a case-by-case basis."
-    },
-    {
-        question: "How do I cancel my subscription?",
-        answer: "To cancel your We subscription, you can log in to your account and navigate to the subscription management page. From there, you should be able to cancel your subscription and stop future billing."
-    },
-    {
-        question: "Can I try this platform for free?",
-        answer: "We offers a free trial of its  platform for a limited time. During the trial period, you will have access to a limited set of features and functionality, but you will not be charged."
-    },
-    {
-        question: "How do I access documentation?",
-        answer: "Documentation is available on the company's website and can be accessed by logging in to your account. The documentation provides detailed information on how to use the , as well as code examples and other resources."
-    },
-]
+//   const blogFaqData = [
+//     {
+//         question: "What is a SAAS platform?",
+//         answer: "SAAS platform is a cloud-based software service that allows users to access and use a variety of tools and functionality."
+//     },
+//     {
+//         question: "How does billing work?",
+//         answer: "We offers a variety of billing options, including monthly and annual subscription plans, as well as pay-as-you-go pricing for certain services. Payment is typically made through a credit card or other secure online payment method."
+//     },
+//     {
+//         question: "Can I get a refund for my subscription?",
+//         answer: "We offers a 30-day money-back guarantee for most of its subscription plans. If you are not satisfied with your subscription within the first 30 days, you can request a full refund. Refunds for subscriptions that have been active for longer than 30 days may be considered on a case-by-case basis."
+//     },
+//     {
+//         question: "How do I cancel my subscription?",
+//         answer: "To cancel your We subscription, you can log in to your account and navigate to the subscription management page. From there, you should be able to cancel your subscription and stop future billing."
+//     },
+//     {
+//         question: "Can I try this platform for free?",
+//         answer: "We offers a free trial of its  platform for a limited time. During the trial period, you will have access to a limited set of features and functionality, but you will not be charged."
+//     },
+//     {
+//         question: "How do I access documentation?",
+//         answer: "Documentation is available on the company's website and can be accessed by logging in to your account. The documentation provides detailed information on how to use the , as well as code examples and other resources."
+//     },
+// ]
 
 if (globalThis.innerWidth>1200) {
 // Hero Section Animation
@@ -282,7 +282,6 @@ useEffect(() => {
                     alt: "UI/UX Design Services Feature Image",
                     type: "image/png",
                   },
-                    { url: "https://weareenigma.com/assets/featured-images/service-ui-ux.png" },
                   ],
                 siteName: "Enigma Digital",
         }}
@@ -312,7 +311,7 @@ useEffect(() => {
                 UI/UX
               </h1>
               <p className={`${styles['hero-top-para']}`} id='service-anim'>
-                We seamlessly blend the physical and digital worlds to craft exceptional experiences that boost revenue, conversions, and loyalty.
+                We seamlessly blend physical and digital worlds to craft exceptional experiences that boost revenue, conversions and loyalty.
               </p>
             </div>
             <div>
@@ -329,7 +328,7 @@ useEffect(() => {
           <div className={styles['service-detail-content']}>
             <h2 className={`${styles['m-50']} fadeIn`} data-jelly id='fadeIn'>
               <span>
-                Leveraging the power of modern tools, our understanding of human behavioural patterns, and our unique approach, we transform your vision into visually appealing and functionally seamless digital experiences that users love to explore and engage with. By understanding the needs of your users and your business goals, we approach the design process with an emotionally balanced human-centric approach. This enables us to deliver simple, stunning, and user-centric designs that engage your customers and boost your conversion rates as a by-product.
+                Leveraging the power of modern tools, understanding of human behavioural patterns and our unique approach, we transform your vision into visually appealing and functionally seamless digital experiences that users love to explore and engage with. By understanding the needs of your users and your business goals, we approach the design process with an emotionally balanced human-centric approach. This enables us to deliver simple, stunning and user centric designs that engage your customers and boost your conversion rates as a by-product.
               </span>
             </h2>
             <p className={`${styles['m-50']} fadeIn`}
@@ -411,7 +410,7 @@ useEffect(() => {
                  data-cursor-text="View More" id='fadeIn'>
               <div className={styles['service-card-top']}>
                 <div>
-                    <Image src='/assets/service-detail/portfolio/wragby.webp'
+                    <Image src='/assets/service-detail/portfolio/quickx.webp'
                          loading='lazy'
                          width={600}
                         height={600}
@@ -421,12 +420,12 @@ useEffect(() => {
                     </Image>
                 </div>
                 <a className={styles['btn-10']} href='#'>
-                  QuickX
+                  View CaseStudy
                 </a>
               </div>
               <div className={styles['service-card-bottom']}>
                 <h3 className='color-primary'>
-                  Wragby
+                  QuickX
                 </h3>
                 <p>
                   Digital Advisory and Consulting, Integrated Digital Marketing Plan (D.M.P.), User Experience Development, Customer Experience Strategy, Consumer Research, Insights & Target Market Analysis, Digital.
@@ -507,11 +506,11 @@ useEffect(() => {
           </h3>
         </div>
         <div className={styles['service-detail-process-right']}>
-          <h4 className='why-us-anim' data-jelly>
+          <p className={`${styles['mb-50']} why-us-anim`}   data-jelly>
             <span>
-              Understanding human behavior is key to great UX. Our secret weapon is neuroscience expertise. Unlike other agencies that claim to be experts in UX Design, our team includes in-house psychologists & neuro-scientists who apply the latest behavioral research to penetrate the user's mindset. This unlocks designs that resonates emotionally and triggers desired actions. Armed with these neurological insights, we create experiences with proven psychological pull. Users feel understood, empowered and engaged. Our unique neuro-informed design process yields:
+              Innovation fuels our creative process, as we harness cutting-edge tools and technologies to push the boundaries of design. We delve into the heart of user behaviour, leveraging extensive research to ensure our designs resonate deeply and deliver a personal touch. Our commitment to collaboration is unwavering, involving clients and stakeholders at every stage to align our creative vision with your business objectives. Through iterative prototyping and testing, we refine our designs to perfection, ensuring a seamless and intuitive user experience.
             </span>
-          </h4>
+          </p>
           <p className={`${styles['m-50']} why-us-anim`} data-jelly>
             <span>
               Quality is the cornerstone of our approach at Enigma Digital. We pride ourselves on delivering designs that are meticulously crafted and rigorously tested to meet the highest standards. Our holistic design solutions cover every touchpoint of the user's journey, ensuring a cohesive and impactful digital presence.
@@ -574,7 +573,7 @@ useEffect(() => {
                     <div className={`${styles['service-approach-text-box']} service-approach-text-box`} id='fadeIn'>
                     <h4 className='color-primary'>Discover</h4>
                     <p>
-                      Our process begins with discovery, where we immerse ourselves in your industry, brand, and audience. We conduct market research, analyze your competitors, and identify your unique value proposition to ensure our designs align with your business goals and resonate with your target users.
+                      Our process begins with discovery, where we immerse ourselves in your industry, brand, and audience. We conduct market research, analyse your competitors, and identify your unique value proposition to ensure our designs align with your business goals and resonate with your target users.
                     </p>
                     </div>
 
@@ -603,7 +602,7 @@ useEffect(() => {
                     data-cursor-exclusion>
                     <div className={`${styles['service-approach-text-box']} service-approach-text-box`} id='fadeIn'>
                     <h4 className='color-primary'>Generate</h4>
-                    <p>Once we've honed our designs through multiple iterations, we generate the final high-fidelity designs. This includes the creation of a cohesive visual language for your brand, from color palettes and typography to interactive elements and animations.</p>
+                    <p>Once we've honed our designs through multiple iterations, we generate the final high-fidelity designs. This includes the creation of a cohesive visual language for your brand, from colour palettes and typography to interactive elements and animations.</p>
                     </div>
                     <div className={`${styles['service-approach-text-box']} service-approach-text-box`} id='fadeIn'>
                     <h4 className='color-primary'>Nurture</h4>
@@ -620,7 +619,7 @@ useEffect(() => {
         </section>
 
         {/* faq */}
-        <Faq faqData={blogFaqData} />
+        {/* <Faq faqData={blogFaqData} /> */}
 
         {/* ================================Related Blogs==================== */}
         <ServiceBlogs category={"design"} />

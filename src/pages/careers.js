@@ -38,7 +38,6 @@ export default function Careers(){
                     alt: "Careers Page Feature Image",
                     type: "image/png",
                   },
-                  { url: "https://weareenigma.com/assets/featured-images/career.png" },
                 ],
                 siteName: "Enigma Digital",
               }}

@@ -169,7 +169,6 @@ export default function dharan() {
                     alt: "Dharan Casestudy Feature Image",
                     type: "image/png",
                   },
-                    { url: "https://weareenigma.com/assets/featured-images/portfolio-dharan.png" },
                   ],
                 siteName: "Enigma Digital",
               }}

@@ -100,7 +100,6 @@ if (globalThis.innerWidth>1024) {
                     alt: "future of marketing neuromarketing",
                     type: "image/png",
                   },
-                  { url: "https://weareenigma.com/assets/featured-images/future-of-marketing.png" },
                 ],
                 siteName: "Enigma Digital",
       }}

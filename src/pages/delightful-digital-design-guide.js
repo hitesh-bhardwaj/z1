@@ -100,7 +100,6 @@ if (globalThis.innerWidth>1024) {
                       alt: "delightful digital design guide",
                       type: "image/png",
                     },
-                    { url: "https://weareenigma.com/assets/featured-images/digital-design-guide.png" },
                   ],
                   siteName: "Enigma Digital",
               }}

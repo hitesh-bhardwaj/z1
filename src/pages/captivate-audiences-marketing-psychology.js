@@ -100,7 +100,6 @@ if (globalThis.innerWidth>1024) {
                       alt: "audiences marketing psychology",
                       type: "image/png",
                     },
-                    { url: "https://weareenigma.com/assets/featured-images/audiences-marketing-psychology.png" },
                   ],
                   siteName: "Enigma Digital",
               }}

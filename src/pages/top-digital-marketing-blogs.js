@@ -100,7 +100,6 @@ if (globalThis.innerWidth>1024) {
                     alt: "Top Marketing Blogs",
                     type: "image/png",
                   },
-                  { url: "https://weareenigma.com/assets/featured-images/top-marketing-blogs.png" },
         ],
         siteName: "Enigma Digital",
       }}

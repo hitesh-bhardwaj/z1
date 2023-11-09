@@ -262,7 +262,6 @@ export default function services() {
                 alt: "Services Feature Image",
                 type: "image/png",
               },
-              { url: "https://weareenigma.com/assets/featured-images/service.png" },
             ],
           siteName: "Enigma Digital",
         }}

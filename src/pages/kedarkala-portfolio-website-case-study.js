@@ -169,7 +169,6 @@ export default function kedarkala() {
                     alt: "Kedarkala Casestudy Feature Image",
                     type: "image/png",
                   },
-                    { url: "https://weareenigma.com/assets/featured-images/portfolio-kedarkala.png" },
                   ],
                 siteName: "Enigma Digital",
               }}

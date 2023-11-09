@@ -57,8 +57,8 @@ export default function OfferCards() {
                             </div>
                         </div>
                         <div className="service-offer-card-wrapper w-1/3 p-3">
-                        <div className="service-offer-card image-card" id="fadeUp">
-                            <Image src='/assets/service-detail/strategy/strategy4.webp' 
+                            <div className="service-offer-card image-card" id="fadeUp">
+                                <Image src='/assets/service-detail/strategy/strategy4.webp' 
                                     alt='our service image'
                                     loading='lazy'
                                     fill={true}
@@ -133,19 +133,6 @@ export default function OfferCards() {
                                     <span className="card-shape-6 card-bg-3"></span>
                                 </div>
                                 <h3 className="text-2xl font-medium z-10">Social Media Strategy</h3>
-                            </div>
-                        </div>
-
-                        <div className="service-offer-card-wrapper w-1/3 p-3">
-                            <div className="service-offer-card image-card" id="fadeUp">
-                            <Image src='/assets/service-detail/strategy/strategy5.webp' 
-                                    alt='our service image'
-                                    loading='lazy'
-                                    fill={true}
-                                    sizes="(max-width: 1200px) 50vw,(max-width: 776px) 100vw, 33vw"
-                                    onMouseEnter={(e) => handleHover2(e)}
-                                    onMouseOut={(e) => handleHoverExit2(e)}>
-                                </Image>
                             </div>
                         </div>
                         

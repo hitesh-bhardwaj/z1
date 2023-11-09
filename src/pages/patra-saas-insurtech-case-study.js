@@ -188,7 +188,6 @@ export default function patra() {
                     alt: "Patra Casestudy Feature Image",
                     type: "image/png",
                   },
-                    { url: "https://weareenigma.com/assets/featured-images/portfolio-patra.png" },
                   ],
                 siteName: "Enigma Digital",
       }}

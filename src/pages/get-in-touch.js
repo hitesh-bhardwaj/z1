@@ -129,7 +129,6 @@ export default function contact() {
                     alt: "Contact Us Feature Image",
                     type: "image/png",
                   },
-                    { url: "https://weareenigma.com/assets/featured-images/contact.png" },
                   ],
                 siteName: "Enigma Digital",
         }}

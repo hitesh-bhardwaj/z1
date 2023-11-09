@@ -43,7 +43,7 @@ export default function OfferCards() {
                                     <span className="card-shape-1 card-bg-2"></span>
                                     <span className="card-shape-1 card-bg-3"></span>
                                 </div>
-                                <h3 className="text-2xl font-medium z-10">Digital Advisory and Consulting</h3>
+                                <h3 className="text-2xl font-medium z-10">Content Marketing</h3>
                             </div>
                         </div>
                         <div className="service-offer-card-wrapper w-1/3 p-3">
@@ -54,7 +54,7 @@ export default function OfferCards() {
                                     <span className="card-shape-2 card-bg-2"></span>
                                     <span className="card-shape-2 card-bg-3"></span>
                                 </div>
-                                <h3 className="text-2xl font-medium z-10">User Experience Development</h3>
+                                <h3 className="text-2xl font-medium z-10">Search Engine Optimization</h3>
                             </div>
                         </div>
                         <div className="service-offer-card-wrapper w-1/3 p-3">
@@ -77,7 +77,7 @@ export default function OfferCards() {
                                     <span className="card-shape-3 card-bg-2"></span>
                                     <span className="card-shape-3 card-bg-3"></span>
                                 </div>
-                                <h3 className="text-2xl font-medium z-10">Brand & content strategy</h3>
+                                <h3 className="text-2xl font-medium z-10">Social Media Management</h3>
                             </div>
                         </div>
                         <div className="service-offer-card-wrapper w-1/3 p-3">
@@ -100,7 +100,7 @@ export default function OfferCards() {
                                     <span className="card-shape-4 card-bg-2"></span>
                                     <span className="card-shape-4 card-bg-3"></span>
                                 </div>
-                                <h3 className="text-2xl font-medium z-10">Personal design & customer segmentationg</h3>
+                                <h3 className="text-2xl font-medium z-10">Influencer Partnerships</h3>
                             </div>
                         </div>
                         <div className="service-offer-card-wrapper w-1/3 p-3">
@@ -111,7 +111,7 @@ export default function OfferCards() {
                                     <span className="card-shape-5 card-bg-2"></span>
                                     <span className="card-shape-5 card-bg-3"></span>
                                 </div>
-                                <h3 className="text-2xl font-medium z-10">Digital Capabilities Development</h3>
+                                <h3 className="text-2xl font-medium z-10">Community Building</h3>
                             </div>
                         </div>
                         <div className="service-offer-card-wrapper w-1/3 p-3">
@@ -122,7 +122,29 @@ export default function OfferCards() {
                                     <span className="card-shape-6 card-bg-2"></span>
                                     <span className="card-shape-6 card-bg-3"></span>
                                 </div>
-                                <h3 className="text-2xl font-medium z-10">Digital Marketing & Website Performance Audit</h3>
+                                <h3 className="text-2xl font-medium z-10">PR and Media Outreach</h3>
+                            </div>
+                        </div>
+                        <div className="service-offer-card-wrapper w-1/3 p-3">
+                            <div className="service-offer-card">
+                                <div className="service-offer-card-blur"></div>
+                                <div className="service-offer-card-bg">
+                                    <span className="card-shape-6 card-bg-1"></span>
+                                    <span className="card-shape-6 card-bg-2"></span>
+                                    <span className="card-shape-6 card-bg-3"></span>
+                                </div>
+                                <h3 className="text-2xl font-medium z-10">Reputation Management</h3>
+                            </div>
+                        </div>
+                        <div className="service-offer-card-wrapper w-1/3 p-3">
+                            <div className="service-offer-card">
+                                <div className="service-offer-card-blur"></div>
+                                <div className="service-offer-card-bg">
+                                    <span className="card-shape-6 card-bg-1"></span>
+                                    <span className="card-shape-6 card-bg-2"></span>
+                                    <span className="card-shape-6 card-bg-3"></span>
+                                </div>
+                                <h3 className="text-2xl font-medium z-10">Analytics and Reporting</h3>
                             </div>
                         </div>
                     </div>

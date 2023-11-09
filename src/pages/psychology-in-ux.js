@@ -100,7 +100,6 @@ if (globalThis.innerWidth>1024) {
                     alt: "psychology in ux",
                     type: "image/png",
                   },
-                  { url: "https://weareenigma.com/assets/featured-images/psychology-in-ux.png" },
                 ],
                 siteName: "Enigma Digital",
               }}
