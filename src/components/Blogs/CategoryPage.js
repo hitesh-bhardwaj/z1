@@ -111,7 +111,6 @@ const CategoryPage = ({ category }) => {
       <NextSeo
         title={metaTitle}
         description={metaDescription}
-        canonical={`https://weareenigma.com/blog/${category.toLowerCase()}`}
         openGraph={{
           url: `https://weareenigma.com/blog/${category.toLowerCase()}`,
           title: metaTitle,
