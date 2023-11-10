@@ -360,9 +360,15 @@ useEffect(() => {
                           data-cursor-opaque
                           data-cursor-size="50px"
                         >
-                          <a target="blank" href="/www.youtube.com">
+
+                          {/* <a target="blank" href="www.youtube.com">
                             <span data-text="Youtube">Youtube</span>
+                          </a> */}
+                          
+                          <a href="/careers">
+                            <span data-text="Careers">Careers</span>
                           </a>
+
                         </div>
                       </div>
                       <div className="content-right-body-socials-column">
