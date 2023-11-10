@@ -33,7 +33,7 @@ const handleHoverExit = (e) => {
 
 const CategoryPage = ({ category }) => {
   // Find the category data based on the category slug
-  const categoryInfo = categoryData.find((data) => data.slug === category);
+  const categoryInfo = CategoryData.find((data) => data.slug === category);
 
   if (!categoryInfo) {
     // Handle the case where the category is not found
