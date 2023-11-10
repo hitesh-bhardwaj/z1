@@ -34,7 +34,7 @@ export default function Home() {
             "Enigma is India's Leading UI/UX Design Agency that Leverages the Power of Emotion, Design, Technology, and Neuromarketing Strategies to Create Digital Products that People Love to Use.",
             images: [
               {
-                url: "/assets/featured-images/index.png",
+                url: "https://weareenigma.com/assets/featured-images/index.png",
                 width: 1200,
                 height: 630,
                 alt: "HomePage Feature Image",
