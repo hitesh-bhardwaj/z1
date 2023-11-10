@@ -360,8 +360,8 @@ useEffect(() => {
                           data-cursor-opaque
                           data-cursor-size="50px"
                         >
-                          <a target="blank" href="https://www.youtube.com/">
-                            <span data-text="Youtube">Youtube</span>
+                          <a href="/careers">
+                            <span data-text="Careers">Careers</span>
                           </a>
                         </div>
                       </div>

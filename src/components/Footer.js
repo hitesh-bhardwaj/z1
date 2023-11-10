@@ -210,8 +210,8 @@ function Footer() {
                     data-cursor-exclusion
                     data-cursor-size="80px"
                   >
-                    <a href="https://www.youtube.com/" target="blank">
-                      <span data-text="Youtube">Youtube</span>
+                    <a href="/careers">
+                      <span data-text="Careers">Careers</span>
                     </a>
                   </div>
                 </div>
