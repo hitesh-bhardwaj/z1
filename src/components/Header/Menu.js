@@ -39,6 +39,7 @@ const Menu = ({ state }) => {
   const link13 = useRef();
   const link14 = useRef();
   const link15 = useRef();
+  const link16 = useRef();
 
 if (globalThis.innerWidth > 1024) {
   useEffect(() => {
@@ -129,6 +130,7 @@ useEffect(() => {
               link3.current,
               link4.current,
               link5.current,
+              link16.current,
             ],
             {
               duration: 0,
@@ -147,6 +149,7 @@ useEffect(() => {
               link3.current,
               link4.current,
               link5.current,
+              link16.current,
             ],
             {
               delay: 0.5,
@@ -302,8 +305,29 @@ useEffect(() => {
                           </Link>
                         </div>
                         <div className="content-heading nav__link" ref={link5}>
-                          <Link href="/get-in-touch" className="btn-music">
+                          <Link href="/careers" className="btn-music">
                             <span className="content-heading-serial">05</span>
+                            <span
+                              className="content-heading-slideup text-stroke-fill-ltr"
+                              data-fill="Careers"
+                              onMouseEnter={(e) => handleHover(e)}
+                              onMouseOut={(e) => handleHoverExit(e)}
+                            >
+                              <span
+                                className={
+                                  router.pathname == "/careers"
+                                    ? "activeMenu"
+                                    : ""
+                                }
+                              >
+                                Careers
+                              </span>
+                            </span>
+                          </Link>
+                        </div>
+                        <div className="content-heading nav__link" ref={link16}>
+                          <Link href="/get-in-touch" className="btn-music">
+                            <span className="content-heading-serial">06</span>
                             <span
                               className="content-heading-slideup text-stroke-fill-ltr"
                               data-fill="Contact"
@@ -361,12 +385,8 @@ useEffect(() => {
                           data-cursor-size="50px"
                         >
 
-                          {/* <a target="blank" href="www.youtube.com">
+                          <a target="blank" href="https://www.youtube.com/">
                             <span data-text="Youtube">Youtube</span>
-                          </a> */}
-                          
-                          <a href="/careers">
-                            <span data-text="Careers">Careers</span>
                           </a>
 
                         </div>

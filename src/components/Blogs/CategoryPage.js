@@ -153,7 +153,7 @@ const CategoryPage = ({ category }) => {
                   <span>All</span>
                 </button>
               </Link>
-            {categoryData.map((data, index) => (
+            {CategoryData.map((data, index) => (
               <Link className="blog-cat-button" href={data.slug} key={index}>
                 <button className={data.slug === category ? 'active' : 'button--calypso'} id="anim">
                   <span>{data.categoryName}</span>

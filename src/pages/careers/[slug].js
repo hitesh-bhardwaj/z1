@@ -97,7 +97,6 @@ function JobDetail({ job }) {
       <NextSeo
         title={`${job.title} | Careers at Enigma Digital`}
         description={job.sDescription}
-        canonical={`https://weareenigma.com/job/${job.slug}`}
         openGraph={{
           url: `https://weareenigma.com/job/${job.slug}`,
           title: `${job.title} | Careers at Enigma Digital`,
