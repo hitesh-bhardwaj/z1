@@ -11,7 +11,7 @@ import Footer from '@/components/Footer';
 import FooterMobile from '@/components/Mobile/FooterMobile';
 import Blogs from '@/components/Blogs/blogData';
 import Modal from '@/components/PopupForm/formModal';
-import categoryData from './categoryData';
+import CategoryData from './CategoryData';
 
 // Hover on the link
 const handleHover = (e) => {
