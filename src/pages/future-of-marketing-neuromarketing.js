@@ -11,6 +11,7 @@ import FooterMobile from "@/components/Mobile/FooterMobile";
 import RelatedBlogs from "@/components/Blogs/relatedBlogs";
 import BlogInfo from "@/components/Blogs/BlogInfo";
 import PageLoader from "@/components/pageLoader";
+import Head from "next/head";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -59,7 +60,6 @@ export default function BlogDetail() {
     return () => tl.kill();
   }, []);
 
-
 if (globalThis.innerWidth>1024) {
   // Section Pinnnig
   useEffect(() => {
@@ -80,6 +80,37 @@ if (globalThis.innerWidth>1024) {
   });
 }
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://weareenigma.com/future-of-marketing-neuromarketing"
+  },
+  "headline": "Bracing for the Future - How Marketing Will Evolve in 2030s",
+  "description": "Discover how marketing will evolve in the 2030s and beyond. Discover the power of neuromarketing and its impact on the future of marketing.",
+  "image": [
+    "https://weareenigma.com/assets/blogs/blog-detail/the-future-of-marketing/future-of-marketing-1.webp",
+    "https://weareenigma.com/assets/blogs/blog-detail/the-future-of-marketing/future-of-marketing-2.webp",
+    "https://weareenigma.com/assets/blogs/blog-detail/the-future-of-marketing/future-of-marketing-3.webp"
+  ],  
+  "author": {
+    "@type": "Person",
+    "name": "Bhaskar Varshney",
+    "url": "https://in.linkedin.com/in/bvarshney",
+  },  
+  "publisher": {
+    "@type": "Organization",
+    "name": "https://weareenigma.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://weareenigma.com/assets/header-logo/enigma-en-logo.svg"
+    }
+  },
+  "datePublished": "2022-11-29T12:00:00+05:30",
+  "dateModified": "2023-11-09T12:00:00+05:30",
+};
+
   return (
     <>
 
@@ -87,6 +118,12 @@ if (globalThis.innerWidth>1024) {
       title="Bracing for the Future - How Marketing Will Evolve in 2030s"
       description="Discover how marketing will evolve in the 2030s and beyond. Discover the power of neuromarketing and its impact on the future of marketing."
       openGraph={{
+                type: 'article',
+                article: {
+                    publishedTime: '2022-11-29',
+                    modifiedTime: '2023-11-09',
+                    tags: ['Neuromarketing', 'Marketing', 'Ethical-Practices', 'Innovation-&-Creativity'],
+                },
         url: "https://weareenigma.com/future-of-marketing-neuromarketing",
         title: "Bracing for the Future - How Marketing Will Evolve in 2030s",
         description:
@@ -103,6 +140,13 @@ if (globalThis.innerWidth>1024) {
                 siteName: "Enigma Digital",
       }}
     />    
+
+      <Head>
+        <script 
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+      </Head>
 
       <SmoothScroll />
 

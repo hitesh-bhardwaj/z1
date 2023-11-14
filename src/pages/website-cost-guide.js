@@ -88,7 +88,7 @@ const structuredData = {
     "@type": "WebPage",
     "@id": "https://weareenigma.com/website-cost-guide"
   },
-  "headline": "The UX Design Glossary: Deciphering The Alphabet Soup Of UX Jargon",
+  "headline": "How Much Should a Website Cost? Enigma's Insightful Guide",
   "description": "Unravel the complexities of website pricing with Enigma's comprehensive guide. Understand factors influencing costs and the value of strategic planning.",
   "image": [
     "https://weareenigma.com/assets/blogs/blog-detail/website-cost-guide/website-cost-guide-1.webp",
@@ -122,7 +122,7 @@ const structuredData = {
                 article: {
                     publishedTime: '2023-03-14',
                     modifiedTime: '2023-11-09',
-                    tags: ['Website Costing', 'Marketing', 'UI/UX-Design', 'Strategy'],
+                    tags: ['Website-Costing', 'Marketing', 'UI/UX-Design', 'Strategy'],
                 },
                 url: "https://weareenigma.com/website-cost-guide",
                 title: "How Much Should a Website Cost? Enigma's Insightful Guide",

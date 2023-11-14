@@ -11,6 +11,7 @@ import FooterMobile from "@/components/Mobile/FooterMobile";
 import RelatedBlogs from "@/components/Blogs/relatedBlogs";
 import BlogInfo from "@/components/Blogs/BlogInfo";
 import PageLoader from "@/components/pageLoader";
+import Head from "next/head";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -80,6 +81,38 @@ if (globalThis.innerWidth>1024) {
   });
 }
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://weareenigma.com/what-is-ux-design"
+  },
+  "headline": "UX Design Explained: A Simple Guide for Everyone",
+  "description": "Embark on a journey into UX design. Learn the essentials of user experience, the process, techniques, and principles and how it shapes digital interactions.",
+  "image": [
+    "https://weareenigma.com/assets/blogs/blog-detail/what-is-ux-design/what-is-ux-design-1.webp",
+    "https://weareenigma.com/assets/blogs/blog-detail/what-is-ux-design/what-is-ux-design-2.webp",
+    "https://weareenigma.com/assets/blogs/blog-detail/what-is-ux-design/what-is-ux-design-3.webp",
+    "https://weareenigma.com/assets/blogs/blog-detail/what-is-ux-design/what-is-ux-design-4.webp",
+  ],  
+  "author": {
+    "@type": "Person",
+    "name": "Bhaskar Varshney",
+    "url": "https://in.linkedin.com/in/bvarshney",
+  },  
+  "publisher": {
+    "@type": "Organization",
+    "name": "https://weareenigma.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://weareenigma.com/assets/header-logo/enigma-en-logo.svg"
+    }
+  },
+  "datePublished": "2022-11-01T12:00:00+05:30",
+  "dateModified": "2023-11-09T12:00:00+05:30",
+};
+
   return (
     <>
 
@@ -87,6 +120,12 @@ if (globalThis.innerWidth>1024) {
       title="UX Design Explained: A Simple Guide for Everyone"
       description="Embark on a journey into UX design. Learn the essentials of user experience, the process, techniques, and principles and how it shapes digital interactions."
       openGraph={{
+                type: 'article',
+                article: {
+                    publishedTime: '2022-11-01',
+                    modifiedTime: '2023-11-09',
+                    tags: ['What is UX', 'UI/UX Design', 'User Research'],
+                },
         url: "https://weareenigma.com/what-is-ux-design",
         title: "UX Design Explained: A Simple Guide for Everyone",
         description:
@@ -103,6 +142,13 @@ if (globalThis.innerWidth>1024) {
         siteName: "Enigma Digital",
       }}
     />    
+
+            <Head>
+              <script 
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+              />
+            </Head>
 
       <SmoothScroll />
 

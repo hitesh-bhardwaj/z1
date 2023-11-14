@@ -11,6 +11,7 @@ import FooterMobile from "@/components/Mobile/FooterMobile";
 import RelatedBlogs from "@/components/Blogs/relatedBlogs";
 import BlogInfo from "@/components/Blogs/BlogInfo";
 import PageLoader from "@/components/pageLoader";
+import Head from "next/head";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -80,6 +81,36 @@ if (globalThis.innerWidth>1024) {
   });
 }
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://weareenigma.com/dark-ux-deceptive-design-practices"
+  },
+  "headline": "Psychology of Dark UX Patterns",
+  "description": "Understand dark UX patterns and how they manipulate users by exploiting cognitive biases. Avoid deceptive design practices and create ethical experiences.",
+  "image": [
+    "https://weareenigma.com/assets/blogs/blog-detail/unmasking-web-dark/unmasking-web-dark-2.webp",
+    "https://weareenigma.com/assets/blogs/blog-detail/unmasking-web-dark/unmasking-web-dark-1.webp"
+  ],  
+  "author": {
+    "@type": "Person",
+    "name": "Bhaskar Varshney",
+    "url": "https://in.linkedin.com/in/bvarshney",
+  },  
+  "publisher": {
+    "@type": "Organization",
+    "name": "https://weareenigma.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://weareenigma.com/assets/header-logo/enigma-en-logo.svg"
+    }
+  },
+  "datePublished": "2023-03-01T12:00:00+05:30",
+  "dateModified": "2023-11-09T12:00:00+05:30",
+};
+
   return (
     <>
 
@@ -87,6 +118,12 @@ if (globalThis.innerWidth>1024) {
       title="Psychology of Dark UX Patterns"
       description="Understand dark UX patterns and how they manipulate users by exploiting cognitive biases. Avoid deceptive design practices and create ethical experiences."
       openGraph={{
+                type: 'article',
+                article: {
+                    publishedTime: '2023-03-01',
+                    modifiedTime: '2023-11-09',
+                    tags: ['Dark-UX', 'Copyblogger', 'Deceptive Practices', 'Dark Web Concepts'],
+                },
         url: "https://weareenigma.com/dark-ux-deceptive-design-practices",
         title: "Psychology of Dark UX Patterns",
         description:
@@ -103,6 +140,13 @@ if (globalThis.innerWidth>1024) {
                   siteName: "Enigma Digital",
                 }}
     />    
+    
+     <Head>
+        <script 
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+      </Head>
 
       <SmoothScroll />
 
@@ -285,16 +329,16 @@ if (globalThis.innerWidth>1024) {
 
             <div className="blog__dt-tags">
                 <h1 className="blog__dt-tag">
-                    Website Costing
+                    Dark-UX
                 </h1>
                 <h1 className="blog__dt-tag">
-                    Marketing
+                  Copyblogger
                 </h1>
                 <h1 className="blog__dt-tag">
-                    UI/UX Design
+                  Deceptive Practices
                 </h1>
                 <h1 className="blog__dt-tag">
-                    Strategy
+                    Dark Web Concepts
                 </h1>
             </div>
           </div>

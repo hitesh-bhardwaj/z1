@@ -11,6 +11,7 @@ import FooterMobile from "@/components/Mobile/FooterMobile";
 import RelatedBlogs from "@/components/Blogs/relatedBlogs";
 import BlogInfo from "@/components/Blogs/BlogInfo";
 import PageLoader from "@/components/pageLoader";
+import Head from "next/head";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -81,6 +82,35 @@ if (globalThis.innerWidth>1024) {
   });
 }
 
+const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://weareenigma.com/ux-design-glossary-guide"
+    },
+    "headline": "UX Design Glossary: Mastering UX Terms & Conceptsx",
+    "description": "Confused by UX jargon? Our UX glossary deciphers key UX terms and concepts in simple language, for beginners and experts alike! Bookmark this handy UX guide.",
+    "image": [
+        "https://weareenigma.com/assets/featured-images/ux-design-glossary.png"
+    ],  
+    "author": {
+      "@type": "Person",
+      "name": "Bhaskar Varshney",
+      "url": "https://in.linkedin.com/in/bvarshney",
+    },  
+    "publisher": {
+      "@type": "Organization",
+      "name": "https://weareenigma.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://weareenigma.com/assets/header-logo/enigma-en-logo.svg"
+      }
+    },
+    "datePublished": "2023-06-14T12:00:00+05:30",
+    "dateModified": "2023-11-09T12:00:00+05:30",
+  };
+
   return (
     <>
 
@@ -88,6 +118,12 @@ if (globalThis.innerWidth>1024) {
       title="UX Design Glossary: Mastering UX Terms & Concepts"
       description="Confused by UX jargon? Our UX glossary deciphers key UX terms and concepts in simple language, for beginners and experts alike! Bookmark this handy UX guide."
       openGraph={{
+                type: 'article',
+                article: {
+                    publishedTime: '2023-06-14',
+                    modifiedTime: '2023-11-09',
+                    tags: ['UX-Principles', 'UX-55-Terms', 'UX-Glossary'],
+                },
         url: "https://weareenigma.com/ux-design-glossary-guide",
         title: "UX Design Glossary: Mastering UX Terms & Concepts",
         description:
@@ -104,6 +140,13 @@ if (globalThis.innerWidth>1024) {
         siteName: "Enigma Digital",
       }}
     />    
+
+        <Head>
+            <script 
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+            />
+        </Head>
 
       <SmoothScroll />
 

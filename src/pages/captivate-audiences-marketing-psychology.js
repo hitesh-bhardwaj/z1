@@ -11,6 +11,7 @@ import FooterMobile from "@/components/Mobile/FooterMobile";
 import RelatedBlogs from "@/components/Blogs/relatedBlogs";
 import BlogInfo from "@/components/Blogs/BlogInfo";
 import PageLoader from "@/components/pageLoader";
+import Head from "next/head";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -59,7 +60,6 @@ export default function BlogDetail() {
     return () => tl.kill();
   }, []);
 
-
 if (globalThis.innerWidth>1024) {
   // Section Pinnnig
   useEffect(() => {
@@ -80,6 +80,37 @@ if (globalThis.innerWidth>1024) {
   });
 }
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://weareenigma.com/captivate-audiences-marketing-psychology"
+  },
+  "headline": "Marketing Psychology: Secrets to Captivating Audiences",
+  "description": "Explore the world of marketing psychology with Enigma. Discover the power of emotions, social influence, persuasion, and neuromarketing in shaping consumer behavior.",
+  "image": [
+    "https://weareenigma.com/assets/blogs/blog-detail/marketing-psychology/marketing-psychology-1.webp",
+    "https://weareenigma.com/assets/blogs/blog-detail/marketing-psychology/marketing-psychology-2.webp",
+    "https://weareenigma.com/assets/blogs/blog-detail/marketing-psychology/marketing-psychology-3.webp"
+  ],  
+  "author": {
+    "@type": "Person",
+    "name": "Bhaskar Varshney",
+    "url": "https://in.linkedin.com/in/bvarshney",
+  },  
+  "publisher": {
+    "@type": "Organization",
+    "name": "https://weareenigma.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://weareenigma.com/assets/header-logo/enigma-en-logo.svg"
+    }
+  },
+  "datePublished": "2022-12-02T12:00:00+05:30",
+  "dateModified": "2023-11-09T12:00:00+05:30",
+};
+
   return (
     <>
 
@@ -87,6 +118,12 @@ if (globalThis.innerWidth>1024) {
               title="Marketing Psychology: Secrets to Captivating Audiences"
               description="Explore the world of marketing psychology with Enigma. Discover the power of emotions, social influence, persuasion, and neuromarketing in shaping consumer behavior."
               openGraph={{
+                type: 'article',
+                article: {
+                    publishedTime: '2022-12-02',
+                    modifiedTime: '2023-11-09',
+                    tags: ['Marketing-Psychology', 'Insights', 'Strategy', 'Agency'],
+                },
                 url: "https://weareenigma.com/captivate-audiences-marketing-psychology",
                 title: "Marketing Psychology: Secrets to Captivating Audiences",
                 description:
@@ -102,7 +139,14 @@ if (globalThis.innerWidth>1024) {
                   ],
                   siteName: "Enigma Digital",
               }}
-            />    
+            /> 
+
+            <Head>
+              <script 
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+              />
+            </Head>   
 
       <SmoothScroll />
 

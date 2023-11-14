@@ -11,6 +11,7 @@ import FooterMobile from "@/components/Mobile/FooterMobile";
 import RelatedBlogs from "@/components/Blogs/relatedBlogs";
 import BlogInfo from "@/components/Blogs/BlogInfo";
 import PageLoader from "@/components/pageLoader";
+import Head from "next/head";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -59,7 +60,6 @@ export default function BlogDetail() {
     return () => tl.kill();
   }, []);
 
-
 if (globalThis.innerWidth>1024) {
   // Section Pinnnig
   useEffect(() => {
@@ -80,12 +80,49 @@ if (globalThis.innerWidth>1024) {
   });
 }
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://weareenigma.com/basics-of-seo"
+  },
+  "headline": "A Beginner's Guide to Search Engine Optimization | Enigma",
+  "description": "Our beginner's guide to SEO covers all the basic on-page, off-page strategies and best practices to improve your site's search visibility and ranking.",
+  "image": [
+    "https://weareenigma.com/assets/blogs/blog-detail/basic-seo/basics-of-seo-1.webp",
+    "https://weareenigma.com/assets/blogs/blog-detail/basic-seo/basics-of-seo-2.webp",
+    "https://weareenigma.com/assets/blogs/blog-detail/basic-seo/basics-of-seo-3.webp"
+  ],  
+  "author": {
+    "@type": "Person",
+    "name": "Bhaskar Varshney",
+    "url": "https://in.linkedin.com/in/bvarshney",
+  },  
+  "publisher": {
+    "@type": "Organization",
+    "name": "https://weareenigma.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://weareenigma.com/assets/header-logo/enigma-en-logo.svg"
+    }
+  },
+  "datePublished": "2023-01-23T12:00:00+05:30",
+  "dateModified": "2023-11-09T12:00:00+05:30",
+};
+
   return (
     <>
       <NextSeo
         title="A Beginner's Guide to Search Engine Optimization | Enigma"
         description="Our beginner's guide to SEO covers all the basic on-page, off-page strategies and best practices to improve your site's search visibility and ranking."
         openGraph={{
+                type: 'article',
+                article: {
+                    publishedTime: '2023-01-23',
+                    modifiedTime: '2023-11-09',
+                    tags: ['Website-Seo', 'White-Hat', 'Black-Hat', 'Seo-Spaming'],
+                },
           url: "https://weareenigma.com/basics-of-seo",
           title: "A Beginner's Guide to Search Engine Optimization | Enigma",
           description:
@@ -102,6 +139,13 @@ if (globalThis.innerWidth>1024) {
           siteName: "Enigma Digital",
         }}
       />   
+
+      <Head>
+        <script 
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+      </Head>
     
     <SmoothScroll />
 

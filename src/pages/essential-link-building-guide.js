@@ -11,6 +11,7 @@ import FooterMobile from "@/components/Mobile/FooterMobile";
 import RelatedBlogs from "@/components/Blogs/relatedBlogs";
 import BlogInfo from "@/components/Blogs/BlogInfo";
 import PageLoader from "@/components/pageLoader";
+import Head from "next/head";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -80,6 +81,36 @@ if (globalThis.innerWidth>1024) {
   });
 }
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://weareenigma.com/essential-link-building-guide"
+  },
+  "headline": "Ultimate Beginner's Guide to Effective Link Building",
+  "description": "Dive deep into the world of link building with our comprehensive guide. Learn techniques to boost your site's authority and SEO rankings.",
+  "image": [
+    "https://weareenigma.com/assets/blogs/blog-detail/guide-to-link-building/guide-to-link-building-1.webp",
+    "https://weareenigma.com/assets/blogs/blog-detail/guide-to-link-building/guide-to-link-building-2.webp"
+  ],  
+  "author": {
+    "@type": "Person",
+    "name": "Bhaskar Varshney",
+    "url": "https://in.linkedin.com/in/bvarshney",
+  },  
+  "publisher": {
+    "@type": "Organization",
+    "name": "https://weareenigma.com/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://weareenigma.com/assets/header-logo/enigma-en-logo.svg"
+    }
+  },
+  "datePublished": "2023-01-23T12:00:00+05:30",
+  "dateModified": "2023-11-09T12:00:00+05:30",
+};
+
   return (
     <>
     
@@ -87,6 +118,12 @@ if (globalThis.innerWidth>1024) {
               title="Ultimate Beginner's Guide to Effective Link Building"
               description="Dive deep into the world of link building with our comprehensive guide. Learn techniques to boost your site's authority and SEO rankings."
               openGraph={{
+                type: 'article',
+                article: {
+                    publishedTime: '2023-01-23',
+                    modifiedTime: '2023-11-09',
+                    tags: ['Link-Building', 'Seo', 'Marketing', 'Backlinks'],
+                },
                 url: "https://weareenigma.com/essential-link-building-guide",
                 title: "Ultimate Beginner's Guide to Effective Link Building",
                 description:
@@ -103,6 +140,13 @@ if (globalThis.innerWidth>1024) {
                   siteName: "Enigma Digital",
               }}
             />
+
+            <Head>
+              <script 
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+              />
+            </Head>
 
       <SmoothScroll />
 
