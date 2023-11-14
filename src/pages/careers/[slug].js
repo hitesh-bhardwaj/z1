@@ -68,13 +68,14 @@ function JobDetail({ job }) {
     "industry": "Marketing & Advertising",
     "employmentType": job.type,
     "datePosted": job.postingDate,
-    "validThrough": "",
+    "validThrough": "2024-01-31",
     "jobLocation": {
       "@type": "Place",
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "Sector-62",
-        "addressLocality": "Noida",
+        "streetAddress": "A-40, Glandslam Ithum",
+        "addressLocality": "Sector 62",
+        "addressRegion": "Noida",
         "postalCode": "201301",
         "addressCountry": "IN"
       }

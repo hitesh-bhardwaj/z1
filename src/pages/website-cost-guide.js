@@ -96,7 +96,8 @@ const structuredData = {
   ],  
   "author": {
     "@type": "Person",
-    "name": "Bhaskar Varshney"
+    "name": "Bhaskar Varshney",
+    "url": "https://in.linkedin.com/in/bvarshney",
   },  
   "publisher": {
     "@type": "Organization",
@@ -106,8 +107,8 @@ const structuredData = {
       "url": "https://weareenigma.com/assets/header-logo/enigma-en-logo.svg"
     }
   },
-  "datePublished": "2023-03-14",
-  "dateModified": "2023-11-09"
+  "datePublished": "2023-03-14T12:00:00+05:30",
+  "dateModified": "2023-11-09T12:00:00+05:30",
 };
 
   return (
