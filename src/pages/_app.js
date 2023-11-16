@@ -16,6 +16,9 @@ export default function App({ Component, pageProps }) {
         <link rel="preload" href="/assets/fonts/clash-display/ClashDisplay-Regular.woff2" as="font" type="font/woff2" crossorigin />
     </Head>
 
+      <Component {...pageProps} />
+
+      <Analytics />
       <Script
         strategy="afterInteractive"
         id="ms-clarity"
@@ -46,8 +49,6 @@ export default function App({ Component, pageProps }) {
         `,
         }}
       />
-      <Component {...pageProps} />
-      <Analytics />
     </>
   );
 }
