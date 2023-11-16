@@ -60,7 +60,7 @@ export default function Home() {
             },
           ]}
         />
-        
+
 <Head>
   <script
     type="application/ld+json"
@@ -101,17 +101,18 @@ export default function Home() {
               "ratingValue": "5",
               "bestRating": "5"
             },
+            "author": {
+              "@type": "Person",
+              "name": "Bhaskar Varshney"
+            }
           },
           "geo": {
             "@type": "GeoCoordinates",
             "latitude": "28.627458269319703",
             "longitude": " 77.37259286237833"
           },
-          "contactPoint": {
-          "@type": "ContactPoint",
-            "telephone": "+91 73036 44520",
-            "contactType": "Mobile"
-          },
+          "telephone": "+918178026136",
+          "priceRange": "$$",
           "openingHoursSpecification": [
             {
               "@type": "OpeningHoursSpecification",
