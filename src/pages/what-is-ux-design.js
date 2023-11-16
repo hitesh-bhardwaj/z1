@@ -119,6 +119,7 @@ const structuredData = {
     <NextSeo
       title="UX Design Explained: A Simple Guide for Everyone"
       description="Embark on a journey into UX design. Learn the essentials of user experience, the process, techniques, and principles and how it shapes digital interactions."
+      canonical="https://weareenigma.com/what-is-ux-design/"
       openGraph={{
                 type: 'article',
                 article: {
@@ -126,7 +127,7 @@ const structuredData = {
                     modifiedTime: '2023-11-09',
                     tags: ['What is UX', 'UI/UX Design', 'User Research'],
                 },
-        url: "https://weareenigma.com/what-is-ux-design",
+        url: "https://weareenigma.com/what-is-ux-design/",
         title: "UX Design Explained: A Simple Guide for Everyone",
         description:
           "Embark on a journey into UX design. Learn the essentials of user experience, the process, techniques, and principles and how it shapes digital interactions.",

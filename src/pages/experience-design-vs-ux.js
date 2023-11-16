@@ -118,6 +118,7 @@ const structuredData = {
     <NextSeo
       title="Experience Design vs UX: Key Differences Explained"
       description="Dive into the world of Experience Design and UX. Learn their differences and how they shape user interactions and brand experiences."
+      canonical="https://weareenigma.com/experience-design-vs-ux/"
       openGraph={{
                 type: 'article',
                 article: {
@@ -125,7 +126,7 @@ const structuredData = {
                     modifiedTime: '2023-11-09',
                     tags: ['UX-Design', 'Donald-Arthur', 'Experience-Design', 'Website-Animations'],
                 },
-        url: "https://weareenigma.com/experience-design-vs-ux",
+        url: "https://weareenigma.com/experience-design-vs-ux/",
         title: "Experience Design vs UX: Key Differences Explained",
         description:
           "Dive into the world of Experience Design and UX. Learn their differences and how they shape user interactions and brand experiences.",

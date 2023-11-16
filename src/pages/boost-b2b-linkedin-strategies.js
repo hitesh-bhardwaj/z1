@@ -117,6 +117,7 @@ const structuredData = {
     <NextSeo
       title="Boost B2B LinkedIn Success: 6 Proven Strategies"
       description="Elevate your B2B LinkedIn presence with 6 unbelievable strategies for standout content and effective marketing."
+      canonical="https://weareenigma.com/boost-b2b-linkedin-strategies/"
       openGraph={{
                 type: 'article',
                 article: {
@@ -124,7 +125,7 @@ const structuredData = {
                     modifiedTime: '2023-11-09',
                     tags: ['LinkedIn-Strategies', 'B2B', 'Marketing', 'Optimize'],
                 },
-        url: "https://weareenigma.com/boost-b2b-linkedin-strategies",
+        url: "https://weareenigma.com/boost-b2b-linkedin-strategies/",
         title: "Boost B2B LinkedIn Success: 6 Proven Strategies",
         description:
           "Elevate your B2B LinkedIn presence with 6 unbelievable strategies for standout content and effective marketing.",

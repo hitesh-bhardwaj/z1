@@ -120,6 +120,7 @@ const structuredData = {
               description="Your product ideas deserve the best possible user experience (UX)
               design, and to achieve that, you need to partner with the right UX
               agency."
+              canonical="https://weareenigma.com/how-to-choose-right-ux-agency/"
               openGraph={{
                 type: 'article',
                 article: {
@@ -127,7 +128,7 @@ const structuredData = {
                     modifiedTime: '2023-11-09',
                     tags: ['Best UX Agency', 'Enigma Digital', 'UI/UX Design', 'Marketing'],
                 },
-                url: "https://weareenigma.com/how-to-choose-right-ux-agency",
+                url: "https://weareenigma.com/how-to-choose-right-ux-agency/",
                 title: "How to Choose the Right UX Agency to Partner with for Your Product Ideas",
                 description:
                   "Your product ideas deserve the best possible user experience (UX) design, and to achieve that, you need to partner with the right UX agency.",

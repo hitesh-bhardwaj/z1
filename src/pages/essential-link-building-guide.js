@@ -117,6 +117,7 @@ const structuredData = {
             <NextSeo
               title="Ultimate Beginner's Guide to Effective Link Building"
               description="Dive deep into the world of link building with our comprehensive guide. Learn techniques to boost your site's authority and SEO rankings."
+              canonical="https://weareenigma.com/essential-link-building-guide/"
               openGraph={{
                 type: 'article',
                 article: {
@@ -124,7 +125,7 @@ const structuredData = {
                     modifiedTime: '2023-11-09',
                     tags: ['Link-Building', 'Seo', 'Marketing', 'Backlinks'],
                 },
-                url: "https://weareenigma.com/essential-link-building-guide",
+                url: "https://weareenigma.com/essential-link-building-guide/",
                 title: "Ultimate Beginner's Guide to Effective Link Building",
                 description:
                   "Dive deep into the world of link building with our comprehensive guide. Learn techniques to boost your site's authority and SEO rankings.",

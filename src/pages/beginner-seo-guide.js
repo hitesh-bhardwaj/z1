@@ -117,6 +117,7 @@ const structuredData = {
     <NextSeo
       title="On-Page & Off-Page SEO: Optimize Your Website with Enigma"
       description="Dive into the essentials of on-page and off-page SEO with Enigma. Learn how to optimize content, build authority, and drive organic traffic for success."
+      canonical="https://weareenigma.com/beginner-seo-guide/"
       openGraph={{
                 type: 'article',
                 article: {
@@ -124,7 +125,7 @@ const structuredData = {
                     modifiedTime: '2023-11-09',
                     tags: ['On-Page-Seo', 'Marketing', 'Digital-Marketing', 'DA'],
                 },
-        url: "https://weareenigma.com/beginner-seo-guide",
+        url: "https://weareenigma.com/beginner-seo-guide/",
         title: "On-Page & Off-Page SEO: Optimize Your Website with Enigma",
         description:
           "Dive into the essentials of on-page and off-page SEO with Enigma. Learn how to optimize content, build authority, and drive organic traffic for success.",

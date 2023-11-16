@@ -118,6 +118,7 @@ const structuredData = {
     <NextSeo
       title="Top 20 Digital Marketing Blogs for Expert Strategies"
       description="Discover the top 20 digital marketing blogs for the latest trends, organic marketing tips, and expert insights to elevate your marketing strategy."
+      canonical="https://weareenigma.com/top-digital-marketing-blogs/"
       openGraph={{
                 type: 'article',
                 article: {
@@ -125,7 +126,7 @@ const structuredData = {
                     modifiedTime: '2023-11-09',
                     tags: ['Top-Marketing-Blogs', 'Successful-Marketing', 'Conversion-Rates', 'SEO-Tactics'],
                 },
-        url: "https://weareenigma.com/top-digital-marketing-blogs",
+        url: "https://weareenigma.com/top-digital-marketing-blogs/",
         title: "Top 20 Digital Marketing Blogs for Expert Strategies",
         description:
           "Discover the top 20 digital marketing blogs for the latest trends, organic marketing tips, and expert insights to elevate your marketing strategy.",

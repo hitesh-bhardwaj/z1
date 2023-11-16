@@ -117,6 +117,7 @@ const structuredData = {
     <NextSeo
       title="The Power & Benefits of Organic Digital Marketing"
       description="Explore the benefits of organic digital marketing techniques and their transformative power for business growth, backed by data and irrefutable evidence."
+      canonical="https://weareenigma.com/benefits-of-organic-digital-marketing/"
       openGraph={{
                 type: 'article',
                 article: {
@@ -124,7 +125,7 @@ const structuredData = {
                     modifiedTime: '2023-11-09',
                     tags: ['Organic-Marketing', 'Marketing', 'SEO', 'Startegies'],
                 },
-        url: " https://weareenigma.com/benefits-of-organic-digital-marketing",
+        url: " https://weareenigma.com/benefits-of-organic-digital-marketing/",
         title: "The Power & Benefits of Organic Digital Marketing",
         description:
           "Explore the benefits of organic digital marketing techniques and their transformative power for business growth, backed by data and irrefutable evidence.",

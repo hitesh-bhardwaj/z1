@@ -117,6 +117,7 @@ const structuredData = {
     <NextSeo
       title="Top 20 UX Design Blogs for Creative Insights"
       description="Explore the top 20 UX design blogs for innovative ideas, expert insights, and the latest trends in user experience design."
+      canonical="https://weareenigma.com/top-ux-design-blogs/"
       openGraph={{
                 type: 'article',
                 article: {
@@ -124,7 +125,7 @@ const structuredData = {
                     modifiedTime: '2023-11-09',
                     tags: ['Top-Design-Blogs', 'Design-Inspirations', 'UI/UX-Design', 'Expert-Design-Insights'],
                 },
-        url: "https://weareenigma.com/top-ux-design-blogs",
+        url: "https://weareenigma.com/top-ux-design-blogs/",
         title: "Top 20 UX Design Blogs for Creative Insights",
         description:
           "Explore the top 20 UX design blogs for innovative ideas, expert insights, and the latest trends in user experience design.",

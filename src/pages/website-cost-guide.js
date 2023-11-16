@@ -117,6 +117,7 @@ const structuredData = {
             <NextSeo
               title="How Much Should a Website Cost? Enigma's Insightful Guide"
               description="Unravel the complexities of website pricing with Enigma's comprehensive guide. Understand factors influencing costs and the value of strategic planning."
+              canonical="https://weareenigma.com/website-cost-guide/"
               openGraph={{
                 type: 'article',
                 article: {
@@ -124,7 +125,7 @@ const structuredData = {
                     modifiedTime: '2023-11-09',
                     tags: ['Website-Costing', 'Marketing', 'UI/UX-Design', 'Strategy'],
                 },
-                url: "https://weareenigma.com/website-cost-guide",
+                url: "https://weareenigma.com/website-cost-guide/",
                 title: "How Much Should a Website Cost? Enigma's Insightful Guide",
                 description:
                   "Unravel the complexities of website pricing with Enigma's comprehensive guide. Understand factors influencing costs and the value of strategic planning.",

@@ -24,8 +24,9 @@ export default function Careers(){
             <NextSeo
               title="Enigma Digital | Careers | Find The Right Jobs"
               description="Experience top-tier UI/UX design, front-end development, and organic marketing jobs with Enigma Digital. Find The Right Jobs"
+              canonical="https://weareenigma.com/careers/"
               openGraph={{
-                url: "https://weareenigma.com/careers",
+                url: "https://weareenigma.com/careers/",
                 title: "Enigma Digital | Careers | Find The Right Jobs",
                 description:
                   "Experience top-tier UI/UX design, front-end development, and organic marketing jobs with Enigma Digital. Find The Right Jobs",

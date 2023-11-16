@@ -117,6 +117,7 @@ const structuredData = {
             <NextSeo
               title="Marketing Psychology: Secrets to Captivating Audiences"
               description="Explore the world of marketing psychology with Enigma. Discover the power of emotions, social influence, persuasion, and neuromarketing in shaping consumer behaviour."
+              canonical="https://weareenigma.com/captivate-audiences-marketing-psychology/"
               openGraph={{
                 type: 'article',
                 article: {
@@ -124,7 +125,7 @@ const structuredData = {
                     modifiedTime: '2023-11-09',
                     tags: ['Marketing-Psychology', 'Insights', 'Strategy', 'Agency'],
                 },
-                url: "https://weareenigma.com/captivate-audiences-marketing-psychology",
+                url: "https://weareenigma.com/captivate-audiences-marketing-psychology/",
                 title: "Marketing Psychology: Secrets to Captivating Audiences",
                 description:
                   "Explore the world of marketing psychology with Enigma. Discover the power of emotions, social influence, persuasion, and neuromarketing in shaping consumer behaviour.",

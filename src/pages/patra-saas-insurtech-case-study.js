@@ -174,8 +174,9 @@ export default function patra() {
     <NextSeo
       title="Catapulting Patra's CX  Through UX - Case Study | Enigma"
       description="Dive into our Strategy, UX Planning, UI Design apporach, and the remarkable results we deliverd for Patra Corp, by building a real time reporting dashboard for their clients."
+      canonical="https://weareenigma.com/patra-saas-insurtech-case-study/"
       openGraph={{
-        url: "https://weareenigma.com/patra-saas-insurtech-case-study",
+        url: "https://weareenigma.com/patra-saas-insurtech-case-study/",
         title: "Catapulting Patra's CX  Through UX - Case Study | Enigma",
         description:
           "Dive into our Strategy, UX Planning, UI Design apporach, and the remarkable results we deliverd for Patra Corp, by building a real time reporting dashboard for their clients.",

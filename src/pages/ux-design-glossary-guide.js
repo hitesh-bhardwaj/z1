@@ -117,6 +117,7 @@ const structuredData = {
     <NextSeo
       title="UX Design Glossary: Mastering UX Terms & Concepts"
       description="Confused by UX jargon? Our UX glossary deciphers key UX terms and concepts in simple language, for beginners and experts alike! Bookmark this handy UX guide."
+      canonical="https://weareenigma.com/ux-design-glossary-guide/"
       openGraph={{
                 type: 'article',
                 article: {
@@ -124,7 +125,7 @@ const structuredData = {
                     modifiedTime: '2023-11-09',
                     tags: ['UX-Principles', 'UX-55-Terms', 'UX-Glossary'],
                 },
-        url: "https://weareenigma.com/ux-design-glossary-guide",
+        url: "https://weareenigma.com/ux-design-glossary-guide/",
         title: "UX Design Glossary: Mastering UX Terms & Concepts",
         description:
           "Confused by UX jargon? Our UX glossary deciphers key UX terms and concepts in simple language, for beginners and experts alike! Bookmark this handy UX guide.",

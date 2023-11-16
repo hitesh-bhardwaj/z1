@@ -117,6 +117,7 @@ const structuredData = {
             <NextSeo
               title="Comprehensive Guide to Technical SEO Essentials"
               description="Master technical SEO & learn to optimize your website's infrastructure for better search engine visibility and user experience with this guide."
+              canonical="https://weareenigma.com/technical-seo-basics/"
               openGraph={{
                 type: 'article',
                 article: {
@@ -124,7 +125,7 @@ const structuredData = {
                     modifiedTime: '2023-11-09',
                     tags: ['Technical-SEO', 'Google-Search-Console', 'Page-Speed', 'Google-Analytics'],
                 },
-                url: "https://weareenigma.com/technical-seo-basics",
+                url: "https://weareenigma.com/technical-seo-basics/",
                 title: "Comprehensive Guide to Technical SEO Essentials",
                 description:
                   "Master technical SEO & learn to optimize your website's infrastructure for better search engine visibility and user experience with this guide.",
