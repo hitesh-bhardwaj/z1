@@ -96,7 +96,7 @@ export default function FooterMobile() {
             </div>
             <div className="contact-content-socials-row">
               <div className="contact-content-socials-icon" id="say-anim-links">
-                <a target="blank" href="https://in.linkedin.com/company/in-enigmadigital">
+                <a target="blank" href="https://in.linkedin.com/company/enigma-digital-product-design-ui-ux-neuromarketing">
                   <span>LinkedIn</span>
                 </a>
               </div>

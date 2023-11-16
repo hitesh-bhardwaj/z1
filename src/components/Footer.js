@@ -222,7 +222,7 @@ function Footer() {
                     data-cursor-size="80px"
                   >
                     <a
-                      href="https://in.linkedin.com/company/in-enigmadigital"
+                      href="https://in.linkedin.com/company/enigma-digital-product-design-ui-ux-neuromarketing"
                       target="blank"
                     >
                       <span data-text="LinkedIn">LinkedIn</span>
