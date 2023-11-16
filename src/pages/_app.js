@@ -13,12 +13,15 @@ export default function App({ Component, pageProps }) {
           content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
         ></meta>
         <link rel="icon" href="/fav-icon.png" />
+        <link rel="preload" href="/assets/fonts/ageo/Ageo.woff" as="font" type="font/woff" crossorigin />
+        <link rel="preload" href="/assets/fonts/clash-display/ClashDisplay-Regular.woff2" as="font" type="font/woff2" crossorigin />
     </Head>
 
 
 
       <Script
         id="ms-clarity"
+        strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
                     (function(c,l,a,r,i,t,y){        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);    })(window, document, "clarity", "script", "josmn10ai7");
@@ -28,7 +31,7 @@ export default function App({ Component, pageProps }) {
     
       <Script
         async
-        strategy="lazyOnload"
+        
         src="https://www.googletagmanager.com/gtag/js?id=G-PKJE9LVB35"
       />
       <Script

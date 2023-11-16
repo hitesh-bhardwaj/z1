@@ -2,6 +2,7 @@ module.exports = {
     siteUrl: process.env.SITE_URL || 'https://weareenigma.com',
     generateRobotsTxt: true,
     generateIndexSitemap: false,
+    exclude: ["/thank-you","/graphic-design-subscription"],
     additionalPaths: async (config) => [
       await config.transform(config,"/blog/strategy"),
       await config.transform(config,"/blog/design"),
