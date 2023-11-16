@@ -84,7 +84,6 @@ export default function Home() {
           "@type": "ProfessionalService",
           "name": "Enigma Digital",
           "url": "https://www.weareenigma.com/",
-          "logo": "https://weareenigma.com/assets/header-logo/enigma-en-logo.svg",
           "image": "https://lh3.googleusercontent.com/p/AF1QipOrkTrTs3PcLHNNf0iQVVPlb4FTsUlynqO-DFjb=s680-w680-h510",
           "address": {
             "@type": "PostalAddress",
