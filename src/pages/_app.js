@@ -1,20 +1,46 @@
 import "../styles/globals.css";
 import { Analytics } from "@vercel/analytics/react";
-import Head from "next/head";
 import Script from "next/script";
+import { DefaultSeo } from "next-seo";
 
 export default function App({ Component, pageProps }) {
   return (
     <>
 
-    <Head>
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
-        ></meta>
-        <link rel="icon" href="/fav-icon.png" />
-        <link rel="preload" href="/assets/fonts/clash-display/ClashDisplay-Regular.woff2" as="font" type="font/woff2" crossorigin />
-    </Head>
+    <DefaultSeo  
+      additionalMetaTags={[{
+        name: 'viewport',
+        content: 'width=device-width, initial-scale=1.0, maximum-scale=5.0'
+      }, {
+        httpEquiv: 'content-language',
+        content: 'en-us'
+      }]}
+
+      additionalLinkTags={[{
+        rel: 'icon',
+        href: '/fav-icon.png',
+      },{
+        rel: 'preload',
+        href: '/assets/fonts/clash-display/ClashDisplay-Regular.woff2',
+        as: 'font',
+        type: 'font/woff2',
+        crossOrigin: 'anonymous'
+      }
+      ]}
+
+      openGraph={{
+        type: 'website',
+        locale: 'en_US',
+      }}
+      twitter={{
+        site: '_EnigmaDigital',
+        cardType: 'summary_large_image',
+      }}
+
+      languageAlternates={[{
+        hrefLang: 'en-us',
+      }]}
+    />    
 
       <Component {...pageProps} />
 
