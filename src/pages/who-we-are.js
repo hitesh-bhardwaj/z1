@@ -501,7 +501,7 @@ export default function about() {
               <p data-jelly className="why-us-anim">
                 <span>
                   We have been asked this question like a zillion times – How
-                  are you different than the other agencies out there. Well, the
+                  are you different from the other agencies out there. Well, the
                   truth is that we were “Born Different”.{" "}
                 </span>
               </p>

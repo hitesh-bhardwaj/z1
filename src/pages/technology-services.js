@@ -391,7 +391,7 @@ useEffect(() => {
                     </Image>
                 </div>
                 <a className={styles['btn-10']} href='#'>
-                  View CaseStudy
+                  View Case Study
                 </a>
               </div>
               <div className={styles['service-card-bottom']}>
@@ -420,7 +420,7 @@ useEffect(() => {
                     </Image>
                 </div>
                 <a className={styles['btn-10']} href='#'>
-                  View CaseStudy
+                  View Case Study
                 </a>
               </div>
               <div className={styles['service-card-bottom']}>
@@ -449,7 +449,7 @@ useEffect(() => {
                     </Image>
                 </div>
                 <a className={styles['btn-10']} href='#'>
-                  View CaseStudy
+                  View Case Study
                 </a>
               </div>
               <div className={styles['service-card-bottom']}>
@@ -478,7 +478,7 @@ useEffect(() => {
                     </Image>
                 </div>
                 <a className={styles['btn-10']} href='#'>
-                  View CaseStudy
+                  View Case Study
                 </a>
               </div>
               <div className={styles['service-card-bottom']}>

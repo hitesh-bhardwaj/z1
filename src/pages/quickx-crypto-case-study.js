@@ -172,12 +172,12 @@ export default function quickx() {
 
     <NextSeo
       title="QuickX - Branding & Mobile App Design Case Study | Enigma"
-      description="We helped Quickx design India's most user-friendly crypto platform. From branding to UI/UX design, our product design services fueled their growth at every step."
+      description="We helped Quickx design India's most user-friendly crypto platform. From branding to UI/UX design, our product design services fuelled their growth at every step."
       openGraph={{
         url: "https://weareenigma.com/quickx-crypto-case-study",
         title: "QuickX - Branding & Mobile App Design Case Study | Enigma",
         description:
-          "We helped Quickx design India's most user-friendly crypto platform. From branding to UI/UX design, our product design services fueled their growth at every step.",
+          "We helped Quickx design India's most user-friendly crypto platform. From branding to UI/UX design, our product design services fuelled their growth at every step.",
           images: [
                   {
                     url: "https://weareenigma.com/assets/featured-images/portfolio-quickx.png",
@@ -217,7 +217,7 @@ export default function quickx() {
                 >
                   <Link href="/quickx-crypto-case-study" className={styles.Link}>
                   <button aria-label="link button">
-                    quickx.app
+                    quickX.app
                     <span className={styles.linkSvg}>
                       <Image
                         width={20}
@@ -594,7 +594,7 @@ export default function quickx() {
 
           <section className={styles.colorSection} id="colorsection">
             <div className={styles.colorHeading}>
-              <h2 className={styles.h2} >Colors</h2>
+              <h2 className={styles.h2} >Colours</h2>
             </div>
             <div className={styles.quickxcolorBox}>
               <div className={styles.quickxcolorBoxHeadingBackground}>

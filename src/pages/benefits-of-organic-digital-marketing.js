@@ -122,7 +122,7 @@ const structuredData = {
                 article: {
                     publishedTime: '2022-12-20',
                     modifiedTime: '2023-11-09',
-                    tags: ['Organic-Marketing', 'Marketing', 'Seo', 'Startegies'],
+                    tags: ['Organic-Marketing', 'Marketing', 'SEO', 'Startegies'],
                 },
         url: " https://weareenigma.com/benefits-of-organic-digital-marketing",
         title: "The Power & Benefits of Organic Digital Marketing",
@@ -541,7 +541,7 @@ const structuredData = {
                     Organic Marketing
                 </h1>
                 <h1 className="blog__dt-tag">
-                    Seo
+                    SEO
                 </h1>
                 <h1 className="blog__dt-tag">
                     Startegies

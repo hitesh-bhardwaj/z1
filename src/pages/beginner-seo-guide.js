@@ -215,7 +215,7 @@ const structuredData = {
               <span className="bold">Meta descriptions:</span> Meta descriptions
               are brief summaries of your web page's content that appear in
               search engine results. A well-crafted meta description should
-              include relevant keywords, be between 150-160 characters, and
+              include relevant keywords, be between 150 – 160 characters, and
               entice users to click on your link.
             </p>
 

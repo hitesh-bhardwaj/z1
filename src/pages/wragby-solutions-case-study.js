@@ -595,7 +595,7 @@ export default function wragby() {
 
           <section className={styles.colorSection} id="colorsection">
             <div className={styles.colorHeading}>
-              <h2 className={styles.h2} >Colors</h2>
+              <h2 className={styles.h2} >Colours</h2>
             </div>
             <div className={styles.colorBox}>
               <div className={styles.colorBoxHeadingBackground}>

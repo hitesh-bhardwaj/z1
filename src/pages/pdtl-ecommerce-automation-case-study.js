@@ -577,7 +577,7 @@ export default function pdtl() {
 
           <section className={styles.pdtlcolorSection} id="colorsection">
             <div className={styles.colorHeading}>
-              <h2 className={styles.h2} >Colors</h2>
+              <h2 className={styles.h2} >Colours</h2>
             </div>
             <div className={styles.pdtlcolorBox}>
               <div className={styles.pdtlcolorBoxHeadingBackground}>

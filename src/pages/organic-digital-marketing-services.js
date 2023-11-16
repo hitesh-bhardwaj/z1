@@ -332,7 +332,7 @@ useEffect(() => {
             <p className={`${styles['m-50']} fadeIn`}
                 data-jelly id='fadeIn'>
               <span>
-                In the digital landscape, visibility is paramount, yet achieving it organically is becoming increasingly challenging. Businesses grapple with the reality that their voice is just one among millions clamouring for attention in the online arena. Oh! the frustration of crafting quality content that aligns perfectly with your brand ethos, only to watch it languish in the obscurity of search engine back pages can leave many feeling invisible, their valuable content unseen and unheard. At Enigma, we transcends these challenges by cultivate an organic presence for you that not only reaches but resonates with your audience. From content that informs and delights, to social media strategies that engage and build communities – we offer a holistic path to elevate your brand's online presence naturally and sustainably.
+                In the digital landscape, visibility is paramount, yet achieving it organically is becoming increasingly challenging. Businesses grapple with the reality that their voice is just one among millions clamouring for attention in the online arena. Oh! the frustration of crafting quality content that aligns perfectly with your brand ethos, only to watch it languish in the obscurity of search engine back pages can leave many feeling invisible, their valuable content unseen and unheard. At Enigma, we transcend these challenges by cultivate an organic presence for you that not only reaches but resonates with your audience. From content that informs and delights, to social media strategies that engage and build communities – we offer a holistic path to elevate your brand's online presence naturally and sustainably.
               </span>
             </p>
             <a 
@@ -389,7 +389,7 @@ useEffect(() => {
                     </Image>
                 </div>
                 <a className={styles['btn-10']} href='#'>
-                  View CaseStudy
+                  View Case Study
                 </a>
               </div>
               <div className={styles['service-card-bottom']}>
@@ -418,7 +418,7 @@ useEffect(() => {
                     </Image>
                 </div>
                 <a className={styles['btn-10']} href='#'>
-                  View CaseStudy
+                  View Case Study
                 </a>
               </div>
               <div className={styles['service-card-bottom']}>
@@ -447,7 +447,7 @@ useEffect(() => {
                     </Image>
                 </div>
                 <a className={styles['btn-10']} href='#'>
-                  View CaseStudy
+                  View Case Study
                 </a>
               </div>
               <div className={styles['service-card-bottom']}>
@@ -476,7 +476,7 @@ useEffect(() => {
                     </Image>
                 </div>
                 <a className={styles['btn-10']} href='#'>
-                  View CaseStudy
+                  View Case Study
                 </a>
               </div>
               <div className={styles['service-card-bottom']}>
@@ -569,7 +569,7 @@ useEffect(() => {
                     data-cursor-size='100px'
                     data-cursor-exclusion>
                     <div className={`${styles['service-approach-text-box']} service-approach-text-box`} id='fadeIn'>
-                    <h4 className='color-primary'>Gauge and Analyze</h4>
+                    <h4 className='color-primary'>Gauge and Analyse</h4>
                     <p>
                       We begin by gauging your current market standing, analyzing your brand's digital presence, audience demographics, and competitive landscape to inform our strategy.
                     </p>

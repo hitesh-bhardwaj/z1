@@ -311,7 +311,7 @@ export default function dharan() {
                 <div className={styles.paraTop}>
                   <h4 className={styles.h4} data-jelly>
                     Dharan's existing website was plagued by several issues,
-                    including outdated design, poor navigation, and a lackluster
+                    including outdated design, poor navigation, and a lacklustre
                     user experience.
                   </h4>
                   <p data-jelly>
@@ -551,7 +551,7 @@ export default function dharan() {
 
           <section className={styles.colorSection} id="colorsection">
             <div className={styles.colorHeading}>
-              <h2 className={styles.h2} >Colors</h2>
+              <h2 className={styles.h2} >Colours</h2>
             </div>
             <div className={styles.dharancolorMainBox}>
               <div className={styles.dharancolorBox}>

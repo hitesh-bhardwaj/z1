@@ -261,7 +261,7 @@ const structuredData = {
             </p>
             
             <p >
-                During a card sorting session, participants are given a set of cards, each labelled with a piece of content or functionality. Participants are then asked to categorize these cards in a way that makes sense to them. They might be asked to sort them into predefined categories (closed card sort), or they might be allowed to create their own categories (open card sort). There's also a hybrid version where participants sort cards into predefined categories but can also create their own if needed.
+                During a card sorting session, participants are given a set of cards, each labelled with a piece of content or functionality. Participants are then asked to categorize these cards in a way that makes sense to them. They might be asked to sort them into predefined categories (closed card sort), or they might be allowed to create their own categories (open card sort). There's also a hybrid version where participants sort cards into predefined categories, but can also create their own if needed.
             </p>
             
             <p >
@@ -355,7 +355,7 @@ const structuredData = {
             </p>
             
             <p >
-                The goal is to ensure that the design not only meets functional requirements but also provides a positive user experience. Design Validation is essential because it reduces the risk of developing a product that fails to meet user needs or market demand.
+                The goal is to ensure that the design not only meets functional requirements, but also provides a positive user experience. Design Validation is essential because it reduces the risk of developing a product that fails to meet user needs or market demand.
             </p> 
             <p >
                 By validating designs, UX professionals can refine and optimize the user experience, aligning it with users' needs and expectations. Design Validation ensures that the final product delivers on its promise, providing a satisfying and intuitive experience for the target audience.
@@ -410,7 +410,7 @@ const structuredData = {
             </p>
             
             <p >
-                An Efficiency Ratio might look at factors like how long it takes a user to complete a task, how many steps they had to take, or how many errors they made along the way. For example, if users can complete a task but it takes them a long time or they make many errors, this suggests that the design is not as efficient as it could be.
+                An Efficiency Ratio might look at factors like how long it takes a user to complete a task, how many steps they had to take, or how many errors they made along the way. For example, if users can complete a task, but it takes them a long time or they make many errors, this suggests that the design is not as efficient as it could be.
             </p>
             
             <p >
@@ -655,7 +655,7 @@ const structuredData = {
             </p>
             
             <p >
-            <span className="bold">Passives (score 7-8):</span> Satisfied but unenthusiastic customers who are vulnerable to competitive offerings.
+            <span className="bold">Passives (score 7-8):</span> Satisfied, but unenthusiastic customers who are vulnerable to competitive offerings.
             </p>
             
             <p >

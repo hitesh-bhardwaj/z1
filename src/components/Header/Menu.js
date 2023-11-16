@@ -386,7 +386,7 @@ useEffect(() => {
                         >
 
                           <a target="blank" href="https://www.youtube.com/">
-                            <span data-text="Youtube">Youtube</span>
+                            <span data-text="YouTube">YouTube</span>
                           </a>
 
                         </div>

@@ -529,7 +529,7 @@ export default function certvault() {
 
           <section className={styles.certvaultcolorSection} id="colorsection">
             <div className={styles.certvaultcolorHeading}>
-              <h1>COLORS</h1>
+              <h1>COLOURS</h1>
             </div>
             <div className={styles.certvaultcolorMainBox}>
               <div className={styles.certvaultcolorBox}>

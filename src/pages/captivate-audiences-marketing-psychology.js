@@ -88,7 +88,7 @@ const structuredData = {
     "@id": "https://weareenigma.com/captivate-audiences-marketing-psychology"
   },
   "headline": "Marketing Psychology: Secrets to Captivating Audiences",
-  "description": "Explore the world of marketing psychology with Enigma. Discover the power of emotions, social influence, persuasion, and neuromarketing in shaping consumer behavior.",
+  "description": "Explore the world of marketing psychology with Enigma. Discover the power of emotions, social influence, persuasion, and neuromarketing in shaping consumer behaviour.",
   "image": [
     "https://weareenigma.com/assets/blogs/blog-detail/marketing-psychology/marketing-psychology-1.webp",
     "https://weareenigma.com/assets/blogs/blog-detail/marketing-psychology/marketing-psychology-2.webp",
@@ -116,7 +116,7 @@ const structuredData = {
 
             <NextSeo
               title="Marketing Psychology: Secrets to Captivating Audiences"
-              description="Explore the world of marketing psychology with Enigma. Discover the power of emotions, social influence, persuasion, and neuromarketing in shaping consumer behavior."
+              description="Explore the world of marketing psychology with Enigma. Discover the power of emotions, social influence, persuasion, and neuromarketing in shaping consumer behaviour."
               openGraph={{
                 type: 'article',
                 article: {
@@ -127,7 +127,7 @@ const structuredData = {
                 url: "https://weareenigma.com/captivate-audiences-marketing-psychology",
                 title: "Marketing Psychology: Secrets to Captivating Audiences",
                 description:
-                  "Explore the world of marketing psychology with Enigma. Discover the power of emotions, social influence, persuasion, and neuromarketing in shaping consumer behavior.",
+                  "Explore the world of marketing psychology with Enigma. Discover the power of emotions, social influence, persuasion, and neuromarketing in shaping consumer behaviour.",
                   images: [
                     {
                       url: "https://weareenigma.com/assets/featured-images/audiences-marketing-psychology.png",
@@ -367,7 +367,7 @@ const structuredData = {
               Neuromarketing, a subset of marketing psychology, involves the use
               of neuroscience techniques to measure consumers' responses to
               marketing stimuli. By examining brain activity, eye movements, and
-              other physiological markers, neuromarketers can gain valuable
+              other physiological markers, neuro marketers can gain valuable
               insights into consumer preferences and behaviour. Neuromarketing
               offers a unique perspective on marketing psychology, providing
               marketers with quantitative data to support their strategies and
