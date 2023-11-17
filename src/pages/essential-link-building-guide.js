@@ -86,7 +86,7 @@ const structuredData = {
   "@type": "BlogPosting",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://weareenigma.com/essential-link-building-guide"
+    "@id": "https://weareenigma.com/essential-link-building-guide/"
   },
   "headline": "Ultimate Beginner's Guide to Effective Link Building",
   "description": "Dive deep into the world of link building with our comprehensive guide. Learn techniques to boost your site's authority and SEO rankings.",

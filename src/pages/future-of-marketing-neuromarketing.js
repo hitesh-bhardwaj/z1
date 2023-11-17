@@ -85,7 +85,7 @@ const structuredData = {
   "@type": "BlogPosting",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://weareenigma.com/future-of-marketing-neuromarketing"
+    "@id": "https://weareenigma.com/future-of-marketing-neuromarketing/"
   },
   "headline": "Bracing for the Future - How Marketing Will Evolve in 2030s",
   "description": "Discover how marketing will evolve in the 2030s and beyond. Discover the power of neuromarketing and its impact on the future of marketing.",

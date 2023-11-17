@@ -86,7 +86,7 @@ const structuredData = {
   "@type": "BlogPosting",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://weareenigma.com/technical-seo-basics"
+    "@id": "https://weareenigma.com/technical-seo-basics/"
   },
   "headline": "Comprehensive Guide to Technical SEO Essentials",
   "description": "Master technical SEO & learn to optimize your website's infrastructure for better search engine visibility and user experience with this guide.",

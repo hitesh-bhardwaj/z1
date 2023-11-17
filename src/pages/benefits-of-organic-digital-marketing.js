@@ -85,7 +85,7 @@ const structuredData = {
   "@type": "BlogPosting",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://weareenigma.com/benefits-of-organic-digital-marketing"
+    "@id": "https://weareenigma.com/benefits-of-organic-digital-marketing/"
   },
   "headline": "The Power & Benefits of Organic Digital Marketing",
   "description": "Explore the benefits of organic digital marketing techniques and their transformative power for business growth, backed by data and irrefutable evidence.",

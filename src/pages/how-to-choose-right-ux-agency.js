@@ -86,7 +86,7 @@ const structuredData = {
   "@type": "BlogPosting",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://weareenigma.com/how-to-choose-right-ux-agency"
+    "@id": "https://weareenigma.com/how-to-choose-right-ux-agency/"
   },
   "headline": "How to Choose the Right UX Agency to Partner with for Your Product Ideas",
   "description": "Your product ideas deserve the best possible user experience (UX) design, and to achieve that, you need to partner with the right agency.",

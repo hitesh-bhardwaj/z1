@@ -86,7 +86,7 @@ const structuredData = {
   "@type": "BlogPosting",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://weareenigma.com/psychology-in-ux"
+    "@id": "https://weareenigma.com/psychology-in-ux/"
   },
   "headline": "Harnessing the Power of Psychology in UX Design",
   "description": "Explore the profound connection between psychology and UX design. Unlock insights to create intuitive, effective, and emotionally resonant user experiences.",

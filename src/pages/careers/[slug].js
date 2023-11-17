@@ -99,7 +99,7 @@ function JobDetail({ job }) {
         title={`${job.title} | Careers at Enigma Digital`}
         description={job.sDescription}
         openGraph={{
-          url: `https://weareenigma.com/job/${job.slug}`,
+          url: `https://weareenigma.com/careers/${job.slug}/`,
           title: `${job.title} | Careers at Enigma Digital`,
           description: job.sDescription,
           type: 'JobPosting',
@@ -132,8 +132,9 @@ function JobDetail({ job }) {
             />
 
       <Head>
-        <link rel="canonical" href={`https://weareenigma.com/job/${job.slug}`} />
-        <link rel="alternate" href={`https://weareenigma.com/job/${job.slug}`} hreflang="x-default" />
+        <link rel="canonical" href={`https://weareenigma.com/careers/${job.slug}/`} />
+        <link rel="alternate" href={`https://weareenigma.com/careers/${job.slug}/`} hreflang="en" />
+        <link rel="alternate" href={`https://weareenigma.com/careers/${job.slug}/`} hreflang="x-default" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}

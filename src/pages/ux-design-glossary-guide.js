@@ -87,7 +87,7 @@ const structuredData = {
     "@type": "BlogPosting",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://weareenigma.com/ux-design-glossary-guide"
+      "@id": "https://weareenigma.com/ux-design-glossary-guide/"
     },
     "headline": "UX Design Glossary: Mastering UX Terms & Conceptsx",
     "description": "Confused by UX jargon? Our UX glossary deciphers key UX terms and concepts in simple language, for beginners and experts alike! Bookmark this handy UX guide.",

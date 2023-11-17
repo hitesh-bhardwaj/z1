@@ -86,7 +86,7 @@ const structuredData = {
   "@type": "BlogPosting",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://weareenigma.com/cognitive-biases-ecommerce"
+    "@id": "https://weareenigma.com/cognitive-biases-ecommerce/"
   },
   "headline": "Cognitive Biases in E-commerce - A Marketer's Guide",
   "description": "Dive into 12 cognitive biases crucial for e-commerce marketers. Understand consumer psychology and craft campaigns that resonate and captivate.",
@@ -125,7 +125,7 @@ const structuredData = {
                     modifiedTime: '2023-11-09',
                     tags: ['Skills', 'Marketing', 'Cognitive-Biases', 'E-Commerce'],
                 },
-        url: "https://weareenigma.com/cognitive-biases-ecommerce",
+        url: "https://weareenigma.com/cognitive-biases-ecommerce/",
         title: "Cognitive Biases in E-commerce - A Marketer's Guide",
         description:
           "Dive into 12 cognitive biases crucial for e-commerce marketers. Understand consumer psychology and craft campaigns that resonate and captivate.",

@@ -85,7 +85,7 @@ const structuredData = {
   "@type": "BlogPosting",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://weareenigma.com/power-remote-designers-india"
+    "@id": "https://weareenigma.com/power-remote-designers-india/"
   },
   "headline": "Maximizing Remote Designers: Outsourcing to India",
   "description": "Discover the advantages of hiring remote designers from India, debunking myths and showcasing the benefits for your business",

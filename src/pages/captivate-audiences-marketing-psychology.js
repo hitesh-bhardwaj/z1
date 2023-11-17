@@ -85,7 +85,7 @@ const structuredData = {
   "@type": "BlogPosting",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://weareenigma.com/captivate-audiences-marketing-psychology"
+    "@id": "https://weareenigma.com/captivate-audiences-marketing-psychology/"
   },
   "headline": "Marketing Psychology: Secrets to Captivating Audiences",
   "description": "Explore the world of marketing psychology with Enigma. Discover the power of emotions, social influence, persuasion, and neuromarketing in shaping consumer behaviour.",

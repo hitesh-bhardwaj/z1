@@ -86,7 +86,7 @@ const structuredData = {
   "@type": "BlogPosting",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://weareenigma.com/website-cost-guide"
+    "@id": "https://weareenigma.com/website-cost-guide/"
   },
   "headline": "How Much Should a Website Cost? Enigma's Insightful Guide",
   "description": "Unravel the complexities of website pricing with Enigma's comprehensive guide. Understand factors influencing costs and the value of strategic planning.",

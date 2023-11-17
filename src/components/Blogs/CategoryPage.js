@@ -113,7 +113,7 @@ const CategoryPage = ({ category }) => {
         title={metaTitle}
         description={metaDescription}
         openGraph={{
-          url: `https://weareenigma.com/blog/${category.toLowerCase()}`,
+          url: `https://weareenigma.com/blog/${category.toLowerCase()}/`,
           title: metaTitle,
           description: metaDescription,
           images: [
@@ -145,8 +145,8 @@ const CategoryPage = ({ category }) => {
             />
 
       <Head>
-        <link rel="canonical" href={`https://weareenigma.com/blog/${category.toLowerCase()}`} />
-        <link rel="alternate" href={`https://weareenigma.com/blog/${category.toLowerCase()}`} hreflang="x-default" />
+        <link rel="canonical" href={`https://weareenigma.com/blog/${category.toLowerCase()}/`} />
+        <link rel="alternate" href={`https://weareenigma.com/blog/${category.toLowerCase()}/`} hreflang="x-default" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -156,7 +156,7 @@ const CategoryPage = ({ category }) => {
                 "@type": "WebPage",
                 "mainEntityOfPage":{
                   "@type": "WebPage",
-                  "@id": `https://weareenigma.com/blog/${category.toLowerCase()}`
+                  "@id": `https://weareenigma.com/blog/${category.toLowerCase()}/`
                 },
                 "name": {metaTitle},
                 "description": {metaDescription},

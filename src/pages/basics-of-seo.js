@@ -85,7 +85,7 @@ const structuredData = {
   "@type": "BlogPosting",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://weareenigma.com/basics-of-seo"
+    "@id": "https://weareenigma.com/basics-of-seo/"
   },
   "headline": "A Beginner's Guide to Search Engine Optimization | Enigma",
   "description": "Our beginner's guide to SEO covers all the basic on-page, off-page strategies and best practices to improve your site's search visibility and ranking.",
@@ -123,7 +123,7 @@ const structuredData = {
                     modifiedTime: '2023-11-09',
                     tags: ['Website-Seo', 'White-Hat', 'Black-Hat', 'Seo-Spaming'],
                 },
-          url: "https://weareenigma.com/basics-of-seo",
+          url: "https://weareenigma.com/basics-of-seo/",
           title: "A Beginner's Guide to Search Engine Optimization | Enigma",
           description:
             "Our beginner's guide to SEO covers all the basic on-page, off-page strategies and best practices to improve your site's search visibility and ranking.",

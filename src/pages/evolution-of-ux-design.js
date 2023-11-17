@@ -85,7 +85,7 @@ const structuredData = {
   "@type": "BlogPosting",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://weareenigma.com/evolution-of-ux-design"
+    "@id": "https://weareenigma.com/evolution-of-ux-design/"
   },
   "headline": "Tracing the Evolution of UX Design - Past, Present & Future",
   "description": "A Journey through the transformative history of UX design. Discover its origins, pivotal moments, and the future of user-centric digital experiences.",

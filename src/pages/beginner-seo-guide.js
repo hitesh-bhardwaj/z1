@@ -86,7 +86,7 @@ const structuredData = {
   "@type": "BlogPosting",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://weareenigma.com/beginner-seo-guide"
+    "@id": "https://weareenigma.com/beginner-seo-guide/"
   },
   "headline": "On-Page & Off-Page SEO: Optimize Your Website with Enigma",
   "description": "Dive into the essentials of on-page and off-page SEO with Enigma. Learn how to optimize content, build authority, and drive organic traffic for success.",

@@ -85,7 +85,7 @@ const structuredData = {
   "@type": "BlogPosting",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://weareenigma.com/top-ux-design-blogs"
+    "@id": "https://weareenigma.com/top-ux-design-blogs/"
   },
   "headline": "Top 20 UX Design Blogs for Creative Insights",
   "description": "Explore the top 20 UX design blogs for innovative ideas, expert insights, and the latest trends in user experience design.",

@@ -85,7 +85,7 @@ const structuredData = {
   "@type": "BlogPosting",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://weareenigma.com/delightful-digital-design-guide"
+    "@id": "https://weareenigma.com/delightful-digital-design-guide/"
   },
   "headline": "Enigma's Guide to Delightful UX Design for Digital Platforms",
   "description": "Dive into Enigma's guide on crafting delightful designs for diverse digital platforms. From desktops to wearables, master the art of UX design.",

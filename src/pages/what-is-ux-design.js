@@ -86,7 +86,7 @@ const structuredData = {
   "@type": "BlogPosting",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://weareenigma.com/what-is-ux-design"
+    "@id": "https://weareenigma.com/what-is-ux-design/"
   },
   "headline": "UX Design Explained: A Simple Guide for Everyone",
   "description": "Embark on a journey into UX design. Learn the essentials of user experience, the process, techniques, and principles and how it shapes digital interactions.",

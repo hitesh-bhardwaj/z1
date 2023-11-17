@@ -86,7 +86,7 @@ const structuredData = {
   "@type": "BlogPosting",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://weareenigma.com/top-digital-marketing-blogs"
+    "@id": "https://weareenigma.com/top-digital-marketing-blogs/"
   },
   "headline": "Top 20 Digital Marketing Blogs for Expert Strategies",
   "description": "Discover the top 20 digital marketing blogs for the latest trends, organic marketing tips, and expert insights to elevate your marketing strategy.",

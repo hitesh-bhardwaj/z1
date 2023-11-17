@@ -86,7 +86,7 @@ const structuredData = {
   "@type": "BlogPosting",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://weareenigma.com/link-building-website-list"
+    "@id": "https://weareenigma.com/link-building-website-list/"
   },
   "headline": "List of 30 Link Building Websites - SEO Guide",
   "description": "Dive into our comprehensive guide on 30 websites for effective link-building in SEO. Boost your website's authority and visibility now!",

@@ -86,7 +86,7 @@ const structuredData = {
   "@type": "BlogPosting",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://weareenigma.com/seo-keyword-research-guide"
+    "@id": "https://weareenigma.com/seo-keyword-research-guide/"
   },
   "headline": "Comprehensive Guide to Keyword Research for SEO Success",
   "description": "Keyword research is a critical component of any successful SEO strategy. It involves identifying popular search terms and phrases that users enter into search engines when looking for information, products, or services related to your niche.",

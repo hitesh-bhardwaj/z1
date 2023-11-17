@@ -86,7 +86,7 @@ const structuredData = {
   "@type": "BlogPosting",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://weareenigma.com/experience-design-vs-ux"
+    "@id": "https://weareenigma.com/experience-design-vs-ux/"
   },
   "headline": "Experience Design vs UX: Key Differences Explained",
   "description": "Dive into the world of Experience Design and UX. Learn their differences and how they shape user interactions and brand experiences.",

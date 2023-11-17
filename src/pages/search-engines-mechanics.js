@@ -86,7 +86,7 @@ const structuredData = {
   "@type": "BlogPosting",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://weareenigma.com/search-engines-mechanics"
+    "@id": "https://weareenigma.com/search-engines-mechanics/"
   },
   "headline": "Uncovering The Mechanics of How Search Engines Work - A Deep Dive",
   "description": "Uncover the mechanics of search engines with Enigma. Understand web crawlers, indexing, ranking algorithms, and optimize for better SEO.",

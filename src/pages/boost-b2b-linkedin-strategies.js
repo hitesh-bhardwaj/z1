@@ -85,7 +85,7 @@ const structuredData = {
   "@type": "BlogPosting",
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://weareenigma.com/boost-b2b-linkedin-strategies"
+    "@id": "https://weareenigma.com/boost-b2b-linkedin-strategies/"
   },
   "headline": "Boost B2B LinkedIn Success: 6 Proven Strategies",
   "description": "Elevate your B2B LinkedIn presence with 6 unbelievable strategies for standout content and effective marketing.",
