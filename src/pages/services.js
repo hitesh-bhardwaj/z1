@@ -20,6 +20,7 @@ import FirstVideoLazy from "@/components/ServicePage/FirstVideoLazy";
 import StrategySection from "@/components/ServicePage/StartegySection";
 import PageLoader from "../components/pageLoader";
 import Head from "next/head";
+import Modal from "../components/PopupForm/formModal";
 
 gsap.config({
   nullTargetWarn: false,
@@ -427,6 +428,9 @@ export default function services() {
       <Header />
 
       <main>
+
+      <Modal />
+
         <section
           className="service-hero"
           data-cursor-size="10px"

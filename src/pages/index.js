@@ -160,9 +160,7 @@ export default function Home() {
           </section>
 
 {/* PopUp Modal Button */}
-<div>
   <Modal />
-</div>
 {/* End */}
 
       {/* ======================== Concept Scroll ====================== */}
