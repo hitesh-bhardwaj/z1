@@ -17,6 +17,7 @@ import ProjectWorks from "@/components/studio/ProjectWorks";
 import WorksNextBox from "@/components/NextBoxes/WorksNextBox";
 import Modal from "@/components/PopupForm/formModal";
 import PageLoader from '@/components/pageLoader';
+import Head from "next/head";
 
 export default function studio() {
   const [loading, setLoading] = useState(true);
