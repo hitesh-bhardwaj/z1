@@ -313,6 +313,55 @@ export default function services() {
             }}
           />
 
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify([
+                {
+                  "@context": "https://schema.org",
+                  "@type": "ProfessionalService",
+                  "name": "Enigma Digital",
+                  "url": "https://weareenigma.com/",
+                  "image": "https://lh3.googleusercontent.com/p/AF1QipOrkTrTs3PcLHNNf0iQVVPlb4FTsUlynqO-DFjb=s680-w680-h510",
+                  "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "Suite # 301, Tower A, Grandslam, Ithum A-40, Sector-62",
+                    "addressLocality": "Noida",
+                    "addressRegion": "UP",
+                    "postalCode": "201309",
+                    "addressCountry": "IN"
+                  },
+                  "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": "5",
+                    "reviewCount": "14"
+                  },
+                  "geo": {
+                    "@type": "GeoCoordinates",
+                    "latitude": "28.627458269319703",
+                    "longitude": " 77.37259286237833"
+                  },
+                  "telephone": "+918178026136",
+                  "priceRange": "$$",
+                  "openingHoursSpecification": [
+                    {
+                      "@type": "OpeningHoursSpecification",
+                      "dayOfWeek": [
+                        "Monday",
+                        "Tuesday",
+                        "Wednesday",
+                        "Thursday",
+                        "Friday"
+                      ],
+                      "opens": "10:00",
+                      "closes": "20:00"
+                    }
+                  ]
+                }
+              ])
+            }}
+          />
+
         <script 
           type="application/ld+json"
           dangerouslySetInnerHTML={{

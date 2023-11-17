@@ -18,6 +18,7 @@ import Modal from '../components/PopupForm/formModal';
 import { NextSeo } from 'next-seo';
 import ServiceBlogs from '@/components/ServiceDetail/ServiceBlogs';
 import PageLoader from '@/components/pageLoader';
+import Head from 'next/head';
 // import Faq from '../components/ServiceDetail/Faq';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -267,7 +268,6 @@ useEffect(() => {
             <NextSeo
               title="Organic Digital Marketing Services To Grow Your Business"
               description="Increase brand visibility, website traffic, leads, and sales with Enigma's proprietary approach and proven mix of Content Marketing, SEO, and Social Media techniques."
-              canonical="https://weareenigma.com/organic-digital-marketing-services/"
               openGraph={{
                 url: "https://weareenigma.com/organic-digital-marketing-services/",
                 title: "Organic Digital Marketing Services To Grow Your Business",
@@ -284,9 +284,101 @@ useEffect(() => {
                   ],
                 siteName: "Enigma Digital",
               }}
-            />  
+
+              additionalMetaTags={[
+                {
+                  name: "twitter:title",
+                  content: "Organic Digital Marketing Services To Grow Your Business"
+                },
+                {
+                  name: "twitter:description",
+                  content: "Increase brand visibility, website traffic, leads, and sales with Enigma's proprietary approach and proven mix of Content Marketing, SEO, and Social Media techniques."
+                },
+                {
+                  name: "twitter:image",
+                  content: "https://weareenigma.com/assets/featured-images/service-marketing.png"
+                },
+              ]}
+            /> 
 
       <Head>
+        <link rel="canonical" href="https://weareenigma.com/organic-digital-marketing-services/" />
+        <link rel="alternate" href="https://weareenigma.com/organic-digital-marketing-services/" hreflang="x-default" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(
+              {
+                "@context": "https://schema.org",
+                "@type": "WebPage",
+                "mainEntityOfPage":{
+                  "@type": "WebPage",
+                  "@id": "https://weareenigma.com/organic-digital-marketing-services/"
+                },
+                "name": "Organic Digital Marketing Services",
+                "description": "Increase brand visibility, website traffic, leads, and sales with Enigma's proprietary approach and proven mix of Content Marketing, SEO, and Social Media techniques.",
+                "datePublished": "2023-01-01T12:00:00+05:30",
+                "dateModified": "2023-11-17T12:00:00+05:30",
+                "publisher": {
+                  "@type": "Organization",
+                  "name": "Enigma Digital",
+                  "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://weareenigma.com/assets/header-logo/enigma-en-logo.svg"
+                  }
+                }
+              }
+            ),
+          }}
+        />
+        <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify([
+                {
+                  "@context": "https://schema.org",
+                  "@type": "ProfessionalService",
+                  "name": "Enigma Digital",
+                  "url": "https://weareenigma.com/",
+                  "image": "https://lh3.googleusercontent.com/p/AF1QipOrkTrTs3PcLHNNf0iQVVPlb4FTsUlynqO-DFjb=s680-w680-h510",
+                  "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "Suite # 301, Tower A, Grandslam, Ithum A-40, Sector-62",
+                    "addressLocality": "Noida",
+                    "addressRegion": "UP",
+                    "postalCode": "201309",
+                    "addressCountry": "IN"
+                  },
+                  "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": "5",
+                    "reviewCount": "14"
+                  },
+                  "geo": {
+                    "@type": "GeoCoordinates",
+                    "latitude": "28.627458269319703",
+                    "longitude": " 77.37259286237833"
+                  },
+                  "telephone": "+918178026136",
+                  "priceRange": "$$",
+                  "openingHoursSpecification": [
+                    {
+                      "@type": "OpeningHoursSpecification",
+                      "dayOfWeek": [
+                        "Monday",
+                        "Tuesday",
+                        "Wednesday",
+                        "Thursday",
+                        "Friday"
+                      ],
+                      "opens": "10:00",
+                      "closes": "20:00"
+                    }
+                  ]
+                }
+              ])
+            }}
+          />
         <script 
           type="application/ld+json"
           dangerouslySetInnerHTML={{

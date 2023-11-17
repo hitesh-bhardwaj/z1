@@ -71,13 +71,21 @@ export default function Home() {
               {
                 "@context": "https://schema.org",
                 "@type": "WebPage",
-                "mainEntity":{
+                "mainEntityOfPage":{
                   "@type": "WebPage",
-                  "name": "HomePage",
-                  "description": "Enigma is India's Leading UI/UX Design Agency that Leverages the Power of Emotion, Design, Technology, and Neuromarketing Strategies to Create Digital Products that People Love to Use.",
-                  "url": "https://weareenigma.com/",
-                  "datePublished": "2023-01-01",
-                  "dateModified": "2023-11-17", 
+                  "@id": "https://weareenigma.com/"
+                },
+                "name": "Enigma | Digital Product Design, UI/UX & Neuromarketing Agency",
+                "description": "Enigma is India's Leading UI/UX Design Agency that Leverages the Power of Emotion, Design, Technology, and Neuromarketing Strategies to Create Digital Products that People Love to Use.",
+                "datePublished": "2023-01-01T12:00:00+05:30",
+                "dateModified": "2023-11-17T12:00:00+05:30",
+                "publisher": {
+                  "@type": "Organization",
+                  "name": "Enigma Digital",
+                  "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://weareenigma.com/assets/header-logo/enigma-en-logo.svg"
+                  }
                 }
               }
             ),
