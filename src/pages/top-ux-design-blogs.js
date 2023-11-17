@@ -101,7 +101,7 @@ const structuredData = {
   },  
   "publisher": {
     "@type": "Organization",
-    "name": "https://weareenigma.com/",
+    "name": "Enigma Digital",
     "logo": {
       "@type": "ImageObject",
       "url": "https://weareenigma.com/assets/header-logo/enigma-en-logo.svg"
@@ -117,7 +117,6 @@ const structuredData = {
     <NextSeo
       title="Top 20 UX Design Blogs for Creative Insights"
       description="Explore the top 20 UX design blogs for innovative ideas, expert insights, and the latest trends in user experience design."
-      canonical="https://weareenigma.com/top-ux-design-blogs/"
       openGraph={{
                 type: 'article',
                 article: {
@@ -140,14 +139,31 @@ const structuredData = {
         ],
         siteName: "Enigma Digital",
       }}
-    />    
+    
+      additionalMetaTags={[
+                {
+                  name: "twitter:title",
+                  content: "Top 20 UX Design Blogs for Creative Insights"
+                },
+                {
+                  name: "twitter:description",
+                  content: "Explore the top 20 UX design blogs for innovative ideas, expert insights, and the latest trends in user experience design."
+                },
+                {
+                  name: "twitter:image",
+                  content: "https://weareenigma.com/assets/featured-images/top-ux-design-blogs.png"
+                },
+              ]}
+          />
 
-      <Head>
-        <script 
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-        />
-      </Head>
+          <Head>
+            <link rel="canonical" href="https://weareenigma.com/top-ux-design-blogs/" />
+            <link rel="alternate" href="https://weareenigma.com/top-ux-design-blogs/" hreflang="x-default" />
+            <script 
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+            />
+          </Head>
 
       <SmoothScroll />
 

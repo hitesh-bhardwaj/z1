@@ -101,7 +101,7 @@ const structuredData = {
   },  
   "publisher": {
     "@type": "Organization",
-    "name": "https://weareenigma.com/",
+    "name": "Enigma Digital",
     "logo": {
       "@type": "ImageObject",
       "url": "https://weareenigma.com/assets/header-logo/enigma-en-logo.svg"
@@ -117,7 +117,6 @@ const structuredData = {
             <NextSeo
               title="Uncovering The Mechanics of How Search Engines Work - A Deep Dive"
               description="Uncover the mechanics of search engines with Enigma. Understand web crawlers, indexing, ranking algorithms, and optimize for better SEO."
-              canonical="https://weareenigma.com/search-engines-mechanics/"
               openGraph={{
                 type: 'article',
                 article: {
@@ -140,14 +139,31 @@ const structuredData = {
                 ],
                 siteName: "Enigma Digital",
               }}
-            />
+            
+              additionalMetaTags={[
+                {
+                  name: "twitter:title",
+                  content: "Uncovering The Mechanics of How Search Engines Work - A Deep Dive"
+                },
+                {
+                  name: "twitter:description",
+                  content: "Uncover the mechanics of search engines with Enigma. Understand web crawlers, indexing, ranking algorithms, and optimize for better SEO."
+                },
+                {
+                  name: "twitter:image",
+                  content: "https://weareenigma.com/assets/featured-images/search-engines-mechanics.png"
+                },
+              ]}
+          />
 
-      <Head>
-        <script 
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-        />
-      </Head>
+          <Head>
+            <link rel="canonical" href="https://weareenigma.com/search-engines-mechanics/" />
+            <link rel="alternate" href="https://weareenigma.com/search-engines-mechanics/" hreflang="x-default" />
+            <script 
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+            />
+          </Head>
 
       <SmoothScroll />
 

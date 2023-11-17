@@ -102,7 +102,7 @@ const structuredData = {
   },  
   "publisher": {
     "@type": "Organization",
-    "name": "https://weareenigma.com/",
+    "name": "Enigma Digital",
     "logo": {
       "@type": "ImageObject",
       "url": "https://weareenigma.com/assets/header-logo/enigma-en-logo.svg"
@@ -118,7 +118,6 @@ const structuredData = {
     <NextSeo
       title="Top 20 Digital Marketing Blogs for Expert Strategies"
       description="Discover the top 20 digital marketing blogs for the latest trends, organic marketing tips, and expert insights to elevate your marketing strategy."
-      canonical="https://weareenigma.com/top-digital-marketing-blogs/"
       openGraph={{
                 type: 'article',
                 article: {
@@ -141,14 +140,31 @@ const structuredData = {
         ],
         siteName: "Enigma Digital",
       }}
-    />    
-  
-      <Head>
-        <script 
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-        />
-      </Head>
+    
+      additionalMetaTags={[
+                {
+                  name: "twitter:title",
+                  content: "Top 20 Digital Marketing Blogs for Expert Strategies"
+                },
+                {
+                  name: "twitter:description",
+                  content: "Discover the top 20 digital marketing blogs for the latest trends, organic marketing tips, and expert insights to elevate your marketing strategy."
+                },
+                {
+                  name: "twitter:image",
+                  content: "https://weareenigma.com/assets/featured-images/top-marketing-blogs.png"
+                },
+              ]}
+          />
+
+          <Head>
+            <link rel="canonical" href="https://weareenigma.com/top-digital-marketing-blogs/" />
+            <link rel="alternate" href="https://weareenigma.com/top-digital-marketing-blogs/" hreflang="x-default" />
+            <script 
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+            />
+          </Head>
 
       <SmoothScroll />
 

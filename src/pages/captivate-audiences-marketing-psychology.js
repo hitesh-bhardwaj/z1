@@ -101,7 +101,7 @@ const structuredData = {
   },  
   "publisher": {
     "@type": "Organization",
-    "name": "https://weareenigma.com/",
+    "name": "Enigma Digital",
     "logo": {
       "@type": "ImageObject",
       "url": "https://weareenigma.com/assets/header-logo/enigma-en-logo.svg"
@@ -117,7 +117,6 @@ const structuredData = {
             <NextSeo
               title="Marketing Psychology: Secrets to Captivating Audiences"
               description="Explore the world of marketing psychology with Enigma. Discover the power of emotions, social influence, persuasion, and neuromarketing in shaping consumer behaviour."
-              canonical="https://weareenigma.com/captivate-audiences-marketing-psychology/"
               openGraph={{
                 type: 'article',
                 article: {
@@ -140,14 +139,31 @@ const structuredData = {
                   ],
                   siteName: "Enigma Digital",
               }}
-            /> 
+              
+            additionalMetaTags={[
+            {
+              name: "twitter:title",
+              content: "Marketing Psychology: Secrets to Captivating Audiences"
+            },
+            {
+              name: "twitter:description",
+              content: "Explore the world of marketing psychology with Enigma. Discover the power of emotions, social influence, persuasion, and neuromarketing in shaping consumer behaviour."
+            },
+            {
+              name: "twitter:image",
+              content: "https://weareenigma.com/assets/featured-images/audiences-marketing-psychology.png"
+            },
+          ]}
+      />
 
-            <Head>
-              <script 
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-              />
-            </Head>   
+      <Head>
+        <link rel="canonical" href="https://weareenigma.com/captivate-audiences-marketing-psychology/" />
+        <link rel="alternate" href="https://weareenigma.com/captivate-audiences-marketing-psychology/" hreflang="x-default" />
+        <script 
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+      </Head>  
 
       <SmoothScroll />
 

@@ -114,9 +114,26 @@ function JobDetail({ job }) {
           ],
           siteName: "Enigma Digital",
         }}
-      />
+
+        additionalMetaTags={[
+                {
+                  name: "twitter:title",
+                  content: `${job.title} | Careers at Enigma Digital`
+                },
+                {
+                  name: "twitter:description",
+                  content: `${job.sDescription}`
+                },
+                {
+                  name: "twitter:image",
+                  content: "https://weareenigma.com/assets/featured-images/career.png"
+                },
+              ]}
+            />
 
       <Head>
+        <link rel="canonical" href={`https://weareenigma.com/job/${job.slug}`} />
+        <link rel="alternate" href={`https://weareenigma.com/job/${job.slug}`} hreflang="x-default" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}

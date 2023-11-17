@@ -101,7 +101,7 @@ const structuredData = {
   },  
   "publisher": {
     "@type": "Organization",
-    "name": "https://weareenigma.com/",
+    "name": "Enigma Digital",
     "logo": {
       "@type": "ImageObject",
       "url": "https://weareenigma.com/assets/header-logo/enigma-en-logo.svg"
@@ -117,7 +117,6 @@ const structuredData = {
             <NextSeo
               title="How Much Should a Website Cost? Enigma's Insightful Guide"
               description="Unravel the complexities of website pricing with Enigma's comprehensive guide. Understand factors influencing costs and the value of strategic planning."
-              canonical="https://weareenigma.com/website-cost-guide/"
               openGraph={{
                 type: 'article',
                 article: {
@@ -140,14 +139,31 @@ const structuredData = {
                 ],
                 siteName: "Enigma Digital",
               }}
-            />
             
-            <Head>
-              <script 
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-              />
-            </Head>
+              additionalMetaTags={[
+                {
+                  name: "twitter:title",
+                  content: "How Much Should a Website Cost? Enigma's Insightful Guide"
+                },
+                {
+                  name: "twitter:description",
+                  content: "Unravel the complexities of website pricing with Enigma's comprehensive guide. Understand factors influencing costs and the value of strategic planning."
+                },
+                {
+                  name: "twitter:image",
+                  content: "https://weareenigma.com/assets/featured-images/website-cost.png"
+                },
+              ]}
+          />
+
+          <Head>
+            <link rel="canonical" href="https://weareenigma.com/website-cost-guide/" />
+            <link rel="alternate" href="https://weareenigma.com/website-cost-guide/" hreflang="x-default" />
+            <script 
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+            />
+          </Head>
 
       <SmoothScroll />
 

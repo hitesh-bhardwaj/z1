@@ -103,7 +103,7 @@ const structuredData = {
   },  
   "publisher": {
     "@type": "Organization",
-    "name": "https://weareenigma.com/",
+    "name": "Enigma Digital",
     "logo": {
       "@type": "ImageObject",
       "url": "https://weareenigma.com/assets/header-logo/enigma-en-logo.svg"
@@ -119,7 +119,6 @@ const structuredData = {
     <NextSeo
       title="UX Design Explained: A Simple Guide for Everyone"
       description="Embark on a journey into UX design. Learn the essentials of user experience, the process, techniques, and principles and how it shapes digital interactions."
-      canonical="https://weareenigma.com/what-is-ux-design/"
       openGraph={{
                 type: 'article',
                 article: {
@@ -142,14 +141,31 @@ const structuredData = {
         ],
         siteName: "Enigma Digital",
       }}
-    />    
+    
+      additionalMetaTags={[
+                {
+                  name: "twitter:title",
+                  content: "UX Design Explained: A Simple Guide for Everyone"
+                },
+                {
+                  name: "twitter:description",
+                  content: "Embark on a journey into UX design. Learn the essentials of user experience, the process, techniques, and principles and how it shapes digital interactions."
+                },
+                {
+                  name: "twitter:image",
+                  content: "https://weareenigma.com/assets/featured-images/what-is-ux.png"
+                },
+              ]}
+          />
 
-            <Head>
-              <script 
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-              />
-            </Head>
+          <Head>
+            <link rel="canonical" href="https://weareenigma.com/what-is-ux-design/" />
+            <link rel="alternate" href="https://weareenigma.com/what-is-ux-design/" hreflang="x-default" />
+            <script 
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+            />
+          </Head>
 
       <SmoothScroll />
 

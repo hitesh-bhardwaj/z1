@@ -101,7 +101,7 @@ const structuredData = {
     },  
     "publisher": {
       "@type": "Organization",
-      "name": "https://weareenigma.com/",
+      "name": "Enigma Digital",
       "logo": {
         "@type": "ImageObject",
         "url": "https://weareenigma.com/assets/header-logo/enigma-en-logo.svg"
@@ -117,7 +117,6 @@ const structuredData = {
     <NextSeo
       title="UX Design Glossary: Mastering UX Terms & Concepts"
       description="Confused by UX jargon? Our UX glossary deciphers key UX terms and concepts in simple language, for beginners and experts alike! Bookmark this handy UX guide."
-      canonical="https://weareenigma.com/ux-design-glossary-guide/"
       openGraph={{
                 type: 'article',
                 article: {
@@ -140,14 +139,31 @@ const structuredData = {
         ],
         siteName: "Enigma Digital",
       }}
-    />    
+    
+      additionalMetaTags={[
+                {
+                  name: "twitter:title",
+                  content: "UX Design Glossary: Mastering UX Terms & Concepts"
+                },
+                {
+                  name: "twitter:description",
+                  content: "Confused by UX jargon? Our UX glossary deciphers key UX terms and concepts in simple language, for beginners and experts alike! Bookmark this handy UX guide."
+                },
+                {
+                  name: "twitter:image",
+                  content: "https://weareenigma.com/assets/featured-images/ux-design-glossary.png"
+                },
+              ]}
+          />
 
-        <Head>
+          <Head>
+            <link rel="canonical" href="https://weareenigma.com/ux-design-glossary-guide/" />
+            <link rel="alternate" href="https://weareenigma.com/ux-design-glossary-guide/" hreflang="x-default" />
             <script 
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
             />
-        </Head>
+          </Head>
 
       <SmoothScroll />
 

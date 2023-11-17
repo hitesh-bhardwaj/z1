@@ -18,6 +18,7 @@ import Modal from '../components/PopupForm/formModal';
 import { NextSeo } from 'next-seo';
 import ServiceBlogs from '@/components/ServiceDetail/ServiceBlogs';
 import PageLoader from "@/components/pageLoader";
+import Head from 'next/head';
 // import Faq from '../components/ServiceDetail/Faq';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -286,6 +287,94 @@ useEffect(() => {
                 siteName: "Enigma Digital",
         }}
       />
+
+      <Head>
+        <script 
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(
+            {
+              "@context": "https://schema.org/",
+              "@type": "Service",
+              "serviceType": "IT services",
+              "provider": {
+                "@type": "Organization",
+                "name": "Enigma Digital",
+                "url": "https://weareengima.com"
+              },
+              "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "UI/UX Design Services",
+                  "itemListElement": [{
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "User Experience (UX) Design"
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "User Interface (UI) Design"
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "Interaction Design (IxD)"
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "End-to-End Product Design"
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "User Testing and Evaluation"
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "Prototyping and Wireframing"
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "Website & Mobile App Design"
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "Content Strategy for UX"
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "Usability Testing & Accessibility Design"
+                      }
+                    }
+                  ]
+                }
+              }
+            )
+          }}
+        />
+      </Head>
 
 <SmoothScroll />
 

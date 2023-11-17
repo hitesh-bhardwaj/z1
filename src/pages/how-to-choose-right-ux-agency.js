@@ -102,7 +102,7 @@ const structuredData = {
   },  
   "publisher": {
     "@type": "Organization",
-    "name": "https://weareenigma.com/",
+    "name": "Enigma Digital",
     "logo": {
       "@type": "ImageObject",
       "url": "https://weareenigma.com/assets/header-logo/enigma-en-logo.svg"
@@ -120,7 +120,6 @@ const structuredData = {
               description="Your product ideas deserve the best possible user experience (UX)
               design, and to achieve that, you need to partner with the right UX
               agency."
-              canonical="https://weareenigma.com/how-to-choose-right-ux-agency/"
               openGraph={{
                 type: 'article',
                 article: {
@@ -143,14 +142,31 @@ const structuredData = {
                 ],
                 siteName: "Enigma Digital",
               }}
-            />
 
-      <Head>
-        <script 
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-        />
-      </Head>
+              additionalMetaTags={[
+                {
+                  name: "twitter:title",
+                  content: "How to Choose the Right UX Agency to Partner with for Your Product Ideas"
+                },
+                {
+                  name: "twitter:description",
+                  content: "Your product ideas deserve the best possible user experience (UX) design, and to achieve that, you need to partner with the right UX agency."
+                },
+                {
+                  name: "twitter:image",
+                  content: "https://weareenigma.com/assets/featured-images/right-ux-agency.png"
+                },
+              ]}
+          />
+
+          <Head>
+            <link rel="canonical" href="https://weareenigma.com/how-to-choose-right-ux-agency/" />
+            <link rel="alternate" href="https://weareenigma.com/how-to-choose-right-ux-agency/" hreflang="x-default" />
+            <script 
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+            />
+          </Head>
 
       <SmoothScroll />
 

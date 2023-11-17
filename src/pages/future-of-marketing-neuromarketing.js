@@ -101,7 +101,7 @@ const structuredData = {
   },  
   "publisher": {
     "@type": "Organization",
-    "name": "https://weareenigma.com/",
+    "name": "Enigma Digital",
     "logo": {
       "@type": "ImageObject",
       "url": "https://weareenigma.com/assets/header-logo/enigma-en-logo.svg"
@@ -117,7 +117,6 @@ const structuredData = {
     <NextSeo
       title="Bracing for the Future - How Marketing Will Evolve in 2030s"
       description="Discover how marketing will evolve in the 2030s and beyond. Discover the power of neuromarketing and its impact on the future of marketing."
-      canonical="https://weareenigma.com/future-of-marketing-neuromarketing/"
       openGraph={{
                 type: 'article',
                 article: {
@@ -140,14 +139,31 @@ const structuredData = {
                 ],
                 siteName: "Enigma Digital",
       }}
-    />    
 
-      <Head>
-        <script 
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-        />
-      </Head>
+      additionalMetaTags={[
+                {
+                  name: "twitter:title",
+                  content: "Bracing for the Future - How Marketing Will Evolve in 2030s"
+                },
+                {
+                  name: "twitter:description",
+                  content: "Discover how marketing will evolve in the 2030s and beyond. Discover the power of neuromarketing and its impact on the future of marketing."
+                },
+                {
+                  name: "twitter:image",
+                  content: "https://weareenigma.com/assets/featured-images/future-of-marketing.png"
+                },
+              ]}
+          />
+
+          <Head>
+            <link rel="canonical" href="https://weareenigma.com/future-of-marketing-neuromarketing/" />
+            <link rel="alternate" href="https://weareenigma.com/future-of-marketing-neuromarketing/" hreflang="x-default" />
+            <script 
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+            />
+          </Head>
 
       <SmoothScroll />
 

@@ -101,7 +101,7 @@ const structuredData = {
   },  
   "publisher": {
     "@type": "Organization",
-    "name": "https://weareenigma.com/",
+    "name": "Enigma Digital",
     "logo": {
       "@type": "ImageObject",
       "url": "https://weareenigma.com/assets/header-logo/enigma-en-logo.svg"
@@ -138,9 +138,26 @@ const structuredData = {
           ],
           siteName: "Enigma Digital",
         }}
-      />   
+
+        additionalMetaTags={[
+            {
+              name: "twitter:title",
+              content: "A Beginner's Guide to Search Engine Optimization | Enigma"
+            },
+            {
+              name: "twitter:description",
+              content: "Our beginner's guide to SEO covers all the basic on-page, off-page strategies and best practices to improve your site's search visibility and ranking."
+            },
+            {
+              name: "twitter:image",
+              content: "https://weareenigma.com/assets/featured-images/basics-of-seo.png"
+            },
+          ]}
+      />
 
       <Head>
+        <link rel="canonical" href="https://weareenigma.com/basics-of-seo/" />
+        <link rel="alternate" href="https://weareenigma.com/basics-of-seo/" hreflang="x-default" />
         <script 
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}

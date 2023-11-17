@@ -102,7 +102,7 @@ const structuredData = {
   },  
   "publisher": {
     "@type": "Organization",
-    "name": "https://weareenigma.com/",
+    "name": "Enigma Digital",
     "logo": {
       "@type": "ImageObject",
       "url": "https://weareenigma.com/assets/header-logo/enigma-en-logo.svg"
@@ -118,7 +118,6 @@ const structuredData = {
             <NextSeo
               title="Enigma's Guide to Delightful UX Design for Digital Platforms"
               description="Dive into Enigma's guide on crafting delightful designs for diverse digital platforms. From desktops to wearables, master the art of UX design."
-              canonical="https://weareenigma.com/delightful-digital-design-guide/"
               openGraph={{
                 type: 'article',
                 article: {
@@ -141,14 +140,31 @@ const structuredData = {
                   ],
                   siteName: "Enigma Digital",
               }}
-            />     
+              
+              additionalMetaTags={[
+                {
+                  name: "twitter:title",
+                  content: "Enigma's Guide to Delightful UX Design for Digital Platforms"
+                },
+                {
+                  name: "twitter:description",
+                  content: "Dive into Enigma's guide on crafting delightful designs for diverse digital platforms. From desktops to wearables, master the art of UX design."
+                },
+                {
+                  name: "twitter:image",
+                  content: "https://weareenigma.com/assets/featured-images/digital-design-guide.png"
+                },
+              ]}
+          />
 
-            <Head>
-              <script 
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-              />
-            </Head>
+          <Head>
+            <link rel="canonical" href="https://weareenigma.com/delightful-digital-design-guide/" />
+            <link rel="alternate" href="https://weareenigma.com/delightful-digital-design-guide/" hreflang="x-default" />
+            <script 
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+            />
+          </Head>
 
       <SmoothScroll />
 

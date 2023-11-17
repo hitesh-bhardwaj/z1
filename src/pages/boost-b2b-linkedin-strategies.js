@@ -101,7 +101,7 @@ const structuredData = {
   },  
   "publisher": {
     "@type": "Organization",
-    "name": "https://weareenigma.com/",
+    "name": "Enigma Digital",
     "logo": {
       "@type": "ImageObject",
       "url": "https://weareenigma.com/assets/header-logo/enigma-en-logo.svg"
@@ -117,7 +117,6 @@ const structuredData = {
     <NextSeo
       title="Boost B2B LinkedIn Success: 6 Proven Strategies"
       description="Elevate your B2B LinkedIn presence with 6 unbelievable strategies for standout content and effective marketing."
-      canonical="https://weareenigma.com/boost-b2b-linkedin-strategies/"
       openGraph={{
                 type: 'article',
                 article: {
@@ -140,14 +139,31 @@ const structuredData = {
                   ],
                   siteName: "Enigma Digital",
       }}
-    />    
 
-        <Head>
-          <script 
-            type="application/ld+json"
-             dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-          />
-        </Head>
+      additionalMetaTags={[
+            {
+              name: "twitter:title",
+              content: "Boost B2B LinkedIn Success: 6 Proven Strategies"
+            },
+            {
+              name: "twitter:description",
+              content: "Elevate your B2B LinkedIn presence with 6 unbelievable strategies for standout content and effective marketing."
+            },
+            {
+              name: "twitter:image",
+              content: "https://weareenigma.com/assets/featured-images/b2b-linkedin-strategies.png"
+            },
+          ]}
+      />
+
+      <Head>
+        <link rel="canonical" href="https://weareenigma.com/boost-b2b-linkedin-strategies/" />
+        <link rel="alternate" href="https://weareenigma.com/boost-b2b-linkedin-strategies/" hreflang="x-default" />
+        <script 
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+      </Head>
 
       <SmoothScroll />
 

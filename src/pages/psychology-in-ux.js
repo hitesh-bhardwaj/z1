@@ -103,7 +103,7 @@ const structuredData = {
   },  
   "publisher": {
     "@type": "Organization",
-    "name": "https://weareenigma.com/",
+    "name": "Enigma Digital",
     "logo": {
       "@type": "ImageObject",
       "url": "https://weareenigma.com/assets/header-logo/enigma-en-logo.svg"
@@ -119,7 +119,6 @@ const structuredData = {
           <NextSeo
             title="Harnessing the Power of Psychology in UX Design"
             description="Explore the profound connection between psychology and UX design. Unlock insights to create intuitive, effective, and emotionally resonant user experiences."
-            canonical="https://weareenigma.com/psychology-in-ux/"
             openGraph={{
                 type: 'article',
                 article: {
@@ -142,14 +141,31 @@ const structuredData = {
                 ],
                 siteName: "Enigma Digital",
               }}
-            />    
-          
-            <Head>
-              <script 
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-              />
-            </Head>
+
+              additionalMetaTags={[
+                {
+                  name: "twitter:title",
+                  content: "Harnessing the Power of Psychology in UX Design"
+                },
+                {
+                  name: "twitter:description",
+                  content: "Explore the profound connection between psychology and UX design. Unlock insights to create intuitive, effective, and emotionally resonant user experiences."
+                },
+                {
+                  name: "twitter:image",
+                  content: "https://weareenigma.com/assets/featured-images/psychology-in-ux.png"
+                },
+              ]}
+          />
+
+          <Head>
+            <link rel="canonical" href="https://weareenigma.com/psychology-in-ux/" />
+            <link rel="alternate" href="https://weareenigma.com/psychology-in-ux/" hreflang="x-default" />
+            <script 
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+            />
+          </Head>
 
       <SmoothScroll />
 

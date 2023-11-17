@@ -14,6 +14,7 @@ import FooterMobile from "@/components/Mobile/FooterMobile";
 import Image from "next/image";
 import ProjectSlider from "@/components/CaseStudies/ProjectSlider";
 import PageLoader from "@/components/pageLoader";
+import Head from "next/head";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -174,7 +175,6 @@ export default function patra() {
     <NextSeo
       title="Catapulting Patra's CX  Through UX - Case Study | Enigma"
       description="Dive into our Strategy, UX Planning, UI Design apporach, and the remarkable results we deliverd for Patra Corp, by building a real time reporting dashboard for their clients."
-      canonical="https://weareenigma.com/patra-saas-insurtech-case-study/"
       openGraph={{
         url: "https://weareenigma.com/patra-saas-insurtech-case-study/",
         title: "Catapulting Patra's CX  Through UX - Case Study | Enigma",
@@ -191,7 +191,54 @@ export default function patra() {
                   ],
                 siteName: "Enigma Digital",
       }}
-    />    
+
+      additionalMetaTags={[
+                {
+                  name: "twitter:title",
+                  content: "Catapulting Patra's CX  Through UX - Case Study | Enigma"
+                },
+                {
+                  name: "twitter:description",
+                  content: "Dive into our Strategy, UX Planning, UI Design apporach, and the remarkable results we deliverd for Patra Corp, by building a real time reporting dashboard for their clients."
+                },
+                {
+                  name: "twitter:image",
+                  content: "https://weareenigma.com/assets/featured-images/portfolio-patra.png"
+                },
+              ]}
+            />
+
+      <Head>
+        <link rel="canonical" href="https://weareenigma.com/patra-saas-insurtech-case-study/" />
+        <link rel="alternate" href="https://weareenigma.com/patra-saas-insurtech-case-study/" hreflang="x-default" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(
+              {
+                "@context": "https://schema.org",
+                "@type": "WebPage",
+                "mainEntityOfPage":{
+                  "@type": "WebPage",
+                  "@id": "https://weareenigma.com/patra-saas-insurtech-case-study/"
+                },
+                "name": "Catapulting Patra's CX  Through UX - Case Study | Enigma",
+                "description": "Dive into our Strategy, UX Planning, UI Design apporach, and the remarkable results we deliverd for Patra Corp, by building a real time reporting dashboard for their clients.",
+                "datePublished": "2023-01-01T12:00:00+05:30",
+                "dateModified": "2023-11-17T12:00:00+05:30",
+                "publisher": {
+                  "@type": "Organization",
+                  "name": "Enigma Digital",
+                  "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://weareenigma.com/assets/header-logo/enigma-en-logo.svg"
+                  }
+                }
+              }
+            ),
+          }}
+        />
+      </Head>    
 
       <SmoothScroll />
 

@@ -102,7 +102,7 @@ const structuredData = {
   },  
   "publisher": {
     "@type": "Organization",
-    "name": "https://weareenigma.com/",
+    "name": "Enigma Digital",
     "logo": {
       "@type": "ImageObject",
       "url": "https://weareenigma.com/assets/header-logo/enigma-en-logo.svg"
@@ -118,7 +118,6 @@ const structuredData = {
     <NextSeo
       title="Experience Design vs UX: Key Differences Explained"
       description="Dive into the world of Experience Design and UX. Learn their differences and how they shape user interactions and brand experiences."
-      canonical="https://weareenigma.com/experience-design-vs-ux/"
       openGraph={{
                 type: 'article',
                 article: {
@@ -141,14 +140,31 @@ const structuredData = {
                 ],
           siteName: "Enigma Digital",
       }}
-    />    
 
-      <Head>
-        <script 
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-        />
-      </Head>
+      additionalMetaTags={[
+                {
+                  name: "twitter:title",
+                  content: "Experience Design vs UX: Key Differences Explained"
+                },
+                {
+                  name: "twitter:description",
+                  content: "Dive into the world of Experience Design and UX. Learn their differences and how they shape user interactions and brand experiences."
+                },
+                {
+                  name: "twitter:image",
+                  content: "https://weareenigma.com/assets/featured-images/expeirence-design-vs-ux.png"
+                },
+              ]}
+            />
+
+          <Head>
+            <link rel="canonical" href="https://weareenigma.com/experience-design-vs-ux/" />
+            <link rel="alternate" href="https://weareenigma.com/experience-design-vs-ux/" hreflang="x-default" />
+            <script 
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+            />
+          </Head>
 
       <SmoothScroll />
 

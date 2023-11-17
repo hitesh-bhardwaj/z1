@@ -102,7 +102,7 @@ const structuredData = {
   },  
   "publisher": {
     "@type": "Organization",
-    "name": "https://weareenigma.com/",
+    "name": "Enigma Digital",
     "logo": {
       "@type": "ImageObject",
       "url": "https://weareenigma.com/assets/header-logo/enigma-en-logo.svg"
@@ -118,7 +118,6 @@ const structuredData = {
             <NextSeo
               title="Comprehensive Guide to Keyword Research for SEO Success"
               description="Keyword research is a critical component of any successful SEO strategy. It involves identifying popular search terms and phrases that users enter into search engines when looking for information, products, or services related to your niche."
-              canonical="https://weareenigma.com/seo-keyword-research-guide/"
               openGraph={{
                 type: 'article',
                 article: {
@@ -141,14 +140,31 @@ const structuredData = {
                 ],
                 siteName: "Enigma Digital",
               }}
-            />
+           
+              additionalMetaTags={[
+                {
+                  name: "twitter:title",
+                  content: "Comprehensive Guide to Keyword Research for SEO Success"
+                },
+                {
+                  name: "twitter:description",
+                  content: "Keyword research is a critical component of any successful SEO strategy. It involves identifying popular search terms and phrases that users enter into search engines when looking for information, products, or services related to your niche."
+                },
+                {
+                  name: "twitter:image",
+                  content: "https://weareenigma.com/assets/featured-images/seo-keyword-research-guide.png"
+                },
+              ]}
+          />
 
-            <Head>
-              <script 
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-              />
-            </Head>
+          <Head>
+            <link rel="canonical" href="https://weareenigma.com/seo-keyword-research-guide/" />
+            <link rel="alternate" href="https://weareenigma.com/seo-keyword-research-guide/" hreflang="x-default" />
+            <script 
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+            />
+          </Head>
 
       <SmoothScroll />
 

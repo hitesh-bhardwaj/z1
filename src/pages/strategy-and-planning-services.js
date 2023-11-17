@@ -18,6 +18,7 @@ import Modal from '../components/PopupForm/formModal';
 import { NextSeo } from 'next-seo';
 import ServiceBlogs from '@/components/ServiceDetail/ServiceBlogs';
 import PageLoader from "@/components/pageLoader";
+import Head from 'next/head';
 // import Faq from '../components/ServiceDetail/Faq';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -284,6 +285,94 @@ useEffect(() => {
                 siteName: "Enigma Digital",
         }}
       />
+
+      <Head>
+        <script 
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(
+            {
+              "@context": "https://schema.org/",
+              "@type": "Service",
+              "serviceType": "IT services",
+              "provider": {
+                "@type": "Organization",
+                "name": "Enigma Digital",
+                "url": "https://weareengima.com"
+              },
+              "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "Strategy Services",
+                  "itemListElement": [{
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "Digital Marketing Auditing and Consulting"
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "User Experience Consultation"
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "Conversion Rate Optimization"
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "Data Analytics and Insights"
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "Brand & Content Strategy"
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "SEO and SMM Optimization"
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "Social Media Strategy"
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "Omni-Channel Strategy Development"
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "Customer Journey Mapping"
+                      }
+                    }
+                  ]
+                }
+              }
+            )
+          }}
+        />
+      </Head>
 
     <SmoothScroll />
 

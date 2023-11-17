@@ -100,7 +100,7 @@ const structuredData = {
   },  
   "publisher": {
     "@type": "Organization",
-    "name": "https://weareenigma.com/",
+    "name": "Enigma Digital",
     "logo": {
       "@type": "ImageObject",
       "url": "https://weareenigma.com/assets/header-logo/enigma-en-logo.svg"
@@ -115,8 +115,7 @@ const structuredData = {
 
     <NextSeo
       title="Maximizing Remote Designers: Outsourcing to India"
-      description="Discover the advantages of hiring remote designers from India, debunking myths and showcasing the benefits for your business"
-      canonical="https://weareenigma.com/power-remote-designers-india/"
+      description="Discover the advantages of hiring remote designers from India, debunking myths and showcasing the benefits for your business."
       openGraph={{
                 type: 'article',
                 article: {
@@ -127,7 +126,7 @@ const structuredData = {
         url: "https://weareenigma.com/power-remote-designers-india/",
         title: "Maximizing Remote Designers: Outsourcing to India",
         description:
-          "Discover the advantages of hiring remote designers from India, debunking myths and showcasing the benefits for your business",
+          "Discover the advantages of hiring remote designers from India, debunking myths and showcasing the benefits for your business.",
           images: [
                   {
                     url: "https://weareenigma.com/assets/featured-images/power-of-remote-designers.png",
@@ -139,14 +138,31 @@ const structuredData = {
                 ],
                 siteName: "Enigma Digital",
       }}
-    />    
+    
+      additionalMetaTags={[
+                {
+                  name: "twitter:title",
+                  content: "Maximizing Remote Designers: Outsourcing to India"
+                },
+                {
+                  name: "twitter:description",
+                  content: "Discover the advantages of hiring remote designers from India, debunking myths and showcasing the benefits for your business."
+                },
+                {
+                  name: "twitter:image",
+                  content: "https://weareenigma.com/assets/featured-images/power-of-remote-designers.png"
+                },
+              ]}
+          />
 
-      <Head>
-        <script 
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-        />
-      </Head>
+          <Head>
+            <link rel="canonical" href="https://weareenigma.com/power-remote-designers-india/" />
+            <link rel="alternate" href="https://weareenigma.com/power-remote-designers-india/" hreflang="x-default" />
+            <script 
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+            />
+          </Head>
 
       <SmoothScroll />
 

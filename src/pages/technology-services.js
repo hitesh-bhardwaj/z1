@@ -18,6 +18,7 @@ import Modal from '../components/PopupForm/formModal';
 import { NextSeo } from 'next-seo';
 import ServiceBlogs from '@/components/ServiceDetail/ServiceBlogs';
 import PageLoader from "@/components/pageLoader";
+import Head from 'next/head';
 // import Faq from '../components/ServiceDetail/Faq';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -286,6 +287,86 @@ useEffect(() => {
                 siteName: "Enigma Digital",
         }}
       />
+      <Head>
+        <script 
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(
+            {
+              "@context": "https://schema.org/",
+              "@type": "Service",
+              "serviceType": "IT services",
+              "provider": {
+                "@type": "Organization",
+                "name": "Enigma Digital",
+                "url": "https://weareengima.com"
+              },
+              "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "Technology Services",
+                  "itemListElement": [{
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "Custom Software Development"
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "Mobile Application Development"
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "Web Application Development"
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "E-commerce Solutions"
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "DevOps Services"
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "Technology Consulting"
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "Quality Assurance and Testing"
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "Continuous Support and Maintenance"
+                      }
+                    }
+                  ]
+                }
+              }
+            )
+          }}
+        />
+      </Head>
 
     <SmoothScroll />
 

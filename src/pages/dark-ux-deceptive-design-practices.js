@@ -101,7 +101,7 @@ const structuredData = {
   },  
   "publisher": {
     "@type": "Organization",
-    "name": "https://weareenigma.com/",
+    "name": "Enigma Digital",
     "logo": {
       "@type": "ImageObject",
       "url": "https://weareenigma.com/assets/header-logo/enigma-en-logo.svg"
@@ -117,7 +117,6 @@ const structuredData = {
     <NextSeo
       title="Psychology of Dark UX Patterns"
       description="Understand dark UX patterns and how they manipulate users by exploiting cognitive biases. Avoid deceptive design practices and create ethical experiences."
-      canonical="https://weareenigma.com/dark-ux-deceptive-design-practices/"
       openGraph={{
                 type: 'article',
                 article: {
@@ -140,9 +139,26 @@ const structuredData = {
                   ],
                   siteName: "Enigma Digital",
                 }}
-    />    
     
-     <Head>
+          additionalMetaTags={[
+            {
+              name: "twitter:title",
+              content: "Psychology of Dark UX Patterns"
+            },
+            {
+              name: "twitter:description",
+              content: "Understand dark UX patterns and how they manipulate users by exploiting cognitive biases. Avoid deceptive design practices and create ethical experiences."
+            },
+            {
+              name: "twitter:image",
+              content: "https://weareenigma.com/assets/featured-images/dark-design-practices.png"
+            },
+          ]}
+      />
+
+      <Head>
+        <link rel="canonical" href="https://weareenigma.com/dark-ux-deceptive-design-practices/" />
+        <link rel="alternate" href="https://weareenigma.com/dark-ux-deceptive-design-practices/" hreflang="x-default" />
         <script 
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}

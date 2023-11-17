@@ -28,7 +28,6 @@ export default function Home() {
       <NextSeo
         title="Enigma | Digital Product Design, UI/UX & Neuromarketing Agency"
         description="Enigma is India's Leading UI/UX Design Agency that Leverages the Power of Emotion, Design, Technology, and Neuromarketing Strategies to Create Digital Products that People Love to Use."
-        canonical="https://www.weareenigma.com/"
         openGraph={{
           url: "https://weareenigma.com/",
           title: "Enigma | Digital Product Design, UI/UX & Neuromarketing Agency",
@@ -45,6 +44,7 @@ export default function Home() {
             ],
             siteName: "Enigma Digital",
           }}
+          
           additionalMetaTags={[
             {
               name: "twitter:title",
@@ -62,7 +62,27 @@ export default function Home() {
         />
 
     <Head>
+      <link rel="canonical" href="https://weareenigma.com/" />
       <link rel="alternate" href="https://weareenigma.com/" hreflang="x-default" />
+      <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(
+              {
+                "@context": "https://schema.org",
+                "@type": "WebPage",
+                "mainEntity":{
+                  "@type": "WebPage",
+                  "name": "HomePage",
+                  "description": "Enigma is India's Leading UI/UX Design Agency that Leverages the Power of Emotion, Design, Technology, and Neuromarketing Strategies to Create Digital Products that People Love to Use.",
+                  "url": "https://weareenigma.com/",
+                  "datePublished": "2023-01-01",
+                  "dateModified": "2023-11-17", 
+                }
+              }
+            ),
+          }}
+        />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -81,17 +101,10 @@ export default function Home() {
                 "postalCode": "201309",
                 "addressCountry": "IN"
               },
-              "review": {
-                "@type": "Review",
-                "reviewRating": {
-                  "@type": "Rating",
-                  "ratingValue": "5",
-                  "bestRating": "5"
-                },
-                "author": {
-                  "@type": "Person",
-                  "name": "Bhaskar Varshney"
-                }
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "5",
+                "reviewCount": "14"
               },
               "geo": {
                 "@type": "GeoCoordinates",
@@ -112,10 +125,10 @@ export default function Home() {
                   ],
                   "opens": "10:00",
                   "closes": "20:00"
-                },
-              ],
+                }
+              ]
             }
-          ]),
+          ])
         }}
       />
     </Head>

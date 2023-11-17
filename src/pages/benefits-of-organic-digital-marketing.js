@@ -101,7 +101,7 @@ const structuredData = {
   },  
   "publisher": {
     "@type": "Organization",
-    "name": "https://weareenigma.com/",
+    "name": "Enigma Digital",
     "logo": {
       "@type": "ImageObject",
       "url": "https://weareenigma.com/assets/header-logo/enigma-en-logo.svg"
@@ -117,7 +117,6 @@ const structuredData = {
     <NextSeo
       title="The Power & Benefits of Organic Digital Marketing"
       description="Explore the benefits of organic digital marketing techniques and their transformative power for business growth, backed by data and irrefutable evidence."
-      canonical="https://weareenigma.com/benefits-of-organic-digital-marketing/"
       openGraph={{
                 type: 'article',
                 article: {
@@ -140,14 +139,31 @@ const structuredData = {
                   ],
                   siteName: "Enigma Digital",
       }}
-    />  
+
+      additionalMetaTags={[
+            {
+              name: "twitter:title",
+              content: "The Power & Benefits of Organic Digital Marketing"
+            },
+            {
+              name: "twitter:description",
+              content: "Explore the benefits of organic digital marketing techniques and their transformative power for business growth, backed by data and irrefutable evidence."
+            },
+            {
+              name: "twitter:image",
+              content: "https://weareenigma.com/assets/featured-images/benefits-of-organic-digital-marketing.png"
+            },
+          ]}
+      />
 
       <Head>
+        <link rel="canonical" href="https://weareenigma.com/benefits-of-organic-digital-marketing/" />
+        <link rel="alternate" href="https://weareenigma.com/benefits-of-organic-digital-marketing/" hreflang="x-default" />
         <script 
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
-      </Head>  
+      </Head>
 
       <SmoothScroll />
 

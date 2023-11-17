@@ -102,7 +102,7 @@ const structuredData = {
   },  
   "publisher": {
     "@type": "Organization",
-    "name": "https://weareenigma.com/",
+    "name": "Enigma Digital",
     "logo": {
       "@type": "ImageObject",
       "url": "https://weareenigma.com/assets/header-logo/enigma-en-logo.svg"
@@ -118,7 +118,6 @@ const structuredData = {
     <NextSeo
       title="Tracing the Evolution of UX Design - Past, Present & Future"
       description="A Journey through the transformative history of UX design. Discover its origins, pivotal moments, and the future of user-centric digital experiences."
-      canonical="https://weareenigma.com/evolution-of-ux-design/"
       openGraph={{
                 type: 'article',
                 article: {
@@ -141,14 +140,31 @@ const structuredData = {
                 ],
           siteName: "Enigma Digital",
       }}
-    />   
-
-        <Head>
-          <script 
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+    
+      additionalMetaTags={[
+                {
+                  name: "twitter:title",
+                  content: "Tracing the Evolution of UX Design - Past, Present & Future"
+                },
+                {
+                  name: "twitter:description",
+                  content: "A Journey through the transformative history of UX design. Discover its origins, pivotal moments, and the future of user-centric digital experiences."
+                },
+                {
+                  name: "twitter:image",
+                  content: "https://weareenigma.com/assets/featured-images/evolution-of-ux-design.png"
+                },
+              ]}
           />
-        </Head>
+
+          <Head>
+            <link rel="canonical" href="https://weareenigma.com/evolution-of-ux-design/" />
+            <link rel="alternate" href="https://weareenigma.com/evolution-of-ux-design/" hreflang="x-default" />
+            <script 
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+            />
+          </Head>
 
       <SmoothScroll />
 

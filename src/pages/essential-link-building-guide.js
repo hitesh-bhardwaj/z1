@@ -101,7 +101,7 @@ const structuredData = {
   },  
   "publisher": {
     "@type": "Organization",
-    "name": "https://weareenigma.com/",
+    "name": "Enigma Digital",
     "logo": {
       "@type": "ImageObject",
       "url": "https://weareenigma.com/assets/header-logo/enigma-en-logo.svg"
@@ -117,7 +117,6 @@ const structuredData = {
             <NextSeo
               title="Ultimate Beginner's Guide to Effective Link Building"
               description="Dive deep into the world of link building with our comprehensive guide. Learn techniques to boost your site's authority and SEO rankings."
-              canonical="https://weareenigma.com/essential-link-building-guide/"
               openGraph={{
                 type: 'article',
                 article: {
@@ -140,14 +139,31 @@ const structuredData = {
                   ],
                   siteName: "Enigma Digital",
               }}
-            />
+              
+              additionalMetaTags={[
+                {
+                  name: "twitter:title",
+                  content: "Ultimate Beginner's Guide to Effective Link Building"
+                },
+                {
+                  name: "twitter:description",
+                  content: "Dive deep into the world of link building with our comprehensive guide. Learn techniques to boost your site's authority and SEO rankings."
+                },
+                {
+                  name: "twitter:image",
+                  content: "https://weareenigma.com/assets/featured-images/link-building-guide.png"
+                },
+              ]}
+          />
 
-            <Head>
-              <script 
-                type="application/ld+json"
-                dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-              />
-            </Head>
+          <Head>
+            <link rel="canonical" href="https://weareenigma.com/essential-link-building-guide/" />
+            <link rel="alternate" href="https://weareenigma.com/essential-link-building-guide/" hreflang="x-default" />
+            <script 
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+            />
+          </Head>
 
       <SmoothScroll />
 

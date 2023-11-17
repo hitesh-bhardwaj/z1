@@ -101,7 +101,7 @@ const structuredData = {
   },  
   "publisher": {
     "@type": "Organization",
-    "name": "https://weareenigma.com/",
+    "name": "Enigma Digital",
     "logo": {
       "@type": "ImageObject",
       "url": "https://weareenigma.com/assets/header-logo/enigma-en-logo.svg"
@@ -117,7 +117,6 @@ const structuredData = {
     <NextSeo
       title="On-Page & Off-Page SEO: Optimize Your Website with Enigma"
       description="Dive into the essentials of on-page and off-page SEO with Enigma. Learn how to optimize content, build authority, and drive organic traffic for success."
-      canonical="https://weareenigma.com/beginner-seo-guide/"
       openGraph={{
                 type: 'article',
                 article: {
@@ -139,14 +138,30 @@ const structuredData = {
                     },
                   ],
                   siteName: "Enigma Digital",
-      }}
-    />    
+          }}
+          additionalMetaTags={[
+            {
+              name: "twitter:title",
+              content: "On-Page & Off-Page SEO: Optimize Your Website with Enigma"
+            },
+            {
+              name: "twitter:description",
+              content: "Dive into the essentials of on-page and off-page SEO with Enigma. Learn how to optimize content, build authority, and drive organic traffic for success."
+            },
+            {
+              name: "twitter:image",
+              content: "https://weareenigma.com/assets/featured-images/beginner-seo-guide.png"
+            },
+          ]}
+      />
 
       <Head>
+        <link rel="canonical" href="https://weareenigma.com/beginner-seo-guide/" />
+        <link rel="alternate" href="https://weareenigma.com/beginner-seo-guide/" hreflang="x-default" />
         <script 
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-         />
+        />
       </Head>
 
       <SmoothScroll />

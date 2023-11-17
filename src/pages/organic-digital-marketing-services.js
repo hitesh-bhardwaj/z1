@@ -286,6 +286,87 @@ useEffect(() => {
               }}
             />  
 
+      <Head>
+        <script 
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(
+            {
+              "@context": "https://schema.org/",
+              "@type": "Service",
+              "serviceType": "IT services",
+              "provider": {
+                "@type": "Organization",
+                "name": "Enigma Digital",
+                "url": "https://weareengima.com"
+              },
+              "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "Organic Marketing Services",
+                  "itemListElement": [{
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "Content Marketing"
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "Search Engine Optimization"
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "Social Media Management"
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "Influencer Partnerships"
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "Community Building"
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "PR and Media Outreach"
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "Reputation Management"
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "Analytics and Reporting"
+                      }
+                    }
+                  ]
+                }
+              }
+            )
+          }}
+        />
+      </Head>
+
     <SmoothScroll />
 
     <Cursor isGelly={true} />

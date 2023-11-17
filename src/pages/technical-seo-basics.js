@@ -101,7 +101,7 @@ const structuredData = {
   },  
   "publisher": {
     "@type": "Organization",
-    "name": "https://weareenigma.com/",
+    "name": "Enigma Digital",
     "logo": {
       "@type": "ImageObject",
       "url": "https://weareenigma.com/assets/header-logo/enigma-en-logo.svg"
@@ -117,7 +117,6 @@ const structuredData = {
             <NextSeo
               title="Comprehensive Guide to Technical SEO Essentials"
               description="Master technical SEO & learn to optimize your website's infrastructure for better search engine visibility and user experience with this guide."
-              canonical="https://weareenigma.com/technical-seo-basics/"
               openGraph={{
                 type: 'article',
                 article: {
@@ -140,14 +139,31 @@ const structuredData = {
                 ],
                 siteName: "Enigma Digital",
               }}
-            />
+            
+              additionalMetaTags={[
+                {
+                  name: "twitter:title",
+                  content: "Comprehensive Guide to Technical SEO Essentials"
+                },
+                {
+                  name: "twitter:description",
+                  content: "Master technical SEO & learn to optimize your website's infrastructure for better search engine visibility and user experience with this guide."
+                },
+                {
+                  name: "twitter:image",
+                  content: "https://weareenigma.com/assets/featured-images/technical-seo-basics.png"
+                },
+              ]}
+          />
 
-      <Head>
-        <script 
-            type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-        />
-      </Head>
+          <Head>
+            <link rel="canonical" href="https://weareenigma.com/technical-seo-basics/" />
+            <link rel="alternate" href="https://weareenigma.com/technical-seo-basics/" hreflang="x-default" />
+            <script 
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+            />
+          </Head>
 
       <SmoothScroll />
 

@@ -101,7 +101,7 @@ const structuredData = {
   },  
   "publisher": {
     "@type": "Organization",
-    "name": "https://weareenigma.com/",
+    "name": "Enigma Digital",
     "logo": {
       "@type": "ImageObject",
       "url": "https://weareenigma.com/assets/header-logo/enigma-en-logo.svg"
@@ -116,7 +116,6 @@ const structuredData = {
       <NextSeo
         title="List of 30 Link Building Websites - SEO Guide"
         description="Dive into our comprehensive guide on 30 websites for effective link-building in SEO. Boost your website's authority and visibility now!"
-        canonical="https://weareenigma.com/link-building-website-list/"
         openGraph={{
                 type: 'article',
                 article: {
@@ -139,14 +138,31 @@ const structuredData = {
                 ],
             siteName: "Enigma Digital",
         }}
-      />
+      
+        additionalMetaTags={[
+                {
+                  name: "twitter:title",
+                  content: "List of 30 Link Building Websites - SEO Guide"
+                },
+                {
+                  name: "twitter:description",
+                  content: "Dive into our comprehensive guide on 30 websites for effective link-building in SEO. Boost your website's authority and visibility now!"
+                },
+                {
+                  name: "twitter:image",
+                  content: "https://weareenigma.com/assets/featured-images/link-building-website-list.png"
+                },
+              ]}
+          />
 
-      <Head>
-        <script 
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-        />
-      </Head>
+          <Head>
+            <link rel="canonical" href="https://weareenigma.com/link-building-website-list/" />
+            <link rel="alternate" href="https://weareenigma.com/link-building-website-list/" hreflang="x-default" />
+            <script 
+              type="application/ld+json"
+              dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+            />
+          </Head>
 
       <SmoothScroll />
 

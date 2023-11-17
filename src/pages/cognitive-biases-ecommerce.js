@@ -102,7 +102,7 @@ const structuredData = {
   },  
   "publisher": {
     "@type": "Organization",
-    "name": "https://weareenigma.com/",
+    "name": "Enigma Digital",
     "logo": {
       "@type": "ImageObject",
       "url": "https://weareenigma.com/assets/header-logo/enigma-en-logo.svg"
@@ -118,7 +118,6 @@ const structuredData = {
     <NextSeo
       title="Cognitive Biases in E-commerce - A Marketer's Guide"
       description="Dive into 12 cognitive biases crucial for e-commerce marketers. Understand consumer psychology and craft campaigns that resonate and captivate."
-      canonical="https://weareenigma.com/cognitive-biases-ecommerce/"
       openGraph={{
                 type: 'article',
                 article: {
@@ -141,9 +140,26 @@ const structuredData = {
           ],
           siteName: "Enigma Digital",
         }}
+
+        additionalMetaTags={[
+            {
+              name: "twitter:title",
+              content: "Cognitive Biases in E-commerce - A Marketer's Guide"
+            },
+            {
+              name: "twitter:description",
+              content: "Dive into 12 cognitive biases crucial for e-commerce marketers. Understand consumer psychology and craft campaigns that resonate and captivate."
+            },
+            {
+              name: "twitter:image",
+              content: "https://weareenigma.com/assets/featured-images/cognitive-biases-ecommerce.png"
+            },
+          ]}
       />
 
       <Head>
+        <link rel="canonical" href="https://weareenigma.com/cognitive-biases-ecommerce/" />
+        <link rel="alternate" href="https://weareenigma.com/cognitive-biases-ecommerce/" hreflang="x-default" />
         <script 
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
