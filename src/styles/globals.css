@@ -3083,7 +3083,7 @@ accordion-item--default .accordion .accordion-item-content {
   margin-bottom: 5vw;
 }
 
-.contact__text h1 {
+.contact__text h3 {
   font-size: 6vw;
   line-height: 85px;
   text-transform: lowercase;
@@ -3297,7 +3297,7 @@ textarea::placeholder {
   margin-bottom: 7vw;
 }
 
-.add__content h1 {
+.add__content h2 {
   font-size: 1.2vw;
   font-weight: 500;
   text-transform: uppercase;
@@ -4305,7 +4305,7 @@ https://unsplash.com/@vinomamba24
   width: 30vw;
 }
 
-.service-cap-section .right-box h2 {
+.service-cap-section .right-box .service-right-head {
   font-size: 3vw;
   color: var(--black1);
   margin-bottom: 3vw;
@@ -4341,7 +4341,7 @@ https://unsplash.com/@vinomamba24
   width: 50%;
 }
 
-.left-strategy-box h3 {
+.left-strategy-box h2 {
   font-size: 5vw;
   color: var(--black2);
   margin-bottom: 2vw;
@@ -4477,7 +4477,7 @@ https://unsplash.com/@vinomamba24
   margin-right: 1vw;
 }
 
-.box-we-para h4 {
+.box-we-para p {
   font-size: 1.7vw;
   color: var(--black1);
   font-weight: 500;
@@ -6047,19 +6047,19 @@ body.loading {
   font-size: 4vw;
   font-weight: 500;
 }
-.related-article-heading h1 {
+.related-article-heading h3{
   font-size: 7vw;
   font-weight: 500;
 }
 
-.related-article-heading h4 {
+.related-article-heading p {
   font-size: 1.5vw;
   cursor: pointer;
   font-weight: 500;
   position: relative;
 }
 
-.related-article-heading h4:before {
+.related-article-heading p:before {
   content: "";
   display: block;
   position: absolute !important;
@@ -6072,8 +6072,8 @@ body.loading {
   transition: all 0.45s cubic-bezier(0.4, 0.22, 0.21, 1.04);
 }
 
-.related-article-heading h4:focus:before,
-.related-article-heading h4:hover:before {
+.related-article-heading p:focus:before,
+.related-article-heading p:hover:before {
   transform: scaleX(0);
 }
 
@@ -7415,7 +7415,7 @@ a:hover {
     font-size: 3vw;
   }
 
-  .service-cap-section .right-box h2 {
+  .service-cap-section .right-box .service-right-head {
     font-size: 5vw;
   }
 
@@ -7429,7 +7429,7 @@ a:hover {
     height: 60vh;
   }
 
-  .left-strategy-box h3 {
+  .left-strategy-box h2 {
     font-size: 6.9vw;
   }
 
@@ -7484,7 +7484,7 @@ a:hover {
     font-size: 5vw;
   }
 
-  .box-we-para h4 {
+  .box-we-para p {
     font-size: 3vw;
     text-align: justify;
   }
@@ -7672,7 +7672,7 @@ a:hover {
     margin-left: 2vw !important;
   }
 
-  .add__content h1 {
+  .add__content h2 {
     font-size: 3.5vw;
   }
 
@@ -7698,7 +7698,7 @@ a:hover {
     padding-left: 30px;
   }
 
-  .contact__text h1 {
+  .contact__text h3 {
     font-size: 9vw;
     line-height: 1;
   }
@@ -8093,9 +8093,14 @@ a:hover {
     font-size: 8vw;
   }
 
-  .related-article-heading h4 {
+  .related-article-heading p {
     font-size: 3vw;
   }
+
+  /* .related-article-heading span {
+    font-size: 3vw;
+  } */
+
   .related-articles {
     margin: 0vh auto;
   }
@@ -9292,7 +9297,7 @@ a:hover {
     width: 100vw !important;
   }
 
-  .add__content h1 {
+  .add__content h2 {
     font-size: 4vw;
   }
 
@@ -9313,7 +9318,7 @@ a:hover {
     padding-left: 0;
   }
 
-  .contact__text h1 {
+  .contact__text h3 {
     font-size: 13vw;
   }
 
@@ -9461,7 +9466,7 @@ a:hover {
     margin-top: 6vw;
   }
 
-  .service-cap-section .right-box h2 {
+  .service-cap-section .right-box .service-right-head {
     font-size: 7vw;
   }
 
@@ -9499,7 +9504,7 @@ a:hover {
     margin: 10vw 0;
   }
 
-  .left-strategy-box h3 {
+  .left-strategy-box h2 {
     font-size: 10vw;
   }
 
@@ -9570,7 +9575,7 @@ a:hover {
     margin-right: 2vw;
   }
 
-  .box-we-para h4 {
+  .box-we-para p {
     font-size: 4vw;
   }
 
@@ -9996,7 +10001,7 @@ a:hover {
     margin: 10vh auto;
   }
 
-  .related-article-heading h4 {
+  .related-article-heading p {
     font-size: 4vw;
   }
 
@@ -10143,7 +10148,7 @@ a:hover {
   .related-article-heading .left-box-heading h1{
     font-size: 12vw;
   }
-  .related-article-heading h4{
+  .related-article-heading p{
     font-size: 5vw;
   }
   .img-box-related.service__d, .img-box-related.homeBlog{
@@ -10327,7 +10332,7 @@ a:hover {
 .service-cap-section .left-box .sub-text{
   font-size: 5vw;
 }
-.service-cap-section .right-box h2{
+.service-cap-section .right-box .service-right-head{
   font-size: 10vw;
 }
 .service-cap-section .right-box p{
@@ -10491,7 +10496,7 @@ a:hover {
   transition: filter 0.4s ease-in;  
 }
 
-.service-offer-card h3{
+.service-offer-card h4{
   opacity: 1;
   transition: all 0.3s ease-in;
   text-align: center !important;
@@ -10611,7 +10616,7 @@ a:hover {
   box-shadow: none;
 }
 
-.dark-mode .service-offer-card h3{
+.dark-mode .service-offer-card h4{
   opacity: 0.4;
   transition: all 0.3s ease-in;
 }
@@ -10642,10 +10647,10 @@ a:hover {
   .service-offer-card{
     height: 15vh;
   }
-  .service-offer-card h3 {
+  .service-offer-card h4 {
     font-weight: 400;
   }
-  .dark-mode .service-offer-card h3{
+  .dark-mode .service-offer-card h4{
     opacity: 1;
   }
   .font-ageo{
