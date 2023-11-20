@@ -23,13 +23,13 @@ export default function Careers(){
         <div className="bg-white">
 
             <NextSeo
-              title="Enigma Digital | Careers | Find The Right Jobs"
-              description="Experience top-tier UI/UX design, front-end development, and organic marketing jobs with Enigma Digital. Find The Right Jobs"
+              title="Careers in Design, Tech & Marketing | Current Openings"
+              description="Explore exciting roles in UI/UX Design, Front-End Development, Digital Marketing, Business Development, and more. Impactful work in a collaborative environment."
               openGraph={{
                 url: "https://weareenigma.com/careers",
-                title: "Enigma Digital | Careers | Find The Right Jobs",
+                title: "Careers in Design, Tech & Marketing | Current Openings",
                 description:
-                  "Experience top-tier UI/UX design, front-end development, and organic marketing jobs with Enigma Digital. Find The Right Jobs",
+                  "Explore exciting roles in UI/UX Design, Front-End Development, Digital Marketing, Business Development, and more. Impactful work in a collaborative environment.",
                   images: [
                   {
                     url: "https://weareenigma.com/assets/featured-images/career.png",
@@ -45,11 +45,11 @@ export default function Careers(){
               additionalMetaTags={[
               {
                 name: "twitter:title",
-                content: "Enigma Digital | Careers | Find The Right Jobs"
+                content: "Careers in Design, Tech & Marketing | Current Openings"
               },
               {
                 name: "twitter:description",
-                content: "Experience top-tier UI/UX design, front-end development, and organic marketing jobs with Enigma Digital. Find The Right Jobs."
+                content: "Explore exciting roles in UI/UX Design, Front-End Development, Digital Marketing, Business Development, and more. Impactful work in a collaborative environment."
               },
               {
                 name: "twitter:image",
@@ -73,7 +73,7 @@ export default function Careers(){
                     "@id": "https://weareenigma.com/careers"
                     },
                     "name": "Careers",
-                    "description": "Experience top-tier UI/UX design, front-end development, and organic marketing jobs with Enigma Digital. Find The Right Jobs",
+                    "description": "Explore exciting roles in UI/UX Design, Front-End Development, Digital Marketing, Business Development, and more. Impactful work in a collaborative environment.",
                     "datePublished": "2023-10-01T12:00:00+05:30",
                     "dateModified": "2023-11-17T12:00:00+05:30",
                     "publisher": {
