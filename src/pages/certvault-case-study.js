@@ -319,19 +319,19 @@ export default function certvault() {
               </div>
               <div className={styles.thirdSectionRightBox}>
                 <div className={styles.paraTop}>
-                  <h4 className={styles.h4} data-jelly>
+                  <p className={styles.h4} data-jelly>
                     CertVault is a pioneering solution in the insurance industry, offering a cloud-based certificate repository and delivery system. Developed under the umbrella of PatraCorp, a global leader in delivering business process outsourcing services to the insurance sector, CertVault aims to revolutionize the way insurance certificates are accessed, managed, and delivered.
-                  </h4>
+                  </p>
                   
                 </div>
 
                 <div className={styles.buttonBox}>
-                  <h6 data-cursor-size="30px" data-cursor-exclusion>
+                  <h3 data-cursor-size="30px" data-cursor-exclusion>
                     UX Planning
-                  </h6>
-                  <h6 data-cursor-size="30px" data-cursor-exclusion>
+                  </h3>
+                  <h3 data-cursor-size="30px" data-cursor-exclusion>
                     UI Design
-                  </h6>
+                  </h3>
                 </div>
               </div>
             </div>
@@ -752,13 +752,13 @@ export default function certvault() {
                       src="/assets/casestudies/certvault/client-image.webp" />
                   </div>
                   <div className={styles.clientTestimonialSectionFigureText}>
-                    <h4>
+                    <p>
                       Tony Li
                       <br />
                       <span className={styles.clientTestimonialSpan}>
                        CTO, Patracorp
                       </span>
-                    </h4>
+                    </p>
                   </div>
                 </div>
               </div>

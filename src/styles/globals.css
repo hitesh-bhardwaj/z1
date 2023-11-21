@@ -858,6 +858,9 @@ button:focus {
 }
 
 @media screen and (max-width:480px) {
+  #menu-wrapper{
+    margin-top: -4vh;
+  }
   .menu-logo-conatainer{
     top: 25px;
     left: 28px;

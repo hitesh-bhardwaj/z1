@@ -266,12 +266,12 @@ export default function kedarkala() {
                 </h1>
               </div>
               <div className={styles.HeroRightBox}>
-                <h5 className={styles.work} id="patroSub">
+                <p className={styles.work} id="patroSub">
                     INTERIOR DESIGN
-                </h5>
-                <h5 className={styles.year} id="patroSub">
+                </p>
+                <p className={styles.year} id="patroSub">
                     2022
-                </h5>
+                </p>
               </div>
             </div>
           </section>
@@ -302,7 +302,7 @@ export default function kedarkala() {
               </div>
               <div className={styles.thirdSectionRightBox}>
                 <div className={styles.paraTop}>
-                  <h4 className={styles.h4} data-jelly>
+                  <p className={styles.h4} data-jelly>
                     Kedarkala, an award-winning and highly-regarded interior
                     design studio in India, has long been known for its
                     exceptional designs and meticulous attention to detail. As
@@ -310,16 +310,16 @@ export default function kedarkala() {
                     continues to grow, Kedarkala sought to establish a robust
                     online presence that reflects its stellar reputation and
                     showcases its stunning portfolio.
-                  </h4>
+                  </p>
                 </div>
 
                 <div className={styles.buttonBox}>
-                  <h6 data-cursor-size="30px" data-cursor-exclusion>
+                  <h3 data-cursor-size="30px" data-cursor-exclusion>
                     Branding
-                  </h6>
-                  <h6 data-cursor-size="30px" data-cursor-exclusion>
+                  </h3>
+                  <h3 data-cursor-size="30px" data-cursor-exclusion>
                     Web Design
-                  </h6>
+                  </h3>
                 </div>
               </div>
             </div>
@@ -349,7 +349,7 @@ export default function kedarkala() {
           <section className={styles.forthSection}>
             <div className={styles.forthSectionContent}>
               <div className={styles.forthSectionLeftBox}>
-                <h3 className={styles.h3} data-jelly>THE ASK</h3>
+                <h2 className={styles.h3} data-jelly>THE ASK</h2>
               </div>
               <div className={styles.forthSectionRightBox}>
                 <div className={styles.paraTop}>
@@ -473,7 +473,7 @@ export default function kedarkala() {
           <section className={styles.forthSection}>
             <div className={styles.forthSectionContent}>
               <div className={styles.forthSectionLeftBox}>
-                <h3 className={styles.h3} data-jelly>Our Approach</h3>
+                <h2 className={styles.h3} data-jelly>Our Approach</h2>
               </div>
               <div className={styles.forthSectionRightBox}>
                 <div className={styles.paraTop}>
@@ -605,7 +605,7 @@ export default function kedarkala() {
           {/* ====================== Fonts Section ======================== */}
           <section className={styles.kedarfontSection}>
             <div className={styles.kedarfontHeading}>
-              <h2 className={styles.h2} >Typography</h2>
+              <h3 className={styles.h2} >Typography</h3>
             </div>
             <div className={styles.kedarfontImagebox}>
               <img
@@ -625,7 +625,7 @@ export default function kedarkala() {
           {/* ====================== Video Section ======================== */}
           <section className={styles.videoSection}>
             <div className={styles.videoHeading}>
-              <h2 className={styles.videoH2}>Kedarkala<br/>Interior Design Studio</h2>
+              <h3 className={styles.videoH2}>Kedarkala<br/>Interior Design Studio</h3>
             </div>
             <div className={styles.videoMainSection}>
               <div className={styles.videoContainer} id="video-container">
@@ -647,7 +647,7 @@ export default function kedarkala() {
           <section className={styles.forthSection}>
             <div className={styles.forthSectionContent}>
               <div className={styles.forthSectionLeftBox}>
-                <h3 className={styles.h3} data-jelly>Tech Stack</h3>
+                <h2 className={styles.h3} data-jelly>Tech Stack</h2>
               </div>
               <div className={styles.forthSectionRightBox}>
                 <div className={styles.paraTop}>
@@ -701,7 +701,7 @@ export default function kedarkala() {
           <section className={styles.forthSection}>
             <div className={styles.forthSectionContent}>
               <div className={styles.forthSectionLeftBox}>
-                <h3 className={styles.h3} data-jelly>THE RESULT</h3>
+                <h2 className={styles.h3} data-jelly>THE RESULT</h2>
               </div>
               <div className={styles.forthSectionRightBox}>
                 <div className={styles.paraTop}>
@@ -786,13 +786,13 @@ export default function kedarkala() {
                     </img>
                   </div>
                   <div className={styles.clientTestimonialSectionFigureText}>
-                    <h4>
+                    <p>
                         Shraddha Kasaudhan
                       <br />
                       <span className={styles.clientTestimonialSpan}>
                         Founder & CEO, Kedarkala Design Studios
                       </span>
-                    </h4>
+                    </p>
                   </div>
                 </div>
               </div>
