@@ -15,6 +15,7 @@ import Image from "next/image";
 import ProjectSlider from "../components/CaseStudies/ProjectSlider";
 import PageLoader from "@/components/pageLoader";
 import Head from "next/head";
+import ProjectNextBox from "../components/CaseStudies/ProjectNextBox";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -811,18 +812,7 @@ export default function kedarkala() {
 
           {/* ================ Next Project Mobile ============================== */}
 
-          <div className={styles.nextUpContainer}>
-            <div className={styles.nextUpContent}>
-              <div className={styles.nextTitle}>
-                <h1>next up</h1>
-              </div>
-              <div className={styles.nextProjectHeading}>
-                <Link href="/gcm-phygital-shopping-case-study">
-                  <h1>GCM</h1>
-                </Link>
-              </div>
-            </div>
-          </div>
+          <ProjectNextBox text={"GCM"} link={"/gcm-phygital-shopping-case-study"} />
 
           {/* ================ Next Project Mobile ============================== */}
 

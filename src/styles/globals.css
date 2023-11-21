@@ -6389,7 +6389,7 @@ a:hover {
   padding: 5vw 0 10vw 0;
 }
 
-.project-slider-heading h1 {
+.project-slider-heading p {
   font-size: 5vw;
   font-weight: 500;
   color: var(--black1);

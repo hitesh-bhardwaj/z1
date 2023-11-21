@@ -15,6 +15,7 @@ import ProjectSlider from "../components/CaseStudies/ProjectSlider";
 import Image from "next/image";
 import PageLoader from "../components/pageLoader";
 import Head from "next/head";
+import ProjectNextBox from "../components/CaseStudies/ProjectNextBox";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -877,19 +878,8 @@ export default function dharan() {
 
 
           {/* ================ Next Project Mobile ============================== */}
-
-          <div className={styles.nextUpContainer}>
-            <div className={styles.nextUpContent}>
-              <div className={styles.nextTitle}>
-                <h1>next up</h1>
-              </div>
-              <div className={styles.nextProjectHeading}>
-                <Link href="/kedarkala-portfolio-website-case-study">
-                  <h1>Kedarkala</h1>
-                </Link>
-              </div>
-            </div>
-          </div>
+          
+          <ProjectNextBox text={"Kedarkala"} link={"/kedarkala-portfolio-website-case-study"} />
 
           {/* ================ Next Project Mobile ============================== */}
 

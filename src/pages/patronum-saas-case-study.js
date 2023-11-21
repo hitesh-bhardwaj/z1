@@ -15,6 +15,7 @@ import FooterMobile from "@/components/Mobile/FooterMobile";
 import ProjectSlider from "@/components/CaseStudies/ProjectSlider";
 import PageLoader from "@/components/pageLoader";
 import Head from "next/head";
+import ProjectNextBox from "../components/CaseStudies/ProjectNextBox";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -856,18 +857,7 @@ export default function patronum() {
 
           {/* ================ Next Project Mobile ============================== */}
 
-          <div className={styles.nextUpContainer}>
-            <div className={styles.nextUpContent}>
-              <div className={styles.nextTitle}>
-                <h1>next up</h1>
-              </div>
-              <div className={styles.nextProjectHeading}>
-                <Link href="/dharan-ecommerce-case-study">
-                  <h1>Dharan</h1>
-                </Link>
-              </div>
-            </div>
-          </div>
+          <ProjectNextBox text={"Dharan"} link={"/dharan-ecommerce-case-study"} />
 
           {/* ================ Next Project Mobile ============================== */}
 
