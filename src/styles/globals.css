@@ -10620,11 +10620,11 @@ a:hover {
 }
 
 .dark-mode .service-offer-card h4{
-  opacity: 0.4;
+  opacity: 0.6;
   transition: all 0.3s ease-in;
 }
 
-.dark-mode .service-offer-card:hover p{
+.dark-mode .service-offer-card:hover h4{
   opacity: 1;
 }
 .dark-mode .service-approach-text-box {
@@ -12132,3 +12132,4 @@ label.label:hover:before{
     height: 240px;
   }
 }
+
