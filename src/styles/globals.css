@@ -12205,6 +12205,10 @@ label.label:hover:before{
   background: none;
 }
 
+#my-modal-scroll  .scroll-content{
+  background-color: white !important;
+}
+
 @media screen and (max-width: 1536px) {
   .b_dt-gls-grid{
     gap: 40px;

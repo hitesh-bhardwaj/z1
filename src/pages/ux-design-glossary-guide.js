@@ -241,7 +241,7 @@ const structuredData = {
             
         <div>
               <div className="ux-gls-filter-input">
-              <p>Filter By Letter :</p>
+              <p>Seacrh by term :</p>
                 <input
                     type="text"
                     value={filter}
