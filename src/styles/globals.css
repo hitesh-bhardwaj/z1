@@ -1509,7 +1509,7 @@ label:hover circle {
   scale: 0;
 }
 .img-box-related.homeBlog{
-  height: 65vh;
+  height: 60vh;
 }
 .img-box-related.homeBlog img{
   height: 100%;
@@ -12245,6 +12245,10 @@ label.label:hover:before{
     grid-template-columns: auto auto;
     gap: 40px;
   }
+
+  .box-img-content.homeBlog:nth-child(3){
+    display: none;
+  }
 }
 
 @media screen and (max-width: 776px) {
@@ -12268,4 +12272,11 @@ label.label:hover:before{
     font-size: 5vw;
     width: 50%;
   }
+}
+
+
+/* All CSS 1280px */
+.mr-11{
+  margin-left: 15vw;
+  margin-right: 0;
 }
