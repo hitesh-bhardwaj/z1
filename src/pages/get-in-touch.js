@@ -15,7 +15,6 @@ import FooterMobile from "@/components/Mobile/FooterMobile";
 import ContactForm from "@/components/Contact/contactForm";
 import PageLoader from "@/components/pageLoader";
 import Head from "next/head";
-import LazyVideo from "@/components/LazyVideo";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -262,7 +261,10 @@ export default function contact() {
                 transition={{ duration: 1, delay: 3.5 }}
               >
                 <div className="img">
-                  <LazyVideo 
+                  <video 
+                    loop
+                    autoPlay
+                    muted
                     src="/assets/contact/contact-bg-video.webm"
                     poster="/assets/contact/contact-video-poster.webp"
                     title="Contact-Video"
