@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useInView } from 'react-intersection-observer';
 
-const LazyVideo = ({ src, title, poster, type }) => {
+const LazyVideo = ({ src, title, poster, type, className }) => {
   const [ref, inView] = useInView();
   const [hasPlayed, setHasPlayed] = useState(false);
 
@@ -15,13 +15,13 @@ const LazyVideo = ({ src, title, poster, type }) => {
         {(inView || hasPlayed) && (
           <video
             poster={poster}
-            id={title}
-            autoPlay
-            loop
-            muted
             src={src}
             title={title}
             type={type}
+            className={className}
+            autoPlay
+            loop
+            muted
           >
             Your browser does not support the video tag.
           </video>

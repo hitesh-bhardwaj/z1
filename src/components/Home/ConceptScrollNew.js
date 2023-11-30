@@ -233,7 +233,7 @@ export default function ConceptScrollNew() {
                 <div className="o-media o-media1 hm-us">
                   <div className="o-media_obj w-background-video w-background-video-atom left-b">
                     <video
-                      poster="/public/assets/reels/reel-split-left.jpg"
+                      poster="/public/assets/reels/reel-split-left.webp"
                       className="vid lazyload"
                       src="/assets/reels/left.webm"
                       autoPlay
@@ -268,7 +268,7 @@ export default function ConceptScrollNew() {
                 <div className="o-media o-media2 hm-us">
                   <div className="o-media_obj w-background-video w-background-video-atom right-b">
                     <video
-                      poster="/public/assets/reels/reel-split-right.jpg"
+                      poster="/public/assets/reels/reel-split-right.webp"
                       className="vid lazyload"
                       src="/assets/reels/right.webm"
                       autoPlay

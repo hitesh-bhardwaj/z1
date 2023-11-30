@@ -396,6 +396,10 @@ body {
   filter: invert(1);
 }
 
+.dark-mode .rotate-idea-svg img{
+  mix-blend-mode: unset;
+}
+
 /* Service Page END */
 
 /* Works Page */

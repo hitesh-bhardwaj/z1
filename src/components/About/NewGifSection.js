@@ -81,7 +81,7 @@ export default function NewGifSection() {
             <LazyVideo
               src="/assets/about/gif-section/culture.webm"
               title="About-Culture"
-              poster="/assets/about/gif-section/culture.jpg"
+              poster="/assets/about/gif-section/culture.webp"
               className="gif-img"
               type="video/webm"
             />
@@ -106,7 +106,7 @@ export default function NewGifSection() {
             <LazyVideo
               src="/assets/about/gif-section/attitude.webm"
               title="About-Attitude"
-              poster="/assets/about/gif-section/attitude.jpg"
+              poster="/assets/about/gif-section/attitude.webp"
               className="gif-img"
               type="video/webm"
             />
@@ -132,7 +132,7 @@ export default function NewGifSection() {
             <LazyVideo
               src="/assets/about/gif-section/ethos.webm"
               title="About-Ethos-Video"
-              poster="/assets/about/gif-section/ethos.jpg"
+              poster="/assets/about/gif-section/ethos.webp"
               className="gif-img"
               type="video/webm"
             />
@@ -160,7 +160,7 @@ export default function NewGifSection() {
             <LazyVideo
               src="/assets/about/gif-section/experience.webm"
               title="About-Experience-Video"
-              poster="/assets/about/gif-section/experience.jpg"
+              poster="/assets/about/gif-section/experience.webp"
               className="gif-img"
               type="video/webm"
             />            
@@ -186,7 +186,7 @@ export default function NewGifSection() {
             <LazyVideo
               src="/assets/about/gif-section/magic.webm"
               title="About-Magic-Video"
-              poster="/assets/about/gif-section/magic.jpg"
+              poster="/assets/about/gif-section/magic.webp"
               className="gif-img"
               type="video/webm"
             />

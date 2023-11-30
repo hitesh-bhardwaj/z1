@@ -83,7 +83,7 @@ const HeroDesktop = () => {
                   <div className="reel-hero">
                     <div className='reel-anim'>
                       <video
-                        poster='/assets/reels/reel-poster.jpg'
+                        poster='/assets/reels/reel-poster.webp'
                         src="/assets/reels/hero.webm"
                         type="video/webm"
                         muted

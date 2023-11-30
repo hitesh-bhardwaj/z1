@@ -48,7 +48,7 @@ export default function HomeVideoSection() {
 
         <div className="video-box">
           <LazyVideo
-            poster="/assets/reels/reel-full.jpg"
+            poster="/assets/reels/reel-full.webp"
             src="/assets/reels/hero.webm"
             title="official reel video"
             type="video/webm"
