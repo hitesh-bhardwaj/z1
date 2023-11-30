@@ -7,9 +7,6 @@ import ConceptLazyVideo from "./ConceptLazyVideo";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function ConceptScrollNew() {
-
-  if (globalThis.innerWidth>1024) {
-
   useEffect(() => {
     let ctx = gsap.context(() => {
       let fixed_scrol = gsap.timeline({
@@ -190,11 +187,9 @@ export default function ConceptScrollNew() {
     });
     return () => ctx.revert();
   });
-
-}
   return (
     <>
-      <div className="hero-concept-scroll dark:invert">
+      <div className="hero-concept-scroll">
         {/* second scroll */}
         <div className="container_word_change_t m-hide">
           <div className="container_word_change_t_content">

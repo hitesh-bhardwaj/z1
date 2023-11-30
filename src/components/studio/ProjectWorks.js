@@ -375,6 +375,7 @@ export default function ProjectsHome() {
         },
         "-0.6"
       );
+      return () => tl.kill();
     }, []);
   }
 
@@ -400,12 +401,13 @@ export default function ProjectsHome() {
         opacity: 1,
       }
     );
+    return () => tl.kill();
   }, []);
 
   return (
     <>
       <div className={styles.projectSectionMain} id="m-works">
-        <div className={`${styles.projectHeading} dark:invert`}>
+        <div className={styles.projectHeading}>
           <div
             className={`${styles.projectFirstBox} ${styles.lineAnim}`}
             id="line-anim"

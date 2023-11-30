@@ -61,7 +61,7 @@ export default function Category() {
 
   return (
     <>
-      <div ref={catSection} className="category-section-new dark:invert">
+      <div ref={catSection} className="category-section-new">
         <section id="services">
           <div className="container">
             <div className="accordion-container flex-column-center">
@@ -91,7 +91,7 @@ export default function Category() {
                       </div>
 
                       <div className="category-button">
-                        <a href="/strategy-and-planning-services" data-cursor-size="80px" data-cursor-exclusion>
+                        <a href="/strategy-and-planning-services">
                           <span className="cat-btn-text">
                             Transform Your Business
                           </span>
@@ -131,7 +131,7 @@ export default function Category() {
                       </div>
 
                       <div className="category-button">
-                        <a href="/ui-ux-design-services" data-cursor-size="80px" data-cursor-exclusion>
+                        <a href="/ui-ux-design-services" >
                           <span className="cat-btn-text">
                             Upgrade Your Experience
                           </span>
@@ -172,7 +172,7 @@ export default function Category() {
                       </div>
 
                       <div className="category-button">
-                        <a href="/technology-services" data-cursor-size="80px" data-cursor-exclusion>
+                        <a href="/technology-services" >
                           <span className="cat-btn-text">
                             Let’s Build Your Idea
                           </span>
@@ -209,7 +209,7 @@ export default function Category() {
                       </div>
 
                       <div className="category-button">
-                        <a href="/organic-digital-marketing-services" data-cursor-size="80px" data-cursor-exclusion>
+                        <a href="/organic-digital-marketing-services" >
                           <span className="cat-btn-text">
                             Ready? Let’s Get Moving
                           </span>

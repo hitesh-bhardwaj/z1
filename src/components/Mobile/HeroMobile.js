@@ -57,13 +57,14 @@ export default function HeroMobile() {
           <div className="video-box" id="video">
             <video
               src="/assets/reels/hero.webm"
+              preload="auto"
               autoPlay
               muted
               loop
             ></video>
           </div>
 
-          <div className="content-hero-box-mobile dark:invert">
+          <div className="content-hero-box-mobile">
 
             <div className="second-text line-height" >
               <h1 className="second-text line-height">

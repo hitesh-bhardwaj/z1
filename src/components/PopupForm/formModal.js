@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import { easeInOut, motion } from "framer-motion";
 import Image from 'next/image';
+import { Cursor } from "./../../../cursor/index";
+import "react-creative-cursor/dist/styles.css";
 import dynamic from 'next/dynamic';
 
 // Dynamic import for ContactUs
@@ -9,7 +12,6 @@ export default function Modal() {
   const [modalOpen, setModalOpen] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const [ContactUs, setContactUs] = useState(null);
-  const [showButton, setShowButton] = useState(false);
 
   const handleMouseEnter = () => {
     setIsHovered(true);
@@ -47,26 +49,16 @@ export default function Modal() {
     }
   }
 
-  useEffect(() => {
-    const handleScroll = () => {
-      // Change the scroll threshold as needed
-      const scrollThreshold = 500;
-      const shouldShowButton = window.scrollY > scrollThreshold;
-      setShowButton(shouldShowButton);
-    };
-
-    window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
-
   return (
     <>
 
     {/* Your HTML content here */}
-    <div className={`popUpButton-div ${showButton ? 'popUpshow' : 'popUphide'}`}>
+    <motion.div 
+        className='popUpButton-div'
+        initial={{ opacity: 0, scale: 0 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ delay: 6.2, duration: 0.5, transition: easeInOut }}
+        >
     <button 
       aria-label='open popup form'
       id="popUpButton" 
@@ -91,7 +83,7 @@ export default function Modal() {
         priority={true}
       />
     </button>
-    </div>
+    </motion.div>
     {/* Modal */}
     <div
       id="PopUpMyModal"

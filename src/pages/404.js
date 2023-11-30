@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Cursor } from "../../cursor/index";
 import styles from "@/styles/404.module.css";
-// import SmoothScroll from "@/components/utils/SmoothScroll";
+import SmoothScroll from "@/components/utils/SmoothScroll";
 import "react-creative-cursor/dist/styles.css";
 import { NextSeo } from "next-seo";
 import Head from "next/head";
@@ -80,7 +80,7 @@ export default function NotFound() {
         />
       </Head>
 
-      {/* <SmoothScroll /> */}
+      <SmoothScroll />
 
       <Cursor isGelly={true} />
       <div className={styles.container}>

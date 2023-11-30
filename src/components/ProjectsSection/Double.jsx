@@ -95,7 +95,7 @@ export default function Index({projects, reversed}) {
                 alt="project image"
               />
             </div>
-            <div className={`${styles.body} dark:invert`}
+            <div className={styles.body}
             id='double-image-anim'>
                 <p className={styles.pname}>{projects[0].name}</p>
                 <p className={styles.description}>{projects[0].description}</p>
@@ -119,7 +119,7 @@ export default function Index({projects, reversed}) {
                 id='double-image-anim'
               />
             </div>
-            <div className={`${styles.body} dark:invert`}
+            <div className={styles.body}
             id='double-image-anim'>
                 <p className={styles.pname}>{projects[1].name}</p>
                 <p className={styles.description}>{projects[1].description}</p>

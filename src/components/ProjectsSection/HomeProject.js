@@ -60,39 +60,14 @@ useEffect(() => {
     },
     "-0.6"
   );
+  return () => tl.kill();
 }, []);
-
-// const tl = gsap.timeline({
-//   scrollTrigger: {
-//     trigger: "#c-works",
-//     start: "top 80%",
-//   },
-// });
-
-// // Header
-// tl.fromTo( lineAnim,
-//   1.2,
-//   {
-//     y: '200px',
-//     ease: "Power3.inOut",
-//     skewY: -20,
-//   },
-//   {
-//     y: 0,
-//     skewY: 0,
-//     stagger: 0.5,
-//     duration: 1
-//   },
-//   "-0.6"
-// );
-// return () => tl.kill();
-// }, []);
 
 
   return (
     
     <div className={styles.projectSectionMain} id="c-works">
-    <div className={`${styles.projectHeading} dark:invert`}>
+    <div className={styles.projectHeading}>
       <div
         className={`${styles.projectFirstBox} ${styles.lineAnim}`}
       >

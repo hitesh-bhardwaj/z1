@@ -3,7 +3,9 @@ import styles from "@/styles/project.module.css";
 import gsap from "gsap";
 import Image from "next/image";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
+import Link from "next/link";
 import Button from "../Button";
+import SplitType from "split-type";
 
 
  var _s,
@@ -351,6 +353,7 @@ export default function ProjectsHome() {
         },
         "-0.6"
       );
+      return () => tl.kill();
     }, []);
   }
 
@@ -376,12 +379,13 @@ export default function ProjectsHome() {
         opacity: 1,
       }
     );
+    return () => tl.kill();
   }, []);
 
   return (
     <>
       <div className={styles.projectSectionMain} id="m-works">
-        <div className={`${styles.projectHeading} dark:invert`}>
+        <div className={styles.projectHeading}>
           <div
             className={`${styles.projectFirstBox} ${styles.lineAnim}`}
             id="line-anim"

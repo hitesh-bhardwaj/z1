@@ -2,11 +2,11 @@ import styles from './styles.module.css'
 import { projects } from './ProjectData';
 import Double from './Double';
 import { useEffect } from 'react';
-import { gsap } from 'gsap';
-import ScrollTrigger from "gsap/dist/ScrollTrigger";
+import { gsap } from 'gsap/dist/gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import SplitType from "split-type";
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger);   
 
 export default function WorkProject() {
 
@@ -58,13 +58,14 @@ export default function WorkProject() {
       },
       "-0.6"
     );
+    return () => tl.kill();
   }, []);
 
 
   return (
     
     <div className={styles.projectSectionMain} id="c-works">
-        <div className={`${styles.projectHeading} dark:invert`}>
+        <div className={styles.projectHeading}>
           <div
             className={`${styles.projectFirstBox} ${styles.lineAnim}`}
           >

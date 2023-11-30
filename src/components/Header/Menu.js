@@ -1,9 +1,27 @@
 import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import Link from "next/link";
-import styles from "@/styles/header.module.css";
+import { useRouter } from "next/router";
 
-export default function Menu({ state, isMenuOpen, toggleMenu }) {
+const handleHover = (e) => {
+  gsap.to(e.target, {
+    duration: 0.3,
+    y: 5,
+    ease: "power1.inOut",
+  });
+};
+
+// Hover off the link
+const handleHoverExit = (e) => {
+  gsap.to(e.target, {
+    duration: 0.3,
+    y: 0,
+    ease: "power1.inOut",
+  });
+};
+
+const Menu = ({ state }) => {
+  const router = useRouter();
   const menu = useRef();
   const revealMenu = useRef();
   const link1 = useRef();
@@ -67,7 +85,7 @@ if (globalThis.innerWidth > 1024) {
 
 useEffect(() => {
 
-  const menuLoaderBar = document.querySelectorAll(".menuLoaderBar")
+  const menuLoaderBar = document.querySelectorAll(".menuLoaderBar");
 
   if(state.clicked === false) {
     gsap.to(revealMenu.current, {
@@ -98,6 +116,7 @@ useEffect(() => {
       width: '100%',
       duration: 0.4,
       stagger: 0.1,
+      // ease: 'power2.inOut'
     });
     gsap.to(revealMenu.current, { 
       opacity: 1,
@@ -130,7 +149,7 @@ useEffect(() => {
               link3.current,
               link4.current,
               link5.current,
-              link6.current,
+              link16.current,
             ],
             {
               delay: 0.5,
@@ -146,6 +165,7 @@ useEffect(() => {
     
           gsap.from(
             [
+              link6.current,
               link7.current,
               link8.current,
               link9.current,
@@ -155,7 +175,6 @@ useEffect(() => {
               link13.current,
               link14.current,
               link15.current,
-              link16.current,
             ],
             {
               delay: 0.7,
@@ -172,124 +191,281 @@ useEffect(() => {
 }, [state]);
 
   return (
-    <div ref={menu} className={` ${styles.nav} dark:invert`} id="mb_nav" data-cursor-color="#ffffff" data-cursor-exclusion>
-      <div className={styles.menuLoaderBars}>
-        <span className={` ${styles.menuLoaderBar} menuLoaderBar`}></span>
-        <span className={` ${styles.menuLoaderBar} menuLoaderBar`}></span>
-        <span className={` ${styles.menuLoaderBar} menuLoaderBar`}></span>
-        <span className={` ${styles.menuLoaderBar} menuLoaderBar`}></span>
-        <span className={` ${styles.menuLoaderBar} menuLoaderBar`}></span>
+    <div ref={menu} className="nav" id="mb_nav">
+      <div className="menuLoaderBars">
+        <span className="menuLoaderBar"></span>
+        <span className="menuLoaderBar"></span>
+        <span className="menuLoaderBar"></span>
+        <span className="menuLoaderBar"></span>
+        <span className="menuLoaderBar"></span>
       </div>
-      <div ref={revealMenu} className={styles.menuLayer}>
-        <div className={styles.menuLogoContainer}>
+      <div ref={revealMenu}       
+        className="menu-layer"
+        data-cursor-exclusion>
+        <div id="menu-wrapper">
+        <div className="menu-logo-conatainer">
           <div data-cursor-size="60px"
                 data-cursor-opaque>
             <Link href="/">
-              <img src="/assets/header-logo/enigma-en-logo.svg" alt="Enigma Logo" title="Enigma Logo"/>
+              <img src="/assets/header-logo/enigma-en-logo.svg" alt="website logo"/>
             </Link>
           </div>
         </div>
-        <button className={`${styles.menuButtonInside} ${isMenuOpen ? styles.opened : ''}`}  id="menuButton" onClick={toggleMenu} aria-label="Main Menu" data-cursor-opaque data-cursor-size="60px">
-          <svg viewBox="0 0 100 100" className={styles.menuSvg}>
-            <path className={` ${styles.line} ${styles.line1}`} d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
-            <path className={` ${styles.line} ${styles.line2}`} d="M 20,50 H 80" />
-            <path className={` ${styles.line} ${styles.line3}`} d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
-          </svg>
-        </button>
-          <div className={styles.wrapper}>
-            <div className={styles.contentLeft}>
-              <div className={styles.navLinkItem} ref={link1}>
-                <span className={styles.contentHeadingSerial}>01</span>
-                <Link href="/who-we-are" className={`${styles.navLink} dark:bg-gradient-to-r from-dark-primary from-50% to-white to-50% btn-music`} >
-                  About
-                </Link>
-              </div>
-              <div className={styles.navLinkItem} ref={link2}>
-                <span className={styles.contentHeadingSerial}>02</span>
-                <Link href="/services" className={`${styles.navLink} dark:bg-gradient-to-r from-dark-primary from-50% to-white to-50% btn-music`} >
-                  Expertise
-                </Link>
-              </div>
-              <div className={styles.navLinkItem} ref={link3}>
-                <span className={styles.contentHeadingSerial}>03</span>
-                <Link href="/our-portfolio" className={`${styles.navLink} dark:bg-gradient-to-r from-dark-primary from-50% to-white to-50% btn-music`} >
-                  Works
-                </Link>
-              </div>
-              <div className={styles.navLinkItem} ref={link4}>
-                <span className={styles.contentHeadingSerial}>04</span>
-                <Link href="/blog" className={`${styles.navLink} dark:bg-gradient-to-r from-dark-primary from-50% to-white to-50% btn-music`} >
-                  Insights
-                </Link>
-              </div>
-              <div className={styles.navLinkItem} ref={link5}>
-                <span className={styles.contentHeadingSerial}>05</span>
-                <Link href="/careers" className={`${styles.navLink} dark:bg-gradient-to-r from-dark-primary from-50% to-white to-50% btn-music`} >
-                  Careers
-                </Link>
-              </div>
-              <div className={styles.navLinkItem} ref={link6}>
-                <span className={styles.contentHeadingSerial}>06</span>
-                <Link href="/get-in-touch" className={`${styles.navLink} dark:bg-gradient-to-r from-dark-primary from-50% to-white to-50% btn-music`} >
-                  Contact
-                </Link>
-              </div>
-            </div>
-            
-            <div className={styles.contentRight}>
-              <div className={styles.contentRightBody}>
-                <div className={styles.contentRightBodyTop}>
-                  <div className={styles.contentTitle} ref={link7}>
-                    let's be friends
-                  </div>
-                  <div className={styles.socialItems}>
-                    <div className={styles.socialItem} ref={link8} data-cursor-opaque data-cursor-size="50px">
-                      <a className="en-main-link" target="blank" href="https://www.facebook.com/in.enigmadigital" >
-                        <span data-text="Facebook">Facebook</span>
-                      </a>
-                    </div>
-                    <div className={styles.socialItem} ref={link9} data-cursor-opaque data-cursor-size="50px">
-                      <a className="en-main-link" target="blank" href="https://www.instagram.com/enigmadigital/" >
-                        <span data-text="Instagram">Instagram</span>
-                      </a>
-                    </div>
-                    <div className={styles.socialItem} ref={link10} data-cursor-opaque data-cursor-size="50px">
-                      <a className="en-main-link" target="blank" href="https://twitter.com/_EnigmaDigital" >
-                        <span data-text="Twitter">Twitter</span>
-                      </a>
-                    </div>
-                    <div className={styles.socialItem} ref={link11} data-cursor-opaque data-cursor-size="50px">
-                      <a className="en-main-link" target="blank" href="https://in.linkedin.com/company/enigma-digital-product-design-ui-ux-neuromarketing" >
-                        <span data-text="LinkedIn">LinkedIn</span>
-                      </a>
-                    </div>
-                    <div className={styles.socialItem} ref={link12} data-cursor-opaque data-cursor-size="50px">
-                      <a className="en-main-link" target="blank" href="https://www.behance.net/enigma-digital" >
-                        <span data-text="Behance">Behance</span>
-                      </a>
-                    </div>
-                    <div className={styles.socialItem} ref={link13} data-cursor-opaque data-cursor-size="50px">
-                      <a className="en-main-link" target="blank" href="https://www.youtube.com/" >
-                        <span data-text="YouTube">YouTube</span>
-                      </a>
+          <div className="wrapper">
+            <div className="menu-links">
+              <div className="menu-content">
+                <div className="content-left">
+                  <div className="content-left-body">
+                    <div className="content-left-body-row">
+                      <div className="content-left-body-row-column">
+                        <div className="content-heading nav__link" ref={link1}>
+                          <Link href="/who-we-are" className="btn-music">
+                            <span className="content-heading-serial">01</span>
+                            <span
+                              className="content-heading-slideup text-stroke-fill-ltr"
+                              data-fill="About"
+                              onMouseEnter={(e) => handleHover(e)}
+                              onMouseOut={(e) => handleHoverExit(e)}
+                            >
+                              <span
+                                className={
+                                  router.pathname == "/who-we-are"
+                                    ? "activeMenu"
+                                    : ""
+                                }
+                              >
+                                About
+                              </span>
+                            </span>
+                          </Link>
+                        </div>
+                        <div className="content-heading nav__link" ref={link2}>
+                          <Link href="/services" className="btn-music">
+                            <span className="content-heading-serial">02</span>
+                            <span
+                              className="content-heading-slideup text-stroke-fill-ltr"
+                              data-fill="Expertise"
+                              onMouseEnter={(e) => handleHover(e)}
+                              onMouseOut={(e) => handleHoverExit(e)}
+                            >
+                              <span
+                                className={
+                                  router.pathname == "/services"
+                                    ? "activeMenu"
+                                    : ""
+                                }
+                              >
+                                Expertise
+                              </span>
+                            </span>
+                          </Link>
+                        </div>
+                        <div className="content-heading nav__link" ref={link3}>
+                          <Link href="/our-portfolio" className="btn-music">
+                            <span className="content-heading-serial">03</span>
+                            <span
+                              className="content-heading-slideup text-stroke-fill-ltr"
+                              data-fill="Works"
+                              onMouseEnter={(e) => handleHover(e)}
+                              onMouseOut={(e) => handleHoverExit(e)}
+                            >
+                              <span
+                                className={
+                                  router.pathname == "/our-portfolio"
+                                    ? "activeMenu"
+                                    : ""
+                                }
+                              >
+                                Works
+                              </span>
+                            </span>
+                          </Link>
+                        </div>
+                      </div>
+                      <div className="content-left-body-row-column">
+                        <div className="content-heading nav__link" ref={link4}>
+                          <Link href="/blog" className="btn-music">
+                            <span className="content-heading-serial">04</span>
+                            <span
+                              className="content-heading-slideup text-stroke-fill-ltr"
+                              data-fill="Insights"
+                              onMouseEnter={(e) => handleHover(e)}
+                              onMouseOut={(e) => handleHoverExit(e)}
+                            >
+                              <span
+                                className={
+                                  router.pathname == "/blog"
+                                    ? "activeMenu"
+                                    : ""
+                                }
+                              >
+                                Insights
+                              </span>
+                            </span>
+                          </Link>
+                        </div>
+                        <div className="content-heading nav__link" ref={link5}>
+                          <Link href="/careers" className="btn-music">
+                            <span className="content-heading-serial">05</span>
+                            <span
+                              className="content-heading-slideup text-stroke-fill-ltr"
+                              data-fill="Careers"
+                              onMouseEnter={(e) => handleHover(e)}
+                              onMouseOut={(e) => handleHoverExit(e)}
+                            >
+                              <span
+                                className={
+                                  router.pathname == "/careers"
+                                    ? "activeMenu"
+                                    : ""
+                                }
+                              >
+                                Careers
+                              </span>
+                            </span>
+                          </Link>
+                        </div>
+                        <div className="content-heading nav__link" ref={link16}>
+                          <Link href="/get-in-touch" className="btn-music">
+                            <span className="content-heading-serial">06</span>
+                            <span
+                              className="content-heading-slideup text-stroke-fill-ltr"
+                              data-fill="Contact"
+                              onMouseEnter={(e) => handleHover(e)}
+                              onMouseOut={(e) => handleHoverExit(e)}
+                            >
+                              <span
+                                className={
+                                  router.pathname == "/get-in-touch"
+                                    ? "activeMenu"
+                                    : ""
+                                }
+                              >
+                                Contact
+                              </span>
+                            </span>
+                          </Link>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div className={styles.contentRightBodyTop}>
-                  <div className={styles.contentTitle} ref={link14}>
-                    work with us
-                  </div>
-                  <div className={styles.contentRightBottom}>
-                    <div className={styles.socialItem} ref={link15} data-cursor-opaque data-cursor-size="50px">
-                      <a className="en-link-under" href="mailto:hi@weareenigma.com">
-                        <span>hi@weareenigma.com</span>
-                      </a>
+                <div className="content-right">
+                  <div className="content-right-body">
+                    <div className="content-right-body-top">
+                      <div className="content-title  nav__link" ref={link6}>
+                        let's be friends
+                      </div>
+                      <div className="content-right-body-socials">
+                      <div className="content-right-body-socials-column">
+                        <div
+                          className="cb-menu-nav-item nav__link"
+                          ref={link7}
+                          data-cursor-opaque
+                          data-cursor-size="50px"
+                        >
+                          <a target="blank" href="https://www.facebook.com/in.enigmadigital">
+                            <span data-text="Facebook">Facebook</span>
+                          </a>
+                        </div>
+                        <div
+                          className="cb-menu-nav-item nav__link"
+                          ref={link8}
+                          data-cursor-opaque
+                          data-cursor-size="50px"
+                        >
+                          <a target="blank" href="https://www.instagram.com/enigmadigital/">
+                            <span data-text="Instagram">Instagram</span>
+                          </a>
+                        </div>
+                        <div
+                          className="cb-menu-nav-item nav__link"
+                          ref={link9}
+                          data-cursor-opaque
+                          data-cursor-size="50px"
+                        >
+
+                          <a target="blank" href="https://www.youtube.com/">
+                            <span data-text="YouTube">YouTube</span>
+                          </a>
+
+                        </div>
+                      </div>
+                      <div className="content-right-body-socials-column">
+                        <div
+                          className="cb-menu-nav-item nav__link"
+                          ref={link10}
+                          data-cursor-opaque
+                          data-cursor-size="50px"
+                        >
+                          <a target="blank" href="https://twitter.com/_EnigmaDigital">
+                            <span data-text="Twitter">Twitter</span>
+                          </a>
+                        </div>
+                        <div
+                          className="cb-menu-nav-item nav__link"
+                          ref={link11}
+                          data-cursor-opaque
+                          data-cursor-size="50px"
+                        >
+                          <a target="blank" href="https://in.linkedin.com/company/enigma-digital-product-design-ui-ux-neuromarketing">
+                            <span data-text="LinkedIn">LinkedIn</span>
+                          </a>
+                        </div>
+                        <div
+                          className="cb-menu-nav-item nav__link"
+                          ref={link12}
+                          data-cursor-opaque
+                          data-cursor-size="50px"
+                        >
+                          <a target="blank" href="https://www.behance.net/enigma-digital">
+                            <span data-text="Behance">Behance</span>
+                          </a>
+                        </div>
+                      </div>
                     </div>
-                    <div className={styles.socialItem} ref={link16} data-cursor-opaque data-cursor-size="50px">
-                      <a className="en-main-link" href="tel:+91 8178 026 136" >
-                        <span data-text="+91 8178 026 136">+91 8178 026 136</span>
-                      </a>
                     </div>
+                   
+                   <div className="content-right-body-bottom">
+                   <div
+                      className="content-right-body-title content-title nav__link"
+                      ref={link13}
+                    >
+                      work with us
+                    </div>
+                    <div className="content-right-body-more">
+                      <div className="content-right-body-more-column">
+                        <div
+                          className="content-link  mb-3"
+                          data-cursor-size="30px"
+                          data-cursor-opaque
+                        >
+                          <div className="cb-outro-header nav__link" ref={link14}>
+                            <a
+                              href="mailto:hi@weareenigma.com"
+                              data-cursor-size="70px"
+                            >
+                              hi@weareenigma.com
+                            </a>
+                          </div>
+                        </div>
+                        <div className="num menu-num">
+                          <div
+                            className="cb-menu-nav-item nav__link"
+                            ref={link15}
+                            data-cursor-opaque
+                            data-cursor-size="50px"
+                          >
+                            <a href="tel:+91 8178 026 136">
+                              <span data-text="+91 8178 026 136">
+                                +91 8178 026 136
+                              </span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                   </div>
                   </div>
                 </div>
               </div>
@@ -297,6 +473,9 @@ useEffect(() => {
           </div>
         </div>
       </div>
-    );
-  };
+    </div>
+    // </div>
+  );
+};
 
+export default Menu;
