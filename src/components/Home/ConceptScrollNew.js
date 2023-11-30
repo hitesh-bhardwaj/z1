@@ -3,7 +3,7 @@ import gsap from "gsap";
 import Link from "next/link";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
-import LazyVideo from "@/components/LazyVideo";
+import LazyVideo from "./ConceptLazyVideo";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -210,9 +210,9 @@ export default function ConceptScrollNew() {
                     <div className="macbook_frame_content_upper"></div>
                       <LazyVideo 
                         poster='/assets/newProject/mac-poster.jpg'
-                        src="/assets/newProject/a.webm"
-                        title="Mac Enigma Video"
-                        type="video/webm"
+                        srcWebm="/assets/newProject/a.webm"
+                        srcMp4="/assets/newProject/a.webm"
+                        title="Mac-Enigma-Video"
                       />
                     <div className="macbook_frame_background" />
                   </div>

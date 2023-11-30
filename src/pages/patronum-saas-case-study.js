@@ -687,11 +687,11 @@ export default function patronum() {
             </div>
             <div className={styles.videoMainSection}>
               <div className={styles.videoContainer} id="video-container">
-                <ProjectLazyVideo 
+                <ProjectLazyVideo
                   srcWebm="/assets/casestudies/patronum/patronum.webm"
                   srcMp4="/assets/casestudies/patronum/patronum.mp4"
                   poster="/assets/casestudies/patronum/patronum-poster.webp"
-                  title="patronum-saas-video"
+                  title="patronum-saas-casestudy-video"
                 />
               </div>
             </div>
