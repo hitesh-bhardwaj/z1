@@ -48,7 +48,7 @@ const HeroDesktop = () => {
 
   return (
     <>
-        <div className="hero-main desktop">
+        <div className="hero-main desktop dark:invert">
               <div
                 className="hero-section"
               >
@@ -88,7 +88,7 @@ const HeroDesktop = () => {
                         autoPlay
                         loop
                         preload="auto"
-                        className="hero-video"
+                        className="hero-video dark:invert"
                       ></video>
                     </div>
                   </div>
@@ -131,14 +131,16 @@ const HeroDesktop = () => {
                 ></Image>
               </div>
 
-              <div className="content-section home-page-header">
-                <div className="f-sub-content">
-                  <div className="f-content-text">
+              <div className="content-section home-page-footer">
+                  <div className="f-content-text dark:invert">
                     <p className="f-disabled">timezone</p>
                     <div className="f-heading">+5:30 GMT</div>
                   </div>
+                  <div className="f-content-right dark:invert">
+                    <p className="f-disabled">location</p>
+                    <div className="f-heading">Noida, IN</div>
+                  </div>
                 </div>
-              </div>
             </div>
     </>
   )};

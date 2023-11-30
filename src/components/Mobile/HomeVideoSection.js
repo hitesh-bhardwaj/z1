@@ -8,25 +8,30 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function HomeVideoSection() {
 
+  if (globalThis.innerWidth<1023) {
+
   useEffect(() => {
     let ctx = gsap.context(() => {
       let tl = gsap.timeline({
         scrollTrigger: {
-          trigger: ".video-content-box",
+          trigger: ".video-section-mobile",
           start: "top 85%",
+          end: "bottom center",
+          scrub: true,
           markers: false,
         },
       });
       tl.from(".para-anim-mobile", {
         opacity: 0,
-        y: 150,
-        duration: 1,
-        ease: "power1.inOut",
-        stagger: 0.7,
+        y: 100,
+        duration: 0.5,
+        ease: "power3.out",
+        stagger: 0.1,
       });
     });
     return () => ctx.revert();
-  });
+  }, []);
+}
 
   return (
     <>
@@ -39,9 +44,9 @@ export default function HomeVideoSection() {
               Let's amplify your potential! 
             <span className="emoji-dark">🚀</span>
           </p>
-          <div className="cb-outro-header">
-            <Link href="/get-in-touch" className="para-anim-mobile">
-              Say, Hello! <span className="emoji-dark">👋</span>
+          <div className="para-anim-mobile">
+            <Link href="/get-in-touch" className="en-link-under">
+              <span>Say, Hello! </span><div className="emoji-dark wave">👋</div>
             </Link>
           </div>
         </div>

@@ -1,15 +1,14 @@
-import { Cursor } from "../../cursor/index";
-import "react-creative-cursor/dist/styles.css";
-import SmoothScroll from "@/components/utils/SmoothScroll";
 import { NextSeo } from "next-seo";
+import Head from "next/head";
 
+import { Cursor } from "../../cursor/index";
+import useLenis from '@/components/utils/useLenis';
 import Header from "@/components/Header/Header";  
 import HomeAero from "@/components/Home/HomeAero";
 import HeroDesktop from "@/components/Home/HeroDesktop";
-import Footer from "@/components/Footer";
+import Footer from "@/components/Footer/Footer";
 import Category from "@/components/Home/Category";
 import ConceptScrollNew from "@/components/Home/ConceptScrollNew";
-import FooterMobile from "@/components/Mobile/FooterMobile";
 import HeroMobile from "@/components/Mobile/HeroMobile";
 import HomeVideoSection from "@/components/Mobile/HomeVideoSection";
 import ConceptScrollMobile from "@/components/Mobile/ConceptScrollMobile";
@@ -19,9 +18,10 @@ import HomeProject from "@/components/ProjectsSection/HomeProject";
 import ProjectsHome from "@/components/Home/ProjectsHome";
 import Modal from "@/components/PopupForm/formModal";
 import HomeBlogs from "@/components/Home/HomeBlogs";
-import Head from "next/head";
 
 export default function Home() {
+
+  const lenis = useLenis();
 
   return (
     <>
@@ -142,19 +142,15 @@ export default function Home() {
     </Head>
 
       <Preloader />
-
-      <SmoothScroll />
-
-      <Cursor isGelly={true} />
-
+      <Cursor />
       <main>
-      
       <Header />
 
       {/*===============================Hero Section=========================*/}
           <section className="main-section"
                    data-cursor-size="10"
-                   data-cursor-text="">
+                   data-cursor-text=""
+                   >
             <HeroMobile />
             <HeroDesktop />
           </section>
@@ -164,13 +160,9 @@ export default function Home() {
 {/* End */}
 
       {/* ======================== Concept Scroll ====================== */}
-      <section>
         <ConceptScrollNew />
-      </section>
 
-      <section>
         <ConceptScrollMobile />
-      </section>
       {/* ======================== Concept Scroll END ====================== */}
 
       {/* ======================== Home Video Mobile ====================== */}
@@ -215,13 +207,7 @@ export default function Home() {
       {/* ======================== Related Blogs ====================== */}
       
       {/* ======================== Footer ====================== */}
-      <section className="desktop-footer mt-150">
         <Footer />
-      </section>
-
-      <section className="mobile-footer">
-        <FooterMobile />
-      </section>
       {/* ======================== Footer END ====================== */}
     
     </main>
