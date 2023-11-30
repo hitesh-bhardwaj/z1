@@ -150,7 +150,7 @@ export default function StrategySection() {
           <div className="right-strategy-box">
             <div className="image-container service-box-image">
               <Image
-                src="/assets/services/strategy.webp"
+                src="/assets/services/Strategy-t.png"
                 width={500}
                 height={1000}
                 alt="services"
@@ -190,7 +190,7 @@ export default function StrategySection() {
           <div className="right-strategy-box">
             <div className="image-container service-box-image">
               <Image
-                src="/assets/services/design.webp"
+                src="/assets/services/Strategy-1.png"
                 width={500}
                 height={1000}
                 alt="services"
@@ -231,7 +231,7 @@ export default function StrategySection() {
           <div className="right-strategy-box">
             <div className="image-container service-box-image">
               <Image
-                src="/assets/services/tech.webp"
+                src="/assets/services/Strategy-1.png"
                 width={500}
                 height={1000}
                 alt="services"
@@ -269,7 +269,7 @@ export default function StrategySection() {
           <div className="right-strategy-box">
             <div className="image-container service-box-image">
               <Image
-                src="/assets/services/market.webp"
+                src="/assets/services/Strategy-1.png"
                 width={500}
                 height={1000}
                 alt="services"
