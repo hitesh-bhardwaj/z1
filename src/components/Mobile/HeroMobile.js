@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import gsap from "gsap";
 import SplitType from "split-type";
+import LazyVideo from "../LazyVideo";
 
 export default function HeroMobile() {
   // Hero Section Animation
@@ -55,13 +56,12 @@ export default function HeroMobile() {
       <div className="hero-main-mob hero-mobile hero-ipad">
         <div className="hero-main-content-section">
           <div className="video-box" id="video">
-            <video
+            <LazyVideo 
+              poster='/assets/reels/reel-poster.jpg'
               src="/assets/reels/hero.webm"
-              preload="auto"
-              autoPlay
-              muted
-              loop
-            ></video>
+              title="official reel video"
+              type="video/webm"
+            />
           </div>
 
           <div className="content-hero-box-mobile">

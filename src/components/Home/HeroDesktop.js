@@ -83,7 +83,9 @@ const HeroDesktop = () => {
                   <div className="reel-hero">
                     <div className='reel-anim'>
                       <video
+                        poster='/assets/reels/reel-poster.jpg'
                         src="/assets/reels/hero.webm"
+                        type="video/webm"
                         muted
                         autoPlay
                         loop

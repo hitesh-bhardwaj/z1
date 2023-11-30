@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import Link from "next/link";
-import LazyVideo from "./LazyVideo";
+import LazyVideo from "../LazyVideo";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
@@ -48,8 +48,10 @@ export default function HomeVideoSection() {
 
         <div className="video-box">
           <LazyVideo
+            poster="/assets/reels/reel-full.jpg"
             src="/assets/reels/hero.webm"
             title="official reel video"
+            type="video/webm"
           />
         </div>
       </div>

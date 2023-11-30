@@ -476,6 +476,10 @@ body {
 /* ========== Dark Mode END ============= */
 
 /* ===============03. Preloader  =================== */
+.dark-mode .preloaderWords{
+  filter: invert(1);
+  color: var(--black);
+}
 
 .loader-wrap {
   position: fixed;
@@ -673,7 +677,11 @@ button:focus {
 
 /* ============================== New Hover =========================================== */
 
-
+/* Lazy Video for All Components*/
+.hero-main-content-section .video-box .lazy-video{
+  height: 100%;
+  width: 100%;
+}
 
 
 /* ============================== New Hover END =========================================== */
