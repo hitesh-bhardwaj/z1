@@ -683,6 +683,15 @@ button:focus {
   width: 100%;
 }
 
+.dark-mode .newsCard .lazy-video{
+  height: 100%;
+  width: 100%;
+}
+
+.dark-mode .scroll-about-img{
+  filter: invert(0) !important;
+}
+
 
 /* ============================== New Hover END =========================================== */
 

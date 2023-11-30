@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
+import LazyVideo from "./LazyVideoGif";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -77,13 +78,13 @@ export default function NewGifSection() {
       <div className="gifSectionAbout" id="gif">
         <div className="gifAboutSub">
           <div className="newsCard news-Slide-up" data-speed="4">
-            <video
-              autoPlay
-              loop
-              muted
+            <LazyVideo
               src="/assets/about/gif-section/culture.webm"
+              title="About-Culture"
+              poster="/assets/about/gif-section/culture.jpg"
               className="gif-img"
-            ></video>
+              type="video/webm"
+            />
             <h3 className="about-gif-text">culture</h3>
             <img
               src="/assets/about/gif-section/arr.png"
@@ -102,14 +103,13 @@ export default function NewGifSection() {
           </div>
 
           <div className="newsCard news-Slide-up" data-speed="5">
-            <video
-              autoPlay
-              loop
-              muted
+            <LazyVideo
               src="/assets/about/gif-section/attitude.webm"
-              loading="lazy"
+              title="About-Attitude"
+              poster="/assets/about/gif-section/attitude.jpg"
               className="gif-img"
-            ></video>
+              type="video/webm"
+            />
             <h3 className="about-gif-text">attitude</h3>
             <img
               src="/assets/about/gif-section/arr.png"
@@ -129,14 +129,13 @@ export default function NewGifSection() {
 
         <div className="gifAboutSub">
           <div className="newsCard news-Slide-up" data-speed="3.5">
-            <video
-              autoPlay
-              loop
-              muted
+            <LazyVideo
               src="/assets/about/gif-section/ethos.webm"
-              loading="lazy"
+              title="About-Ethos-Video"
+              poster="/assets/about/gif-section/ethos.jpg"
               className="gif-img"
-            ></video>
+              type="video/webm"
+            />
             <h3 className="about-gif-text">ethos</h3>
             <img
               src="/assets/about/gif-section/arr.png"
@@ -158,14 +157,13 @@ export default function NewGifSection() {
 
         <div className="gifAboutSub">
           <div className="newsCard news-Slide-up MR-20" data-speed="2.5">
-            <video
-              autoPlay
-              loop
-              muted
+            <LazyVideo
               src="/assets/about/gif-section/experience.webm"
-              loading="lazy"
+              title="About-Experience-Video"
+              poster="/assets/about/gif-section/experience.jpg"
               className="gif-img"
-            ></video>
+              type="video/webm"
+            />            
             <h3 className="about-gif-text">experience</h3>
             <img
               src="/assets/about/gif-section/arr.png"
@@ -185,14 +183,13 @@ export default function NewGifSection() {
           </div>
 
           <div className="newsCard news-Slide-up" data-speed="3.2">
-            <video
-              autoPlay
-              loop
-              muted
+            <LazyVideo
               src="/assets/about/gif-section/magic.webm"
-              loading="lazy"
+              title="About-Magic-Video"
+              poster="/assets/about/gif-section/magic.jpg"
               className="gif-img"
-            ></video>
+              type="video/webm"
+            />
             <h3 className="about-gif-text">magic</h3>
             <img
               src="/assets/about/gif-section/arr.png"
