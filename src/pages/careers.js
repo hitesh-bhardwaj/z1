@@ -1,9 +1,8 @@
-import React from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { Cursor } from "../../cursor/index";
 import "react-creative-cursor/dist/styles.css";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
-import SmoothScroll from "@/components/utils/SmoothScroll";
 
 // Components
 import Header from '@/components/Header/Header';
@@ -14,10 +13,36 @@ import { NextSeo } from "next-seo";
 import FullTime from "../components/Careers/FullTime";
 import PartTime from "../components/Careers/PartTime";
 import Head from "next/head";
+import SmoothScroll from "@/components/utils/SmoothScroll";
+
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Careers(){
+
+     // Hero Section Animation
+  useEffect(() => {
+    const tl = gsap.timeline();
+    tl.fromTo(
+      "#anim",
+      {
+        rotationX: -80,
+        opacity: 0,
+        translateY: 300,
+        transformPerspective: "1000",
+        transformOrigin: "top center",
+      },
+      {
+        delay: 3,
+        duration: 1.3,
+        rotationX: 0,
+        opacity: 1,
+        translateY: 0,
+        stagger: 0.2,
+      }
+    );
+    return () => tl.kill();
+  }, []);
 
     return(
         <div className="bg-white">
@@ -104,14 +129,14 @@ export default function Careers(){
                     <div className="w-[85%] 3xl:w-[80%] m-auto">
                         <div className="">
                             <h1 className="2xl:text-[6.5vw] md:text-[8vw] text-[10vw] font-medium leading-[1.3]">
-                                <span>
-                                    Build the<span className="color-primary"> Future </span> <br />
-                                    of Web With Us!
+                                <span id="anim" className="block">
+                                    Build the<span className="color-primary"> Future </span>
                                 </span>
+                                <span id="anim" className="block">of Web With Us!</span>
                             </h1>
                         </div>
                         <div className="2xl:w-[75%] w-full mx-auto text-[gray] mt-10">
-                            <p className="2xl:text-[1.4vw] md:text-[3.4vw] text-xl 2xl:text-center text-justify font-body">
+                            <p className="2xl:text-[1.4vw] md:text-[3.4vw] text-xl 2xl:text-center text-justify font-body leading-normal">
                                 Embarking on a career at Enigma isn't just about a job; it's about embracing a lifestyle where innovation, creativity, and impact are at the core of everything we do. We don't just follow trends—we set them. Here, your voice is not only heard but valued and your ideas have the power to reshape the digital landscape.
                                 <br/>
                                 <br/>
