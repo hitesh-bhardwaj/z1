@@ -916,9 +916,10 @@ button:focus {
   transition: opacity 400ms cubic-bezier(0.215, 0.61, 0.355, 1) 0ms; 
   opacity: 1;
 }
+
 .audio__bar{
   background: currentcolor; 
-  height: 20px; 
+  height: 13px; 
   position: relative; 
   width: 2px;
 }

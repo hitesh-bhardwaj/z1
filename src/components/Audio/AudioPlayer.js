@@ -12,7 +12,7 @@ const AudioPlayerProvider = ({ children }) => {
 
   const [audio] = useState(
     new Howl({
-      src: ['/assets/music/bg-min.mp3'],
+      src: ['/assets/music/bg.mp3'],
       loop: true,
       volume: 0.3,
       onplay: () => setIsPlaying(true), // Set isPlaying to true when audio starts playing
