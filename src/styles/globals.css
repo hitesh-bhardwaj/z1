@@ -3565,6 +3565,10 @@ textarea::placeholder {
   height: auto;
 }
 
+.dark .about-hero-scroll img{
+  filter: invert(0) !important;
+}
+
 .action-icon {
   position: absolute !important;
   width: fit-content;
