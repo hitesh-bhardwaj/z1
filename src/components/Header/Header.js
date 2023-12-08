@@ -6,6 +6,7 @@ import Showreel from '../Home/Showreel';
 import Link from 'next/link';
 import gsap from 'gsap';
 import { useAudioPlayer } from '../Audio/AudioPlayer';
+import WavyLineCanvas from './WavyLineCanvas';
 
 export default function Header() {
   const { togglePlay, isPlaying, playAudio, pauseAudio } = useAudioPlayer();
@@ -148,13 +149,7 @@ export default function Header() {
           transition={{ duration: 0.5, delay: 6, transition: easeInOut }}
           className="MenuAudio"
           >
-            <button aria-label="play music" onClick={togglePlay} className={`audio_btn ${isPlaying ? '' : 'audio__disabled'}`}>
-              <div className="audio__bar"></div>
-              <div className="audio__bar"></div>
-              <div className="audio__bar"></div>
-              <div className="audio__bar"></div>
-              <div className="audio__bar"></div>
-            </button>
+          <WavyLineCanvas />
         </motion.div>
 
         <motion.div

@@ -255,9 +255,13 @@ body {
   border: none;
   background: var(--white);
   border-radius: 50%;
-  padding: 0.2vw;
   cursor: pointer;
   margin-right: 1.5vw;
+  height: 35px;
+  width: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .dark .dark-mode-btn {
@@ -905,62 +909,18 @@ button:focus {
   position: relative;
   margin-right: 2.5vw;
 }
-
-.audio_btn{
-  align-items: center; 
-  display: flex; 
-  height: 25px; 
-  justify-content: space-between; 
-  position: relative; 
-  width: 18px; 
-  transition: opacity 400ms cubic-bezier(0.215, 0.61, 0.355, 1) 0ms; 
-  opacity: 1;
+.WaveCanvas{
+  padding: 7px;
+  border-radius: 50%;
+  background: white;
+  width: 35px;
+  height: 35px;
 }
 
-.audio__bar{
-  background: currentcolor; 
-  height: 13px; 
-  position: relative; 
-  width: 2px;
+.dark .WaveCanvas{
+  filter: invert(1);
+  background: #1f1f1f;
 }
-.audio__bar {
-  animation: scale .6s ease-in-out infinite alternate;
-  transition: 2s ease-in-out;
-  transform-origin: bottom;
-}
-.audio__disabled .audio__bar {
-  animation: none;
-  transition: 1s ease-in-out;
-  transform: scale(.4);
-  transform-origin: bottom;
-}
-.audio__bar:nth-child(2) {
-  animation-delay: .3s;
-}
-.audio__bar:nth-child(3) {
-  animation-delay: .45s;
-}
-.audio__bar:nth-child(4) {
-  animation-delay: .6s;
-}
-.audio__bar:nth-child(5) {
-  animation-delay: .75s;
-}
-.audio__bar:nth-child(6) {
-  animation-delay: .9s;
-}
-
-@keyframes scale {
-  0% {
-    transform: scaleY(.3);
-  }
-  100% {
-    transform: scaleY(1);
-  }
-}
-
-
-
 
 .header-fixed {
   position: fixed;
@@ -6835,7 +6795,10 @@ a:hover {
 
 @media screen and (max-width: 1280px) {
 
-
+  .WaveCanvas, .dark-mode-btn{
+    width: 30px;
+    height: 30px;
+  }
   .action-icon .inner {
     left: 3vw;
     top: 3vw;
