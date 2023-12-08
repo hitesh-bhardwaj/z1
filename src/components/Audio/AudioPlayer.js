@@ -18,7 +18,7 @@ const AudioPlayerProvider = ({ children }) => {
     new Howl({
       src: ['/assets/music/bg.mp3'],
       loop: true,
-      volume: 1,
+      volume: 0.3,
       onplay: () => setIsPlaying(true), // Set isPlaying to true when audio starts playing
       onpause: () => setIsPlaying(false), // Set isPlaying to false when audio is paused
     })
