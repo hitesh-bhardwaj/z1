@@ -1,20 +1,18 @@
-import React, { useState, useEffect, useRef } from "react";
-import Image from "next/image";
-import Menu from "./Hamburger";
-import { easeInOut, motion } from "framer-motion";
-import Showreel from "../Home/Showreel";
-import Link from "next/link";
-import gsap from "gsap";
-import { useAudioPlayer } from "../Audio/AudioPlayer";
+import React, { useState, useEffect, useRef } from 'react';
+import Image from 'next/image';
+import Menu from './Hamburger';
+import { easeInOut, motion } from 'framer-motion';
+import Showreel from '../Home/Showreel';
+import Link from 'next/link';
+import gsap from 'gsap';
+import { useAudioPlayer } from '../Audio/AudioPlayer';
 
 export default function Header() {
-  const { togglePlay, isPlaying } = useAudioPlayer();
-
+  const { togglePlay, isPlaying, playAudio, pauseAudio } = useAudioPlayer();
+  const [wasPlayingBeforeShowreel, setWasPlayingBeforeShowreel] = useState(false);
   const [show, setShow] = useState(false);
   const [invertText, setInvertText] = useState(
-    typeof window !== "undefined"
-      ? localStorage.getItem("invertText") === "true"
-      : false
+    typeof window !== 'undefined' ? localStorage.getItem('invertText') === 'true' : false
   );
 
   // Simplified the initial value for imgSrc
@@ -61,6 +59,19 @@ export default function Header() {
     };
   }, [invertText]);
 
+  const handleShowreelOpen = () => {
+    setWasPlayingBeforeShowreel(isPlaying); // Remember if the audio was playing
+    pauseAudio(); // Pause the background music
+    setShow(true);
+  };
+  
+  const handleShowreelClose = () => {
+    if (wasPlayingBeforeShowreel) {
+      playAudio(); // Resume playing the background music only if it was playing before
+    }
+    setShow(false);
+  };
+
   return (
     <header className="header-section">
       <motion.div
@@ -94,7 +105,7 @@ export default function Header() {
             <button
               className="btn-primary"
               aria-label="showreel"
-              onClick={() => setShow(true)}
+              onClick={handleShowreelOpen}
               data-cursor-magnetic
               data-cursor-exclusion
               data-cursor-size="60px"
@@ -116,7 +127,7 @@ export default function Header() {
           >
             <Showreel
               show={show}
-              onClose={() => setShow(false)}
+              onClose={handleShowreelClose}
               data-cursor-text="Close"
               data-cursor-color="#000"
               data-cursor-size="100px"
