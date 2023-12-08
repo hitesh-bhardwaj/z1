@@ -73,6 +73,8 @@ export default function Header() {
     setShow(false);
   };
 
+  console.clear();
+
   return (
     <header className="header-section">
       <motion.div
