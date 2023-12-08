@@ -5,8 +5,11 @@ import { easeInOut, motion } from "framer-motion";
 import Showreel from "../Home/Showreel";
 import Link from "next/link";
 import gsap from "gsap";
+import { useAudioPlayer } from "../Audio/AudioPlayer";
 
 export default function Header() {
+  const { togglePlay, isPlaying } = useAudioPlayer();
+
   const [show, setShow] = useState(false);
   const [invertText, setInvertText] = useState(
     typeof window !== "undefined"
@@ -15,21 +18,17 @@ export default function Header() {
   );
 
   // Simplified the initial value for imgSrc
-  const [imgSrc, setImgSrc] = useState(
-    invertText ? "/assets/dark/moon.svg" : "/assets/dark/sun.svg"
-  );
+  const [imgSrc, setImgSrc] = useState(invertText ? '/assets/dark/moon.svg' : '/assets/dark/sun.svg');
 
   useEffect(() => {
-    localStorage.setItem("invertText", invertText);
-
-    // Set imgSrc based on invertText
-    setImgSrc(invertText ? "/assets/dark/moon.svg" : "/assets/dark/sun.svg");
+    localStorage.setItem('invertText', invertText);
+    setImgSrc(invertText ? '/assets/dark/moon.svg' : '/assets/dark/sun.svg');
 
     const div = document.body;
     if (invertText) {
-      div.classList.add("dark");
+      div.classList.add('dark');
     } else {
-      div.classList.remove("dark");
+      div.classList.remove('dark');
     }
   }, [invertText]);
 
@@ -37,28 +36,30 @@ export default function Header() {
 
   useEffect(() => {
     const button = buttonRefDarkMode.current;
-    button.addEventListener("click", handleClick);
+
+    const handleClick = () => {
+      const audio = new Audio('/assets/music/click.mp3');
+      audio.play();
+    };
+
+    button.addEventListener('click', handleClick);
+
     return () => {
-      button.removeEventListener("click", handleClick);
+      button.removeEventListener('click', handleClick);
     };
   }, []);
 
-  const handleClick = () => {
-    const audio = new Audio("/assets/music/click.mp3");
-    audio.play();
-  };
-
   useEffect(() => {
+    const button = buttonRefDarkMode.current;
+
     const tl = gsap.timeline();
 
-    tl.fromTo(
-      ".gsap-dark-img",
-      { scale: 0, rotate: "-280deg" },
-      { scale: 1, rotate: "0deg", duration: 0.7 }
-    );
-  });
+    tl.fromTo(button, { scale: 0, rotate: '-280deg' }, { scale: 1, rotate: '0deg', duration: 0.7 });
 
-  console.clear();
+    return () => {
+      tl.kill(); // Ensure the animation is cleared when the component unmounts
+    };
+  }, [invertText]);
 
   return (
     <header className="header-section">
@@ -129,6 +130,22 @@ export default function Header() {
             </Showreel>
           </div>
         </div>
+
+        <motion.div 
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 6, transition: easeInOut }}
+          className="MenuAudio"
+          >
+            <button aria-label="play music" onClick={togglePlay} className={`audio_btn ${isPlaying ? '' : 'audio__disabled'}`}>
+              <div className="audio__bar"></div>
+              <div className="audio__bar"></div>
+              <div className="audio__bar"></div>
+              <div className="audio__bar"></div>
+              <div className="audio__bar"></div>
+            </button>
+        </motion.div>
+
         <motion.div
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
