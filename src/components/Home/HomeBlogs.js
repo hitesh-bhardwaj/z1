@@ -27,8 +27,7 @@ const handleHover = (e) => {
   };
 
 const HomeBlogs = () => {
-  // Filter out the current blog and then filter by category
-  const relatedBlogs = Blogs.slice(0, 3); // Get only three blogs
+  const relatedBlogs = Blogs.slice(0, 3);
 
   const homeBlog = useRef();
 

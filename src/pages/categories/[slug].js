@@ -1,11 +1,10 @@
 import { useState } from 'react';
+import { getAllCategories, getCategoryBySlug } from '@/lib/categories';
+import { getPostsByCategoryId } from '@/lib/posts';
 
-import { getPaginatedPosts } from '@/lib/posts';
-import { getCategories } from '@/lib/categories';
-
-import PostCard from '../components/WpBlogs/PostCard';
-import Pagination from '../components/WpBlogs/Pagination';
-import { Cursor } from "../../cursor/index";
+import PostCard from '@/components/WpBlogs/PostCard';
+import Pagination from '@/components/WpBlogs/Pagination';
+import { Cursor } from "../../../cursor/index";
 import SmoothScroll from "@/components/utils/SmoothScroll";
 
 import Header from "@/components/Header/Header";  
@@ -15,15 +14,24 @@ import PageLoader from "@/components/pageLoader";
 import Modal from "@/components/PopupForm/formModal";
 import CategoryList from '@/components/WpBlogs/CategoryList';
 
-export default function Blog({ posts, pagination, categories }) {
-  const [activeCategory, setActiveCategory] = useState('all');
+const DEFAULT_POST_OPTIONS = {};
+
+export default function Category({ 
+  category, 
+  posts, 
+  postOptions = DEFAULT_POST_OPTIONS,
+  pagination, 
+  categories
+}) {
+
+  const [activeCategory, setActiveCategory] = useState('');
 
   return (
     <>
       <SmoothScroll />
       <Cursor />
 
-      <PageLoader text={"Our Thoughts & Resources"} />
+      <PageLoader text={`${category.name} Blogs`} />
       <Modal />
 
       <main>
@@ -36,16 +44,16 @@ export default function Blog({ posts, pagination, categories }) {
             data-cursor-text=""
           >
             <h1 id="blog">
-              <span>All Articles</span>
+              <span>{` ${category.name} Blogs`}</span>
             </h1>
           </div>
 
           <div>
-            <CategoryList
-              categories={categories}
-              activeCategory={activeCategory}
-              setActiveCategory={setActiveCategory}
-            />
+          <CategoryList
+            categories={categories}
+            activeCategory={activeCategory}
+            setActiveCategory={setActiveCategory}
+          />
           </div>
 
           <ul className='ul-items'>
@@ -81,39 +89,47 @@ export default function Blog({ posts, pagination, categories }) {
     );
   }
 
-export async function getStaticProps({ params }) {
-  const { slug } = params || {};
+export async function getStaticProps({ params = {} } = {}) {
+  const { category } = await getCategoryBySlug(params?.slug);
 
-  // Fetch paginated posts
-  let { posts, pagination } = await getPaginatedPosts({
-    queryIncludes: 'archive',
-  });
-
-  // Fetch categories
-  const categories = await getCategories();
-
-  // If a category slug is provided, filter posts by category
-  if (slug) {
-    const { posts: filteredPosts, pagination: filteredPagination } = await getPaginatedPosts({
-      queryIncludes: 'archive',
-      categoryId: slug, // Pass the category ID or slug to filter posts
-    });
-
-    posts = filteredPosts;
-    pagination = {
-      ...filteredPagination,
-      basePath: `/categories/${slug}/page`,
+  if (!category) {
+    return {
+      props: {},
+      notFound: true,
     };
   }
 
+  const { posts } = await getPostsByCategoryId({
+    categoryId: category.databaseId,
+    queryIncludes: 'archive',
+  });
+
+  const categories = await getAllCategories();
+
   return {
     props: {
+      category,
       posts,
       categories,
-      pagination: {
-        ...pagination,
-        basePath: slug ? `/categories/${slug}/page` : '/blog/page',
-      },
     },
+  };
+}
+
+export async function getStaticPaths() {
+  
+  const { categories } = await getAllCategories();
+
+  const paths = categories.map((category) => {
+    const { slug } = category;
+    return {
+      params: {
+        slug,
+      },
+    };
+  });
+
+  return {
+    paths,
+    fallback: 'blocking',
   };
 }

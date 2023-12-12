@@ -5711,7 +5711,11 @@ body.loading {
   width: 100%;
 }
 
-.blogs-section button {
+.blog-cati-button{
+  margin-top: 2vw
+}
+
+.blog-cati-button button {
   border-radius: 50px;
   font-size: 1.2vw;
   padding: 0.5vw 2vw;
@@ -5723,6 +5727,11 @@ body.loading {
   font-weight: 500;
   position: relative;
   margin-bottom: 1vw;
+}
+
+.blog-cati-button .active {
+  color: var(--white);
+  background-color: var(--black)!important;
 }
 
 .button--calypso::before,
@@ -5801,13 +5810,11 @@ body.loading {
   transition-timing-function: linear;
 }
 
-
-.active {
+.button--calypso .active {
   color: var(--white);
   background-color: var(--black) !important;
 }
-
-.blogs-section .ul-blog {
+.ul-blog {
   position: relative;
   margin-top: 5vw;
   width: 100%;
@@ -5818,6 +5825,7 @@ body.loading {
   width: 100%;
   height: 60vh;
   overflow: hidden;
+  position: relative;
 }
 
 .img-blog {
@@ -5991,15 +5999,13 @@ body.loading {
   margin-bottom: 10px;
 }
 
-.b__dt-img {
-  height: auto;
-  margin: 50px 0;
-}
-.b__dt-img img{
+.b__dt-content img{
   height: 600px;
   width: 100%;
+  margin: 30px 0 50px;
   object-fit: cover;
 }
+
 .img-caption{
   text-align: center;
   font-size: 18px !important;
@@ -6007,6 +6013,14 @@ body.loading {
   color: var(--gray1);
   padding-top: 15px !important;
 }
+
+.b__dt-content li{
+  font-size: 24px;
+  margin-bottom: 5px;
+  margin-left: 30px;
+  color: var(--black2);
+  list-style-type: disc;
+} 
 
 .b__dt-li{
   margin-bottom: 24px;
@@ -8066,7 +8080,7 @@ a:hover {
     margin-bottom: 2rem;
   }
 
-  .blogs-section button {
+  .blog-cati-button button {
     font-size: 2.5vw;
   }
 
@@ -10016,7 +10030,7 @@ a:hover {
     margin-top: 5vw;
   }
 
-  .blogs-section button {
+  .blog-cati-button button {
     font-size: 1.5rem;
     margin-right: 3vw;
     padding: 2vw 5vw;
@@ -10220,7 +10234,7 @@ a:hover {
 }
 
 @media screen and (max-width: 480px) {
-  .blogs-section button {
+  .blog-cati-button button {
     font-size: 1rem;
   }
   .Carousel_slide__caro__ckaQX{
@@ -12419,4 +12433,67 @@ label.label:hover:before{
 
 .en-link-under:hover span:after {
   transform: scaleX(0);
+}
+
+
+/* Wordpress blogs */
+
+/* Pagination */
+.blog-pagi-container{
+  width: 100%;
+  text-align: center;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  margin: 5vw 0; 
+}
+
+.pagi-section{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagi-number-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagi-num{
+  font-size: 22px;
+  width: 55px;
+  font-weight: 500;
+  padding: 6px 0px;
+  margin: 0 12px;
+  border: 1px solid #e3e3e3;  
+  color: var(--black1);
+  border-radius: 3px;
+  transition: all 150ms ease-out;
+}
+
+.pagi-num:hover{
+  background: #e3e3e3;
+}
+
+li.pagi-num.active {
+  background: var(--primary);
+}
+
+a.pagi-num.disabled {
+  cursor: none;
+  background: none;
+}
+
+li.pagi-num.active a{
+  color: var(--white);
+}
+
+.dark .blog-pagi-container img{
+  filter: invert(0) !important;
+}
+
+.dark li.pagi-num.active {
+  background: var(--dark-primary);
 }
