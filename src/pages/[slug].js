@@ -213,6 +213,7 @@ return {
         post: postData.post,
         allPosts: allPostsData.posts.edges.map(edge => edge.node),
     },
+    revalidate: 10,
 };
 }
 

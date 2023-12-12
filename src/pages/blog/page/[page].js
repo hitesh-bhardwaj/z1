@@ -99,6 +99,7 @@ export async function getStaticProps({ params = {} } = {}) {
         basePath: '/blog/page',
       },
     },
+    revalidate: 10,
   };
 }
 

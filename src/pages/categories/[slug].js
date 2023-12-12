@@ -112,6 +112,7 @@ export async function getStaticProps({ params = {} } = {}) {
       posts,
       categories,
     },
+    revalidate: 10,
   };
 }
 
