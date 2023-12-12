@@ -2,7 +2,7 @@ import { getAllCategories, getCategoryBySlug } from '@/lib/categories';
 import { getPaginatedPostsByCategoryId } from '@/lib/posts';
 import PostCard from '@/components/WpBlogs/PostCard';
 import Pagination from '@/components/WpBlogs/Pagination';
-import { Cursor } from "../../../cursor/index";
+import { Cursor } from "../../../../cursor/index";
 import SmoothScroll from "@/components/utils/SmoothScroll";
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer";
