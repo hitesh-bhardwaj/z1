@@ -13,7 +13,7 @@ import BlogInfo from "@/components/WpBlogs/BlogInfo";
 import RelatedPosts from '@/components/WpBlogs/RelatedPosts';
 
 import { getApolloClient } from '@/lib/apollo-client';
-import {  QUERY_ALL_POST_SLUGS } from '@/data/posts';
+import { QUERY_ALL_POST_SLUGS } from '@/data/posts';
 import { getPostBySlug, getAllPosts } from '@/lib/posts';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -70,6 +70,26 @@ function PostDetail({ post, allPosts }) {
     return () => tl.kill();
   }, []);
 
+  useEffect(() => {
+    const tl = gsap.timeline({
+      scrollTrigger:{
+        trigger:".related-articles",
+        start: 'top 85%',
+        ease: 'power2.easeOut',
+      }
+    });
+    tl.fromTo("#fadeUp", {
+      opacity: 0,
+      y: 100,
+    },{
+      opacity: 1,
+      y: 0,
+      stagger: 0.2,
+      duration: 1,
+    });
+    return () => tl.kill();
+  }, []);
+
 
 if (globalThis.innerWidth>1024) {
   // Section Pinnnig
@@ -94,7 +114,7 @@ if (globalThis.innerWidth>1024) {
 return (
       <>
         <SmoothScroll />
-        <Cursor />
+        <Cursor isGelly={true}/>
         <PageLoader text={post.title} />
         
         <main>
@@ -172,18 +192,37 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-  const { slug } = params;
-  const { post } = await getPostBySlug(slug);
+  try {
+    const { slug } = params;
+    const { post } = await getPostBySlug(slug);
 
-  const { posts: allPosts } = await getAllPosts();
+    const { posts: allPosts } = await getAllPosts();
 
-  return {
-    props: {
-      post,
-      allPosts,
-    },
-    revalidate: 10, 
-  };
+    if (!post) {
+      // If the requested post is not found, return a 404 response
+      return {
+        notFound: true,
+      };
+    }
+
+    return {
+      props: {
+        post,
+        allPosts,
+      },
+      revalidate: 10,
+    };
+  } catch (error) {
+    console.error('Error fetching data:', error);
+
+    return {
+      props: {
+        post: null, // Use null instead of undefined
+        allPosts: [],
+      },
+      revalidate: 10,
+    };
+  }
 }
 
 

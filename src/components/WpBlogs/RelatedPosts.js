@@ -22,14 +22,14 @@ function RelatedBlogs({ posts, currentCategory, currentSlug }) {
   return (
     <>
         <div className="related-articles">
-          <div className="related-article-heading">
+          <div className="related-article-heading" id='fadeUp'>
             <h3>RELATED ARTICLES</h3>
             <Link href="/blog" data-cursor-size="80px" data-cursor-exclusion>
               <p>All articles</p>
             </Link>
           </div>
           
-          <div className="related-box-img">
+          <div className="related-box-img" id='fadeUp'>
             {limitedRelatedPosts.map((relatedPost) => (
               <PostCard key={relatedPost.slug} post={relatedPost} />
             ))}

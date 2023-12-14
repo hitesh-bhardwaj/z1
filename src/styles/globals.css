@@ -6143,6 +6143,7 @@ body.loading {
 .related-article-heading h3{
   font-size: 7vw;
   font-weight: 500;
+  line-height: 1;
 }
 
 .related-article-heading p {

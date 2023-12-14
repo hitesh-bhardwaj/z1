@@ -1,5 +1,4 @@
-import { useState } from 'react';
-
+import { useEffect, useState } from 'react';
 import { getPaginatedPosts, sortStickyPosts } from '@/lib/posts';
 import { getCategories } from '@/lib/categories';
 
@@ -16,13 +15,61 @@ import Modal from "@/components/PopupForm/formModal";
 import CategoryList from '@/components/WpBlogs/CategoryList';
 import FeaturedPost from '@/components/WpBlogs/FeaturedPost';
 
+import gsap from "gsap";
+import ScrollTrigger from "gsap/dist/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
 export default function Blog({ posts, featuredPost, pagination, categories }) {
   const [activeCategory, setActiveCategory] = useState('all');
+
+  useEffect(() => {
+    const tl = gsap.timeline();
+    tl.fromTo("#fadeUp", {
+      opacity: 0,
+      y: 100,
+    },{
+      opacity: 1,
+      y: 0,
+      stagger: 0.1,
+      duration: 1,
+      delay: 3.5,
+    });
+    return () => tl.kill();
+  }, []);
+
+    useEffect(() => {
+      const elements = document.querySelectorAll('.blog-anim');
+  
+      elements.forEach((element) => {
+        gsap.fromTo(
+          element,
+          {
+            opacity: 0,
+            y: 100,
+          },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            scrollTrigger: {
+              trigger: element,
+              start: 'top 85%',
+              ease: 'power2.easeOut',
+            },
+          }
+        );
+      });
+  
+      return () => {
+        gsap.timeline().clear();
+      };
+    }, []);
 
   return (
     <>
       <SmoothScroll />
-      <Cursor />
+      <Cursor isGelly={true}/>
 
       <PageLoader text={"Our Thoughts & Resources"} />
       <Modal />
@@ -37,7 +84,8 @@ export default function Blog({ posts, featuredPost, pagination, categories }) {
 
         <section className='blogs-sub-section'> 
           <div
-            className="blogs-heading"
+
+            className="blogs-heading blog-anim"
             data-cursor-size="10px"
             data-cursor-text=""
           >
@@ -46,27 +94,30 @@ export default function Blog({ posts, featuredPost, pagination, categories }) {
             </h1>
           </div>
 
-          <div>
+          <div className='blog-anim'>
             <CategoryList categories={categories} activeCategory={activeCategory} setActiveCategory={setActiveCategory} />
           </div>
 
           <ul className='ul-items'>
             {posts.map((post) => {
               return (
-                <li key={post.slug}>
+                <li key={post.slug} className='blog-anim'>
                   <PostCard post={post} />
                 </li>
               );
             })}
           </ul>
-          {pagination && (
-            <Pagination
-              addCanonical={false}
-              currentPage={pagination?.currentPage}
-              pagesCount={pagination?.pagesCount}
-              basePath={pagination?.basePath}
-            />
-          )}
+
+          <div className='blog-anim'>
+            {pagination && (
+              <Pagination
+                addCanonical={false}
+                currentPage={pagination?.currentPage}
+                pagesCount={pagination?.pagesCount}
+                basePath={pagination?.basePath}
+              />
+            )}
+          </div>
         </section>
 
         {/* ======================== Footer ====================== */}

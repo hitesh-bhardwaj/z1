@@ -1,17 +1,22 @@
-// components/WpBlogs/CategoryPosts.js
 import React from 'react';
 import PostCard from './PostCard';
 
 const CategoryPosts = ({ posts }) => {
   return (
     <div className='category-posts'>
-      <ul className='ul-items'>
-        {posts.map((post) => (
-          <li key={post.slug}>
-            <PostCard post={post} />
-          </li>
-        ))}
-      </ul>
+      {posts.length > 0 ? (
+        <ul className='ul-items'>
+          {posts.map((post) => (
+            <li key={post.slug} id='fadeUp'>
+              <PostCard post={post} />
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <div className='ul-items'>
+          <p className='no-blog-msg'>No blogs found for this category.</p>
+        </div>
+      )}
     </div>
   );
 };

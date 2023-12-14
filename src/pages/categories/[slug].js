@@ -1,5 +1,5 @@
-// pages/categories/[slug].js
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
 import { getAllCategories, getCategoryBySlug } from '@/lib/categories';
 import { getPostsByCategoryId } from '@/lib/posts';
 
@@ -10,18 +10,80 @@ import SmoothScroll from '@/components/utils/SmoothScroll';
 import Header from '@/components/Header/Header';
 import Footer from '@/components/Footer';
 import FooterMobile from '@/components/Mobile/FooterMobile';
-// import PageLoader from '@/components/pageLoader';
-import Modal from '@/components/PopupForm/formModal';
+import gsap from 'gsap';
+import ScrollTrigger from 'gsap/dist/ScrollTrigger';
+// import PageLoader from "@/components/pageLoader";
+import Modal from "@/components/PopupForm/formModal";
 
-const DEFAULT_POST_OPTIONS = {};
+gsap.registerPlugin(ScrollTrigger);
 
-export default function Category({ category, posts, categories }) {
+const animateHeroSection = () => {
+  const tl = gsap.timeline();
+  tl.fromTo(
+    '#blog',
+    {
+      rotationX: -80,
+      opacity: 0,
+      translateY: 300,
+      transformPerspective: '1000',
+      transformOrigin: 'top center',
+    },
+    {
+      duration: 1.3,
+      rotationX: 0,
+      opacity: 1,
+      translateY: 0,
+      stagger: 0.2,
+      delay: 0,
+    }
+  );
+};
+
+const animateFadeUpSection = () => {
+  const tl = gsap.timeline();
+  tl.fromTo(
+    '#fadeUp',
+    {
+      opacity: 0,
+      y: 100,
+    },
+    {
+      opacity: 1,
+      y: 0,
+      stagger: 0.2,
+      duration: 1,
+      delay: 0.4,
+      ease: 'power2.out',
+    }
+  );
+};
+
+const Category = ({ category, posts, categories }) => {
   const [activeCategory, setActiveCategory] = useState(`${category.name}`);
+  const router = useRouter();
+
+  useEffect(() => {
+    animateHeroSection();
+    animateFadeUpSection();
+
+    const handleRouteChange = () => {
+      // Trigger your animations here when the route changes
+      animateHeroSection();
+      animateFadeUpSection();
+    };
+
+    router.events.on('routeChangeComplete', handleRouteChange);
+
+    // Clean up the event listener when the component is unmounted
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange);
+    };
+  }, [router.events]);
 
   return (
     <>
       <SmoothScroll />
-      <Cursor />
+      <Cursor isGelly={true}/>
 
       {/* <PageLoader text={`${category.name} Blogs`} /> */}
       <Modal />
@@ -36,7 +98,7 @@ export default function Category({ category, posts, categories }) {
             </h1>
           </div>
 
-          <div>
+          <div id='fadeUp'>
             <CategoryList categories={categories} activeCategory={activeCategory} setActiveCategory={setActiveCategory} />
           </div>
 
@@ -56,6 +118,8 @@ export default function Category({ category, posts, categories }) {
     </>
   );
 }
+
+export default Category;
 
 export async function getStaticProps({ params = {} } = {}) {
   const { category } = await getCategoryBySlug(params?.slug);

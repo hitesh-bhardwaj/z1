@@ -13,7 +13,7 @@ const FeaturedPost = ({ post }) => {
   return (
     <div className="blog-featured-post">
       <div className='blog-feat-post-container'>
-        <div className='blog-feat-img-contain'>
+        <div className='blog-feat-img-contain' id='fadeUp'>
           <Image 
             src={post.featuredImage.sourceUrl}
             width={1000}
@@ -25,18 +25,18 @@ const FeaturedPost = ({ post }) => {
           <p className='blog-list-tag'>Featured</p>
         </div>
         <div className="featured-post-content">
-          <div className='feat-post-content-date'>
+          <div className='feat-post-content-date' id='fadeUp'>
             <p>By {post.author.name} / {formattedDate}</p>
           </div>
-          <h3 className='feat-post-title'>{post.title}</h3>
-          <div 
+          <h3 className='feat-post-title' data-jelly id='fadeUp'>{post.title}</h3>
+          <div id='fadeUp'
             dangerouslySetInnerHTML={{
             __html: post.excerpt,
             }}
             className='feat-post-discription'
             /> 
-          <Link data-cursor-size="60px" data-cursor-exclusion className='en-link-under feat-post-link' href={`/${post.slug}`}>
-            <span>Read More <img className='w-7 h-7' src='/assets/icons/arrow-right.svg'/></span>
+          <Link id='fadeUp' data-cursor-size="60px" data-cursor-exclusion className='en-link-under feat-post-link' href={`/${post.slug}`}>
+            <span>Read More <img className='w-7 h-7 dark:invert-0' src='/assets/icons/arrow-right.svg'/></span>
           </Link>       
         </div>
       </div>
