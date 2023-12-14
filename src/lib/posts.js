@@ -16,6 +16,7 @@ import {
   QUERY_POSTS_BY_CATEGORY_ID,
   QUERY_POST_SEO_BY_SLUG,
   QUERY_POST_PER_PAGE,
+  GET_HOME_PAGE_POSTS,
 } from '../data/posts';
 
 /**
@@ -311,7 +312,9 @@ export function mapPostData(post = {}) {
  * getRelatedPosts
  */
 
-export async function getRelatedPosts(categories, postId, count = 5) {
+export async function getRelatedPosts(categories, postId, count = 3) {
+  console.log('Input parameters:', categories, postId, count);
+
   if (!Array.isArray(categories) || categories.length === 0) return;
 
   let related = {
@@ -323,6 +326,8 @@ export async function getRelatedPosts(categories, postId, count = 5) {
       categoryId: related.category.databaseId,
       queryIncludes: 'archive',
     });
+
+    console.log('Related posts from GraphQL:', posts);
 
     const filtered = posts.filter(({ postId: id }) => id !== postId);
     const sorted = sortObjectsByDate(filtered);
@@ -418,4 +423,17 @@ export async function getPaginatedPosts({ currentPage = 1, ...options } = {}) {
       pagesCount,
     },
   };
+}
+
+
+// Posts for HomePage
+export async function getHomePagePosts() {
+
+  const apolloClient = getApolloClient();
+
+  const { data } = await apolloClient.query({
+    query: GET_HOME_PAGE_POSTS,
+  });
+
+  return data.posts.nodes;
 }

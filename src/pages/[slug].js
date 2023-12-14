@@ -3,27 +3,30 @@ import { Cursor } from "../../cursor/index";
 import SmoothScroll from "@/components/utils/SmoothScroll";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
+import { format } from 'date-fns';
 
 import Header from "@/components/Header/Header";
 import Footer from "@/components/Footer";
 import FooterMobile from "@/components/Mobile/FooterMobile";
 import PageLoader from "@/components/pageLoader";
-// import RelatedBlogs from "@/components/Blogs/RelatedBlogs";
 import BlogInfo from "@/components/WpBlogs/BlogInfo";
+import RelatedPosts from '@/components/WpBlogs/RelatedPosts';
+
 import { getApolloClient } from '@/lib/apollo-client';
-import { QUERY_POST_DETAILS, QUERY_ALL_POST_SLUGS, QUERY_ALL_POSTS } from '@/data/posts';
-import { format } from 'date-fns';
+import {  QUERY_ALL_POST_SLUGS } from '@/data/posts';
+import { getPostBySlug, getAllPosts } from '@/lib/posts';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const PostDetail = ({ post, allPosts }) => {
-  console.log("PostDetail Component Rendered"); // Check if component is rendering
-  console.log("Post Data:", post); // Check post data
-  console.log("All Posts Data:", allPosts);
+function PostDetail({ post, allPosts }) {
 
   const formattedDate = format(new Date(post.date), 'dd/MM/yyyy');
 
-    // Hero Section Animation
+  if (!post) {
+    return <div>Loading...</div>;
+  }
+
+  // Hero Section Animation
   useEffect(() => {
     const tl = gsap.timeline();
     tl.fromTo(
@@ -88,54 +91,31 @@ if (globalThis.innerWidth>1024) {
   });
 }
 
-// const getRelatedPosts = () => {
-//   console.log("getRelatedPosts called"); // Check if function is called
-//   const currentCategory = post?.categories?.edges[0]?.node?.name;
-//   console.log("Current Category:", currentCategory); // Debugging
-
-//   if (!currentCategory) {
-//     console.log("No current category found");
-//     return [];
-//   }
-
-//   const relatedPosts = allPosts
-//     .filter(({ categories }) => 
-//       categories.edges.some(categoryEdge => 
-//         categoryEdge.node.name === currentCategory
-//       )
-//     )
-//     .filter(p => p.slug !== post.slug) // Exclude the current post
-//     .slice(0, 3); // Get only 3 posts
-
-//   console.log("Related Posts:", relatedPosts); // Debugging
-//   return relatedPosts;
-// };
-
-  return (
-    <>
-      <SmoothScroll />
-      <Cursor />
-      <PageLoader text={post.title} />
-      
-      <main>
-        <Header />
-          
-          <div className="b__dt-main">
+return (
+      <>
+        <SmoothScroll />
+        <Cursor />
+        <PageLoader text={post.title} />
+        
+        <main>
+          <Header />
             
-            <div
-              className="b__dt-head-contain"
-              data-cursor-size="10px"
-              data-cursor-text="">
-              <h1 data-jelly id='blog'>{post.title}</h1>
-            </div>
-            
-            <div className="b__dt-main-blog" id="main-blog-container">
-                
-              <div className="b__dt-auth" id="left-section">
-                <BlogInfo avatar={post.author.node.avatar.url} author={post.author.node.name} date={formattedDate} shareLink={post.slug} />
+            <div className="b__dt-main">
+              
+              <div
+                className="b__dt-head-contain"
+                data-cursor-size="10px"
+                data-cursor-text="">
+                <h1 data-jelly id='blog'>{post.title}</h1>
               </div>
 
-              <div 
+              <div className="b__dt-main-blog" id="main-blog-container">
+                
+               <div className="b__dt-auth" id="left-section">
+                 <BlogInfo avatar={post.author.avatar.url} author={post.author.name} date={formattedDate} shareLink={post.slug} />
+               </div>
+
+               <div 
                 className="b__dt-content" 
                 id="right-section"
               >
@@ -143,12 +123,6 @@ if (globalThis.innerWidth>1024) {
                 dangerouslySetInnerHTML={{
                   __html: post.content,
                 }}/> 
-
-                {/* Displaying the category name */}
-                {/* <div>
-                  <h2>{post.categories.edges[0].node.name}</h2>
-                  <a href={post.slug}>{post.slug}</a>
-                </div> */}
 
                 <div className="blog__dt-tags">
                   {post.tags && post.tags.edges.map(({ node }) => (
@@ -161,61 +135,22 @@ if (globalThis.innerWidth>1024) {
             </div>
           </div>
 
-          {/* <div className="related-blogs">
-            <h2>Related Blogs</h2>
-            <div className="related-blogs-container">
-              {getRelatedPosts().map((relatedPost) => (
-                <div key={relatedPost.slug} className="related-blog">
-                  <h3>{relatedPost.title}</h3>
-                </div>
-              ))}
-            </div>
-          </div> */}
+          <RelatedPosts posts={allPosts} currentCategory={post.categories[0].name} currentSlug={post.slug} />
     
-            {/* =================== Related Articles =========================== */}
-            {/* <RelatedBlogs currentBlogLink={post.slug} category={post.categories.edges[0].node.name} /> */}
-            {/* =================== Related Articles END =========================== */}
-    
-            {/* ======================== Footer ====================== */}
-            <div className="desktop-footer">
-              <Footer />
-            </div>
-    
-            <div className="mobile-footer">
-              <FooterMobile />
-            </div>
-            {/* ======================== Footer END ====================== */}
-          </main>
-          
-        </>
-      );
-    }
+{/* ======================== Footer ====================== */}
+        <div className="desktop-footer">
+          <Footer />
+        </div>
+        <div className="mobile-footer">
+          <FooterMobile />
+        </div>
+{/* ======================== Footer END ====================== */}
+      </main>    
+    </>
+  );
+}
 
 export default PostDetail;
-
-export async function getStaticProps({ params }) {
-  const apolloClient = getApolloClient();
-  const { slug } = params;
-
-  // Fetch the details of the current post
-  const { data: postData } = await apolloClient.query({
-    query: QUERY_POST_DETAILS,
-    variables: { slug },
-  });
-
-  // Fetch all posts
-  const { data: allPostsData } = await apolloClient.query({
-    query: QUERY_ALL_POSTS, // Adjust this query to fetch all posts
-});
-
-return {
-    props: {
-        post: postData.post,
-        allPosts: allPostsData.posts.edges.map(edge => edge.node),
-    },
-    revalidate: 10,
-};
-}
 
 export async function getStaticPaths() {
   const apolloClient = getApolloClient();
@@ -232,6 +167,32 @@ export async function getStaticPaths() {
 
   return {
     paths,
-    fallback: 'blocking', // or 'false' or 'true'
+    fallback: 'blocking', 
+}
+}
+
+export async function getStaticProps({ params }) {
+  const { slug } = params;
+  const { post } = await getPostBySlug(slug);
+
+  const { posts: allPosts } = await getAllPosts();
+
+  return {
+    props: {
+      post,
+      allPosts,
+    },
+    revalidate: 10, 
   };
 }
+
+
+
+
+
+
+
+
+
+
+

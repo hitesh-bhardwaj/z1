@@ -4,7 +4,7 @@ import Pagination from '@/components/WpBlogs/Pagination';
 import PostCard from '@/components/WpBlogs/PostCard';
 import { getCategories } from '@/lib/categories';
 
-import { Cursor } from "../../../../cursor/index";
+import { Cursor } from "../../../cursor/index";
 import SmoothScroll from "@/components/utils/SmoothScroll";
 
 import Header from "@/components/Header/Header";  
@@ -13,8 +13,10 @@ import FooterMobile from "@/components/Mobile/FooterMobile";
 import PageLoader from "@/components/pageLoader";
 import Modal from "@/components/PopupForm/formModal";
 import CategoryList from '@/components/WpBlogs/CategoryList';
+import { useState } from 'react';
 
 export default function Blog({ posts, pagination, categories }) {
+  const [activeCategory, setActiveCategory] = useState('all');
 
   return (
     <>
@@ -39,7 +41,7 @@ export default function Blog({ posts, pagination, categories }) {
         </div>
 
         <div>
-          <CategoryList categories={categories} />
+          <CategoryList categories={categories} activeCategory={activeCategory} setActiveCategory={setActiveCategory} />
         </div>
         
         <ul className='ul-items'>
@@ -96,7 +98,7 @@ export async function getStaticProps({ params = {} } = {}) {
       categories,
       pagination: {
         ...pagination,
-        basePath: '/blog/page',
+        basePath: '/blog',
       },
     },
     revalidate: 10,

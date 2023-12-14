@@ -1,93 +1,61 @@
+// pages/categories/[slug].js
 import { useState } from 'react';
 import { getAllCategories, getCategoryBySlug } from '@/lib/categories';
 import { getPostsByCategoryId } from '@/lib/posts';
 
-import PostCard from '@/components/WpBlogs/PostCard';
-import Pagination from '@/components/WpBlogs/Pagination';
-import { Cursor } from "../../../cursor/index";
-import SmoothScroll from "@/components/utils/SmoothScroll";
-
-import Header from "@/components/Header/Header";  
-import Footer from "@/components/Footer";
-import FooterMobile from "@/components/Mobile/FooterMobile";
-import PageLoader from "@/components/pageLoader";
-import Modal from "@/components/PopupForm/formModal";
 import CategoryList from '@/components/WpBlogs/CategoryList';
+import CategoryPosts from '@/components/WpBlogs/CategoryPosts';
+import { Cursor } from '../../../cursor/index';
+import SmoothScroll from '@/components/utils/SmoothScroll';
+import Header from '@/components/Header/Header';
+import Footer from '@/components/Footer';
+import FooterMobile from '@/components/Mobile/FooterMobile';
+// import PageLoader from '@/components/pageLoader';
+import Modal from '@/components/PopupForm/formModal';
 
 const DEFAULT_POST_OPTIONS = {};
 
-export default function Category({ 
-  category, 
-  posts, 
-  postOptions = DEFAULT_POST_OPTIONS,
-  pagination, 
-  categories
-}) {
-
-  const [activeCategory, setActiveCategory] = useState('');
+export default function Category({ category, posts, categories }) {
+  const [activeCategory, setActiveCategory] = useState(`${category.name}`);
 
   return (
     <>
       <SmoothScroll />
       <Cursor />
 
-      <PageLoader text={`${category.name} Blogs`} />
+      {/* <PageLoader text={`${category.name} Blogs`} /> */}
       <Modal />
 
       <main>
         <Header />
 
-        <section className='blogs-sub-section'> 
-          <div
-            className="blogs-heading"
-            data-cursor-size="10px"
-            data-cursor-text=""
-          >
-            <h1 id="blog">
+        <section className='blogs-sub-section'>
+          <div className='blogs-heading' data-cursor-size='10px' data-cursor-text=''>
+            <h1 id='blog'>
               <span>{` ${category.name} Blogs`}</span>
             </h1>
           </div>
 
           <div>
-          <CategoryList
-            categories={categories}
-            activeCategory={activeCategory}
-            setActiveCategory={setActiveCategory}
-          />
+            <CategoryList categories={categories} activeCategory={activeCategory} setActiveCategory={setActiveCategory} />
           </div>
 
-          <ul className='ul-items'>
-            {posts.map((post) => {
-              return (
-                <li key={post.slug}>
-                  <PostCard post={post} />
-                </li>
-              );
-            })}
-          </ul>
-          {pagination && (
-            <Pagination
-              addCanonical={false}
-              currentPage={pagination?.currentPage}
-              pagesCount={pagination?.pagesCount}
-              basePath={pagination?.basePath}
-            />
-          )}
-          </section>
+          <CategoryPosts posts={posts} />
+        </section>
 
         {/* ======================== Footer ====================== */}
-          <section className="desktop-footer mt-150">
-            <Footer />
-          </section>
+        <section className='desktop-footer mt-150'>
+          <Footer />
+        </section>
 
-          <section className="mobile-footer">
-            <FooterMobile />
-          </section>
+        <section className='mobile-footer'>
+          <FooterMobile />
+        </section>
         {/* ======================== Footer END ====================== */}
-        </main>
-      </>
-    );
-  }
+      </main>
+    </>
+  );
+}
 
 export async function getStaticProps({ params = {} } = {}) {
   const { category } = await getCategoryBySlug(params?.slug);
@@ -117,17 +85,13 @@ export async function getStaticProps({ params = {} } = {}) {
 }
 
 export async function getStaticPaths() {
-  
   const { categories } = await getAllCategories();
 
-  const paths = categories.map((category) => {
-    const { slug } = category;
-    return {
-      params: {
-        slug,
-      },
-    };
-  });
+  const paths = categories.map((category) => ({
+    params: {
+      slug: category.slug,
+    },
+  }));
 
   return {
     paths,

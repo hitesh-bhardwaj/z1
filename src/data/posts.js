@@ -202,7 +202,7 @@ export const QUERY_POST_BY_SLUG = gql`
 export const QUERY_POSTS_BY_CATEGORY_ID_INDEX = gql`
   ${POST_FIELDS}
   query PostsByCategoryId($categoryId: Int!) {
-    posts(where: { categoryId: $categoryId, hasPassword: false }) {
+    posts(first: 10000, where: { categoryId: $categoryId, hasPassword: false }) {
       edges {
         node {
           ...PostFields
@@ -215,7 +215,7 @@ export const QUERY_POSTS_BY_CATEGORY_ID_INDEX = gql`
 export const QUERY_POSTS_BY_CATEGORY_ID_ARCHIVE = gql`
   ${POST_FIELDS}
   query PostsByCategoryId($categoryId: Int!) {
-    posts(where: { categoryId: $categoryId, hasPassword: false }) {
+    posts(first: 10000, where: { categoryId: $categoryId, hasPassword: false }) {
       edges {
         node {
           ...PostFields
@@ -241,7 +241,7 @@ export const QUERY_POSTS_BY_CATEGORY_ID_ARCHIVE = gql`
 export const QUERY_POSTS_BY_CATEGORY_ID = gql`
   ${POST_FIELDS}
   query PostsByCategoryId($categoryId: Int!) {
-    posts(where: { categoryId: $categoryId, hasPassword: false }) {
+    posts(first: 10000, where: { categoryId: $categoryId, hasPassword: false }) {
       edges {
         node {
           ...PostFields
@@ -413,10 +413,68 @@ export const QUERY_POST_DETAILS = gql`
 
 export const QUERY_ALL_POST_SLUGS = gql`
   query AllPostSlugs {
-    posts {
+    posts(first: 10000) {
       edges {
         node {
           slug
+        }
+      }
+    }
+  }
+`;
+
+export const GET_HOME_PAGE_POSTS = gql`
+  query postsforHomePage {
+    posts(first: 3) {
+      nodes {
+        categories {
+          nodes {
+            name
+            slug
+          }
+        }
+        featuredImage {
+          node {
+            sourceUrl
+          }
+        }
+        slug
+        title
+      }
+    }
+  }
+`;
+
+export const GET_POSTS_WITH_CATEGORY_NAME = gql`
+  query postsWithCategoryName($categoryName: String!) {
+    posts(first: 3, where: { categoryName: $categoryName }) {
+      edges {
+        node {
+          title
+          slug
+          content
+          author {
+            node {
+              name
+              avatar {
+                url
+              }
+            }
+          }
+          featuredImage {
+            node {
+              sourceUrl
+            }
+          }
+          date
+          categories {
+            edges {
+              node {
+                name
+                slug
+              }
+            }
+          }
         }
       }
     }

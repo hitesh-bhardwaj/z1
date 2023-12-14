@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import { getPaginatedPosts } from '@/lib/posts';
+import { getPaginatedPosts, sortStickyPosts } from '@/lib/posts';
 import { getCategories } from '@/lib/categories';
 
 import PostCard from '../components/WpBlogs/PostCard';
@@ -14,8 +14,9 @@ import FooterMobile from "@/components/Mobile/FooterMobile";
 import PageLoader from "@/components/pageLoader";
 import Modal from "@/components/PopupForm/formModal";
 import CategoryList from '@/components/WpBlogs/CategoryList';
+import FeaturedPost from '@/components/WpBlogs/FeaturedPost';
 
-export default function Blog({ posts, pagination, categories }) {
+export default function Blog({ posts, featuredPost, pagination, categories }) {
   const [activeCategory, setActiveCategory] = useState('all');
 
   return (
@@ -29,6 +30,11 @@ export default function Blog({ posts, pagination, categories }) {
       <main>
         <Header />
 
+          {/* Featured Post Component */}
+          {featuredPost && (
+            <FeaturedPost post={featuredPost} />
+          )}
+
         <section className='blogs-sub-section'> 
           <div
             className="blogs-heading"
@@ -41,11 +47,7 @@ export default function Blog({ posts, pagination, categories }) {
           </div>
 
           <div>
-            <CategoryList
-              categories={categories}
-              activeCategory={activeCategory}
-              setActiveCategory={setActiveCategory}
-            />
+            <CategoryList categories={categories} activeCategory={activeCategory} setActiveCategory={setActiveCategory} />
           </div>
 
           <ul className='ul-items'>
@@ -65,21 +67,21 @@ export default function Blog({ posts, pagination, categories }) {
               basePath={pagination?.basePath}
             />
           )}
-          </section>
+        </section>
 
         {/* ======================== Footer ====================== */}
-          <section className="desktop-footer mt-150">
-            <Footer />
-          </section>
+        <section className="desktop-footer mt-150">
+          <Footer />
+        </section>
 
-          <section className="mobile-footer">
-            <FooterMobile />
-          </section>
+        <section className="mobile-footer">
+          <FooterMobile />
+        </section>
         {/* ======================== Footer END ====================== */}
-        </main>
-      </>
-    );
-  }
+      </main>
+    </>
+  );
+}
 
 export async function getStaticProps({ params }) {
   const { slug } = params || {};
@@ -106,14 +108,25 @@ export async function getStaticProps({ params }) {
     };
   }
 
+  // Sort posts with sticky posts first
+  posts = sortStickyPosts(posts);
+
+  // Separate the featured post
+  const featuredPost = posts.find((post) => post.isSticky) || null;
+
+  // Remove the featured post from regular posts
+  posts = posts.filter((post) => !post.isSticky);
+
   return {
     props: {
       posts,
+      featuredPost,
       categories,
       pagination: {
         ...pagination,
-        basePath: slug ? `/categories/${slug}/page` : '/blog/page',
+        basePath: slug ? `/categories/${slug}/page` : '/blog',
       },
     },
+    revalidate: 10,
   };
 }
