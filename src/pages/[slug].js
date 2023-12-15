@@ -115,7 +115,7 @@ return (
       <>
         <SmoothScroll />
         <Cursor isGelly={true}/>
-        <PageLoader text={post.title} />
+        <PageLoader text={post.pageLoader.pageLoader} />
         
         <main>
           <Header />

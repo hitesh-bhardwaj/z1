@@ -32,6 +32,9 @@ export const POST_FIELDS = gql`
         }
       }
     }
+    pageLoader {
+      pageLoader
+    }
   }
 `;
 
@@ -104,6 +107,9 @@ export const QUERY_ALL_POSTS = gql`
               sizes
               id
             }
+          }
+          pageLoader {
+            pageLoader
           }
           modified
         }
@@ -189,6 +195,9 @@ export const QUERY_POST_BY_SLUG = gql`
           sizes
           id
         }
+      }
+      pageLoader {
+        pageLoader
       }
       modified
       databaseId

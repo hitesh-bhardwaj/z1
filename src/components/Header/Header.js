@@ -6,7 +6,7 @@ import Showreel from '../Home/Showreel';
 import Link from 'next/link';
 import gsap from 'gsap';
 import { useAudioPlayer } from '../Audio/AudioPlayer';
-import WavyLineCanvas from './WavyLineCanvas';
+// import WavyLineCanvas from './WavyLineCanvas';
 
 export default function Header() {
   const { togglePlay, isPlaying, playAudio, pauseAudio } = useAudioPlayer();
@@ -145,14 +145,14 @@ export default function Header() {
           </div>
         </div>
 
-        <motion.div 
+        {/* <motion.div 
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 6, transition: easeInOut }}
           className="MenuAudio"
           >
           <WavyLineCanvas />
-        </motion.div>
+        </motion.div> */}
 
         <motion.div
           initial={{ opacity: 0, y: -50 }}
