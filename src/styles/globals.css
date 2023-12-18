@@ -12076,7 +12076,6 @@ label.label:hover:before{
   content: '➜';
 }
 
-
 @media screen and (max-width: 480px){
   .c__testimain .slick-prev, 
   .c__testimain .slick-next{
@@ -12091,13 +12090,12 @@ label.label:hover:before{
 }
 }
 
-
 /* JD Page */
 .jd__bgcover{
   background: #0000009e;
   position: absolute;
   width: 100%;
-  top: -7vh;
+  top: -7.4vh;
   z-index: -1;
 }
 

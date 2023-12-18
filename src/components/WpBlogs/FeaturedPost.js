@@ -20,7 +20,7 @@ const FeaturedPost = ({ post }) => {
             height={1000}
             alt={post.title}
             title={post.title}
-            priority={true}
+            loading='lazy'
           />
           <p className='blog-list-tag'>Featured</p>
         </div>
@@ -28,7 +28,7 @@ const FeaturedPost = ({ post }) => {
           <div className='feat-post-content-date' id='fadeUp'>
             <p>By {post.author.name} / {formattedDate}</p>
           </div>
-          <h3 className='feat-post-title' data-jelly id='fadeUp'>{post.title}</h3>
+          <h1 className='feat-post-title' data-jelly id='fadeUp'>{post.title}</h1>
           <div id='fadeUp'
             dangerouslySetInnerHTML={{
             __html: post.excerpt,
@@ -36,7 +36,7 @@ const FeaturedPost = ({ post }) => {
             className='feat-post-discription'
             /> 
           <Link id='fadeUp' data-cursor-size="60px" data-cursor-exclusion className='en-link-under feat-post-link' href={`/${post.slug}`}>
-            <span>Read More <img className='w-7 h-7 dark:invert-0' src='/assets/icons/arrow-right.svg'/></span>
+            <span>Read More <img className='w-7 h-7 dark:invert-0' alt='arrow icon' title='arrow icon' src='/assets/icons/arrow-right.svg'/></span>
           </Link>       
         </div>
       </div>

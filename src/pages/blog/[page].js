@@ -18,6 +18,9 @@ import { useEffect, useState } from 'react';
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
+import { NextSeo } from 'next-seo';
+import Head from 'next/head';
+
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Blog({ posts, pagination, categories }) {
@@ -65,6 +68,75 @@ export default function Blog({ posts, pagination, categories }) {
 
   return (
     <>
+
+            <NextSeo
+              title="The Enigma Blog | Discover, Learn & Be Future Ready"
+              description="Dive into our curated collection of articles on UI/UX Design, Digital Marketing, Technology & Human Psychology. Stay updated with the latest trends."
+              openGraph={{
+                url: `https://weareenigma.com/blog/${pagination.currentPage}`,
+                title: "The Enigma Blog | Discover, Learn & Be Future Ready",
+                description:
+                  "Dive into our curated collection of articles on UI/UX Design, Digital Marketing, Technology & Human Psychology. Stay updated with the latest trends.",
+                images: [
+                  {
+                    url: "https://weareenigma.com/assets/featured-images/blog.png",
+                    width: 1200,
+                    height: 630,
+                    alt: "Blogs Feature Image",
+                    type: "image/png",
+                  },
+                  ],
+                siteName: "Enigma Digital",
+              }}
+
+            additionalMetaTags={[
+              {
+                name: "twitter:title",
+                content: "The Enigma Blog | Discover, Learn & Be Future Ready"
+              },
+              {
+                name: "twitter:description",
+                content: "Dive into our curated collection of articles on UI/UX Design, Digital Marketing, Technology & Human Psychology. Stay updated with the latest trends."
+              },
+              {
+                name: "twitter:image",
+                content: "https://weareenigma.com/assets/featured-images/blog.png"
+              },
+            ]}
+          />
+
+      <Head>
+        <link rel="canonical" href={`https://weareenigma.com/blog/${pagination.currentPage}`} />
+        <link rel="alternate" href={`https://weareenigma.com/blog/${pagination.currentPage}`} hreflang="x-default" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(
+              {
+                "@context": "https://schema.org",
+                "@type": "WebPage",
+                "mainEntityOfPage":{
+                  "@type": "WebPage",
+                  "@id": `https://weareenigma.com/blog/${pagination.currentPage}`
+                },
+                "name": "Blog",
+                "description": "Dive into our curated collection of articles on UI/UX Design, Digital Marketing, Technology & Human Psychology. Stay updated with the latest trends.",
+                "datePublished": "2023-01-01T12:00:00+05:30",
+                "dateModified": "2023-11-17T12:00:00+05:30",
+                "publisher": {
+                  "@type": "Organization",
+                  "name": "Enigma Digital",
+                  "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://weareenigma.com/assets/header-logo/enigma-en-logo.svg"
+                  }
+                }
+              }
+            ),
+          }}
+        />
+      </Head>
+
     <SmoothScroll />
     <Cursor isGelly={true}/>
 

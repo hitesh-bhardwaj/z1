@@ -42,7 +42,7 @@ const Pagination = ({ pagesCount, currentPage, basePath }) => {
       <div className='blog-pagi-container'>
         <div className='pagi-section'>  
           <Link className={`pagi-num ${hasPreviousPage ? '' : 'disabled'}`} href={hasPreviousPage ? `${path}${currentPage - 1}` : '#'}>
-            <img className='w-3 h-3 rotate-180' src='/assets/icons/next.png' alt='previous button' />
+            <img className='w-3 h-3 rotate-180' src='/assets/icons/next.png' alt='previous button' title='previous page'/>
           </Link>
 
           <ul className='pagi-number-container'>
@@ -56,7 +56,7 @@ const Pagination = ({ pagesCount, currentPage, basePath }) => {
           </ul>
 
           <Link className={`pagi-num ${hasNextPage ? '' : 'disabled'}`} href={hasNextPage ? `${path}${currentPage + 1}` : '#'}>
-            <img className='w-3 h-3' src='/assets/icons/next.png' alt='next button' />
+            <img className='w-3 h-3' src='/assets/icons/next.png' alt='next button' title='next page'/>
           </Link>
         </div>
       </div>

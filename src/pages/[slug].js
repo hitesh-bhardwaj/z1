@@ -15,16 +15,18 @@ import RelatedPosts from '@/components/WpBlogs/RelatedPosts';
 import { getApolloClient } from '@/lib/apollo-client';
 import { QUERY_ALL_POST_SLUGS } from '@/data/posts';
 import { getPostBySlug, getAllPosts } from '@/lib/posts';
+import { NextSeo } from "next-seo";
+import Head from "next/head";
 
 gsap.registerPlugin(ScrollTrigger);
 
 function PostDetail({ post, allPosts }) {
 
-  const formattedDate = format(new Date(post.date), 'dd/MM/yyyy');
-
   if (!post) {
     return <div>Loading...</div>;
   }
+
+  const formattedDate = format(new Date(post.date), 'dd/MM/yyyy');
 
   // Hero Section Animation
   useEffect(() => {
@@ -111,8 +113,82 @@ if (globalThis.innerWidth>1024) {
   });
 }
 
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": `https://weareenigma.com/${post.slug}`
+  },
+  "headline": post.seo.title,
+  "description": post.seo.description,
+  "author": {
+    "@type": "Person",
+    "name": post.author.name,
+    "url": "https://in.linkedin.com/in/bvarshney",
+  },  
+  "publisher": {
+    "@type": "Organization",
+    "name": "Enigma Digital",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://weareenigma.com/assets/header-logo/enigma-en-logo.svg"
+    }
+  },
+  "datePublished": post.date,
+  "dateModified": post.modified,
+};
+
 return (
       <>
+      <NextSeo
+        title={post.seo.title}
+        description={post.seo.description}
+        openGraph={{
+          type: 'article',
+          article: {
+            publishedTime: post.date,
+            modifiedTime: post.modified,
+          },
+          url: `https://weareenigma.com/${post.slug}`,
+          title: post.seo.title,
+          description: post.seo.description,
+          images: [
+            {
+              url: post.seo.openGraph.image.url,
+              width: 1200,
+              height: 630,
+              alt: post.slug,
+              type: "image/png",
+            },
+          ],
+          siteName: "Enigma Digital",
+        }}
+        additionalMetaTags={[
+          {
+            name: "twitter:title",
+            content: post.seo.title
+          },
+          {
+            name: "twitter:description",
+            content: post.seo.description
+          },
+          {
+            name: "twitter:image",
+            content: post.seo.openGraph.image.url
+          },
+        ]}
+      />
+      
+      <Head>
+        <link rel="canonical" href={`https://weareenigma.com/${post.slug}`} />
+        <link rel="alternate" href={`https://weareenigma.com/${post.slug}`} hreflang="x-default" />
+        <script 
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+      </Head>
+
         <SmoothScroll />
         <Cursor isGelly={true}/>
         <PageLoader text={post.pageLoader.pageLoader} />

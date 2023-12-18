@@ -14,6 +14,8 @@ import gsap from 'gsap';
 import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 // import PageLoader from "@/components/pageLoader";
 import Modal from "@/components/PopupForm/formModal";
+import { NextSeo } from 'next-seo';
+import Head from 'next/head';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -82,6 +84,74 @@ const Category = ({ category, posts, categories }) => {
 
   return (
     <>
+
+      <NextSeo
+        title={category.seo.title}
+        description={category.seo.description}
+        openGraph={{
+          url: `https://weareenigma.com/category/${category.slug}`,
+          title: category.seo.title,
+          description: category.seo.description,
+          images: [
+            {
+              url: category.seo.openGraph.image.url,
+              width: 400,
+              height: 600,
+              alt: 'Enigma Image',
+              type: 'image/png',
+            },
+          ],
+          siteName: 'Enigma Digital Website',
+        }}
+      
+        additionalMetaTags={[
+                {
+                  name: "twitter:title",
+                  content: `${category.seo.title}`
+                },
+                {
+                  name: "twitter:description",
+                  content: `${category.seo.description}`
+                },
+                {
+                  name: "twitter:image",
+                  content: `${category.seo.openGraph.image.url}`
+                },
+              ]}
+            />
+
+      <Head>
+        <link rel="canonical" href={`https://weareenigma.com/category/${category.slug}`} />
+        <link rel="alternate" href={`https://weareenigma.com/category/${category.slug}`} hreflang="x-default" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(
+              {
+                "@context": "https://schema.org",
+                "@type": "WebPage",
+                "mainEntityOfPage":{
+                  "@type": "WebPage",
+                  "@id": `https://weareenigma.com/category/${category.slug}`
+                },
+                "name": category.seo.title,
+                "description": category.seo.description,
+                "datePublished": "2023-10-01T10:00:00+05:30",
+                "dateModified": "2023-11-17T10:00:00+05:30",
+                "publisher": {
+                  "@type": "Organization",
+                  "name": "Enigma Digital",
+                  "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://weareenigma.com/assets/header-logo/enigma-en-logo.svg"
+                  }
+                }
+              }
+            ),
+          }}
+        />
+      </Head>
+
       <SmoothScroll />
       <Cursor isGelly={true}/>
 

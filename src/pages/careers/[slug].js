@@ -133,7 +133,7 @@ function JobDetail({ job }) {
 
       <Head>
         <link rel="canonical" href={`https://weareenigma.com/careers/${job.slug}`} />
-        <link rel="alternate" href={`https://weareenigma.com/careers/${job.slug}`} hreflang="x-default" />
+        <link rel="alternate" href={`https://weareenigma.com/careers/${job.slug}`} hrefLang="x-default" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
@@ -154,7 +154,7 @@ function JobDetail({ job }) {
           <span className='jd__bgcover h-[65vh] md:h-[57vh]'> 
           </span>
           <Image 
-            className='jd__bg absolute z-[-2] w-full h-[65vh] md:h-[57vh] top-[-7vh] object-cover'
+            className='jd__bg absolute z-[-2] w-full h-[65vh] md:h-[57vh] top-[-7.4vh] object-cover'
             src={`/assets/careers/${job.bgImage}`}
             alt={`Job Detail ${job.category} Backgorund Image`}
             width={1500}

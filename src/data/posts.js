@@ -199,6 +199,16 @@ export const QUERY_POST_BY_SLUG = gql`
       pageLoader {
         pageLoader
       }
+      seo {
+        canonicalUrl
+        description
+        title
+        openGraph {
+          image {
+            url
+          }
+        }
+      }
       modified
       databaseId
       title
