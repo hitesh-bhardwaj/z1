@@ -120,7 +120,7 @@ export default function App({ Component, pageProps }) {
       <SpeedInsights />
       <Analytics />
       <Script
-        strategy="afterInteractive"
+        strategy="worker"
         id="ms-clarity"
       >
           { `
@@ -130,12 +130,12 @@ export default function App({ Component, pageProps }) {
     
       <Script
         async
-        strategy="lazyOnload"
+        strategy="worker"
         src="https://www.googletagmanager.com/gtag/js?id=G-PKJE9LVB35"
       />
 
       <Script
-        strategy="afterInteractive"
+        strategy="worker"
         id="google-analytics"
         >
           {` window.dataLayer = window.dataLayer || [];
