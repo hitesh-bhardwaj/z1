@@ -114,7 +114,9 @@ export default function App({ Component, pageProps }) {
         ),
       }}
     />
-    </Head>    
+    </Head>  
+
+      {/* <Awards /> */}
 
       <Component {...pageProps} />
       <SpeedInsights />

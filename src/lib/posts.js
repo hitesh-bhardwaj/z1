@@ -425,6 +425,7 @@ export async function getPaginatedPosts({ currentPage = 1, ...options } = {}) {
   };
 }
 
+
 // Posts for HomePage
 export async function getHomePagePosts() {
 
