@@ -11,16 +11,15 @@ body {
 }
 
 #close_btn {
-  right: -32px;
-  top: 0px;
+  right: 2px;
+  top: 4px;
 }
 
 .plusEl {
   position: absolute;
-  width: 92px;
-  height: 92px; 
+  width: 150px;
+  height: 150px; 
 }
-
 
 #pluses {
   position: absolute;
@@ -43,7 +42,7 @@ body {
 }
 .rct {
     width:300px;
-    height:250px;
+    height:600px;
     position: absolute;
 }
 .rct2x {
