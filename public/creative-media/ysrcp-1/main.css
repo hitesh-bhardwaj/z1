@@ -5,7 +5,7 @@ body{
     font-family: sans-serif;
     box-sizing: border-box;
 }
-#adArea {
+#main {
 	background: #ededed;
     overflow: hidden;
     text-overflow: clip;
@@ -22,7 +22,7 @@ body{
     color: white;
 }
 .page{
-    background-image: url("/images/bg.jpg");
+    background-image: url("./images/bg.jpg");
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -33,16 +33,16 @@ body{
 }
 
 #page-1{
-    background-image: url("/images/bg1.jpg");
+    background-image: url("./images/bg1.jpg");
 }
 #page-2{
-    background-image: url("/images/bg2.jpg");
+    background-image: url("./images/bg2.jpg");
 }
 #page-3{
-    background-image: url("/images/bg3.jpg");
+    background-image: url("./images/bg3.jpg");
 }
 #page-4{
-    background-image: url("/images/bg4.jpg");
+    background-image: url("./images/bg4.jpg");
 }
 .center{
     text-align: center;
