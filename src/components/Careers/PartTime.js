@@ -1,4 +1,5 @@
 import jobs from "@/components/Careers/JobsData";
+import Link from "next/link";
 
 export default function PartTime() {
 
@@ -17,7 +18,7 @@ export default function PartTime() {
                     </p>
 
             {/* ========Latest Job Listing=============*/}
-            <div className="grid sm:grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 mt-12 md:mt-20 gap-12 2xl:gap-10 text-left">
+                    <div className="grid sm:grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 mt-12 md:mt-20 gap-12 2xl:gap-10 text-left">
                         {partTimeJobs.map((job) => (
 
                             <div key={job.id} className="flex relative overflow-hidden shadow-3xl dark:shadow rounded-2xl">

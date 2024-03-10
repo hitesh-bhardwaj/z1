@@ -7,8 +7,6 @@ export default function JobApply(){
     const [location, setLocation] = useState("");
     const [url, setUrl] = useState("");
     const [experiences, setExperiences] = useState([1]);
-    // const [selectedSkills, setSelectedSkills] = useState([]);
-    // const [showDropdown, setShowDropdown] = useState(false);
     const [selectedFileName, setSelectedFileName] = useState("");
     const [fileError, setFileError] = useState("");
     const [messageStatus, setMessageStatus] = useState(null); 
@@ -17,8 +15,6 @@ export default function JobApply(){
     const [errors, setErrors] = useState({});
     const dropdownRef = useRef(null);
     const inputRef = useRef(null);
-
-    // const skills = ["JavaScript", "React", "Node.js", "Python", "CSS"];
 
     // Handle Input Change
     const handleNameChange = (event) => {
@@ -53,17 +49,6 @@ export default function JobApply(){
             });
         }
     };
-
-    // const handleSkillChange = (event) => {
-    //     setSelectedSkills(event.target.value);
-    //     if (event.target.value.trim()) {
-    //         setErrors(prevErrors => {
-    //             const newErrors = { ...prevErrors };
-    //             delete newErrors.selectedSkills;
-    //             return newErrors;
-    //         });
-    //     }
-    // };
 
     useEffect(() => {
         function handleClickOutside(event) {
@@ -110,30 +95,6 @@ export default function JobApply(){
         setExperiences(experiences.filter((_, index) => index !== indexToRemove));
     };
 
-    // const toggleSkill = (skill) => {
-    //     let newSkills;
-    //     if (selectedSkills.includes(skill)) {
-    //         newSkills = selectedSkills.filter(s => s !== skill);
-    //     } else {
-    //         newSkills = [...selectedSkills, skill];
-    //     }
-    //     setSelectedSkills(newSkills);
-    
-    //     // Clear the custom skill input field after adding
-    //     if (skill === customSkill) {
-    //         setCustomSkill("");
-    //     }
-        
-    //     // Check if the skills array is not empty and remove error if any
-    //     if (newSkills.length > 0) {
-    //         setErrors(prevErrors => {
-    //             const newErrors = { ...prevErrors };
-    //             delete newErrors.selectedSkills;
-    //             return newErrors;
-    //         });
-    //     }
-    // };
-
     const onFileChange = (event) => {
         const file = event.target.files[0];
         if (file && (file.type === "application/pdf" || file.type === "application/vnd.openxmlformats-officedocument.wordprocessingml.document")) {
@@ -159,9 +120,6 @@ export default function JobApply(){
         if (!number.trim()) {
             newErrors.number = "Number is required.";
         }
-        // if (selectedSkills.length === 0) {
-        //     newErrors.selectedSkills = "Please select at least one skill.";
-        // }
         if (!selectedFileName) {
             newErrors.selectedFileName = "Please upload your resume.";
         }
@@ -175,7 +133,6 @@ export default function JobApply(){
         message += `Email: ${data.email}\n`;
         message += `Number: ${data.number}\n`;
         message += `Location: ${data.location}\n`;
-        // message += `Skills: ${data.skills.join(', ')}\n`;
         message += `Portfolio URL: ${data.url}\n\n`;
     
         message += "Experience Details:\n";
@@ -203,7 +160,6 @@ export default function JobApply(){
         setLocation("");
         setUrl("");
         setExperiences([]);
-        // setSelectedSkills([]);
         setSelectedFileName("");
         setFileError("");
         document.getElementById("dropzone-file").value = ""; // Reset file input
@@ -247,7 +203,6 @@ export default function JobApply(){
             email: email,
             number: number,
             location: location,
-            // skills: selectedSkills,
             url: url,
             experiences: experiences.map((_, index) => {
                 const years = parseInt(event.target[`years_${index}`].value) || 0;
@@ -342,44 +297,6 @@ export default function JobApply(){
                     <input type="text" name="location" value={location} onChange={(e) => setLocation(e.target.value)} placeholder="Location" className="tw-border bg-white font-body text-xl px-4 py-3 rounded-md focus:ring-2 ring-primary duration-300"/>
                 </div>
 
-                {/* <div className="font-body mb-14 w-full">
-                    <h4 className="text-3xl font-medium mb-4">
-                        Skills
-                    </h4>
-                    <div className="relative w-full">
-                    <input 
-                        type="text"
-                        value={selectedSkills.join(", ")}
-                        placeholder="Select Skills*"
-                        onChange={handleSkillChange}
-                        onClick={() => setShowDropdown(!showDropdown)} 
-                        ref={inputRef}
-                        readOnly
-                        className={`bg-white w-full font-body text-xl px-4 py-3 rounded-md focus:ring-2 mb-2 ring-primary duration-300 ${errors.selectedSkills ? 'border-red-400 border ring-red-500' : ''}`}
-                        />
-                    {errors.selectedSkills && <p className="text-red-400 font-medium text-md mt-2">{errors.selectedSkills}</p>}
-                        
-                        {showDropdown && (
-                            <div ref={dropdownRef} className="absolute bg-white z-10 w-full border rounded-md shadow-lg">
-                                {skills.map(skill => (
-                                    <div key={skill} className="flex items-center border-b border-black/5">
-                                        <label className="tracking-wide text-lg py-3 px-6 hover:bg-primary hover:text-white w-full flex items-center text-black/60 duration-150 hover:text-black" htmlFor={skill}><input id={skill} type="checkbox" checked={selectedSkills.includes(skill)} onChange={() => toggleSkill(skill)} className="mr-2 w-4 h-4 ring-primary"/> {skill}</label>
-                                    </div>
-                                ))}
-                                <div className="flex items-center px-5 py-2">
-                                    <input 
-                                        type="text"
-                                        value={customSkill}
-                                        onChange={(e) => setCustomSkill(e.target.value)}
-                                        placeholder="Add Other Skills Here"
-                                        className="w-full font-body text-lg px-4 py-2 rounded-md border-2 border-primary duration-300"
-                                    />
-                                    <button type="button" onClick={() => toggleSkill(customSkill)} className="ml-2 text-white bg-primary py-2 rounded font-medium text-xl px-8 hover:bg-blue-600">Add</button>
-                                </div>
-                            </div>
-                        )}
-                    </div>
-                </div> */}
             </div>
 
             <div className="font-body mb-10">
