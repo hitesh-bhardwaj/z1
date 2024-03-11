@@ -113,55 +113,46 @@
 // };
 
 
-import { extname, join } from "path";
-import { promises as fs } from "fs";
-import * as dateFn from "date-fns";
+import nextConnect from 'next-connect'
+import { IncomingForm } from 'formidable';
+import fs from 'fs';
+import path from 'path';
 
-export default async function handler(req, res) {
-  if (req.method !== "POST") {
-    // Only allow POST requests
-    return res.status(405).json({ error: "Method not allowed" });
-  }
+const handler = nextConnect({
+  // Handle any other HTTP method
+  onNoMatch: (req, res) => {
+    res.status(405).json({ error: 'Method not allowed' });
+  },
+});
 
-  const formData = await req.formData();
-  const file = formData.get("file");
+handler.post(async (req, res) => {
+  const form = new IncomingForm();
+  form.parse(req, async (err, fields, files) => {
+    if (err) return res.status(500).json({ error: 'Error parsing the form data.' });
 
-  if (!file) {
-    return res.status(400).json({ error: "File is required." });
-  }
+    // Assuming the name of the file field is 'file'
+    const { file } = files;
+    const tempPath = file.filepath;
+    const filename = file.originalFilename;
+    const newPath = path.join(process.cwd(), 'public/uploads', filename);
 
-  const buffer = Buffer.from(await file.arrayBuffer());
-  const uploadDate = dateFn.format(new Date(), "dd-MM-yyyy");
-  const uploadDir = join(process.cwd(), "/public/uploads", uploadDate);
+    // Move the file from the temp path to the new path
+    try {
+      fs.rename(tempPath, newPath, (err) => {
+        if (err) throw err;
+        res.status(200).json({ message: 'File uploaded successfully', filePath: `/uploads/${filename}` });
+      });
+    } catch (error) {
+      res.status(500).json({ error: 'Failed to move the file.' });
+    }
+  });
+});
 
-  // Ensure the upload directory exists
-  try {
-    await fs.stat(uploadDir);
-  } catch {
-    await fs.mkdir(uploadDir, { recursive: true });
-  }
+export const config = {
+  api: {
+    bodyParser: false, // Disabling bodyParser is important for handling multipart/form-data
+  },
+};
 
-  // Generate a unique file name
-  const originalFilename = file.name;
-  const fileExtension = extname(originalFilename);
-  const sanitizedFilename = sanitizeFilename(originalFilename.replace(fileExtension, ''));
-  const uniqueSuffix = `${Date.now()}_${Math.round(Math.random() * 1E9)}`;
-  const filename = `${sanitizedFilename}_${uniqueSuffix}${fileExtension}`;
+export default handler;
 
-  try {
-    await fs.writeFile(join(uploadDir, filename), buffer);
-
-    // Adjust the base URL as per your environment. Use an environment variable or a conditional check.
-    const baseUrl = process.env.BASE_URL || "https://your-deployment-url.com";
-    const filePath = `${baseUrl}/uploads/${uploadDate}/${filename}`;
-
-    return res.status(200).json({ message: "File uploaded successfully", path: filePath });
-  } catch (error) {
-    console.error("Error uploading file:", error);
-    return res.status(500).json({ error: "Failed to upload file" });
-  }
-}
-
-function sanitizeFilename(filename) {
-  return filename.replace(/[^a-z0-9_\-\.]/gi, "_");
-}
