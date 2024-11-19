@@ -3,7 +3,7 @@ import "react-creative-cursor/dist/styles.css";
 import SmoothScroll from "@/components/utils/SmoothScroll";
 import { NextSeo } from "next-seo";
 
-import Header from "@/components/Header/Header";  
+import Header from "@/components/Header/Header";
 import HomeAero from "@/components/Home/HomeAero";
 import HeroDesktop from "@/components/Home/HeroDesktop";
 import Footer from "@/components/Footer";
@@ -63,7 +63,6 @@ export default function Home({ recentPosts }) {
             },
           ]}
         />
-
     <Head>
       <link rel="canonical" href="https://weareenigma.com/" />
       <link rel="alternate" href="https://weareenigma.com/" hreflang="x-default" />

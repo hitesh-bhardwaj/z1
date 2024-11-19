@@ -1,5 +1,4 @@
 import jobs from "@/components/Careers/JobsData";
-import Link from "next/link";
 
 export default function FullTime() {
 
@@ -32,7 +31,7 @@ export default function FullTime() {
                             </div>
                             )}
 
-                            <a href={`/careers/${job.slug}`} className="dark:bg-white2 dark:shadow content-between grid-rows-[auto auto auto auto] grid group font-body px-7 2xl:px-7 xl:px-5 py-10">
+                            <a href={`/careers/${job.slug}`} className={`dark:bg-white2 dark:shadow content-between grid-rows-[auto auto auto auto] grid group font-body px-7 2xl:px-7 xl:px-5 py-10 ${job.status === 'Closed' ? 'pointer-events-none cursor-default' : ''} `}>
                                     <div className="mb-8 flex items-center justify-start gap-4 md:gap-6">
                                         <img alt="Job Post Image" src={`/assets/careers/listing/${job.image}`} className="w-20 lg:w-24 h-20 lg:h-24"/>
                                         <div>
@@ -53,7 +52,7 @@ export default function FullTime() {
                                         ))}
                                     </div>
                                     
-                                    <button className="md:h-16 h-14 flex items-center justify-center tw-primary block w-full group-hover:bg-primary group-hover:shadow-lg duration-300 group-hover:text-white border-primary border-2 rounded-full">
+                                    <button className="md:h-16 h-14 items-center justify-center tw-primary block w-full group-hover:bg-primary group-hover:shadow-lg duration-300 group-hover:text-white border-primary border-2 rounded-full">
                                         <span className="flex gap-5 items-center justify-center font-medium text-xl md:text-2xl font-body">
                                             View Details
                                             <span>

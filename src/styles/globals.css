@@ -34,65 +34,6 @@
   --bezier3: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-[data-scrollbar] {
-  position: fixed !important;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100vw;
-  overflow: hidden;
-}
-
-::-webkit-scrollbar {
-  display: none;
-}
-
-::selection {
-  color: var(--white);
-  background: var(--primary);
-}
-
-.c-cursor__inner {
-  font-family: "ClashDisplay";
-  font-weight: 400;
-  font-size: 0.9vw !important;
-}
-
-#canvas-webgl{
-  display: none;
-  visibility: hidden !important;
-}
-
-.dark #canvas-webgl{
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: -99;
-  display: block;
-  filter: invert(1);
-  visibility: visible !important;
-}
-
-.dark .projectNoInvert img{
-  filter: invert(0) !important;
-}
-
-.color-primary{
-  color: var(--primary) !important;
-}
-
-.dark .color-primary{
-  filter: invert(1);
-}
-
-.bgc-primary{
-  background: var(--primary);
-}
-.dark .bgc-primary{
-  background: var(--dark-primary) !important;
-}
-
 /*01. Fonts */
 /*==============FONTS===================*/
 @font-face {
@@ -169,8 +110,66 @@
        font-display: swap;
        font-style: normal;
 }
-
 /*==============FONTS END===================*/
+
+[data-scrollbar] {
+  position: fixed !important;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  overflow: hidden;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+::selection {
+  color: var(--white);
+  background: var(--primary);
+}
+
+.c-cursor__inner {
+  font-family: "ClashDisplay";
+  font-weight: 400;
+  font-size: 0.9vw !important;
+}
+
+#canvas-webgl{
+  display: none;
+  visibility: hidden !important;
+}
+
+.dark #canvas-webgl{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -99;
+  display: block;
+  filter: invert(1);
+  visibility: visible !important;
+}
+
+.dark .projectNoInvert img{
+  filter: invert(0) !important;
+}
+
+.color-primary{
+  color: var(--primary) !important;
+}
+
+.dark .color-primary{
+  filter: invert(1);
+}
+
+.bgc-primary{
+  background: var(--primary);
+}
+.dark .bgc-primary{
+  background: var(--dark-primary) !important;
+}
 
 /*==============Padding And Margins==============*/
 .pb-100 {
@@ -1080,7 +1079,7 @@ button:focus {
 
 .right-section-header {
   display: flex;
-  margin-right: 3.5vw;
+  /* margin-right: 3.5vw; */
   justify-content: flex-start;
   align-items: center;
 }
@@ -1177,6 +1176,11 @@ button:focus {
 
 #menu {
   display: none;
+}
+
+.menu-svg-icon{
+  width: 100px;
+  height: 100px;
 }
 
 svg {
@@ -5901,6 +5905,15 @@ body.loading {
 
 /* ================== Blog Details ================================ */
 
+a[data-type="link"] {
+  color: var(--primary);
+  font-weight: 500;
+}
+a[data-type="link"]:hover {
+  color: var(--primary);
+  text-decoration: underline;
+}
+
 .list-blog {
   display: list-item;
   margin-left: 1.3vw;
@@ -6824,6 +6837,7 @@ a:hover {
   }
 
   #header-fixed svg {
+    height: 85px;
     width: 85px;
   }
 }
@@ -7043,15 +7057,16 @@ a:hover {
 
   #header-fixed svg{
     width: 100px;
+    height: 100px;
   }
 
   .showreel .btn-primary {
     font-size: 3vw;
   }
 
-  .right-section-header{
+  /* .right-section-header{
     margin-right: 10vw;
-  }
+  } */
 
   .loader-wrap .loader-wrap-heading p {
     font-size: 48px;
@@ -8261,9 +8276,9 @@ a:hover {
   margin: 15vh auto 0 !important;
 }
 
-.related-box-img .box-img-content.service__d:last-child{
+/* .related-box-img .box-img-content.service__d:last-child{
   display: none;
-}
+} */
 
 
   /* Blog Details END */
@@ -8497,7 +8512,7 @@ a:hover {
   }
 
   .right-section-header {
-    margin-right: 10vw;
+    /* margin-right: 10vw; */
     margin-top: 5px;
   }
 
@@ -8598,6 +8613,7 @@ a:hover {
 
   #header-fixed svg{
     width: 100px;
+    height: 100px;
   }
 
   .header-right-button {
@@ -8623,6 +8639,7 @@ a:hover {
 
   .menu svg {
     width: 80px;
+    height: 80px;
   }
 
   .menu-fixed {
@@ -10320,6 +10337,7 @@ a:hover {
 }
 #header-fixed svg{
   width: 85px;
+  height: 85px;
 }
 
 .menu-links{
@@ -12057,7 +12075,7 @@ label.label:hover:before{
   top: 12px;
   border-radius: 5px;
   padding: 2px 10px;
-  font-size: 1vw;
+  font-size: 16px;
   color: white;
 }
 
@@ -12066,15 +12084,19 @@ label.label:hover:before{
 }
 
 .status-closed {
-  background-color: #FF7D7D;
+  background-color: #ff4747;
 }
 
 .status-hot {
-  background-color: #7DB5FF;
+  background-color: #ff7d19;
 }
 
 .status-new {
   background-color: #FF8BE6;
+}
+
+.status-urgent {
+  background-color: #218cff;
 }
 
 .c__testimain .slick-list{

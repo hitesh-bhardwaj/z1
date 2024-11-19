@@ -8,7 +8,6 @@ import {
   Text,
 } from "@chakra-ui/react";
 import React, { useState, useEffect } from "react";
-import { sendContactForm } from "../../../lib/api";
 import Router from "next/router";
 
 const initValues = {
@@ -35,26 +34,42 @@ export default function Home() {
       ...prev,
       values: {
         ...prev.values,
-        [target.name]: [target.value],
+        [target.name]: target.value, // Corrected value assignment
       },
     }));
 
   const onSubmit = async () => {
+    // Validate form fields
+    const hasEmptyFields = Object.values(values).some(value => !value);
+    if (hasEmptyFields) {
+      setState((prev) => ({
+        ...prev,
+        error: "Please fill in all required fields.",
+      }));
+      return;
+    }
+
     setState((prev) => ({
       ...prev,
       isLoading: true,
     }));
 
     try {
-      await sendContactForm(values);
+      const res = await fetch("/api/resend-contact", {
+        method: "POST",
+        body: JSON.stringify(values),
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+      });
+
+      if (!res.ok) throw new Error("Failed to send message");
+
       setTouched({});
       setState(initState);
-      // Once the form is successfully submitted, set isMessageSent to true
       setIsMessageSent(true);
-      // Redirect to the "Message Sent" page after a short delay
-        setTimeout(() => {
-          Router.push("/thank-you");
-        }, 1000);
+      
+      setTimeout(() => {
+        Router.push("/thank-you");
+      }, 1000);
     } catch (error) {
       setState((prev) => ({
         ...prev,
@@ -68,7 +83,7 @@ export default function Home() {
     if (isMessageSent) {
       setTimeout(() => {
         setIsMessageSent(false);
-      }, 2000); // 3 seconds
+      }, 2000);
     }
   }, [isMessageSent]);
 
@@ -113,7 +128,6 @@ export default function Home() {
           onBlur={onBlur}
           placeholder="Email*"
           className="form-control"
-          required
         />
         <FormErrorMessage>Email is Required</FormErrorMessage>
       </FormControl>
@@ -160,7 +174,7 @@ export default function Home() {
           variant="outline"
           colorScheme="blue"
           disabled={
-            !values.name || !values.email || !values.subject || !values.message
+            !values.name || !values.email || !values.number || !values.message // Corrected validation check
           }
           onClick={onSubmit}
           isLoading={isLoading}
@@ -182,3 +196,4 @@ export default function Home() {
     </Container>
   );
 }
+

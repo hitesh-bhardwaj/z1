@@ -65,7 +65,7 @@ if (globalThis.innerWidth > 1024) {
   }, []);
 }
 
-useEffect(() => {
+useEffect(() => {  
 
   const menuLoaderBar = document.querySelectorAll(".menuLoaderBar")
 
@@ -86,9 +86,7 @@ useEffect(() => {
       delay: 1.2,
       css: { display: "none" },
     });
-  } else if (
-    state.clicked === true || 
-    (state.clicked === true && state.initial === null)) 
+  } else if (state.clicked === true || (state.clicked === true && state.initial === null)) 
   {
     gsap.to([menu.current], {
       duration: 0,
@@ -277,7 +275,7 @@ useEffect(() => {
                 </div>
                 <div className={styles.contentRightBodyTop}>
                   <div className={styles.contentTitle} ref={link14}>
-                    work with us
+                    for new business
                   </div>
                   <div className={styles.contentRightBottom}>
                     <div className={styles.socialItem} ref={link15} data-cursor-opaque data-cursor-size="50px">
