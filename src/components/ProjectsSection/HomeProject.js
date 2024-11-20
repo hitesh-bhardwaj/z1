@@ -1,7 +1,7 @@
 import styles from './styles.module.css'
 import { projects } from './ProjectData';
 import Double from './Double';
-import { useRef, useEffect } from 'react';
+import {useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import SplitType from "split-type";

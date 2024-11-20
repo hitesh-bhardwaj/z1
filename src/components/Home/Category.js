@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 
@@ -62,7 +62,7 @@ export default function Category() {
     <>
       <div ref={catSection} className="category-section-new">
         <section id="services">
-          <div className="container">
+          <div className="w-[80%] max-w-full mx-auto">
             <div className="accordion-container flex-column-center">
               <ul className="accordion-list accordion">
                 <li className="accordion-list-item">

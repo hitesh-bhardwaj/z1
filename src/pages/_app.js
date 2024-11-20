@@ -3,8 +3,11 @@ import { Analytics } from "@vercel/analytics/react";
 import Script from "next/script";
 import { DefaultSeo } from "next-seo";
 import Head from "next/head";
+import { MediaContextProvider , mediaStyles } from "@/components/media";
 import { SpeedInsights } from '@vercel/speed-insights/next';
-import { GoogleTagManager } from '@next/third-parties/google'
+// import { GoogleTagManager } from '@next/third-parties/google'
+// import {ReactLenis} from ""
+import {ReactLenis} from "lenis/react"
 
 export default function App({ Component, pageProps }) {
   return (
@@ -122,7 +125,12 @@ export default function App({ Component, pageProps }) {
           }}
         />
       </Head>
+      <MediaContextProvider>
+      <ReactLenis root options={{lerp:0.08}}>
       <Component {...pageProps} />
+      </ReactLenis>
+
+      </MediaContextProvider>
       <SpeedInsights />
       <Analytics />
       <Script
@@ -140,7 +148,7 @@ export default function App({ Component, pageProps }) {
         src="https://www.googletagmanager.com/gtag/js?id=G-PKJE9LVB35"
       /> */}
 
-      <GoogleTagManager gtmId="GTM-PV4GH9JJ" />
+      {/* <GoogleTagManager gtmId="GTM-PV4GH9JJ" /> */}
 
       {/* <Script
         strategy="worker"

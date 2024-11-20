@@ -4,7 +4,7 @@ import config from '../../../../package.json';
 
 const MAX_NUM_PAGES = 9;
 
-const { homepage = '' } = config;
+// const { homepage = '' } = config;
 
 const Pagination = ({ pagesCount, currentPage, basePath }) => {
   const path = `${basePath}/`;

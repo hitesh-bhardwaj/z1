@@ -157,6 +157,8 @@ export default function ConceptScrollMobile() {
 
   return (
     <>
+    <section id="concept-scroll-mobile">
+
       <div className="mobile-concept">
         <div className="mobli-cont mobl">
           <div className="en-bg" />
@@ -170,6 +172,7 @@ export default function ConceptScrollMobile() {
           </div>
         </div>
       </div>
+    </section>
     </>
   );
 }

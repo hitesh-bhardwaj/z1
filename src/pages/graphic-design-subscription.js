@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { useRef } from "react";
-import Lenis from '@studio-freight/lenis';
 import styles from "../styles/designLanding.module.css";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";

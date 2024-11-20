@@ -25,32 +25,31 @@ export default function Aerosol() {
   }, []);
 
   useEffect(() => {
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".aero-hover",
-        start: "-200 top",
-      },
-    });
-    
-    const demoHeader = document.querySelectorAll(".aero-demo p");
+    const ctx = gsap.context(()=>{
 
-    // Header
-    tl.fromTo(
-      demoHeader,
-      {
-        opacity: 0,
-        yPercent: 320,
-        skewY: 30,
-      },
-      {
-        opacity: 1,
-        yPercent: 0,
-        skewY: 0,
-        duration: 3,
-        ease: "expo.out",
-      },
-      0
-    );
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".aero-hover",
+          start: "-200 top",
+        },
+      });
+      
+      const demoHeader = document.querySelectorAll(".aero-demo p");
+  
+      // Header
+      tl.from(
+        demoHeader,
+        {
+          opacity: 0,
+          yPercent: 320,
+          skewY: 30,
+          duration: 3,
+          ease: "expo.out",
+        },
+        
+      );
+    })
+    return()=>ctx.revert();
   });
 
   return (
@@ -63,11 +62,7 @@ export default function Aerosol() {
             <br />
             when you say hello
           </p>
-          <p className="aero-mob-1">
-            good things
-            <br /> happen when 
-            <br />you say hello
-          </p>
+          
           <HomeParticles />
         </div>
 

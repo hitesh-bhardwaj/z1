@@ -62,6 +62,13 @@ module.exports = {
       screens: {
         '2xl': '1280px',
         '3xl': '1680px',
+        mobile: {
+          max: '540px'
+        },
+        tablet: {
+        
+          max: '1024px'
+        }
       },
     },
   },

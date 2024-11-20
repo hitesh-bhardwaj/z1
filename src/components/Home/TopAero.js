@@ -25,47 +25,40 @@ export default function Aerosol() {
   }, []);
 
   useEffect(() => {
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".top-aero-hover",
-        start: "-200 top",
-      },
-    });
+    const ctx = gsap.context(()=>{
 
-    const demoHeader = document.querySelectorAll(".top-aero-demo p");
-
-    // Header
-    tl.fromTo(
-      demoHeader,
-      {
-        opacity: 0,
-        yPercent: 320,
-        skewY: 30,
-      },
-      {
-        opacity: 1,
-        yPercent: 0,
-        skewY: 0,
-        duration: 3,
-        ease: "expo.out",
-      },
-      0
-    );
-  });
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".top-aero-hover",
+          start: "-200 top",
+        },
+      });
+  
+      const demoHeader = document.querySelectorAll(".top-aero-demo p");
+  
+      // Header
+      tl.from(
+        demoHeader,
+        {
+          opacity: 0,
+          yPercent: 320,
+          skewY: 30,
+          duration: 3,
+          ease: "expo.out",
+        },
+        
+      );
+    })
+    return ()=>ctx.revert();
+  },[]);
 
   return (
     <>
       <div className="top-aero-hover">
         <div className="text-container top-aero-demo">
-          <p className="aero-desk-1">
+          <p className="aero-desk-1 w-[70%] tablet:w-full">
             we make cool things
-            <br />
             that do great business
-          </p>
-          <p className="aero-mob-1">
-            we make cool <br/> 
-            things that do 
-            <br /> great business
           </p>
           <TopHomeParticles />
         </div>

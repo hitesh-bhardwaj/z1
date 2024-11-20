@@ -14,7 +14,7 @@ export default function HomeVideoSection() {
         scrollTrigger: {
           trigger: ".video-content-box",
           start: "top 85%",
-          markers: false,
+         
         },
       });
       tl.from(".para-anim-mobile", {
@@ -26,7 +26,7 @@ export default function HomeVideoSection() {
       });
     });
     return () => ctx.revert();
-  });
+  },[]);
 
   return (
     <>

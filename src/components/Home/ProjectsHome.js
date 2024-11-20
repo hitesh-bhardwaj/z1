@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import styles from "@/styles/project.module.css";
+import styles from "../../styles/project.module.css"
 import gsap from "gsap";
 import Image from "next/image";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";

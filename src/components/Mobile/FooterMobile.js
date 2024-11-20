@@ -43,7 +43,7 @@ export default function FooterMobile() {
   });
 
   return (
-    <div>
+    <footer id="footer-mobile">
       <div className="contact mobile-footer">
         <div className="contact-content">
           <div className="contact-content-heading">
@@ -120,6 +120,6 @@ export default function FooterMobile() {
           </div>
         </div>
       </div>
-    </div>
+    </footer>
   );
 }
