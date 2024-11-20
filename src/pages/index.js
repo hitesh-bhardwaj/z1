@@ -61,7 +61,7 @@ export default function Home({ recentPosts }) {
             content: "https://weareenigma.com/assets/featured-images/index.png",
           },
         ]}
-      />
+      /> 
       <Head>
         <link rel="canonical" href="https://weareenigma.com/" />
         <link
