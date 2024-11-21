@@ -1,7 +1,10 @@
-import React, { useEffect, useRef, useState } from "react";
+"use client"
+import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import Link from "next/link";
 import { useRouter } from "next/router";
+
+
 
 const handleHover = (e) => {
   gsap.to(e.target, {
@@ -20,7 +23,10 @@ const handleHoverExit = (e) => {
   });
 };
 
-const Menu = ({ state }) => {
+const Menu = ({ state,locomotiveScroll }) => {
+
+
+
   const router = useRouter();
   const menu = useRef();
   const revealMenu = useRef();

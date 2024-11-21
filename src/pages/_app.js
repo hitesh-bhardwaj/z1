@@ -5,11 +5,26 @@ import { DefaultSeo } from "next-seo";
 import Head from "next/head";
 import { MediaContextProvider , mediaStyles } from "@/components/media";
 import { SpeedInsights } from '@vercel/speed-insights/next';
-// import { GoogleTagManager } from '@next/third-parties/google'
-// import {ReactLenis} from ""
-import {ReactLenis} from "lenis/react"
+import LocomotiveScroll from "locomotive-scroll";
+import { useEffect } from "react";
+
 
 export default function App({ Component, pageProps }) {
+  useEffect(() => {
+    const locomotiveScroll = new LocomotiveScroll({
+        el: document.querySelector('[data-scroll-container]'),
+        smooth: true,
+        lenisOptions: {
+            lerp: 0.08,
+           
+        },
+    });
+
+    return () => {
+        locomotiveScroll.destroy(); // Cleanup to avoid memory leaks
+    };
+}, []);
+
   return (
     <>
       <DefaultSeo
@@ -126,9 +141,12 @@ export default function App({ Component, pageProps }) {
         />
       </Head>
       <MediaContextProvider>
-      <ReactLenis root options={{lerp:0.08}}>
+        <div data-scroll-container>
+
       <Component {...pageProps} />
-      </ReactLenis>
+        </div>
+     
+ 
 
       </MediaContextProvider>
       <SpeedInsights />

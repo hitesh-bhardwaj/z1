@@ -285,7 +285,7 @@ export default function ConceptScrollNew() {
           </div>
         </div>
       </div>
-      {/* End */}
+      End
     </>
   );
 }

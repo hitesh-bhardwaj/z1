@@ -56,7 +56,7 @@ const HeroDesktop = () => {
               <div
                 className="relative w-full h-[70vh] flex justify-center items-center mx-auto flex-col leading-[1.2]"
               >
-                <div className="w-[85%] flex justify-end h-[8.5vw] items-center">
+                <div className="w-[85%] flex justify-end h-[8.5vw] items-center first-section">
                   <div
                     className="digital text-[9vw] font-medium text-black2 capitalize"
                     data-cursor-magnetic
@@ -72,7 +72,7 @@ const HeroDesktop = () => {
                   </p>
                 </div>
 
-                <div className="w-[85%] flex justify-start items-center h-[9vw]">
+                <div className="w-[85%] flex justify-start items-center h-[9vw] second-section">
                   <div
                     className="text-[10vw] text-primary font-medium capitalize"
                     data-cursor-magnetic
@@ -101,7 +101,7 @@ const HeroDesktop = () => {
                   </div>
                 </div>
 
-                <div className="w-[78%] flex justify-end items-center">
+                <div className="w-[78%] flex justify-end items-center third-section">
                   <div
                     className="text-[9vw] text-black2 font-medium capitalize "
                     data-cursor-magnetic
@@ -114,7 +114,7 @@ const HeroDesktop = () => {
                   </div>
 
                   <div
-                    className="ml-[2vw] font-medium capitalize text-[9vw] agency-text"
+                    className="ml-[2vw] font-medium capitalize text-[9vw] agency"
                     data-cursor-magnetic
                     data-cursor-background-image="/assets/gif/3.gif"
                     data-cursor-size="300px"

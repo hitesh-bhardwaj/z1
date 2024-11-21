@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('./fonts.css');
+
 * {
   padding: 0;
   margin: 0;
@@ -34,91 +36,9 @@
   --bezier3: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-/*01. Fonts */
-/*==============FONTS===================*/
-@font-face {
-  font-family: 'ClashDisplay';
-  src: url('/assets/fonts/clash-display/ClashDisplay-Regular.woff2') format('woff2'),
-       url('/assets/fonts/clash-display/ClashDisplay-Regular.woff') format('woff');
-       font-weight: 400;
-       font-display: swap;
-       font-style: normal;
-}
-@font-face {
-  font-family: 'ClashDisplay';
-  src: url('/assets/fonts/clash-display/ClashDisplay-Medium.woff2') format('woff2'),
-       url('/assets/fonts/clash-display/ClashDisplay-Medium.woff') format('woff');
-       font-weight: 500;
-       font-display: swap;
-       font-style: normal;
-}
-@font-face {
-  font-family: 'ClashDisplay';
-  src: url('/assets/fonts/clash-display/ClashDisplay-Semibold.woff2') format('woff2'),
-       url('/assets/fonts/clash-display/ClashDisplay-Semibold.woff') format('woff');
-       font-weight: 600;
-       font-display: swap;
-       font-style: normal;
-}
 
-@font-face {
-  font-family: 'Ageo';
-  src: url('/assets/fonts/ageo/Ageo-Thin.woff') format('woff');
-       font-weight: 200;
-       font-display: swap;
-       font-style: normal;
-}
-@font-face {
-  font-family: 'Ageo';
-  src: url('/assets/fonts/ageo/Ageo-Light.woff') format('woff');
-       font-weight: 300;
-       font-display: swap;
-       font-style: normal;
-}
-@font-face {
-  font-family: 'Ageo';
-  src: url('/assets/fonts/ageo/Ageo.woff') format('woff');
-       font-weight: 400;
-       font-display: swap;
-       font-style: normal;
-}
-@font-face {
-  font-family: 'Ageo';
-  src: url('/assets/fonts/ageo/Ageo-Medium.woff') format('woff');
-       font-weight: 500;
-       font-display: swap;
-       font-style: normal;
-}
-@font-face {
-  font-family: 'Ageo';
-  src: url('/assets/fonts/ageo/Ageo-SemiBold.woff') format('woff');
-       font-weight: 600;
-       font-display: swap;
-       font-style: normal;
-}
-@font-face {
-  font-family: 'Ageo';
-  src: url('/assets/fonts/ageo/Ageo-Bold.woff') format('woff');
-       font-weight: 700;
-       font-display: swap;
-       font-style: normal;
-}
-@font-face {
-  font-family: 'Ageo';
-  src: url('/assets/fonts/ageo/Ageo-ExtraBold.woff') format('woff');
-       font-weight: 800;
-       font-display: swap;
-       font-style: normal;
-}
 /*==============FONTS END===================*/
-
-[data-scrollbar] {
-  position: fixed !important;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100vw;
+[data-scroll-container] {
   overflow: hidden;
 }
 
@@ -162,12 +82,12 @@
   filter: invert(1);
 }
 
-.bgc-primary{
+/* .bgc-primary{
   background: var(--primary);
-}
-.dark .bgc-primary{
+} */
+/* .dark .bgc-primary{
   background: var(--dark-primary) !important;
-}
+} */
 
 /*==============Padding And Margins==============*/
 .pb-100 {
@@ -277,11 +197,15 @@ body {
   width: 100%;
 }
 
-.dark .agency {
+.dark .third-section .agency {
   filter: invert(1);
 }
 
-.dark {
+body.dark {
+  filter: invert(1);
+  background: #060606;
+}
+.dark .text-primary{
   filter: invert(1);
 }
 
@@ -290,13 +214,18 @@ body {
 }
 
 .dark .c-cursor__inner {
+  filter: invert(0);
   color: var(--white) !important;
   background: var(--black);
 }
 
-.dark .lapi_div .macbook_pro {
-  filter: invert(1);
+.dark .hero-concept-scroll{
+  filter: invert(0);
 }
+
+/* .dark .lapi_div .macbook_pro {
+  filter: invert(1);
+} */
 
 .dark .size-emo {
   filter: invert(1);
@@ -309,10 +238,6 @@ body {
 
 .dark #darkMode-project {
   filter: invert(1);
-}
-
-.dark .c-cursor__inner {
-  filter: invert(0) !important;
 }
 
 .dark .footer-dark-img {
@@ -1420,16 +1345,83 @@ label:hover circle {
   padding: 0.7vw;
 }
 
- .para-hero {
+
+.first-section {
+  width: 85%;
+  display: flex;
+  justify-content: flex-end;
+  height: 8.5vw;
+  align-items: center;
+}
+
+.first-section .digital {
+  font-size: 9vw;
+  font-weight: 500;
+  color: var(--black2);
+  text-transform: capitalize;
+}
+
+.first-section .para-hero {
+  width: 32vw;
+  font-size: 1.2vw;
+  font-weight: 400;
+  color: var(--black2);
+  text-align: justify;
   letter-spacing: 0.4px;
+  line-height: 1.7;
   font-family: 'Ageo';
   margin: 0 3vw 0 7vw;
-} 
-.agency-text {
+}
+
+.second-section {
+  width: 85%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 9vw;
+}
+
+.second-section .experience {
+  font-size: 10vw;
+  color: var(--primary);
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.reel-hero .hero-video {
+  width: 20vw;
+  margin-left: 2.5vw;
+  height: 8vw;
+  object-fit: cover;
+  border-radius: 5vw;
+}
+.reel-anim{
+  opacity: 0;
+  scale: 0;
+}
+
+.third-section {
+  width: 78%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.third-section .design {
+  font-size: 9vw;
+  color: var(--black2);
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.third-section .agency {
+  font-size: 9vw;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke: var(--gray);
   -webkit-text-stroke-width: 2px;
-
+  font-weight: 500;
+  margin-left: 2vw;
+  text-transform: capitalize;
 }
 /* Home Page Blogs */
 .homeBlogs{
@@ -3281,10 +3273,6 @@ textarea::placeholder {
 ==============================================================================================================  */
 
 /* About Hero */
-.hero-about {
-  width: 100%;
-  height: 150vh;
-}
 
 .about-header {
   position: fixed;
@@ -3297,10 +3285,6 @@ textarea::placeholder {
 }
 
 .hero-section-about {
-  position: relative;
-  overflow: hidden;
-  width: 100vw;
-  height: 100vh;
   background-color: var(--white1);
 }
 
@@ -3539,43 +3523,24 @@ textarea::placeholder {
 /* Reel Section END */
 
 /* First Content Section */
-.first-about-content-section {
-  width: 100%;
-  height: 100vh;
-}
-
-.first-about-content-section .first-sub-section {
-  width: 77%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-}
-
-.first-sub-section .left-box-heading {
-  width: 55%;
-  height: 100%;
-  overflow: hidden;
-}
-
-.first-sub-section .left-box-heading .stroke {
+ .left-box-heading .stroke {
   -webkit-text-stroke-width: 2px !important;
 }
 
-.first-sub-section .left-box-heading h2 {
+.left-box-heading h2 {
   font-size: 5vw;
   font-weight: 500;
   color: var(--black2);
 }
 
-.first-sub-section .right-box-content {
+ .right-box-content {
   width: 100%;
   height: 100%;
   margin-top: 8vw;
   overflow: hidden;
 }
-
-.first-sub-section .right-box-content p {
-  font-size: 2vw;
+ .right-box-content p {
+  font-size: 4vw;
   font-weight: 500;
   line-height: 1.5;
   color: var(--black1);
@@ -3765,23 +3730,8 @@ https://unsplash.com/@vinomamba24
 /* Horizontal Section END */
 
 /* Client Section */
-.client-about-content-section {
-  width: 100%;
-  height: 100%;
-}
 
-.client-about-content-section .first-sub-section {
-  width: 77%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-}
 
-.client-about-content-section .first-sub-section .left-box-heading {
-  width: 85%;
-  align-self: flex-start;
-}
 
 .client-about-content-section .first-sub-section .left-box-heading .stroke {
   -webkit-text-stroke-width: 2px !important;
@@ -7782,7 +7732,7 @@ a:hover {
     height: 100%;
   }
 
-  .first-sub-section .left-box-heading h2 {
+  .left-box-heading h2 {
     font-size: 7vw;
   }
 
@@ -8952,12 +8902,12 @@ a:hover {
     flex-direction: column;
   }
 
-  .first-sub-section .left-box-heading h2 {
+   .left-box-heading h2 {
     font-size: 10vw;
   }
 
-  .first-sub-section .right-box-content p {
-    font-size: 4vw;
+ .right-box-content p {
+    font-size: 5vw;
   }
 
   .aero-about .aero-hover {
