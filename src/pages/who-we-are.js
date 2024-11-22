@@ -145,7 +145,7 @@ export default function about() {
         />
       </Head>
 
-      <Cursor isGelly={true} />
+     
       <PageLoader text="Who We Are" />
       <div className="about-header">
         <Header />
@@ -207,6 +207,7 @@ export default function about() {
         </Media>
         {/* ======================== Footer END ====================== */}
       </main>
+         <Cursor isGelly={true} />
     </>
   );
 }

@@ -33,7 +33,7 @@ export default function Index({ projects, reversed }) {
         },
         {
           opacity: 1,
-          yPercent: -100,
+          yPercent: 0,
           duration: 3,
           ease: "expo.out",
           stagger: 0.3,

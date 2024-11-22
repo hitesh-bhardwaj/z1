@@ -24,35 +24,37 @@ export default function NewGifSection() {
           start: "-400 center",
         },
       });
+      
     });
     return () => ctx.revert();
-  });
+  },[]);
 
   // Opacity 0 to 1
-  useEffect(() => {
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".gifSectionAbout",
-        start: "top 90%",
-      },
-    });
+  // useEffect(() => {
+  //   let ctx = gsap.context(() => {
 
-    const demoHeader = document.querySelectorAll(".newsCard");
-    // Header
-    tl.fromTo(
-      demoHeader,
-      {
-        y: 300,
-        opacity: 0,
-      },
-      {
-        duration: 1,
-        opacity: 1,
-        y: 0,
-        stagger: 0.2,
-      }
-    );
-  });
+  //     const tl = gsap.timeline({
+  //       scrollTrigger: {
+  //         trigger: ".gifSectionAbout",
+  //         start: "top 90%",
+  //         markers:true
+  //       },
+  //     });
+  
+  //     const demoHeader = document.querySelectorAll(".newsCard");
+  //     // Header
+  //     tl.from(
+  //       demoHeader,
+  //       {
+  //         y: 300,
+  //         opacity: 0,
+  //         stagger: 0.2,
+  //       }
+  //     );
+
+  //   })
+  //   return () => ctx.revert();
+  // },[]);
 
   // Text Fill Animation on Scroll
   useEffect(() => {

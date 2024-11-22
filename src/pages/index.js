@@ -147,7 +147,6 @@ export default function Home({ recentPosts }) {
         />
       </Head>
       <Preloader />
-      <Cursor isGelly={true} />
 
       <main>
         <Header />
@@ -228,6 +227,8 @@ export default function Home({ recentPosts }) {
           <FooterMobile />
         </Media>
       </main>
+      <Cursor isGelly={true} />
+
     </>
   );
 }

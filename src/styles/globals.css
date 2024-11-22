@@ -3540,7 +3540,7 @@ textarea::placeholder {
   overflow: hidden;
 }
  .right-box-content p {
-  font-size: 4vw;
+  font-size: 2vw;
   font-weight: 500;
   line-height: 1.5;
   color: var(--black1);

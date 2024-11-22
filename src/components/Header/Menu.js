@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import Link from "next/link";
 import { useRouter } from "next/router";
+// import { useLenis } from "lenis/react";
 
 
 
@@ -23,10 +24,8 @@ const handleHoverExit = (e) => {
   });
 };
 
-const Menu = ({ state,locomotiveScroll }) => {
-
-
-
+const Menu = ({ state }) => {
+// const lenis = useLenis()
   const router = useRouter();
   const menu = useRef();
   const revealMenu = useRef();
@@ -52,6 +51,7 @@ useEffect(() => {
   const menuLoaderBar = document.querySelectorAll(".menuLoaderBar");
 
   if(state.clicked === false) {
+    // lenis.start()
     gsap.to(revealMenu.current, {
       opacity: 0,
       duration: 0.2,
@@ -71,7 +71,8 @@ useEffect(() => {
   } else if (
     state.clicked === true || 
     (state.clicked === true && state.initial === null)) 
-  {
+  { 
+    // lenis.stop()
     gsap.to([menu.current], {
       duration: 0,
       css: { display: "block" },

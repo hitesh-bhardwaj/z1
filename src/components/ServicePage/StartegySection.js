@@ -30,6 +30,52 @@ gsap.config({
     });
   };
 
+
+  const StrategyBox = ({
+    href,
+    title,
+    description,
+    imageUrl,
+    cursorText,
+    cursorSize,
+    cursorColor,
+    reverse = false,
+    handleHover,
+    handleHoverExit,
+  }) => {
+    return (
+      <div className={`strategy-box strategy-box-anim ${reverse ? "flex-reverse" : ""}`}>
+        <div
+          className="left-strategy-box"
+          data-cursor-text={cursorText}
+          data-cursor-size={cursorSize}
+          data-cursor-color={cursorColor}
+        >
+          <Link href={href}>
+            <h2 className="ser-text-head-anim">{title}</h2>
+            <p data-jelly className="ser-text-head-anim">
+              <span>{description}</span>
+            </p>
+          </Link>
+        </div>
+        <div className="right-strategy-box">
+          <div className="image-container service-box-image">
+            <Image
+              src={imageUrl}
+              width={500}
+              height={1000}
+              alt={`${title} image`}
+              onMouseEnter={handleHover}
+              onMouseOut={handleHoverExit}
+              className="anim-img-service"
+            />
+          </div>
+        </div>
+      </div>
+    );
+  };
+  
+
 export default function StrategySection() {
 
   // Parallax Image
@@ -74,212 +120,83 @@ export default function StrategySection() {
           });
         });
       });
-      
-  // Strategy Image Animate
-  useEffect(() => {
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: ".service-box-image",
-        start: "top 85%",
-      },
-    });
-    tl.fromTo(
-      ".anim-img-service",
-      { opacity: 0 },
-      {
-        opacity: 1,
-        duration: 1,
-        stagger: 0.5,
-      }
-    );
-  });
-
-  console.clear();
+ 
 
     return(
         <>
-          <div className="service-cap-section strategy-box-anim">
-            <div className="left-box" data-jelly>
-              <p className="sub-text ser-text-head-anim">
-                <span>
-                  Here's how we help you
-                  <br /> grow.
-                </span>
-              </p>
-            </div>
-            <div className="right-box">
-              <div className="right-sub-content strategy-box-anim">
-                <p className="service-right-head ser-text-head-anim">Our Capabilities</p>
-                <p data-jelly className="ser-text-head-anim">
-                  <span>
-                    We create evergreen brands that are highly effective at
-                    boosting revenue, increasing brand equity, and improving ROI.
-                    Our big picture approach powers your entire business, not just
-                    the marketing department.
-                  </span>
-                </p>
-              </div>
-            </div>
-          </div>
-
-
-        {/* Strategy Box 1  */}
-        <div className="strategy-box strategy-box-anim">
-          <div
-            className="left-strategy-box"
-            data-cursor-text="Know More!"
-            data-cursor-size="110px"
-            data-cursor-color="#2b8c87"
-          >
-          <Link href='/strategy-and-planning-services'>
-            <h2 className="ser-text-head-anim">Strategy</h2>
+        <section id="strategy">
+        <div className="services">
+      {/* Intro Section */}
+      <div className="service-cap-section strategy-box-anim">
+        <div className="left-box" data-jelly>
+          <p className="sub-text ser-text-head-anim">
+            <span>
+              Here's how we help you
+              <br /> grow.
+            </span>
+          </p>
+        </div>
+        <div className="right-box">
+          <div className="right-sub-content strategy-box-anim">
+            <p className="service-right-head ser-text-head-anim">Our Capabilities</p>
             <p data-jelly className="ser-text-head-anim">
               <span>
-                  Digital Advisory and Consulting, Integrated Digital Marketing
-                  Plan (D.M.P.), User Experience Development, Customer Experience
-                  Strategy, Consumer Research, Insights & Target Market Analysis,
-                  Digital Capabilities Development, Persona Design & Customer
-                  Segmentation, Competitive Analysis & Industry Insights, Brand &
-                  Content Strategy, Digital Marketing and Website Performance
-                  Audit.
+                We create evergreen brands that are highly effective at boosting revenue, increasing brand equity, and improving ROI. Our big picture approach powers your entire business, not just the marketing department.
               </span>
             </p>
-          </Link> 
-          </div>
-
-          <div className="right-strategy-box">
-            <div className="image-container service-box-image">
-              <Image
-                src="/assets/services/strategy.webp"
-                width={500}
-                height={1000}
-                alt="services"
-                onMouseEnter={(e) => handleHover(e)}
-                onMouseOut={(e) => handleHoverExit(e)}
-                className="anim-img-service"
-              />
-            </div>
           </div>
         </div>
+      </div>
 
-        {/* Strategy Box 1  END */}
-
-
-        {/* Strategy Box 2  */}
-        <div className="strategy-box strategy-box-anim flex-reverse">
-          <div
-            className="left-strategy-box"
-            data-cursor-text="Know More!"
-            data-cursor-size="110px"
-            data-cursor-color="#000"
-          >
-          <Link href='/ui-ux-design-services'>
-            <h2 className="ser-text-head-anim">UI/UX Design</h2>
-              <p data-jelly className="ser-text-head-anim">
-                <span>
-                  User Interface Design, User Experience Design, Responsive Web
-                  Design, Mobile App Design, Digital Interface Design, Design
-                  Systems Creation, Experience Mapping, User Flow Mapping,
-                  Wireframing & Prototyping, Illustrations & Animations, Visual
-                  Designs, and UI Kits.
-                </span>
-              </p>
-          </Link>
-            
-          </div>
-          <div className="right-strategy-box">
-            <div className="image-container service-box-image">
-              <Image
-                src="/assets/services/ui-ux.webp"
-                width={500}
-                height={1000}
-                alt="services"
-                onMouseEnter={(e) => handleHover(e)}
-                onMouseOut={(e) => handleHoverExit(e)}
-                className="anim-img-service"
-              />
-            </div>
-          </div>
-        </div>
-        {/* Strategy Box 2  END */}
-
-
-        {/* Strategy Box 3  */}
-        <div className="strategy-box strategy-box-anim">
-          <div
-            className="left-strategy-box"
-            data-cursor-text="Know More!"
-            data-cursor-size="110px"
-            data-cursor-color="#fcc63d"
-          >
-          <Link href='/technology-services'>
-            <h2 className="ser-text-head-anim">Technology</h2>
-              <p data-jelly className="ser-text-head-anim">
-                <span>
-                  Front-End Development, Native & Hybrid Mobile Application
-                  Development, Progressive Web Applications, Database Design &
-                  Management, Cloud Infrastructure Services, Testing & Automation
-                  TECH STACK - HTML, CSS, Sass, Less, JavaScript, jQuery, GSAP,
-                  Vue, React, React Native, Ionic, Flutter, NodeJS, Spring, JAVA,
-                  Grails, Hibernate, MySQL, PostgreSQL, Oracle, Mongo, AWS and
-                  Google Cloud.
-                </span>
-              </p>
-          </Link>
-          </div>
-
-          <div className="right-strategy-box">
-            <div className="image-container service-box-image">
-              <Image
-                src="/assets/services/technology.webp"
-                width={500}
-                height={1000}
-                alt="services"
-                onMouseEnter={(e) => handleHover(e)}
-                onMouseOut={(e) => handleHoverExit(e)}
-                className="anim-img-service"
-              />
-            </div>
-          </div>
-        </div>
-        {/* Strategy Box 3  END */}
-
-        {/* Strategy Box 4  */}
-        <div className="strategy-box strategy-box-anim flex-reverse">
-          <div
-            className="left-strategy-box"
-            data-cursor-text="Know More!"
-            data-cursor-size="110px"
-            data-cursor-color="#000"
-          >
-            <Link href='/organic-digital-marketing-services'>
-              <h2 className="ser-text-head-anim">Marketing</h2>
-              <p data-jelly className="ser-text-head-anim">
-                <span>
-                  Social Media Management, Content Creation & Curation, Search
-                  Engine Optimisation, Influencer Management, Auction Media
-                  Management, Online Reputation Management, Media Planning &
-                  Buying, Marketing Automation, Email Marketing, Conversion Rate
-                  Optimisation, Website & SEO Analysis.
-                </span>
-              </p>
-            </Link>
-          </div>
-
-          <div className="right-strategy-box">
-            <div className="image-container service-box-image">
-              <Image
-                src="/assets/services/marketing.webp"
-                width={500}
-                height={1000}
-                alt="services"
-                onMouseEnter={(e) => handleHover(e)}
-                onMouseOut={(e) => handleHoverExit(e)}
-                className="anim-img-service"
-              />
-            </div>
-          </div>
-        </div>
+      {/* Strategy Boxes */}
+      <StrategyBox
+        href="/strategy-and-planning-services"
+        title="Strategy"
+        description="Digital Advisory and Consulting, Integrated Digital Marketing Plan (D.M.P.), User Experience Development, Customer Experience Strategy, Consumer Research, Insights & Target Market Analysis, Digital Capabilities Development, Persona Design & Customer Segmentation, Competitive Analysis & Industry Insights, Brand & Content Strategy, Digital Marketing and Website Performance Audit."
+        imageUrl="/assets/services/strategy.webp"
+        cursorText="Know More!"
+        cursorSize="110px"
+        cursorColor="#2b8c87"
+        handleHover={handleHover}
+        handleHoverExit={handleHoverExit}
+      />
+      <StrategyBox
+        href="/ui-ux-design-services"
+        title="UI/UX Design"
+        description="User Interface Design, User Experience Design, Responsive Web Design, Mobile App Design, Digital Interface Design, Design Systems Creation, Experience Mapping, User Flow Mapping, Wireframing & Prototyping, Illustrations & Animations, Visual Designs, and UI Kits."
+        imageUrl="/assets/services/ui-ux.webp"
+        cursorText="Know More!"
+        cursorSize="110px"
+        cursorColor="#000"
+        reverse
+        handleHover={handleHover}
+        handleHoverExit={handleHoverExit}
+      />
+      <StrategyBox
+        href="/technology-services"
+        title="Technology"
+        description="Front-End Development, Native & Hybrid Mobile Application Development, Progressive Web Applications, Database Design & Management, Cloud Infrastructure Services, Testing & Automation. TECH STACK - HTML, CSS, Sass, Less, JavaScript, jQuery, GSAP, Vue, React, React Native, Ionic, Flutter, NodeJS, Spring, JAVA, Grails, Hibernate, MySQL, PostgreSQL, Oracle, Mongo, AWS and Google Cloud."
+        imageUrl="/assets/services/technology.webp"
+        cursorText="Know More!"
+        cursorSize="110px"
+        cursorColor="#fcc63d"
+        handleHover={handleHover}
+        handleHoverExit={handleHoverExit}
+      />
+      <StrategyBox
+        href="/organic-digital-marketing-services"
+        title="Marketing"
+        description="Social Media Management, Content Creation & Curation, Search Engine Optimisation, Influencer Management, Auction Media Management, Online Reputation Management, Media Planning & Buying, Marketing Automation, Email Marketing, Conversion Rate Optimisation, Website & SEO Analysis."
+        imageUrl="/assets/services/marketing.webp"
+        cursorText="Know More!"
+        cursorSize="110px"
+        cursorColor="#000"
+        reverse
+        handleHover={handleHover}
+        handleHoverExit={handleHoverExit}
+      />
+    </div>
+        </section>
         </>
     )
 }

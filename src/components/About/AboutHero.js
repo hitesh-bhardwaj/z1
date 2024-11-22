@@ -118,7 +118,7 @@ const AboutHero = () => {
   return (
     <>
     <section id='about-hero'>
-    <div className="w-full h-[150vh]"
+    <div className="w-full h-[150vh] overflow-hidden"
         data-cursor-size="120px"
         data-cursor-text="Scroll Down">
           <div

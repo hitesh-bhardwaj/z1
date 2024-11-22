@@ -1,11 +1,10 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import styles from "../../styles/project.module.css"
 import gsap from "gsap";
 import Image from "next/image";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
-import Link from "next/link";
 import Button from "../Button";
-import SplitType from "split-type";
+
 
 
  var _s,

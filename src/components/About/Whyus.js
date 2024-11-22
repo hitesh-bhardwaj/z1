@@ -6,7 +6,7 @@ const Whyus = () => {
       <div className="w-full h-[100vh] m-150 about-section pt-[5vw] tablet:h-full">
           <div className="w-[77%] mx-auto flex justify-between tablet:flex-col tablet:w-[85%]">
             <div className="w-[55%] h-full overflow-hidden left-box-heading about-section-content">
-              <h2 className="why-us-anim tablet:!text-[10vw]">
+              <h2 className="why-us-anim">
                 <span className="stroke">why</span> us.
               </h2>
             </div>

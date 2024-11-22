@@ -3,7 +3,7 @@ import React from 'react'
 const ClientLove = () => {
   return (
     <section id='client-love'>
-         <div className="cw-full h-[100vh] m-150 about-section tablet:h-full" id="client-loveus">
+         <div className="cw-full h-full m-150 about-section tablet:h-full" id="client-loveus">
           <div className="w-[80%] mx-auto flex justify-between tablet:flex-col tablet:w-[85%] ">
             <div className="w-[60%] h-full overflow-hidden flex items-start left-box-heading about-section-content tablet:w-full">
               <h2 className="client-anim-heading">
